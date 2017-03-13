@@ -10,4 +10,5 @@ fi
 HOST=`hostname`
 
 # executa a aplicação
-/usr/bin/env python -OO ./piloto.py "$@" 2> ./piloto.$HOST.log
+/usr/bin/env python -OO ./piloto.py "$@" > ./piloto.$HOST.log 2>&1
+

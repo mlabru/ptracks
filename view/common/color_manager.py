@@ -135,7 +135,7 @@ class CColorManager(object):
                       DFFinderCategory]
 
     # ---------------------------------------------------------------------------------------------
-    def __init__(self, fs_path=None, fo_config=None):
+    def __init__(self, fo_config=None, fs_path=None):
         """
         @param fs_path: color table file path (basestring)
         """

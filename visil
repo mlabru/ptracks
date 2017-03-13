@@ -10,4 +10,4 @@ fi
 HOST=`hostname`
 
 #  executa a aplicação
-/usr/bin/env python -OO ./visil.py "$@" 2> ./visil.$HOST.log
+/usr/bin/env python -OO ./visil.py "$@" > ./visil.$HOST.log 2>&1
