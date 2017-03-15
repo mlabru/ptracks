@@ -49,7 +49,7 @@ class CPagUpdate(QtGui.QWidget):
         """
         super(CPagUpdate, self).__init__(f_parent)
 
-        lgbx_update = QtGui.QGroupBox("Package selection")
+        lgbx_update = QtGui.QGroupBox("Plug-in selection")
         assert lgbx_update
 
         lckx_system = QtGui.QCheckBox("Update system")
@@ -61,23 +61,23 @@ class CPagUpdate(QtGui.QWidget):
         lckx_docs = QtGui.QCheckBox("Update documentation")
         assert lckx_docs
 
-        lgbx_package = QtGui.QGroupBox("Existing packages")
-        assert lgbx_package
+        lgbx_plugin = QtGui.QGroupBox("Existing plug-ins")
+        assert lgbx_plugin
 
-        lqlw_package = QtGui.QListWidget()
-        assert lqlw_package
+        lqlw_plug-in = QtGui.QListWidget()
+        assert lqlw_plug-in
 
-        llwi_qt = QtGui.QListWidgetItem(lqlw_package)
+        llwi_qt = QtGui.QListWidgetItem(lqlw_plug-in)
         assert llwi_qt
 
         llwi_qt.setText("Qt")
 
-        llwi_qsa = QtGui.QListWidgetItem(lqlw_package)
+        llwi_qsa = QtGui.QListWidgetItem(lqlw_plug-in)
         assert llwi_qsa
 
         llwi_qsa.setText("QSA")
 
-        llwi_team_builder = QtGui.QListWidgetItem(lqlw_package)
+        llwi_team_builder = QtGui.QListWidgetItem(lqlw_plug-in)
         assert llwi_team_builder
 
         llwi_team_builder.setText("Teambuilder")
@@ -93,17 +93,17 @@ class CPagUpdate(QtGui.QWidget):
         lvlo_update.addWidget(lckx_docs)
         lgbx_update.setLayout(lvlo_update)
 
-        lvlo_package = QtGui.QVBoxLayout()
-        assert lvlo_package
+        lvlo_plug-in = QtGui.QVBoxLayout()
+        assert lvlo_plug-in
 
-        lvlo_package.addWidget(lqlw_package)
-        lgbx_package.setLayout(lvlo_package)
+        lvlo_plug-in.addWidget(lqlw_plug-in)
+        lgbx_plugin.setLayout(lvlo_plug-in)
 
         lvlo_main = QtGui.QVBoxLayout()
         assert lvlo_main
 
         lvlo_main.addWidget(lgbx_update)
-        lvlo_main.addWidget(lgbx_package)
+        lvlo_main.addWidget(lgbx_plugin)
         lvlo_main.addSpacing(12)
         lvlo_main.addWidget(lbtn_start_update)
         lvlo_main.addStretch(1)

@@ -37,10 +37,10 @@ from PyQt4 import QtCore
 from PyQt4 import QtGui
 
 try:
-    import view.resources.super_resources_rc2
+    import view.resources.resources_super_rc2
     
 except ImportError:
-    import view.resources.super_resources_rc3
+    import view.resources.resources_super_rc3
 
 # view
 # import view.super.page_model as wpm
