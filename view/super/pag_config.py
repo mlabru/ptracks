@@ -52,6 +52,7 @@ class CPagConfig(QtGui.QWidget):
         lgbx_config = QtGui.QGroupBox("Server configuration")
         assert lgbx_config
 
+        # server
         llbl_server = QtGui.QLabel("Server:")
         assert llbl_server
 
@@ -68,10 +69,28 @@ class CPagConfig(QtGui.QWidget):
         lvlo_server.addWidget(llbl_server)
         lvlo_server.addWidget(lcbx_server)
 
+        # veolocity
+        llbl_fast = QtGui.QLabel("Fast Time Simulation:")
+        assert llbl_fast
+
+        lcbx_fast = QtGui.QComboBox()
+        assert lcbx_fast
+        
+        lcbx_fast.addItem("0.5")
+        lcbx_fast.addItem("1.0")
+        lcbx_fast.addItem("2.0")
+
+        lvlo_fast = QtGui.QHBoxLayout()
+        assert lvlo_fast
+        
+        lvlo_fast.addWidget(llbl_fast)
+        lvlo_fast.addWidget(lcbx_fast)
+
         lvlo_config = QtGui.QVBoxLayout()
         assert lvlo_config
         
         lvlo_config.addLayout(lvlo_server)
+        lvlo_config.addLayout(lvlo_fast)
         lgbx_config.setLayout(lvlo_config)
 
         lvlo_main = QtGui.QVBoxLayout()

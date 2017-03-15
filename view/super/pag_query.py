@@ -49,8 +49,8 @@ class CPagQuery(QtGui.QWidget):
         """
         super(CPagQuery, self).__init__(f_parent)
 
-        lgbx_packages = QtGui.QGroupBox("Look for packages")
-        assert lgbx_packages
+        lgbx_plugins = QtGui.QGroupBox("Look for plug-ins")
+        assert lgbx_plugins
 
         llbl_name = QtGui.QLabel("Name:")
         assert llbl_name
@@ -83,22 +83,22 @@ class CPagQuery(QtGui.QWidget):
         lbtn_start_query = QtGui.QPushButton("Start query")
         assert lbtn_start_query
 
-        lglo_packages = QtGui.QGridLayout()
-        assert lglo_packages
+        lglo_plugins = QtGui.QGridLayout()
+        assert lglo_plugins
         
-        lglo_packages.addWidget(llbl_name, 0, 0)
-        lglo_packages.addWidget(lqle_name, 0, 1)
-        lglo_packages.addWidget(llbl_date, 1, 0)
-        lglo_packages.addWidget(ldte_date, 1, 1)
-        lglo_packages.addWidget(lckx_releases, 2, 0)
-        lglo_packages.addWidget(lckx_upgrades, 3, 0)
-        lglo_packages.addWidget(lspx_hits, 4, 0, 1, 2)
-        lgbx_packages.setLayout(lglo_packages)
+        lglo_plugins.addWidget(llbl_name, 0, 0)
+        lglo_plugins.addWidget(lqle_name, 0, 1)
+        lglo_plugins.addWidget(llbl_date, 1, 0)
+        lglo_plugins.addWidget(ldte_date, 1, 1)
+        lglo_plugins.addWidget(lckx_releases, 2, 0)
+        lglo_plugins.addWidget(lckx_upgrades, 3, 0)
+        lglo_plugins.addWidget(lspx_hits, 4, 0, 1, 2)
+        lgbx_plugins.setLayout(lglo_plugins)
 
         lvlo_main = QtGui.QVBoxLayout()
         assert lvlo_main
         
-        lvlo_main.addWidget(lgbx_packages)
+        lvlo_main.addWidget(lgbx_plugins)
         lvlo_main.addSpacing(12)
         lvlo_main.addWidget(lbtn_start_query)
         lvlo_main.addStretch(1)

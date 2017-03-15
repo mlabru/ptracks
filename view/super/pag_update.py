@@ -64,20 +64,20 @@ class CPagUpdate(QtGui.QWidget):
         lgbx_plugin = QtGui.QGroupBox("Existing plug-ins")
         assert lgbx_plugin
 
-        lqlw_plug-in = QtGui.QListWidget()
-        assert lqlw_plug-in
+        lqlw_plugin = QtGui.QListWidget()
+        assert lqlw_plugin
 
-        llwi_qt = QtGui.QListWidgetItem(lqlw_plug-in)
+        llwi_qt = QtGui.QListWidgetItem(lqlw_plugin)
         assert llwi_qt
 
         llwi_qt.setText("Qt")
 
-        llwi_qsa = QtGui.QListWidgetItem(lqlw_plug-in)
+        llwi_qsa = QtGui.QListWidgetItem(lqlw_plugin)
         assert llwi_qsa
 
         llwi_qsa.setText("QSA")
 
-        llwi_team_builder = QtGui.QListWidgetItem(lqlw_plug-in)
+        llwi_team_builder = QtGui.QListWidgetItem(lqlw_plugin)
         assert llwi_team_builder
 
         llwi_team_builder.setText("Teambuilder")
@@ -93,11 +93,11 @@ class CPagUpdate(QtGui.QWidget):
         lvlo_update.addWidget(lckx_docs)
         lgbx_update.setLayout(lvlo_update)
 
-        lvlo_plug-in = QtGui.QVBoxLayout()
-        assert lvlo_plug-in
+        lvlo_plugin = QtGui.QVBoxLayout()
+        assert lvlo_plugin
 
-        lvlo_plug-in.addWidget(lqlw_plug-in)
-        lgbx_plugin.setLayout(lvlo_plug-in)
+        lvlo_plugin.addWidget(lqlw_plugin)
+        lgbx_plugin.setLayout(lvlo_plugin)
 
         lvlo_main = QtGui.QVBoxLayout()
         assert lvlo_main
