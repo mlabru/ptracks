@@ -47,7 +47,6 @@ def filepath(f_filename):
     """
     determine the path to a file in the data directory
     """
-    print os.path.join(M_DATA_DIR, f_filename)
     # return
     return os.path.join(M_DATA_DIR, f_filename)
 
@@ -56,7 +55,6 @@ def load(f_filename, f_mode="rb"):
     """
     open a file in the data directory
     """
-    print os.path.join(M_DATA_DIR, f_filename)
     # return
     return open(os.path.join(M_DATA_DIR, f_filename), f_mode)
 

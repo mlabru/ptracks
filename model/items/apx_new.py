@@ -187,7 +187,7 @@ class CApxNEW(model.CPrcModel):
         # identificação do procedimento de aproximação
         if "nApx" in fdct_data:
             self.i_prc_id = int(fdct_data["nApx"])
-            self.s_prc_desc = "Aproximação {:03d}".format(fdct_data["nApx"])
+            self.s_prc_desc = u"Aproximação {:03d}".format(fdct_data["nApx"])
 
         # descrição do procedimento de aproximação
         if "descricao" in fdct_data:

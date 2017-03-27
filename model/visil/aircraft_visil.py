@@ -200,6 +200,7 @@ class CAircraftVisil(sanv.CAircraftBasic):
         li_ndx += 1
 
         self.adiru.f_alt = lf_alt
+        # cdbg.M_DBG.debug("__make_aircraft: self.adiru.f_alt: {}".format(self.adiru.f_alt))
 
         # latitude
         lf_lat = float(f_data[li_ndx])
@@ -221,6 +222,7 @@ class CAircraftVisil(sanv.CAircraftBasic):
         li_ndx += 1
 
         self.adiru.f_ias = lf_vel
+        # cdbg.M_DBG.debug("__make_aircraft: self.adiru.f_ias: {}".format(self.adiru.f_ias))
 
         # razão de subida
         lf_raz = float(f_data[li_ndx])
@@ -231,6 +233,7 @@ class CAircraftVisil(sanv.CAircraftBasic):
         li_ndx += 1
 
         self.adiru.f_true_heading = lf_pro
+        # cdbg.M_DBG.debug("__make_aircraft: self.adiru.f_true_heading: {}".format(self.adiru.f_true_heading))
 
         # callsign
         ls_ind = str(f_data[li_ndx])

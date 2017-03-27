@@ -2,6 +2,52 @@
 <!DOCTYPE performances>
 <performances VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
+  <performance nPrf="A300">
+    <descricao>AIRBUS</descricao>
+    <numfami>8</numfami>
+    <esteira>H</esteira>
+    <tetosv>420</tetosv>
+    <faixa>420</faixa>
+    <veldec>125</veldec>
+    <velsbdec>190</velsbdec>
+    <velapx>160</velapx>
+    <velcruz>440</velcruz>
+    <velmxcrz>540</velmxcrz>
+    <rzsubdec>1300</rzsubdec>
+    <rzmxsbdec>3500</rzmxsbdec>
+    <rzsbcrz>1900</rzsbcrz>
+    <rzmxsbcrz>3500</rzmxsbcrz>
+    <rzdescapx>2500</rzdescapx>
+    <rzmxdesapx>4000</rzmxdesapx>
+    <rzdescrz>2000</rzdescrz>
+    <rzmxdescrz>3500</rzmxdescrz>
+    <razvarvel>45</razvarvel>
+    <rzmxvarvel>60</rzmxvarvel>
+  </performance>
+
+  <performance nPrf="A320">
+    <descricao>AIRBUS</descricao>
+    <numfami>8</numfami>
+    <esteira>M</esteira>
+    <tetosv>420</tetosv>
+    <faixa>420</faixa>
+    <veldec>125</veldec>
+    <velsbdec>190</velsbdec>
+    <velapx>160</velapx>
+    <velcruz>440</velcruz>
+    <velmxcrz>540</velmxcrz>
+    <rzsubdec>1300</rzsubdec>
+    <rzmxsbdec>3500</rzmxsbdec>
+    <rzsbcrz>1900</rzsbcrz>
+    <rzmxsbcrz>3500</rzmxsbcrz>
+    <rzdescapx>2500</rzdescapx>
+    <rzmxdesapx>4000</rzmxdesapx>
+    <rzdescrz>2000</rzdescrz>
+    <rzmxdescrz>3500</rzmxdescrz>
+    <razvarvel>45</razvarvel>
+    <rzmxvarvel>60</rzmxvarvel>
+  </performance>
+
   <performance nPrf="B737">
     <descricao>BOEING 737</descricao>
     <numfami>8</numfami>
@@ -20,6 +66,75 @@
     <rzdescapx>2500</rzdescapx>
     <rzmxdesapx>4000</rzmxdesapx>
     <rzdescrz>2000</rzdescrz>
+    <rzmxdescrz>3500</rzmxdescrz>
+    <razvarvel>45</razvarvel>
+    <rzmxvarvel>60</rzmxvarvel>
+  </performance>
+
+  <performance nPrf="B747">
+    <descricao>BOEING 747</descricao>
+    <numfami>9</numfami>
+    <esteira>H</esteira>
+    <tetosv>440</tetosv>
+    <faixa>440</faixa>
+    <veldec>145</veldec>
+    <velsbdec>190</velsbdec>
+    <velapx>160</velapx>
+    <velcruz>480</velcruz>
+    <velmxcrz>600</velmxcrz>
+    <rzsubdec>1500</rzsubdec>
+    <rzmxsbdec>3000</rzmxsbdec>
+    <rzsbcrz>1900</rzsbcrz>
+    <rzmxsbcrz>3500</rzmxsbcrz>
+    <rzdescapx>2350</rzdescapx>
+    <rzmxdesapx>4000</rzmxdesapx>
+    <rzdescrz>2500</rzdescrz>
+    <rzmxdescrz>3500</rzmxdescrz>
+    <razvarvel>45</razvarvel>
+    <rzmxvarvel>60</rzmxvarvel>
+  </performance>
+
+  <performance nPrf="B767">
+    <descricao>BOEING 767</descricao>
+    <numfami>9</numfami>
+    <esteira>H</esteira>
+    <tetosv>440</tetosv>
+    <faixa>440</faixa>
+    <veldec>145</veldec>
+    <velsbdec>190</velsbdec>
+    <velapx>160</velapx>
+    <velcruz>480</velcruz>
+    <velmxcrz>600</velmxcrz>
+    <rzsubdec>1500</rzsubdec>
+    <rzmxsbdec>3000</rzmxsbdec>
+    <rzsbcrz>1900</rzsbcrz>
+    <rzmxsbcrz>3500</rzmxsbcrz>
+    <rzdescapx>2350</rzdescapx>
+    <rzmxdesapx>4000</rzmxdesapx>
+    <rzdescrz>2500</rzdescrz>
+    <rzmxdescrz>3500</rzmxdescrz>
+    <razvarvel>45</razvarvel>
+    <rzmxvarvel>60</rzmxvarvel>
+  </performance>
+
+  <performance nPrf="B777">
+    <descricao>BOEING 777</descricao>
+    <numfami>9</numfami>
+    <esteira>H</esteira>
+    <tetosv>440</tetosv>
+    <faixa>440</faixa>
+    <veldec>145</veldec>
+    <velsbdec>190</velsbdec>
+    <velapx>160</velapx>
+    <velcruz>480</velcruz>
+    <velmxcrz>600</velmxcrz>
+    <rzsubdec>1500</rzsubdec>
+    <rzmxsbdec>3000</rzmxsbdec>
+    <rzsbcrz>1900</rzsbcrz>
+    <rzmxsbcrz>3500</rzmxsbcrz>
+    <rzdescapx>2350</rzdescapx>
+    <rzmxdesapx>4000</rzmxdesapx>
+    <rzdescrz>2500</rzdescrz>
     <rzmxdescrz>3500</rzmxdescrz>
     <razvarvel>45</razvarvel>
     <rzmxvarvel>60</rzmxvarvel>

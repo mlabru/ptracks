@@ -3,7 +3,7 @@
 <subidas VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
   <subida nSub="53">
-    <descricao>MOXEP 1B</descricao>
+    <nome>MOXEP 1B</nome>
     <aerodromo>SBSJ</aerodromo>
     <pista>33</pista>
 
@@ -39,7 +39,7 @@
   </subida>
 
   <subida nSub="55">
-    <descricao>MOXEP 1B</descricao>
+    <nome>MOXEP 1B</nome>
     <aerodromo>SBSJ</aerodromo>
     <pista>15</pista>
 
@@ -73,7 +73,7 @@
   </subida>
 
   <subida nSub="57">
-    <descricao>KOTRU 1B</descricao>
+    <nome>KOTRU 1B</nome>
     <aerodromo>SBSJ</aerodromo>
     <pista>33</pista>
 
@@ -110,7 +110,7 @@
   </subida>
 
   <subida nSub="79">
-    <descricao>NISTO 1A LITUK</descricao>
+    <nome>NISTO 1A LITUK</nome>
     <aerodromo>SBSP</aerodromo>
     <pista>17R</pista>
 
@@ -164,7 +164,7 @@
   </subida>
 
   <subida nSub="381">
-    <descricao>PBN ANDOR</descricao>
+    <nome>PBN ANDOR</nome>
     <aerodromo>SBSP</aerodromo>
     <pista>17L</pista>
 
@@ -198,7 +198,7 @@
   </subida>
 
   <subida nSub="1100">
-    <descricao>SBBR</descricao>
+    <nome>SBBR</nome>
     <aerodromo>SBBR</aerodromo>
     <pista>11L</pista>
 
@@ -214,37 +214,23 @@
 
     <breakpoint nBrk="2">
       <coord>
+        <tipo>K</tipo>
+        <cpoA>S:16:04:47.00</cpoA>
+        <cpoB>W:47:53:17.00</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
         <tipo>F</tipo>
         <cpoA>LUZIANIA</cpoA>
       </coord>
       <altitude>12000</altitude>
       <velocidade>300</velocidade>
-      <procedimento>TRJ1100</procedimento>
+      <procedimento>TRJ1101</procedimento>
     </breakpoint>
-
-  <subida nSub="1101">
-    <descricao>SBGR</descricao>
-    <aerodromo>SBGR</aerodromo>
-    <pista>09L</pista>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>TUCA</cpoA>
-      </coord>
-      <altitude>4000</altitude>
-      <razsub>5.2</razsub>
-      <velocidade>230</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MAE</cpoA>
-      </coord>
-      <altitude>12000</altitude>
-      <velocidade>300</velocidade>
-      <procedimento>TRJ1004</procedimento>
-    </breakpoint>
+  </subida>
 
 </subidas>

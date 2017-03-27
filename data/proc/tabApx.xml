@@ -4,7 +4,7 @@
 
   <aproximacao nApx="1">
     <aerodromo>SBSP</aerodromo>
-    <descricao>FINAL H3</descricao>
+    <nome>FINAL H3</nome>
     <pista>17R</pista>
     <ils>N</ils>
     <aproxperd>N</aproxperd>
@@ -55,7 +55,7 @@
 
   <aproximacao nApx="2">
     <aerodromo>SBSP</aerodromo>
-    <descricao>FINAL H5</descricao>
+    <nome>FINAL H5</nome>
     <pista>35L</pista>
     <ils>N</ils>
     <aproxperd>N</aproxperd>
@@ -107,7 +107,7 @@
   <!-- Operacional -->
   <aproximacao nApx="5">
     <aerodromo>SBGR</aerodromo>
-    <descricao>C1 09R</descricao>
+    <nome>C1 09R</nome>
     <pista>09R</pista>
     <ils>N</ils>
     <aproxperd>N</aproxperd>
@@ -115,39 +115,54 @@
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>CAST</cpoA>
+        <tipo>F</tipo>
+        <cpoA>KOVLA</cpoA>
         <cpoB>4</cpoB>
         <cpoC>273</cpoC>
       </coord>
-      <altitude>5200</altitude>
-      <razdes>750</razdes>
+      <altitude>10000</altitude>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
         <tipo>F</tipo>
-        <cpoA>CAST</cpoA>
+        <cpoA>MARPU</cpoA>
       </coord>
-      <altitude>4700</altitude>
+      <altitude>6000</altitude>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>TUCA</cpoA>
+        <tipo>K</tipo>
+        <cpoA>W:23:27:59</cpoA>
+        <cpoB>S:46:44:31</cpoB>
       </coord>
-      <altitude>4100</altitude>
+      <altitude>4700</altitude>
     </breakpoint>
 
     <breakpoint nBrk="4">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>TUCA</cpoA>
-        <cpoB>4</cpoB>
-        <cpoC>93</cpoC>
+        <tipo>F</tipo>
+        <cpoA>UTKET</cpoA>
       </coord>
-      <altitude>2660</altitude>
+      <altitude>4700</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>TUCA</cpoA>
+      </coord>
+      <altitude>4000</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>K</tipo>
+        <cpoA>W:23:26:36</cpoA>
+        <cpoB>S:46:30:11</cpoB>
+      </coord>
+      <altitude>2550</altitude>
     </breakpoint>
 
   </aproximacao>

@@ -138,10 +138,10 @@ class CStripTableModel(QtCore.QAbstractTableModel):
                 # return
                 return QtCore.QVariant(int(round(l_anv.f_rumo_mag, 0)))
 
-            # velocidade ?
-            elif l_column == ldefs.D_STP_VEL:
+            # velocidade (ias) ?
+            elif l_column == ldefs.D_STP_IAS:
                 # return
-                return QtCore.QVariant(int(round(l_anv.f_vel, 0)))
+                return QtCore.QVariant(int(round(l_anv.f_ias, 0)))
 
             # razão descida/subida ?
             elif l_column == ldefs.D_STP_RAZ:
@@ -315,10 +315,10 @@ class CStripTableModel(QtCore.QAbstractTableModel):
                 # return
                 return QtCore.QVariant("Proa")
 
-            # velocidade ?
-            elif f_section == ldefs.D_STP_VEL:
+            # velocidade (ias) ?
+            elif f_section == ldefs.D_STP_IAS:
                 # return
-                return QtCore.QVariant("Veloc.")
+                return QtCore.QVariant("Vel.(IAS)")
 
             # razão descida/subida ?
             elif f_section == ldefs.D_STP_RAZ:
@@ -480,8 +480,8 @@ class CStripTableModel(QtCore.QAbstractTableModel):
                 if lv_ok:
                     l_anv.f_rumo_mag = f_value
 
-            # velocidade ?
-            elif l_column == ldefs.D_STP_VEL:
+            # velocidade (ias) ?
+            elif l_column == ldefs.D_STP_IAS:
                 f_value, lv_ok = f_value.toFloat()
 
                 if lv_ok:

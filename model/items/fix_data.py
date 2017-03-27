@@ -86,7 +86,7 @@ class CFixData(dict):
             # recebeu uma lista ?
             if isinstance(f_data, list):
                 # cria uma fixo com os dados da lista
-                # self.make_fix li_ndxf_data)
+                # self.make_fix(li_ndxf_data)
                 pass
 
             # recebeu uma fixo ?
@@ -183,7 +183,7 @@ class CFixData(dict):
             l_fix = model.CFixNEW(self.__model, fdct_data, fdct_root["VERSION"])
             assert l_fix
 
-            # coloca a fixo no dicionário
+            # coloca o fixo no dicionário
             self[fdct_data["nFix"]] = l_fix
 
         # senão, não existe indicativo

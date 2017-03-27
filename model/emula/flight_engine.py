@@ -53,7 +53,7 @@ import model.newton.defs_newton as ldefs
 import model.piloto.comando_piloto as cmdpil
 
 # control
-# import control.control_debug as cdbg
+import control.control_debug as cdbg
 import control.common.glb_defs as gdefs
 
 # < class CFlightEngine >--------------------------------------------------------------------------
@@ -65,6 +65,8 @@ class CFlightEngine(threading.Thread):
     # ---------------------------------------------------------------------------------------------
     def __init__(self, f_control, f_atv):
         """
+        constructor
+        
         @param f_control: control manager
         @param f_atv: aeronave ativa
         """
@@ -114,211 +116,158 @@ class CFlightEngine(threading.Thread):
         assert self.__cine_voo
 
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_altitude(self, f_atv):
+    def __cmd_pil_altitude(self, f_atv, fo_cmd_pil, fen_cmd_ope):
         """
         comando de pilotagem de altitude
         """
         # check input
         assert f_atv
 
-        # comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
+        # altitude desejada (demanda)
+        if ldefs.E_ALT == fen_cmd_ope:
+            # ajusta demanda pelo primeiro parâmetro (altitude)
+            f_atv.f_atv_alt_dem = fo_cmd_pil.f_param_1 * cdefs.D_CNV_FT2M
 
-        # obtém o comando operacional
-        len_cmd_ope = l_cmd_pil.en_cmd_ope
+        # obtém a altitude desejada (demanda)
+        elif ldefs.E_NIV == fen_cmd_ope:
+            # ajusta demanda pelo segundo parâmetro (nível)
+            f_atv.f_atv_alt_dem = fo_cmd_pil.f_param_2 * 100 * cdefs.D_CNV_FT2M
 
-        # comando ainda não está em execução ?
-        if not l_cmd_pil.v_running:
-            # altitude desejada (demanda)
-            if ldefs.E_ALT == len_cmd_ope:
-                # ajusta demanda pelo primeiro parâmetro (altitude)
-                f_atv.f_atv_alt_dem = l_cmd_pil.f_param_1 * cdefs.D_CNV_FT2M
+        # senão,...
+        else:
+            # logger
+            l_log = logging.getLogger("CFlightEngine::__cmd_pil_altitude")
+            l_log.setLevel(logging.ERROR)
+            l_log.error(u"<E01: comando operacional ({}) não existe.".format(fen_cmd_ope))
 
-            # obtém a altitude desejada (demanda)
-            elif ldefs.E_NIV == len_cmd_ope:
-                # ajusta demanda pelo segundo parâmetro (nível)
-                f_atv.f_atv_alt_dem = l_cmd_pil.f_param_2 * 100 * cdefs.D_CNV_FT2M
+        # obtém o terceiro parâmetro (razão)
+        lf_param_3 = fo_cmd_pil.f_param_3
 
-            # senão,...
-            else:
-                # logger
-                l_log = logging.getLogger("CFlightEngine::__cmd_pil_altitude")
-                l_log.setLevel(logging.ERROR)
-                l_log.error(u"<E01: comando operacional ({}) não existe.".format(len_cmd_ope))
-
-            # obtém o terceiro parâmetro (razão)
-            lf_param_3 = l_cmd_pil.f_param_3
-
-            # razão ?
-            if (lf_param_3 is not None) and (lf_param_3 != 0.):
-                # ajusta razão de subida/descida
-                f_atv.f_atv_raz_sub = lf_param_3
-
-            # comando em execução
-            l_cmd_pil.v_running = True
-
-        # atingiu a altitude desejada ?
-        if f_atv.f_trf_alt_atu == f_atv.f_atv_alt_dem:
-            # aponta para o próximo comando
-            del f_atv.lst_atv_cmd_pil[0]
+        # razão ?
+        if (lf_param_3 is not None) and (lf_param_3 != 0.):
+            # ajusta razão de subida/descida
+            f_atv.f_atv_raz_sub = lf_param_3
 
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_curva(self, f_atv):
+    def __cmd_pil_curva(self, f_atv, fo_cmd_pil, fen_cmd_ope):
         """
         comando de pilotagem de curva
         """
         # check input
         assert f_atv
 
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
+        # força aeronave a abandonar qualquer procedimento
+        abnd.abort_prc(f_atv)
 
-        # obtém o comando operacional
-        len_cmd_ope = l_cmd_pil.en_cmd_ope
+        # coloca a aeronave em manual
+        f_atv.en_trf_fnc_ope = ldefs.E_MANUAL
 
-        # comando ainda não está em execução ?
-        if not l_cmd_pil.v_running:
-            # força aeronave a abandonar qualquer procedimento
-            abnd.abort_prc(f_atv)
-
-            # obtém o primeiro parâmetro (graus)
-            lf_param_1 = l_cmd_pil.f_param_1
-
-            # obtém o segundo parâmetro (proa)
-            lf_param_2 = l_cmd_pil.f_param_2
-
-            # obtém o terceiro parâmetro (razão)
-            lf_param_3 = l_cmd_pil.f_param_3
-
-            # coloca a aeronave em manual
-            f_atv.en_trf_fnc_ope = ldefs.E_MANUAL
-
-            # curva a direita ?
-            if ldefs.E_CDIR == len_cmd_ope:
-                # graus ?
-                if (lf_param_1 is not None) and (lf_param_1 != 0.):
-                    # obtém a proa desejada (demanda)
-                    f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + lf_param_1) % 360.
-
-                # proa ?
-                elif lf_param_2 is not None:
-                    # obtém a proa desejada (demanda)
-                    f_atv.f_atv_pro_dem = lf_param_2 % 360.
-
-                # senão, curva indefinida... !!!REVER!!!
-                else:
-                    # proa negativa
-                    f_atv.f_atv_pro_dem *= -1
-
-                # razão ?
-                if (lf_param_3 is not None) and (lf_param_3 != 0.):
-                    # curva direita (razão positiva)
-                    f_atv.f_atv_raz_crv = abs(lf_param_3)
-
-                else:
-                    # curva direita (razão positiva)
-                    f_atv.f_atv_raz_crv = abs(f_atv.f_atv_raz_crv)
-
-            # curva a esquerda ?
-            elif ldefs.E_CESQ == len_cmd_ope:
-                # graus ?
-                if (lf_param_1 is not None) and (lf_param_1 != 0.):
-                    # obtém a proa desejada (demanda)
-                    f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu - lf_param_1) % 360.
-
-                # proa ?
-                elif lf_param_2 is not None:
-                    # obtém a proa desejada (demanda)
-                    f_atv.f_atv_pro_dem = lf_param_2 % 360.
-
-                # senão, curva indefinida...  !!!REVER!!!
-                else:
-                    # proa negativa
-                    f_atv.f_atv_pro_dem *= -1
-
-                # razão ?
-                if (lf_param_3 is not None) and (lf_param_3 != 0.):
-                    # curva esquerda (razão negativa)
-                    f_atv.f_atv_raz_crv = -abs(lf_param_3)
-
-                else:
-                    # curva esquerda (razão negativa)
-                    f_atv.f_atv_raz_crv = -abs(f_atv.f_atv_raz_crv)
-
-            # curva pelo menor ângulo ?
-            elif ldefs.E_CMNR == len_cmd_ope:
-                # graus ?
-                if (lf_param_1 is not None) and (lf_param_1 != 0.):
-                    # obtém a proa desejada (demanda)
-                    f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + lf_param_1) % 360.
-
-                # proa ?
-                elif lf_param_2 is not None:
-                    # obtém a proa desejada (demanda)
-                    f_atv.f_atv_pro_dem = lf_param_2 % 360.
-
-                # senão, curva indefinida... !!!REVER!!!
-                else:
-                    # proa negativa
-                    f_atv.f_atv_pro_dem *= -1
-
-                # razão ?
-                if (lf_param_3 is not None) and (lf_param_3 != 0.):
-                    # razão de curva
-                    f_atv.f_atv_raz_crv = abs(lf_param_3)
-
-                else:
-                    # razão de curva
-                    f_atv.f_atv_raz_crv = abs(f_atv.f_atv_raz_crv)
-
-                # força a curva pelo menor ângulo
-                scrv.sentido_curva(f_atv)
+        # curva a direita ?
+        if ldefs.E_CDIR == fen_cmd_ope:
+            # graus ?
+            if fo_cmd_pil.f_param_1 is not None:
+                # obtém a proa desejada (demanda)
+                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + fo_cmd_pil.f_param_1) % 360.
 
             # proa ?
-            elif ldefs.E_PROA == len_cmd_ope:
+            elif fo_cmd_pil.f_param_2 is not None:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = lf_param_2
+                f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2 % 360.
 
-                # força a curva pelo menor ângulo
-                scrv.sentido_curva(f_atv)
-
-            # senão,...
+            # senão, curva indefinida...
             else:
-                # logger
-                l_log = logging.getLogger("CFlightEngine::__cmd_pil_curva")
-                l_log.setLevel(logging.CRITICAL)
-                l_log.critical(u"<E01: comando operacional ({}) não existe.".format(len_cmd_ope))
+                # proa negativa
+                f_atv.f_atv_pro_dem = -1.
 
-            # comando em execução
-            l_cmd_pil.v_running = True
+            # razão ?
+            if (fo_cmd_pil.f_param_3 is not None) and (fo_cmd_pil.f_param_3 != 0.):
+                # curva direita (razão positiva)
+                f_atv.f_atv_raz_crv = abs(fo_cmd_pil.f_param_3)
 
-        # atingiu a proa desejada ?
-        if f_atv.f_trf_pro_atu == f_atv.f_atv_pro_dem:
-            # aponta para o próximo comando
-            del f_atv.lst_atv_cmd_pil[0]
+            else:
+                # curva direita (razão positiva)
+                f_atv.f_atv_raz_crv = abs(f_atv.f_atv_raz_crv)
+
+        # curva a esquerda ?
+        elif ldefs.E_CESQ == fen_cmd_ope:
+            # graus ?
+            if fo_cmd_pil.f_param_1 is not None:
+                # obtém a proa desejada (demanda)
+                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu - fo_cmd_pil.f_param_1) % 360.
+
+            # proa ?
+            elif fo_cmd_pil.f_param_2 is not None:
+                # obtém a proa desejada (demanda)
+                f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2 % 360.
+
+            # senão, curva indefinida...
+            else:
+                # proa negativa
+                f_atv.f_atv_pro_dem = -1.
+
+            # razão ?
+            if (fo_cmd_pil.f_param_3 is not None) and (fo_cmd_pil.f_param_3 != 0.):
+                # curva esquerda (razão negativa)
+                f_atv.f_atv_raz_crv = -abs(fo_cmd_pil.f_param_3)
+
+            else:
+                # curva esquerda (razão negativa)
+                f_atv.f_atv_raz_crv = -abs(f_atv.f_atv_raz_crv)
+
+        # curva pelo menor ângulo ?
+        elif ldefs.E_CMNR == fen_cmd_ope:
+            # graus ?
+            if fo_cmd_pil.f_param_1 is not None:
+                # obtém a proa desejada (demanda)
+                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + fo_cmd_pil.f_param_1) % 360.
+
+            # proa ?
+            elif fo_cmd_pil.f_param_2 is not None:
+                # obtém a proa desejada (demanda)
+                f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2 % 360.
+
+            # senão, curva indefinida...
+            else:
+                # proa negativa
+                f_atv.f_atv_pro_dem = -1.
+
+            # razão ?
+            if (fo_cmd_pil.f_param_3 is not None) and (fo_cmd_pil.f_param_3 != 0.):
+                # razão de curva
+                f_atv.f_atv_raz_crv = abs(fo_cmd_pil.f_param_3)
+
+            else:
+                # razão de curva
+                f_atv.f_atv_raz_crv = abs(f_atv.f_atv_raz_crv)
+
+            # força a curva pelo menor ângulo
+            scrv.sentido_curva(f_atv)
+
+        # proa ?
+        elif ldefs.E_PROA == fen_cmd_ope:
+            # obtém a proa desejada (demanda)
+            f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2
+
+            # força a curva pelo menor ângulo
+            scrv.sentido_curva(f_atv)
+
+        # senão,...
+        else:
+            # logger
+            l_log = logging.getLogger("CFlightEngine::__cmd_pil_curva")
+            l_log.setLevel(logging.CRITICAL)
+            l_log.critical(u"<E01: comando operacional ({}) não existe.".format(fen_cmd_ope))
 
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_decolagem(self, f_atv):
+    def __cmd_pil_decolagem(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de decolagem
         """
         # check input
         assert f_atv
 
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
-
-        # obtém o primeiro parâmetro (aeródromo)
-        lf_aer = l_cmd_pil.f_param_1
-
-        # obtém o segundo parâmetro (pista)
-        lf_pst = l_cmd_pil.f_param_2
-
         # aeródromo e pista da decolagem
-        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(lf_aer, lf_pst)
+        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(fo_cmd_pil.f_param_1, fo_cmd_pil.f_param_2)
 
         # função operacional
         f_atv.en_trf_fnc_ope = ldefs.E_DECOLAGEM
@@ -326,30 +275,23 @@ class CFlightEngine(threading.Thread):
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
-        # aponta para o próximo comando
-        del f_atv.lst_atv_cmd_pil[0]
-
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_dir_fixo(self, f_atv):
+    def __cmd_pil_dir_fixo(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de dir_fixo
         """
         # check input
         assert f_atv
 
-        # clear to go (I)
+        # clear to go
         assert self.__cine_data
-
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
 
         # obtém o dicionário de fixos
         ldct_fix = self.__cine_voo.dct_fix
         assert ldct_fix is not None
 
         # obtém fixo a bloquear
-        f_atv.ptr_atv_fix_prc = ldct_fix.get(l_cmd_pil.f_param_1, None)
+        f_atv.ptr_atv_fix_prc = ldct_fix.get(fo_cmd_pil.f_param_1, None)
 
         # status da interceptação ao fixo
         self.__cine_data.v_interceptou_fixo = False
@@ -360,11 +302,8 @@ class CFlightEngine(threading.Thread):
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
-        # aponta para o próximo comando
-        del f_atv.lst_atv_cmd_pil[0]
-
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_espera(self, f_atv):
+    def __cmd_pil_espera(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de espera
         """
@@ -374,24 +313,17 @@ class CFlightEngine(threading.Thread):
         # clear to go
         assert self.__model
 
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
-
         # obtém o primeiro parâmetro (número da espera)
-        lf_param_1 = int(l_cmd_pil.f_param_1)
+        ls_prc = "ESP{:03d}".format(int(fo_cmd_pil.f_param_1))
 
         # procedimento e função operacional
-        f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc("ESP{:03d}".format(lf_param_1))
+        f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
 
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
-        # aponta para o próximo comando
-        del f_atv.lst_atv_cmd_pil[0]
-
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_pouso(self, f_atv):
+    def __cmd_pil_pouso(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de pouso
         """
@@ -401,18 +333,8 @@ class CFlightEngine(threading.Thread):
         # clear to go
         assert self.__model
 
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
-
-        # primeiro parâmetro (aeródromo)
-        lf_aer = l_cmd_pil.f_param_1
-
-        # segundo parâmetro (pista)
-        lf_pst = l_cmd_pil.f_param_2
-
         # aeródromo e pista do pouso
-        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(lf_aer, lf_pst)
+        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(fo_cmd_pil.f_param_1, fo_cmd_pil.f_param_2)
 
         # função operacional
         f_atv.en_trf_fnc_ope = ldefs.E_POUSO
@@ -420,11 +342,8 @@ class CFlightEngine(threading.Thread):
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
-        # aponta para o próximo comando
-        del f_atv.lst_atv_cmd_pil[0]
-
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_trajetoria(self, f_atv):
+    def __cmd_pil_trajetoria(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de trajetória
         """
@@ -434,81 +353,38 @@ class CFlightEngine(threading.Thread):
         # clear to go
         assert self.__model
 
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
-
-        # obtém o primeiro parâmetro (número da trajetória)
-        lf_param_1 = int(l_cmd_pil.f_param_1)
+        # monta procedimento. Primeiro parâmetro do comando é o número da trajetória
+        ls_prc = "TRJ{:03d}".format(int(fo_cmd_pil.f_param_1))
 
         # procedimento e função operacional
-        f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc("TRJ{:03d}".format(lf_param_1))
+        f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
 
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
-        # aponta para o próximo comando
-        del f_atv.lst_atv_cmd_pil[0]
-
     # ---------------------------------------------------------------------------------------------
-    def __cmd_pil_velocidade(self, f_atv):
+    def __cmd_pil_velocidade(self, f_atv, fo_cmd_pil, fen_cmd_ope):
         """
         comando de pilotagem de velocidade
         """
         # check input
         assert f_atv
 
-        # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
-
-        # obtém o comando operacional
-        len_cmd_ope = l_cmd_pil.en_cmd_ope
-
-        # comando ainda não está em execução ?
-        if not l_cmd_pil.v_running:
-            # força aeronave a abandonar qualquer procedimento
-            # abnd.abort_prc(f_atv)
-
-            # velocidade IAS ?
-            if ldefs.E_IAS == len_cmd_ope:
-                # obtém a velocidade desejada (demanda)
-                f_atv.f_atv_vel_dem = l_cmd_pil.f_param_1 * cdefs.D_CNV_KT2MS
-
-            # velocidade MACH ?
-            elif ldefs.E_MACH == len_cmd_ope:
-                # if f_atv.f_trf_alt_atu >= self.__exe.f_exe_niv_apr_mac:
-                    # obtém a velocidade desejada (demanda)
-                    # f_atv.f_trf_vel_mac_dem = l_cmd_pil.f_param_1
-
-                    # f_atv.f_atv_vel_dem = calcIASDemanda(f_atv.f_trf_vel_mac_dem,
-                    #                                      f_atv.f_atv_alt_dem,
-                    #                                      self.__exe.f_exe_var_temp_isa)
-                pass
-
-            # senão,...
-            else:
-                # logger
-                l_log = logging.getLogger("CFlightEngine::__cmd_pil_velocidade")
-                l_log.setLevel(logging.CRITICAL)
-                l_log.critical(u"<E01: comando operacional ({}) não existe.".format(len_cmd_ope))
-
-            # comando em execução
-            l_cmd_pil.v_running = True
-
         # velocidade IAS ?
-        if ldefs.E_IAS == len_cmd_ope:
-            # atingiu a velocidade desejada ?
-            if f_atv.f_trf_vel_atu == f_atv.f_atv_vel_dem:
-                # aponta para o próximo comando
-                del f_atv.lst_atv_cmd_pil[0]
+        if ldefs.E_IAS == fen_cmd_ope:
+            # obtém a velocidade desejada (demanda)
+            f_atv.f_atv_vel_dem = fo_cmd_pil.f_param_1 * cdefs.D_CNV_KT2MS
 
         # velocidade MACH ?
-        elif ldefs.E_MACH == len_cmd_ope:
-            # atingiu a velocidade desejada ?
-            if f_atv.f_trf_vel_mac_atu == f_atv.f_trf_vel_mac_dem:
-                # aponta para o próximo comando
-                del f_atv.lst_atv_cmd_pil[0]
+        elif ldefs.E_MACH == fen_cmd_ope:
+            # if f_atv.f_trf_alt_atu >= self.__exe.f_exe_niv_apr_mac:
+                # obtém a velocidade desejada (demanda)
+                # f_atv.f_trf_vel_mac_dem = fo_cmd_pil.f_param_1
+
+                # f_atv.f_atv_vel_dem = calcIASDemanda(f_atv.f_trf_vel_mac_dem,
+                #                                      f_atv.f_atv_alt_dem,
+                #                                      self.__exe.f_exe_var_temp_isa)
+            pass
 
     # ---------------------------------------------------------------------------------------------
     def __comando_pilotagem(self, f_atv):
@@ -536,80 +412,76 @@ class CFlightEngine(threading.Thread):
         self.__cine_data.i_cin_ptr = 0
 
         # obtém o comando de pilotagem atual
-        l_cmd_pil = f_atv.lst_atv_cmd_pil[0]
-        assert l_cmd_pil
+        lo_cmd_pil = f_atv.lst_atv_cmd_pil.pop(0)
+        assert lo_cmd_pil
+
+        # cdbg.M_DBG.debug("__comando_pilotagem: lo_cmd_pil: {}".format(lo_cmd_pil))
 
         # obtém o comando operacional
-        len_cmd_ope = l_cmd_pil.en_cmd_ope
+        len_cmd_ope = lo_cmd_pil.en_cmd_ope
 
         # curva ou proa ?
         if len_cmd_ope in [ldefs.E_CDIR, ldefs.E_CESQ, ldefs.E_CMNR, ldefs.E_PROA]:
             # trata comando de curva ou proa
-            self.__cmd_pil_curva(f_atv)
+            self.__cmd_pil_curva(f_atv, lo_cmd_pil, len_cmd_ope)
 
         # velocidade ou mach ?
         elif len_cmd_ope in [ldefs.E_IAS, ldefs.E_MACH]:
             # trata comando de velocidade
-            self.__cmd_pil_velocidade(f_atv)
+            self.__cmd_pil_velocidade(f_atv, lo_cmd_pil, len_cmd_ope)
 
         # altitude ou nível ?
         elif len_cmd_ope in [ldefs.E_ALT, ldefs.E_DES, ldefs.E_NIV, ldefs.E_SUB]:
             # trata comando de altitude
-            self.__cmd_pil_altitude(f_atv)
+            self.__cmd_pil_altitude(f_atv, lo_cmd_pil, len_cmd_ope)
 
         # decolagem ?
         elif ldefs.E_DECOLAGEM == len_cmd_ope:
             # trata comando de decolagem
-            self.__cmd_pil_decolagem(f_atv)
+            self.__cmd_pil_decolagem(f_atv, lo_cmd_pil)
 
         # direcionamento a fixo ?
         elif ldefs.E_DIRFIXO == len_cmd_ope:
             # trata comando de direcionamento a fixo
-            self.__cmd_pil_dir_fixo(f_atv)
+            self.__cmd_pil_dir_fixo(f_atv, lo_cmd_pil)
 
         # espera ?
         elif ldefs.E_ESPERA == len_cmd_ope:
             # trata comando de espera
-            self.__cmd_pil_espera(f_atv)
+            self.__cmd_pil_espera(f_atv, lo_cmd_pil)
 
         # põem em movimento ?
         #elif ldefs.E_MOV == len_cmd_ope:
             # inicia movimentação
             #f_atv.v_atv_movi = lf_param
 
-            # aponta para o próximo comando
-            # del f_atv.lst_atv_cmd_pil[0]
-
         # pouso ?
         elif ldefs.E_POUSO == len_cmd_ope:
             # trata comando de pouso
-            self.__cmd_pil_pouso(f_atv)
+            self.__cmd_pil_pouso(f_atv, lo_cmd_pil)
 
         # transponder ?
         #elif ldefs.E_SSR == len_cmd_ope:
             # inicializa campo código transponder
             #f_atv.i_trf_issr = lf_param
 
-            # aponta para o próximo comando
-            # del f_atv.lst_atv_cmd_pil[0]
-
         # trajetória ?
         elif ldefs.E_TRAJETORIA == len_cmd_ope:
             # trata comando de trajetória
-            self.__cmd_pil_trajetoria(f_atv)
+            self.__cmd_pil_trajetoria(f_atv, lo_cmd_pil)
 
         # visualiza ?
         #elif ldefs.E_VISU == len_cmd_ope:
             # inicia visualização
             #f_atv.v_trf_visu = lf_param
 
-            # aponta para o próximo comando
-            # del f_atv.lst_atv_cmd_pil[0]
-
         # manual ?
         # elif ldefs.E_MANUAL == len_cmd_ope:
+            # força aeronave a abandonar qualquer procedimento
+            # abnd.abort_prc(f_atv)
+
             # estabelece fim de comandos de pilotagem
-            # pass  # f_atv.lst_atv_cmd_pil = []
+            # f_atv.lst_atv_cmd_pil = []
 
         # otherwise,...
         else:
@@ -631,6 +503,7 @@ class CFlightEngine(threading.Thread):
 
         # coloca o comando na lista do tráfego
         self.__atv.lst_atv_cmd_pil.append(cmdpil.CComandoPil(fs_cmd))
+        # cdbg.M_DBG.debug("instruction: self.__atv.lst_atv_cmd_pil: {}".format(self.__atv.lst_atv_cmd_pil))
 
     # ---------------------------------------------------------------------------------------------
     def __move_no_solo(self, f_atv):

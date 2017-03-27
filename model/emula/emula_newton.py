@@ -84,17 +84,13 @@ class CEmulaNewton(model.CEmulaModel):
         # self.dct_flight    # dictionary of active flights
         # self.model         # model manager
 
-        # MPI Comm World
-        self.__mpi_comm = f_control.mpi_comm
-        assert self.__mpi_comm
-
         # MPI rank
         self.__mpi_rank = f_control.mpi_rank
         assert self.__mpi_rank > -1
 
         # MPI size
         self.__mpi_size = f_control.mpi_size
-        assert self.__mpi_size > -1
+        assert self.__mpi_size > 0
 
         # sender de ccc
         self.__sck_snd_cnfg = f_control.sck_snd_cnfg
@@ -201,7 +197,7 @@ class CEmulaNewton(model.CEmulaModel):
 
         # indicativo do tráfego (callsign)
         llst_tok = fs_cmd.split(':')
-        cdbg.M_DBG.debug("llst_tok: " + str(llst_tok))
+        cdbg.M_DBG.debug("__parse_cmd_pil: llst_tok: {}".format(llst_tok))
 
         # a aeronave ativa
         l_atv = self.dct_flight.get(llst_tok[0].strip().upper())

@@ -56,12 +56,6 @@ import model.emula.cine.prc_trajetoria as trj
 import model.emula.cine.dados_dinamicos as cine
 import model.emula.cine.trata_associado as tass
 
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
-
 # < class CCineVoo >-------------------------------------------------------------------------------
 
 class CCineVoo(cinmodel.CCineModel):
@@ -74,9 +68,6 @@ class CCineVoo(cinmodel.CCineModel):
         @param f_engine: flight engine
         @param f_control: control manager
         """
-        # logger
-        # M_LOG.info("__init__:>>")
-
         # check input
         assert f_engine
         assert f_control
@@ -102,39 +93,33 @@ class CCineVoo(cinmodel.CCineModel):
         # variação de tempo
         self.__f_delta_t = 0.
 
-        # logger
-        # M_LOG.info("__init__:<<")
-
     # ---------------------------------------------------------------------------------------------
     def update_cinematica(self):
         """
         atualiza os dados cinemáticos da aeronave
         """
-        # logger
-        # M_LOG.info("update_cinematica:>>")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         assert self.sim_time
 
-        # checks
+        # clear to go
         if (not self.atv.v_atv_ok) or (ldefs.E_ATIVA != self.atv.en_trf_est_atv):
             # logger
             l_log = logging.getLogger("update_cinematica")
             l_log.setLevel(logging.ERROR)
-            l_log.error("<E01: aeronave não ativa.")
+            l_log.error(u"<E01: aeronave não ativa.")
 
             # cai fora...
             return
 
         # obtém a hora atual em segundos
         lf_tempo_atu = self.sim_time.obtem_hora_sim()
-        # M_LOG.debug("lf_tempo_atu:[{}]".format(lf_tempo_atu))
+        # cdbg.M_DBG.debug("lf_tempo_atu:[{}]".format(lf_tempo_atu))
 
         # calcula a variação de tempo desde a ultima atualização
         self.__f_delta_t = lf_tempo_atu - self.atv.l_atv_time_ant
-        # M_LOG.debug("lf_delta_t:[{}]".format(self.__f_delta_t))
+        # cdbg.M_DBG.debug("lf_delta_t:[{}]".format(self.__f_delta_t))
 
         # checa se passou algum tempo (1/10th)
         # if self.__f_delta_t < .1:
@@ -155,18 +140,12 @@ class CCineVoo(cinmodel.CCineModel):
         # envia as pistas para as consoles
         self.send_trks()
 
-        # logger
-        # M_LOG.info("update_cinematica:<<")
-
     # ---------------------------------------------------------------------------------------------
     def prc_aproximacao(self):
         """
         procedimento de aproximação
         """
-        # logger
-        # M_LOG.info("prc_aproximacao:><")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         assert self.stk_context is not None
@@ -179,10 +158,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         procedimento de aproximação perdida
         """
-        # logger
-        # M_LOG.info("prc_apx_perdida:><")
-
-        # checks (I)
+        # clear to go (I)
         assert self.atv
 
         # verifica condições de execução (II)
@@ -195,10 +171,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         procedimento de decolagem
         """
-        # logger
-        # M_LOG.info("prc_decolagem:><")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         assert self.stk_context is not None
@@ -211,10 +184,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         procedimento de direcionamento a fixo
         """
-        # logger
-        # M_LOG.info("prc_dir_fixo:><")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         # assert self.stk_context is not None
@@ -227,10 +197,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         procedimento de espera
         """
-        # logger
-        # M_LOG.info("prc_espera:><")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         assert self.stk_context is not None
@@ -243,10 +210,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         procedimento de pouso
         """
-        # logger
-        # M_LOG.info("prc_pouso:><")
-
-        # checks
+        # clear to go
         assert self.atv
         # assert self.cine_data
         # assert self.stk_context is not None
@@ -259,10 +223,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         realiza o procedimento de subida após o procedimento de decolagem
         """
-        # logger
-        # M_LOG.info("prc_subida:><")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         assert self.stk_context is not None
@@ -275,10 +236,7 @@ class CCineVoo(cinmodel.CCineModel):
         """
         procedimento de trajetória
         """
-        # logger
-        # M_LOG.info("prc_trajetoria:><")
-
-        # checks
+        # clear to go
         assert self.atv
         assert self.cine_data
         assert self.stk_context is not None

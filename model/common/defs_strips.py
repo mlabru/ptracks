@@ -41,7 +41,7 @@ from PyQt4 import QtCore
 
 # strip attributes
 D_STP_0, D_STP_ID, D_STP_IND, D_STP_SSR, D_STP_PRF, \
-D_STP_LAT, D_STP_LNG, D_STP_ALT, D_STP_PROA, D_STP_VEL, \
+D_STP_LAT, D_STP_LNG, D_STP_ALT, D_STP_PROA, D_STP_IAS, \
 D_STP_RAZ, D_STP_HORA, D_STP_STATUS = xrange(13)
 
 # strips list (piloto)

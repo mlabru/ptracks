@@ -136,7 +136,7 @@ class CCineModel(object):
         assert self.__sim_time
         assert self.__sck_snd_trks
 
-        # verifica condições de execução
+        # aeronave ativa ?
         if ldefs.E_ATIVA != self.__atv.en_trf_est_atv:
             # cai fora...
             return

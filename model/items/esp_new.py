@@ -177,7 +177,7 @@ class CEspNEW(model.CPrcModel):
         # identificação da espera
         if "nEsp" in fdct_data:
             self.i_prc_id = int(fdct_data["nEsp"])
-            self.s_prc_desc = "Espera {:02d}".format(fdct_data["nEsp"])
+            self.s_prc_desc = u"Espera {:02d}".format(fdct_data["nEsp"])
 
         # descrição da espera
         if "descricao" in fdct_data:

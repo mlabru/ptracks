@@ -170,7 +170,7 @@ class CSubNEW(model.CPrcModel):
         # identificação do procedimento de subida
         if "nSub" in fdct_data:
             self.i_prc_id = int(fdct_data["nSub"])
-            self.s_prc_desc = "Subida {:03d}".format(fdct_data["nSub"])
+            self.s_prc_desc = u"Subida {:03d}".format(fdct_data["nSub"])
 
         # descrição
         if "descricao" in fdct_data:

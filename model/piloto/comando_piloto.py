@@ -37,6 +37,9 @@ import model.newton.defs_newton as ldefs
 
 import model.common.instruction as inst
 
+# control
+import control.control_debug as cdbg
+
 # < class CComandoPil >----------------------------------------------------------------------------
 
 class CComandoPil(inst.CInstruction):
@@ -89,10 +92,12 @@ class CComandoPil(inst.CInstruction):
         # altitude em pés(ft)
         self.f_param_1 = float(flst_tok[0])
 
-        # parâmetro razão ?
-        if "RAZ" == flst_tok[1]:
-            # parse command
-            self.__cmd_razao(flst_tok[2:])
+        # possível razão ?
+        if len(flst_tok) > 2:
+            # parâmetro razão ?
+            if "RAZ" == flst_tok[1]:
+                # parse command
+                self.__cmd_razao(flst_tok[2:])
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_curva(self, flst_tok):
@@ -122,20 +127,22 @@ class CComandoPil(inst.CInstruction):
             # comando curva menor
             self.en_cmd_ope = ldefs.E_CMNR
 
-        # parâmetro proa ?
-        if "PROA" == flst_tok[1]:
-            # parse proa
-            self.__cmd_proa(flst_tok[2:])
-        
-        # parâmetro graus ?
-        elif "GRAUS" == flst_tok[2]:
-            # parse graus
-            self.__cmd_graus(flst_tok[1:])
-        
-        # parâmetro razão ?
-        elif "RAZ" == flst_tok[1]:
-            # parse razão
-            self.__cmd_razao(flst_tok[2:])
+        # possível direção/razão ?
+        if len(flst_tok) > 2:
+            # parâmetro proa ?
+            if "PROA" == flst_tok[1]:
+                # parse proa
+                self.__cmd_proa(flst_tok[2:])
+            
+            # parâmetro graus ?
+            elif "GRAUS" == flst_tok[2]:
+                # parse graus
+                self.__cmd_graus(flst_tok[1:])
+            
+            # parâmetro razão ?
+            elif "RAZ" == flst_tok[1]:
+                # parse razão
+                self.__cmd_razao(flst_tok[2:])
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_decolagem(self, flst_tok):
@@ -168,10 +175,12 @@ class CComandoPil(inst.CInstruction):
         # graus
         self.f_param_1 = float(flst_tok[0])
 
-        # parâmetro razão ?
-        if "RAZ" == flst_tok[2]:
-            # parse command razão
-            self.__cmd_razao(flst_tok[3:])
+        # possível razão ?
+        if len(flst_tok) > 3:
+            # parâmetro razão ?
+            if "RAZ" == flst_tok[2]:
+                # parse command razão
+                self.__cmd_razao(flst_tok[3:])
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_nivel(self, flst_tok):
@@ -187,10 +196,12 @@ class CComandoPil(inst.CInstruction):
         # nível
         self.f_param_2 = float(flst_tok[0])
 
-        # parâmetro razão ?
-        if "RAZ" == flst_tok[1]:
-            # parse command
-            self.__cmd_razao(flst_tok[2:])
+        # possível razão ?
+        if len(flst_tok) > 2:
+            # parâmetro razão ?
+            if "RAZ" == flst_tok[1]:
+                # parse command
+                self.__cmd_razao(flst_tok[2:])
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_pouso(self, flst_tok):
@@ -223,10 +234,12 @@ class CComandoPil(inst.CInstruction):
         # proa
         self.f_param_2 = float(flst_tok[0])
 
-        # parâmetro razão ?
-        if "RAZ" == flst_tok[1]:
-            # parse command razão
-            self.__cmd_razao(flst_tok[2:])
+        # possível razão ?
+        if len(flst_tok) > 2:
+            # parâmetro razão ?
+            if "RAZ" == flst_tok[1]:
+                # parse command razão
+                self.__cmd_razao(flst_tok[2:])
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_razao(self, flst_tok):
@@ -250,7 +263,8 @@ class CComandoPil(inst.CInstruction):
             return
 
         # faz o split do comando
-        llst_tok = fs_cmd.split()
+        llst_tok = fs_cmd.strip().split()
+        cdbg.M_DBG.debug("__parse_comando: llst_tok: {}".format(llst_tok))
 
         # comando de altitude ?
         if "ALT" == llst_tok[0]:
@@ -286,7 +300,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_DIRFIXO
 
             # número do fixo
-            self.f_param_1 = int(llst_tok[1])
+            self.f_param_1 = str(llst_tok[1]).strip()
 
         # comando de nível ?
         elif "NIV" == llst_tok[0]:
@@ -315,7 +329,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_IAS
 
             # velocidade
-            self.f_param_1 = float(flst_tok[0])
+            self.f_param_1 = float(llst_tok[1])
 
     # =============================================================================================
     # data

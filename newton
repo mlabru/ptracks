@@ -9,5 +9,5 @@ fi
 # nome do computador
 HOST=`hostname`
 
-# executa a aplicação
-/usr/bin/env python -OO ./newton.py "$@" > ./newton.$HOST.log 2>&1
+# executa a aplicação  (-OO)
+/usr/bin/env python ./newton.py "$@" > ./newton.$HOST.log 2>&1

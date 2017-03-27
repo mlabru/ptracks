@@ -33,6 +33,7 @@ __date__ = "2015/12"
 # < imports >--------------------------------------------------------------------------------------
 
 # Python library
+import datetime
 import json
 import logging
 import random
@@ -74,7 +75,7 @@ import view.piloto.dlg_trajetoria as dlgtrj
 import view.piloto.dlg_velocidade as dlgvel
 
 # control
-# import control.control_debug as cdbg
+import control.control_debug as cdbg
 import control.common.glb_defs as gdefs
 
 import control.events.events_basic as events
@@ -448,7 +449,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         assert self.__act_about is not None
 
         # config action about
-        self.__act_about.setStatusTip(self.tr("About ViSIL"))
+        self.__act_about.setStatusTip(self.tr("About Piloto"))
 
         # connect action about
         self.__act_about.triggered.connect(self.about)
@@ -518,7 +519,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __get_status(self, f_strip):
         """
-        DOCUMENT ME!
+        obtém o status da aeronave selecionada
 
         @param f_strip: strip selecionada
         """
@@ -527,7 +528,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             # nenhuma strip selecionada. cai fora...
             return
 
-        # monta o request de status
+        # status request
         ls_req = "data/status.json?{}".format(f_strip.s_callsign)
 
         # get server address
@@ -549,14 +550,14 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
                 # logger
                 l_log = logging.getLogger("CWndMainPiloto::__get_status")
                 l_log.setLevel(logging.ERROR)
-                l_log.error(u"<E01: aeronave({}) não existe no servidor.".format(f_strip.s_callsign))
+                l_log.error(u"<E01({}): aeronave({}) não existe no servidor.".format(datetime.now().strftime("%H:%M:%S"), f_strip.s_callsign))
 
         # senão, não achou endereço do servidor
         else:
             # logger
             l_log = logging.getLogger("CWndMainPiloto::__get_status")
             l_log.setLevel(logging.WARNING)
-            l_log.warning(u"<E02: srv.addr não existe na configuração.")
+            l_log.warning(u"<E02({}): srv.addr não existe na configuração.".format(datetime.now().strftime("%H:%M:%S")))
 
     # ---------------------------------------------------------------------------------------------
     def __make_connections(self):
@@ -888,6 +889,8 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         ls_buff = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
                   str(gdefs.D_MSG_PIL) + gdefs.D_MSG_SEP + \
                   str(ls_cmd)
+
+        cdbg.M_DBG.debug("ls_buff: {}".format(ls_buff))
 
         # envia o comando
         self.__sck_snd_cpil.send_data(ls_buff)

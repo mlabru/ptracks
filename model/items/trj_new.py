@@ -161,7 +161,7 @@ class CTrjNEW(model.CPrcModel):
         # identificação do procedimento de trajetória
         if "nTrj" in fdct_data:
             self.i_prc_id = int(fdct_data["nTrj"])
-            self.s_prc_desc = "Trajetória {:03d}".format(fdct_data["nTrj"])            
+            self.s_prc_desc = u"Trajetória {:03d}".format(fdct_data["nTrj"])            
 
         # descrição
         if "descricao" in fdct_data:
