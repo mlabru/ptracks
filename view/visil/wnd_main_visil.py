@@ -53,7 +53,7 @@ import model.visil.aircraft_visil as anv
 # view
 import view.common.dock_procedures as dckprc
 import view.common.slate_radar as sltrdr
-import view.common.strip_basic as strp
+# import view.common.strip_basic as strp
 
 import view.visil.statusbar_visil as stbar
 import view.visil.wnd_main_visil_ui as wndmain_ui

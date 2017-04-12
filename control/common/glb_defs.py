@@ -96,7 +96,7 @@ D_MSG_ACC = 141    # fator de aceleração
 D_MSG_EXE = 142    # código do exercício
 D_MSG_FIM = 143    # término de simulação
 D_MSG_FRZ = 144    # congela
-D_MSG_SRV = 145    # horário
+D_MSG_SRV = 145    # servidor
 D_MSG_TIM = 146    # horário
 D_MSG_UFZ = 147    # descongela
 

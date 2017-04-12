@@ -75,8 +75,6 @@ class CAirspaceVisil(airs.CAirspaceNewton):
         """
         # check input
         assert f_model
-        assert fs_dir
-        assert fs_location
 
         # init super class
         super(CAirspaceVisil, self).__init__(f_model)

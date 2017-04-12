@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 instruction
 
-DOCUMENT ME!
+an instruction
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -49,12 +49,12 @@ class CInstruction(object):
 
         # parâmetros
 
-        # grau / velocidade / altitude
-        self.__f_param_1 = 0.
-        # proa / nivel
-        self.__f_param_2 = 0.
-        # razão
-        self.__f_param_3 = 0.
+        # grau / velocidade / altitude & flag Ok
+        self.__t_param_1 = (0., False)
+        # proa / nivel & flag Ok
+        self.__t_param_2 = (0., False)
+        # razão & flag Ok
+        self.__t_param_3 = (0., False)
 
         # texto da instrução
         self.__s_text = ""
@@ -72,8 +72,8 @@ class CInstruction(object):
         object's human-readable representation
         """
         # return
-        return "text:[{}] = {}/{}/{}/{}".format(self.__s_text, self.__en_cmd_ope, self.__f_param_1,
-                                                self.__f_param_2, self.__f_param_3)
+        return "text:[{}] = {}/{}/{}/{}".format(self.__s_text, self.__en_cmd_ope, self.__t_param_1,
+                                                self.__t_param_2, self.__t_param_3)
 
     # =============================================================================================
     # data
@@ -96,48 +96,48 @@ class CInstruction(object):
                                                         
     # ---------------------------------------------------------------------------------------------
     @property
-    def f_param_1(self):
+    def t_param_1(self):
         """
         get parâmetro 1
         """
-        return self.__f_param_1
+        return self.__t_param_1
                                                         
-    @f_param_1.setter
-    def f_param_1(self, f_val):
+    @t_param_1.setter
+    def t_param_1(self, f_val):
         """
         set parâmetro 1
         """
-        self.__f_param_1 = f_val
+        self.__t_param_1 = f_val
                                                         
     # ---------------------------------------------------------------------------------------------
     @property
-    def f_param_2(self):
+    def t_param_2(self):
         """
         get parâmetro 2
         """
-        return self.__f_param_2
+        return self.__t_param_2
                                                         
-    @f_param_2.setter
-    def f_param_2(self, f_val):
+    @t_param_2.setter
+    def t_param_2(self, f_val):
         """
         set parâmetro 2
         """
-        self.__f_param_2 = f_val
+        self.__t_param_2 = f_val
                                                         
     # ---------------------------------------------------------------------------------------------
     @property
-    def f_param_3(self):
+    def t_param_3(self):
         """
         get parâmetro 3
         """
-        return self.__f_param_3
+        return self.__t_param_3
                                                         
-    @f_param_3.setter
-    def f_param_3(self, f_val):
+    @t_param_3.setter
+    def t_param_3(self, f_val):
         """
         set parâmetro 3
         """
-        self.__f_param_3 = f_val
+        self.__t_param_3 = f_val
                                                         
     # ---------------------------------------------------------------------------------------------
     @property

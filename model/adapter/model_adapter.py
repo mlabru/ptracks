@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 ---------------------------------------------------------------------------------------------------
-model manager
+model_adapter
 
-DOCUMENT ME!
+interface to newton
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -19,118 +19,117 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-revision 0.4  2016/ago  mlabru
-pequenas correções e otimização
-
-revision 0.3  2015/nov  mlabru
-pep8 style conventions
-
-revision 0.2  2014/nov  mlabru
-inclusão do event manager e config manager
-
-revision 0.1  2014/nov  mlabru
+revision 0.1  2017/abr  mlabru
 initial release (Linux/Python)
 ---------------------------------------------------------------------------------------------------
 """
-__version__ = "$revision: 0.4$"
+__version__ = "$revision: 0.1$"
 __author__ = "Milton Abrunhosa"
-__date__ = "2016/08"
+__date__ = "2017/04"
 
 # < imports >--------------------------------------------------------------------------------------
 
+# python library
+import os
+import sys
+
+# libs
+import libs.coords.coord_sys as coords
+import libs.geomag.geomag.geomag.geomag as gm
+
+# model
+import model.model_manager as model
+import model.core.location as cloc
+
 # control
-import control.events.events_manager as event
-import control.config.config_manager as config
+import control.events.events_basic as event
 
-# < class CModelManager >--------------------------------------------------------------------------
+# < class CModelAdapter >--------------------------------------------------------------------------
 
-class CModelManager(object):
+class CModelAdapter(model.CModelManager):
     """
-    main model object. Views and controllers interact with this
+    adapter model object
     """
     # ---------------------------------------------------------------------------------------------
     def __init__(self, f_control):
         """
-        initializes the model manager
-
-        @param f_control: control manager
+        constructor
+        
+        @param f_control: control
         """
-        # check input
-        assert f_control
+        # init super class
+        super(CModelAdapter, self).__init__(f_control)
 
-        # control manager
-        self.__control = f_control
+        # herdados de CModelManager
+        # self.app           # the application
+        # self.config        # config manager
+        # self.dct_config    # dicionário de configuração
+        # self.control       # control
+        # self.event         # event manager
 
-        # config manager
-        self.__config = f_control.config if f_control.config is not None else config.CConfigManager()
-        assert self.__config
+        # obtém as coordenadas de referência
+        lf_ref_lat = float(self.dct_config["map.lat"])
+        lf_ref_lng = float(self.dct_config["map.lng"])
+        lf_dcl_mag = float(self.dct_config["map.dcl"])
 
-        # event manager
-        self.__event = f_control.event if f_control.event is not None else event.CEventsManager()
-        assert self.__event
+        # coordinate system
+        self.__coords = coords.CCoordSys(lf_ref_lat, lf_ref_lng, lf_dcl_mag)
+        assert self.__coords
 
-        # registra como recebedor de eventos
-        self.__event.register_listener(self)
+        # create magnectic converter
+        self.__geomag = gm.GeoMag("data/tabs/WMM.COF")
+        assert self.__geomag
+
+        # create CORE location
+        self.__core_location = cloc.CLocation()
+        assert self.__core_location
+
+        # configure reference point
+        self.__core_location.configure_values("0|0|{}|{}|2|50000".format(lf_ref_lat, lf_ref_lng))
 
     # ---------------------------------------------------------------------------------------------
-    def notify(self, f_event):
+    def notify(self, f_evt):
         """
         callback de tratamento de eventos recebidos
 
-        @param f_event: evento recebido
+        @param f_evt: evento recebido
         """
         # return
         return
-
+        
     # =============================================================================================
     # data
     # =============================================================================================
 
     # ---------------------------------------------------------------------------------------------
     @property
-    def app(self):
+    def coords(self):
         """
-        get the application
+        get coordinate system
         """
-        return self.__control.app
+        return self.__coords
+
+    @coords.setter
+    def coords(self, f_val):
+        """
+        set coordinate system
+        """
+        self.__coords = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
-    def config(self):
+    def core_location(self):
         """
-        get config manager
+        get core_location
         """
-        return self.__config
+        return self.__core_location
 
     # ---------------------------------------------------------------------------------------------
     @property
-    def control(self):
+    def geomag(self):
         """
-        get control manager
+        get geomag
         """
-        return self.__control
-
-    # ---------------------------------------------------------------------------------------------
-    @property
-    def dct_config(self):
-        """
-        get configuration dictionary
-        """
-        return self.__config.dct_config if self.__config is not None else {}
-
-    # ---------------------------------------------------------------------------------------------
-    @property
-    def event(self):
-        """
-        get event manager
-        """
-        return self.__event
-
-    @event.setter
-    def event(self, f_val):
-        """
-        get event manager
-        """
-        self.__event = f_val
+        return self.__geomag
 
 # < the end >--------------------------------------------------------------------------------------

@@ -72,6 +72,7 @@ class CFreeze(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "Freeze event"
 
         # freeze flag
@@ -102,6 +103,7 @@ class CIdle(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "Idle event"
 
 # < class CQuit >----------------------------------------------------------------------------------
@@ -121,6 +123,7 @@ class CQuit(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "Program Quit event"
 
 # < class CSave2Disk >-----------------------------------------------------------------------------
@@ -140,6 +143,7 @@ class CSave2Disk(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "Program Save2Disk event"
 
         # save table name
@@ -170,6 +174,7 @@ class CTick(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "CPU Tick event"
 
 # < the end >--------------------------------------------------------------------------------------

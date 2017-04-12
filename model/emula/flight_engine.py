@@ -126,12 +126,12 @@ class CFlightEngine(threading.Thread):
         # altitude desejada (demanda)
         if ldefs.E_ALT == fen_cmd_ope:
             # ajusta demanda pelo primeiro parâmetro (altitude)
-            f_atv.f_atv_alt_dem = fo_cmd_pil.f_param_1 * cdefs.D_CNV_FT2M
+            f_atv.f_atv_alt_dem = fo_cmd_pil.t_param_1[0] * cdefs.D_CNV_FT2M
 
         # obtém a altitude desejada (demanda)
         elif ldefs.E_NIV == fen_cmd_ope:
             # ajusta demanda pelo segundo parâmetro (nível)
-            f_atv.f_atv_alt_dem = fo_cmd_pil.f_param_2 * 100 * cdefs.D_CNV_FT2M
+            f_atv.f_atv_alt_dem = fo_cmd_pil.t_param_2[0] * 100 * cdefs.D_CNV_FT2M
 
         # senão,...
         else:
@@ -141,7 +141,7 @@ class CFlightEngine(threading.Thread):
             l_log.error(u"<E01: comando operacional ({}) não existe.".format(fen_cmd_ope))
 
         # obtém o terceiro parâmetro (razão)
-        lf_param_3 = fo_cmd_pil.f_param_3
+        lf_param_3 = fo_cmd_pil.t_param_3[0]
 
         # razão ?
         if (lf_param_3 is not None) and (lf_param_3 != 0.):
@@ -162,17 +162,25 @@ class CFlightEngine(threading.Thread):
         # coloca a aeronave em manual
         f_atv.en_trf_fnc_ope = ldefs.E_MANUAL
 
+        cdbg.M_DBG.debug("__cmd_pil_curva: fo_cmd_pil.t_param_1[0]: {}".format(fo_cmd_pil.t_param_1[0]))
+        cdbg.M_DBG.debug("__cmd_pil_curva: fo_cmd_pil.t_param_2[0]: {}".format(fo_cmd_pil.t_param_2[0]))
+        cdbg.M_DBG.debug("__cmd_pil_curva: fo_cmd_pil.t_param_3[0]: {}".format(fo_cmd_pil.t_param_3[0]))
+
         # curva a direita ?
         if ldefs.E_CDIR == fen_cmd_ope:
             # graus ?
-            if fo_cmd_pil.f_param_1 is not None:
+            if (fo_cmd_pil.t_param_1 is not None) and fo_cmd_pil.t_param_1[1]:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + fo_cmd_pil.f_param_1) % 360.
+                cdbg.M_DBG.debug("__cmd_pil_curva: f_atv.f_atv_pro_dem (A): {}".format(f_atv.f_atv_pro_dem))
+                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + fo_cmd_pil.t_param_1[0]) % 360.
+                cdbg.M_DBG.debug("__cmd_pil_curva: f_atv.f_atv_pro_dem (D): {}".format(f_atv.f_atv_pro_dem))
 
             # proa ?
-            elif fo_cmd_pil.f_param_2 is not None:
+            elif (fo_cmd_pil.t_param_2 is not None) and fo_cmd_pil.t_param_2[1]:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2 % 360.
+                cdbg.M_DBG.debug("__cmd_pil_curva: f_atv.f_atv_pro_dem (A): {}".format(f_atv.f_atv_pro_dem))
+                f_atv.f_atv_pro_dem = fo_cmd_pil.t_param_2[0] % 360.
+                cdbg.M_DBG.debug("__cmd_pil_curva: f_atv.f_atv_pro_dem (D): {}".format(f_atv.f_atv_pro_dem))
 
             # senão, curva indefinida...
             else:
@@ -180,9 +188,9 @@ class CFlightEngine(threading.Thread):
                 f_atv.f_atv_pro_dem = -1.
 
             # razão ?
-            if (fo_cmd_pil.f_param_3 is not None) and (fo_cmd_pil.f_param_3 != 0.):
+            if (fo_cmd_pil.t_param_3 is not None) and (fo_cmd_pil.t_param_3[1]) and (fo_cmd_pil.t_param_3[0] != 0.):
                 # curva direita (razão positiva)
-                f_atv.f_atv_raz_crv = abs(fo_cmd_pil.f_param_3)
+                f_atv.f_atv_raz_crv = abs(fo_cmd_pil.t_param_3[0])
 
             else:
                 # curva direita (razão positiva)
@@ -191,14 +199,14 @@ class CFlightEngine(threading.Thread):
         # curva a esquerda ?
         elif ldefs.E_CESQ == fen_cmd_ope:
             # graus ?
-            if fo_cmd_pil.f_param_1 is not None:
+            if (fo_cmd_pil.t_param_1 is not None) and fo_cmd_pil.t_param_1[1]:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu - fo_cmd_pil.f_param_1) % 360.
+                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu - fo_cmd_pil.t_param_1[0]) % 360.
 
             # proa ?
-            elif fo_cmd_pil.f_param_2 is not None:
+            elif (fo_cmd_pil.t_param_2 is not None) and fo_cmd_pil.t_param_2[1]:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2 % 360.
+                f_atv.f_atv_pro_dem = fo_cmd_pil.t_param_2[0] % 360.
 
             # senão, curva indefinida...
             else:
@@ -206,9 +214,9 @@ class CFlightEngine(threading.Thread):
                 f_atv.f_atv_pro_dem = -1.
 
             # razão ?
-            if (fo_cmd_pil.f_param_3 is not None) and (fo_cmd_pil.f_param_3 != 0.):
+            if (fo_cmd_pil.t_param_3 is not None) and (fo_cmd_pil.t_param_3[1]) and (fo_cmd_pil.t_param_3[0] != 0.):
                 # curva esquerda (razão negativa)
-                f_atv.f_atv_raz_crv = -abs(fo_cmd_pil.f_param_3)
+                f_atv.f_atv_raz_crv = -abs(fo_cmd_pil.t_param_3[0])
 
             else:
                 # curva esquerda (razão negativa)
@@ -217,14 +225,14 @@ class CFlightEngine(threading.Thread):
         # curva pelo menor ângulo ?
         elif ldefs.E_CMNR == fen_cmd_ope:
             # graus ?
-            if fo_cmd_pil.f_param_1 is not None:
+            if (fo_cmd_pil.t_param_1 is not None) and fo_cmd_pil.t_param_1[1]:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + fo_cmd_pil.f_param_1) % 360.
+                f_atv.f_atv_pro_dem = (360. + f_atv.f_trf_pro_atu + fo_cmd_pil.t_param_1[0]) % 360.
 
             # proa ?
-            elif fo_cmd_pil.f_param_2 is not None:
+            elif (fo_cmd_pil.t_param_2 is not None) and fo_cmd_pil.t_param_2[1]:
                 # obtém a proa desejada (demanda)
-                f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2 % 360.
+                f_atv.f_atv_pro_dem = fo_cmd_pil.t_param_2[0] % 360.
 
             # senão, curva indefinida...
             else:
@@ -232,9 +240,9 @@ class CFlightEngine(threading.Thread):
                 f_atv.f_atv_pro_dem = -1.
 
             # razão ?
-            if (fo_cmd_pil.f_param_3 is not None) and (fo_cmd_pil.f_param_3 != 0.):
+            if (fo_cmd_pil.t_param_3 is not None) and (fo_cmd_pil.t_param_3[1]) and (fo_cmd_pil.t_param_3[0] != 0.):
                 # razão de curva
-                f_atv.f_atv_raz_crv = abs(fo_cmd_pil.f_param_3)
+                f_atv.f_atv_raz_crv = abs(fo_cmd_pil.t_param_3[0])
 
             else:
                 # razão de curva
@@ -246,7 +254,7 @@ class CFlightEngine(threading.Thread):
         # proa ?
         elif ldefs.E_PROA == fen_cmd_ope:
             # obtém a proa desejada (demanda)
-            f_atv.f_atv_pro_dem = fo_cmd_pil.f_param_2
+            f_atv.f_atv_pro_dem = fo_cmd_pil.t_param_2[0] % 360.
 
             # força a curva pelo menor ângulo
             scrv.sentido_curva(f_atv)
@@ -267,7 +275,7 @@ class CFlightEngine(threading.Thread):
         assert f_atv
 
         # aeródromo e pista da decolagem
-        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(fo_cmd_pil.f_param_1, fo_cmd_pil.f_param_2)
+        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(fo_cmd_pil.t_param_1[0], fo_cmd_pil.t_param_2[0])
 
         # função operacional
         f_atv.en_trf_fnc_ope = ldefs.E_DECOLAGEM
@@ -291,7 +299,7 @@ class CFlightEngine(threading.Thread):
         assert ldct_fix is not None
 
         # obtém fixo a bloquear
-        f_atv.ptr_atv_fix_prc = ldct_fix.get(fo_cmd_pil.f_param_1, None)
+        f_atv.ptr_atv_fix_prc = ldct_fix.get(fo_cmd_pil.t_param_1[0], None)
 
         # status da interceptação ao fixo
         self.__cine_data.v_interceptou_fixo = False
@@ -314,7 +322,7 @@ class CFlightEngine(threading.Thread):
         assert self.__model
 
         # obtém o primeiro parâmetro (número da espera)
-        ls_prc = "ESP{:03d}".format(int(fo_cmd_pil.f_param_1))
+        ls_prc = "ESP{:03d}".format(int(fo_cmd_pil.t_param_1[0]))
 
         # procedimento e função operacional
         f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
@@ -334,7 +342,7 @@ class CFlightEngine(threading.Thread):
         assert self.__model
 
         # aeródromo e pista do pouso
-        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(fo_cmd_pil.f_param_1, fo_cmd_pil.f_param_2)
+        f_atv.ptr_atv_aer, f_atv.ptr_atv_pst = self.__model.airspace.get_aer_pst(fo_cmd_pil.t_param_1[0], fo_cmd_pil.t_param_2[0])
 
         # função operacional
         f_atv.en_trf_fnc_ope = ldefs.E_POUSO
@@ -354,7 +362,7 @@ class CFlightEngine(threading.Thread):
         assert self.__model
 
         # monta procedimento. Primeiro parâmetro do comando é o número da trajetória
-        ls_prc = "TRJ{:03d}".format(int(fo_cmd_pil.f_param_1))
+        ls_prc = "TRJ{:03d}".format(int(fo_cmd_pil.t_param_1[0]))
 
         # procedimento e função operacional
         f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
@@ -373,13 +381,13 @@ class CFlightEngine(threading.Thread):
         # velocidade IAS ?
         if ldefs.E_IAS == fen_cmd_ope:
             # obtém a velocidade desejada (demanda)
-            f_atv.f_atv_vel_dem = fo_cmd_pil.f_param_1 * cdefs.D_CNV_KT2MS
+            f_atv.f_atv_vel_dem = fo_cmd_pil.t_param_1[0] * cdefs.D_CNV_KT2MS
 
         # velocidade MACH ?
         elif ldefs.E_MACH == fen_cmd_ope:
             # if f_atv.f_trf_alt_atu >= self.__exe.f_exe_niv_apr_mac:
                 # obtém a velocidade desejada (demanda)
-                # f_atv.f_trf_vel_mac_dem = fo_cmd_pil.f_param_1
+                # f_atv.f_trf_vel_mac_dem = fo_cmd_pil.t_param_1[0]
 
                 # f_atv.f_atv_vel_dem = calcIASDemanda(f_atv.f_trf_vel_mac_dem,
                 #                                      f_atv.f_atv_alt_dem,
@@ -415,7 +423,7 @@ class CFlightEngine(threading.Thread):
         lo_cmd_pil = f_atv.lst_atv_cmd_pil.pop(0)
         assert lo_cmd_pil
 
-        # cdbg.M_DBG.debug("__comando_pilotagem: lo_cmd_pil: {}".format(lo_cmd_pil))
+        cdbg.M_DBG.debug("__comando_pilotagem: lo_cmd_pil: {}".format(lo_cmd_pil))
 
         # obtém o comando operacional
         len_cmd_ope = lo_cmd_pil.en_cmd_ope
@@ -461,9 +469,9 @@ class CFlightEngine(threading.Thread):
             self.__cmd_pil_pouso(f_atv, lo_cmd_pil)
 
         # transponder ?
-        #elif ldefs.E_SSR == len_cmd_ope:
+        elif ldefs.E_SSR == len_cmd_ope:
             # inicializa campo código transponder
-            #f_atv.i_trf_issr = lf_param
+            f_atv.i_trf_issr = lo_cmd_pil.t_param_1[0]
 
         # trajetória ?
         elif ldefs.E_TRAJETORIA == len_cmd_ope:
@@ -503,7 +511,7 @@ class CFlightEngine(threading.Thread):
 
         # coloca o comando na lista do tráfego
         self.__atv.lst_atv_cmd_pil.append(cmdpil.CComandoPil(fs_cmd))
-        # cdbg.M_DBG.debug("instruction: self.__atv.lst_atv_cmd_pil: {}".format(self.__atv.lst_atv_cmd_pil))
+        cdbg.M_DBG.debug("instruction: self.__atv.lst_atv_cmd_pil: {}".format(self.__atv.lst_atv_cmd_pil))
 
     # ---------------------------------------------------------------------------------------------
     def __move_no_solo(self, f_atv):

@@ -35,6 +35,13 @@ __date__ = "2016/08"
 
 # < imports >--------------------------------------------------------------------------------------
 
+# python library
+import sys
+
+# PyQt library
+from PyQt4 import QtCore
+from PyQt4 import QtGui
+
 # control
 import control.control_manager as control
 
@@ -52,7 +59,7 @@ class CControlBasic(control.CControlManager):
         @param fs_path: path do arquivo de configuração
         """
         # init super class
-        super(CControlBasic, self).__init__(fs_path)
+        super(CControlBasic, self).__init__()
 
         # herdados de CControlManager
         # self.event     # event manager
@@ -60,6 +67,12 @@ class CControlBasic(control.CControlManager):
         # self.model     # model manager
         # self.view      # view manager
         # self.voip      # biblioteca de VoIP
+
+        # the application itself
+        self.__app = None
+
+        # splash screen
+        self.__splash = None
 
         # flight control
         self.__ctr_flight = None
@@ -70,9 +83,67 @@ class CControlBasic(control.CControlManager):
         # simulation timer
         self.__sim_time = None
 
+    # ---------------------------------------------------------------------------------------------
+    def create_app(self, fs_name):
+        """
+        DOCUMENT ME!
+        """
+        # create application
+        self.__app = QtGui.QApplication(sys.argv)
+        assert self.__app
+
+        # setup application parameters
+        self.__app.setOrganizationName("sophosoft")
+        self.__app.setOrganizationDomain("sophosoft.com.br")
+        self.__app.setApplicationName(fs_name)
+
+        # load logo
+        l_pix_logo = QtGui.QPixmap(":/images/logos/logo.png")
+        assert l_pix_logo
+
+        # create splash screen
+        self.__splash = QtGui.QSplashScreen(l_pix_logo, QtCore.Qt.WindowStaysOnTopHint)
+        assert self.__splash
+
+        self.__splash.setMask(l_pix_logo.mask())
+
+        # create the progress bar
+        # self.progressBar = QtGui.QProgressBar(self.__splash)
+        # self.progressBar.setGeometry(    self.__splash.width() / 10, 8 * self.__splash.height() / 10,
+        #                              8 * self.__splash.width() / 10,     self.__splash.height() / 10)
+
+        # message = 'hello'
+        # label = QtGui.QLabel("<font color=red size=72><b>{0}</b></font>".format(message), self.__splash)
+        # label.setGeometry(1 * self.__splash.width() / 10, 8 * self.__splash.height() / 10,
+        #                   8 * self.__splash.width() / 10, 1 * self.__splash.height() / 10)
+
+        # show splash screen
+        self.__splash.show()
+
+        # update the progress bar
+        # self.progressBar.setValue(50)
+
+        # process events (before main loop)
+        self.__app.processEvents()
+
     # =============================================================================================
     # data
     # =============================================================================================
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def app(self):
+        """
+        get application
+        """
+        return self.__app
+
+    @app.setter
+    def app(self, f_val):
+        """
+        set application
+        """
+        self.__app = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
@@ -118,5 +189,20 @@ class CControlBasic(control.CControlManager):
         set simulation timer
         """
         self.__sim_time = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def splash(self):
+        """
+        get splash screen
+        """
+        return self.__splash
+
+    @splash.setter
+    def splash(self, f_val):
+        """
+        set splash screen
+        """
+        self.__splash = f_val
 
 # < the end >--------------------------------------------------------------------------------------

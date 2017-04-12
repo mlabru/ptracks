@@ -890,8 +890,6 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
                   str(gdefs.D_MSG_PIL) + gdefs.D_MSG_SEP + \
                   str(ls_cmd)
 
-        cdbg.M_DBG.debug("ls_buff: {}".format(ls_buff))
-
         # envia o comando
         self.__sck_snd_cpil.send_data(ls_buff)
 
@@ -962,7 +960,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         self.qtv_stp.edit(l_index)
     '''
     # ---------------------------------------------------------------------------------------------
-    @QtCore.pyqtSlot(QtCore.QModelIndex,QtCore.QModelIndex)
+    @QtCore.pyqtSlot(QtCore.QModelIndex, QtCore.QModelIndex)
     def __on_strip_row_changed(self, f_index_new, f_index_old):
         """
         DOCUMENT ME!

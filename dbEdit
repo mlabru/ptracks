@@ -9,5 +9,5 @@ fi
 # nome do computador
 HOST=`hostname`
 
-# executa o editor da base de dados
-/usr/bin/env python -OO ./dbEdit.py "$@" 2> ./dbEdit.$HOST.log
+# executa o editor da base de dados (-OO)
+/usr/bin/env python ./dbEdit.py "$@" 2> ./dbEdit.$HOST.log

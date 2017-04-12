@@ -55,6 +55,8 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
     # ---------------------------------------------------------------------------------------------
     def __init__(self, fsck_http, fdct_config, f_strip_cur, fdct_fix, f_parent=None):
         """
+        constructor
+        
         @param fsck_http: socket de comunicação com o servidor
         @param fdct_config: dicionário de configuração
         @param f_strip_cur: strip selecionada
@@ -80,7 +82,7 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
         self.setupUi(self)
 
         # configura título da dialog
-        self.setWindowTitle(u"Procedimento de Direcionamento a Fixo")
+        self.setWindowTitle(u"Procedimento de Direcionamento à Fixo")
 
         # configurações de conexões slot/signal
         self.__config_connects()
@@ -112,7 +114,7 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
     # ---------------------------------------------------------------------------------------------
     def __config_texts(self):
         """
-        DOCUMENT ME!
+        configura títulos e mensagens
         """
         # configura títulos e mensagens
         self.__txt_settings = "CDlgDirFixo"
@@ -120,7 +122,7 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
     # ---------------------------------------------------------------------------------------------
     def get_data(self):
         """
-        DOCUMENT ME!
+        obtém o texto digitado
         """
         # return command line
         return self.lbl_comando.text()
@@ -133,8 +135,6 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
         # clear to go
         assert self.__sck_http is not None
         assert self.__dct_config is not None
-
-        cdbg.M_DBG.debug("dct_fix:{}".format(fdct_fix))
 
         # resposta
         ldct_ans = {}
@@ -200,6 +200,7 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
         for l_key, l_fix in self.__dct_fix.iteritems():
             # é o fixo selecionado ?
             if self.cbx_fix.currentText() == l_fix:
+                # ok, cai fora...
                 break
 
         # inicia o comando
@@ -216,7 +217,7 @@ class CDlgDirFixo(QtGui.QDialog, dlg.Ui_CDlgDirFixo):
     @QtCore.pyqtSignature("int")
     def __on_cbx_currentIndexChanged(self, f_val):
         """
-        DOCUMENT ME!
+        atualiza comando
         """
         # atualiza comando
         self.__update_command()

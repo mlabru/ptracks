@@ -70,6 +70,7 @@ class CConfigManager(object):
                     "dir.trf": gdefs.D_DIR_TRF,      # diretório de tráfegos
 
                     "glb.canal": gdata.G_CANAL,      # canal de comunicação
+                    "glb.exe": "",                   # exercício
 
                     "map.lat": cdefs.M_REF_LAT,      # latitude de referência do mapa
                     "map.lng": cdefs.M_REF_LNG,      # longitude de referência do mapa

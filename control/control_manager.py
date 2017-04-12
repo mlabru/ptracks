@@ -19,6 +19,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+revision 0.5  2017/abr  mlabru
+pequenas correções e otimizações
+
 revision 0.4  2016/ago  mlabru
 pequenas correções e otimizações
 
@@ -32,9 +35,9 @@ revision 0.1  2014/nov  mlabru
 initial version (Linux/Python)
 ---------------------------------------------------------------------------------------------------
 """
-__version__ = "$revision: 0.4$"
+__version__ = "$revision: 0.5$"
 __author__ = "Milton Abrunhosa"
-__date__ = "2016/08"
+__date__ = "2017/04"
 
 # < imports >--------------------------------------------------------------------------------------
 
@@ -43,10 +46,6 @@ import os
 import sys
 import threading
 import time
-
-# PyQt library
-from PyQt4 import QtCore
-from PyQt4 import QtGui
 
 # model 
 import model.common.glb_data as gdata
@@ -62,17 +61,12 @@ class CControlManager(threading.Thread):
     DOCUMENT ME!
     """
     # ---------------------------------------------------------------------------------------------
-    def __init__(self, fs_path=None):
+    def __init__(self):
         """
         constructor
-
-        @param fs_path: path do arquivo de configuração
         """
         # inicia a super classe
         super(CControlManager, self).__init__()
-
-        # the application itself
-        self.__app = None
 
         # instancia o event manager
         self.__event = evtmgr.CEventsManager()
@@ -81,16 +75,13 @@ class CControlManager(threading.Thread):
         # registra a sí próprio como recebedor de eventos
         self.__event.register_listener(self)
 
-        # carrega as opções de configuração
+        # opções de configuração
         self.__config = None
 
-        # model manager
+        # model
         self.__model = None
 
-        # splash screen
-        self.__splash = None
-
-        # view manager
+        # view
         self.__view = None
 
         # voip library
@@ -110,49 +101,6 @@ class CControlManager(threading.Thread):
 
         # dissemina o evento
         self.__event.post(l_evt)
-
-    # ---------------------------------------------------------------------------------------------
-    def create_app(self, fs_name):
-        """
-        DOCUMENT ME!
-        """
-        # create application
-        self.__app = QtGui.QApplication(sys.argv)
-        assert self.__app
-
-        # setup application parameters
-        self.__app.setOrganizationName("sophosoft")
-        self.__app.setOrganizationDomain("sophosoft.com.br")
-        self.__app.setApplicationName(fs_name)
-
-        # load logo
-        l_pix_logo = QtGui.QPixmap(":/images/logos/logo.png")
-        assert l_pix_logo
-
-        # create splash screen
-        self.__splash = QtGui.QSplashScreen(l_pix_logo, QtCore.Qt.WindowStaysOnTopHint)
-        assert self.__splash
-
-        self.__splash.setMask(l_pix_logo.mask())
-
-        # create the progress bar
-        # self.progressBar = QtGui.QProgressBar(self.__splash)
-        # self.progressBar.setGeometry(    self.__splash.width() / 10, 8 * self.__splash.height() / 10,
-        #                              8 * self.__splash.width() / 10,     self.__splash.height() / 10)
-
-        # message = 'hello'
-        # label = QtGui.QLabel("<font color=red size=72><b>{0}</b></font>".format(message), self.__splash)
-        # label.setGeometry(1 * self.__splash.width() / 10, 8 * self.__splash.height() / 10,
-        #                   8 * self.__splash.width() / 10, 1 * self.__splash.height() / 10)
-
-        # show splash screen
-        self.__splash.show()
-
-        # update the progress bar
-        # self.progressBar.setValue(50)
-
-        # process events (before main loop)
-        self.__app.processEvents()
 
     # ---------------------------------------------------------------------------------------------
     @staticmethod
@@ -190,21 +138,6 @@ class CControlManager(threading.Thread):
 
     # ---------------------------------------------------------------------------------------------
     @property
-    def app(self):
-        """
-        get application
-        """
-        return self.__app
-
-    @app.setter
-    def app(self, f_val):
-        """
-        set application
-        """
-        self.__app = f_val
-
-    # ---------------------------------------------------------------------------------------------
-    @property
     def config(self):
         """
         get config manager
@@ -237,44 +170,29 @@ class CControlManager(threading.Thread):
     @property
     def model(self):
         """
-        get model manager
+        get model
         """
         return self.__model
 
     @model.setter
     def model(self, f_val):
         """
-        set model manager
+        set model
         """
         self.__model = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
-    def splash(self):
-        """
-        get splash screen
-        """
-        return self.__splash
-
-    @splash.setter
-    def splash(self, f_val):
-        """
-        set splash screen
-        """
-        self.__splash = f_val
-
-    # ---------------------------------------------------------------------------------------------
-    @property
     def view(self):
         """
-        get view manager
+        get view
         """
         return self.__view
 
     @view.setter
     def view(self, f_val):
         """
-        set view manager
+        set view
         """
         self.__view = f_val
 

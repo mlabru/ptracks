@@ -56,9 +56,9 @@ class CComandoPil(inst.CInstruction):
 
         # herdados de CInstruction
         # self.en_cmd_ope    # comando
-        # self.f_param_1     # grau / velocidade / altitude / aeródromo
-        # self.f_param_2     # proa / nivel / pista
-        # self.f_param_3     # razão
+        # self.t_param_1     # grau / velocidade / altitude / aeródromo
+        # self.t_param_2     # proa / nivel / pista
+        # self.t_param_3     # razão
         # self.v_running     # flag em execução
         # self.s_text        # texto do comando
 
@@ -90,7 +90,7 @@ class CComandoPil(inst.CInstruction):
         self.en_cmd_ope = ldefs.E_ALT
 
         # altitude em pés(ft)
-        self.f_param_1 = float(flst_tok[0])
+        self.t_param_1 = (float(flst_tok[0]), True)
 
         # possível razão ?
         if len(flst_tok) > 2:
@@ -159,10 +159,10 @@ class CComandoPil(inst.CInstruction):
         llst_param = flst_tok[0].split('/')
 
         # aeródromo
-        self.f_param_1 = str(llst_param[0]).strip()  # .upper())
+        self.t_param_1 = (str(llst_param[0]).strip(), True)
 
         # pista
-        self.f_param_2 = str(llst_param[1]).strip()  # .upper())
+        self.t_param_2 = (str(llst_param[1]).strip(), True)
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_graus(self, flst_tok):
@@ -173,7 +173,7 @@ class CComandoPil(inst.CInstruction):
         assert flst_tok
         
         # graus
-        self.f_param_1 = float(flst_tok[0])
+        self.t_param_1 = (float(flst_tok[0]), True)
 
         # possível razão ?
         if len(flst_tok) > 3:
@@ -194,7 +194,7 @@ class CComandoPil(inst.CInstruction):
         self.en_cmd_ope = ldefs.E_NIV
 
         # nível
-        self.f_param_2 = float(flst_tok[0])
+        self.t_param_2 = (float(flst_tok[0]), True)
 
         # possível razão ?
         if len(flst_tok) > 2:
@@ -218,10 +218,10 @@ class CComandoPil(inst.CInstruction):
         llst_param = flst_tok[0].split('/')
 
         # aeródromo
-        self.f_param_1 = str(llst_param[0]).strip().upper()
+        self.t_param_1 = (str(llst_param[0]).strip().upper(), True)
 
         # pista
-        self.f_param_2 = str(llst_param[1]).strip().upper()
+        self.t_param_2 = (str(llst_param[1]).strip().upper(), True)
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_proa(self, flst_tok):
@@ -232,7 +232,7 @@ class CComandoPil(inst.CInstruction):
         assert flst_tok
         
         # proa
-        self.f_param_2 = float(flst_tok[0])
+        self.t_param_2 = (float(flst_tok[0]), True)
 
         # possível razão ?
         if len(flst_tok) > 2:
@@ -250,7 +250,7 @@ class CComandoPil(inst.CInstruction):
         assert flst_tok
         
         # razão
-        self.f_param_3 = float(flst_tok[0])
+        self.t_param_3 = (float(flst_tok[0]), True)
 
     # ---------------------------------------------------------------------------------------------
     def __parse_comando(self, fs_cmd=""):
@@ -292,7 +292,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_ESPERA
 
             # espera
-            self.f_param_1 = float(llst_tok[1])
+            self.t_param_1 = (float(llst_tok[1]), True)
 
         # comando de direcionamento a fixo ?
         elif "FIX" == llst_tok[0]:
@@ -300,7 +300,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_DIRFIXO
 
             # número do fixo
-            self.f_param_1 = str(llst_tok[1]).strip()
+            self.t_param_1 = (str(llst_tok[1]).strip(), True)
 
         # comando de nível ?
         elif "NIV" == llst_tok[0]:
@@ -313,7 +313,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_SUBIDA
 
             # subida
-            self.f_param_1 = float(llst_tok[1])
+            self.t_param_1 = (float(llst_tok[1]), True)
 
         # comando de trajetória ?
         elif "TRJ" == llst_tok[0]:
@@ -321,7 +321,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_TRAJETORIA
 
             # trajetória
-            self.f_param_1 = float(llst_tok[1])
+            self.t_param_1 = (float(llst_tok[1]), True)
 
         # comando de velocidade ?
         elif "VEL" == llst_tok[0]:
@@ -329,7 +329,7 @@ class CComandoPil(inst.CInstruction):
             self.en_cmd_ope = ldefs.E_IAS
 
             # velocidade
-            self.f_param_1 = float(llst_tok[1])
+            self.t_param_1 = (float(llst_tok[1]), True)
 
     # =============================================================================================
     # data

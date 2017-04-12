@@ -70,9 +70,6 @@ class CEventsManager(object):
 
         @param f_listener: objeto a registrar
         """
-        # logger
-        # M_LOG.info("register_listener:>>")
-
         # coloca o objeto na lista de recebedores de eventos
         self.__dct_listeners[f_listener] = True
 

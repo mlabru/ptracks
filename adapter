@@ -5,9 +5,9 @@ if [ -e ./x_proxy.sh ]
 then
     source ./x_proxy.sh
 fi
-    
+
 # nome do computador
 HOST=`hostname`
 
-# executa a aplicação (-OO)
-/usr/bin/env python ./piloto.py "$@" 2> ./piloto.$HOST.log
+#  executa a aplicação (-OO)
+/usr/bin/env python ./adapter.py "$@" 2> ./adapter.$HOST.log

@@ -53,7 +53,10 @@ class CConfigExe(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "ConfigExe event"
+
+        # indicativo do exercício
         self.__s_exe = ls_exe
 
     # ---------------------------------------------------------------------------------------------
@@ -81,7 +84,10 @@ class CConfigHora(model.CEventsModel):
         # herdados de CEventsModel
         # self.s_name    # event name
 
+        # event name
         self.s_name = "ConfigHora event"
+
+        # tupla da hora
         self.__t_hora = lt_hora
 
     # ---------------------------------------------------------------------------------------------
