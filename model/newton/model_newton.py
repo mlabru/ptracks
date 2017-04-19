@@ -42,7 +42,7 @@ import libs.coords.coord_sys as coords
 # model
 import model.model_manager as model
 
-import model.emula.emula_newton as emula
+import model.newton.emula_newton as emula
 
 #import model.items.aer_data as aerdata
 import model.items.exe_data as exedata

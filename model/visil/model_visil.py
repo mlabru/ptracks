@@ -47,7 +47,7 @@ import libs.geomag.geomag.geomag.geomag as gm
 # model
 import model.model_manager as model
 
-import model.emula.emula_visil as emula
+import model.visil.emula_visil as emula
 import model.visil.airspace_visil as airs
 
 # control

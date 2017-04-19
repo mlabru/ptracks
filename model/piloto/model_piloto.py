@@ -47,7 +47,7 @@ import libs.geomag.geomag.geomag.geomag as gm
 # model
 import model.model_manager as model
 
-import model.emula.emula_piloto as emula
+import model.piloto.emula_piloto as emula
 import model.newton.airspace_newton as airs
 
 # control
