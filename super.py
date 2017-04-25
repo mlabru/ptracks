@@ -34,13 +34,9 @@ __date__ = "2017/01"
 
 # python library
 import logging
-import sys
 
 import sip
 sip.setapi('QString', 2)
-
-# PyQt4
-from PyQt4 import QtGui
 
 # control
 import control.control_super as control
@@ -53,14 +49,14 @@ def main():
     # instancia o controller
     l_control = control.CControlSuper()
     assert l_control
-            
+
     # ativa o controller
     l_control.start()
-                    
-    # obtém a view  
+
+    # obtém a view
     l_view = l_control.view
     assert l_view
-                                
+
     # ativa a viewer
     l_view.run()
 

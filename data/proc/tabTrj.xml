@@ -468,6 +468,32 @@
     </breakpoint>
   </trajetoria>
 
+  <trajetoria nTrj="501">
+    <descricao>Circuito IV-1</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>D</tipo>
+        <cpoA>MAE</cpoA>
+        <cpoB>2</cpoB>
+        <cpoC>180</cpoC>
+      </coord>
+      <altitude>20000</altitude>
+      <velocidade>360</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>MAE</cpoA>
+      </coord>
+      <altitude>19000</altitude>
+      <velocidade>200</velocidade>
+      <procedimento>APX005</procedimento>
+    </breakpoint>
+  </trajetoria>
+
   <trajetoria nTrj="1004">
     <descricao>STAR MUMOP2 RWY35L A PARTIR DE MUMOP</descricao>
     <star>S</star>
@@ -536,334 +562,116 @@
     </breakpoint>
   </trajetoria>
 
+  <!-- teste 1961 -->
+  <trajetoria nTrj="1961">
+    <descricao>teste 1961.1</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>CPN</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>MOXEP</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>GGT</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>MULOD</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>OPREV</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>ILTAB</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>IMBID</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+      <procedimento>TRJ1961</procedimento>
+    </breakpoint>
+
   <!-- Exercicio Operacional -->
+  <trajetoria nTrj="1100">
+    <descricao>SBBR-SBGR</descricao>
+    <star>N</star>
 
-<trajetoria nTrj="1101">
-  <descricao>SBBR-SBGR</descricao>
-  <star>N</star>
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>NITBU</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
 
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>25000</altitude>
-    <velocidade>400</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>ARX</cpoA>
+      </coord>
+      <altitude>39000</altitude>
+      <velocidade>430</velocidade>
+    </breakpoint>
 
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MAVNI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>NIMPU</cpoA>
+      </coord>
+      <altitude>29000</altitude>
+      <velocidade>300</velocidade>
+    </breakpoint>
 
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>NITBU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ARX</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MUKEL</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PADAD</cpoA>
-    </coord>
-    <altitude>28000</altitude>
-    <velocidade>400</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="7">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>BGC</cpoA>
-    </coord>
-    <altitude>20000</altitude>
-    <velocidade>300</velocidade>
-    <procedimento>APX005</procedimento>
-  </breakpoint>
-
-</trajetoria>
-
-<trajetoria nTrj="1102">
-  <descricao>SBGR-SBBR</descricao>
-  <star>N</star>
-
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>BGC</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PADAD</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MUKEL</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ARX</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>NITBU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MAVNI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="7">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-</trajetoria>
-
-<trajetoria nTrj="1103">
-  <descricao>SBBR-SBGR</descricao>
-  <star>N</star>
-
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>BGC</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PADAD</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MUKEL</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ARX</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-    <procedimento>ESP077</procedimento>
-  </breakpoint>
-
-<breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>NITBU</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MAVNI</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="7">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
-
-</trajetoria>
-
-<trajetoria nTrj="1104">
-  <descricao>SBBR-SBBH</descricao>
-  <star>N</star>
-
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>COCHO</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUZIANIA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUVSU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>REINA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PORDU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
-
-</trajetoria>
-
-<trajetoria nTrj="1105">
-  <descricao>SBBR-SBBH</descricao>
-  <star>N</star>
-
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>COCHO</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUZIANIA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUVSU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>REINA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
-
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PORDU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>F</tipo>
+        <cpoA>PIR</cpoA>
+      </coord>
+      <altitude>19000</altitude>
+      <velocidade>200</velocidade>
+      <procedimento>APX005</procedimento>
+    </breakpoint>
+  </trajetoria>
 
 </trajetorias>

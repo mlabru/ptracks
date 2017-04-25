@@ -35,31 +35,25 @@ __date__ = "2017/01"
 # python library
 import logging
 import multiprocessing
-import os
 import Queue
-import sys
 import time
 
 import sip
 sip.setapi('QString', 2)
 
-# PyQt library
-from PyQt4 import QtCore
-from PyQt4 import QtGui 
-
-# model 
+# model
 import model.common.glb_data as gdata
 import model.super.model_super as model
 
-# view 
+# view
 import view.super.view_super as view
 
-# control 
+# control
 import control.control_manager as control
 
 import control.common.glb_defs as gdefs
 import control.config.config_super as config
-#import control.events.events_config as events
+import control.events.events_config as events
 
 import control.network.get_address as gaddr
 import control.network.net_http_get as httpsrv
@@ -98,7 +92,7 @@ class CControlSuper(control.CControlManager):
 
         # create application
         self.create_app("super")
-                
+
         # cria a queue de envio
         self.__q_snd_cpil = multiprocessing.Queue()
         assert self.__q_snd_cpil
@@ -213,21 +207,6 @@ class CControlSuper(control.CControlManager):
                         # salva o endereço do servidor
                         self.__dct_config["srv.addr"] = str(llst_data[1])
 
-                    # mensagem de hora ?
-                    elif gdefs.D_MSG_TIM == int(llst_data[0]):
-                        # monta uma tupla com a mensagem de hora
-                        lt_hora = tuple(int(s) for s in llst_data[1][1: -1].split(','))
-
-                        # seta a hora de simulação
-                        self.sim_time.set_hora(lt_hora)
-
-                        # cria um evento de configuração de hora de simulação
-                        l_evt = events.CConfigHora(self.sim_time.get_hora_format())
-                        assert l_evt
-
-                        # dissemina o evento
-                        self.event.post(l_evt)
-
                     # mensagem de descongelamento ?
                     elif gdefs.D_MSG_UFZ == int(llst_data[0]):
                         # defreeze application
@@ -241,7 +220,7 @@ class CControlSuper(control.CControlManager):
                         l_log.warning("Mensagem não reconhecida ou não tratável.")
 
             # em caso de não haver mensagens...
-            except Queue.Empty, ls_err:
+            except Queue.Empty:
                 # salva o tempo anterior
                 lf_ant = lf_now
 

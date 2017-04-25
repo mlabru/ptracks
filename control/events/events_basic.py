@@ -34,7 +34,7 @@ __date__ = "2015/11"
 # < imports >--------------------------------------------------------------------------------------
 
 # control
-import control.events.events_model as model
+import events_model as model  # control.events.events_model as model
 
 # < class CChange >--------------------------------------------------------------------------------
 
@@ -156,6 +156,25 @@ class CSave2Disk(model.CEventsModel):
         get table name
         """
         return self.__s_table
+
+# < class CStart >--------------------------------------------------------------------------------
+
+class CStart(model.CEventsModel):
+    """
+    process start event class
+    """
+    # ---------------------------------------------------------------------------------------------
+    def __init__(self):
+        """
+        constructor
+        """
+        # init super class
+        super(CStart, self).__init__()
+
+        # herdados de CEventsModel
+        # self.s_name    # event name
+
+        self.s_name = "Process Start event"
 
 # < class CTick >----------------------------------------------------------------------------------
 
