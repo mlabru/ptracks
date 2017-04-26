@@ -33,18 +33,12 @@ __date__ = "2015/11"
 # < imports >--------------------------------------------------------------------------------------
 
 # python library
-import logging
+import binascii
+import os
 
 # model
 import model.items.trf_new as model
-
 import model.newton.defs_newton as ldefs
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
 
 # < class CAtvNEW >--------------------------------------------------------------------------------
 
@@ -53,9 +47,10 @@ class CAtvNEW(model.CTrfNEW):
     informações de aeronave ativa
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_trf):
         """
+        constructor
+
         @param f_model: control manager
         @param f_trf: tráfego a ativar
 
@@ -108,7 +103,10 @@ class CAtvNEW(model.CTrfNEW):
         # flight engine da aeronave
         self.__atv_fe = None
 
-        # verifica performance
+        # código ICAO
+        self.__s_atv_icao24 = binascii.b2a_hex(os.urandom(3))
+
+        # check performance
         assert self.ptr_trf_prf
         assert self.ptr_trf_prf.v_prf_ok
 
@@ -284,7 +282,6 @@ class CAtvNEW(model.CTrfNEW):
     # =============================================================================================
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def get_status_envio(self):
         """
         DOCUMENT ME!
@@ -318,7 +315,6 @@ class CAtvNEW(model.CTrfNEW):
     # =============================================================================================
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_acel(self):
         """
@@ -334,7 +330,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_acel = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def v_atv_alert(self):
         """
@@ -366,7 +361,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__i_atv_alerts = f_val
     '''
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_alt_dem(self):
         """
@@ -382,7 +376,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_alt_dem = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def ptr_atv_aer(self):
         """
@@ -398,7 +391,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__ptr_atv_aer = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def v_atv_change_alt(self):
         """
@@ -414,7 +406,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__v_atv_change_alt = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def i_atv_change_alt_vel(self):
         """
@@ -430,7 +421,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__i_atv_change_alt_vel = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def v_atv_change_vel(self):
         """
@@ -446,7 +436,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__v_atv_change_vel = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def lst_atv_cmd_pil(self):
         """
@@ -462,7 +451,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__lst_atv_cmd_pil = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def v_atv_cnl_esp(self):
         """
@@ -478,7 +466,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__v_atv_cnl_esp = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_dir_atu(self):
         """
@@ -494,7 +481,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_dir_atu = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def en_atv_fase(self):
         """
@@ -510,7 +496,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__en_atv_fase = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def atv_fe(self):
         """
@@ -530,7 +515,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__atv_fe = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def ptr_atv_fix_drd(self):
         """
@@ -546,7 +530,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__ptr_atv_fix_drd = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def ptr_atv_fix_eto(self):
         """
@@ -562,7 +545,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__ptr_atv_fix_eto = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def ptr_atv_fix_prc(self):
         """
@@ -578,7 +560,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__ptr_atv_fix_prc = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def v_atv_movi(self):
         """
@@ -594,7 +575,21 @@ class CAtvNEW(model.CTrfNEW):
         self.__v_atv_movi = f_val
 
     # ---------------------------------------------------------------------------------------------
+    @property
+    def s_atv_icao24(self):
+        """
+        get ICAO id
+        """
+        return self.__s_atv_icao24
 
+    @s_atv_icao24.setter
+    def s_atv_icao24(self, f_val):
+        """
+        set ICAO id
+        """
+        self.__s_atv_icao24 = f_val
+
+    # ---------------------------------------------------------------------------------------------
     @property
     def v_atv_ok(self):
         """
@@ -610,7 +605,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__v_atv_ok = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_pro_dem(self):
         """
@@ -630,7 +624,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_pro_dem = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def ptr_atv_pst(self):
         """
@@ -646,7 +639,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__ptr_atv_pst = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_raz_crv(self):
         """
@@ -662,7 +654,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_raz_crv = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_raz_sub(self):
         """
@@ -678,7 +669,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_raz_sub = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def en_atv_sentido_curva(self):
         """
@@ -698,7 +688,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__en_atv_sentido_curva = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def v_atv_solo(self):
         """
@@ -714,7 +703,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__v_atv_solo = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def i_atv_spi(self):
         """
@@ -750,7 +738,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__c_atv_status_solo = f_val.upper()
     '''
     # ---------------------------------------------------------------------------------------------
-
     @property
     def c_atv_status_voo(self):
         """
@@ -770,7 +757,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__c_atv_status_voo = f_val.upper()
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def l_atv_time_ant(self):
         """
@@ -786,7 +772,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__l_atv_time_ant = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_vel_dem(self):
         """
@@ -802,7 +787,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_vel_dem = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_vel_gnd(self):
         """
@@ -818,7 +802,6 @@ class CAtvNEW(model.CTrfNEW):
         self.__f_atv_vel_gnd = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def f_atv_vel_tas(self):
         """

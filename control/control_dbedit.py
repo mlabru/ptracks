@@ -42,13 +42,12 @@ import model.dbedit.model_dbedit as model
 import view.dbedit.view_dbedit as view
 
 # control 
-import control.control_manager as control
-
+import control.control_basic as control
 import control.config.config_dbedit as config
 
 # < class CControlDBEdit >--------------------------------------------------------------------------
 
-class CControlDBEdit(control.CControlManager):
+class CControlDBEdit(control.CControlBasic):
     """
     módulo controller do editor da base de dados
     coordinates communications between the model, views and controllers through the use of events

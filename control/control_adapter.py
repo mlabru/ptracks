@@ -49,7 +49,7 @@ import model.common.glb_data as gdata
 import model.adapter.model_adapter as model
 
 # control 
-# import control.control_debug as cdbg
+import control.control_debug as cdbg
 import control.control_manager as control
 
 import control.common.glb_defs as gdefs
@@ -110,6 +110,9 @@ class CControlAdapter(control.CControlManager):
         self.__sck_rcv_trks = listener.CNetListener(lt_ifce, ls_addr, li_port, self.__q_rcv_trks)
         assert self.__sck_rcv_trks
 
+        # mensagem do newton
+        self.__s_msg = None
+
         # instancia o modelo
         self.model = model.CModelAdapter(self)
         assert self.model
@@ -141,6 +144,22 @@ class CControlAdapter(control.CControlManager):
             # create new aircraft
             pass  # self.dct_flight[ls_callsign] = canv.CAircraftVisil(self, flst_data[1:])
             # assert self.dct_flight[ls_callsign]
+
+                  gdefs.D_MSG_SEP + str(gdefs.D_MSG_NEW) + \
+                  gdefs.D_MSG_SEP + str(self.__atv.i_trf_id) + \
+                  gdefs.D_MSG_SEP + str(self.__atv.i_trf_ssr) + \
+                  gdefs.D_MSG_SEP + str(self.__atv.i_atv_spi) + \
+                  gdefs.D_MSG_SEP + str(round(lf_alt, 1)) + \
+                  gdefs.D_MSG_SEP + str(round(lf_lat, 6)) + \
+                  gdefs.D_MSG_SEP + str(round(lf_lng, 6)) + \
+                  gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_vel_atu * cdefs.D_CNV_MS2KT, 1)) + \
+                  gdefs.D_MSG_SEP + str(round(self.__atv.f_atv_raz_sub, 1)) + \
+                  gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_pro_atu, 1)) + \
+                  gdefs.D_MSG_SEP + str(self.__atv.s_trf_ind) + \
+                  gdefs.D_MSG_SEP + str(self.__atv.ptr_trf_prf.s_prf_id) + \
+                  gdefs.D_MSG_SEP + str(self.__sim_time.obtem_hora_sim() + \
+                  gdefs.D_MSG_SEP + str(self.__atv.s_atv_icao24))
+
         '''
         # convert lat/lng/alt to x/y/z
         (l_x, l_y, l_z) = self.model.core_location.getxyz(float(flst_data[5]), float(flst_data[6]), int(float(flst_data[4]) * cdefs.D_CNV_FT2M))
@@ -149,20 +168,23 @@ class CControlAdapter(control.CControlManager):
         l_tlv_data = ""
         l_tlv_data += coreapi.CoreNodeTlv.packstring(1, int(flst_data[1]))
 
-        # x
+        # x / CORE_TLV_NODE_XPOS
         l_tlv_data += coreapi.CoreNodeTlv.packstring(32, l_x)
 
-        # y
+        # y / CORE_TLV_NODE_YPOS
         l_tlv_data += coreapi.CoreNodeTlv.packstring(33, l_y)
 
-        # latitude
+        # latitude / CORE_TLV_NODE_LAT
         l_tlv_data += coreapi.CoreNodeTlv.packstring(48, flst_data[5])
 
-        # longitude
+        # longitude / CORE_TLV_NODE_LONG
         l_tlv_data += coreapi.CoreNodeTlv.packstring(49, flst_data[6])
 
-        # altitude
+        # altitude / CORE_TLV_NODE_ALT
         l_tlv_data += coreapi.CoreNodeTlv.packstring(50, l_z)
+
+        # mensagem / CORE_TLV_NODE_OPAQUE
+        l_tlv_data += coreapi.CoreNodeTlv.packstring(80, self.__s_msg)
 
         # pack
         l_msg = coreapi.CoreNodeMessage.pack(0, l_tlv_data)
@@ -222,10 +244,10 @@ class CControlAdapter(control.CControlManager):
                 # está adiantado ?
                 if lf_tim_rrbn > lf_dif:
                     # permite o scheduler
-                    time.sleep((lf_tim_rrbn - lf_dif) * .99)
+                    time.sleep(lf_tim_rrbn - lf_dif)
 
-                # senão, atrasou...
-                else:
+                # senão, atrasou...+ de 5% ?
+                elif (lf_dif - lf_tim_rrbn) > (lf_tim_rrbn * .05):
                     # logger
                     l_log = logging.getLogger("CControlAdapter::process_cnfg")
                     l_log.setLevel(logging.WARNING)
@@ -237,7 +259,6 @@ class CControlAdapter(control.CControlManager):
         processa a queue de mensagens de pista
         """
         # clear to go
-        # assert self.event
         assert fq_rcv_trks
 
         # temporização de eventos
@@ -251,11 +272,16 @@ class CControlAdapter(control.CControlManager):
             try:
                 # obtém um item da queue de pistas
                 llst_data = fq_rcv_trks.get(False)
+                # cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
 
                 # queue tem dados ?
                 if llst_data:
                     # mensagem de status de aeronave ?
                     if gdefs.D_MSG_NEW == int(llst_data[0]):
+                        # salva a mensagem
+                        self.__s_msg = '#'.join(llst_data[1:])
+                        # cdbg.M_DBG.debug("self.__s_msg: {}".format(self.__s_msg))
+                        
                         # trata mensagem de status de aeronave
                         self.__msg_trk(llst_data)
 
@@ -268,24 +294,24 @@ class CControlAdapter(control.CControlManager):
 
             # em caso de não haver mensagens...
             except Queue.Empty:
-                # salva o tempo anterior
+                # tempo anterior
                 lf_ant = lf_now
 
-                # obtém o tempo atual em segundos
+                # tempo atual (em segundos)
                 lf_now = time.time()
 
-                # obtém o tempo final em segundos e calcula o tempo decorrido
+                # calcula o tempo decorrido
                 lf_dif = lf_now - lf_ant
 
                 # está adiantado ?
                 if lf_tim_rrbn > lf_dif:
                     # permite o scheduler
-                    time.sleep((lf_tim_rrbn - lf_dif) * .99)
+                    time.sleep(lf_tim_rrbn - lf_dif)
 
-                # senão, atrasou...
-                else:
+                # senão, atrasou...+ de 5% ?
+                elif (lf_dif - lf_tim_rrbn) > (lf_tim_rrbn * .05):
                     # logger
-                    l_log = logging.getLogger("CControlAdapter::run")
+                    l_log = logging.getLogger("CControlAdapter::process_trks")
                     l_log.setLevel(logging.WARNING)
                     l_log.warning("<E05: atrasou: {}".format(lf_dif - lf_tim_rrbn))
 
@@ -295,7 +321,6 @@ class CControlAdapter(control.CControlManager):
         drive application
         """
         # clear to go
-        assert self.event
         assert self.__q_rcv_cnfg
         assert self.__sck_rcv_cnfg
 

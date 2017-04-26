@@ -172,7 +172,8 @@ class CCineModel(object):
                   gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_pro_atu, 1)) + \
                   gdefs.D_MSG_SEP + str(self.__atv.s_trf_ind) + \
                   gdefs.D_MSG_SEP + str(self.__atv.ptr_trf_prf.s_prf_id) + \
-                  gdefs.D_MSG_SEP + str(self.__sim_time.obtem_hora_sim())
+                  gdefs.D_MSG_SEP + str(self.__sim_time.obtem_hora_sim()) + \
+                  gdefs.D_MSG_SEP + str(self.__atv.s_atv_icao24)
 
         # envia os dados de pista
         self.__sck_snd_trks.send_data(ls_buff)

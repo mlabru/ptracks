@@ -178,26 +178,26 @@ D_TIM_CNFG = 5
 # verifica o tempo de ativação das aeronaves a cada 30 seg (int)
 D_TIM_FGEN = 30
 
-# reenvia a hora do sistema a cada 1 seg (int)
+# reenvia a hora do sistema a cada 1 seg (1Hz) (int)
 D_TIM_HORA = 1
 
-# verifica colisão entre aeronaves a cada 1 seg (int)
+# verifica colisão entre aeronaves a cada 1 seg (1Hz) (int)
 D_TIM_PROX = 1
 
 # rotação do radar (4s)
 D_TIM_RDAR = 4
 
 
-# tratador de eventos (10/s) (float)
+# tratador de eventos (10Hz) (float)
 D_TIM_EVNT = .1
 
-# refresh de tela (10/s) (float)
+# refresh de tela (10Hz) (float)
 D_TIM_REFR = .1
 
-# permite o schedule do sistema (round robin) (10/s) (float)
+# permite o schedule do sistema (round robin) (10Hz) (float)
 D_TIM_RRBN = .1
 
-# recalculo de posição de aeronave (1/s) (float)
-D_TIM_WAIT = .75
+# recalculo de posição de aeronave (1Hz) (float)
+D_TIM_WAIT = 1
 
 # < the end >--------------------------------------------------------------------------------------
