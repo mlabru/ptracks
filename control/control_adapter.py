@@ -189,6 +189,7 @@ class CControlAdapter(control.CControlManager):
         # pack
         l_msg = coreapi.CoreNodeMessage.pack(0, l_tlv_data)
 
+        # envia a mensagem para o CORE Daemon 
         sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
         sock.setblocking(True)
 
@@ -198,6 +199,22 @@ class CControlAdapter(control.CControlManager):
         except Exception, e:
             print "Error connecting to %s:%s:\n\t%s" % ("localhost", coreapi.CORE_API_PORT, e)
             sys.exit(1)
+
+        sock.sendall(l_msg)
+        sock.close()
+
+        # envia a mensagem para o node
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.setblocking(False)
+
+        try:
+            sock.connect(("172.17.0.{}".format(int(flst_data[1])), coreapi.CORE_API_PORT))
+
+        except Exception, ls_msg:
+            # logger
+            l_log = logging.getLogger("CControlAdapter::__msg_trk")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning("<E03: erro: {}".format(ls_msg))
 
         sock.sendall(l_msg)
         sock.close()
