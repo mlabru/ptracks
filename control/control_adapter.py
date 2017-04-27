@@ -289,6 +289,8 @@ class CControlAdapter(control.CControlManager):
 
         # cria o processo de tratamento de configuração
         lprc_cnfg = multiprocessing.Process(target=self.process_cnfg, args=(self.__q_rcv_cnfg,))
+        assert lprc_cnfg
+
         lprc_cnfg.start()
 
         # inicia o recebimento de mensagens de pista
@@ -296,6 +298,8 @@ class CControlAdapter(control.CControlManager):
 
         # cria o processo de tratamento de pistas
         lprc_trks = multiprocessing.Process(target=self.process_trks, args=(self.__q_rcv_trks,))
+        assert lprc_trks
+
         lprc_trks.start()
 
         # aguarda o término dos processos
@@ -314,6 +318,7 @@ class CControlAdapter(control.CControlManager):
         """
         # cria o socket
         l_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        assert l_sock
 
         # set blocking (wait untikl is done)
         l_sock.setblocking(fv_block)
