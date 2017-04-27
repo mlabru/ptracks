@@ -117,10 +117,6 @@ class CControlAdapter(control.CControlManager):
         self.model = model.CModelAdapter(self)
         assert self.model
 
-        # cria a trava da lista de vôos
-        gdata.G_LCK_FLIGHT = multiprocessing.Lock()
-        assert gdata.G_LCK_FLIGHT
-
     # ---------------------------------------------------------------------------------------------
     def __msg_trk(self, flst_data):
         """
@@ -128,39 +124,6 @@ class CControlAdapter(control.CControlManager):
 
         @param flst_data: mensagem de status
         """
-        # clear to go
-        # assert self.__dct_config is not None
-                
-        # callsign da aeronave
-        # ls_callsign = flst_data[10]
-        '''
-        # aeronave já está no dicionário ?
-        if ls_callsign in self.dct_flight:
-            # atualiza os dados da aeronave
-            pass  # self.dct_flight[ls_callsign].update_data(flst_data[1:])
-
-        # senão, aeronave nova...
-        else:
-            # create new aircraft
-            pass  # self.dct_flight[ls_callsign] = canv.CAircraftVisil(self, flst_data[1:])
-            # assert self.dct_flight[ls_callsign]
-
-                  gdefs.D_MSG_SEP + str(gdefs.D_MSG_NEW) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.i_trf_id) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.i_trf_ssr) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.i_atv_spi) + \
-                  gdefs.D_MSG_SEP + str(round(lf_alt, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(lf_lat, 6)) + \
-                  gdefs.D_MSG_SEP + str(round(lf_lng, 6)) + \
-                  gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_vel_atu * cdefs.D_CNV_MS2KT, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(self.__atv.f_atv_raz_sub, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_pro_atu, 1)) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.s_trf_ind) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.ptr_trf_prf.s_prf_id) + \
-                  gdefs.D_MSG_SEP + str(self.__sim_time.obtem_hora_sim() + \
-                  gdefs.D_MSG_SEP + str(self.__atv.s_atv_icao24))
-
-        '''
         # convert lat/lng/alt to x/y/z
         (l_x, l_y, l_z) = self.model.core_location.getxyz(float(flst_data[5]), float(flst_data[6]), int(float(flst_data[4]) * cdefs.D_CNV_FT2M))
 
@@ -190,42 +153,19 @@ class CControlAdapter(control.CControlManager):
         l_msg = coreapi.CoreNodeMessage.pack(0, l_tlv_data)
 
         # envia a mensagem para o CORE Daemon 
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.setblocking(True)
-
-        try:
-            sock.connect(("localhost", coreapi.CORE_API_PORT))
-
-        except Exception, e:
-            print "Error connecting to %s:%s:\n\t%s" % ("localhost", coreapi.CORE_API_PORT, e)
-            sys.exit(1)
-
-        sock.sendall(l_msg)
-        sock.close()
+        self.__send_to("localhost", coreapi.CORE_API_PORT, l_msg, True)
 
         # envia a mensagem para o node
-        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        sock.setblocking(False)
-
-        try:
-            sock.connect(("172.17.0.{}".format(int(flst_data[1])), coreapi.CORE_API_PORT))
-
-        except Exception, ls_msg:
-            # logger
-            l_log = logging.getLogger("CControlAdapter::__msg_trk")
-            l_log.setLevel(logging.WARNING)
-            l_log.warning("<E03: erro: {}".format(ls_msg))
-
-        sock.sendall(l_msg)
-        sock.close()
+        self.__send_to("172.17.0.{}".format(int(flst_data[1]), coreapi.CORE_API_PORT, self.__s_msg)
 
     # ---------------------------------------------------------------------------------------------
     def process_cnfg(self, fq_rcv_cnfg):
         """
         processa a queue de mensagens de configuração
+
+        @param fq_rcv_cnfg: queue receive ccc (command/control/config)
         """
         # clear to go
-        # assert self.event
         assert fq_rcv_cnfg
 
         # temporização de eventos
@@ -274,6 +214,8 @@ class CControlAdapter(control.CControlManager):
     def process_trks(self, fq_rcv_trks):
         """
         processa a queue de mensagens de pista
+
+        @param fq_rcv_trks: queue receive tracks
         """
         # clear to go
         assert fq_rcv_trks
@@ -289,7 +231,6 @@ class CControlAdapter(control.CControlManager):
             try:
                 # obtém um item da queue de pistas
                 llst_data = fq_rcv_trks.get(False)
-                # cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
 
                 # queue tem dados ?
                 if llst_data:
@@ -297,7 +238,6 @@ class CControlAdapter(control.CControlManager):
                     if gdefs.D_MSG_NEW == int(llst_data[0]):
                         # salva a mensagem
                         self.__s_msg = '#'.join(llst_data[1:])
-                        # cdbg.M_DBG.debug("self.__s_msg: {}".format(self.__s_msg))
                         
                         # trata mensagem de status de aeronave
                         self.__msg_trk(llst_data)
@@ -361,6 +301,42 @@ class CControlAdapter(control.CControlManager):
         # aguarda o término dos processos
         lprc_cnfg.join()
         lprc_trks.join()
+
+    # ---------------------------------------------------------------------------------------------
+    def __send_to(self, fs_host, fi_port, fs_msg, fv_block=False):
+        """
+        send message to CORE Daemon 
+
+        @param fs_host: host to connect
+        @param fi_port: port
+        @param fs_msg: message to send
+        @param fv_block: flag wait until done (False)
+        """
+        # cria o socket
+        l_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+        # set blocking (wait untikl is done)
+        l_sock.setblocking(fv_block)
+
+        try:
+            # connect to host
+            l_sock.connect((fs_host, fi_port))
+
+        # em caso de erro...
+        except Exception, ls_err:
+            # logger
+            l_log = logging.getLogger("CControlAdapter::__send_to")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning("<E06: erro connecting to {}:{}: {}".format(fs_host, fi_port, ls_err))
+
+            # return
+            return
+
+        # send message
+        l_sock.sendall(fs_msg)
+
+        # fecha o socket
+        l_sock.close()
 
     # =============================================================================================
     # dados
