@@ -156,7 +156,7 @@ class CControlAdapter(control.CControlManager):
         self.__send_to("localhost", coreapi.CORE_API_PORT, l_msg, True)
 
         # envia a mensagem para o node
-        self.__send_to("172.17.0.{}".format(int(flst_data[1]), coreapi.CORE_API_PORT, self.__s_msg)
+        self.__send_to("172.17.0.{}".format(int(flst_data[1])), coreapi.CORE_API_PORT, self.__s_msg)
 
     # ---------------------------------------------------------------------------------------------
     def process_cnfg(self, fq_rcv_cnfg):
