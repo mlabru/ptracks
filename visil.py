@@ -42,7 +42,7 @@ import sip
 sip.setapi('QString', 2)
 
 # control
-import control.control_visil as control
+import control.visil.control_visil as control
 
 # -------------------------------------------------------------------------------------------------
 # void (void)

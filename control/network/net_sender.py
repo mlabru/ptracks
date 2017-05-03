@@ -40,6 +40,9 @@ __date__ = "2015/11"
 import multiprocessing
 import socket
 
+# control
+# import control.control_debug as cdbg
+
 # < class CNetSender >-----------------------------------------------------------------------------
 
 class CNetSender(multiprocessing.Process):
@@ -52,7 +55,7 @@ class CNetSender(multiprocessing.Process):
         initializes network sender
 
         @param ft_ifce: tupla in/out de interfaces. ('eth0', 'eth0')
-        @param fs_addr: endereço. ('255.12.2')
+        @param fs_addr: endereço ('224.1.2.3')
         @param fi_port: porta (1970)
         @param f_queue: queue de mensagens
         """
@@ -82,15 +85,30 @@ class CNetSender(multiprocessing.Process):
         # config sender socket
         self.__fd_send.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 2)
 
+        # non-blocking socket
+        self.__fd_send.settimeout(0.0)
+        self.__fd_send.setblocking(0)
+
     # ---------------------------------------------------------------------------------------------
     def send_data(self, fs_msg):
         """
+        send message
+
         @param fs_msg: DOCUMENT ME!
         """
         # clear to go
         assert self.__fd_send
 
-        # send message
-        self.__fd_send.sendto(fs_msg, self.__t_addr)
+        try:
+            # send message
+            self.__fd_send.sendto(fs_msg, self.__t_addr)
+            # cdbg.M_DBG.debug("fs_msg: {} to: {}".format(fs_msg, self.__t_addr))
+        
+        # em caso de não enviar a mensagen...
+        except Exception, l_err:
+            # logger
+            l_log = logging.getLogger("CNetSender::send_data")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning("<E01: socket send error: {}.".format(l_err))
 
 # < the end >--------------------------------------------------------------------------------------

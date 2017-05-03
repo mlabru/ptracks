@@ -37,6 +37,7 @@ __date__ = "2015/11"
 # < imports >--------------------------------------------------------------------------------------
 
 # python library
+import errno
 import logging
 import multiprocessing
 import socket
@@ -48,6 +49,7 @@ import model.common.glb_data as gdata
 
 # control
 import control.common.glb_defs as gdefs
+import control.control_debug as cdbg
 
 # < class CNetListener >---------------------------------------------------------------------------
 
@@ -75,6 +77,8 @@ class CNetListener(multiprocessing.Process):
 
         # queue de dados
         self.__q_queue = f_queue
+
+        cdbg.M_DBG.debug("socket: {}:{} on {}".format(fs_addr, fi_port, ft_ifce))
 
         # cria o socket de recebimento
         self.__fd_recv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
@@ -130,30 +134,57 @@ class CNetListener(multiprocessing.Process):
             # aguarda 1 seg
             time.sleep(1)
 
+        # non-blocking socket
+        self.__fd_recv.settimeout(0.0)
+        self.__fd_recv.setblocking(0)
+
         # application loop
         while gdata.G_KEEP_RUN:
-            # aguarda receber uma mensagem (de até 512 bytes)
-            l_data, l_addr = self.__fd_recv.recvfrom(512)
+            try:
+                # recebe uma mensagem (de até 512 bytes)
+                l_data, l_addr = self.__fd_recv.recvfrom(512)
+                cdbg.M_DBG.debug("data: {} received from: {}".format(l_data, l_addr))
 
-            # divide a mensagem em seus componentes
-            llst_data = l_data.split(gdefs.D_MSG_SEP)
+                # divide a mensagem em seus componentes
+                llst_data = l_data.split(gdefs.D_MSG_SEP)
+                # cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
 
-            # versão da mensagem não reconhecida ?
-            if gdefs.D_MSG_VRS != int(llst_data[0]):
-                # próxima mensagem
-                continue
+                # versão da mensagem não reconhecida ?
+                if gdefs.D_MSG_VRS != int(llst_data[0]):
+                    # próxima mensagem
+                    continue
 
-            # mensagem válida ?
-            if int(llst_data[1]) in gdefs.SET_MSG_VALIDAS:
-                # coloca a mensagem na queue
-                self.__q_queue.put(llst_data[1:])
+                # mensagem válida ?
+                if int(llst_data[1]) in gdefs.SET_MSG_VALIDAS:
+                    # coloca a mensagem na queue
+                    self.__q_queue.put(llst_data[1:])
 
-            # mensagem não reconhecida ou inválida
-            else:
-                # logger
-                l_log = logging.getLogger("CNetListener::run")
-                l_log.setLevel(logging.WARNING)
-                l_log.warning("<E01: unknow:[{}].".format(llst_data[2:]))
+                # mensagem não reconhecida ou inválida
+                else:
+                    # logger
+                    l_log = logging.getLogger("CNetListener::run")
+                    l_log.setLevel(logging.WARNING)
+                    l_log.warning("<E01: unknow:[{}].".format(llst_data[2:]))
+
+            # em caso de erro...
+            except socket.timeout, l_err:
+                pass
+
+            # em caso de erro...    
+            except socket.error, l_err:
+                # get error code
+                li_err = l_err.args[0]
+
+                # data unavailable ?
+                if (errno.EAGAIN == li_err) or (errno.EWOULDBLOCK == li_err):
+                    continue
+
+                # senão, a "real" error occurred
+                else:
+                    # logger
+                    l_log = logging.getLogger("CNetListener::run")
+                    l_log.setLevel(logging.WARNING)
+                    l_log.warning("<E02: socket receive error: {}.".format(l_err))
 
     # =============================================================================================
     # data

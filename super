@@ -10,4 +10,4 @@ fi
 HOST=`hostname`
 
 # executa o dynamic configuration tool
-/usr/bin/env python -OO ./super.py "$@" 2> ./super.$HOST.log
+/usr/bin/env python -OO ./super.py "$@"

@@ -101,6 +101,7 @@ class CControlNewton(control.CControlBasic):
         self.sim_time = stime.CSimTime(self)
         assert self.sim_time
 
+
         # cria a queue de envio de comando/controle/configuração
         self.__q_snd_cnfg = multiprocessing.Queue()
         assert self.__q_snd_cnfg
@@ -112,6 +113,7 @@ class CControlNewton(control.CControlBasic):
         self.__sck_snd_cnfg = sender.CNetSender(lt_ifce, ls_addr, li_port, self.__q_snd_cnfg)
         assert self.__sck_snd_cnfg
 
+
         # cria a queue de envio de pistas
         self.__q_snd_trks = multiprocessing.Queue()
         assert self.__q_snd_trks
@@ -122,6 +124,7 @@ class CControlNewton(control.CControlBasic):
         # cria o socket de envio de pistas
         self.__sck_snd_trks = sender.CNetSender(lt_ifce, ls_addr, li_port, self.__q_snd_trks)
         assert self.__sck_snd_trks
+
 
         # cria a queue de recebimento de comando/controle/configuração
         self.__q_rcv_cnfg = multiprocessing.Queue()
@@ -135,7 +138,8 @@ class CControlNewton(control.CControlBasic):
         assert self.__sck_rcv_cnfg
 
         # set as daemon
-        self.__sck_rcv_cnfg.daemon = True
+        # self.__sck_rcv_cnfg.daemon = True
+
 
         # cria a queue de recebimento de comandos de pilotagem
         self.__q_rcv_cpil = multiprocessing.Queue()
@@ -149,11 +153,9 @@ class CControlNewton(control.CControlBasic):
         assert self.__sck_rcv_cpil
 
         # set as daemon
-        self.__sck_rcv_cpil.daemon = True
+        # self.__sck_rcv_cpil.daemon = True
 
-        # create application
-        # self.__create_app()
-
+      
         # instância o modelo
         self.model = model.CModelNewton(self)
         assert self.model
@@ -182,51 +184,6 @@ class CControlNewton(control.CControlBasic):
         self.event.post(l_evt)
 
     # ---------------------------------------------------------------------------------------------
-    def __create_app(self):
-        """
-        DOCUMENT ME!
-        """
-        # create application
-        # self.app = QtCore.QCoreApplication(sys.argv)
-        # assert self.app
-
-        # setup application parameters
-        # self.app.setOrganizationName("sophosoft")
-        # self.app.setOrganizationDomain("sophosoft.com.br")
-        # self.app.setApplicationName("newton")
-
-        # self.app.setWindowIcon(QtGui.QIcon(os.path.join(self.__dct_config["dir.img"], "icon_app.png")))
-
-        # load logo
-        # l_pix_logo = QtGui.QPixmap(os.path.join(self.__dct_config["dir.img"], "logo_python.png"))
-        # assert l_pix_logo
-
-        # create splash screen
-        # self.splash = QtGui.QSplashScreen(l_pix_logo, QtCore.Qt.WindowStaysOnTopHint)
-        # assert self.splash
-
-        # self.splash.setMask(l_pix_logo.mask())
-
-        # create the progress bar
-        # self.progressBar = QtGui.QProgressBar(self.splash)
-        # self.progressBar.setGeometry(    self.splash.width() / 10, 8 * self.splash.height() / 10,
-        #                              8 * self.splash.width() / 10,     self.splash.height() / 10)
-
-        # message = 'hello'
-        # label = QtGui.QLabel("<font color=red size=72><b>{0}</b></font>".format(message), self.splash)
-        # label.setGeometry(1 * self.splash.width() / 10, 8 * self.splash.height() / 10,
-        #                   8 * self.splash.width() / 10, 1 * self.splash.height() / 10)
-
-        # show splash screen
-        # self.splash.show()
-
-        # update the progress bar
-        # self.progressBar.setValue(50)
-
-        # process events (before main loop)
-        # self.app.processEvents()
-
-    # ---------------------------------------------------------------------------------------------
     def run(self):
         """
         drive application
@@ -240,7 +197,10 @@ class CControlNewton(control.CControlBasic):
         # temporização de scheduler
         lf_tim_rrbn = self.config.dct_config["tim.rrbn"]
 
-        # ativa o relógio da simulação
+        # keep things running
+        gdata.G_KEEP_RUN = True
+
+        # ativa o relógio
         self.start_time()
 
         # inicia o recebimento de mensagens de comando/controle/configuração(ccc)
@@ -249,20 +209,18 @@ class CControlNewton(control.CControlBasic):
         # starts flight model
         self.__emula.start()
 
+        # obtém o tempo inicial em segundos
+        lf_now = time.time()
+
         # starts web server
         self.view.start()
-
-        # keep things running
-        gdata.G_KEEP_RUN = True
-
-        # tempo inicial em segundos
-        lf_now = time.time()
 
         # application loop
         while gdata.G_KEEP_RUN:
             try:
                 # obtém um item da queue de mensagens de comando/controle/configuração (nowait)
                 llst_data = self.__q_rcv_cnfg.get(False)
+                # cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
 
                 # queue tem dados ?
                 if llst_data:
@@ -288,6 +246,11 @@ class CControlNewton(control.CControlBasic):
 
                     # senão, mensagem não reconhecida ou não tratavél
                     else:
+                        # mensagens não tratadas ?  
+                        if int(llst_data[0]) in [gdefs.D_MSG_EXE, gdefs.D_MSG_SRV, gdefs.D_MSG_TIM]:
+                            # próxima mensagem
+                            continue
+
                         # logger
                         l_log = logging.getLogger("CControlNewton::run")
                         l_log.setLevel(logging.WARNING)
@@ -315,6 +278,13 @@ class CControlNewton(control.CControlBasic):
                     l_log = logging.getLogger("CControlNewton::run")
                     l_log.setLevel(logging.WARNING)
                     l_log.warning("<E02: atrasou: {}.".format(lf_dif - lf_tim_rrbn))
+
+            # em caso de não haver mensagens...
+            except Exception, l_err:
+                # logger
+                l_log = logging.getLogger("CControlNewton::run")
+                l_log.setLevel(logging.WARNING)
+                l_log.warning("<E03: control error: {}.".format(l_err))
 
         # self.sim_stat.noProcFlights = fe.flightsProcessed
         # self.sim_stat.printScore()

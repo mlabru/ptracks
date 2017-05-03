@@ -39,7 +39,7 @@ import sip
 sip.setapi('QString', 2)
 
 # control
-import control.control_super as control
+import control.super.control_super as control
 
 # -------------------------------------------------------------------------------------------------
 def main():
@@ -50,15 +50,23 @@ def main():
     l_control = control.CControlSuper()
     assert l_control
 
-    # ativa o controller
-    l_control.start()
+    # executa em modo interativo ?
+    if l_control.dct_config["spr.gui"]:
 
-    # obtém a view
-    l_view = l_control.view
-    assert l_view
+        # ativa o controller
+        l_control.start()
 
-    # ativa a viewer
-    l_view.run()
+        # obtém a view
+        l_view = l_control.view
+        assert l_view
+
+        # ativa a viewer
+        l_view.run()
+
+    # senão,...
+    else:
+        # envia o comando
+        l_control.send()
 
 # -------------------------------------------------------------------------------------------------
 # this is the bootstrap process

@@ -116,6 +116,7 @@ class CControlPiloto(control.CControlBasic):
         self.sim_time = stime.CSimTime(self)
         assert self.sim_time
 
+
         # cria a queue de envio
         self.__q_snd_cpil = multiprocessing.Queue()
         assert self.__q_snd_cpil
@@ -126,6 +127,7 @@ class CControlPiloto(control.CControlBasic):
         # cria o socket de envio
         self.__sck_snd_cpil = sender.CNetSender(lt_ifce, ls_addr, li_port, self.__q_snd_cpil)
         assert self.__sck_snd_cpil
+
 
         # cria a queue de recebimento de comando/controle/configuração
         self.__q_rcv_cnfg = multiprocessing.Queue()
@@ -138,6 +140,7 @@ class CControlPiloto(control.CControlBasic):
         self.__sck_rcv_cnfg = listener.CNetListener(lt_ifce, ls_addr, li_port, self.__q_rcv_cnfg)
         assert self.__sck_rcv_cnfg
 
+
         # cria a queue de recebimento de pistas
         self.__q_rcv_trks = multiprocessing.Queue()
         assert self.__q_rcv_trks
@@ -149,9 +152,11 @@ class CControlPiloto(control.CControlBasic):
         self.__sck_rcv_trks = listener.CNetListener(lt_ifce, ls_addr, li_port, self.__q_rcv_trks)
         assert self.__sck_rcv_trks
 
+
         # cria o socket de acesso ao servidor
         self.__sck_http = httpsrv.CNetHttpGet(self.event, self.config)
         assert self.__sck_http
+
 
         # instancia o modelo
         self.model = model.CModelPiloto(self)
@@ -204,16 +209,12 @@ class CControlPiloto(control.CControlBasic):
             try:
                 # obtém um item da queue de configuração (nowait)
                 llst_data = self.__q_rcv_cnfg.get(False)
+                # cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
 
                 # queue tem dados ?
                 if llst_data:
-                    # mensagem de aceleração ?
-                    if gdefs.D_MSG_ACC == int(llst_data[0]):
-                        # acelera/desacelera a aplicação
-                        pass  # self.cbk_acelera ( float ( llst_data [ 1 ] ))
-
                     # mensagem toggle call sign ?
-                    elif gdefs.D_MSG_CSG == int(llst_data[0]):
+                    if gdefs.D_MSG_CSG == int(llst_data[0]):
                         # liga/desliga callsign
                         pass  # self.view.cbk_toggle_callsign()
 
@@ -230,11 +231,6 @@ class CControlPiloto(control.CControlBasic):
                     elif gdefs.D_MSG_FIM == int(llst_data[0]):
                         # termina a aplicação
                         self.cbk_termina()
-
-                    # mensagem de congelamento ?
-                    elif gdefs.D_MSG_FRZ == int(llst_data[0]):
-                        # freeze application
-                        pass  # self.view.cbk_freeze ( False )
 
                     # mensagem de endereço do servidor ?
                     elif gdefs.D_MSG_SRV == int(llst_data[0]):
@@ -255,11 +251,6 @@ class CControlPiloto(control.CControlBasic):
 
                         # dissemina o evento
                         self.event.post(l_evt)
-
-                    # mensagem de descongelamento ?
-                    elif gdefs.D_MSG_UFZ == int(llst_data[0]):
-                        # defreeze application
-                        pass  # self.view.cbk_defreeze ( False )
 
                     # senão, mensagem não reconhecida ou não tratavél
                     else:

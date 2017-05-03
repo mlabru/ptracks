@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 model_super
 
-DOCUMENT ME!
+supervisor model
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -79,7 +79,7 @@ class CModelSuper(model.CModelManager):
             # logger
             l_log = logging.getLogger("CModelSuper::__init__")
             l_log.setLevel(logging.CRITICAL)
-            l_log.critical(u"<E01: Erro na carga da base de dados.")
+            l_log.critical(u"<E01: erro na carga da base de dados.")
 
             # cria um evento de quit
             l_evt = events.CQuit()

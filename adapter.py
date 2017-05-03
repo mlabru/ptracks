@@ -35,7 +35,7 @@ import multiprocessing
 import sys
 
 # control
-import control.control_adapter as control
+import control.adapter.control_adapter as control
 
 # -------------------------------------------------------------------------------------------------
 def main():

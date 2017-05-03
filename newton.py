@@ -41,7 +41,7 @@ import sip
 sip.setapi('QString', 2)
 
 # control
-import control.control_newton as CControlNewton
+import control.newton.control_newton as CControlNewton
 
 # -------------------------------------------------------------------------------------------------
 

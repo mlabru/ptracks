@@ -41,7 +41,7 @@ import sip
 sip.setapi('QString', 2)
 
 # control
-import control.control_wizard as control
+import control.wizard.control_wizard as control
 
 # -------------------------------------------------------------------------------------------------
 def main():
