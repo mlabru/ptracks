@@ -550,14 +550,14 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
                 # logger
                 l_log = logging.getLogger("CWndMainPiloto::__get_status")
                 l_log.setLevel(logging.ERROR)
-                l_log.error(u"<E01({}): aeronave({}) não existe no servidor.".format(datetime.now().strftime("%H:%M:%S"), f_strip.s_callsign))
+                l_log.error(u"<E01({}): aeronave({}) não existe no servidor.".format(datetime.time().strftime("%H:%M:%S"), f_strip.s_callsign))
 
         # senão, não achou endereço do servidor
         else:
             # logger
             l_log = logging.getLogger("CWndMainPiloto::__get_status")
             l_log.setLevel(logging.WARNING)
-            l_log.warning(u"<E02({}): srv.addr não existe na configuração.".format(datetime.now().strftime("%H:%M:%S")))
+            l_log.warning(u"<E02({}): srv.addr não existe na configuração.".format(datetime.time().strftime("%H:%M:%S")))
 
     # ---------------------------------------------------------------------------------------------
     def __make_connections(self):

@@ -158,7 +158,7 @@ class CControlVisil(control.CControlBasic):
         """
         drive application
         """
-        # verifica condições de execução (I)
+        # clear to go
         assert self.event
         assert self.__emula
         assert self.__q_rcv_cnfg
@@ -284,7 +284,7 @@ class CControlVisil(control.CControlBasic):
         """
         DOCUMENT ME!
         """
-        # verifica condições de execução
+        # clear to go
         assert self.sim_time
 
         # inicia o relógio da simulação
@@ -297,88 +297,47 @@ class CControlVisil(control.CControlBasic):
     # ---------------------------------------------------------------------------------------------
     @property
     def emula(self):
-        """
-        get flight model
-        """
         return self.__emula
 
     @emula.setter
     def emula(self, f_val):
-        """
-        set flight model
-        """
-        # check input
-        assert f_val
-
         # save flight model
         self.__emula = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_http(self):
-        """
-        get http server listener
-        """
         return self.__sck_http
                                             
     @sck_http.setter
     def sck_http(self, f_val):
-        """
-        set http server listener
-        """
         self.__sck_http = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_cnfg(self):
-        """
-        get configuration listener
-        """
         return self.__sck_rcv_cnfg
 
     @sck_rcv_cnfg.setter
     def sck_rcv_cnfg(self, f_val):
-        """
-        set configuration listener
-        """
-        # check input
-        assert f_val
-
-        # save configuration listener
         self.__sck_rcv_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_rcv_trks(self):
-        """
-        get tracks queue
-        """
         return self.__q_rcv_trks
 
     @q_rcv_trks.setter
     def q_rcv_trks(self, f_val):
-        """
-        set tracks queue
-        """
         self.__q_rcv_trks = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_trks(self):
-        """
-        get data listener
-        """
         return self.__sck_rcv_trks
 
     @sck_rcv_trks.setter
     def sck_rcv_trks(self, f_val):
-        """
-        set data listener
-        """
-        # check input
-        assert f_val
-
-        # save data listener
         self.__sck_rcv_trks = f_val
 
 # < the end >--------------------------------------------------------------------------------------

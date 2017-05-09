@@ -54,7 +54,7 @@ class CConfigSuper(config.CConfigManager):
     __CFG_SUPER = {"spr.acc": 1.,
                    "spr.freeze": False,
                    "spr.gui": False,
-                   "spr.stop": True,
+                   "spr.term": True,
                    "spr.type": None, 
                    "spr.unfreeze": True
     }  # __CFG_SUPER
@@ -105,8 +105,8 @@ class CConfigSuper(config.CConfigManager):
         l_speed_parser.set_defaults(func=self.__cbk_speed)
 
         # argumento: termina o simulador
-        l_stop_parser = l_subparsers.add_parser("stop", help="stop simulation")  # aliases=["stp"],
-        l_stop_parser.set_defaults(func=self.__cbk_stop)
+        l_term_parser = l_subparsers.add_parser("term", help="end simulation")  # aliases=["trm"],
+        l_term_parser.set_defaults(func=self.__cbk_term)
 
         # argumento: descongela o exercício
         l_unfreeze_parser = l_subparsers.add_parser("unfreeze", help="unfreeze simulation")  # aliases=["ufz"], 
@@ -138,8 +138,8 @@ class CConfigSuper(config.CConfigManager):
         self.dct_config["spr.acc"] = f_args.speed
         self.dct_config["spr.type"] = gdefs.D_MSG_ACC
 
-    def __cbk_stop(self, f_args):
-        self.dct_config["spr.stop"] = True
+    def __cbk_term(self, f_args):
+        self.dct_config["spr.term"] = True
         self.dct_config["spr.type"] = gdefs.D_MSG_FIM
 
     def __cbk_unfreeze(self, f_args):
