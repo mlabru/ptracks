@@ -145,6 +145,20 @@ class CCineModel(object):
         lf_lat, lf_lng, lf_alt = self.__coords.xyz2geo(self.__atv.f_trf_x, self.__atv.f_trf_y, self.atv.f_trf_z)
         lf_alt = self.__atv.f_trf_alt_atu * cdefs.D_CNV_M2FT
 
+        # trata razão de subida
+
+        # voo nivelado ? 
+        if self.__atv.f_trf_alt_atu == self.__atv.f_atv_alt_dem:
+            lf_raz_sub = 0.
+
+        # subindo ?
+        elif self.__atv.f_trf_alt_atu < self.__atv.f_atv_alt_dem:
+            lf_raz_sub = self.__atv.f_atv_raz_sub
+            
+        # senão, tá descendo 
+        else:
+            lf_raz_sub = -self.__atv.f_atv_raz_sub
+
         # monta o buffer de envio
         # ls_buff = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
         #           str(gdefs.D_MSG_NEW) + gdefs.D_MSG_SEP + \
@@ -168,7 +182,7 @@ class CCineModel(object):
                   gdefs.D_MSG_SEP + str(round(lf_lat, 6)) + \
                   gdefs.D_MSG_SEP + str(round(lf_lng, 6)) + \
                   gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_vel_atu * cdefs.D_CNV_MS2KT, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(self.__atv.f_atv_raz_sub, 1)) + \
+                  gdefs.D_MSG_SEP + str(round(lf_raz_sub, 1)) + \
                   gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_pro_atu, 1)) + \
                   gdefs.D_MSG_SEP + str(self.__atv.s_trf_ind) + \
                   gdefs.D_MSG_SEP + str(self.__atv.ptr_trf_prf.s_prf_id) + \
