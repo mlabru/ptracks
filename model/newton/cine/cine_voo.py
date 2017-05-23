@@ -42,19 +42,19 @@ import libs.coords.coord_defs as cdefs
 # model
 import model.newton.defs_newton as ldefs
 
-import model.emula.cine.cine_calc as cincalc
-import model.emula.cine.cine_model as cinmodel
+import model.newton.cine.cine_calc as cincalc
+import model.newton.cine.cine_model as cinmodel
 
-import model.emula.cine.obtem_brk as obrk
-import model.emula.cine.prc_aproximacao as apx
-import model.emula.cine.prc_decolagem as dep
-import model.emula.cine.prc_dir_fixo as dfix
-import model.emula.cine.prc_espera as esp
-import model.emula.cine.prc_pouso as arr
-import model.emula.cine.prc_subida as sub
-import model.emula.cine.prc_trajetoria as trj
-import model.emula.cine.dados_dinamicos as cine
-import model.emula.cine.trata_associado as tass
+import model.newton.cine.obtem_brk as obrk
+import model.newton.cine.prc_aproximacao as apx
+import model.newton.cine.prc_decolagem as dep
+import model.newton.cine.prc_dir_fixo as dfix
+import model.newton.cine.prc_espera as esp
+import model.newton.cine.prc_pouso as arr
+import model.newton.cine.prc_subida as sub
+import model.newton.cine.prc_trajetoria as trj
+import model.newton.cine.dados_dinamicos as cine
+import model.newton.cine.trata_associado as tass
 
 # < class CCineVoo >-------------------------------------------------------------------------------
 

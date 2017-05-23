@@ -75,16 +75,12 @@ class CTrfData(dict):
     </trafego>
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_data=None, f_exe=None):
         """
         @param f_model: event manager
         @param f_data: dados das tráfegos
         @param f_exe: exercício
         """
-        # logger
-        # M_LOG.info("__init__:>>")
-
         # check input
         assert f_model
         assert f_exe
@@ -121,31 +117,20 @@ class CTrfData(dict):
                 # carrega a tráfego de um arquivo em disco
                 self.load_file(f_data)
 
-        # logger
-        # M_LOG.info("__init__:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def load_file(self, fs_trf_pn):
         """
         carrega os dados do tráfego de um arquivo em disco
 
         @param fs_trf_pn: pathname do arquivo em disco
         """
-        # logger
-        # M_LOG.info("load_file:>>")
-
         # check input
         assert fs_trf_pn
 
         # carrega o arquivo de tráfego
         self.parse_trf_xml(fs_trf_pn + ".trf.xml")
 
-        # logger
-        # M_LOG.info("load_file:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def make_trf(self, fdct_root, fdct_data):
         """
         carrega os dados de tráfego a partir de um dicionário
@@ -155,9 +140,6 @@ class CTrfData(dict):
 
         @return flag e mensagem
         """
-        # logger
-        # M_LOG.info("make_trf:>>")
-
         # check input
         assert fdct_root is not None
         assert fdct_data is not None
@@ -219,7 +201,7 @@ class CTrfData(dict):
             # se não for, cai fora...
             sys.exit(1)
 
-        # verifica se existe indicativo
+        # existe indicativo ?
         if "nTrf" in fdct_data:
             # cria a tráfego
             l_trf = model.CTrfNEW(self.__model, fdct_data, fdct_root["VERSION"])
@@ -241,23 +223,16 @@ class CTrfData(dict):
             # se não for, cai fora...
             return False, ls_msg
 
-        # logger
-        # M_LOG.info("make_trf:<<")
-
         # retorna Ok
         return lv_ok, ls_msg
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def parse_trf_xml(self, fs_trf_pn):
         """
         carrega o arquivo de tráfego
 
         @param fs_trf_pn: pathname do arquivo em disco
         """
-        # logger
-        # M_LOG.info("parse_trf_xml:>>")
-
         # check input
         assert fs_trf_pn
 
@@ -357,11 +332,7 @@ class CTrfData(dict):
             # carrega os dados de tráfego a partir de um dicionário
             self.make_trf(ldct_root, ldct_data)
 
-        # logger
-        # M_LOG.info("parse_trf_xml:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def save2disk(self, fs_trf_pn=None):
         """
         salva os dados da tráfego em um arquivo em disco
@@ -370,17 +341,11 @@ class CTrfData(dict):
 
         @return flag e mensagem
         """
-        # logger
-        # M_LOG.info("save2disk:>>")
-
         # return code
         lv_ok = True
 
         # mensagem
         ls_msg = "save ok"
-
-        # logger
-        # M_LOG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

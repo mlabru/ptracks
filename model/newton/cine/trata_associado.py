@@ -37,7 +37,7 @@ import logging
 
 # model
 import model.newton.defs_newton as ldefs
-import model.emula.cine.abort_prc as abnd
+import model.newton.cine.abort_prc as abnd
 
 # < module data >----------------------------------------------------------------------------------
 

@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 net_listener
 
-DOCUMENT ME!
+net listener
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -55,7 +55,7 @@ import control.control_debug as cdbg
 
 class CNetListener(multiprocessing.Process):
     """
-    DOCUMENT ME!
+    net listener
     """
     # ---------------------------------------------------------------------------------------------
     def __init__(self, ft_ifce, fs_addr, fi_port, f_queue):
@@ -77,8 +77,6 @@ class CNetListener(multiprocessing.Process):
 
         # queue de dados
         self.__q_queue = f_queue
-
-        cdbg.M_DBG.debug("socket: {}:{} on {}".format(fs_addr, fi_port, ft_ifce))
 
         # cria o socket de recebimento
         self.__fd_recv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM, socket.IPPROTO_UDP)
@@ -143,7 +141,7 @@ class CNetListener(multiprocessing.Process):
             try:
                 # recebe uma mensagem (de até 512 bytes)
                 l_data, l_addr = self.__fd_recv.recvfrom(512)
-                cdbg.M_DBG.debug("data: {} received from: {}".format(l_data, l_addr))
+                # cdbg.M_DBG.debug("data: {} received from: {}".format(l_data, l_addr))
 
                 # divide a mensagem em seus componentes
                 llst_data = l_data.split(gdefs.D_MSG_SEP)

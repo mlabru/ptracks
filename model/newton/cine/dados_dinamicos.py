@@ -43,7 +43,7 @@ import libs.coords.coord_defs as cdefs
 import model.common.glb_data as gdata
 import model.newton.defs_newton as ldefs
 
-import model.emula.cine.calc_proa_demanda as cpd
+import model.newton.cine.calc_proa_demanda as cpd
 
 # control
 import control.control_debug as cdbg

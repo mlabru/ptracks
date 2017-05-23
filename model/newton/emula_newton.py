@@ -41,9 +41,9 @@ import time
 # model
 import model.common.glb_data as gdata
 
-import model.emula.emula_model as model
-import model.emula.flight_engine as engine
-import model.emula.cine.cine_calc as cincalc
+import model.newton.emula_model as model
+import model.newton.flight_engine as engine
+import model.newton.cine.cine_calc as cincalc
 
 import model.items.atv_new as atv
 import model.items.trf_new as trf
@@ -84,13 +84,17 @@ class CEmulaNewton(model.CEmulaModel):
         # self.dct_flight    # dictionary of active flights
         # self.model         # model manager
 
+        # MPI Comm World
+        self.__mpi_comm = f_control.mpi_comm
+        # assert self.__mpi_comm
+
         # MPI rank
         self.__mpi_rank = f_control.mpi_rank
         assert self.__mpi_rank > -1
 
         # MPI size
         self.__mpi_size = f_control.mpi_size
-        assert self.__mpi_size > 0
+        assert self.__mpi_size > -1
 
         # sender de ccc
         self.__sck_snd_cnfg = f_control.sck_snd_cnfg
@@ -197,16 +201,19 @@ class CEmulaNewton(model.CEmulaModel):
 
         # indicativo do tráfego (callsign)
         llst_tok = fs_cmd.split(':')
-        cdbg.M_DBG.debug("__parse_cmd_pil: llst_tok: {}".format(llst_tok))
+        cdbg.M_DBG.debug("CEmulaNewton:parse_cmd_pil::llst_tok: {}".format(llst_tok))
+
+        # callsign
+        ls_callsign = llst_tok[0].strip().upper()
 
         # a aeronave ativa
-        l_atv = self.dct_flight.get(llst_tok[0].strip().upper())
+        l_atv = self.dct_flight.get(ls_callsign)
 
         if l_atv is None:
             # logger
             l_log = logging.getLogger("CEmulaNewton::parse_msg_pil")
             l_log.setLevel(logging.ERROR)
-            l_log.error(u"<E01: tráfego [{}] não existe.".format(llst_tok[0].strip().upper()))
+            l_log.error(u"<E01: tráfego {} não existe.".format(ls_callsign))
 
             # callsign não existe. cai fora...
             return
@@ -218,7 +225,7 @@ class CEmulaNewton(model.CEmulaModel):
             # logger
             l_log = logging.getLogger("CEmulaNewton::parse_msg_pil")
             l_log.setLevel(logging.ERROR)
-            l_log.error(u"<E02: flight engine de [{}] não existe.".format(llst_tok[0]))
+            l_log.error(u"<E02: flight engine de {} não existe.".format(ls_callsign))
 
             # flight engine não existe. cai fora...
             return
@@ -236,9 +243,9 @@ class CEmulaNewton(model.CEmulaModel):
         # check input
         assert fs_msg
 
-        # comando de pilotagem
+        # comandos de pilotagem
         llst_cmd = fs_msg.split(';')
-        cdbg.M_DBG.debug("llst_cmd: " + str(llst_cmd))
+        cdbg.M_DBG.debug("CEmulaNewton:parse_msg_pil::llst_cmd: {}".format(llst_cmd))
 
         # para todos os comandos na mensagem...
         for ls_cmd in llst_cmd:
@@ -323,7 +330,7 @@ class CEmulaNewton(model.CEmulaModel):
             try:
                 # um item da queue de pilotagem (nowait)
                 llst_data = self.__q_rcv_cpil.get(False)
-                cdbg.M_DBG.debug("llst_data: " + str(llst_data))
+                cdbg.M_DBG.debug("CEmulaNewton:run::llst_data: " + str(llst_data))
 
                 # queue tem dados ?
                 if llst_data:
@@ -373,7 +380,7 @@ class CEmulaNewton(model.CEmulaModel):
         while gdata.G_KEEP_RUN:
             # percorre os tráfegos do exercício
             for l_key, l_trf in self.__exe.dct_exe_trf.items():
-                # verifica aeronave
+                # clear to go
                 assert isinstance(l_trf, trf.CTrfNEW)
 
                 # processa esta aeronave ?
@@ -425,7 +432,7 @@ class CEmulaNewton(model.CEmulaModel):
             # senão, atrasou...
             else:
                 # logger
-                l_log = logging.getLogger("CEmulaNewton::__run_check_ativ")
+                l_log = logging.getLogger("CEmulaNewton::run_check_ativ")
                 l_log.setLevel(logging.WARNING)
                 l_log.warning("<E01: atraso de {}(s).".format(lf_now - lf_call_time))
 
@@ -463,7 +470,7 @@ class CEmulaNewton(model.CEmulaModel):
             # senão, atrasou...
             else:
                 # logger
-                l_log = logging.getLogger("CEmulaNewton::__run_check_cnfg")
+                l_log = logging.getLogger("CEmulaNewton::run_check_cnfg")
                 l_log.setLevel(logging.WARNING)
                 l_log.warning("<E01: atraso de {}(s).".format(lf_now - lf_call_time))
 
@@ -505,7 +512,7 @@ class CEmulaNewton(model.CEmulaModel):
             # senão, atrasou...
             else:
                 # logger
-                l_log = logging.getLogger("CEmulaNewton::__run_check_hora")
+                l_log = logging.getLogger("CEmulaNewton::run_check_hora")
                 l_log.setLevel(logging.WARNING)
                 l_log.warning("<E01: atraso de {}(s).".format(lf_now - lf_call_time))
 
@@ -643,7 +650,7 @@ class CEmulaNewton(model.CEmulaModel):
             # senão, atrasou...
             else:
                 # logger
-                l_log = logging.getLogger("CEmulaNewton::__run_check_prox")
+                l_log = logging.getLogger("CEmulaNewton::run_check_prox")
                 l_log.setLevel(logging.WARNING)
                 l_log.warning("<E01: atraso de {}(s).".format(lf_now - lf_call_time))
 

@@ -42,10 +42,10 @@ import libs.coords.coord_defs as cdefs
 # model
 import model.newton.defs_newton as ldefs
 
-import model.emula.cine.abort_prc as abnd
-import model.emula.cine.calc_proa_demanda as cpd
-import model.emula.cine.prc_dir_ponto as dp
-import model.emula.cine.sentido_curva as scrv
+import model.newton.cine.abort_prc as abnd
+import model.newton.cine.calc_proa_demanda as cpd
+import model.newton.cine.prc_dir_ponto as dp
+import model.newton.cine.sentido_curva as scrv
 
 # < module data >----------------------------------------------------------------------------------
 

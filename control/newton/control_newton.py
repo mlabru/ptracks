@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 control_newton
 
-DOCUMENT ME!
+control newton
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -66,7 +66,7 @@ import control.simula.sim_time as stime
 
 class CControlNewton(control.CControlBasic):
     """
-    DOCUMENT ME!
+    control newton
     """
     # ---------------------------------------------------------------------------------------------
     def __init__(self):

@@ -43,11 +43,11 @@ import libs.coords.coord_defs as cdefs
 # model
 import model.common.glb_data as gdata
 
-import model.emula.cine.abort_prc as abnd
-import model.emula.cine.cine_data as cindata
-# import model.emula.cine.cine_solo as cinsolo
-import model.emula.cine.cine_voo as cinvoo
-import model.emula.cine.sentido_curva as scrv
+import model.newton.cine.abort_prc as abnd
+import model.newton.cine.cine_data as cindata
+# import model.newton.cine.cine_solo as cinsolo
+import model.newton.cine.cine_voo as cinvoo
+import model.newton.cine.sentido_curva as scrv
 
 import model.newton.defs_newton as ldefs
 import model.piloto.comando_piloto as cmdpil

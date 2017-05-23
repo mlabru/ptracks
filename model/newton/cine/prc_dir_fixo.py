@@ -39,10 +39,10 @@ import math
 # model
 import model.newton.defs_newton as ldefs
 
-import model.emula.cine.abort_prc as abnd
-import model.emula.cine.calc_razao_curva as razc
-import model.emula.cine.calc_proa_demanda as cpd
-import model.emula.cine.sentido_curva as scrv
+import model.newton.cine.abort_prc as abnd
+import model.newton.cine.calc_razao_curva as razc
+import model.newton.cine.calc_proa_demanda as cpd
+import model.newton.cine.sentido_curva as scrv
 
 # < module data >----------------------------------------------------------------------------------
 

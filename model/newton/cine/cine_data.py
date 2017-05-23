@@ -37,7 +37,7 @@ import logging
 
 # model
 import model.newton.defs_newton as ldefs
-# import model.emula.cine.cine_item as item
+# import model.newton.cine.cine_item as item
 
 # < module data >----------------------------------------------------------------------------------
 

@@ -172,7 +172,7 @@ class CModelNewton(model.CModelManager):
     # ---------------------------------------------------------------------------------------------
     def __load_dicts(self):
         """
-        DOCUMENT ME!
+        carrega as tabelas do sistema
         """
         # monta o nome da tabela de performances
         ls_path = os.path.join(self.dct_config["dir.tab"], self.dct_config["tab.prf"])

@@ -38,10 +38,10 @@ import logging
 # model
 import model.newton.defs_newton as ldefs
 
-import model.emula.cine.abort_prc as abnd
-import model.emula.cine.obtem_brk as obrk
-import model.emula.cine.prc_dir_ponto as dp
-import model.emula.cine.trata_associado as tass
+import model.newton.cine.abort_prc as abnd
+import model.newton.cine.obtem_brk as obrk
+import model.newton.cine.prc_dir_ponto as dp
+import model.newton.cine.trata_associado as tass
 
 # -------------------------------------------------------------------------------------------------
 def prc_subida(f_atv, f_cine_data, f_stk_context):

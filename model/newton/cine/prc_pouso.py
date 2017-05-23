@@ -39,10 +39,10 @@ import math
 # model
 import model.newton.defs_newton as ldefs
 
-import model.emula.cine.calc_proa_demanda as cpd
-import model.emula.cine.cine_calc as cincalc
-import model.emula.cine.cine_model as cinmodel
-import model.emula.cine.sentido_curva as scrv
+import model.newton.cine.calc_proa_demanda as cpd
+import model.newton.cine.cine_calc as cincalc
+import model.newton.cine.cine_model as cinmodel
+import model.newton.cine.sentido_curva as scrv
 
 # control
 import control.control_debug as dbg
