@@ -40,7 +40,7 @@ import time
 
 # model
 import model.common.glb_data as gdata
-import model.emula.emula_model as model
+import model.newton.emula_model as model
 import model.visil.aircraft_visil as canv
 
 # control

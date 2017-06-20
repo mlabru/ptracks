@@ -43,10 +43,12 @@ class CEmulaModel(threading.Thread):
     flight objects holding all flights that are currently active
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_control):
         """
-        @param f_control: control manager
+        constructor
+        
+        @param f_model: model
+        @param f_control: control
         """
         # check input
         assert f_control
@@ -55,24 +57,16 @@ class CEmulaModel(threading.Thread):
         # init super class
         super(CEmulaModel, self).__init__()
 
-        # control manager
+        # control
         self.__control = f_control
         assert self.__control
 
-        # model manager
+        # model
         self.__model = f_model
         assert self.__model
 
         # initialize the dictionary for all active flights
         self.__dct_flight = {}
-
-    # ---------------------------------------------------------------------------------------------
-    def run(self):
-        """
-        DOCUMENT ME!
-        """
-        # return
-        return False
 
     # =============================================================================================
     # data
@@ -81,58 +75,37 @@ class CEmulaModel(threading.Thread):
     # ---------------------------------------------------------------------------------------------
     @property
     def config(self):
-        """
-        config manager
-        """
         return self.__control.config
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_config(self):
-        """
-        dicionário de configuração
-        """
         return self.__control.config.dct_config
 
     # ---------------------------------------------------------------------------------------------
     @property
     def control(self):
-        """
-        control manager
-        """
         return self.__control
 
     # ---------------------------------------------------------------------------------------------
     @property
     def event(self):
-        """
-        event manager
-        """
         return self.__control.event
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_flight(self):
-        """
-        dicionário de vôos ativos
-        """
         return self.__dct_flight
 
     # ---------------------------------------------------------------------------------------------
     @property
     def model(self):
-        """
-        model manager
-        """
         return self.__model
 
     # ---------------------------------------------------------------------------------------------
     '''
     @property
     def sim_time(self):
-        """
-        relógio da simulação
-        """
         return self._sim_time
     '''
 # < the end >--------------------------------------------------------------------------------------

@@ -67,7 +67,7 @@ class CFlightEngine(threading.Thread):
         """
         constructor
         
-        @param f_control: control manager
+        @param f_control: control
         @param f_atv: aeronave ativa
         """
         # check input
@@ -77,11 +77,11 @@ class CFlightEngine(threading.Thread):
         # inicia a super classe
         super(CFlightEngine, self).__init__()
 
-        # control manager
+        # control
         self.__control = f_control
         assert self.__control
 
-        # event manager
+        # event
         # self.__event = f_control.event
         # assert self.__event
 
@@ -89,7 +89,7 @@ class CFlightEngine(threading.Thread):
         self.__sim_time = f_control.sim_time
         assert self.__sim_time
 
-        # model manager
+        # model
         self.__model = f_control.model
         assert self.__model
 
@@ -138,7 +138,7 @@ class CFlightEngine(threading.Thread):
             # logger
             l_log = logging.getLogger("CFlightEngine::__cmd_pil_altitude")
             l_log.setLevel(logging.ERROR)
-            l_log.error(u"<E01: comando operacional ({}) não existe.".format(fen_cmd_ope))
+            l_log.error(u"<E01: comando operacional '{}' não existe.".format(fen_cmd_ope))
 
         # obtém o terceiro parâmetro (razão)
         lf_param_3 = fo_cmd_pil.t_param_3[0]
@@ -716,7 +716,7 @@ class CFlightEngine(threading.Thread):
     @property
     def atv(self):
         """
-        get pointer para a aeronave ativa
+        pointer para a aeronave ativa
         """
         return self.__atv
 
@@ -724,7 +724,7 @@ class CFlightEngine(threading.Thread):
     @property
     def cine_data(self):
         """
-        get pointer para área de dados da cinemática
+        pointer para área de dados da cinemática
         """
         return self.__cine_data
 
@@ -732,7 +732,7 @@ class CFlightEngine(threading.Thread):
     @property
     def cine_solo(self):
         """
-        get cinemática de solo
+        cinemática de solo
         """
         return self.__cine_solo
 
@@ -740,7 +740,7 @@ class CFlightEngine(threading.Thread):
     @property
     def cine_voo(self):
         """
-        get cinemática de vôo
+        cinemática de vôo
         """
         return self.__cine_voo
 
@@ -748,7 +748,7 @@ class CFlightEngine(threading.Thread):
     @property
     def stk_context(self):
         """
-        get context stack
+        context stack
         """
         return self.__stk_context
 

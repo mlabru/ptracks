@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './dlg_exe_edit_new.ui'
 #
-# Created: Wed Dec  7 12:55:06 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -26,7 +25,7 @@ except AttributeError:
 class Ui_CDlgExeEditNEW(object):
     def setupUi(self, CDlgExeEditNEW):
         CDlgExeEditNEW.setObjectName(_fromUtf8("CDlgExeEditNEW"))
-        CDlgExeEditNEW.resize(554, 715)
+        CDlgExeEditNEW.resize(616, 741)
         CDlgExeEditNEW.setLocale(QtCore.QLocale(QtCore.QLocale.Portuguese, QtCore.QLocale.Brazil))
         CDlgExeEditNEW.setSizeGripEnabled(True)
         CDlgExeEditNEW.setModal(True)
@@ -81,7 +80,6 @@ class Ui_CDlgExeEditNEW(object):
         self.widGrl1 = QtGui.QWidget(self.gbxGrl)
         self.widGrl1.setObjectName(_fromUtf8("widGrl1"))
         self.gridLayout_8 = QtGui.QGridLayout(self.widGrl1)
-        self.gridLayout_8.setMargin(0)
         self.gridLayout_8.setObjectName(_fromUtf8("gridLayout_8"))
         self.lblGrlCena = QtGui.QLabel(self.widGrl1)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Minimum)
@@ -117,8 +115,8 @@ class Ui_CDlgExeEditNEW(object):
         self.widGrlIni.setSizePolicy(sizePolicy)
         self.widGrlIni.setObjectName(_fromUtf8("widGrlIni"))
         self.horizontalLayout_5 = QtGui.QHBoxLayout(self.widGrlIni)
-        self.horizontalLayout_5.setSpacing(1)
         self.horizontalLayout_5.setMargin(1)
+        self.horizontalLayout_5.setSpacing(1)
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
         self.qsbGrlIniHor = QtGui.QSpinBox(self.widGrlIni)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -157,7 +155,6 @@ class Ui_CDlgExeEditNEW(object):
         self.widGrl2 = QtGui.QWidget(self.gbxGrl)
         self.widGrl2.setObjectName(_fromUtf8("widGrl2"))
         self.gridLayout = QtGui.QGridLayout(self.widGrl2)
-        self.gridLayout.setMargin(0)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.lblGrlRnd = QtGui.QLabel(self.widGrl2)
         self.lblGrlRnd.setObjectName(_fromUtf8("lblGrlRnd"))
@@ -192,7 +189,6 @@ class Ui_CDlgExeEditNEW(object):
         self.widMet1 = QtGui.QWidget(self.gbxMet)
         self.widMet1.setObjectName(_fromUtf8("widMet1"))
         self.gridLayout_2 = QtGui.QGridLayout(self.widMet1)
-        self.gridLayout_2.setMargin(0)
         self.gridLayout_2.setHorizontalSpacing(20)
         self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
         self.lblMetVnt = QtGui.QLabel(self.widMet1)
@@ -233,7 +229,6 @@ class Ui_CDlgExeEditNEW(object):
         self.widMet2 = QtGui.QWidget(self.gbxMet)
         self.widMet2.setObjectName(_fromUtf8("widMet2"))
         self.gridLayout_3 = QtGui.QGridLayout(self.widMet2)
-        self.gridLayout_3.setMargin(0)
         self.gridLayout_3.setHorizontalSpacing(20)
         self.gridLayout_3.setObjectName(_fromUtf8("gridLayout_3"))
         self.lblMetTto = QtGui.QLabel(self.widMet2)
@@ -316,7 +311,6 @@ class Ui_CDlgExeEditNEW(object):
         self.widBtn = QtGui.QWidget(self.frmAnv)
         self.widBtn.setObjectName(_fromUtf8("widBtn"))
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.widBtn)
-        self.horizontalLayout_2.setMargin(0)
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.btnNew = QtGui.QPushButton(self.widBtn)
         icon = QtGui.QIcon()
@@ -341,7 +335,6 @@ class Ui_CDlgExeEditNEW(object):
         self.bbxExeEdit = QtGui.QWidget(CDlgExeEditNEW)
         self.bbxExeEdit.setObjectName(_fromUtf8("bbxExeEdit"))
         self.horizontalLayout_6 = QtGui.QHBoxLayout(self.bbxExeEdit)
-        self.horizontalLayout_6.setMargin(0)
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         self.btnFirst = QtGui.QPushButton(self.bbxExeEdit)
         self.btnFirst.setText(_fromUtf8(""))
@@ -438,7 +431,7 @@ class Ui_CDlgExeEditNEW(object):
         self.lblMetTmp.setText(_translate("CDlgExeEditNEW", "Temperatura:", None))
         self.qsbMetTemp.setSuffix(_translate("CDlgExeEditNEW", " gr", None))
         self.lblMetPrs.setText(_translate("CDlgExeEditNEW", "Pressão:", None))
-        self.gbxAnv.setTitle(_translate("CDlgExeEditNEW", "Aeronaves", None))
+        self.gbxAnv.setTitle(_translate("CDlgExeEditNEW", "Tráfegos", None))
         self.btnNew.setText(_translate("CDlgExeEditNEW", "Cria", None))
         self.btnEdit.setText(_translate("CDlgExeEditNEW", "Edita", None))
         self.btnRem.setText(_translate("CDlgExeEditNEW", "Remove", None))

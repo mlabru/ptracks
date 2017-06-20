@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './dlg_prf_data_new.ui'
 #
-# Created: Wed Dec  7 14:10:15 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -44,7 +43,6 @@ class Ui_CDlgPrfDataNEW(object):
         self.wid_qwt.setSizePolicy(sizePolicy)
         self.wid_qwt.setObjectName(_fromUtf8("wid_qwt"))
         self.verticalLayout = QtGui.QVBoxLayout(self.wid_qwt)
-        self.verticalLayout.setMargin(0)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.qtw_perfs = QtGui.QTableWidget(self.wid_qwt)
         self.qtw_perfs.setObjectName(_fromUtf8("qtw_perfs"))
@@ -54,7 +52,6 @@ class Ui_CDlgPrfDataNEW(object):
         self.wid_Data = QtGui.QWidget(self.splitter)
         self.wid_Data.setObjectName(_fromUtf8("wid_Data"))
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.wid_Data)
-        self.verticalLayout_2.setMargin(0)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.frm_id = QtGui.QFrame(self.wid_Data)
         self.frm_id.setFrameShape(QtGui.QFrame.StyledPanel)
@@ -227,7 +224,6 @@ class Ui_CDlgPrfDataNEW(object):
         self.widget = QtGui.QWidget(self.wid_Data)
         self.widget.setObjectName(_fromUtf8("widget"))
         self.horizontalLayout = QtGui.QHBoxLayout(self.widget)
-        self.horizontalLayout.setMargin(0)
         self.horizontalLayout.setObjectName(_fromUtf8("horizontalLayout"))
         self.gbxMax = QtGui.QGroupBox(self.widget)
         self.gbxMax.setObjectName(_fromUtf8("gbxMax"))
@@ -293,7 +289,6 @@ class Ui_CDlgPrfDataNEW(object):
         self.widget_2 = QtGui.QWidget(self.wid_Data)
         self.widget_2.setObjectName(_fromUtf8("widget_2"))
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.widget_2)
-        self.horizontalLayout_2.setMargin(0)
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.gbxDep = QtGui.QGroupBox(self.widget_2)
         self.gbxDep.setObjectName(_fromUtf8("gbxDep"))
@@ -342,7 +337,6 @@ class Ui_CDlgPrfDataNEW(object):
         self.widget_3 = QtGui.QWidget(self.wid_Data)
         self.widget_3.setObjectName(_fromUtf8("widget_3"))
         self.horizontalLayout_5 = QtGui.QHBoxLayout(self.widget_3)
-        self.horizontalLayout_5.setMargin(0)
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
         self.gbxSub = QtGui.QGroupBox(self.widget_3)
         self.gbxSub.setObjectName(_fromUtf8("gbxSub"))
@@ -386,7 +380,6 @@ class Ui_CDlgPrfDataNEW(object):
         self.widget_4 = QtGui.QWidget(self.wid_Data)
         self.widget_4.setObjectName(_fromUtf8("widget_4"))
         self.horizontalLayout_4 = QtGui.QHBoxLayout(self.widget_4)
-        self.horizontalLayout_4.setMargin(0)
         self.horizontalLayout_4.setObjectName(_fromUtf8("horizontalLayout_4"))
         self.gbxCrvRaz = QtGui.QGroupBox(self.widget_4)
         self.gbxCrvRaz.setObjectName(_fromUtf8("gbxCrvRaz"))

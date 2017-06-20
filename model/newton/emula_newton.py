@@ -66,8 +66,10 @@ class CEmulaNewton(model.CEmulaModel):
     # ---------------------------------------------------------------------------------------------
     def __init__(self, f_model, f_control):
         """
-        @param f_model: model manager
-        @param f_control: control manager
+        constructor
+        
+        @param f_model: model
+        @param f_control: control
         """
         # check input
         assert f_control
@@ -77,12 +79,12 @@ class CEmulaNewton(model.CEmulaModel):
         super(CEmulaNewton, self).__init__(f_model, f_control)
 
         # herdados de CEmulaModel
-        # self.config        # config manager
+        # self.config        # config
         # self.dct_config    # configuration dictionary
-        # self.control       # control manager
-        # self.event         # event manager
+        # self.control       # control
+        # self.event         # event
         # self.dct_flight    # dictionary of active flights
-        # self.model         # model manager
+        # self.model         # model
 
         # MPI Comm World
         self.__mpi_comm = f_control.mpi_comm
@@ -387,7 +389,6 @@ class CEmulaNewton(model.CEmulaModel):
                 if self.__mpi_rank == l_trf.i_trf_id % self.__mpi_size:
                     # tráfego não está pendente ?
                     # if ldefs.E_PENDENTE != l_trf.en_trf_est_atv:
-
                         # próximo tráfego
                         # continue
 
@@ -599,7 +600,6 @@ class CEmulaNewton(model.CEmulaModel):
                         if lf_hrz < 20.:
                             # nova colisão ?
                             # if 'X' != l_atv1.c_atv_status_solo:
-
                                 # emite o aviso sonoro
                                 # self._snd_explode.play()
 

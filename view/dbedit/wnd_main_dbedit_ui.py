@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './wnd_main_dbedit.ui'
 #
-# Created: Wed Dec  7 14:22:41 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -109,17 +108,6 @@ class Ui_CWndMainDBEdit(object):
         self.btn_trj.setIcon(icon)
         self.btn_trj.setObjectName(_fromUtf8("btn_trj"))
         self.gridLayout.addWidget(self.btn_trj, 6, 1, 1, 1)
-        self.btn_sai = QtGui.QPushButton(self.gbx_btn)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        sizePolicy.setHorizontalStretch(0)
-        sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(self.btn_sai.sizePolicy().hasHeightForWidth())
-        self.btn_sai.setSizePolicy(sizePolicy)
-        icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/pixmaps/gamequit.xpm")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_sai.setIcon(icon2)
-        self.btn_sai.setObjectName(_fromUtf8("btn_sai"))
-        self.gridLayout.addWidget(self.btn_sai, 7, 0, 1, 1)
         self.btn_esp = QtGui.QPushButton(self.gbx_btn)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
@@ -144,11 +132,22 @@ class Ui_CWndMainDBEdit(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.btn_exe.sizePolicy().hasHeightForWidth())
         self.btn_exe.setSizePolicy(sizePolicy)
-        icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/run16.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        self.btn_exe.setIcon(icon3)
+        icon2 = QtGui.QIcon()
+        icon2.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/run16.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_exe.setIcon(icon2)
         self.btn_exe.setObjectName(_fromUtf8("btn_exe"))
         self.gridLayout.addWidget(self.btn_exe, 1, 1, 1, 1)
+        self.btn_sai = QtGui.QPushButton(self.gbx_btn)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.btn_sai.sizePolicy().hasHeightForWidth())
+        self.btn_sai.setSizePolicy(sizePolicy)
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/pixmaps/gamequit.xpm")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        self.btn_sai.setIcon(icon3)
+        self.btn_sai.setObjectName(_fromUtf8("btn_sai"))
+        self.gridLayout.addWidget(self.btn_sai, 7, 1, 1, 1)
         CWndMainDBEdit.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(CWndMainDBEdit)
@@ -176,9 +175,9 @@ class Ui_CWndMainDBEdit(object):
         self.btn_prf.setText(_translate("CWndMainDBEdit", "Performances", None))
         self.btn_fix.setText(_translate("CWndMainDBEdit", "Fixos", None))
         self.btn_trj.setText(_translate("CWndMainDBEdit", "Trajetórias", None))
-        self.btn_sai.setText(_translate("CWndMainDBEdit", "Sair", None))
         self.btn_esp.setText(_translate("CWndMainDBEdit", "Esperas", None))
         self.btn_aer.setText(_translate("CWndMainDBEdit", "Aeródromos", None))
         self.btn_exe.setText(_translate("CWndMainDBEdit", "Exercícios", None))
+        self.btn_sai.setText(_translate("CWndMainDBEdit", "Sair", None))
 
 import resources_rc

@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './dlg_fix_edit_new.ui'
 #
-# Created: Wed Dec  7 12:55:06 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -61,8 +60,8 @@ class Ui_CDlgFixEditNEW(object):
         self.widget = QtGui.QWidget(self.frmGrpID)
         self.widget.setObjectName(_fromUtf8("widget"))
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.widget)
-        self.horizontalLayout_2.setSpacing(3)
         self.horizontalLayout_2.setMargin(3)
+        self.horizontalLayout_2.setSpacing(3)
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
         self.qleIndc = QtGui.QLineEdit(self.widget)
         self.qleIndc.setObjectName(_fromUtf8("qleIndc"))
@@ -121,7 +120,6 @@ class Ui_CDlgFixEditNEW(object):
         self.bbxEditPrf = QtGui.QWidget(CDlgFixEditNEW)
         self.bbxEditPrf.setObjectName(_fromUtf8("bbxEditPrf"))
         self.horizontalLayout_6 = QtGui.QHBoxLayout(self.bbxEditPrf)
-        self.horizontalLayout_6.setMargin(0)
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem2)

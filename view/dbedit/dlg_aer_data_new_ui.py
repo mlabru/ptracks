@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './dlg_aer_data_new.ui'
 #
-# Created: Wed Dec  7 14:50:51 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -39,7 +38,6 @@ class Ui_CDlgAerDataNEW(object):
         self.wid_qwt = QtGui.QWidget(self.splitter)
         self.wid_qwt.setObjectName(_fromUtf8("wid_qwt"))
         self.verticalLayout = QtGui.QVBoxLayout(self.wid_qwt)
-        self.verticalLayout.setMargin(0)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.qtw_aer = QtGui.QTableWidget(self.wid_qwt)
         self.qtw_aer.setObjectName(_fromUtf8("qtw_aer"))
@@ -74,7 +72,6 @@ class Ui_CDlgAerDataNEW(object):
         self.wid_data = QtGui.QWidget(self.splitter)
         self.wid_data.setObjectName(_fromUtf8("wid_data"))
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.wid_data)
-        self.verticalLayout_2.setMargin(0)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.frm_id = QtGui.QFrame(self.wid_data)
         self.frm_id.setFrameShape(QtGui.QFrame.StyledPanel)

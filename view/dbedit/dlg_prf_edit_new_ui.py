@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './dlg_prf_edit_new.ui'
 #
-# Created: Wed Dec  7 12:55:06 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -409,7 +408,6 @@ class Ui_CDlgPrfEditNEW(object):
         self.bbxPrfEdit = QtGui.QWidget(CDlgPrfEditNEW)
         self.bbxPrfEdit.setObjectName(_fromUtf8("bbxPrfEdit"))
         self.horizontalLayout_6 = QtGui.QHBoxLayout(self.bbxPrfEdit)
-        self.horizontalLayout_6.setMargin(0)
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem)

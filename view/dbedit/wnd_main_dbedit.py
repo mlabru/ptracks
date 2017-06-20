@@ -61,7 +61,7 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
         """
         constructor
 
-        @param f_control: control manager
+        @param f_control: control
         @param f_parent: parent widget
         """
         # init super class
@@ -70,11 +70,11 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
         # check input
         assert f_control
 
-        # control manager
+        # control
         self.__control = f_control
         assert self.__control
 
-        # event manager
+        # event
         self.__event = f_control.event
         assert self.__event
 

@@ -2,8 +2,7 @@
 
 # Form implementation generated from reading ui file './dlg_fix_data_new.ui'
 #
-# Created: Wed Dec  7 13:03:45 2016
-#      by: PyQt4 UI code generator 4.11.2
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -44,7 +43,6 @@ class Ui_CDlgFixDataNEW(object):
         self.wid_list.setSizePolicy(sizePolicy)
         self.wid_list.setObjectName(_fromUtf8("wid_list"))
         self.verticalLayout = QtGui.QVBoxLayout(self.wid_list)
-        self.verticalLayout.setMargin(0)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.qtw_fixos = QtGui.QTableWidget(self.wid_list)
         self.qtw_fixos.setObjectName(_fromUtf8("qtw_fixos"))
@@ -54,7 +52,6 @@ class Ui_CDlgFixDataNEW(object):
         self.wid_data = QtGui.QWidget(self.splitter)
         self.wid_data.setObjectName(_fromUtf8("wid_data"))
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.wid_data)
-        self.verticalLayout_2.setMargin(0)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.frm_id = QtGui.QFrame(self.wid_data)
         self.frm_id.setFrameShape(QtGui.QFrame.StyledPanel)
@@ -89,7 +86,6 @@ class Ui_CDlgFixDataNEW(object):
         self.wid_fields = QtGui.QWidget(self.wid_data)
         self.wid_fields.setObjectName(_fromUtf8("wid_fields"))
         self.gridLayout_4 = QtGui.QGridLayout(self.wid_fields)
-        self.gridLayout_4.setMargin(0)
         self.gridLayout_4.setObjectName(_fromUtf8("gridLayout_4"))
         self.gbx_pos = QtGui.QGroupBox(self.wid_fields)
         self.gbx_pos.setObjectName(_fromUtf8("gbx_pos"))

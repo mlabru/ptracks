@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 model_newton
 
-DOCUMENT ME!
+newton model
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -57,12 +57,12 @@ import model.newton.defs_newton as ldefs
 
 class CModelNewton(model.CModelManager):
     """
-    DOCUMENT ME!
+    newton model
     """
     # ---------------------------------------------------------------------------------------------
     def __init__(self, f_control):
         """
-        @param  f_control: control manager
+        @param f_control: control
         """
         # check input
         assert f_control
@@ -72,10 +72,10 @@ class CModelNewton(model.CModelManager):
  
         # herdados de CModelManager
         # self.app           # application
-        # self.config        # config manager
+        # self.config        # config
         # self.dct_config    # dicionário de configuração
-        # self.control       # control manager
-        # self.event         # event manager
+        # self.control       # control
+        # self.event         # event
 
         # obtém as coordenadas de referência
         lf_ref_lat = float(self.dct_config["map.lat"])
@@ -209,96 +209,60 @@ class CModelNewton(model.CModelManager):
     # ---------------------------------------------------------------------------------------------
     @property
     def airspace(self):
-        """
-        get airspace
-        """
         return self.__airspace
 
     # ---------------------------------------------------------------------------------------------
     @property
     def coords(self):
-        """
-        get coordinate system
-        """
         return self.__coords
 
     @coords.setter
     def coords(self, f_val):
-        """
-        set coordinate system
-        """
         self.__coords = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def emula(self):
-        """
-        get emula model
-        """
         return self.__emula
 
     # ---------------------------------------------------------------------------------------------
     @property
     def exe(self):
-        """
-        get exercício
-        """
         return self.__exe
 
     # ---------------------------------------------------------------------------------------------
     @property
     def lst_arr_dep(self):
-        """
-        get pousos/decolagens
-        """
         return self.__airspace.lst_arr_dep
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_esp(self):
-        """
-        get esperas
-        """
         return self.__airspace.dct_esp
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_fix(self):
-        """
-        get fixos
-        """
         return self.__airspace.dct_fix
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_prf(self):
-        """
-        get performances
-        """
         return self.__dct_prf
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_sub(self):
-        """
-        get subidas
-        """
         return self.__airspace.dct_sub
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_trf(self):
-        """
-        get tráfegos
-        """
         return self.__dct_trf
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_trj(self):
-        """
-        get trajetórias
-        """
         return self.__airspace.dct_trj
 
 # < the end >--------------------------------------------------------------------------------------
