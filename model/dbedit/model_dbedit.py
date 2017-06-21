@@ -71,6 +71,10 @@ class CModelDBEdit(model.CModelManager):
 
         @param f_control: control manager
         """
+        l_log = logging.getLogger("CModelDBEdit::__init__")
+        l_log.setLevel(logging.INFO)
+        l_log.info("Contructor")
+
         # check input
         assert f_control
 
@@ -119,6 +123,11 @@ class CModelDBEdit(model.CModelManager):
 
         # carrega as tabelas do sistema
         self.__load_cenario()
+
+        # carrega os exercicios do sistema
+        self.load_exes()
+
+        l_log.info(" Contructor")
 
     # ---------------------------------------------------------------------------------------------
     def get_ptr_prc(self, fs_prc):
@@ -176,18 +185,23 @@ class CModelDBEdit(model.CModelManager):
         # tudo Ok ?
         # if lv_ok:
 
+        l_log = logging.getLogger("CModelDBEdit::__load_cenario")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug(" Loading airspace ....")
+
         # carrega o airspace
         lv_ok, ls_msg = self.__load_airs()
 
         # ok ?
         if lv_ok:
+            l_log.debug(" Loading tables ....")
             # carrega as tabelas do sistema
             lv_ok, ls_msg = self.__load_tables()
 
         # houve erro em alguma fase ?
         if not lv_ok:
             # logger
-            l_log = logging.getLogger("CModelDBEdit::__load_cenario")
+            #l_log = logging.getLogger("CModelDBEdit::__load_cenario")
             l_log.setLevel(logging.CRITICAL)
             l_log.critical(u"<E01: erro na carga da base de dados: {}".format(ls_msg))
 
@@ -208,6 +222,10 @@ class CModelDBEdit(model.CModelManager):
 
         @return flag e mensagem
         """
+        l_log = logging.getLogger("CModelDBEdit::__load_tables")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug(" Loading tables ....")
+
         # monta o nome da tabela de performances
         ls_path = os.path.join(self.dct_config["dir.tab"], self.dct_config["tab.prf"])
 
@@ -217,7 +235,7 @@ class CModelDBEdit(model.CModelManager):
 
         # monta o nome do arquivo de exercício
         ls_path = os.path.join(self.dct_config["dir.exe"], self.dct_config["glb.exe"])
-                
+
         # carrega o exercício em um dicionário
         ldct_exe = exedata.CExeData(self, ls_path + ".exe.xml")
         assert ldct_exe is not None
@@ -300,22 +318,34 @@ class CModelDBEdit(model.CModelManager):
 
         @param f_event: evento recebido
         """
+        l_log = logging.getLogger("CModelDBEdit::notify")
+        l_log.setLevel(logging.DEBUG)
+
         # recebeu um evento de "save to disk" ?
         if isinstance(f_event, events.CSave2Disk):
             # salvar tabela de aeródromos ?
-            if "AER" == f_event.table.upper():
+            if "AER" == f_event.s_table.upper():
                 # salva a tabela de aeródromos
                 self.dct_aer.save2disk()
 
             # salvar tabela de fixos ?
-            elif "FIX" == f_event.table.upper():
+            elif "FIX" == f_event.s_table.upper():
                 # salva a tabela de fixos
                 self.dct_fix.save2disk()
 
             # salvar tabela de performances ?
-            elif "PRF" == f_event.table.upper():
+            elif "PRF" == f_event.s_table.upper():
                 # salva a tabela de performances
                 self.__dct_prf.save2disk()
+
+            # salvar tabela de exercícios ?
+            elif "EXE" == f_event.s_table.upper():
+                # salva as tabela de exercícios
+                for l_sExeInd, l_oExeData in self.__dct_exe.items():
+                    ls_exe_path = self.dct_config["dir.exe"]
+                    l_log.info(" CSave2Disk dir EXE [%s]" % ls_exe_path)
+                    l_oExeData.save2disk(fs_exe_path=ls_exe_path)
+
         '''
             # salvar tabela de aeronaves ?
             elif "ANV" == f_event.table.upper():
@@ -326,11 +356,6 @@ class CModelDBEdit(model.CModelManager):
             elif "ESP" == f_event.table.upper():
                 # salva a tabela de esperas
                 self.dct_esp.save2disk()
-
-            # salvar tabela de exercícios ?
-            elif "EXE" == f_event.table.upper():
-                # salva a tabela de exercícios
-                self.__dct_exe.save2disk()
 
             # salvar tabela de figuras ?
             elif "FIG" == f_event.table.upper():
@@ -362,6 +387,60 @@ class CModelDBEdit(model.CModelManager):
                 # salva a tabela de trajetórias
                 self.__dct_trj.save2disk()
         '''
+
+        # recebeu um evento de "update from disk" ?
+        if isinstance(f_event, events.CUpd2Disk):
+            # salvar tabela de aeródromos ?
+            if "AER" == f_event.s_table.upper():
+                # salva a tabela de aeródromos
+                self.dct_aer.save2disk()
+
+            # salvar tabela de fixos ?
+            elif "FIX" == f_event.s_table.upper():
+                # salva a tabela de fixos
+                self.dct_fix.save2disk()
+
+            # salvar tabela de performances ?
+            elif "PRF" == f_event.s_table.upper():
+                # salva a tabela de performances
+                self.__dct_prf.save2disk()
+
+            # salvar tabela de exercícios ?
+            elif "EXE" == f_event.s_table.upper():
+                # remove a tabela de exercício
+                l_oExeNew = self.__dct_exe[f_event.s_filename]
+                ls_exe_path = self.dct_config["dir.exe"]
+                l_log.info(" CUpd2Disk exe path [%s]" % ls_exe_path)
+                l_oExeNew.save2disk(fs_exe_path=ls_exe_path)
+
+        # recebeu um evento de "delete from disk" ?
+        if isinstance(f_event, events.CDelFromDisk):
+            # salvar tabela de aeródromos ?
+            if "AER" == f_event.s_table.upper():
+                # salva a tabela de aeródromos
+                self.dct_aer.del_from_disk()
+
+            # salvar tabela de fixos ?
+            elif "FIX" == f_event.s_table.upper():
+                # salva a tabela de fixos
+                self.dct_fix.del_from_disk()
+
+            # salvar tabela de performances ?
+            elif "PRF" == f_event.s_table.upper():
+                # salva a tabela de performances
+                self.__dct_prf.del_from_disk()
+
+            # salvar tabela de exercícios ?
+            elif "EXE" == f_event.s_table.upper():
+                # remove a tabela de exercício
+                l_oExeNew = self.__dct_exe[f_event.s_filename]
+                ls_exe_path = self.dct_config["dir.exe"] + "/" + f_event.s_filename + ".exe.xml"
+                l_log.info(" CDelFromDisk filename [%s]" % ls_exe_path)
+                l_oExeNew.del_from_disk(fs_exe_path=ls_exe_path)
+
+                # remove o exercicio do dicionario de exercicios
+                del self.__dct_exe[f_event.s_filename]
+
     # =============================================================================================
     # data
     # =============================================================================================

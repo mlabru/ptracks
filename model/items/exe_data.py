@@ -50,8 +50,8 @@ import control.events.events_basic as events
 # < module data >----------------------------------------------------------------------------------
 
 # logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
 
 # < class CExeData >-------------------------------------------------------------------------------
 
@@ -119,16 +119,18 @@ class CExeData(dict):
         @param fs_exe_path: pathname do arquivo em disco
         """
         # logger
-        # M_LOG.info("load_file:>>")
+        M_LOG.info("load_file:>>")
 
         # check input parameters
         assert fs_exe_path
+
+        M_LOG.info("load_file:>> File [%s]" % fs_exe_path)
 
         # carrega o arquivo de exercício
         self.parse_exe_xml(fs_exe_path)
 
         # logger
-        # M_LOG.info("load_file:<<")
+        M_LOG.info("load_file:<<")
 
     # ---------------------------------------------------------------------------------------------
     # void (?)
@@ -141,7 +143,7 @@ class CExeData(dict):
         @return flag e mensagem
         """
         # logger
-        # M_LOG.info("make_exe:>>")
+        M_LOG.info("make_exe:>>")
 
         # check input parameters
         assert f_dct_root is not None
@@ -204,6 +206,7 @@ class CExeData(dict):
             l_exe = model.CExeNEW(self.__model, f_dct_data, f_dct_root["VERSION"])
             assert l_exe
 
+            M_LOG.debug("Chave do exercício [%s]" % f_dct_data["nExe"])
             # coloca a exercício no dicionário
             self[f_dct_data["nExe"]] = l_exe
 
@@ -221,7 +224,7 @@ class CExeData(dict):
             return False, ls_msg
 
         # logger
-        # M_LOG.info("make_exe:<<")
+        M_LOG.info("make_exe:<<")
 
         # retorna Ok
         return True, None
@@ -235,7 +238,7 @@ class CExeData(dict):
         @param fs_exe_path: pathname do arquivo em disco
         """
         # logger
-        # M_LOG.info("parse_exe_xml:>>")
+        M_LOG.info("parse_exe_xml:>>")
 
         # check input parameters
         assert fs_exe_path
@@ -250,9 +253,7 @@ class CExeData(dict):
         # erro na abertura do arquivo ?
         if not l_data_file.isOpen():
             # logger
-            l_log = logging.getLogger("CExeData::parse_exe_xml")
-            l_log.setLevel(logging.CRITICAL)
-            l_log.critical(u"<E01: erro na abertura de {}.".format(fs_exe_path))
+            M_LOG.debug(u"<E01: erro na abertura de {}.".format(fs_exe_path))
 
             # cria um evento de quit
             l_evt = events.CQuit()
@@ -274,9 +275,7 @@ class CExeData(dict):
             l_data_file.close()
 
             # logger
-            l_log = logging.getLogger("CExeData::parse_exe_xml")
-            l_log.setLevel(logging.CRITICAL)
-            l_log.critical(u"<E02: falha no parse de {}.".format(fs_exe_path))
+            M_LOG.debug(u"<E02: falha no parse de {}.".format(fs_exe_path))
 
             # cria um evento de quit
             l_evt = events.CQuit()
@@ -341,7 +340,7 @@ class CExeData(dict):
             self.make_exe(ldct_root, ldct_data)
 
         # logger
-        # M_LOG.info("parse_exe_xml:<<")
+        M_LOG.info("parse_exe_xml:<<")
 
     # ---------------------------------------------------------------------------------------------
     # void (?)
@@ -354,7 +353,7 @@ class CExeData(dict):
         @return flag e mensagem
         """
         # logger
-        # M_LOG.info("save2disk:>>")
+        M_LOG.info("save2disk:>>")
 
         # return code
         lv_ok = True
@@ -363,7 +362,7 @@ class CExeData(dict):
         ls_msg = "save Ok"
 
         # logger
-        # M_LOG.info("save2disk:<<")
+        M_LOG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

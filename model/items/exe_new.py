@@ -26,7 +26,10 @@ revision 0.1  2014/nov  mlabru
 initial release (Linux/Python)
 -------------------------------------------------------------------------------------------------
 """
-__version__ = "$revision: 0.2$"
+#
+from __future__ import print_function
+
+loca__version__ = "$revision: 0.2$"
 __author__ = "Milton Abrunhosa"
 __date__ = "2015/11"
 
@@ -34,6 +37,7 @@ __date__ = "2015/11"
 
 # python library
 import logging
+import os
 import sys
 
 # model
@@ -45,8 +49,8 @@ import control.events.events_basic as events
 # < module data >----------------------------------------------------------------------------------
 
 # logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
 
 # < class CExeNEW >--------------------------------------------------------------------------------
 
@@ -197,9 +201,9 @@ class CExeNEW(model.CExeModel):
         @param fdct_data: dicionário com os dados do exercício
         """
         # logger
-        # M_LOG.info("make_exe:>>")
+        M_LOG.info("make_exe:>>")
 
-        # M_LOG.debug("fdct_data: " + str(fdct_data))
+        M_LOG.debug("fdct_data: " + str(fdct_data))
 
         # identificação do exercício
         if "nExe" in fdct_data:
@@ -213,29 +217,116 @@ class CExeNEW(model.CExeModel):
 
         # hora inicial
         if "horainicio" in fdct_data:
-            ls_hora = fdct_data["horainicio"].strip().upper()
-            # M_LOG.debug("ls_hora: " + str(ls_hora))
+            ls_hora = fdct_data["horainicio"].strip()
+            M_LOG.debug("ls_hora: " + str(ls_hora))
 
             li_hor = int(ls_hora[:2])
-            # M_LOG.debug("li_hor: " + str(li_hor))
+            M_LOG.debug("li_hor: " + str(li_hor))
 
             li_min = int(ls_hora[3:])
-            # M_LOG.debug("li_min: " + str(li_min))
+            M_LOG.debug("li_min: " + str(li_min))
 
             # horário inicial (HORA)
             self.__t_exe_hor_ini = (li_hor, li_min, 0)
-            # M_LOG.debug("self.t_exe_hor_ini: " + str(self.__t_exe_hor_ini))
+            M_LOG.debug("self.t_exe_hor_ini: " + str(self.__t_exe_hor_ini))
 
             # horário atual (HORA)
             self.__i_exe_hor_atu = ((li_hor * 60) + li_min) * 60
-            # M_LOG.debug("self.i_exe_hor_atu: " + str(self.__i_exe_hor_atu))
+            M_LOG.debug("self.i_exe_hor_atu: " + str(self.__i_exe_hor_atu))
 
         # status ok
         self.__v_exe_congelado = True
         self.v_exe_ok = True
 
         # logger
-        # M_LOG.info("make_exe:<<")
+        M_LOG.info("make_exe:<<")
+
+    # ---------------------------------------------------------------------------------------------
+    # void (?)
+    def save2disk(self, fs_exe_path=None):
+        """
+        salva os dados da exercício em um arquivo em disco
+
+        @param fs_exe_path: path name do arquivo onde salvar
+
+        @return flag e mensagem
+        """
+        # logger
+        M_LOG.info("save2disk:>>")
+
+        M_LOG.info("save2disk:>> Saving file [%s]" % fs_exe_path)
+
+        M_LOG.debug("save2disk:>> Indicativo [%s]" % self.s_exe_id)
+        M_LOG.debug("save2disk:>> Descricao  [%s]" % self.s_exe_desc)
+        M_LOG.debug("save2disk:>> Hora Inicio [%d:%d]" % (self.__t_exe_hor_ini[0], self.__t_exe_hor_ini[1]))
+
+        l_file = open("%s.exe.xml" % os.path.join(fs_exe_path, self.s_exe_id), 'w')
+
+        print ( "<?xml version='1.0' encoding='UTF-8'?>", file = l_file )
+        print ( "<!DOCTYPE exercicios>", file = l_file )
+        print ( "<exercicios VERSION=\"0001\" CODE=\"1961\" FORMAT=\"NEWTON\">", file = l_file )
+        print ( "", file = l_file )
+        print ( "    <exercicio nExe=\"%s\">" % self.s_exe_id.strip(), file = l_file )
+        print ( "        <descricao>%s</descricao>"   % self.s_exe_desc.strip(), file = l_file )
+        print ( "        <horainicio>%02d:%02d</horainicio>" % (self.__t_exe_hor_ini[0], self.__t_exe_hor_ini[1]), file = l_file )
+        print ( "    </exercicio>", file = l_file )
+        print ( "", file = l_file )
+        print ( "</exercicios>", file = l_file )
+
+        l_file.close ()
+
+        # return code
+        lv_ok = True
+
+        # mensagem
+        ls_msg = "save Ok"
+
+        # logger
+        M_LOG.info("save2disk:<<")
+
+        # retorna flag e mensagem
+        return lv_ok, ls_msg
+
+    # ---------------------------------------------------------------------------------------------
+    # void (?)
+    def del_from_disk(self, fs_exe_path=None):
+        """
+        deleta o arquivo de exercício do disco
+
+        @param fs_exe_path: path name do arquivo a apagar
+
+        @return flag e mensagem
+        """
+        # logger
+        M_LOG.info("del_from_disk:>>")
+
+        M_LOG.info("del_from_disk:>> Deleting file [%s]" % fs_exe_path)
+
+        M_LOG.debug("del_from_disk:>> Indicativo [%s]" % self.s_exe_id)
+        M_LOG.debug("del_from_disk:>> Descricao  [%s]" % self.s_exe_desc)
+        M_LOG.debug("del_from_disk:>> Hora Inicio [%d:%d]" % (self.__t_exe_hor_ini[0], self.__t_exe_hor_ini[1]))
+
+        if os.path.isfile(fs_exe_path):
+            os.remove(fs_exe_path)
+
+            # return code
+            lv_ok = True
+
+            # mensagem
+            ls_msg = "del Ok!"
+
+        else:
+            # return code
+            lv_ok = False
+
+            # mensagem
+            ls_msg = "del failed!"
+
+        # logger
+        M_LOG.info("del_from_disk:<<")
+
+        # retorna flag e mensagem
+        return lv_ok, ls_msg
 
     # =============================================================================================
     # data

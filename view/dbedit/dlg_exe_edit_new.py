@@ -30,6 +30,7 @@ __date__ = "2014/11"
 # < imports >------------------------------------------------------------------------------------
 
 # python library
+import logging
 import os
 
 # PyQt library
@@ -67,12 +68,16 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         # salva o control manager localmente
         self._control = f_control
 
+        # salve o model manager localmente
+        self._model = f_control.model
+        assert (self._model)
+
         # obtém o gerente de configuração
-        self._config = f_control.oConfig
+        self._config = f_control.config
         assert (self._config)
 
         # obtém o dicionário de configuração
-        self._dctConfig = self._config.dctConfig
+        self._dctConfig = self._config.dct_config
         assert (self._dctConfig)
 
         # salva a parent window localmente
@@ -88,10 +93,19 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         self.setupUi(self)
 
         # configura título da dialog
-        self.setWindowTitle(u"Edição de Exercício")
+        if self._oExe:
+            self.setWindowTitle(self.tr(u"Edição de Exercício"))
+            self.qleInd.setReadOnly(True)
+        else:
+            self.setWindowTitle(self.tr(u"Novo Exercício"))
+            self.qleInd.setReadOnly(False)
 
         # atualiza na tela os dados do exercício
         self.updateExeData()
+
+        # configura botões
+        self.btnCancel.setText("&Cancela")
+        self.btnOk.setFocus()
 
         # configurações de conexões slot/signal
         self.configConnects()
@@ -102,18 +116,15 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         # restaura as configurações da janela de edição
         self.restoreSettings()
 
-        # configura botões
-        self.bbxEditExe.button(QtGui.QDialogButtonBox.Cancel).setText("&Cancela")
-        self.bbxEditExe.button(QtGui.QDialogButtonBox.Ok).setFocus()
-
-        # força uma passgem pela edição de chave
-        self.on_qleInd_textEdited(QtCore.QString())
-
     # -------------------------------------------------------------------------------------------
     def accept(self):
         """
         DOCUMENT ME!
         """
+        l_log = logging.getLogger("CDlgExeEditNEW::accept")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug(" Accept editing data ...")
+
         # exercício existe ?
         if (self._oExe is not None):
             # salva edição do exercício
@@ -138,56 +149,64 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         # identificação
 
         # indicativo
-        l_sInd = str(self.qleInd.text()).strip().upper()
+        l_sInd = str(self.qleInd.text()).strip()
 
-        if (self._oExe._sInd != l_sInd):
-            l_dctAlt["Ind"] = l_sInd
+        if (self._oExe.s_exe_id != l_sInd):
+            l_dctAlt["nExe"] = l_sInd
 
         # descrição
         l_sDsc = str(self.qleDsc.text()).strip()
 
-        if (self._oExe._sDsc != l_sDsc):
-            l_dctAlt["Dsc"] = l_sDsc
+        if (self._oExe.s_exe_desc != l_sDsc):
+            l_dctAlt["descricao"] = l_sDsc
+
+        # hora de inicio do exercicio
+        l_iHor = int(self.qsbGrlIniHor.text())
+        l_iMin = int(self.qsbGrlIniMin.text())
+
+        if (self._oExe.t_exe_hor_ini[0] != l_iHor or self._oExe.t_exe_hor_ini[1] != l_iMin):
+            l_sHorIni = '{:0>2}'.format(str(l_iHor)) + ":" + '{:0>2}'.format(str(l_iMin))
+            l_dctAlt["horainicio"] = l_sHorIni
 
         # área
 
         # comprimento
-        l_fComp = self.qsbComp.value()
+        #l_fComp = self.qsbComp.value()
 
-        if (self._oExe._fComp != l_fComp):
-            l_dctAlt["Comp"] = l_fComp
+        #if (self._oExe._fComp != l_fComp):
+        #    l_dctAlt["Comp"] = l_fComp
 
         # largura
-        l_fLarg = self.qsbLarg.value()
+        #l_fLarg = self.qsbLarg.value()
 
-        if (self._oExe._fLarg != l_fLarg):
-            l_dctAlt["Larg"] = l_fLarg
+        #if (self._oExe._fLarg != l_fLarg):
+        #    l_dctAlt["Larg"] = l_fLarg
 
         # altitude
-        l_uiAlt = self.qsbAlt.value()
+        #l_uiAlt = self.qsbAlt.value()
 
-        if (self._oExe._uiAlt != l_uiAlt):
-            l_dctAlt["Alt"] = l_uiAlt
+        #if (self._oExe._uiAlt != l_uiAlt):
+        #    l_dctAlt["Alt"] = l_uiAlt
 
         # centro
-        l_fCentroX = self.qsbCentroX.value()
-        l_fCentroY = self.qsbCentroY.value()
+        #l_fCentroX = self.qsbCentroX.value()
+        #l_fCentroY = self.qsbCentroY.value()
 
-        if ((self._oExe._oCentro.getPto()[0] != l_fCentroX) or
-                (self._oExe._oCentro.getPto()[1] != l_fCentroY)):
-            l_dctAlt["Centro"] = (l_fCentroX, l_fCentroY)
+        #if ((self._oExe._oCentro.getPto()[0] != l_fCentroX) or
+        #        (self._oExe._oCentro.getPto()[1] != l_fCentroY)):
+        #    l_dctAlt["Centro"] = (l_fCentroX, l_fCentroY)
 
         # diferença de declinação magnética
-        l_iDifDecl = self.qsbDifDecl.value()
+        #l_iDifDecl = self.qsbDifDecl.value()
 
-        if (self._oExe._iDifDecl != l_iDifDecl):
-            l_dctAlt["DifDecl"] = l_iDifDecl
+        #if (self._oExe._iDifDecl != l_iDifDecl):
+        #    l_dctAlt["DifDecl"] = l_iDifDecl
 
         # lista de aeronaves do exercício
         # self._oFigTab = None #self.qwtTabAnv.getAnvTab ()
 
         # atualiza o exercício
-        self._oExe.updateExe(l_dctAlt)
+        self._oExe.load_exe(l_dctAlt)
 
     # -------------------------------------------------------------------------------------------
     def acceptNew(self):
@@ -195,43 +214,54 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         DOCUMENT ME!
         """
         # cria um novo exercício
-        self._oExe = clsExe.clsExe()
+        self._oExe = clsExe.CExeNEW(self._model)
         assert (self._oExe)
+
+        # dicionário do novo exercicio
+        l_dctNew = {}
 
         # identificação
 
         # indicativo
-        l_sInd = str(self.qleInd.text()).strip().upper()
+        l_dctNew["nExe"] = str(self.qleInd.text()).strip()
 
         # descrição
-        l_sDsc = str(self.qleDsc.text()).strip()
+        l_dctNew["descricao"] = str(unicode(self.qleDsc.text())).strip()
+
+        # hora de inicio do exercicio
+        l_iHor = int(self.qsbGrlIniHor.text())
+        l_iMin = int(self.qsbGrlIniMin.text())
+        l_sHorIni = '{:0>2}'.format(str(l_iHor)) + ":" + '{:0>2}'.format(str(l_iMin))
+        l_dctNew["horainicio"] = l_sHorIni
 
         # geografia
 
         # comprimento
-        l_fComp = self.qsbComp.value()
+        #l_fComp = self.qsbComp.value()
 
         # largura
-        l_fLarg = self.qsbLarg.value()
+        #l_fLarg = self.qsbLarg.value()
 
         # altitude
-        l_uiAlt = self.qsbAlt.value()
+        #l_uiAlt = self.qsbAlt.value()
 
         # centro
-        l_fCentroX = self.qsbCentroX.value()
-        l_fCentroY = self.qsbCentroY.value()
+        #l_fCentroX = self.qsbCentroX.value()
+        #l_fCentroY = self.qsbCentroY.value()
 
         # diferença de declinação magnética
-        l_iDifDecl = self.qsbDifDecl.value()
+        #l_iDifDecl = self.qsbDifDecl.value()
 
         # atualiza o pathname
-        if (self._sPN is not None):
-            self._oExe._sPN = self._sPN
+        #if (self._sPN is not None):
+        #    self._oExe._sPN = self._sPN
 
         # atualiza o exercício
-        self._oExe.updateExe0211([None, l_sInd, l_sDsc,
-                                  l_fComp, l_fLarg, l_uiAlt,
-                                  (l_fCentroX, l_fCentroY), l_iDifDecl])  # , self._oFigTab )
+        #self._oExe.updateExe0211([None, l_sInd, l_sDsc,
+        #                          l_fComp, l_fLarg, l_uiAlt,
+        #                          (l_fCentroX, l_fCentroY), l_iDifDecl])  # , self._oFigTab )
+        # cria o novo exercício
+        self._oExe.make_exe(l_dctNew)
 
     # -------------------------------------------------------------------------------------------
     def configConnects(self):
@@ -239,19 +269,20 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         configura as conexões slot/signal
         """
         # conecta botão Ok da edição de exercício
-        self.connect(self.bbxEditExe,
-                     QtCore.SIGNAL("accepted()"),
+        self.connect(self.btnOk,
+                     QtCore.SIGNAL("clicked()"),
                      self.accept)
 
         # conecta botão Cancela da edição de exercício
-        self.connect(self.bbxEditExe,
-                     QtCore.SIGNAL("rejected()"),
+        self.connect(self.btnCancel,
+                     QtCore.SIGNAL("clicked()"),
                      self.reject)
 
         # conect fim de edição da chave
-        self.connect(self.qleInd,
-                     QtCore.SIGNAL("editingFinished()"),
-                     self.editingFinished)
+        if self.qleInd.isReadOnly() is False:
+            self.connect(self.qleInd,
+                         QtCore.SIGNAL("editingFinished()"),
+                         self.editingFinished)
 
     # -------------------------------------------------------------------------------------------
     def configTexts(self):
@@ -264,33 +295,24 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
     # -------------------------------------------------------------------------------------------
     def editingFinished(self):
         """
-        DOCUMENT ME!
+        Verifica se o indicativo do exercício já existe.
         """
+        l_log = logging.getLogger("CDlgExeEditNEW::editingFinished")
+        l_log.setLevel(logging.DEBUG)
+
+        if self.btnCancel.hasFocus():
+            l_log.debug(" Cancellation of data editing")
+            return
+
         # obtém a chave digitada
-#       l_sInd = str ( self.qleInd.text ()).strip ().upper ()
+        l_sInd = str ( self.qleInd.text()).strip()
+        l_log.debug(" Data retrieve [%s]" % l_sInd)
 
-        # checa se digitou uma chave válida para o exercício
-#       l_bEnable = ( l_sInd != "" )
-
-        # habilita / desabilita os botões
-#       self.bbxEditExe.button ( QtGui.QDialogButtonBox.Ok ).setEnabled ( l_bEnable )
-
-        # remoção de aeronave
-#       self.btnDel.setEnabled ( l_bEnable )
-
-        # edição de aeronave
-#       self.btnEdit.setEnabled ( l_bEnable )
-
-        # inserção de aeronave
-#       self.btnNew.setEnabled ( l_bEnable )
-
-        # checa se digitou uma chave válida para o exercício
-#       if ( l_bEnable ):
-            # salva o pathname do arquivo de exercício
-#           self._sPN = os.path.join ( self._cfgs [ "dir.exe" ], l_sInd + ".xrc" )
-
-            # salva o pathname da tabela de aeronaves do exercício
-#           self._sTabPath = os.path.join ( self._cfgs [ "dir.anv" ], l_sInd + ".anv" )
+        if l_sInd in self._model.dct_exe:
+            l_log.debug("Key already exists [%s]" % l_sInd)
+            QtGui.QMessageBox.warning(self, self.tr("Erro"),
+                                      self.tr(u"Indicativo já existe!"))
+            self.qleInd.setFocus()
 
     # -------------------------------------------------------------------------------------------
     def getData(self):
@@ -305,6 +327,9 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         """
         DOCUMENT ME!
         """
+        l_log = logging.getLogger("CDlgExeEditNEW::reject")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug(" Set object exe to None ...")
         self._oExe = None
 
         # faz o "reject"
@@ -333,28 +358,31 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
         # exercício existe ?
         if (self._oExe is not None):
             # identificação
-            self.qleInd.setText(self._oExe._sInd)
-            self.qleDsc.setText(self._oExe._sDsc)
+            self.qleInd.setText(self._oExe.s_exe_id)
+            self.qleDsc.setText(self._oExe.s_exe_desc)
+
+            self.qsbGrlIniHor.setValue(self._oExe.t_exe_hor_ini[0])
+            self.qsbGrlIniMin.setValue(self._oExe.t_exe_hor_ini[1])
 
             # área
 
             # comprimento
-            self.qsbComp.setValue(self._oExe._fComp)
+            #self.qsbComp.setValue(self._oExe._fComp)
 
             # largura
-            self.qsbLarg.setValue(self._oExe._fLarg)
+            #self.qsbLarg.setValue(self._oExe._fLarg)
 
             # diferença de declinação magnética
-            self.qsbDifDecl.setValue(self._oExe._iDifDecl)
+            #self.qsbDifDecl.setValue(self._oExe._iDifDecl)
 
             # centro
-            (l_iX, l_iY) = self._oExe._oCentro.getPto()
+            #(l_iX, l_iY) = self._oExe._oCentro.getPto()
 
-            self.qsbCentroX.setValue(l_iX)
-            self.qsbCentroY.setValue(l_iY)
+            #self.qsbCentroX.setValue(l_iX)
+            #self.qsbCentroY.setValue(l_iY)
 
             # altitude
-            self.qsbAlt.setValue(self._oExe._uiAlt)
+            #self.qsbAlt.setValue(self._oExe._uiAlt)
 
         # senão, é um novo exercício
         else:
@@ -370,12 +398,12 @@ class CDlgExeEditNEW (QtGui.QDialog, CDlgExeEditNEW_ui.Ui_CDlgExeEditNEW):
     # ===========================================================================================
 
     # -------------------------------------------------------------------------------------------
-    @QtCore.pyqtSignature("QString")
-    def on_qleInd_textEdited(self, f_qszVal):
-        """
-        DOCUMENT ME!
-        """
+    #@QtCore.pyqtSignature("QString")
+    #def on_qleInd_textEdited(self, f_qszVal):
+    #    """
+    #    DOCUMENT ME!
+    #    """
         # habilita / desabilita os botões
-        self.bbxEditExe.button(QtGui.QDialogButtonBox.Ok).setEnabled(not self.qleInd.text().isEmpty())
+        #self.bbxEditExe.button(QtGui.QDialogButtonBox.Ok).setEnabled(not self.qleInd.text().isEmpty())
 
 # < the end >--------------------------------------------------------------------------------------

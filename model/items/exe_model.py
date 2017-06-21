@@ -115,7 +115,7 @@ class CExeModel(object):
         """
         set ID do exercício
         """
-        self.__s_exe_id = f_val.strip().upper()
+        self.__s_exe_id = f_val.strip()
 
     # ---------------------------------------------------------------------------------------------
     @property

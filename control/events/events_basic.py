@@ -126,6 +126,49 @@ class CQuit(model.CEventsModel):
         # event name
         self.s_name = "Program Quit event"
 
+# < class CUpd2Disk >-----------------------------------------------------------------------------
+
+class CUpd2Disk(model.CEventsModel):
+    """
+    program delete from disk event class
+    """
+    # ---------------------------------------------------------------------------------------------
+    def __init__(self, fs_table, fs_filename):
+        """
+        constructor
+        """
+        # init super class
+        super(CUpd2Disk, self).__init__()
+
+        # herdados de CEventsModel
+        # self.s_name    # event name
+
+        # event name
+        self.s_name = "Program Upd2Disk event"
+
+        # save table name
+        self.__s_table = fs_table
+
+        # save filename
+        self.__s_filename = fs_filename
+
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_table(self):
+        """
+        get table name
+        """
+        return self.__s_table
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_filename(self):
+        """
+        get filename
+        """
+        return self.__s_filename
+
 # < class CSave2Disk >-----------------------------------------------------------------------------
 
 class CSave2Disk(model.CEventsModel):
@@ -156,6 +199,49 @@ class CSave2Disk(model.CEventsModel):
         get table name
         """
         return self.__s_table
+
+# < class CDelFromDisk >-----------------------------------------------------------------------------
+
+class CDelFromDisk(model.CEventsModel):
+    """
+    program delete from disk event class
+    """
+    # ---------------------------------------------------------------------------------------------
+    def __init__(self, fs_table, fs_filename):
+        """
+        constructor
+        """
+        # init super class
+        super(CDelFromDisk, self).__init__()
+
+        # herdados de CEventsModel
+        # self.s_name    # event name
+
+        # event name
+        self.s_name = "Program DelFromDisk event"
+
+        # save table name
+        self.__s_table = fs_table
+
+        # save filename
+        self.__s_filename = fs_filename
+
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_table(self):
+        """
+        get table name
+        """
+        return self.__s_table
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_filename(self):
+        """
+        get filename
+        """
+        return self.__s_filename
 
 # < class CStart >--------------------------------------------------------------------------------
 
