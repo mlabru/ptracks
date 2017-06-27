@@ -84,7 +84,7 @@ class CAirspaceBasic(object):
     # ---------------------------------------------------------------------------------------------
     def __load_dicts(self):
         """
-        DOCUMENT ME!
+        carrega os dicionários
         """
         # monta o nome da tabela de fixos
         ls_path = os.path.join(self.dct_config["dir.tab"], self.dct_config["tab.fix"])
@@ -92,6 +92,16 @@ class CAirspaceBasic(object):
         # carrega a tabela de fixos em um dicionário
         self.dct_fix = fixdata.CFixData(self.model, ls_path)
         assert self.dct_fix is not None
+
+        # monta o nome da tabela de waypoints
+        ls_path = os.path.join(self.dct_config["dir.tab"], self.dct_config["tab.wpt"])
+
+        # carrega a tabela de waypoints em um dicionário
+        ldct_wpt = fixdata.CFixData(self.model, ls_path)
+        assert ldct_wpt is not None
+
+        # coloca os waypoints no dicionário de fixos
+        self.dct_fix.update(ldct_wpt) 
 
         # salva referência da tabela de fixos no sistema de coordenadas
         self.model.coords.dct_fix = self.dct_fix

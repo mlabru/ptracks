@@ -161,6 +161,9 @@ D_TBL_SUB = "tabSub"
 # tabela de procedimentos de trajetória
 D_TBL_TRJ = "tabTrj"
 
+# tabela de waypoints
+D_TBL_WPT = "tabWpt"
+
 # colour table
 D_TBL_COLOUR = "tabColor.dat"
 

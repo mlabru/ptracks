@@ -146,7 +146,7 @@
   </fixo>
 
   <fixo nFix="ANP">
-    <descricao>ANAPOLIS_N</descricao>
+    <descricao>ANAPOLIS</descricao>
     <tipo>N</tipo>
     <frequencia>415.0</frequencia>
     <coord>
@@ -2403,7 +2403,7 @@
   <fixo nFix="PIR">
     <descricao>PIRASSUNUNGA</descricao>
     <tipo>V</tipo>
-    <frequencia>113.3</frequencia>
+    <frequencia>115.8</frequencia>
     <coord>
       <tipo>L</tipo>
       <cpoA>-21.984500</cpoA>
@@ -2854,7 +2854,7 @@
   <fixo nFix="SCP">
     <descricao>SCP</descricao>
     <tipo>V</tipo>
-    <frequencia>112.8</frequencia>
+    <frequencia>115.4</frequencia>
     <coord>
       <tipo>L</tipo>
       <cpoA>-23.246333</cpoA>
@@ -3629,6 +3629,328 @@
       <tipo>L</tipo>
       <cpoA>-29.838000</cpoA>
       <cpoB>-53.671667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ANDOR">
+    <descricao>ANDOR</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2345.720S</cpoA>
+      <cpoB>04723.080W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ANISE">
+    <descricao>ANISE</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2436.130S</cpoA>
+      <cpoB>04637.520W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CAST">
+    <descricao>CAST</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2328.320S</cpoA>
+      <cpoB>04636.590W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="COCHO">
+    <descricao>COCHO</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>1551.650S</cpoA>
+      <cpoB>04753.120W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ILTAB">
+    <descricao>ILTAB</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2325.060S</cpoA>
+      <cpoB>04523.230W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IMBID">
+    <descricao>IMBID</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2335.010S</cpoA>
+      <cpoB>04609.500W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IS">
+    <descricao>MADA</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2332.690S</cpoA>
+      <cpoB>04642.760W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="KELY">
+    <descricao>KELY</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2346.030S</cpoA>
+      <cpoB>04633.500W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="KEVUN">
+    <descricao>KEVUN</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2327.780S</cpoA>
+      <cpoB>04457.100W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="KOTRU">
+    <descricao>KOTRU</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2209.950S</cpoA>
+      <cpoB>04708.360W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LOPES">
+    <descricao>LOPES</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2327.710S</cpoA>
+      <cpoB>04554.860W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MILIL">
+    <descricao>MILIL</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.116933</cpoA>
+      <cpoB>-46.420483</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MOSRA">
+    <descricao>MOSRA</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2339.930S</cpoA>
+      <cpoB>04627.320W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MOXEP">
+    <descricao>MOXEP</descricao>
+    <tipo>D</tipo>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2224.780S</cpoA>
+      <cpoB>04617.340W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MULOD">
+    <descricao>MULOD</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2302.240S</cpoA>
+      <cpoB>04453.310W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MUMOP">
+    <descricao>MUMOP</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2338.220S</cpoA>
+      <cpoB>04516.010W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NADI">
+    <descricao>NADI</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2344.240S</cpoA>
+      <cpoB>04634.740W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NIMPU">
+    <descricao>NIMPU</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2126.810S</cpoA>
+      <cpoB>04714.930W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NITBU">
+    <descricao>NITBU</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>1851.560S</cpoA>
+      <cpoB>04711.870W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="OPREV">
+    <descricao>OPREV</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2315.870S</cpoA>
+      <cpoB>04507.140W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="OPSIT">
+    <descricao>OPSIT</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2334.660S</cpoA>
+      <cpoB>04641.420W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PERLA">
+    <descricao>PERLA</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-14.649</cpoA>
+      <cpoB>-44.1065</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PORNA">
+    <descricao>PORNA</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2332.370S</cpoA>
+      <cpoB>04415.550W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SEKTI">
+    <descricao>SEKTI</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2346.360S</cpoA>
+      <cpoB>04555.980W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SIDOL">
+    <descricao>SIDOL</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.0685</cpoA>
+      <cpoB>-44.343167</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SOTPI">
+    <descricao>SOTPI</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2314.730S</cpoA>
+      <cpoB>04537.580W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SUNBU">
+    <descricao>SUNBU</descricao>
+    <tipo>D</tipo>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2258.740S</cpoA>
+      <cpoB>04559.660W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TESIX">
+    <descricao>TESIX</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2326.240S</cpoA>
+      <cpoB>04538.120W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TUCA">
+    <descricao>TUCA</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2327.730S</cpoA>
+      <cpoB>04634.400W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="UGTEV">
+    <descricao>UGTEV</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2318.140S</cpoA>
+      <cpoB>04532.850W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="UTMUR">
+    <descricao>UTMUR</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2416.880S</cpoA>
+      <cpoB>04611.310W</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VUMEV">
+    <descricao>VUMEV</descricao>
+    <tipo>D</tipo>
+    <coord>
+      <tipo>G</tipo>
+      <cpoA>2253.210S</cpoA>
+      <cpoB>04558.640W</cpoB>
     </coord>
   </fixo>
 

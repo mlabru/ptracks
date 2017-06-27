@@ -93,6 +93,7 @@ class CConfigManager(object):
                     "tab.aer": gdefs.D_TBL_AER,      # tabela de aeródromos
                     "tab.fix": gdefs.D_TBL_FIX,      # tabela de fixos
                     "tab.prf": gdefs.D_TBL_PRF,      # tabela de performances
+                    "tab.wpt": gdefs.D_TBL_WPT,      # tabela de waypoints
 
                     "tab.apx": gdefs.D_TBL_APX,      # tabela de procedimentos de aproximação
                     "tab.esp": gdefs.D_TBL_ESP,      # tabela de procedimentos de espera
