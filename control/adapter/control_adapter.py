@@ -169,7 +169,7 @@ class CControlAdapter(control.CControlManager):
         assert fq_rcv_cnfg
 
         # temporização de eventos
-        lf_tim_rrbn = self.config.dct_config["tim.rrbn"]
+        lf_tim_rrbn = float(self.config.dct_config["tim.rrbn"])
 
         # obtém o tempo inicial em segundos
         lf_now = time.time()
@@ -221,7 +221,7 @@ class CControlAdapter(control.CControlManager):
         assert fq_rcv_trks
 
         # temporização de eventos
-        lf_tim_core = self.config.dct_config["tim.core"]
+        lf_tim_core = float(self.config.dct_config["tim.core"])
 
         # obtém o tempo inicial em segundos
         lf_now = time.time()
