@@ -26,6 +26,8 @@ revision 0.1  2014/nov  mlabru
 initial release (Linux/Python)
 ---------------------------------------------------------------------------------------------------
 """
+from __future__ import print_function
+
 __version__ = "$revision: 0.2$"
 __author__ = "Milton Abrunhosa"
 __date__ = "2015/11"
@@ -34,10 +36,14 @@ __date__ = "2015/11"
 
 # python library
 import logging
+import os
 import sys
 
 # PyQt library
 from PyQt4 import QtCore, QtXml
+
+# libs
+import libs.coords.coord_defs as cdefs
 
 # model
 import model.items.trf_new as model
@@ -49,8 +55,8 @@ import control.events.events_basic as events
 # < module data >----------------------------------------------------------------------------------
 
 # logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
 
 # < class CTrfData >-------------------------------------------------------------------------------
 
@@ -251,14 +257,15 @@ class CTrfData(dict):
             l_log.critical(u"<E01: erro na abertura de {}.".format(fs_trf_pn))
 
             # cria um evento de quit
-            l_evt = events.CQuit()
-            assert l_evt
+            #l_evt = events.CQuit()
+            #assert l_evt
 
             # dissemina o evento
-            self.__event.post(l_evt)
+            #self.__event.post(l_evt)
 
             # termina a aplicação
-            sys.exit(1)
+            #sys.exit(1)
+            return
 
         # cria o documento XML do tráfego
         l_xdoc_trf = QtXml.QDomDocument("trafegos")
@@ -341,11 +348,100 @@ class CTrfData(dict):
 
         @return flag e mensagem
         """
+        # logger
+        M_LOG.info("save2disk:>>")
+
+        M_LOG.debug(" Exercicio [%s]" % self.__exe.s_exe_id)
+        M_LOG.debug(" Quantidade de tráfegos [%s]" % len(self.__exe.dct_exe_trf))
+        ls_File = os.path.join(fs_trf_pn, self.__exe.s_exe_id)
+        M_LOG.debug(" Arquivo [%s.trf.xml]" %ls_File)
+
+        l_file = open("%s.trf.xml" % ls_File, 'w')
+
+        print ( "<?xml version='1.0' encoding='UTF-8'?>", file = l_file )
+        print ( "<!DOCTYPE trafegos>", file = l_file )
+        print ( "<trafegos VERSION=\"0001\" CODE=\"1961\" FORMAT=\"NEWTON\">", file = l_file )
+        print ( "", file = l_file )
+
+        for li_nTrf, l_oTrfNew in self.__exe.dct_exe_trf.items():
+            print ( "    <trafego nTrf=\"%s\">" % str(li_nTrf), file = l_file )
+            print ( "        <designador>%s</designador>" % l_oTrfNew.ptr_trf_prf.s_prf_id, file = l_file )
+            print ( "        <ssr>%s</ssr>" % str(l_oTrfNew.i_trf_ssr).zfill(4), file = l_file )
+            print ( "        <indicativo>%s</indicativo>" % l_oTrfNew.s_trf_ind, file = l_file )
+            print ( "        <origem>%s</origem>" % l_oTrfNew.ptr_trf_aer_ori.s_aer_indc, file = l_file )
+            print ( "        <destino>%s</destino>" % l_oTrfNew.ptr_trf_aer_dst.s_aer_indc, file = l_file )
+            # converte o tempo do tráfego em minutos
+            li_HorIni, li_MinIni, li_SegIni = self.__exe.t_exe_hor_ini
+            li_MinIni = li_MinIni + (li_HorIni * 60) + (li_SegIni / 60)
+            li_Hor, li_Min, li_Seg = l_oTrfNew.t_trf_hor_atv
+            li_Min = li_Min + (li_Hor * 60) + (li_Seg / 60)
+            print ( "        <temptrafego>%s</temptrafego>" % str(li_Min - li_MinIni), file = l_file )
+            print ( "        <coord>", file = l_file )
+            print ( "            <tipo>L</tipo>", file = l_file )
+            print ( "            <cpoA>%s</cpoA>" % str(l_oTrfNew.f_trf_lat), file = l_file )
+            print ( "            <cpoB>%s</cpoB>" % str(l_oTrfNew.f_trf_lng), file = l_file )
+            print ( "        </coord>", file = l_file)
+            # converte a velocidade de m/s para kt
+            li_VelKt = int(l_oTrfNew.f_trf_vel_atu * cdefs.D_CNV_MS2KT)
+            print ( "        <velocidade>%d</velocidade>" % li_VelKt, file = l_file )
+            # converte a altitude de m para ft
+            lf_AltFt = l_oTrfNew.f_trf_alt_atu * cdefs.D_CNV_M2FT
+            li_AltFt = int(lf_AltFt)
+            if (lf_AltFt - li_AltFt) > 0.5:
+                li_AltFt = li_AltFt + 1
+            print ( "        <altitude>%d</altitude>" % li_AltFt, file = l_file )
+            print ( "        <proa>%d</proa>" % int(l_oTrfNew.f_trf_pro_atu), file = l_file )
+            print ( "        <procedimento>%s</procedimento>" % l_oTrfNew.s_trf_prc, file = l_file )
+            print ( "    </trafego>", file = l_file )
+            print ( "", file = l_file )
+
+        print ( "</trafegos>", file = l_file )
+
+        l_file.close ()
+
         # return code
         lv_ok = True
 
         # mensagem
         ls_msg = "save ok"
+
+        M_LOG.info("save2disk:<<")
+
+        # retorna flag e mensagem
+        return lv_ok, ls_msg
+
+    # ---------------------------------------------------------------------------------------------
+    # void (?)
+    def del_from_disk(self, fs_trf_path=None):
+        """
+        deleta o arquivo de tráfegos do exercício do disco
+
+        @param fs_trf_path: path name do arquivo a apagar
+
+        @return flag e mensagem
+        """
+        # logger
+        M_LOG.info("del_from_disk:>>")
+        M_LOG.info("del_from_disk:>> Deleting file [%s]" % fs_trf_path)
+
+        if os.path.isfile(fs_trf_path):
+            os.remove(fs_trf_path)
+
+            # return code
+            lv_ok = True
+
+            # mensagem
+            ls_msg = "del Ok!"
+
+        else:
+            # return code
+            lv_ok = False
+
+            # mensagem
+            ls_msg = "del failed!"
+
+        # logger
+        M_LOG.info("del_from_disk:<< [%s]" % ls_msg)
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

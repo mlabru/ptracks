@@ -52,6 +52,9 @@ import model.items.trj_data as trjdata
 
 import model.newton.defs_newton as ldefs
 
+#M_LOG = logging.getLogger(__name__)
+#M_LOG.setLevel(logging.DEBUG)
+
 # < class CAirspaceNewton >-------------------------------------------------------------------------
 
 class CAirspaceNewton(airs.CAirspaceBasic):
@@ -132,16 +135,20 @@ class CAirspaceNewton(airs.CAirspaceBasic):
 
         @return pointer e função operacional
         """
+        # logger
+        #M_LOG.info("get_ptr_prc:>>")
+
         # não existe procedimento ?
-        if fs_prc is None:
+        if fs_prc is None or 4 > len(fs_prc):
             # logger
             l_log = logging.getLogger("CAirspaceNewton::get_ptr_prc")
             l_log.setLevel(logging.ERROR)
-            l_log.error(u"<E01: não existe procedimento.")
+            l_log.error(u"<E01: não existe procedimento [%s]." % fs_prc)
 
             # retorna pointer & função
             return None, ldefs.E_NOPROC
 
+        #M_LOG.debug("procedimento : [%s]" % fs_prc)
         # obtém o procedimento
         ls_prc = fs_prc[:3]
 
@@ -209,6 +216,9 @@ class CAirspaceNewton(airs.CAirspaceBasic):
             l_log = logging.getLogger("CAirspaceNewton::get_ptr_prc")
             l_log.setLevel(logging.ERROR)
             l_log.error(u"<E03: função operacional:[{}] sem procedimento:[{}].".format(ls_prc, li_num_prc))
+
+        # logger
+        #M_LOG.info("get_ptr_prc:<<")
 
         # retorna pointer & função
         return lptr_prc, le_fnc_ope

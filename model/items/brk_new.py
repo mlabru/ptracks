@@ -48,8 +48,8 @@ import control.events.events_basic as events
 # < module data >----------------------------------------------------------------------------------
 
 # logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
 
 # < class CBrkNEW >--------------------------------------------------------------------------------
 
@@ -98,6 +98,17 @@ class CBrkNEW(model.CBrkModel):
         # self.f_brk_y     # y (m)
         # self.f_brk_z     # z (m)
 
+        # tipo de coordenada
+        self.__s_brk_tipo = ""
+        # campo A
+        self.__s_brk_cpoA = ""
+        # campo B
+        self.__s_brk_cpoB = ""
+        # campo C
+        self.__s_brk_cpoC = ""
+        # campo D
+        self.__s_brk_cpoD = ""
+
         # latitude (gr)
         self.__f_brk_lat = 0.
         # longitude (gr)
@@ -109,6 +120,8 @@ class CBrkNEW(model.CBrkModel):
         self.__f_brk_alt = 0.
         # velocidade
         self.__f_brk_vel = 0.
+        # nome do procedimento
+        self.__s_brk_prc = ""
 
         # razão de descida/subida
         self.__f_brk_raz_vel = 0.
@@ -168,6 +181,17 @@ class CBrkNEW(model.CBrkModel):
         # copy super class attributes
         super(CBrkNEW, self).copy_brk(f_brk)
 
+        # tipo de coordenada
+        self.__s_brk_tipo = f_brk.s_brk_tipo
+        # campo A
+        self.__s_brk_cpoA = f_brk.s_brk_cpoA
+        # campo B
+        self.__s_brk_cpoA = f_brk.s_brk_cpoA
+        # campo C
+        self.__s_brk_cpoA = f_brk.s_brk_cpoA
+        # campo D
+        self.__s_brk_cpoA = f_brk.s_brk_cpoA
+
         # latitude (gr)
         self.__f_brk_lat = f_brk.f_brk_lat
         # longitude (gr)
@@ -177,6 +201,8 @@ class CBrkNEW(model.CBrkModel):
         self.__f_brk_alt = f_brk.f_brk_alt
         # velocidade (m/s)
         self.__f_brk_vel = f_brk.f_brk_vel
+        # nome do procedimento
+        self.__s_brk_prc = f_brk.s_brk_prc
 
         # razão de descida/subida
         self.__f_brk_raz_vel = f_brk.f_brk_raz_vel
@@ -241,7 +267,7 @@ class CBrkNEW(model.CBrkModel):
         @param fdct_data: dicionário com os dados do breakpoint
         """
         # logger
-        # M_LOG.info("make_brk:>>")
+        M_LOG.info("make_brk:>>")
 
         # identificação do breakpoint
         if "nBrk" in fdct_data:
@@ -256,11 +282,17 @@ class CBrkNEW(model.CBrkModel):
             # converte para xyz
             self.f_brk_x, self.f_brk_y, self.f_brk_z = self.__model.coords.geo2xyz(self.__f_brk_lat, self.__f_brk_lng, 0.)
             # M_LOG.debug("make_brk::brk_x:[{}] brk_y:[{}] brk_z:[{}]"format(self.f_brk_x, self.f_brk_y, self.f_brk_z))
+            ldct_coord = fdct_data["coord"]
+            self.__s_brk_tipo = ldct_coord.get("tipo", "")
+            self.__s_brk_cpoA = ldct_coord.get("cpoA", "")
+            self.__s_brk_cpoB = ldct_coord.get("cpoB", "")
+            self.__s_brk_cpoC = ldct_coord.get("cpoC", "")
+            self.__s_brk_cpoD = ldct_coord.get("cpoD", "")
 
         # altitude
         if "altitude" in fdct_data:
             self.__f_brk_alt = float(fdct_data["altitude"]) * cdefs.D_CNV_FT2M
-            # M_LOG.debug("make_brk::self.__f_brk_alt: " + str(self.__f_brk_alt))
+            M_LOG.debug("make_brk::self.__f_brk_alt: " + str(self.__f_brk_alt))
 
         # velocidade
         if "velocidade" in fdct_data:
@@ -279,14 +311,17 @@ class CBrkNEW(model.CBrkModel):
 
         # procedimento
         if "procedimento" in fdct_data:
+            M_LOG.debug("make_brk::procedimento: " )
             self.__ptr_brk_prc = str(fdct_data["procedimento"]).strip().upper()
-            # M_LOG.debug("make_brk::self.__ptr_brk_prc: " + str(self.__ptr_brk_prc))
+            self.__s_brk_prc = str(fdct_data["procedimento"]).strip().upper()
+            M_LOG.debug("make_brk::self.__s_brk_prc: " + self.__s_brk_prc)
+            M_LOG.debug("make_brk::self.__ptr_brk_prc: " + str(self.__ptr_brk_prc))
 
         # (bool)
         self.v_brk_ok = True
 
         # logger
-        # M_LOG.info("make_brk:<<")
+        M_LOG.info("make_brk:<<")
 
     # =============================================================================================
     # data
@@ -426,5 +461,118 @@ class CBrkNEW(model.CBrkModel):
         set velocidade
         """
         self.__f_brk_vel = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_brk_cpoA(self):
+        """
+        get campo A
+        :return:
+        """
+        return self.__s_brk_cpoA
+
+    # ---------------------------------------------------------------------------------------------
+    @s_brk_cpoA.setter
+    def s_brk_cpoA(self, f_val):
+        """
+        set campo A
+        :param f_val:
+        :return:
+        """
+        self.__s_brk_cpoA = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_brk_cpoB(self):
+        """
+        get campo B
+        :return:
+        """
+        return self.__s_brk_cpoB
+
+    # ---------------------------------------------------------------------------------------------
+    @s_brk_cpoB.setter
+    def s_brk_cpoB(self, f_val):
+        """
+        set campo A
+        :param f_val:
+        :return:
+        """
+        self.__s_brk_cpoB = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_brk_cpoC(self):
+        """
+        get campo C
+        :return:
+        """
+        return self.__s_brk_cpoC
+
+    # ---------------------------------------------------------------------------------------------
+    @s_brk_cpoC.setter
+    def s_brk_cpoC(self, f_val):
+        """
+        set campo C
+        :param f_val:
+        :return:
+        """
+        self.__s_brk_cpoC = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_brk_cpoD(self):
+        """
+        get campo D
+        :return:
+        """
+        return self.__s_brk_cpoD
+
+    # ---------------------------------------------------------------------------------------------
+    @s_brk_cpoD.setter
+    def s_brk_cpoD(self, f_val):
+        """
+        set campo D
+        :param f_val:
+        :return:
+        """
+        self.__s_brk_cpoD = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_brk_prc(self):
+        """
+        get nome do procedimento
+        :return:
+        """
+        return self.__s_brk_prc
+
+    # ---------------------------------------------------------------------------------------------
+    @s_brk_prc.setter
+    def s_brk_prc(self, f_val):
+        """
+        set nome do procedimento
+        :return:
+        """
+        self.__s_brk_prc = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_brk_tipo(self):
+        """
+        get tipo de coordenada
+        :return:
+        """
+        return self.__s_brk_tipo
+
+
+    # ---------------------------------------------------------------------------------------------
+    @s_brk_tipo.setter
+    def s_brk_tipo(self, f_val):
+        """
+        set tipo de coordenada
+        :return:
+        """
+        self.__s_brk_tipo = f_val
 
 # < the end >--------------------------------------------------------------------------------------

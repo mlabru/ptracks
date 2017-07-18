@@ -37,15 +37,20 @@ import sys
 # PyQt library
 from PyQt4 import QtCore, QtGui
 
+# libs
+import libs.coords.coord_defs as cdefs
+
 # model
 import model.items.exe_data as dctExe
 
 # view
 import view.dbedit.dlg_exe_edit_new as dlgEdit
 import view.dbedit.dlg_exe_data_new_ui as dlgData_ui
+import view.dbedit.dlg_anv_edit_new as dlgAnv
 
 # control
 import control.events.events_basic as events
+import control.events.events_config as evtConfig
 
 # < class CDlgExeDataNEW >---------------------------------------------------------------------------
 
@@ -115,6 +120,13 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
         # configura título da dialog
         self.setWindowTitle(u"dbEdit [ Edição de Exercícios ]")
 
+        # Não permitir a inclusão e exclusão exercícios e de tráfegos do exercício
+        self.btnExeNew.setEnabled(False)
+        self.btnExeDel.setEnabled(False)
+        self.btnTrfNew.setEnabled(False)
+        self.btnTrfDel.setEnabled(False)
+
+
         # faz a carrga inicial do diretório de exercícios
         QtCore.QTimer.singleShot(0, self.loadInitial)
 
@@ -181,6 +193,21 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
                      QtCore.SIGNAL("clicked()"),
                      self.exeNew)
 
+        # conecta click a remoção do tráfego do exercício
+        self.connect(self.btnTrfDel,
+                     QtCore.SIGNAL("clicked()"),
+                     self.trfDel)
+
+        # conecta click a edição do tráfego do exercício
+        self.connect(self.btnTrfEdit,
+                     QtCore.SIGNAL("clicked()"),
+                     self.trfEdit)
+
+        # conecta click a inclusão do tráfego do exercício
+        self.connect(self.btnTrfNew,
+                     QtCore.SIGNAL("clicked()"),
+                     self.trfNew)
+
         # conecta click a seleção da linha
         self.connect(self.qtwExeTab,
                      QtCore.SIGNAL("itemSelectionChanged()"),
@@ -212,6 +239,9 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
 
         self._txtDelExeTit = u"TrackS - Apaga exercício"
         self._txtDelExeMsg = u"Apaga exercício {0} ?"
+
+        self._txtDelTrfTit = u"TrackS - Apaga o tráfego do exercício"
+        self._txtDelTrfMsg = u"Apaga o tráfego do exercício {0} ?"
 
     # ---------------------------------------------------------------------------------------------
     def exeDel(self):
@@ -337,6 +367,13 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
         self._oExe = self.getCurrentSel(self._dctExe, self.qtwExeTab)
         assert self._oExe
 
+        # Cria o evento para configurar o exercício atual
+        l_evtConfigExe = evtConfig.CConfigExe(ls_exe=self._oExe.s_exe_id)
+        assert l_evtConfigExe
+
+        # dissemina o evento
+        self._event.post(l_evtConfigExe)
+
         # atualiza a área de dados do exercício selecionado
         self.exeUpdateSel()
 
@@ -380,18 +417,8 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
             l_log.debug(" Exercicio [%s] Descricao [%s] Hora Inicial [%s]" %
                         (self._oExe.s_exe_id, self._oExe.s_exe_desc, l_exe_hor_ini))
 
-            # freqüência
-            # self._oExe._fExeFrequencia = 0
-
-            # posição
-
-            # posição
-            # self._oExe._oExePosicao = None
-
-            # l_iX, l_iY = self._oExe._oCentro.getPto ()
-
-            # self.txtCntrX.setText(str(l_iX))
-            # self.txtCntrY.setText(str(l_iY))
+            # atualiza a lista de tráfegos do exercício
+            self.trfUpdateWidget()
 
         # senão, o exercício não existe
         else:
@@ -454,6 +481,7 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
             # descrição
             l_twiExeDesc = QtGui.QTableWidgetItem(l_oExe.s_exe_desc)
             l_log.debug(" Exe ID [%s] Descricao [%s]" % (l_oExe.s_exe_id, l_twiExeDesc.text()))
+            l_log.debug(" Quantidade de tráfegos [%d]" % l_oExe.i_exe_qtd_trf)
 
             self.qtwExeTab.setItem(l_iNdx, 1, l_twiExeDesc)
 
@@ -488,6 +516,10 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
         """
         retorna os dados associados a linha selecionada
         """
+        l_log = logging.getLogger("CDlgExeDataNEW::getCurrentData")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug("Obter os dados elemento selecionado")
+
         # verifica condições de execução
         assert f_qtwTab is not None
 
@@ -496,11 +528,13 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
 
         # obtém o item da linha selecionada
         l_oItem = self.getCurrentItem(f_qtwTab, f_iCol)
+        l_log.debug(" Dados do Item [%s]" % str(l_oItem.text()))
 
         # existe uma linha selecionada ?
         if l_oItem is not None:
             # obtém o dado associado a linha
-            l_sData = l_oItem.data(QtCore.Qt.UserRole).toString()
+            #l_sData = l_oItem.data(QtCore.Qt.UserRole).toString()
+            l_sData = l_oItem.text()
 
         # retorna o dado associado a linha selecionada
         return l_sData
@@ -544,6 +578,38 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
         if str(l_sID) in f_dct:
             # obtém o elemento selecionado se existir uma linha selecionada
             l_oSel = f_dct[str(l_sID)]
+            assert l_oSel
+
+        # senão, índice inválido
+        else:
+            # não há elemento selecionado
+            l_oSel = None
+
+        # retorna o elemento da linha selecionada na lista
+        return l_oSel
+
+    # ---------------------------------------------------------------------------------------------
+    def getCurrentTrfSel(self, f_dct, f_qtw):
+        """
+        retorna o tráfego do exercício associado a linha selecionada na lista
+        """
+        l_log = logging.getLogger("CDlgExeDataNEW::getCurrentTrfSel")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug("Obter o elemento selecionado")
+
+        # verifica condições de execução
+        assert f_dct is not None
+        assert f_qtw is not None
+
+        # obtém o index da linha selecionada
+        l_sID = self.getCurrentData(f_qtw, 0)
+        l_log.debug ("ID [%s]" % l_sID)
+        l_iID = int(l_sID)
+
+        # indice válido ?
+        if l_iID in f_dct:
+            # obtém o elemento selecionado se existir uma linha selecionada
+            l_oSel = f_dct[l_iID]
             assert l_oSel
 
         # senão, índice inválido
@@ -651,5 +717,288 @@ class CDlgExeDataNEW (QtGui.QDialog, dlgData_ui.Ui_CDlgExeDataNEW):
 
         # return
         return True
+
+    # ---------------------------------------------------------------------------------------------
+    def trfDel(self):
+        """
+
+        :return:
+        """
+        # verifica condições de execução
+        assert self.qtw_anv is not None
+        assert self._oExe is not None
+        assert self._oExe.dct_exe_trf is not None
+
+        # obtém o tráfego do exercício selecionado
+        l_oTrf = self.getCurrentTrfSel(self._oExe.dct_exe_trf, self.qtw_anv)
+
+        if l_oTrf is not None:
+            # apaga o tráfego do exercício atual ?
+            if QtGui.QMessageBox.Yes == QtGui.QMessageBox.question(self,
+               self._txtDelTrfTit,
+               self._txtDelTrfMsg.format(l_oTrf.s_trf_ind),
+                    QtGui.QMessageBox.Yes | QtGui.QMessageBox.No):
+                # apaga o tráfego do exercício
+                self.trfRemove(l_oTrf)
+
+    # ---------------------------------------------------------------------------------------------
+    def trfEdit(self):
+        """
+        callback de btnTrfNew da dialog de edição de tráfegos do exercício
+        atualiza o tráfego do exercício na lista
+
+        :return:
+        """
+        l_log = logging.getLogger("CDlgExeDataNEW::trfEdit")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug("Editar um tráfego do exercício")
+
+        # verifica condições de execução
+        assert self.qtw_anv is not None
+        assert self._oExe is not None
+        assert self._oExe.dct_exe_trf is not None
+
+        # obtém o tráfego do exercício selecionado
+        l_oTrf = self.getCurrentTrfSel(self._oExe.dct_exe_trf, self.qtw_anv)
+        l_log.debug("Tráfego : [%s] - Id [%s]" % (l_oTrf, l_oTrf.i_trf_id))
+
+        if (l_oTrf is not None):
+            # cria a dialog de edição do tráfego do exercício
+            l_Dlg = dlgAnv.CDlgAnvEditNEW(self._control, l_oTrf, self)
+            assert l_Dlg
+
+            # processa a dialog de edição de exercícios (modal)
+            if(l_Dlg.exec_ ()):
+                # obtém os dados alterados
+                l_oTrf = l_Dlg.getData()
+                l_log.debug("Tráfego Id [%s]" % str(l_oTrf.i_trf_id))
+
+                # tráfego do exercício existente ?
+                if (l_oTrf is not None) and (self._oExe is not None):
+                    # atualiza o tráfego do exercício na lista
+                    self._oExe.dct_exe_trf[l_oTrf.i_trf_id] = l_oTrf
+
+                    # atualiza o exercicio no dicionário de exercícios
+                    self._dctExe[self._oExe.s_exe_id] = self._oExe
+
+                    # Cria o evento para salvar no disco o exercício atualizado
+                    l_evtUpd2Disk = events.CUpd2Disk(fs_table="ANV", fs_filename=self._oExe.s_exe_id)
+                    assert l_evtUpd2Disk
+
+                    # dissemina o evento
+                    self._event.post(l_evtUpd2Disk)
+
+                    # se ok, atualiza a QTableWidget de exercícios
+                    self.trfUpdateWidget ()
+
+    # ---------------------------------------------------------------------------------------------
+    def trfNew(self):
+        """
+        callback de btnTrfNew da dialog de edição de tráfegos do exercício
+        cria um novo tráfego do exercício na lista
+        """
+        l_log = logging.getLogger("CDlgExeDataNEW::trfNew")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug("Um novo tráfego do exercício [%s]" % self._oExe.s_exe_id)
+
+        # cria a dialog de edição de tráfegos do exercício
+        l_Dlg = dlgAnv.CDlgAnvEditNEW(self._control, None, self)
+        assert l_Dlg
+
+        # processa a dialog de edição de tráfegos do exercícios (modal)
+        if l_Dlg.exec_():
+            # obtém os dados da edição
+            l_oTrf = l_Dlg.getData()
+            li_node = 1
+
+            # Obtém o número do nó que não está sendo usado
+            if self._oExe.dct_exe_trf is not None:
+                ll_node_hosts = self._oExe.dct_exe_trf.keys()
+                l_log.debug("Dicionario de tráfegos do exercício [%s]" % self._oExe.dct_exe_trf)
+                l_log.debug("Lista de node hosts [%s]" % ll_node_hosts)
+                ll_node_hosts.sort()
+                li_index = 0
+                li_node = 1
+                while li_index < len(ll_node_hosts):
+                    if (li_index > 0):
+                        if ll_node_hosts[li_index] != ll_node_hosts[li_index - 1] + 1:
+                            li_node = ll_node_hosts[li_index - 1] + 1
+                            break
+
+                    li_index = li_index + 1
+
+                if li_index != 0 and li_index == len(ll_node_hosts):
+                    li_node = ll_node_hosts[li_index -1] + 1
+
+            # tráfego do exercício existente ?
+            if (l_oTrf is not None) and (self._oExe is not None):
+                # insere o tráfego do exercício na lista
+                l_oTrf.i_trf_id = li_node
+                self._oExe.dct_exe_trf[li_node] = l_oTrf
+
+                # atualiza o exercicio no dicionário de exercícios
+                self._dctExe[self._oExe.s_exe_id] = self._oExe
+
+                # Cria o evento para salvar no disco os exercícios
+                l_evtSave2Disk = events.CSave2Disk(fs_table="ANV")
+                assert l_evtSave2Disk
+
+                # dissemina o evento
+                self._event.post(l_evtSave2Disk)
+
+                # se ok, atualiza a QTableWidget de exercícios
+                self.trfUpdateWidget()
+
+    # ---------------------------------------------------------------------------------------------
+    def trfRemove(self, f_oTrf):
+        """
+        remove o tráfego selecionado do exercício atual
+
+        @param  f_oTrf : pointer para o tráfego selecionado
+        """
+        # verifica condições de execução
+        assert f_oTrf is not None
+
+        # remove a linha da widget
+        self.qtw_anv.removeRow(self.qtw_anv.currentRow())
+
+        # atualiza a tabela de tráfegos do exercício
+        l_dctTrf = self._oExe.dct_exe_trf
+        del l_dctTrf[f_oTrf.i_trf_id]
+        self._oExe.dct_exe_trf = l_dctTrf
+
+        # atualiza o exercicio no dicionário de exercícios
+        self._dctExe[self._oExe.s_exe_id] = self._oExe
+
+        l_evt = None
+        if len(self._oExe.dct_exe_trf):
+            # Cria o evento para atualizar a tabela de trafegos no disco
+            l_evt = events.CSave2Disk(fs_table="ANV")
+            assert l_evt
+        else:
+            # Cria o evento para apagar do disco o exercício
+            l_evt = events.CDelFromDisk(fs_table="ANV", fs_filename=self._oExe.s_exe_id)
+            assert l_evt
+
+        # dissemina o evento
+        if l_evt is not None:
+            self._event.post(l_evt)
+
+    # ---------------------------------------------------------------------------------------------
+    def trfUpdateWidget(self):
+        """
+        atualiza na tela os dados da QtableWidget de tráfegos do exercício
+
+        :return:
+        """
+        # verifica condições de execução
+        # assert self.qtw_anv is not None
+        # assert self._oExe is not None
+        l_log = logging.getLogger("CDlgExeDataNEW::trfUpdateWidget")
+        l_log.setLevel(logging.DEBUG)
+        l_log.debug("Atualizando a tabela de tráfegos")
+
+        for li_row in range(self.qtw_anv.rowCount()):
+            self.qtw_anv.removeRow(li_row)
+
+        self.qtw_anv.setRowCount(0)
+
+        self.qtw_anv.setColumnCount(14)
+        self.qtw_anv.setHorizontalHeaderLabels(
+            ["Node", "Latitude", "Longitude", "Tipo da Anv", "SSR", "Indicativo", "Origem", "Destino", "Proa", "Velocidade (Kt)",
+             "Altitude (Ft)", "Procedimento", "Tempo (min)", "ID"])
+
+        self.qtw_anv.setColumnHidden(13, True)
+        self.qtw_anv.horizontalHeader().setResizeMode(QtGui.QHeaderView.ResizeToContents)
+        self.qtw_anv.setEditTriggers(QtGui.QTableWidget.NoEditTriggers)
+        self.qtw_anv.setSelectionBehavior(QtGui.QTableWidget.SelectRows)
+        self.qtw_anv.setSelectionMode(QtGui.QTableWidget.SingleSelection)
+
+        li_row = 0
+
+        # para todas as linhas da tabela...
+        l_log.debug(" Número de tráfegos [%s]" % len(self._oExe.dct_exe_trf))
+        for li_key, l_oTrf in self._oExe.dct_exe_trf.iteritems():
+            # cria nova linha na tabela
+            self.qtw_anv.insertRow(li_row)
+
+            # node name
+            lqtwi_item = QtGui.QTableWidgetItem(str(li_key))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 0, lqtwi_item)
+
+            # latitude
+            lqtwi_item = QtGui.QTableWidgetItem(str(l_oTrf.f_trf_lat))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 1, lqtwi_item)
+
+            # longitude
+            lqtwi_item = QtGui.QTableWidgetItem(str(l_oTrf.f_trf_lng))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 2, lqtwi_item)
+
+            # designador
+            lqtwi_item = QtGui.QTableWidgetItem(l_oTrf.ptr_trf_prf.s_prf_id)
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 3, lqtwi_item)
+
+            # ssr
+            lqtwi_item = QtGui.QTableWidgetItem(str(l_oTrf.i_trf_ssr).zfill(4))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 4, lqtwi_item)
+
+            # indicativo
+            lqtwi_item = QtGui.QTableWidgetItem(l_oTrf.s_trf_ind)
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 5, lqtwi_item)
+
+            # origem
+            lqtwi_item = QtGui.QTableWidgetItem(l_oTrf.ptr_trf_aer_ori.s_aer_indc)
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 6, lqtwi_item)
+
+            # destino
+            lqtwi_item = QtGui.QTableWidgetItem(l_oTrf.ptr_trf_aer_dst.s_aer_indc)
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 7, lqtwi_item)
+
+            # proa
+            lqtwi_item = QtGui.QTableWidgetItem(str(l_oTrf.f_trf_pro_atu))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 8, lqtwi_item)
+
+            # velocidade
+            lf_VelKt = l_oTrf.f_trf_vel_atu * cdefs.D_CNV_MS2KT
+            lqtwi_item = QtGui.QTableWidgetItem(str(lf_VelKt))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 9, lqtwi_item)
+
+            # altitude
+            lf_AltFt = l_oTrf.f_trf_alt_atu * cdefs.D_CNV_M2FT
+            lqtwi_item = QtGui.QTableWidgetItem(str(lf_AltFt))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 10, lqtwi_item)
+
+            # procedimento
+            lqtwi_item = QtGui.QTableWidgetItem(l_oTrf.s_trf_prc)
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 11, lqtwi_item)
+
+            # tempo de apresentação do tráfego
+            li_HorIni, li_MinIni, li_SegIni = self._oExe.t_exe_hor_ini
+            li_MinIni = li_MinIni + (li_HorIni * 60) + (li_SegIni / 60)
+
+            li_Hor, li_Min, li_Seg = l_oTrf.t_trf_hor_atv
+            li_Min = li_Min + (li_Hor * 60) + (li_Seg / 60)
+
+            lqtwi_item = QtGui.QTableWidgetItem(str(li_Min - li_MinIni))
+            lqtwi_item.setTextAlignment(QtCore.Qt.AlignCenter)
+            self.qtw_anv.setItem(li_row, 12, lqtwi_item)
+
+            li_row = li_row + 1
+
+        # redefine o tamanho da QTableWidget
+        self.qtw_anv.resizeRowsToContents()
+        self.qtw_anv.resizeColumnsToContents()
 
 # < the end >--------------------------------------------------------------------------------------

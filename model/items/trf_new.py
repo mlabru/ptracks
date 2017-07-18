@@ -40,6 +40,7 @@ import sys
 import libs.coords.coord_defs as cdefs
 
 # model
+import model.items.aer_new as aer
 import model.items.trf_model as model
 import model.newton.defs_newton as ldefs
 
@@ -49,8 +50,8 @@ import control.events.events_basic as events
 # < module data >----------------------------------------------------------------------------------
 
 # logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
 
 # < class CTrfNEW >--------------------------------------------------------------------------------
 
@@ -132,6 +133,9 @@ class CTrfNEW(model.CTrfModel):
 
         # procedimento
         self.__ptr_trf_prc = None
+        # nome do procedimento
+        self.__s_trf_prc = ""
+
         # nome do arquivo de programação a seguir
         self.__s_trf_prg = ""
 
@@ -205,6 +209,9 @@ class CTrfNEW(model.CTrfModel):
         self.__ptr_trf_prc = f_trf.ptr_trf_prc
         # M_LOG.debug("procedimento: " + str(self.ptr_trf_prc))
 
+        # nome do procedimento
+        self.__s_trf_prc = f_trf.s_trf_prc
+
         # programação
         self.__s_trf_prg = f_trf.s_trf_prg
         # M_LOG.debug(u"programação: " + str(self.s_trf_prg))
@@ -273,7 +280,7 @@ class CTrfNEW(model.CTrfModel):
         @param fdct_data: dicionário com os dados do tráfego
         """
         # logger
-        # M_LOG.info("make_trf:>>")
+        M_LOG.info("make_trf:>>")
 
         # identificação do tráfego
         if "nTrf" in fdct_data:
@@ -370,11 +377,15 @@ class CTrfNEW(model.CTrfModel):
             else:
                 # aeródromo de origem
                 self.__ptr_trf_aer_ori = None
+                l_dctAer= {}
+                l_dctAer["nAer"] = ls_aer_id
 
                 # logger
                 l_log = logging.getLogger("CTrfNEW::make_trf")
                 l_log.setLevel(logging.WARNING)
                 l_log.warning("<E03: aeródromo de origem [{}] não existe no dicionário.".format(ls_aer_id))
+                l_log.warning("Aérodromo fake[{}] sendo criado.".format(ls_aer_id))
+                self.__ptr_trf_aer_ori = aer.CAerNEW(self.__model, l_dctAer)
 
         # destino
         if "destino" in fdct_data:
@@ -395,15 +406,20 @@ class CTrfNEW(model.CTrfModel):
             else:
                 # aeródromo de destino
                 self.__ptr_trf_aer_dst = None
+                l_dctAer= {}
+                l_dctAer["nAer"] = ls_aer_id
 
                 # logger
                 l_log = logging.getLogger("CTrfNEW::make_trf")
                 l_log.setLevel(logging.WARNING)
                 l_log.warning("<E04: aeródromo de destino [{}] não existe no dicionário.".format(ls_aer_id))
+                l_log.warning("Aérodromo fake[{}] sendo criado.".format(ls_aer_id))
+                self.__ptr_trf_aer_dst = aer.CAerNEW(self.__model, l_dctAer)
 
         # procedimento
         if "procedimento" in fdct_data:
             self.__ptr_trf_prc, self.__en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(fdct_data["procedimento"].strip().upper())
+            self.__s_trf_prc = fdct_data["procedimento"].strip().upper()
             # M_LOG.debug("self.__ptr_trf_prc...: " + str(fdct_data["procedimento"].strip().upper()))
             # M_LOG.debug("self.__en_trf_fnc_ope: " + str(self.__en_trf_fnc_ope))
 
@@ -439,16 +455,16 @@ class CTrfNEW(model.CTrfModel):
 
             # obtém a hora inicial do exercício
             lt_hora_ini = self.__model.exe.t_exe_hor_ini
-            # M_LOG.debug("lt_hora_ini: " + str(lt_hora_ini))
+            M_LOG.debug("lt_hora_ini: " + str(lt_hora_ini))
 
-            # obtém o tempo do tráfego
+            # obtém o tempo do tráfego (transformar em segundos)
             li_hor = int(float(fdct_data["temptrafego"]) * 60.)
-
-            # calcula os segundos
-            li_seg = li_hor % 60
 
             # calcula os minutos
             li_min = (li_hor // 60) % 60
+
+            # calcula os segundos
+            li_seg = li_hor % 60
 
             # calcula as horas
             li_hor = li_hor // 3600
@@ -457,13 +473,13 @@ class CTrfNEW(model.CTrfModel):
             self.t_trf_hor_atv = (lt_hora_ini[0] + li_hor,
                                   lt_hora_ini[1] + li_min,
                                   lt_hora_ini[2] + li_seg)
-            # M_LOG.debug("self.t_trf_hor_atv: " + str(self.t_trf_hor_atv))
+            M_LOG.debug("self.t_trf_hor_atv: " + str(self.t_trf_hor_atv))
 
         # (bool)
         self.v_trf_ok = True
 
         # logger
-        # M_LOG.info("make_trf:<<")
+        M_LOG.info("make_trf:<<")
 
     # =============================================================================================
     # data
@@ -657,6 +673,22 @@ class CTrfNEW(model.CTrfModel):
         set procedimento
         """
         self.__ptr_trf_prc = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def s_trf_prc(self):
+        """
+        get nome do procedimento
+        """
+        return self.__s_trf_prc
+
+    @s_trf_prc.setter
+    def s_trf_prc(self, f_val):
+        """
+        set nome do procedimento
+        """
+        self.__s_trf_prc = f_val
+
 
     # ---------------------------------------------------------------------------------------------
     @property

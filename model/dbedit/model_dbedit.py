@@ -57,6 +57,7 @@ import model.items.trj_data as trjdata
 
 # control
 import control.events.events_basic as events
+import control.events.events_config as evtConfig
 
 # < class CModelDBEdit >---------------------------------------------------------------------------
 
@@ -254,6 +255,9 @@ class CModelDBEdit(model.CModelManager):
         # coloca a tabela de tráfegos no exercício
         self.__exe.dct_exe_trf = self.__dct_trf
 
+        l_log.debug(" Exercicio default [%s]" % self.__exe)
+        l_log.debug(" Tráfegos do exercício [%s]" % self.__exe.dct_exe_trf)
+
         # retorna
         return True, None
 
@@ -262,6 +266,9 @@ class CModelDBEdit(model.CModelManager):
         """
         faz a carga da tabela de exercícios
         """
+        l_log = logging.getLogger("CModelDBEdit::load_exes")
+        l_log.setLevel(logging.DEBUG)
+
         # obtém o diretório padrão de exercícios
         ls_dir = self.dct_config["dir.exe"]
 
@@ -298,18 +305,66 @@ class CModelDBEdit(model.CModelManager):
 
             if ldct_exe is None:
                 # logger
-                l_log = logging.getLogger("CModelDBEdit::load_exes")
-                l_log.setLevel(logging.WARNING)
                 l_log.warning("<E01: tabela de exercícios:[{}] não existe.".format(ls_path))
 
                 # cai fora...
                 return False
+
+            # carrega os tráfegos do exercício
+            ls_exe_key = ldct_exe.keys()[0]
+            # atualiza o exercicio corrente
+            self.__exe = ldct_exe[ls_exe_key]
+            ldct_trf = self.load_trafs(ls_exe_key, ldct_exe)
+
+            if ldct_trf:
+                l_log.debug("Dict trafs [%s]", ldct_trf)
+                l_oExe = ldct_exe[ls_exe_key]
+                l_oExe.dct_exe_trf = ldct_trf
+                ldct_exe[ls_exe_key] = l_oExe
 
             # salva no dicionário
             self.__dct_exe.update(ldct_exe)
 
         # retorna
         return True
+
+    # ---------------------------------------------------------------------------------------------
+    def load_trafs(self, fs_exe, fdct_exe):
+        """
+        faz a carga da tabela de tráfegos de um exercício
+        """
+        l_log = logging.getLogger("CModelDBEdit::load_exes")
+        l_log.setLevel(logging.DEBUG)
+
+        # obtém o diretório padrão tráfegos do exercício
+        ls_dir = self.dct_config["dir.trf"]
+
+        # nome do diretório vazio ?
+        if ls_dir is None:
+            # diretório padrão de tabelas
+            ls_dir = self.dct_config["dir.trf"] = "traf"
+
+        # diretório não existe ?
+        if not os.path.exists(ls_dir):
+            # cria o diretório
+            os.mkdir(ls_dir)
+
+        # monta o path completo do arquivo de tráfego do exercício
+        ls_path = os.path.join(ls_dir, fs_exe)
+
+        # não é um arquivo ?
+        #if not os.path.isfile(ls_path):
+            # passa ao próximo
+            #return None
+
+        l_log.debug( "Carregando trafegos do exercicio [%s]" % ls_path)
+
+        # carrega a tabela de tráfegos do exercício
+        ldct_trf = trfdata.CTrfData(self, ls_path, fdct_exe)
+        assert ldct_trf is not None
+
+        # retorna
+        return ldct_trf
 
     # ---------------------------------------------------------------------------------------------
     def notify(self, f_event):
@@ -320,6 +375,15 @@ class CModelDBEdit(model.CModelManager):
         """
         l_log = logging.getLogger("CModelDBEdit::notify")
         l_log.setLevel(logging.DEBUG)
+
+        # recebeu um evento de "config exe" ?
+        if isinstance(f_event, evtConfig.CConfigExe):
+            # atualiza o exercicio corrente
+            l_log.debug(" Exercicio corrente [%s]" % f_event.s_exe)
+            if f_event.s_exe in self.__dct_exe:
+                self.__exe = self.__dct_exe[f_event.s_exe]
+            else:
+                l_log.debug(" Exercício não encontrado [%s]" % f_event.s_exe)
 
         # recebeu um evento de "save to disk" ?
         if isinstance(f_event, events.CSave2Disk):
@@ -346,12 +410,26 @@ class CModelDBEdit(model.CModelManager):
                     l_log.info(" CSave2Disk dir EXE [%s]" % ls_exe_path)
                     l_oExeData.save2disk(fs_exe_path=ls_exe_path)
 
-        '''
             # salvar tabela de aeronaves ?
-            elif "ANV" == f_event.table.upper():
+            elif "ANV" == f_event.s_table.upper():
                 # salva a tabela de aeronaves
-                self.dct_anv.save2disk()
+                l_log.info(" Exercicio atual [%s]" % self.__exe.s_exe_id)
+                ls_trf_path = self.dct_config["dir.trf"]
+                l_log.info(" CSave2Disk dir ANV [%s]" % ls_trf_path)
+                l_oTrfData = trfdata.CTrfData(self, f_exe=self.__exe)
 
+                l_oTrfData.save2disk(ls_trf_path)
+
+            # salvar tabela de trajetórias ?
+            elif "TRJ" == f_event.s_table.upper():
+                # salva a tabela de trajetórias
+                l_log.info(" Salvar a tabela de trajetórias no disco.")
+                # monta o nome da tabela de procedimentos de trajetória
+                ls_trj_path = os.path.join(self.dct_config["dir.prc"], self.dct_config["tab.trj"])
+                l_oTrjData = trjdata.CTrjData(self)
+                l_oTrjData.save2disk(ls_trj_path)
+
+            '''
             # salvar tabela de esperas ?
             elif "ESP" == f_event.table.upper():
                 # salva a tabela de esperas
@@ -413,24 +491,34 @@ class CModelDBEdit(model.CModelManager):
                 l_log.info(" CUpd2Disk exe path [%s]" % ls_exe_path)
                 l_oExeNew.save2disk(fs_exe_path=ls_exe_path)
 
+            # salvar tabela de aeronaves ?
+            elif "ANV" == f_event.s_table.upper():
+                # salva a tabela de aeronaves
+                l_log.info(" Exercicio atual [%s]" % self.__exe.s_exe_id)
+                ls_trf_path = self.dct_config["dir.trf"]
+                l_log.info(" CSave2Disk dir ANV [%s]" % ls_trf_path)
+                l_oTrfData = trfdata.CTrfData(self, f_exe=self.__exe)
+
+                l_oTrfData.save2disk(ls_trf_path)
+
         # recebeu um evento de "delete from disk" ?
         if isinstance(f_event, events.CDelFromDisk):
-            # salvar tabela de aeródromos ?
+            # excluir tabela de aeródromos ?
             if "AER" == f_event.s_table.upper():
                 # salva a tabela de aeródromos
                 self.dct_aer.del_from_disk()
 
-            # salvar tabela de fixos ?
+            # excluir tabela de fixos ?
             elif "FIX" == f_event.s_table.upper():
                 # salva a tabela de fixos
                 self.dct_fix.del_from_disk()
 
-            # salvar tabela de performances ?
+            # excluir tabela de performances ?
             elif "PRF" == f_event.s_table.upper():
                 # salva a tabela de performances
                 self.__dct_prf.del_from_disk()
 
-            # salvar tabela de exercícios ?
+            # excluir tabela de exercícios ?
             elif "EXE" == f_event.s_table.upper():
                 # remove a tabela de exercício
                 l_oExeNew = self.__dct_exe[f_event.s_filename]
@@ -440,6 +528,16 @@ class CModelDBEdit(model.CModelManager):
 
                 # remove o exercicio do dicionario de exercicios
                 del self.__dct_exe[f_event.s_filename]
+
+            # excluir tabela de tráfegos ?
+            elif "ANV" == f_event.s_table.upper():
+                # remove a tabela de tráfegos do exercício
+                ls_trf_path = self.dct_config["dir.trf"] + "/" + f_event.s_filename + ".trf.xml"
+                l_log.info(" CDelFromDisk filename [%s]" % ls_trf_path)
+                l_oTrfData = trfdata.CTrfData(self, f_exe=self.__exe)
+
+                # remove o arquivo de tráfegos do exercicio
+                l_oTrfData.del_from_disk(ls_trf_path)
 
     # =============================================================================================
     # data
@@ -460,6 +558,14 @@ class CModelDBEdit(model.CModelManager):
         get airspace
         """
         return self.__airspace
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def dct_apx(self):
+        """
+        dicionário de aproximações
+        """
+        return self.__airspace.dct_apx
 
     # ---------------------------------------------------------------------------------------------
     @property

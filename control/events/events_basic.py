@@ -152,7 +152,6 @@ class CUpd2Disk(model.CEventsModel):
         # save filename
         self.__s_filename = fs_filename
 
-
     # ---------------------------------------------------------------------------------------------
     @property
     def s_table(self):

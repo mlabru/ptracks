@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './dlg_exe_edit_new.ui'
+# Form implementation generated from reading ui file 'dlg_exe_edit_new.ui'
 #
-# Created by: PyQt4 UI code generator 4.11.4
+# Created: Fri Jun 23 11:21:05 2017
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -76,6 +77,7 @@ class Ui_CDlgExeEditNEW(object):
         self.widGrl1 = QtGui.QWidget(self.frmGrl)
         self.widGrl1.setObjectName(_fromUtf8("widGrl1"))
         self.gridLayout_8 = QtGui.QGridLayout(self.widGrl1)
+        self.gridLayout_8.setMargin(0)
         self.gridLayout_8.setObjectName(_fromUtf8("gridLayout_8"))
         self.widGrlIni = QtGui.QWidget(self.widGrl1)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Preferred)
@@ -85,8 +87,8 @@ class Ui_CDlgExeEditNEW(object):
         self.widGrlIni.setSizePolicy(sizePolicy)
         self.widGrlIni.setObjectName(_fromUtf8("widGrlIni"))
         self.horizontalLayout_5 = QtGui.QHBoxLayout(self.widGrlIni)
-        self.horizontalLayout_5.setMargin(1)
         self.horizontalLayout_5.setSpacing(1)
+        self.horizontalLayout_5.setMargin(1)
         self.horizontalLayout_5.setObjectName(_fromUtf8("horizontalLayout_5"))
         self.qsbGrlIniHor = QtGui.QSpinBox(self.widGrlIni)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Fixed, QtGui.QSizePolicy.Fixed)
@@ -125,6 +127,7 @@ class Ui_CDlgExeEditNEW(object):
         self.bbxExeEdit = QtGui.QWidget(CDlgExeEditNEW)
         self.bbxExeEdit.setObjectName(_fromUtf8("bbxExeEdit"))
         self.horizontalLayout_6 = QtGui.QHBoxLayout(self.bbxExeEdit)
+        self.horizontalLayout_6.setMargin(0)
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         spacerItem1 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem1)

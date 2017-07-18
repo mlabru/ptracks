@@ -43,6 +43,10 @@ import model.items.brk_new as brktrj
 # control
 import control.events.events_basic as events
 
+# logger
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
+
 # < class CTrjNEW >--------------------------------------------------------------------------------
 
 class CTrjNEW(model.CPrcModel):
@@ -94,7 +98,7 @@ class CTrjNEW(model.CPrcModel):
             # recebeu uma lista ?
             if isinstance(f_data, dict):
                 # cria uma procedimento de trajetória com os dados da lista
-                self.__load_trj(f_data, fs_ver)
+                self.load_trj(f_data, fs_ver)
 
             # recebeu uma procedimento de trajetória ?
             elif isinstance(f_data, CTrjNEW):
@@ -122,24 +126,26 @@ class CTrjNEW(model.CPrcModel):
         self.__lst_trj_brk = list(f_trj.lst_trj_brk)
 
     # ---------------------------------------------------------------------------------------------
-    def __load_trj(self, fdct_data, fs_ver="0001"):
+    def load_trj(self, fdct_data, fs_ver="0001"):
         """
         carrega os dados de procedimento de trajetória a partir de um dicionário (formato 0001)
 
         @param fdct_data: dicionário com os dados do procedimento de trajetória
         @param fs_ver: versão do formato dos dados
         """
+        # logger
+        M_LOG.info("load_trj:>>")
+
         # formato versão 0.01 ?
         if "0001" == fs_ver:
             # cria a procedimento de trajetória
-            self.__make_trj(fdct_data)
+            self.make_trj(fdct_data)
 
         # senão, formato desconhecido
         else:
             # logger
-            l_log = logging.getLogger("CTrjNEW::__load_trj")
-            l_log.setLevel(logging.CRITICAL)
-            l_log.critical(u"<E01: formato desconhecido.")
+            M_LOG.setLevel(logging.CRITICAL)
+            M_LOG.critical(u"<E01: formato desconhecido.")
 
             # cria um evento de quit
             l_evt = events.CQuit()
@@ -148,16 +154,26 @@ class CTrjNEW(model.CPrcModel):
             # dissemina o evento
             self.__event.post(l_evt)
 
+            # logger
+            M_LOG.info("load_trj:<<")
+
             # cai fora...
             sys.exit(1)
 
+        # logger
+        M_LOG.info("load_trj:<<")
+
     # ---------------------------------------------------------------------------------------------
-    def __make_trj(self, fdct_data):
+    def make_trj(self, fdct_data):
         """
         carrega os dados de procedimento de trajetória a partir de um dicionário (formato 0001)
 
         @param fdct_data: dicionário com os dados do procedimento de trajetória
         """
+        # logger
+        M_LOG.info("make_trj:>>")
+        M_LOG.info("Dicionario de dados [%s]" % fdct_data)
+
         # identificação do procedimento de trajetória
         if "nTrj" in fdct_data:
             self.i_prc_id = int(fdct_data["nTrj"])
@@ -188,6 +204,9 @@ class CTrjNEW(model.CPrcModel):
 
         # (bool)
         self.v_prc_ok = True
+
+        # logger
+        M_LOG.info("make_trj:<<")
 
     # =============================================================================================
     # data

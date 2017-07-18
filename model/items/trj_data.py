@@ -19,6 +19,9 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+revision 0.3  2017/jul  matias
+coding the save2disk method
+
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -26,9 +29,11 @@ revision 0.1  2014/nov  mlabru
 initial release (Linux/Python)
 ---------------------------------------------------------------------------------------------------
 """
+from __future__ import print_function
+
 __version__ = "$revision: 0.2$"
-__author__ = "Milton Abrunhosa"
-__date__ = "2015/11"
+__author__ = "Ivan Matias"
+__date__ = "2017/07"
 
 # < imports >--------------------------------------------------------------------------------------
 
@@ -40,6 +45,9 @@ import sys
 from PyQt4 import QtCore
 from PyQt4 import QtXml
 
+# libs
+import libs.coords.coord_defs as cdefs
+
 # model
 import model.items.trj_new as model
 import model.items.parser_utils as parser
@@ -50,8 +58,8 @@ import control.events.events_basic as events
 # < module data >----------------------------------------------------------------------------------
 
 # logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
+M_LOG = logging.getLogger(__name__)
+M_LOG.setLevel(logging.DEBUG)
 
 # < class CTrjData >-------------------------------------------------------------------------------
 
@@ -144,7 +152,7 @@ class CTrjData(dict):
         @return flag e mensagem
         """
         # logger
-        # M_LOG.info("make_trj:>>")
+        M_LOG.info("make_trj:>>")
 
         # check input
         assert fdct_root is not None
@@ -224,7 +232,7 @@ class CTrjData(dict):
             return False, ls_msg
 
         # logger
-        # M_LOG.info("make_trj:<<")
+        M_LOG.info("make_trj:<<")
 
         # retorna Ok
         return True, None
@@ -369,7 +377,51 @@ class CTrjData(dict):
         @return flag e mensagem
         """
         # logger
-        # M_LOG.info("save2disk:>>")
+        M_LOG.info("save2disk:>>")
+
+        # tem colocar o .xml do final do parâmetro fs_trj_pn para montar o nome do arquivo.
+        M_LOG.debug("Saving file [%s.xml]" % fs_trj_pn)
+
+        l_file = open("%s.xml" % fs_trj_pn, 'w')
+
+        print ( "<?xml version='1.0' encoding='UTF-8'?>", file = l_file )
+        print ( "<!DOCTYPE trafegos>", file = l_file )
+        print ( "<trajetorias VERSION=\"0001\" CODE=\"1961\" FORMAT=\"NEWTON\">", file = l_file )
+
+        for li_nTrf, l_oTrjNew in self.__model.dct_trj.items():
+            print ( "", file=l_file )
+            print ( "    <trajetoria nTrj=\"%s\">" % str(l_oTrjNew.i_prc_id), file = l_file )
+            print ( "        <descricao>%s</descricao>" % l_oTrjNew.s_prc_desc, file = l_file )
+            print ( "        <star>N</star>", file = l_file )
+            # Breakpoints da trajetória
+            for l_oBrkNew in l_oTrjNew.lst_trj_brk:
+                print ( "", file=l_file )
+                print ( "        <breakpoint nBrk=\"%d\">" % l_oBrkNew.i_brk_id, file=l_file)
+                print ( "          <coord>", file = l_file )
+                print ( "            <tipo>%s</tipo>" % l_oBrkNew.s_brk_tipo, file = l_file )
+                print ( "            <cpoA>%s</cpoA>" % l_oBrkNew.s_brk_cpoA, file = l_file )
+                print ( "            <cpoB>%s</cpoB>" % l_oBrkNew.s_brk_cpoB, file = l_file )
+                print ( "            <cpoC>%s</cpoC>" % l_oBrkNew.s_brk_cpoC, file = l_file )
+                print ( "            <cpoD>%s</cpoD>" % l_oBrkNew.s_brk_cpoD, file = l_file )
+                print ( "          </coord>", file = l_file)
+                # converte a altitude de m para ft
+                lf_AltFt = l_oBrkNew.f_brk_alt * cdefs.D_CNV_M2FT
+                li_AltFt = int(lf_AltFt)
+                if (lf_AltFt - li_AltFt) > 0.5:
+                    li_AltFt = li_AltFt + 1
+                print ( "          <altitude>%d</altitude>" % li_AltFt, file = l_file )
+                # converte a velocidade de m/s para kt
+                li_VelKt = int(l_oBrkNew.f_brk_vel * cdefs.D_CNV_MS2KT)
+                print ( "          <velocidade>%d</velocidade>" % li_VelKt, file = l_file )
+                print ( "          <procedimento>%s</procedimento>" % l_oBrkNew.s_brk_prc, file = l_file )
+                print ( "        </breakpoint>", file=l_file)
+
+            print ( "    </trajetoria>", file = l_file )
+
+        print ( "", file=l_file )
+        print ( "</trajetorias>", file = l_file )
+
+        l_file.close ()
 
         # return code
         lv_ok = True
@@ -378,7 +430,7 @@ class CTrjData(dict):
         ls_msg = "save Ok"
 
         # logger
-        # M_LOG.info("save2disk:<<")
+        M_LOG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

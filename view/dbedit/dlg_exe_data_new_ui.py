@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file './dlg_exe_data_new.ui'
+# Form implementation generated from reading ui file 'dlg_exe_data_new.ui'
 #
-# Created by: PyQt4 UI code generator 4.11.4
+# Created: Fri Jun 23 11:20:48 2017
+#      by: PyQt4 UI code generator 4.10.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -38,6 +39,7 @@ class Ui_CDlgExeDataNEW(object):
         self.wid_qwt = QtGui.QWidget(self.splitter)
         self.wid_qwt.setObjectName(_fromUtf8("wid_qwt"))
         self.verticalLayout_2 = QtGui.QVBoxLayout(self.wid_qwt)
+        self.verticalLayout_2.setMargin(0)
         self.verticalLayout_2.setObjectName(_fromUtf8("verticalLayout_2"))
         self.qtwExeTab = QtGui.QTableWidget(self.wid_qwt)
         self.qtwExeTab.setObjectName(_fromUtf8("qtwExeTab"))
@@ -68,15 +70,11 @@ class Ui_CDlgExeDataNEW(object):
         self.btnExeDel.setIcon(icon2)
         self.btnExeDel.setObjectName(_fromUtf8("btnExeDel"))
         self.horizontalLayout.addWidget(self.btnExeDel)
-        self.btnExeNew.raise_()
-        self.qtwExeTab.raise_()
-        self.btnExeNew.raise_()
-        self.btnExeDel.raise_()
-        self.btnExeEdit.raise_()
         self.verticalLayout_2.addWidget(self.frm_btn_exe)
         self.wid_data = QtGui.QWidget(self.splitter)
         self.wid_data.setObjectName(_fromUtf8("wid_data"))
         self.verticalLayout = QtGui.QVBoxLayout(self.wid_data)
+        self.verticalLayout.setMargin(0)
         self.verticalLayout.setObjectName(_fromUtf8("verticalLayout"))
         self.frm_id = QtGui.QFrame(self.wid_data)
         self.frm_id.setFrameShape(QtGui.QFrame.StyledPanel)
@@ -86,7 +84,7 @@ class Ui_CDlgExeDataNEW(object):
         self.gridLayout = QtGui.QGridLayout(self.frm_id)
         self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
         self.lbl_indc = QtGui.QLabel(self.frm_id)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Minimum)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.lbl_indc.sizePolicy().hasHeightForWidth())
@@ -101,6 +99,11 @@ class Ui_CDlgExeDataNEW(object):
         self.lbl_desc.setObjectName(_fromUtf8("lbl_desc"))
         self.gridLayout.addWidget(self.lbl_desc, 1, 0, 1, 1)
         self.txtExeID = QtGui.QLabel(self.frm_id)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.txtExeID.sizePolicy().hasHeightForWidth())
+        self.txtExeID.setSizePolicy(sizePolicy)
         font = QtGui.QFont()
         font.setBold(True)
         font.setWeight(75)
@@ -133,7 +136,7 @@ class Ui_CDlgExeDataNEW(object):
         self.gridLayout.addItem(spacerItem1, 2, 3, 1, 2)
         self.verticalLayout.addWidget(self.frm_id)
         self.tab_exe = QtGui.QTabWidget(self.wid_data)
-        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Preferred)
+        sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Expanding)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.tab_exe.sizePolicy().hasHeightForWidth())
@@ -159,6 +162,8 @@ class Ui_CDlgExeDataNEW(object):
         self.frame.setObjectName(_fromUtf8("frame"))
         self.horizontalLayout_2 = QtGui.QHBoxLayout(self.frame)
         self.horizontalLayout_2.setObjectName(_fromUtf8("horizontalLayout_2"))
+        spacerItem2 = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
+        self.horizontalLayout_2.addItem(spacerItem2)
         self.btnTrfNew = QtGui.QPushButton(self.frame)
         self.btnTrfNew.setIcon(icon)
         self.btnTrfNew.setObjectName(_fromUtf8("btnTrfNew"))
@@ -176,8 +181,6 @@ class Ui_CDlgExeDataNEW(object):
         icon3.addPixmap(QtGui.QPixmap(_fromUtf8(":/images/dbedit/view.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tab_exe.addTab(self.pag_anv, icon3, _fromUtf8(""))
         self.verticalLayout.addWidget(self.tab_exe)
-        spacerItem2 = QtGui.QSpacerItem(20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
-        self.verticalLayout.addItem(spacerItem2)
         self.verticalLayout_4.addWidget(self.splitter)
         self.frm_dbb = QtGui.QFrame(CDlgExeDataNEW)
         sizePolicy = QtGui.QSizePolicy(QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)

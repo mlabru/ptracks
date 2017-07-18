@@ -44,6 +44,7 @@ import view.dbedit.dlg_aer_data_new as dlgaer
 import view.dbedit.dlg_exe_data_new as dlgexe
 import view.dbedit.dlg_fix_data_new as dlgfix
 import view.dbedit.dlg_prf_data_new as dlgprf
+import view.dbedit.dlg_trj_data_new as dlgtrj
 
 import view.dbedit.wnd_main_dbedit_ui as wmain_ui
 
@@ -86,6 +87,7 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
         self.btn_exe.clicked.connect(self.cbk_exercicios)
         self.btn_fix.clicked.connect(self.cbk_fixos)
         self.btn_prf.clicked.connect(self.cbk_performances)
+        self.btn_trj.clicked.connect(self.cbk_trajetorias)
         self.btn_sai.clicked.connect(self.cbk_sair)
 
         # dialogs
@@ -93,6 +95,7 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
         self.__dlg_exe = None
         self.__dlg_fix = None
         self.__dlg_prf = None
+        self.__dlg_trj = None
 
     # ---------------------------------------------------------------------------------------------
     @QtCore.pyqtSlot()
@@ -105,6 +108,8 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
             # cria a dialog de edição da tabela de aeródromos
             self.__dlg_aer = dlgaer.CDlgAerDataNEW(self.__control, self)
             assert self.__dlg_aer
+        else:
+            self.setVisible(False)
 
         # exibe a dialog de edição da tabela de aeródromos
         self.__dlg_aer.show()
@@ -120,6 +125,8 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
             # cria a dialog de edição da tabela de exercícios
             self.__dlg_exe = dlgexe.CDlgExeDataNEW(self.__control, self)
             assert self.__dlg_exe
+        else:
+            self.setVisible(False)
 
         # exibe a dialog de edição da tabela de exercícios
         self.__dlg_exe.show()
@@ -135,6 +142,8 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
             # cria a dialog de edição da tabela de fixos
             self.__dlg_fix = dlgfix.CDlgFixDataNEW(self.__control, self)
             assert self.__dlg_fix
+        else:
+            self.setVisible(False)
 
         # exibe a dialog de edição da tabela de fixos
         self.__dlg_fix.show()
@@ -150,6 +159,8 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
             # cria a dialog de edição da tabela de performances
             self.__dlg_prf = dlgprf.CDlgPrfDataNEW(self.__control, self)
             assert self.__dlg_prf
+        else:
+            self.setVisible(False)
 
         # exibe a dialog de edição da tabela de performances
         self.__dlg_prf.show()
@@ -169,5 +180,22 @@ class CWndMainDBEdit(QtGui.QMainWindow, wmain_ui.Ui_CWndMainDBEdit):
 
         # finaliza o sistema
         self.close()
+
+    # ---------------------------------------------------------------------------------------------
+    @QtCore.pyqtSlot()
+    def cbk_trajetorias(self):
+        """
+        callback da opção edição de trajetórias da janela principal
+        """
+        # já existe a dialog de edição da tabela de trajetórias ?
+        if self.__dlg_trj is None:
+            # cria a dialog de edição da tabela de trajetórias
+            self.__dlg_trj = dlgtrj.CDlgTrjDataNEW(self.__control, self)
+            assert self.__dlg_trj
+        else:
+            self.setVisible(False)
+
+        # exibe a dialog de edição da tabela de trajetórias
+        self.__dlg_trj.show()
 
 # < the end>---------------------------------------------------------------------------------------
