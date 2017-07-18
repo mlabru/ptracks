@@ -221,7 +221,7 @@ class CControlAdapter(control.CControlManager):
         assert fq_rcv_trks
 
         # temporização de eventos
-        lf_tim_rrbn = self.config.dct_config["tim.core"]
+        lf_tim_core = self.config.dct_config["tim.core"]
 
         # obtém o tempo inicial em segundos
         lf_now = time.time()
@@ -261,16 +261,16 @@ class CControlAdapter(control.CControlManager):
                 lf_dif = lf_now - lf_ant
 
                 # está adiantado ?
-                if lf_tim_rrbn > lf_dif:
+                if lf_tim_core > lf_dif:
                     # permite o scheduler
-                    time.sleep(lf_tim_rrbn - lf_dif)
+                    time.sleep(lf_tim_core - lf_dif)
 
                 # senão, atrasou...+ de 5% ?
-                elif (lf_dif - lf_tim_rrbn) > (lf_tim_rrbn * .05):
+                elif (lf_dif - lf_tim_core) > (lf_tim_core * .05):
                     # logger
                     l_log = logging.getLogger("CControlAdapter::process_trks")
                     l_log.setLevel(logging.WARNING)
-                    l_log.warning("<E05: atrasou: {}".format(lf_dif - lf_tim_rrbn))
+                    l_log.warning("<E05: atrasou: {}".format(lf_dif - lf_tim_core))
 
     # ---------------------------------------------------------------------------------------------
     def run(self):
