@@ -105,6 +105,7 @@ class CConfigManager(object):
 
                     "tim.accl": gdefs.D_TIM_ACCL,    # fast-time simulation acceleration factor (1x)
                     "tim.cnfg": gdefs.D_TIM_CNFG,    # reenvio de configuração do sistema (5s)
+                    "tim.core": gdefs.D_TIM_CORE,    # envio de mensagens ao CORE (2s)
                     "tim.evnt": gdefs.D_TIM_EVNT,    # tratador de eventos (1/10th)
                     "tim.fgen": gdefs.D_TIM_FGEN,    # tempo de ativação das aeronaves (30s)
                     "tim.hora": gdefs.D_TIM_HORA,    # reenvia a hora do sistema (1s)

@@ -178,6 +178,9 @@ D_TIM_ACCL = 1
 # reenvia a configuração do sistema a cada 5 seg (int)
 D_TIM_CNFG = 5
 
+# envio de mensagens de posicionamento de pistas ao CORE a cada 2 seg (int)
+D_TIM_CORE = 2
+
 # verifica o tempo de ativação das aeronaves a cada 30 seg (int)
 D_TIM_FGEN = 30
 
