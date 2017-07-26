@@ -2,1312 +2,45 @@
 <!DOCTYPE fixos>
 <fixos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <fixo nFix="AAQ">
-    <descricao>ARARAQUARA</descricao>
+  <fixo nFix="SPO">
+    <descricao>NDB SAO PAULO</descricao>
     <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
+    <frequencia>250.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-21.813000</cpoA>
-      <cpoB>-48.139500</cpoB>
+      <cpoA>-23.61</cpoA>
+      <cpoB>-46.66833</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="A">
-    <descricao>ATERRO</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.657500</cpoA>
-      <cpoB>-53.867833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ACJ">
-    <descricao>ARACAJU</descricao>
-    <tipo>N</tipo>
-    <frequencia>355.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-10.981667</cpoA>
-      <cpoB>-37.071333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ACJ">
-    <descricao>ARACAJU</descricao>
+  <fixo nFix="XPC">
+    <descricao>CHAPECO</descricao>
     <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-10.981667</cpoA>
-      <cpoB>-37.071333</cpoB>
+      <cpoA>-27.13567</cpoA>
+      <cpoB>-52.663</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="ADA">
-    <descricao>ALDEIA</descricao>
+  <fixo nFix="JNV">
+    <descricao>JOINVILE</descricao>
     <tipo>V</tipo>
-    <frequencia>112.1</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-22.823333</cpoA>
-      <cpoB>-42.096667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AFS">
-    <descricao>AFONSOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>270.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.867000</cpoA>
-      <cpoB>-43.366833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AGC">
-    <descricao>ANGICOS</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.631300</cpoA>
-      <cpoB>-35.930283</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AGI">
-    <descricao>ARAGUAINA</descricao>
-    <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.233667</cpoA>
-      <cpoB>-48.242833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AGN">
-    <descricao>ALAGOINHAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>310.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.152667</cpoA>
-      <cpoB>-38.389500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AI">
-    <descricao>SAO JOAO</descricao>
-    <tipo>N</tipo>
-    <frequencia>320.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-1.281333</cpoA>
-      <cpoB>-44.903333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ALC">
-    <descricao>ALCANTARA</descricao>
-    <tipo>N</tipo>
-    <frequencia>230.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-2.381500</cpoA>
-      <cpoB>-44.399333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ALG">
-    <descricao>NDB SGES</descricao>
-    <tipo>N</tipo>
-    <frequencia>293.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.368833</cpoA>
-      <cpoB>-54.762167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AMP">
-    <descricao>AMAPA</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>2.068833</cpoA>
-      <cpoB>-50.860500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ANP">
-    <descricao>ANAPOLIS</descricao>
-    <tipo>N</tipo>
-    <frequencia>415.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.317500</cpoA>
-      <cpoB>-49.040333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ANP">
-    <descricao>ANAPOLIS</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.260667</cpoA>
-      <cpoB>-48.992167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ANP">
-    <descricao>ANP</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.317500</cpoA>
-      <cpoB>-49.040283</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="APO">
-    <descricao>APO</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.317500</cpoA>
-      <cpoB>-49.040283</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ARA">
-    <descricao>ARAÇATUBA</descricao>
-    <tipo>N</tipo>
-    <frequencia>265.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.139333</cpoA>
-      <cpoB>-50.426667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ARG">
-    <descricao>ARAGUAIA</descricao>
-    <tipo>N</tipo>
-    <frequencia>230.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-8.353667</cpoA>
-      <cpoB>-49.299167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ARU">
-    <descricao>CAJU</descricao>
-    <tipo>N</tipo>
-    <frequencia>355.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-10.982000</cpoA>
-      <cpoB>-37.077333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ARU">
-    <descricao>CAJU</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-10.984000</cpoA>
-      <cpoB>-37.071500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ARX">
-    <descricao>ARAXA</descricao>
-    <tipo>N</tipo>
-    <frequencia>210.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.561000</cpoA>
-      <cpoB>-46.964667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ARX">
-    <descricao>ARAXA</descricao>
-    <tipo>V</tipo>
-    <frequencia>117.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.689000</cpoA>
-      <cpoB>-47.060500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ASS">
-    <descricao>ASSIS</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.644833</cpoA>
-      <cpoB>-50.453000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AT">
-    <descricao>ARTIGAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>450.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-30.403833</cpoA>
-      <cpoB>-56.487333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ATF">
-    <descricao>ALTA FLORESTA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.868333</cpoA>
-      <cpoB>-56.105000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ATM">
-    <descricao>ALTAMIRA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.249333</cpoA>
-      <cpoB>-52.247667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AVA">
-    <descricao>AVARÉ</descricao>
-    <tipo>N</tipo>
-    <frequencia>265.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-26.649333</cpoA>
-      <cpoB>-46.891833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="AV">
-    <descricao>ABROLHOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>290.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-17.964500</cpoA>
-      <cpoB>-38.693833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BAG">
-    <descricao>GARCAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.853500</cpoA>
-      <cpoB>-52.395667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BBC">
-    <descricao>BARBACENA</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.267000</cpoA>
-      <cpoB>-43.764117</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BCH">
-    <descricao>BACACHERI</descricao>
-    <tipo>N</tipo>
-    <frequencia>300.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.402500</cpoA>
-      <cpoB>-49.228833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BCO">
-    <descricao>BONSUCESSO</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.406333</cpoA>
-      <cpoB>-46.385500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BCP">
-    <descricao>DEZOITO</descricao>
-    <tipo>N</tipo>
-    <frequencia>390.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.426667</cpoA>
-      <cpoB>-40.029833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BDA">
-    <descricao>BOCA DO ACRE</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-8.904333</cpoA>
-      <cpoB>-67.488667</cpoB>
+      <cpoA>-26.22233</cpoA>
+      <cpoB>-48.798</cpoB>
     </coord>
   </fixo>
 
   <fixo nFix="BEL">
     <descricao>BELEM</descricao>
     <tipo>V</tipo>
-    <frequencia>117.3</frequencia>
+    <frequencia>250.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-1.384333</cpoA>
-      <cpoB>-48.478500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BFR">
-    <descricao>CABOFRIO</descricao>
-    <tipo>N</tipo>
-    <frequencia>200.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.923333</cpoA>
-      <cpoB>-42.071500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BGC">
-    <descricao>BRAGANÇA</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.951500</cpoA>
-      <cpoB>-46.569833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BGE">
-    <descricao>BAGE</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-31.390667</cpoA>
-      <cpoB>-54.109833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BHZ">
-    <descricao>BELO HORIZONTE</descricao>
-    <tipo>N</tipo>
-    <frequencia>520.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.853333</cpoA>
-      <cpoB>-43.954667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BHZ">
-    <descricao>BELO HORIZONTE</descricao>
-    <tipo>V</tipo>
-    <frequencia>117.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.835833</cpoA>
-      <cpoB>-44.003667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BKO">
-    <descricao>BOKO</descricao>
-    <tipo>N</tipo>
-    <frequencia>380.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.618667</cpoA>
-      <cpoB>-48.622667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BL">
-    <descricao>SALINOPOLIS</descricao>
-    <tipo>N</tipo>
-    <frequencia>315.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-0.615333</cpoA>
-      <cpoB>-47.357167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRL">
-    <descricao>BARCELOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>225.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-0.975500</cpoA>
-      <cpoB>-62.920833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRR">
-    <descricao>BARREIRAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>375.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.080000</cpoA>
-      <cpoB>-45.007167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRR">
-    <descricao>BARREIRAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.080000</cpoA>
-      <cpoB>-45.007167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRS">
-    <descricao>BRASILIA</descricao>
-    <tipo>N</tipo>
-    <frequencia>340.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.871833</cpoA>
-      <cpoB>-48.022000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRS">
-    <descricao>BRASILIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.873833</cpoA>
-      <cpoB>-48.021333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRT">
-    <descricao>BARRETOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>360.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.582167</cpoA>
-      <cpoB>-48.596667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BRU">
-    <descricao>BAURU</descricao>
-    <tipo>N</tipo>
-    <frequencia>380.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.314000</cpoA>
-      <cpoB>-49.107167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BSI">
-    <descricao>BRASILIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.871833</cpoA>
-      <cpoB>-48.022000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="BVI">
-    <descricao>BOA VISTA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>2.852167</cpoA>
-      <cpoB>-60.686833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CAD">
-    <descricao>CAÇADOR</descricao>
-    <tipo>N</tipo>
-    <frequencia>400.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-26.791333</cpoA>
-      <cpoB>-50.938333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CAL">
-    <descricao>CALDAS NOVAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>290.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-17.725333</cpoA>
-      <cpoB>-48.610500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CAV">
-    <descricao>CASCAVEL</descricao>
-    <tipo>N</tipo>
-    <frequencia>220.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-24.983333</cpoA>
-      <cpoB>-53.500000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CAX">
-    <descricao>CAXIAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>400.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.763333</cpoA>
-      <cpoB>-43.337500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CAX">
-    <descricao>CAXIAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.776333</cpoA>
-      <cpoB>-43.333167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CBO">
-    <descricao>CACHIMBO</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.331333</cpoA>
-      <cpoB>-54.965000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CCI">
-    <descricao>CUCUI</descricao>
-    <tipo>N</tipo>
-    <frequencia>345.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>1.183000</cpoA>
-      <cpoB>-66.833833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CDE">
-    <descricao>CDE</descricao>
-    <tipo>N</tipo>
-    <frequencia>200.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.476667</cpoA>
-      <cpoB>-54.850000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CF">
-    <descricao>VESPA</descricao>
-    <tipo>N</tipo>
-    <frequencia>265.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.694667</cpoA>
-      <cpoB>-43.911333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CGO">
-    <descricao>CONGONHAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.627500</cpoA>
-      <cpoB>-46.654667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CGR">
-    <descricao>CAMPO GRANDE</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.468833</cpoA>
-      <cpoB>-54.670333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CH">
-    <descricao>COCHO</descricao>
-    <tipo>N</tipo>
-    <frequencia>240.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.860833</cpoA>
-      <cpoB>-47.885333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CIA">
-    <descricao>CUIABA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.656167</cpoA>
-      <cpoB>-56.112000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CJS">
-    <descricao>CARAJAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-6.119667</cpoA>
-      <cpoB>-50.002000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CNA">
-    <descricao>CAROLINA</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.318667</cpoA>
-      <cpoB>-47.454833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CNB">
-    <descricao>CANA BRAVA</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-13.543667</cpoA>
-      <cpoB>-48.194833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CNF">
-    <descricao>CONFINS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.558167</cpoA>
-      <cpoB>-44.048500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="COA">
-    <descricao>CANOAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.6</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.950167</cpoA>
-      <cpoB>-51.141333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="COM">
-    <descricao>COMANDATUBA</descricao>
-    <tipo>N</tipo>
-    <frequencia>335.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.356833</cpoA>
-      <cpoB>-38.996333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CPG">
-    <descricao>CAMPINA GRANDE</descricao>
-    <tipo>N</tipo>
-    <frequencia>230.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.264867</cpoA>
-      <cpoB>-35.891667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CPN">
-    <descricao>CAMPINAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>515.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.060000</cpoA>
-      <cpoB>-47.061000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CPN">
-    <descricao>CAMPINAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.008667</cpoA>
-      <cpoB>-47.129000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CPO">
-    <descricao>CAMPOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>225.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.697333</cpoA>
-      <cpoB>-41.306667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CRR">
-    <descricao>CARRASCO</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-34.833333</cpoA>
-      <cpoB>-56.019667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CRT">
-    <descricao>CRT</descricao>
-    <tipo>N</tipo>
-    <frequencia>390.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.531950</cpoA>
-      <cpoB>-49.167500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CRY">
-    <descricao>CRICIUMA</descricao>
-    <tipo>N</tipo>
-    <frequencia>405.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-28.719667</cpoA>
-      <cpoB>-49.419667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CRY">
-    <descricao>CRICIUMA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-28.722333</cpoA>
-      <cpoB>-49.409833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CTB">
-    <descricao>CURITIBA</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.532000</cpoA>
-      <cpoB>-49.167667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CUA">
-    <descricao>CARAUARI</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-4.887333</cpoA>
-      <cpoB>-66.903833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CUB">
-    <descricao>CORUMBA</descricao>
-    <tipo>N</tipo>
-    <frequencia>375.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.016000</cpoA>
-      <cpoB>-57.664333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CVL">
-    <descricao>CARAVELAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-17.648500</cpoA>
-      <cpoB>-39.255667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CVL">
-    <descricao>CARAVELAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-17.648500</cpoA>
-      <cpoB>-39.255667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CXI">
-    <descricao>CAXIAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.776333</cpoA>
-      <cpoB>-43.333167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CXM">
-    <descricao>COXIM</descricao>
-    <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.502000</cpoA>
-      <cpoB>-54.750000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CXS">
-    <descricao>CAXIAS DO SUL</descricao>
-    <tipo>N</tipo>
-    <frequencia>1690.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.144167</cpoA>
-      <cpoB>-51.234000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CXS">
-    <descricao>CAXIAS DO SUL</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.192167</cpoA>
-      <cpoB>-51.186500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="CZS">
-    <descricao>CRUZEIRO</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.606833</cpoA>
-      <cpoB>-72.773500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="DA">
-    <descricao>CALCANHAR</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.161167</cpoA>
-      <cpoB>-35.486500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="DAD">
-    <descricao>DIADEMA</descricao>
-    <tipo>N</tipo>
-    <frequencia>200.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.705667</cpoA>
-      <cpoB>-46.601333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="DOU">
-    <descricao>DOURADOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.197333</cpoA>
-      <cpoB>-54.928333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="EMB">
-    <descricao>NDB EMBUGUACU</descricao>
-    <tipo>N</tipo>
-    <frequencia>525.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.850000</cpoA>
-      <cpoB>-46.816667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ERP">
-    <descricao>EIRUNEPE</descricao>
-    <tipo>N</tipo>
-    <frequencia>265.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-6.661167</cpoA>
-      <cpoB>-69.872500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FB">
-    <descricao>TRAMANDAÍ</descricao>
-    <tipo>N</tipo>
-    <frequencia>300.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.996167</cpoA>
-      <cpoB>-50.145000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FGN">
-    <descricao>FAZ.GUANABARA</descricao>
-    <tipo>N</tipo>
-    <frequencia>335.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-14.777333</cpoA>
-      <cpoB>-57.193500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FGR">
-    <descricao>FIGUEIRAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.998167</cpoA>
-      <cpoB>-50.975167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FIR">
-    <descricao>FIGUEIRAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.998050</cpoA>
-      <cpoB>-50.975550</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FLN">
-    <descricao>FLORIANOPOLIS</descricao>
-    <tipo>N</tipo>
-    <frequencia>295.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.688333</cpoA>
-      <cpoB>-48.492333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FLN">
-    <descricao>FLORIANOPOLIS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.670000</cpoA>
-      <cpoB>-48.540500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FLZ">
-    <descricao>FORTALEZA</descricao>
-    <tipo>N</tipo>
-    <frequencia>260.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.772333</cpoA>
-      <cpoB>-38.547833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FLZ">
-    <descricao>FORTALEZA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.772333</cpoA>
-      <cpoB>-38.547667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FNO">
-    <descricao>NORONHA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.870167</cpoA>
-      <cpoB>-32.429333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FNR">
-    <descricao>NORONHA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.856667</cpoA>
-      <cpoB>-32.430000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FOZ">
-    <descricao>FOZ DO IGUACU</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.576500</cpoA>
-      <cpoB>-54.502000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FOZ">
-    <descricao>FOZ DO IGUACU</descricao>
-    <tipo>N</tipo>
-    <frequencia>410.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.531167</cpoA>
-      <cpoB>-54.570500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FPB">
-    <descricao>BEIRA</descricao>
-    <tipo>N</tipo>
-    <frequencia>240.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.431000</cpoA>
-      <cpoB>-64.425500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FRA">
-    <descricao>FORA</descricao>
-    <tipo>N</tipo>
-    <frequencia>1730.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.767833</cpoA>
-      <cpoB>-43.383667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FRC">
-    <descricao>FRANCA</descricao>
-    <tipo>N</tipo>
-    <frequencia>405.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.583667</cpoA>
-      <cpoB>-47.382500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FRM">
-    <descricao>FORMOSA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.557667</cpoA>
-      <cpoB>-47.347000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FSA">
-    <descricao>FORMOSA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.555833</cpoA>
-      <cpoB>-47.346667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FTR">
-    <descricao>FRONTEIRA</descricao>
-    <tipo>N</tipo>
-    <frequencia>220.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.274333</cpoA>
-      <cpoB>-49.189833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="FUR">
-    <descricao>FURNAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>390.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.703833</cpoA>
-      <cpoB>-46.338500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="GAB">
-    <descricao>GABI</descricao>
-    <tipo>N</tipo>
-    <frequencia>245.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-26.372500</cpoA>
-      <cpoB>-48.724167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="GDP">
-    <descricao>GUADALUPE</descricao>
-    <tipo>N</tipo>
-    <frequencia>400.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-6.780167</cpoA>
-      <cpoB>-43.585167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="GGT">
-    <descricao>GUARATINGUETA</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.788000</cpoA>
-      <cpoB>-45.215333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="GJM">
-    <descricao>GUAJARA</descricao>
-    <tipo>N</tipo>
-    <frequencia>400.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-10.784333</cpoA>
-      <cpoB>-65.281167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="GOI">
-    <descricao>GOIANIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.632500</cpoA>
-      <cpoB>-49.215500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="GRD">
-    <descricao>CAMPO GRANDE</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.483500</cpoA>
-      <cpoB>-54.688833</cpoB>
+      <cpoA>-1.38433</cpoA>
+      <cpoB>-48.4785</cpoB>
     </coord>
   </fixo>
 
@@ -1317,789 +50,30 @@
     <frequencia>230.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-25.386667</cpoA>
-      <cpoB>-51.522833</cpoB>
+      <cpoA>-25.38667</cpoA>
+      <cpoB>-51.52267</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="GYA">
-    <descricao>GUAYARAMERIM</descricao>
-    <tipo>N</tipo>
-    <frequencia>250.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.440333</cpoA>
-      <cpoB>-49.218833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IA">
-    <descricao>PESTANA</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.994000</cpoA>
-      <cpoB>-51.195833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IC">
-    <descricao>MOCAMBO</descricao>
-    <tipo>N</tipo>
-    <frequencia>245.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.560000</cpoA>
-      <cpoB>-44.037000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IEG">
-    <descricao>LLZ/DME IEG</descricao>
+  <fixo nFix="GRD">
+    <descricao>CAMPO GRANDE</descricao>
     <tipo>V</tipo>
-    <frequencia>110.3</frequencia>
+    <frequencia>111.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-3.035167</cpoA>
-      <cpoB>-60.022500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IF">
-    <descricao>FAZENDA</descricao>
-    <tipo>N</tipo>
-    <frequencia>215.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.616000</cpoA>
-      <cpoB>-43.985000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IG">
-    <descricao>TUCA</descricao>
-    <tipo>N</tipo>
-    <frequencia>410.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.462167</cpoA>
-      <cpoB>-46.578833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IGU">
-    <descricao>IGUAZU</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.733883</cpoA>
-      <cpoB>-54.488833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IH">
-    <descricao>RASA</descricao>
-    <tipo>N</tipo>
-    <frequencia>315.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.063833</cpoA>
-      <cpoB>-43.146000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IJ">
-    <descricao>VILA</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.212833</cpoA>
-      <cpoB>-45.879500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IK">
-    <descricao>BENTO</descricao>
-    <tipo>N</tipo>
-    <frequencia>300.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.956667</cpoA>
-      <cpoB>-47.203333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IL">
-    <descricao>CARIANO</descricao>
-    <tipo>N</tipo>
-    <frequencia>350.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.661500</cpoA>
-      <cpoB>-48.559167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IPE">
-    <descricao>P.PELADA</descricao>
-    <tipo>V</tipo>
-    <frequencia>109.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.143500</cpoA>
-      <cpoB>-59.976000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IP">
-    <descricao>GUAIBA</descricao>
-    <tipo>N</tipo>
-    <frequencia>345.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.992667</cpoA>
-      <cpoB>-51.281667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IR">
-    <descricao>TREVO</descricao>
-    <tipo>N</tipo>
-    <frequencia>280.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-15.864167</cpoA>
-      <cpoB>-47.937333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IS">
-    <descricao>CIMBRA</descricao>
-    <tipo>N</tipo>
-    <frequencia>220.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.927833</cpoA>
-      <cpoB>-38.420833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IT">
-    <descricao>MERITI</descricao>
-    <tipo>N</tipo>
-    <frequencia>290.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.829500</cpoA>
-      <cpoB>-43.362333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ITU">
-    <descricao>ITU</descricao>
-    <tipo>N</tipo>
-    <frequencia>225.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.408667</cpoA>
-      <cpoB>-54.621667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IV">
-    <descricao>IPITANGA</descricao>
-    <tipo>N</tipo>
-    <frequencia>240.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.913167</cpoA>
-      <cpoB>-38.337333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="IY">
-    <descricao>PIRA</descricao>
-    <tipo>N</tipo>
-    <frequencia>215.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.067500</cpoA>
-      <cpoB>-47.340667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JAC">
-    <descricao>JACAREACANGA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-6.235667</cpoA>
-      <cpoB>-57.770500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JCM">
-    <descricao>JOAO CAMARA</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.556667</cpoA>
-      <cpoB>-35.820000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JNV">
-    <descricao>JOINVILE</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-26.222333</cpoA>
-      <cpoB>-48.798000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JPG">
-    <descricao>JACAREPAGUA</descricao>
-    <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.987833</cpoA>
-      <cpoB>-43.368833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JPS">
-    <descricao>JOAO PESSOA</descricao>
-    <tipo>N</tipo>
-    <frequencia>320.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.140500</cpoA>
-      <cpoB>-34.952333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JRP">
-    <descricao>S. JOSE RIO PRETO</descricao>
-    <tipo>N</tipo>
-    <frequencia>420.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.813167</cpoA>
-      <cpoB>-49.406167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="JZR">
-    <descricao>JUAZEIRO</descricao>
-    <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.213833</cpoA>
-      <cpoB>-39.274500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="KRI">
-    <descricao>QUARI</descricao>
-    <tipo>N</tipo>
-    <frequencia>265.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.789500</cpoA>
-      <cpoB>-51.830833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LAP">
-    <descricao>LAPA</descricao>
-    <tipo>N</tipo>
-    <frequencia>320.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-13.264667</cpoA>
-      <cpoB>-43.408167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LAP">
-    <descricao>LAPA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-13.264667</cpoA>
-      <cpoB>-43.408167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LBA">
-    <descricao>ALBACORA</descricao>
-    <tipo>N</tipo>
-    <frequencia>210.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.109667</cpoA>
-      <cpoB>-39.916500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LBR">
-    <descricao>LABREA</descricao>
-    <tipo>N</tipo>
-    <frequencia>295.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-7.250333</cpoA>
-      <cpoB>-64.783833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LDP">
-    <descricao>LA DIV PASTORA</descricao>
-    <tipo>V</tipo>
-    <frequencia>117.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>4.693000</cpoA>
-      <cpoB>-61.028833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LEN">
-    <descricao>LENÇÓIS</descricao>
-    <tipo>N</tipo>
-    <frequencia>235.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.485667</cpoA>
-      <cpoB>-41.275667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LET">
-    <descricao>LETICIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>117.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-4.192000</cpoA>
-      <cpoB>-69.938833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LIB">
-    <descricao>LIBRES</descricao>
-    <tipo>N</tipo>
-    <frequencia>250.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.694667</cpoA>
-      <cpoB>-57.148000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LJS">
-    <descricao>LAJES</descricao>
-    <tipo>N</tipo>
-    <frequencia>240.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.782333</cpoA>
-      <cpoB>-50.276500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LLZ">
-    <descricao>ILS 14</descricao>
-    <tipo>V</tipo>
-    <frequencia>110.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.650000</cpoA>
-      <cpoB>-48.475000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LNS">
-    <descricao>LINS</descricao>
-    <tipo>N</tipo>
-    <frequencia>400.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.663500</cpoA>
-      <cpoB>-49.733667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LON">
-    <descricao>LONDRINA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.337000</cpoA>
-      <cpoB>-51.107500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LST">
-    <descricao>LAGOA SANTA</descricao>
-    <tipo>N</tipo>
-    <frequencia>295.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.658667</cpoA>
-      <cpoB>-43.897000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LUZ">
-    <descricao>LUZIANIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.260833</cpoA>
-      <cpoB>-47.971000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MAC">
-    <descricao>MACAE</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.344833</cpoA>
-      <cpoB>-41.768833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MAE">
-    <descricao>MARTE</descricao>
-    <tipo>N</tipo>
-    <frequencia>260.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.506833</cpoA>
-      <cpoB>-46.636500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MAN">
-    <descricao>MANAUS</descricao>
-    <tipo>N</tipo>
-    <frequencia>340.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.041833</cpoA>
-      <cpoB>-60.052000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MAR">
-    <descricao>MARILIA</descricao>
-    <tipo>N</tipo>
-    <frequencia>415.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.194833</cpoA>
-      <cpoB>-49.929333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MAR">
-    <descricao>MARLIM</descricao>
-    <tipo>N</tipo>
-    <frequencia>375.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.359167</cpoA>
-      <cpoB>-40.089167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCA">
-    <descricao>MACAE</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.344500</cpoA>
-      <cpoB>-41.769000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCE">
-    <descricao>MACEIO</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.509833</cpoA>
-      <cpoB>-35.786833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCE">
-    <descricao>ZUMBI</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.512667</cpoA>
-      <cpoB>-35.792167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCL">
-    <descricao>MONTES CLAROS</descricao>
-    <tipo>N</tipo>
-    <frequencia>310.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.703500</cpoA>
-      <cpoB>-43.819167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCO">
-    <descricao>MACEIO</descricao>
-    <tipo>N</tipo>
-    <frequencia>340.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.511667</cpoA>
-      <cpoB>-35.804500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCP">
-    <descricao>MACAPA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>0.052333</cpoA>
-      <cpoB>-51.073000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCR">
-    <descricao>MANICORE</descricao>
-    <tipo>N</tipo>
-    <frequencia>310.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.807167</cpoA>
-      <cpoB>-61.282000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MCS">
-    <descricao>MONTE CASEROS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-30.269667</cpoA>
-      <cpoB>-57.638333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MDD">
-    <descricao>DOURADO</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-0.883333</cpoA>
-      <cpoB>-52.603000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MIA">
-    <descricao>MARICÁ</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.967667</cpoA>
-      <cpoB>-42.891333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MLO">
-    <descricao>MELO</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-32.338333</cpoA>
-      <cpoB>-54.219667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MLZ">
-    <descricao>MERLUZA</descricao>
-    <tipo>N</tipo>
-    <frequencia>1645.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.266833</cpoA>
-      <cpoB>-45.252667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MNS">
-    <descricao>MANAUS</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.040000</cpoA>
-      <cpoB>-60.054667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MOZ">
-    <descricao>MOZ</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-1.750333</cpoA>
-      <cpoB>-52.233833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MRA">
-    <descricao>MARILIA</descricao>
-    <tipo>N</tipo>
-    <frequencia>415.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.200000</cpoA>
-      <cpoB>-49.933333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MRB">
-    <descricao>MARABA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.368167</cpoA>
-      <cpoB>-49.135167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MRC">
-    <descricao>MARICA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.967667</cpoA>
-      <cpoB>-42.891333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MRN">
-    <descricao>MARINGA</descricao>
-    <tipo>N</tipo>
-    <frequencia>320.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.475833</cpoA>
-      <cpoB>-52.006000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MRN">
-    <descricao>MARINGA</descricao>
-    <tipo>V</tipo>
-    <frequencia>108.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.483733</cpoA>
-      <cpoB>-51.900683</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MSS">
-    <descricao>MOSSORO</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.197167</cpoA>
-      <cpoB>-37.364500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MSS">
-    <descricao>MOSSORO</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.197333</cpoA>
-      <cpoB>-37.364500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MTU">
-    <descricao>MITU</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>1.242333</cpoA>
-      <cpoB>-70.236500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MXN">
-    <descricao>MAXARANGUAPE</descricao>
-    <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.386167</cpoA>
-      <cpoB>-35.531000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NFL">
-    <descricao>FLORIAN</descricao>
-    <tipo>N</tipo>
-    <frequencia>295.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.691667</cpoA>
-      <cpoB>-48.498167</cpoB>
+      <cpoA>-20.46883</cpoA>
+      <cpoB>-54.67033</cpoB>
     </coord>
   </fixo>
 
   <fixo nFix="NOA">
-    <descricao>NOVA</descricao>
+    <descricao>NOA</descricao>
     <tipo>N</tipo>
     <frequencia>215.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-22.718500</cpoA>
-      <cpoB>-43.480667</cpoB>
+      <cpoA>-22.7185</cpoA>
+      <cpoB>-43.4805</cpoB>
     </coord>
   </fixo>
 
@@ -2109,371 +83,19 @@
     <frequencia>300.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-3.865667</cpoA>
-      <cpoB>-32.448333</cpoB>
+      <cpoA>-3.86</cpoA>
+      <cpoB>-32.43</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="NOR">
-    <descricao>NORONHA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.865667</cpoA>
-      <cpoB>-32.448333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NR">
-    <descricao>MOELA</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-24.050500</cpoA>
-      <cpoB>-46.264167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NTL">
-    <descricao>NATAL</descricao>
-    <tipo>N</tipo>
-    <frequencia>400.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.908333</cpoA>
-      <cpoB>-35.248667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NTL">
-    <descricao>NATAL</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.908333</cpoA>
-      <cpoB>-35.248667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NUQ">
-    <descricao>NANUQUE</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-17.885500</cpoA>
-      <cpoB>-40.360667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NVG">
-    <descricao>NAVEGANTES</descricao>
-    <tipo>N</tipo>
-    <frequencia>235.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-26.871833</cpoA>
-      <cpoB>-48.651333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NX">
-    <descricao>DOMEL</descricao>
-    <tipo>N</tipo>
-    <frequencia>320.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.489333</cpoA>
-      <cpoB>-48.323667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="OAS">
-    <descricao>CANOAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>250.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.944667</cpoA>
-      <cpoB>-51.137167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="OIA">
-    <descricao>OIAPOQUE</descricao>
-    <tipo>N</tipo>
-    <frequencia>340.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>3.859833</cpoA>
-      <cpoB>-51.797833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="OLD">
-    <descricao>OLINDA</descricao>
-    <tipo>N</tipo>
-    <frequencia>380.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-8.038333</cpoA>
-      <cpoB>-34.951667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ORH">
-    <descricao>OURINHOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>315.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.973500</cpoA>
-      <cpoB>-49.912333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="P11">
-    <descricao>RADAR 11</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.653483</cpoA>
-      <cpoB>-53.919731</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PAF">
-    <descricao>PAULO AFONSO</descricao>
-    <tipo>N</tipo>
-    <frequencia>325.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.402000</cpoA>
-      <cpoB>-38.252833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PAF">
-    <descricao>PAULO AFONSO</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.402667</cpoA>
-      <cpoB>-38.255500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PAG">
-    <descricao>PORTO ALEGRE</descricao>
-    <tipo>N</tipo>
-    <frequencia>330.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.999667</cpoA>
-      <cpoB>-51.178500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PAI">
-    <descricao>PIRAI</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.454000</cpoA>
-      <cpoB>-43.840500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PA">
-    <descricao>SALGADO</descricao>
-    <tipo>N</tipo>
-    <frequencia>315.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.995167</cpoA>
-      <cpoB>-51.143167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PAT">
-    <descricao>PATOS DE MINAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>385.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.668667</cpoA>
-      <cpoB>-46.493333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PCI">
-    <descricao>PICI</descricao>
-    <tipo>N</tipo>
-    <frequencia>210.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.751667</cpoA>
-      <cpoB>-38.625000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PCL">
-    <descricao>POCOS DE CALDAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>415.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.835833</cpoA>
-      <cpoB>-46.565667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PCR">
-    <descricao>PARI CACHOEIRA</descricao>
-    <tipo>N</tipo>
-    <frequencia>325.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>0.261833</cpoA>
-      <cpoB>-69.788500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PCX">
-    <descricao>PORTO</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.6</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.715333</cpoA>
-      <cpoB>-42.857500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PEL">
-    <descricao>PELADA</descricao>
-    <tipo>N</tipo>
-    <frequencia>410.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.142833</cpoA>
-      <cpoB>-59.993667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PER">
-    <descricao>PERUS</descricao>
-    <tipo>N</tipo>
-    <frequencia>220.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.420667</cpoA>
-      <cpoB>-46.756000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PFD">
-    <descricao>PASSO FUNDO</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-28.245000</cpoA>
-      <cpoB>-52.333667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PIR">
-    <descricao>PIRASSUNUNGA</descricao>
-    <tipo>N</tipo>
-    <frequencia>310.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.984500</cpoA>
-      <cpoB>-47.344500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PIR">
-    <descricao>PIRASSUNUNGA</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.984500</cpoA>
-      <cpoB>-47.344167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PKT">
-    <descricao>PARACATU</descricao>
-    <tipo>N</tipo>
-    <frequencia>300.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-17.217167</cpoA>
-      <cpoB>-46.933833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PMS">
-    <descricao>PALMAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-10.288000</cpoA>
-      <cpoB>-48.358500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PNB">
-    <descricao>PARNAIBA</descricao>
+  <fixo nFix="A">
+    <descricao>ATERRO</descricao>
     <tipo>N</tipo>
     <frequencia>365.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-2.897500</cpoA>
-      <cpoB>-41.728833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PNC">
-    <descricao>PORTO NACIONAL</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-10.719000</cpoA>
-      <cpoB>-48.401500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PNG">
-    <descricao>PARANAGUA</descricao>
-    <tipo>N</tipo>
-    <frequencia>340.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.534333</cpoA>
-      <cpoB>-48.530500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PNH">
-    <descricao>PINHAIS</descricao>
-    <tipo>N</tipo>
-    <frequencia>255.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.605833</cpoA>
-      <cpoB>-49.089333</cpoB>
+      <cpoA>-29.6575</cpoA>
+      <cpoB>-53.86783</cpoB>
     </coord>
   </fixo>
 
@@ -2483,1031 +105,103 @@
     <frequencia>335.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-22.677000</cpoA>
-      <cpoB>-40.605500</cpoB>
+      <cpoA>-22.677</cpoA>
+      <cpoB>-40.6055</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="POR">
-    <descricao>PORTO ALEGRE</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.999667</cpoA>
-      <cpoB>-51.178500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="POS">
-    <descricao>POSADAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.387167</cpoA>
-      <cpoB>-55.969167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PPM">
-    <descricao>PAMPO</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.797833</cpoA>
-      <cpoB>-40.762500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="P">
-    <descricao>PORTAL</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.659167</cpoA>
-      <cpoB>-53.691333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PP">
-    <descricao>PAIOL</descricao>
-    <tipo>N</tipo>
-    <frequencia>415.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.870167</cpoA>
-      <cpoB>-43.165167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PP">
-    <descricao>POROROCA</descricao>
-    <tipo>N</tipo>
-    <frequencia>325.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.143833</cpoA>
-      <cpoB>-48.893833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PRI">
-    <descricao>PARINTINS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-2.667333</cpoA>
-      <cpoB>-56.773167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PRR">
-    <descricao>PRUDENTE</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.175667</cpoA>
-      <cpoB>-51.422500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PSN">
-    <descricao>PIRASSUNUNGA</descricao>
-    <tipo>N</tipo>
-    <frequencia>820.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.984517</cpoA>
-      <cpoB>-47.344167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PSN">
-    <descricao>PIRASSUNUNGA</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.984500</cpoA>
-      <cpoB>-47.344167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PTL">
-    <descricao>PETROLINA</descricao>
-    <tipo>N</tipo>
-    <frequencia>345.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.364000</cpoA>
-      <cpoB>-40.563333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PTL">
-    <descricao>PETROLINA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.364000</cpoA>
-      <cpoB>-40.563333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PTP">
-    <descricao>PONTA PORA</descricao>
-    <tipo>N</tipo>
-    <frequencia>340.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.550167</cpoA>
-      <cpoB>-55.707167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PTS">
-    <descricao>PELOTAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-31.719167</cpoA>
-      <cpoB>-52.327333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PTT">
-    <descricao>TROMBETAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>205.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-1.486333</cpoA>
-      <cpoB>-56.398000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PVH">
-    <descricao>PORTO VELHO</descricao>
-    <tipo>N</tipo>
-    <frequencia>385.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-8.707833</cpoA>
-      <cpoB>-63.898333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RBC">
-    <descricao>RIO BRANCO</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.871833</cpoA>
-      <cpoB>-67.895333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RCL">
-    <descricao>RIO CLARO</descricao>
-    <tipo>N</tipo>
-    <frequencia>280.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.418000</cpoA>
-      <cpoB>-47.562167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RCO">
-    <descricao>BRANCO</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-9.871833</cpoA>
-      <cpoB>-67.895333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RDE">
-    <descricao>REDE</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.891000</cpoA>
-      <cpoB>-46.528167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="REC">
-    <descricao>RECIFE</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-8.136500</cpoA>
-      <cpoB>-34.927333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RG">
-    <descricao>CANAL</descricao>
-    <tipo>N</tipo>
-    <frequencia>290.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-32.149333</cpoA>
-      <cpoB>-52.103667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RIB">
-    <descricao>RIBAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>245.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.466667</cpoA>
-      <cpoB>-53.750000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RON">
-    <descricao>RONDONIA</descricao>
+  <fixo nFix="PNH">
+    <descricao>PINHAIS</descricao>
     <tipo>N</tipo>
     <frequencia>255.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-10.888000</cpoA>
-      <cpoB>-61.912167</cpoB>
+      <cpoA>-25.60583</cpoA>
+      <cpoB>-49.08933</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="RPR">
-    <descricao>RIBEIRAO PRETO</descricao>
+  <fixo nFix="PNC">
+    <descricao>PNC</descricao>
     <tipo>V</tipo>
-    <frequencia>115.6</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-21.136000</cpoA>
-      <cpoB>-47.776667</cpoB>
+      <cpoA>-10.719</cpoA>
+      <cpoB>-48.4015</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="RPR">
-    <descricao>RIBEIRAO PRETO</descricao>
-    <tipo>N</tipo>
-    <frequencia>330.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.136000</cpoA>
-      <cpoB>-47.776667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RR">
-    <descricao>VICENTE</descricao>
-    <tipo>N</tipo>
-    <frequencia>360.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.947500</cpoA>
-      <cpoB>-46.286833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="RVA">
-    <descricao>RIVERA</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-31.007000</cpoA>
-      <cpoB>-55.509000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SAN">
-    <descricao>SANTO ANGELO</descricao>
-    <tipo>N</tipo>
-    <frequencia>280.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-28.275667</cpoA>
-      <cpoB>-54.167667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SAT">
-    <descricao>SANTOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>375.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.983167</cpoA>
-      <cpoB>-46.263333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SBG">
-    <descricao>SANTA BARBARA</descricao>
-    <tipo>N</tipo>
-    <frequencia>230.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.580500</cpoA>
-      <cpoB>-49.698167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SCB">
-    <descricao>SOROCABA</descricao>
-    <tipo>N</tipo>
-    <frequencia>350.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.483167</cpoA>
-      <cpoB>-47.484667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SCB">
-    <descricao>SOROCABA</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.507000</cpoA>
-      <cpoB>-47.378333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SCP">
-    <descricao>SCP</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.246333</cpoA>
-      <cpoB>-45.854167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SCR">
-    <descricao>SANTA CRUZ</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.6</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.949667</cpoA>
-      <cpoB>-43.727500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SGA">
-    <descricao>SAO GONCALO</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.769667</cpoA>
-      <cpoB>-35.367833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SGC">
-    <descricao>GABRIEL</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.4</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-0.150667</cpoA>
-      <cpoB>-66.985167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SGR">
-    <descricao>PORTO SEGURO</descricao>
-    <tipo>N</tipo>
-    <frequencia>385.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.441667</cpoA>
-      <cpoB>-39.082500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SJC">
-    <descricao>SAO JOSÉ DOS CAMPOS</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.246333</cpoA>
-      <cpoB>-45.854167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SLI">
-    <descricao>SAO LUIS</descricao>
-    <tipo>V</tipo>
-    <frequencia>113.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-2.589167</cpoA>
-      <cpoB>-44.240000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SMA">
-    <descricao>SANTA MARIA</descricao>
+  <fixo nFix="PNB">
+    <descricao>PARNAIBA</descricao>
     <tipo>N</tipo>
     <frequencia>365.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-29.707000</cpoA>
-      <cpoB>-53.693833</cpoB>
+      <cpoA>-2.8975</cpoA>
+      <cpoB>-41.72883</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="SMA">
-    <descricao>SANTA MARIA</descricao>
+  <fixo nFix="MRN">
+    <descricao>MARINGA</descricao>
+    <tipo>N</tipo>
+    <frequencia>320.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.47583</cpoA>
+      <cpoB>-52.006</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MRA">
+    <descricao>MARILIA</descricao>
+    <tipo>N</tipo>
+    <frequencia>415.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.19483</cpoA>
+      <cpoB>-49.92933</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MRB">
+    <descricao>MARABA</descricao>
     <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-29.706000</cpoA>
-      <cpoB>-53.707833</cpoB>
+      <cpoA>-5.36817</cpoA>
+      <cpoB>-49.13517</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="SMR">
-    <descricao>CERRITO</descricao>
-    <tipo>N</tipo>
-    <frequencia>215.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.706333</cpoA>
-      <cpoB>-53.769000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SM">
-    <descricao>SAO MARCOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>300.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-2.488500</cpoA>
-      <cpoB>-44.302333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SMT">
-    <descricao>SAN MATIAS</descricao>
-    <tipo>N</tipo>
-    <frequencia>330.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-16.335333</cpoA>
-      <cpoB>-58.387167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SNE">
-    <descricao>SETOR NORDESTE</descricao>
+  <fixo nFix="MRC">
+    <descricao>MRC</descricao>
     <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-29.583685</cpoA>
-      <cpoB>-52.956393</cpoB>
+      <cpoA>-22.96767</cpoA>
+      <cpoB>-42.89133</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="SNO">
-    <descricao>SETOR NOROESTE</descricao>
+  <fixo nFix="APO">
+    <descricao>APO</descricao>
     <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-29.134747</cpoA>
-      <cpoB>-53.905270</cpoB>
+      <cpoA>-16.24528</cpoA>
+      <cpoB>-48.97888</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="SPO">
-    <descricao>SAO PAULO</descricao>
+  <fixo nFix="FRA">
+    <descricao>FORA</descricao>
     <tipo>N</tipo>
-    <frequencia>250.0</frequencia>
+    <frequencia>1730.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-23.610500</cpoA>
-      <cpoB>-46.668167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SSE">
-    <descricao>SETOR SUDESTE</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-30.171857</cpoA>
-      <cpoB>-52.901179</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="STG">
-    <descricao>TOME [FAROL]</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-22.033000</cpoA>
-      <cpoB>-41.074167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="STM">
-    <descricao>SANTAREM</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-2.426500</cpoA>
-      <cpoB>-54.817500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="STN">
-    <descricao>SANTANA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.487500</cpoA>
-      <cpoB>-46.923333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SVD">
-    <descricao>SALVADOR</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.906500</cpoA>
-      <cpoB>-38.321333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SVD">
-    <descricao>SALVADOR</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.906500</cpoA>
-      <cpoB>-38.321333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SW">
-    <descricao>SANTA MARTA</descricao>
-    <tipo>N</tipo>
-    <frequencia>310.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-28.603833</cpoA>
-      <cpoB>-48.813833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TBE">
-    <descricao>TAUBATE</descricao>
-    <tipo>N</tipo>
-    <frequencia>430.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.045667</cpoA>
-      <cpoB>-45.516667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TBT">
-    <descricao>TABATINGA</descricao>
-    <tipo>N</tipo>
-    <frequencia>230.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-4.249333</cpoA>
-      <cpoB>-69.936167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TFE">
-    <descricao>TEFE</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.387833</cpoA>
-      <cpoB>-64.728000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TGR">
-    <descricao>TANGARA-NATAL</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-6.216667</cpoA>
-      <cpoB>-35.800000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TIR">
-    <descricao>TIRIOS</descricao>
-    <tipo>N</tipo>
-    <frequencia>240.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>2.219000</cpoA>
-      <cpoB>-55.941833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TLB">
-    <descricao>TELÊMACO</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-24.319000</cpoA>
-      <cpoB>-50.653500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TOL">
-    <descricao>TOLEDO</descricao>
-    <tipo>N</tipo>
-    <frequencia>385.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-24.683567</cpoA>
-      <cpoB>-53.699667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TOR">
-    <descricao>TORRES</descricao>
-    <tipo>N</tipo>
-    <frequencia>230.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.414333</cpoA>
-      <cpoB>-49.806667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TPQ">
-    <descricao>TAPURUQUARA</descricao>
-    <tipo>N</tipo>
-    <frequencia>365.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-0.417000</cpoA>
-      <cpoB>-65.036333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TPV">
-    <descricao>ITAPEVI</descricao>
-    <tipo>N</tipo>
-    <frequencia>270.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.565500</cpoA>
-      <cpoB>-46.922667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TPV">
-    <descricao>NDB ITAPEVI</descricao>
-    <tipo>N</tipo>
-    <frequencia>270.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.565000</cpoA>
-      <cpoB>-46.921667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TQA">
-    <descricao>TAQUARA</descricao>
-    <tipo>N</tipo>
-    <frequencia>360.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.668500</cpoA>
-      <cpoB>-50.781833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TRA">
-    <descricao>TRAMANDAI</descricao>
-    <tipo>N</tipo>
-    <frequencia>305.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.996333</cpoA>
-      <cpoB>-50.145000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TRM">
-    <descricao>TRES MARIAS</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.7</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.203167</cpoA>
-      <cpoB>-45.457167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TRS">
-    <descricao>TERESINA</descricao>
-    <tipo>N</tipo>
-    <frequencia>215.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.066167</cpoA>
-      <cpoB>-42.825000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TRS">
-    <descricao>TERESINA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-5.066167</cpoA>
-      <cpoB>-42.824833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TUI">
-    <descricao>TUCURUI</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.9</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.801333</cpoA>
-      <cpoB>-49.721333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="TUP">
-    <descricao>TUPÃ</descricao>
-    <tipo>N</tipo>
-    <frequencia>345.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.893833</cpoA>
-      <cpoB>-50.502167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="UBT">
-    <descricao>UBATUBA</descricao>
-    <tipo>N</tipo>
-    <frequencia>295.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-23.449167</cpoA>
-      <cpoB>-45.073833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="UI">
-    <descricao>CHUI</descricao>
-    <tipo>N</tipo>
-    <frequencia>312.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-33.742333</cpoA>
-      <cpoB>-53.374500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ULD">
-    <descricao>UBERLANDIA</descricao>
-    <tipo>N</tipo>
-    <frequencia>350.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.887167</cpoA>
-      <cpoB>-48.230000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="ULD">
-    <descricao>UBERLANDIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.887167</cpoA>
-      <cpoB>-48.230000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="URB">
-    <descricao>UBERABA</descricao>
-    <tipo>N</tipo>
-    <frequencia>235.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-19.765500</cpoA>
-      <cpoB>-47.959167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="URC">
-    <descricao>COARI</descricao>
-    <tipo>N</tipo>
-    <frequencia>355.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-4.886167</cpoA>
-      <cpoB>-65.349167</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="URG">
-    <descricao>URUGUAIANA</descricao>
-    <tipo>N</tipo>
-    <frequencia>275.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-29.784667</cpoA>
-      <cpoB>-57.035000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="URP">
-    <descricao>URUBUPUNGA</descricao>
-    <tipo>V</tipo>
-    <frequencia>114.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.776500</cpoA>
-      <cpoB>-51.558833</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="URT">
-    <descricao>URUBURETAMA</descricao>
-    <tipo>N</tipo>
-    <frequencia>235.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-3.585500</cpoA>
-      <cpoB>-39.426667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VAL">
-    <descricao>VALADARES</descricao>
-    <tipo>N</tipo>
-    <frequencia>380.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-18.892500</cpoA>
-      <cpoB>-41.986000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VAS">
-    <descricao>ASUNCION</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.2</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.234333</cpoA>
-      <cpoB>-57.508000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VCO">
-    <descricao>CONQUISTA</descricao>
-    <tipo>N</tipo>
-    <frequencia>260.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-14.866500</cpoA>
-      <cpoB>-40.865500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VES">
-    <descricao>VOR SGES</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.3</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-25.460500</cpoA>
-      <cpoB>-54.850500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VGH">
-    <descricao>VARGINHA</descricao>
-    <tipo>N</tipo>
-    <frequencia>325.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-21.588167</cpoA>
-      <cpoB>-45.474333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VLH">
-    <descricao>VILHENA</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-12.693667</cpoA>
-      <cpoB>-60.095333</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VSA">
-    <descricao>VITORIA SANTO ANTAO</descricao>
-    <tipo>N</tipo>
-    <frequencia>285.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-8.105833</cpoA>
-      <cpoB>-35.287667</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VTR">
-    <descricao>VITORIA</descricao>
-    <tipo>N</tipo>
-    <frequencia>350.0</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.249667</cpoA>
-      <cpoB>-40.283000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="VTR">
-    <descricao>VITORIA</descricao>
-    <tipo>V</tipo>
-    <frequencia>115.5</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-20.249667</cpoA>
-      <cpoB>-40.283000</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="XPC">
-    <descricao>CHAPECO</descricao>
-    <tipo>V</tipo>
-    <frequencia>116.1</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.124833</cpoA>
-      <cpoB>-52.642500</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="XRO">
-    <descricao>FLORIANOPOLIS</descricao>
-    <tipo>V</tipo>
-    <frequencia>117.8</frequencia>
-    <coord>
-      <tipo>L</tipo>
-      <cpoA>-27.688333</cpoA>
-      <cpoB>-48.492333</cpoB>
+      <cpoA>-21.76783</cpoA>
+      <cpoB>-43.38367</cpoB>
     </coord>
   </fixo>
 
@@ -3517,96 +211,1215 @@
     <frequencia>380.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>0.599667</cpoA>
-      <cpoB>-69.188833</cpoB>
+      <cpoA>0.59967</cpoA>
+      <cpoB>-69.18883</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YBA">
-    <descricao>ITUMBIARA</descricao>
+  <fixo nFix="VCO">
+    <descricao>NDB CONQUISTA</descricao>
     <tipo>N</tipo>
-    <frequencia>245.0</frequencia>
+    <frequencia>260.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-18.440333</cpoA>
-      <cpoB>-49.218833</cpoB>
+      <cpoA>-14.8665</cpoA>
+      <cpoB>-40.8655</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YLA">
-    <descricao>ILHA</descricao>
-    <tipo>N</tipo>
-    <frequencia>330.0</frequencia>
+  <fixo nFix="XRO">
+    <descricao>FLORIANOPOLIS_V</descricao>
+    <tipo>V</tipo>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-22.787000</cpoA>
-      <cpoB>-43.167667</cpoB>
+      <cpoA>-27.68833</cpoA>
+      <cpoB>-48.49233</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YLH">
-    <descricao>ILHEUS</descricao>
+  <fixo nFix="PSN">
+    <descricao>PSN</descricao>
+    <tipo>V</tipo>
+    <frequencia>820.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.98333</cpoA>
+      <cpoB>-47.34333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BCO">
+    <descricao>BCO</descricao>
+    <tipo>V</tipo>
+    <frequencia>240.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.40633</cpoA>
+      <cpoB>-46.3855</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BCH">
+    <descricao>BACACHERI</descricao>
+    <tipo>N</tipo>
+    <frequencia>300.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.4025</cpoA>
+      <cpoB>-49.22883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BCP">
+    <descricao>DEZOITO</descricao>
+    <tipo>N</tipo>
+    <frequencia>390.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.42667</cpoA>
+      <cpoB>-40.02983</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CXS">
+    <descricao>DOSUL</descricao>
+    <tipo>V</tipo>
+    <frequencia>1690.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.19817</cpoA>
+      <cpoB>-51.18867</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CXI">
+    <descricao>CAXIAS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.77633</cpoA>
+      <cpoB>-43.33317</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CXM">
+    <descricao>COXIM</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.50383</cpoA>
+      <cpoB>-54.7505</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AVA">
+    <descricao>AVARÉ</descricao>
+    <tipo>N</tipo>
+    <frequencia>265.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.64933</cpoA>
+      <cpoB>-46.89183</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VAL">
+    <descricao>VAL</descricao>
+    <tipo>N</tipo>
+    <frequencia>380.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.89867</cpoA>
+      <cpoB>-41.98783</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VAS">
+    <descricao>ASUNCION</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.23433</cpoA>
+      <cpoB>-57.508</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="DOU">
+    <descricao>DOURA</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.19733</cpoA>
+      <cpoB>-54.92833</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BAG">
+    <descricao>BAG</descricao>
+    <tipo>V</tipo>
+    <frequencia>320.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.8535</cpoA>
+      <cpoB>-52.39567</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="STG">
+    <descricao>FAROL TOME</descricao>
+    <tipo>N</tipo>
+    <frequencia>360.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.033</cpoA>
+      <cpoB>-41.07417</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="STM">
+    <descricao>SANTAREM</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.4265</cpoA>
+      <cpoB>-54.8175</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="STN">
+    <descricao>STN</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.48767</cpoA>
+      <cpoB>-46.92333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TFE">
+    <descricao>TEFE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.38783</cpoA>
+      <cpoB>-64.728</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LIB">
+    <descricao>LIBRES</descricao>
+    <tipo>N</tipo>
+    <frequencia>250.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.69467</cpoA>
+      <cpoB>-57.148</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FNO">
+    <descricao>FERNANDO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.87017</cpoA>
+      <cpoB>-32.42933</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CZS">
+    <descricao>CRUZEIRO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.60683</cpoA>
+      <cpoB>-72.7735</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LOTAR">
+    <descricao>LOTAR</descricao>
     <tipo>N</tipo>
     <frequencia>305.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-14.812167</cpoA>
-      <cpoB>-39.036667</cpoB>
+      <cpoA>-12.23907</cpoA>
+      <cpoB>-38.31433</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YPT">
-    <descricao>IPATINGA</descricao>
-    <tipo>N</tipo>
-    <frequencia>1618.0</frequencia>
+  <fixo nFix="ATM">
+    <descricao>ALTAMIRA</descricao>
+    <tipo>V</tipo>
+    <frequencia>295.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-19.463000</cpoA>
-      <cpoB>-42.479500</cpoB>
+      <cpoA>-3.24933</cpoA>
+      <cpoB>-52.24767</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YTC">
-    <descricao>ITACOATIARA</descricao>
+  <fixo nFix="PNG">
+    <descricao>PARANAGUA</descricao>
+    <tipo>N</tipo>
+    <frequencia>375.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.53467</cpoA>
+      <cpoB>-48.53083</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VGH">
+    <descricao>VGH</descricao>
+    <tipo>N</tipo>
+    <frequencia>325.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.58817</cpoA>
+      <cpoB>-45.47433</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PRI">
+    <descricao>PARINTINS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.66733</cpoA>
+      <cpoB>-56.77317</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AGI">
+    <descricao>ARAGUAINA</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.23367</cpoA>
+      <cpoB>-48.24283</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SVD">
+    <descricao>SVD</descricao>
+    <tipo>V</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.9065</cpoA>
+      <cpoB>-38.32133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="COA">
+    <descricao>CANOAS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.95033</cpoA>
+      <cpoB>-51.14583</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FLZ">
+    <descricao>FORTALEZA</descricao>
+    <tipo>V</tipo>
+    <frequencia>260.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.77233</cpoA>
+      <cpoB>-38.54767</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FLN">
+    <descricao>FLORIANOPOLIS_N</descricao>
+    <tipo>N</tipo>
+    <frequencia>295.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.68833</cpoA>
+      <cpoB>-48.49233</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NX">
+    <descricao>DOMEL</descricao>
     <tipo>N</tipo>
     <frequencia>320.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-3.119333</cpoA>
-      <cpoB>-58.480833</cpoB>
+      <cpoA>-25.4935</cpoA>
+      <cpoB>-48.32867</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YTN">
-    <descricao>ITAMARATI NORTE</descricao>
+  <fixo nFix="NR">
+    <descricao>NDB MOELA</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.05</cpoA>
+      <cpoB>-46.26333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CPN">
+    <descricao>CPN</descricao>
+    <tipo>V</tipo>
+    <frequencia>515.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.00867</cpoA>
+      <cpoB>-47.129</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CPG">
+    <descricao>CAMPINA GRANDE</descricao>
+    <tipo>N</tipo>
+    <frequencia>230.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.266</cpoA>
+      <cpoB>-35.89267</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="GNV">
+    <descricao>GNV</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.64083</cpoA>
+      <cpoB>-49.21112</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VES">
+    <descricao>VOR SGES</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.4605</cpoA>
+      <cpoB>-54.8505</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="URG">
+    <descricao>URUGUAIANA</descricao>
+    <tipo>N</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.786</cpoA>
+      <cpoB>-57.03667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="URB">
+    <descricao>URB</descricao>
     <tipo>N</tipo>
     <frequencia>235.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-14.242500</cpoA>
-      <cpoB>-57.990833</cpoB>
+      <cpoA>-19.7655</cpoA>
+      <cpoB>-47.95917</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YTT">
-    <descricao>ITATAIA</descricao>
+  <fixo nFix="URC">
+    <descricao>COARI</descricao>
+    <tipo>N</tipo>
+    <frequencia>355.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.88617</cpoA>
+      <cpoB>-65.34917</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="URP">
+    <descricao>URP</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.77638</cpoA>
+      <cpoB>-51.55888</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IPE">
+    <descricao>LLZ PEL</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.14167</cpoA>
+      <cpoB>-59.975</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ATARI">
+    <descricao>ATARI</descricao>
+    <tipo>N</tipo>
+    <frequencia>200.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.7275</cpoA>
+      <cpoB>-52.22867</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NDB CAX">
+    <descricao>NDB CAX</descricao>
+    <tipo>N</tipo>
+    <frequencia>400.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.763</cpoA>
+      <cpoB>-43.33783</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TBT">
+    <descricao>TABATINGA</descricao>
+    <tipo>N</tipo>
+    <frequencia>230.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.24933</cpoA>
+      <cpoB>-69.93617</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TBE">
+    <descricao>TBE</descricao>
+    <tipo>N</tipo>
+    <frequencia>430.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.04567</cpoA>
+      <cpoB>-45.51667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LUZ">
+    <descricao>LUZ</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.26083</cpoA>
+      <cpoB>-47.971</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MXN">
+    <descricao>MXN</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.38617</cpoA>
+      <cpoB>-35.531</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SMT">
+    <descricao>SMT</descricao>
+    <tipo>N</tipo>
+    <frequencia>330.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.33533</cpoA>
+      <cpoB>-58.38717</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PAF">
+    <descricao>PAULO AFONSO</descricao>
+    <tipo>V</tipo>
+    <frequencia>325.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.40267</cpoA>
+      <cpoB>-38.2555</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SMA">
+    <descricao>SANTA MARIA</descricao>
+    <tipo>V</tipo>
+    <frequencia>365.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.70617</cpoA>
+      <cpoB>-53.7075</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BKO">
+    <descricao>BOKO</descricao>
+    <tipo>N</tipo>
+    <frequencia>380.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.61867</cpoA>
+      <cpoB>-48.62267</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SJT">
+    <descricao>TRIUNFO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.22352</cpoA>
+      <cpoB>-63.74751</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SJO">
+    <descricao>ARIQUEMES</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-10.15623</cpoA>
+      <cpoB>-63.07056</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SJC">
+    <descricao>SJC</descricao>
+    <tipo>V</tipo>
+    <frequencia>230.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.24633</cpoA>
+      <cpoB>-45.85417</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="GDP">
+    <descricao>GUADALUPE</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-6.78017</cpoA>
+      <cpoB>-43.58517</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ACJ">
+    <descricao>ARACAJU</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-10.98167</cpoA>
+      <cpoB>-37.07133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FUR">
+    <descricao>FUR</descricao>
+    <tipo>N</tipo>
+    <frequencia>390.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.70383</cpoA>
+      <cpoB>-46.3385</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ADA">
+    <descricao>ADA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.81283</cpoA>
+      <cpoB>-42.09533</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ITU">
+    <descricao>ITU</descricao>
+    <tipo>N</tipo>
+    <frequencia>225.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.40862</cpoA>
+      <cpoB>-54.62167</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AAQ">
+    <descricao>AAQ</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.813</cpoA>
+      <cpoB>-48.1395</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SLI">
+    <descricao>SAO LUIS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.58917</cpoA>
+      <cpoB>-44.24</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCO">
+    <descricao>MACEIO</descricao>
+    <tipo>N</tipo>
+    <frequencia>340.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.51167</cpoA>
+      <cpoB>-35.8045</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCL">
+    <descricao>MCL</descricao>
+    <tipo>N</tipo>
+    <frequencia>310.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.7035</cpoA>
+      <cpoB>-43.81917</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCE">
+    <descricao>ZUMBI</descricao>
+    <tipo>V</tipo>
+    <frequencia>115.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.50983</cpoA>
+      <cpoB>-35.78683</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCS">
+    <descricao>MONTE CASEROS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.26667</cpoA>
+      <cpoB>-57.63833</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCR">
+    <descricao>MANICORE</descricao>
+    <tipo>N</tipo>
+    <frequencia>310.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.80717</cpoA>
+      <cpoB>-61.282</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCP">
+    <descricao>MACAPA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>0.05233</cpoA>
+      <cpoB>-51.073</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CRR">
+    <descricao>CARRASCO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-34.83333</cpoA>
+      <cpoB>-56.01967</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CRT">
+    <descricao>CRATEUS</descricao>
+    <tipo>N</tipo>
+    <frequencia>390.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.30908</cpoA>
+      <cpoB>-41.07284</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PP">
+    <descricao>PAIOL</descricao>
     <tipo>N</tipo>
     <frequencia>415.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-4.585333</cpoA>
-      <cpoB>-39.630333</cpoB>
+      <cpoA>-22.87017</cpoA>
+      <cpoB>-43.16517</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="YTZ">
-    <descricao>IMPERATRIZ</descricao>
-    <tipo>V</tipo>
-    <frequencia>112.7</frequencia>
+  <fixo nFix="SBUF">
+    <descricao>SBUF</descricao>
+    <tipo>N</tipo>
+    <frequencia>325.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-5.523833</cpoA>
-      <cpoB>-47.449833</cpoB>
+      <cpoA>-9.40193</cpoA>
+      <cpoB>-38.2538</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CIA">
+    <descricao>CIA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.65617</cpoA>
+      <cpoB>-56.112</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="DAD">
+    <descricao>NDB DIADEMA</descricao>
+    <tipo>N</tipo>
+    <frequencia>200.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.705</cpoA>
+      <cpoB>-46.60167</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ULD">
+    <descricao>ULD</descricao>
+    <tipo>V</tipo>
+    <frequencia>350.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.87667</cpoA>
+      <cpoB>-48.22133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AGN">
+    <descricao>ALAGOINHAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>310.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.15267</cpoA>
+      <cpoB>-38.3895</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AGC">
+    <descricao>ANGICOS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.6313</cpoA>
+      <cpoB>-35.93028</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MAC">
+    <descricao>MACAE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.34483</cpoA>
+      <cpoB>-41.769</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MAE">
+    <descricao>NDB MARTE</descricao>
+    <tipo>N</tipo>
+    <frequencia>260.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.50687</cpoA>
+      <cpoB>-46.63648</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MAN">
+    <descricao>NDB-MANAUS</descricao>
+    <tipo>N</tipo>
+    <frequencia>340.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.04183</cpoA>
+      <cpoB>-60.052</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SNE">
+    <descricao>SNEV</descricao>
+    <tipo>V</tipo>
+    <frequencia>112.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.875</cpoA>
+      <cpoB>-49.137</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LST">
+    <descricao>LAGOA SANTA</descricao>
+    <tipo>N</tipo>
+    <frequencia>295.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.65867</cpoA>
+      <cpoB>-43.897</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CTB">
+    <descricao>CURITIBA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.532</cpoA>
+      <cpoB>-49.16817</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LON">
+    <descricao>LONDRINA</descricao>
+    <tipo>V</tipo>
+    <frequencia>365.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.3395</cpoA>
+      <cpoB>-51.11267</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ORH">
+    <descricao>OURINHOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>315.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.9735</cpoA>
+      <cpoB>-49.91233</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TUP">
+    <descricao>TUPÃ</descricao>
+    <tipo>N</tipo>
+    <frequencia>345.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.89383</cpoA>
+      <cpoB>-50.50217</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TUI">
+    <descricao>TUCURUI</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.80133</cpoA>
+      <cpoB>-49.72133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PAT">
+    <descricao>PATO DE MINAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>385.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.66867</cpoA>
+      <cpoB>-46.49333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PAI">
+    <descricao>PAI</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.454</cpoA>
+      <cpoB>-43.8405</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="OIA">
+    <descricao>OIAPOQUE</descricao>
+    <tipo>N</tipo>
+    <frequencia>340.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>3.85983</cpoA>
+      <cpoB>-51.79783</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MOZ">
+    <descricao>MOZ</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-1.75033</cpoA>
+      <cpoB>-52.23383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CVL">
+    <descricao>CVL</descricao>
+    <tipo>V</tipo>
+    <frequencia>365.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-17.6485</cpoA>
+      <cpoB>-39.2565</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MCA">
+    <descricao>MACAE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.34483</cpoA>
+      <cpoB>-41.76883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VSA">
+    <descricao>VTR SANTO ANTAO</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.1065</cpoA>
+      <cpoB>-35.28733</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PTT">
+    <descricao>TROMBETAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-1.48633</cpoA>
+      <cpoB>-56.398</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PCX">
+    <descricao>PCX</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.71533</cpoA>
+      <cpoB>-42.8575</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PCR">
+    <descricao>PARI CACHOEIRA</descricao>
+    <tipo>N</tipo>
+    <frequencia>325.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>0.26183</cpoA>
+      <cpoB>-69.7885</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PCL">
+    <descricao>PCL</descricao>
+    <tipo>N</tipo>
+    <frequencia>415.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.83583</cpoA>
+      <cpoB>-46.56567</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SM">
+    <descricao>SAO MARCOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>300.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.4885</cpoA>
+      <cpoB>-44.30233</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BSI">
+    <descricao>BSI</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.87183</cpoA>
+      <cpoB>-48.022</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CAV">
+    <descricao>CASCAVEL</descricao>
+    <tipo>N</tipo>
+    <frequencia>220.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.003</cpoA>
+      <cpoB>-53.503</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SBG">
+    <descricao>SANTA BARBARA</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.5805</cpoA>
+      <cpoB>-49.69817</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ERP">
+    <descricao>EIRUNEPE</descricao>
+    <tipo>N</tipo>
+    <frequencia>265.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-6.66117</cpoA>
+      <cpoB>-69.8725</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RR">
+    <descricao>NDB VICENTE</descricao>
+    <tipo>N</tipo>
+    <frequencia>360.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.9475</cpoA>
+      <cpoB>-46.28683</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RG">
+    <descricao>CANAL</descricao>
+    <tipo>N</tipo>
+    <frequencia>290.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-32.14933</cpoA>
+      <cpoB>-52.10367</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TQA">
+    <descricao>TQA</descricao>
+    <tipo>N</tipo>
+    <frequencia>360.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.66833</cpoA>
+      <cpoB>-50.78195</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TQB">
+    <descricao>TAQUARA</descricao>
+    <tipo>N</tipo>
+    <frequencia>360.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.66833</cpoA>
+      <cpoB>-50.68167</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="EMB">
+    <descricao>NDB EMBUGUACU</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.85</cpoA>
+      <cpoB>-46.81667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LDP">
+    <descricao>LA DIV PASTORA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>4.693</cpoA>
+      <cpoB>-61.02883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PER">
+    <descricao>NDB PERUS</descricao>
+    <tipo>N</tipo>
+    <frequencia>220.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.42167</cpoA>
+      <cpoB>-46.755</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PEL">
+    <descricao>PELADA</descricao>
+    <tipo>N</tipo>
+    <frequencia>410.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.14283</cpoA>
+      <cpoB>-59.99383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="COM">
+    <descricao>COMANDATUBA</descricao>
+    <tipo>N</tipo>
+    <frequencia>335.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.36083</cpoA>
+      <cpoB>-39.00133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="OLD">
+    <descricao>OLINDA</descricao>
+    <tipo>N</tipo>
+    <frequencia>380.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.0385</cpoA>
+      <cpoB>-34.952</cpoB>
     </coord>
   </fixo>
 
@@ -3616,8 +1429,703 @@
     <frequencia>250.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-4.240500</cpoA>
-      <cpoB>-56.004667</cpoB>
+      <cpoA>-4.2405</cpoA>
+      <cpoB>-56.00467</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YTN">
+    <descricao>ITAMARATI NORTE</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-14.2425</cpoA>
+      <cpoB>-57.99083</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="REC">
+    <descricao>RECIFE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.1365</cpoA>
+      <cpoB>-34.92733</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CRY">
+    <descricao>CRICIUMA</descricao>
+    <tipo>V</tipo>
+    <frequencia>405.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.72233</cpoA>
+      <cpoB>-49.40983</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SW">
+    <descricao>SANTA MARTA</descricao>
+    <tipo>N</tipo>
+    <frequencia>310.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.60383</cpoA>
+      <cpoB>-48.81383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CAX">
+    <descricao>CAX</descricao>
+    <tipo>V</tipo>
+    <frequencia>400.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.76333</cpoA>
+      <cpoB>-43.3375</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CAL">
+    <descricao>CAL</descricao>
+    <tipo>N</tipo>
+    <frequencia>290.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-17.72533</cpoA>
+      <cpoB>-48.6105</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CAD">
+    <descricao>CAÇADOR</descricao>
+    <tipo>N</tipo>
+    <frequencia>400.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.79133</cpoA>
+      <cpoB>-50.93833</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MIA">
+    <descricao>MARICA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.96767</cpoA>
+      <cpoB>-42.89133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SEGSU">
+    <descricao>SEGSU</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.1329</cpoA>
+      <cpoB>-51.38169</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TLB">
+    <descricao>TELÊMACO</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.319</cpoA>
+      <cpoB>-50.6535</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RCL">
+    <descricao>RCL</descricao>
+    <tipo>N</tipo>
+    <frequencia>280.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.43017</cpoA>
+      <cpoB>-47.5625</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RCO">
+    <descricao>BRANCO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.87183</cpoA>
+      <cpoB>-67.89533</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CPO">
+    <descricao>CAMPOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>225.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.69733</cpoA>
+      <cpoB>-41.30667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CCI">
+    <descricao>NDB CUCUI</descricao>
+    <tipo>N</tipo>
+    <frequencia>345.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.183</cpoA>
+      <cpoB>-66.83383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PIR">
+    <descricao>PIR</descricao>
+    <tipo>V</tipo>
+    <frequencia>113.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.9845</cpoA>
+      <cpoB>-47.34417</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="UBT">
+    <descricao>UBT</descricao>
+    <tipo>N</tipo>
+    <frequencia>295.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.44917</cpoA>
+      <cpoB>-45.07383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AMP">
+    <descricao>AMAPA</descricao>
+    <tipo>N</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>2.06883</cpoA>
+      <cpoB>-50.8605</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AI">
+    <descricao>SAO JOAO</descricao>
+    <tipo>N</tipo>
+    <frequencia>320.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-1.28133</cpoA>
+      <cpoB>-44.90333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AT">
+    <descricao>ARTIGAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>450.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.40383</cpoA>
+      <cpoB>-56.48733</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AV">
+    <descricao>ABROLHOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>290.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-17.9645</cpoA>
+      <cpoB>-38.69383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TOR">
+    <descricao>TORRES</descricao>
+    <tipo>N</tipo>
+    <frequencia>230.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.41433</cpoA>
+      <cpoB>-49.80667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TOL">
+    <descricao>TOLEDO</descricao>
+    <tipo>N</tipo>
+    <frequencia>385.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.68567</cpoA>
+      <cpoB>-53.69967</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LBR">
+    <descricao>LABREA</descricao>
+    <tipo>N</tipo>
+    <frequencia>295.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.25033</cpoA>
+      <cpoB>-64.78383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FGR">
+    <descricao>FIGUEIRAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.99817</cpoA>
+      <cpoB>-50.97517</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LBA">
+    <descricao>ALBACORA</descricao>
+    <tipo>N</tipo>
+    <frequencia>210.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.10967</cpoA>
+      <cpoB>-39.9165</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FGN">
+    <descricao>FAZ. GUANABARA</descricao>
+    <tipo>N</tipo>
+    <frequencia>335.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-14.77733</cpoA>
+      <cpoB>-57.1935</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BFR">
+    <descricao>BFR</descricao>
+    <tipo>N</tipo>
+    <frequencia>1000.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.92333</cpoA>
+      <cpoB>-42.071</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PKT">
+    <descricao>PKT</descricao>
+    <tipo>N</tipo>
+    <frequencia>300.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-17.21717</cpoA>
+      <cpoB>-46.93383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ASS">
+    <descricao>ASSIS</descricao>
+    <tipo>N</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.64483</cpoA>
+      <cpoB>-50.453</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NUQ">
+    <descricao>NANUQUE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-17.8855</cpoA>
+      <cpoB>-40.36067</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YLA">
+    <descricao>YLA</descricao>
+    <tipo>N</tipo>
+    <frequencia>330.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.787</cpoA>
+      <cpoB>-43.16767</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YLH">
+    <descricao>ILHÉUS</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-14.81217</cpoA>
+      <cpoB>-39.03667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="UTMOK">
+    <descricao>UTMOK</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.00555</cpoA>
+      <cpoB>-51.42185</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PPM">
+    <descricao>PAMPO</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.79783</cpoA>
+      <cpoB>-40.7625</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NDB FUR">
+    <descricao>NDB FUR</descricao>
+    <tipo>N</tipo>
+    <frequencia>390.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.704</cpoA>
+      <cpoB>-46.33783</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BH">
+    <descricao>NDB  BELO HORIZ</descricao>
+    <tipo>N</tipo>
+    <frequencia>520.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.85333</cpoA>
+      <cpoB>-43.95467</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TIR">
+    <descricao>TIRIOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>240.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>2.219</cpoA>
+      <cpoB>-55.94183</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LLZ">
+    <descricao>LOCALIZER IGR</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.64333</cpoA>
+      <cpoB>-46.645</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RON">
+    <descricao>RONDONIA</descricao>
+    <tipo>N</tipo>
+    <frequencia>255.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-10.888</cpoA>
+      <cpoB>-61.91217</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BDA">
+    <descricao>BOCA DO ACRE</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.90433</cpoA>
+      <cpoB>-67.48867</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="UI">
+    <descricao>CHUI</descricao>
+    <tipo>N</tipo>
+    <frequencia>312.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-33.74233</cpoA>
+      <cpoB>-53.3745</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CGO">
+    <descricao>CGO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.6275</cpoA>
+      <cpoB>-46.65467</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PMS">
+    <descricao>PMS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-10.288</cpoA>
+      <cpoB>-48.3585</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CGR">
+    <descricao>CAMPO GRANDE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.46883</cpoA>
+      <cpoB>-54.67033</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YBA">
+    <descricao>YBA</descricao>
+    <tipo>N</tipo>
+    <frequencia>245.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.44033</cpoA>
+      <cpoB>-49.21883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ARX">
+    <descricao>ARX</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.689</cpoA>
+      <cpoB>-47.0605</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ATF">
+    <descricao>ALTA FLORESTA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.86833</cpoA>
+      <cpoB>-56.105</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PRR">
+    <descricao>PRUDENTE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.17567</cpoA>
+      <cpoB>-51.4225</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SNO">
+    <descricao>SETOR NOROESTE</descricao>
+    <tipo>V</tipo>
+    <frequencia>112.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.13475</cpoA>
+      <cpoB>-53.90527</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ARE">
+    <descricao>ARE</descricao>
+    <tipo>N</tipo>
+    <frequencia>340.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.16667</cpoA>
+      <cpoB>-49.06667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SSZ">
+    <descricao>ZIRONDI</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.81975</cpoA>
+      <cpoB>-63.73384</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SSE">
+    <descricao>SETOR SUDESTE</descricao>
+    <tipo>V</tipo>
+    <frequencia>112.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.17186</cpoA>
+      <cpoB>-52.90118</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LNS">
+    <descricao>LNS</descricao>
+    <tipo>N</tipo>
+    <frequencia>400.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.6635</cpoA>
+      <cpoB>-49.73367</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BBC">
+    <descricao>BBC</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.267</cpoA>
+      <cpoB>-43.76417</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PVH">
+    <descricao>PORTO VELHO</descricao>
+    <tipo>N</tipo>
+    <frequencia>385.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.70783</cpoA>
+      <cpoB>-63.89833</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="POR">
+    <descricao>PORTO ALEGRE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.996</cpoA>
+      <cpoB>-51.16517</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="POS">
+    <descricao>POS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.38555</cpoA>
+      <cpoB>-55.96917</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VLH">
+    <descricao>VILHENA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.6935</cpoA>
+      <cpoB>-60.09517</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CH">
+    <descricao>CH</descricao>
+    <tipo>N</tipo>
+    <frequencia>240.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.86028</cpoA>
+      <cpoB>-47.89167</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CF">
+    <descricao>NDB VESPA</descricao>
+    <tipo>N</tipo>
+    <frequencia>265.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.69467</cpoA>
+      <cpoB>-43.91133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RVA">
+    <descricao>RIVERA</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-31.007</cpoA>
+      <cpoB>-55.509</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TRM">
+    <descricao>VOR TRES MARIAS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.20317</cpoA>
+      <cpoB>-45.45717</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PTL">
+    <descricao>PETROLINA</descricao>
+    <tipo>V</tipo>
+    <frequencia>345.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.364</cpoA>
+      <cpoB>-40.56333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PTS">
+    <descricao>PELOTAS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-31.71917</cpoA>
+      <cpoB>-52.32733</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PTP">
+    <descricao>PONTA PORA</descricao>
+    <tipo>N</tipo>
+    <frequencia>340.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.55017</cpoA>
+      <cpoB>-55.70717</cpoB>
     </coord>
   </fixo>
 
@@ -3627,330 +2135,1213 @@
     <frequencia>365.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-29.838000</cpoA>
-      <cpoB>-53.671667</cpoB>
+      <cpoA>-29.838</cpoA>
+      <cpoB>-53.67167</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="ANDOR">
-    <descricao>ANDOR</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="GJM">
+    <descricao>GUAJARA</descricao>
+    <tipo>N</tipo>
+    <frequencia>400.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2345.720S</cpoA>
-      <cpoB>04723.080W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-10.78433</cpoA>
+      <cpoB>-65.28117</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="ANISE">
-    <descricao>ANISE</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="FIR">
+    <descricao>FIGUEIRAS</descricao>
+    <tipo>V</tipo>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2436.130S</cpoA>
-      <cpoB>04637.520W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-29.99805</cpoA>
+      <cpoB>-50.97555</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="CAST">
-    <descricao>CAST</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="MAR">
+    <descricao>MARILIA</descricao>
+    <tipo>N</tipo>
+    <frequencia>375.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2328.320S</cpoA>
-      <cpoB>04636.590W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-22.19483</cpoA>
+      <cpoB>-49.92933</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="COCHO">
-    <descricao>COCHO</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="P11">
+    <descricao>RADAR 11</descricao>
+    <tipo>V</tipo>
+    <frequencia>112.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>1551.650S</cpoA>
-      <cpoB>04753.120W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-29.65348</cpoA>
+      <cpoB>-53.91973</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="ILTAB">
-    <descricao>ILTAB</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="FRC">
+    <descricao>FRC</descricao>
+    <tipo>N</tipo>
+    <frequencia>405.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2325.060S</cpoA>
-      <cpoB>04523.230W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-20.58367</cpoA>
+      <cpoB>-47.3825</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="IMBID">
-    <descricao>IMBID</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="FRM">
+    <descricao>FRM</descricao>
+    <tipo>V</tipo>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2335.010S</cpoA>
-      <cpoB>04609.500W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-15.55767</cpoA>
+      <cpoB>-47.347</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="DA">
+    <descricao>DA</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.16667</cpoA>
+      <cpoB>-35.48333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TGR">
+    <descricao>TANGARA-NATAL</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-6.21667</cpoA>
+      <cpoB>-35.8</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RIB">
+    <descricao>RIBAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>245.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.46717</cpoA>
+      <cpoB>-53.7505</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FOZ">
+    <descricao>FOZ</descricao>
+    <tipo>V</tipo>
+    <frequencia>410.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.58333</cpoA>
+      <cpoB>-54.5035</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LJS">
+    <descricao>LAJES</descricao>
+    <tipo>N</tipo>
+    <frequencia>240.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.78217</cpoA>
+      <cpoB>-50.27633</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SAT">
+    <descricao>SAT</descricao>
+    <tipo>N</tipo>
+    <frequencia>375.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.98305</cpoA>
+      <cpoB>-46.26333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FSA">
+    <descricao>FORMOSA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.55583</cpoA>
+      <cpoB>-47.34667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ILMOM">
+    <descricao>ILMOM</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.09042</cpoA>
+      <cpoB>-51.40381</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NFL">
+    <descricao>NDB FLORIAN</descricao>
+    <tipo>N</tipo>
+    <frequencia>295.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.69167</cpoA>
+      <cpoB>-48.49817</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FNR">
+    <descricao>FERNANDO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.85667</cpoA>
+      <cpoB>-32.43</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BENTO">
+    <descricao>BENTO</descricao>
+    <tipo>N</tipo>
+    <frequencia>370.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.70567</cpoA>
+      <cpoB>-44.40717</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CBO">
+    <descricao>CACHIMBO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.33133</cpoA>
+      <cpoB>-54.965</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FTR">
+    <descricao>FRONTEIRA</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.27433</cpoA>
+      <cpoB>-49.18983</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SMR">
+    <descricao>CERRITO</descricao>
+    <tipo>N</tipo>
+    <frequencia>215.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.70633</cpoA>
+      <cpoB>-53.769</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FB">
+    <descricao>TRAMANDAÍ</descricao>
+    <tipo>N</tipo>
+    <frequencia>300.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.99617</cpoA>
+      <cpoB>-50.145</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="GGT">
+    <descricao>GUARATINGUETA</descricao>
+    <tipo>N</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.78778</cpoA>
+      <cpoB>-45.21528</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MDD">
+    <descricao>DOURADO</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-0.88333</cpoA>
+      <cpoB>-52.603</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BHZ">
+    <descricao>BHZ</descricao>
+    <tipo>V</tipo>
+    <frequencia>520.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.83583</cpoA>
+      <cpoB>-44.0035</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="GAB">
+    <descricao>GABI</descricao>
+    <tipo>N</tipo>
+    <frequencia>245.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.3725</cpoA>
+      <cpoB>-48.72417</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="JCM">
+    <descricao>JOAO CAMARA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.55667</cpoA>
+      <cpoB>-35.82</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BVI">
+    <descricao>BOA VISTA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>2.85217</cpoA>
+      <cpoB>-60.68683</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="FPB">
+    <descricao>BEIRA</descricao>
+    <tipo>N</tipo>
+    <frequencia>240.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.431</cpoA>
+      <cpoB>-64.4255</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CUB">
+    <descricao>CORUMBA</descricao>
+    <tipo>N</tipo>
+    <frequencia>375.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.016</cpoA>
+      <cpoB>-57.66433</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CUA">
+    <descricao>CARAUARI</descricao>
+    <tipo>N</tipo>
+    <frequencia>285.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.88733</cpoA>
+      <cpoB>-66.90383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="OAS">
+    <descricao>CANOAS</descricao>
+    <tipo>N</tipo>
+    <frequencia>250.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.94472</cpoA>
+      <cpoB>-51.13722</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SAN">
+    <descricao>SANTO ANGELO</descricao>
+    <tipo>N</tipo>
+    <frequencia>280.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.27933</cpoA>
+      <cpoB>-54.172</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="JAC">
+    <descricao>JACAREACANGA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-6.23567</cpoA>
+      <cpoB>-57.7705</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="AFS">
+    <descricao>AFONSOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>270.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.867</cpoA>
+      <cpoB>-43.36683</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SWH">
+    <descricao>HUMAITA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.7503</cpoA>
+      <cpoB>-62.75504</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="JZR">
+    <descricao>JUAZEIRO</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.21367</cpoA>
+      <cpoB>-39.27467</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SCB">
+    <descricao>SCB</descricao>
+    <tipo>V</tipo>
+    <frequencia>350.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.50717</cpoA>
+      <cpoB>-47.37817</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SCP">
+    <descricao>SCP</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.23333</cpoA>
+      <cpoB>-45.86</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SCR">
+    <descricao>SCR</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.94967</cpoA>
+      <cpoB>-43.72767</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CJS">
+    <descricao>CARAJAS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-6.11967</cpoA>
+      <cpoB>-50.002</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="URT">
+    <descricao>URUBURETAMA</descricao>
+    <tipo>N</tipo>
+    <frequencia>235.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.5855</cpoA>
+      <cpoB>-39.42667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BRU">
+    <descricao>BRU</descricao>
+    <tipo>N</tipo>
+    <frequencia>380.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.314</cpoA>
+      <cpoB>-49.10717</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BRT">
+    <descricao>BRT</descricao>
+    <tipo>N</tipo>
+    <frequencia>360.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.58217</cpoA>
+      <cpoB>-48.59667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BRS">
+    <descricao>BRS</descricao>
+    <tipo>N</tipo>
+    <frequencia>340.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.87362</cpoA>
+      <cpoB>-48.02138</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BRR">
+    <descricao>BARREIRAS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.08</cpoA>
+      <cpoB>-45.00717</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MNS">
+    <descricao>VOR-MANAUS</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.04</cpoA>
+      <cpoB>-60.05467</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CORAL">
+    <descricao>CORAL</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.84967</cpoA>
+      <cpoB>-38.67383</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YPT">
+    <descricao>YPT</descricao>
+    <tipo>N</tipo>
+    <frequencia>1618.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.463</cpoA>
+      <cpoB>-42.4795</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TPV">
+    <descricao>NDB ITAPEVI</descricao>
+    <tipo>N</tipo>
+    <frequencia>270.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.565</cpoA>
+      <cpoB>-46.92167</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TPQ">
+    <descricao>TAPURUQUARA</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-0.417</cpoA>
+      <cpoB>-65.03633</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="GOI">
+    <descricao>GOI</descricao>
+    <tipo>V</tipo>
+    <frequencia>370.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.6325</cpoA>
+      <cpoB>-49.2155</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MLO">
+    <descricao>MELO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-32.34217</cpoA>
+      <cpoB>-54.222</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MLZ">
+    <descricao>MERLUZA</descricao>
+    <tipo>N</tipo>
+    <frequencia>1645.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.26683</cpoA>
+      <cpoB>-45.25267</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BRL">
+    <descricao>BARCELOS</descricao>
+    <tipo>N</tipo>
+    <frequencia>225.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-0.9755</cpoA>
+      <cpoB>-62.92083</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IY">
+    <descricao>PIRA</descricao>
+    <tipo>N</tipo>
+    <frequencia>215.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.0675</cpoA>
+      <cpoB>-47.34067</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IP">
+    <descricao>GUAIBA</descricao>
+    <tipo>N</tipo>
+    <frequencia>345.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.99267</cpoA>
+      <cpoB>-51.28167</cpoB>
     </coord>
   </fixo>
 
   <fixo nFix="IS">
-    <descricao>MADA</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2332.690S</cpoA>
-      <cpoB>04642.760W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="KELY">
-    <descricao>KELY</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2346.030S</cpoA>
-      <cpoB>04633.500W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="KEVUN">
-    <descricao>KEVUN</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2327.780S</cpoA>
-      <cpoB>04457.100W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="KOTRU">
-    <descricao>KOTRU</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2209.950S</cpoA>
-      <cpoB>04708.360W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="LOPES">
-    <descricao>LOPES</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2327.710S</cpoA>
-      <cpoB>04554.860W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MILIL">
-    <descricao>MILIL</descricao>
-    <tipo>D</tipo>
+    <descricao>NDB MADA</descricao>
+    <tipo>N</tipo>
+    <frequencia>290.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-22.116933</cpoA>
-      <cpoB>-46.420483</cpoB>
+      <cpoA>-23.54333</cpoA>
+      <cpoB>-46.71167</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="MOSRA">
-    <descricao>MOSRA</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2339.930S</cpoA>
-      <cpoB>04627.320W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MOXEP">
-    <descricao>MOXEP</descricao>
-    <tipo>D</tipo>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2224.780S</cpoA>
-      <cpoB>04617.340W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MULOD">
-    <descricao>MULOD</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2302.240S</cpoA>
-      <cpoB>04453.310W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="MUMOP">
-    <descricao>MUMOP</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2338.220S</cpoA>
-      <cpoB>04516.010W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NADI">
-    <descricao>NADI</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2344.240S</cpoA>
-      <cpoB>04634.740W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NIMPU">
-    <descricao>NIMPU</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2126.810S</cpoA>
-      <cpoB>04714.930W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="NITBU">
-    <descricao>NITBU</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>1851.560S</cpoA>
-      <cpoB>04711.870W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="OPREV">
-    <descricao>OPREV</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2315.870S</cpoA>
-      <cpoB>04507.140W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="OPSIT">
-    <descricao>OPSIT</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2334.660S</cpoA>
-      <cpoB>04641.420W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="PERLA">
-    <descricao>PERLA</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IR">
+    <descricao>TREVO</descricao>
+    <tipo>N</tipo>
+    <frequencia>280.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-14.649</cpoA>
-      <cpoB>-44.1065</cpoB>
+      <cpoA>-15.86417</cpoA>
+      <cpoB>-47.93733</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="PORNA">
-    <descricao>PORNA</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2332.370S</cpoA>
-      <cpoB>04415.550W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SEKTI">
-    <descricao>SEKTI</descricao>
-    <tipo>D</tipo>
-    <coord>
-      <tipo>G</tipo>
-      <cpoA>2346.360S</cpoA>
-      <cpoB>04555.980W</cpoB>
-    </coord>
-  </fixo>
-
-  <fixo nFix="SIDOL">
-    <descricao>SIDOL</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IT">
+    <descricao>MERITI</descricao>
+    <tipo>N</tipo>
+    <frequencia>290.0</frequencia>
     <coord>
       <tipo>L</tipo>
-      <cpoA>-19.0685</cpoA>
-      <cpoB>-44.343167</cpoB>
+      <cpoA>-22.8295</cpoA>
+      <cpoB>-43.36233</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="SOTPI">
-    <descricao>SOTPI</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IV">
+    <descricao>IPITANGA</descricao>
+    <tipo>N</tipo>
+    <frequencia>240.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2314.730S</cpoA>
-      <cpoB>04537.580W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-12.91317</cpoA>
+      <cpoB>-38.34567</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="SUNBU">
-    <descricao>SUNBU</descricao>
-    <tipo>D</tipo>
-    <tipo>D</tipo>
+  <fixo nFix="IH">
+    <descricao>RASA</descricao>
+    <tipo>N</tipo>
+    <frequencia>315.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2258.740S</cpoA>
-      <cpoB>04559.660W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-22.06383</cpoA>
+      <cpoB>-43.146</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="TESIX">
-    <descricao>TESIX</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IK">
+    <descricao>NDB BENTO</descricao>
+    <tipo>N</tipo>
+    <frequencia>370.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2326.240S</cpoA>
-      <cpoB>04538.120W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-22.95667</cpoA>
+      <cpoB>-47.20333</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="TUCA">
-    <descricao>TUCA</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IJ">
+    <descricao>NDB VILA</descricao>
+    <tipo>N</tipo>
+    <frequencia>365.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2327.730S</cpoA>
-      <cpoB>04634.400W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-23.21283</cpoA>
+      <cpoB>-45.8795</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="UGTEV">
-    <descricao>UGTEV</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IL">
+    <descricao>NDB CARIANO</descricao>
+    <tipo>N</tipo>
+    <frequencia>350.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2318.140S</cpoA>
-      <cpoB>04532.850W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-27.6615</cpoA>
+      <cpoB>-48.55917</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="UTMUR">
-    <descricao>UTMUR</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IA">
+    <descricao>PESTANA</descricao>
+    <tipo>N</tipo>
+    <frequencia>365.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2416.880S</cpoA>
-      <cpoB>04611.310W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-29.994</cpoA>
+      <cpoB>-51.19583</cpoB>
     </coord>
   </fixo>
 
-  <fixo nFix="VUMEV">
-    <descricao>VUMEV</descricao>
-    <tipo>D</tipo>
+  <fixo nFix="IC">
+    <descricao>NDB MOCAMBO</descricao>
+    <tipo>N</tipo>
+    <frequencia>245.0</frequencia>
     <coord>
-      <tipo>G</tipo>
-      <cpoA>2253.210S</cpoA>
-      <cpoB>04558.640W</cpoB>
+      <tipo>L</tipo>
+      <cpoA>-19.56</cpoA>
+      <cpoB>-44.037</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IG">
+    <descricao>NDB TUCA</descricao>
+    <tipo>N</tipo>
+    <frequencia>410.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.46167</cpoA>
+      <cpoB>-46.57333</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IF">
+    <descricao>NDB FAZENDA</descricao>
+    <tipo>N</tipo>
+    <frequencia>215.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.616</cpoA>
+      <cpoB>-43.985</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TRA">
+    <descricao>TRAMANDAI</descricao>
+    <tipo>N</tipo>
+    <frequencia>305.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.99633</cpoA>
+      <cpoB>-50.145</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="TRS">
+    <descricao>TERESINA</descricao>
+    <tipo>V</tipo>
+    <frequencia>215.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.06617</cpoA>
+      <cpoB>-42.82483</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RDE">
+    <descricao>RDE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.891</cpoA>
+      <cpoB>-46.52817</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LEN">
+    <descricao>LENÇÓIS</descricao>
+    <tipo>N</tipo>
+    <frequencia>235.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.48567</cpoA>
+      <cpoB>-41.27567</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SGR">
+    <descricao>PORTO SEGURO</descricao>
+    <tipo>N</tipo>
+    <frequencia>450.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.44167</cpoA>
+      <cpoB>-39.0825</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SGA">
+    <descricao>SAO GONÇALO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.76967</cpoA>
+      <cpoB>-35.36783</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="SGC">
+    <descricao>GABRIEL</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-0.15067</cpoA>
+      <cpoB>-66.98517</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CNF">
+    <descricao>CNF</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.55817</cpoA>
+      <cpoB>-44.0485</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CNB">
+    <descricao>CNB</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.54362</cpoA>
+      <cpoB>-48.19472</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CNA">
+    <descricao>CAROLINA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.31867</cpoA>
+      <cpoB>-47.45483</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PFD">
+    <descricao>PASSO FUNDO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.245</cpoA>
+      <cpoB>-52.33367</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YTZ">
+    <descricao>IMPERATRIZ</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.52383</cpoA>
+      <cpoB>-47.44983</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YTT">
+    <descricao>ITATAIA</descricao>
+    <tipo>N</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.58533</cpoA>
+      <cpoB>-39.63033</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="YTC">
+    <descricao>ITACOATIARA</descricao>
+    <tipo>N</tipo>
+    <frequencia>320.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.11933</cpoA>
+      <cpoB>-58.48083</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="VTR">
+    <descricao>VTR</descricao>
+    <tipo>V</tipo>
+    <frequencia>350.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.24967</cpoA>
+      <cpoB>-40.283</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="PCI">
+    <descricao>PICI</descricao>
+    <tipo>N</tipo>
+    <frequencia>210.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.75167</cpoA>
+      <cpoB>-38.625</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RBC">
+    <descricao>BRANCO</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.87183</cpoA>
+      <cpoB>-67.89533</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="URADI">
+    <descricao>URADI</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.85517</cpoA>
+      <cpoB>-47.799</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BL">
+    <descricao>SALINOPOLIS</descricao>
+    <tipo>N</tipo>
+    <frequencia>315.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-0.61533</cpoA>
+      <cpoB>-47.35717</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NVG">
+    <descricao>NAVEGANTES</descricao>
+    <tipo>N</tipo>
+    <frequencia>375.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.87183</cpoA>
+      <cpoB>-48.65133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ANP">
+    <descricao>ANP</descricao>
+    <tipo>V</tipo>
+    <frequencia>415.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.3175</cpoA>
+      <cpoB>-49.04028</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="KRI">
+    <descricao>QUARI</descricao>
+    <tipo>N</tipo>
+    <frequencia>265.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.7895</cpoA>
+      <cpoB>-51.83083</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="RPR">
+    <descricao>RPR</descricao>
+    <tipo>N</tipo>
+    <frequencia>330.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.136</cpoA>
+      <cpoB>-47.77667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="GYA">
+    <descricao>GUAYARAMERIM</descricao>
+    <tipo>N</tipo>
+    <frequencia>250.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.44033</cpoA>
+      <cpoB>-49.21883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="JRP">
+    <descricao>JRP</descricao>
+    <tipo>N</tipo>
+    <frequencia>420.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.81317</cpoA>
+      <cpoB>-49.40617</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="P">
+    <descricao>PORTAL</descricao>
+    <tipo>N</tipo>
+    <frequencia>365.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.65917</cpoA>
+      <cpoB>-53.69133</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LAB">
+    <descricao>LABREA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.30525</cpoA>
+      <cpoB>-64.41602</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LAP">
+    <descricao>VOR LAPA</descricao>
+    <tipo>V</tipo>
+    <frequencia>320.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.26467</cpoA>
+      <cpoB>-43.40817</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NDB TAUBATE">
+    <descricao>NDB TAUBATE</descricao>
+    <tipo>N</tipo>
+    <frequencia>430.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.04567</cpoA>
+      <cpoB>-45.51667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IGU">
+    <descricao>IGUAZU</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.73388</cpoA>
+      <cpoB>-54.48883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ALG">
+    <descricao>ALGAN</descricao>
+    <tipo>N</tipo>
+    <frequencia>293.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-20.9345</cpoA>
+      <cpoB>-54.90233</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ALC">
+    <descricao>ALCANTARA</descricao>
+    <tipo>N</tipo>
+    <frequencia>230.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.3815</cpoA>
+      <cpoB>-44.39933</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="NTL">
+    <descricao>NATAL</descricao>
+    <tipo>N</tipo>
+    <frequencia>400.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.90833</cpoA>
+      <cpoB>-35.24867</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="LET">
+    <descricao>LETICIA</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.192</cpoA>
+      <cpoB>-69.93883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="JPG">
+    <descricao>JPG</descricao>
+    <tipo>N</tipo>
+    <frequencia>205.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.98783</cpoA>
+      <cpoB>-43.36883</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="JPS">
+    <descricao>JOAO PESSOA</descricao>
+    <tipo>N</tipo>
+    <frequencia>320.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-7.1405</cpoA>
+      <cpoB>-34.95233</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BGC">
+    <descricao>BGC</descricao>
+    <tipo>V</tipo>
+    <frequencia>385.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.9515</cpoA>
+      <cpoB>-46.56983</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="BGE">
+    <descricao>BAGE</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-31.39067</cpoA>
+      <cpoB>-54.10967</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MSS">
+    <descricao>MOSSORO</descricao>
+    <tipo>V</tipo>
+    <frequencia>275.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-5.19733</cpoA>
+      <cpoB>-37.3645</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="IEG">
+    <descricao>LLZ/DME IEG</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.03517</cpoA>
+      <cpoB>-60.0225</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="CDE">
+    <descricao>NDB CDE</descricao>
+    <tipo>N</tipo>
+    <frequencia>200.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.47667</cpoA>
+      <cpoB>-54.85</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="MTU">
+    <descricao>MITU</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.24233</cpoA>
+      <cpoB>-70.2365</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ARU">
+    <descricao>CAJU</descricao>
+    <tipo>V</tipo>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-10.982</cpoA>
+      <cpoB>-37.07733</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ARA">
+    <descricao>ARACATUBA</descricao>
+    <tipo>N</tipo>
+    <frequencia>265.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-21.13933</cpoA>
+      <cpoB>-50.42667</cpoB>
+    </coord>
+  </fixo>
+
+  <fixo nFix="ARG">
+    <descricao>ARAGUAIA</descricao>
+    <tipo>N</tipo>
+    <frequencia>230.0</frequencia>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.35367</cpoA>
+      <cpoB>-49.29917</cpoB>
     </coord>
   </fixo>
 
