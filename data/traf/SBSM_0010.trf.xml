@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>PA28</designador>
+    <ssr>2000</ssr>
+    <indicativo>PTRRQ</indicativo>
+    <origem>SSRZ</origem>
+    <destino>SBPA</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.05593</cpoA>
+      <cpoB>-54.31331</cpoB>
+    </coord>
+    <altitude>75</altitude>
+    <velocidade>120</velocidade>
+    <proa>95</proa>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>C152</designador>
+    <indicativo>PTVIV</indicativo>
+    <origem>SSST</origem>
+    <destino>SBSM</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.25652</cpoA>
+      <cpoB>-54.24337</cpoB>
+    </coord>
+    <altitude>15</altitude>
+    <velocidade>120</velocidade>
+    <proa>130</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>PAT4</designador>
+    <indicativo>PTOUR</indicativo>
+    <origem>SSEP</origem>
+    <destino>SSJK</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.08408</cpoA>
+      <cpoB>-52.25405</cpoB>
+    </coord>
+    <altitude>30</altitude>
+    <velocidade>120</velocidade>
+    <proa>5</proa>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>UH1</designador>
+    <ssr>102</ssr>
+    <indicativo>PANT12</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBSM</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.78945</cpoA>
+      <cpoB>-53.7075</cpoB>
+    </coord>
+    <altitude>15</altitude>
+    <velocidade>80</velocidade>
+    <proa>180</proa>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>PA30</designador>
+    <indicativo>PRGRE</indicativo>
+    <origem>SSKS</origem>
+    <destino>SSSB</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.1074</cpoA>
+      <cpoB>-53.13448</cpoB>
+    </coord>
+    <altitude>45</altitude>
+    <velocidade>180</velocidade>
+    <proa>320</proa>
+  </trafego>
+</trafegos>
+

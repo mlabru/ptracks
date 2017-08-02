@@ -1,0 +1,194 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>A320</designador>
+    <ssr>4401</ssr>
+    <indicativo>TAM3821</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBRJ</destino>
+    <temptrafego>0</temptrafego>
+    <procedimento>SUB|19102</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>A320</designador>
+    <ssr>4402</ssr>
+    <indicativo>TAM3701</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBSP</destino>
+    <temptrafego>4</temptrafego>
+    <procedimento>SUB|19104</procedimento>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>A320</designador>
+    <ssr>4403</ssr>
+    <indicativo>TAM3070</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBBR</destino>
+    <temptrafego>6</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.79697</cpoA>
+      <cpoB>-48.38918</cpoB>
+    </coord>
+    <altitude>260</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|194000</procedimento>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>A320</designador>
+    <ssr>4404</ssr>
+    <indicativo>TAM3880</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBBR</destino>
+    <temptrafego>8</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.79697</cpoA>
+      <cpoB>-48.38918</cpoB>
+    </coord>
+    <altitude>260</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|194000</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>LR35</designador>
+    <ssr>4405</ssr>
+    <indicativo>FAB6001</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBSV</destino>
+    <temptrafego>12</temptrafego>
+    <procedimento>SUB|19107</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>B737</designador>
+    <ssr>4407</ssr>
+    <indicativo>VRN2600</indicativo>
+    <origem>SBRJ</origem>
+    <destino>SBBR</destino>
+    <temptrafego>18</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.47001</cpoA>
+      <cpoB>-47.22837</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|194002</procedimento>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>A320</designador>
+    <ssr>4410</ssr>
+    <indicativo>TAM3466</indicativo>
+    <origem>SBVT</origem>
+    <destino>SBBR</destino>
+    <temptrafego>23</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.47001</cpoA>
+      <cpoB>-47.22837</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|194002</procedimento>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>B737</designador>
+    <ssr>4411</ssr>
+    <indicativo>GLO1696</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBGO</destino>
+    <temptrafego>10</temptrafego>
+    <procedimento>SUB|19100</procedimento>
+  </trafego>
+
+  <trafego nTrf=9>
+    <designador>B727</designador>
+    <ssr>4412</ssr>
+    <indicativo>VLO9525</indicativo>
+    <origem>SBRF</origem>
+    <destino>SBBR</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.302</cpoA>
+      <cpoB>-47.22743</cpoB>
+    </coord>
+    <altitude>300</altitude>
+    <velocidade>360</velocidade>
+    <procedimento>TRJ|194001</procedimento>
+  </trafego>
+
+  <trafego nTrf=10>
+    <designador>B737</designador>
+    <ssr>4413</ssr>
+    <indicativo>VRN2328</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBSP</destino>
+    <temptrafego>32</temptrafego>
+    <procedimento>SUB|19104</procedimento>
+  </trafego>
+
+  <trafego nTrf=11>
+    <designador>C550</designador>
+    <ssr>4414</ssr>
+    <indicativo>PTLGM</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBSP</destino>
+    <temptrafego>30</temptrafego>
+    <procedimento>SUB|19104</procedimento>
+  </trafego>
+
+  <trafego nTrf=12>
+    <designador>B738</designador>
+    <ssr>4415</ssr>
+    <indicativo>GLO1867</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBBR</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.59771</cpoA>
+      <cpoB>-46.96602</cpoB>
+    </coord>
+    <altitude>240</altitude>
+    <velocidade>370</velocidade>
+    <procedimento>TRJ|194001</procedimento>
+  </trafego>
+
+  <trafego nTrf=13>
+    <designador>B737</designador>
+    <ssr>4416</ssr>
+    <indicativo>VRN2260</indicativo>
+    <origem>SBGL</origem>
+    <destino>SBBR</destino>
+    <temptrafego>12</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.47001</cpoA>
+      <cpoB>-47.22837</cpoB>
+    </coord>
+    <altitude>245</altitude>
+    <velocidade>365</velocidade>
+    <procedimento>TRJ|194002</procedimento>
+  </trafego>
+
+  <trafego nTrf=14>
+    <designador>B737</designador>
+    <ssr>4417</ssr>
+    <indicativo>FAB2115</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBGL</destino>
+    <temptrafego>28</temptrafego>
+    <procedimento>SUB|19102</procedimento>
+  </trafego>
+</trafegos>
+

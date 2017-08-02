@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>A320</designador>
+    <ssr>631</ssr>
+    <indicativo>TAM3253</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBBR</destino>
+    <temptrafego>0</temptrafego>
+    <altitude>370</altitude>
+    <velocidade>410</velocidade>
+    <procedimento>SUB|4016</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>B767</designador>
+    <ssr>632</ssr>
+    <indicativo>FWL9234</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.54642</cpoA>
+      <cpoB>-59.54825</cpoB>
+    </coord>
+    <altitude>220</altitude>
+    <velocidade>300</velocidade>
+    <proa>315</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>E190</designador>
+    <ssr>633</ssr>
+    <indicativo>TIB5540</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.65887</cpoA>
+      <cpoB>-60.6119</cpoB>
+    </coord>
+    <altitude>230</altitude>
+    <velocidade>340</velocidade>
+    <proa>42</proa>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>R99</designador>
+    <ssr>634</ssr>
+    <indicativo>FAB2520</indicativo>
+    <origem>SBRB</origem>
+    <destino>SBMN</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.88419</cpoA>
+      <cpoB>-60.9591</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>300</velocidade>
+    <proa>105</proa>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>F5</designador>
+    <ssr>301</ssr>
+    <indicativo>POUROS</indicativo>
+    <origem>SBMN</origem>
+    <destino>SBMN</destino>
+    <temptrafego>7</temptrafego>
+    <altitude>350</altitude>
+    <velocidade>410</velocidade>
+    <procedimento>SUB|4098</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>F5</designador>
+    <ssr>311</ssr>
+    <indicativo>PCOPAS</indicativo>
+    <origem>SBMN</origem>
+    <destino>SBMN</destino>
+    <temptrafego>7</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.14283</cpoA>
+      <cpoB>-59.07778</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>410</velocidade>
+    <proa>100</proa>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>AT42</designador>
+    <ssr>635</ssr>
+    <indicativo>TIB5540</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBUY</destino>
+    <temptrafego>14</temptrafego>
+    <altitude>220</altitude>
+    <velocidade>260</velocidade>
+    <procedimento>SUB|4020</procedimento>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>E120</designador>
+    <ssr>636</ssr>
+    <indicativo>FAB2021</indicativo>
+    <origem>SBBV</origem>
+    <destino>SBMN</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.34728</cpoA>
+      <cpoB>-59.95731</cpoB>
+    </coord>
+    <altitude>190</altitude>
+    <velocidade>280</velocidade>
+    <proa>180</proa>
+  </trafego>
+
+  <trafego nTrf=9>
+    <designador>A320</designador>
+    <ssr>637</ssr>
+    <indicativo>TAM3305</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>12</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.53464</cpoA>
+      <cpoB>-59.56003</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>320</velocidade>
+    <proa>315</proa>
+  </trafego>
+
+  <trafego nTrf=10>
+    <designador>F5</designador>
+    <ssr>302</ssr>
+    <indicativo>PPAUS</indicativo>
+    <origem>SBMN</origem>
+    <destino>SBMN</destino>
+    <temptrafego>14</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.68481</cpoA>
+      <cpoB>-60.78715</cpoB>
+    </coord>
+    <altitude>280</altitude>
+    <velocidade>400</velocidade>
+    <proa>100</proa>
+  </trafego>
+
+  <trafego nTrf=11>
+    <designador>C56X</designador>
+    <ssr>642</ssr>
+    <indicativo>PRMDB</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBUA</destino>
+    <temptrafego>14</temptrafego>
+    <altitude>300</altitude>
+    <velocidade>430</velocidade>
+    <procedimento>SUB|4022</procedimento>
+  </trafego>
+</trafegos>
+

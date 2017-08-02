@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>C208</designador>
+    <ssr>404</ssr>
+    <indicativo>PTMBL</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.607</cpoA>
+      <cpoB>-48.67033</cpoB>
+    </coord>
+    <altitude>10</altitude>
+    <velocidade>150</velocidade>
+    <proa>220</proa>
+    <niveltrj>10</niveltrj>
+    <veltrj>150</veltrj>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>C172</designador>
+    <ssr>405</ssr>
+    <indicativo>PTFOX</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>3</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.607</cpoA>
+      <cpoB>-48.67033</cpoB>
+    </coord>
+    <altitude>10</altitude>
+    <velocidade>120</velocidade>
+    <proa>40</proa>
+    <niveltrj>10</niveltrj>
+    <veltrj>120</veltrj>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>C152</designador>
+    <ssr>406</ssr>
+    <indicativo>PPUEN</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>6</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.607</cpoA>
+      <cpoB>-48.67033</cpoB>
+    </coord>
+    <altitude>10</altitude>
+    <velocidade>120</velocidade>
+    <proa>70</proa>
+    <niveltrj>10</niveltrj>
+    <veltrj>120</veltrj>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>AS65</designador>
+    <ssr>407</ssr>
+    <indicativo>PPNEW</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>7</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.53833</cpoA>
+      <cpoB>-48.62117</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>180</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>AS65</designador>
+    <ssr>1602</ssr>
+    <indicativo>AGUIA02</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>9</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.66867</cpoA>
+      <cpoB>-46.49333</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>250</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>AS65</designador>
+    <ssr>1701</ssr>
+    <indicativo>PATR01</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>11</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.592</cpoA>
+      <cpoB>-48.51783</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>210</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>A319</designador>
+    <ssr>3147</ssr>
+    <indicativo>SKU115</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBFL</destino>
+    <temptrafego>13</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.3395</cpoA>
+      <cpoB>-49.022</cpoB>
+    </coord>
+    <altitude>160</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|1010008</procedimento>
+    <niveltrj>160</niveltrj>
+    <veltrj>300</veltrj>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>A320</designador>
+    <ssr>3150</ssr>
+    <indicativo>ONE3131</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBRJ</destino>
+    <temptrafego>5</temptrafego>
+    <altitude>350</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>SUB|101125</procedimento>
+  </trafego>
+
+  <trafego nTrf=9>
+    <designador>B738</designador>
+    <ssr>3151</ssr>
+    <indicativo>GLO1510</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBPA</destino>
+    <temptrafego>7</temptrafego>
+    <altitude>340</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>SUB|101121</procedimento>
+  </trafego>
+
+  <trafego nTrf=10>
+    <designador>C208</designador>
+    <ssr>3032</ssr>
+    <indicativo>PPTTL</indicativo>
+    <origem>SBCM</origem>
+    <destino>SDEN</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.55705</cpoA>
+      <cpoB>-41.31856</cpoB>
+    </coord>
+    <altitude>75</altitude>
+    <velocidade>160</velocidade>
+    <procedimento>TRJ|1010029</procedimento>
+    <niveltrj>75</niveltrj>
+    <veltrj>160</veltrj>
+  </trafego>
+</trafegos>
+

@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>E110</designador>
+    <ssr>3005</ssr>
+    <indicativo>PTGKN</indicativo>
+    <origem>SBNF</origem>
+    <destino>SBRJ</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.93741</cpoA>
+      <cpoB>-46.4295</cpoB>
+    </coord>
+    <altitude>90</altitude>
+    <velocidade>200</velocidade>
+    <proa>15</proa>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>A320</designador>
+    <ssr>4006</ssr>
+    <indicativo>TAM3866</indicativo>
+    <origem>SBUR</origem>
+    <destino>SBSP</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.9515</cpoA>
+      <cpoB>-46.56983</cpoB>
+    </coord>
+    <altitude>90</altitude>
+    <velocidade>300</velocidade>
+    <proa>178</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>B738</designador>
+    <ssr>3010</ssr>
+    <indicativo>GLO1878</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBBR</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.27467</cpoA>
+      <cpoB>-46.74583</cpoB>
+    </coord>
+    <altitude>90</altitude>
+    <velocidade>360</velocidade>
+    <proa>43</proa>
+  </trafego>
+</trafegos>
+

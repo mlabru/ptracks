@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>B737</designador>
+    <ssr>5534</ssr>
+    <indicativo>GLO1802</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBRF</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.9065</cpoA>
+      <cpoB>-38.32133</cpoB>
+    </coord>
+    <altitude>20</altitude>
+    <velocidade>200</velocidade>
+    <procedimento>TRJ|502057</procedimento>
+    <niveltrj>290</niveltrj>
+    <veltrj>470</veltrj>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>B737</designador>
+    <ssr>4551</ssr>
+    <indicativo>GLO1816</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBRF</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-11.37217</cpoA>
+      <cpoB>-40.19817</cpoB>
+    </coord>
+    <altitude>330</altitude>
+    <velocidade>470</velocidade>
+    <procedimento>TRJ|502195</procedimento>
+    <niveltrj>330</niveltrj>
+    <veltrj>430</veltrj>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>FK10</designador>
+    <ssr>5075</ssr>
+    <indicativo>TAM3856</indicativo>
+    <origem>SBRF</origem>
+    <destino>SBBR</destino>
+    <temptrafego>25</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.1365</cpoA>
+      <cpoB>-34.92733</cpoB>
+    </coord>
+    <altitude>20</altitude>
+    <velocidade>200</velocidade>
+    <procedimento>TRJ|500080</procedimento>
+    <niveltrj>320</niveltrj>
+    <veltrj>460</veltrj>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>LR35</designador>
+    <ssr>5060</ssr>
+    <indicativo>PTORD</indicativo>
+    <origem>SBRF</origem>
+    <destino>SBSV</destino>
+    <temptrafego>14</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.1365</cpoA>
+      <cpoB>-34.92733</cpoB>
+    </coord>
+    <altitude>20</altitude>
+    <velocidade>200</velocidade>
+    <procedimento>TRJ|500154</procedimento>
+    <niveltrj>280</niveltrj>
+    <veltrj>470</veltrj>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>B707</designador>
+    <ssr>5005</ssr>
+    <indicativo>SKC9310</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBFZ</destino>
+    <temptrafego>25</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.9065</cpoA>
+      <cpoB>-38.32133</cpoB>
+    </coord>
+    <altitude>20</altitude>
+    <velocidade>200</velocidade>
+    <procedimento>TRJ|500107</procedimento>
+    <niveltrj>370</niveltrj>
+    <veltrj>480</veltrj>
+  </trafego>
+</trafegos>
+

@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>BE50</designador>
+    <ssr>5101</ssr>
+    <indicativo>PTBSF</indicativo>
+    <origem>SNBR</origem>
+    <destino>SBSV</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.58591</cpoA>
+      <cpoB>-38.92427</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>150</velocidade>
+    <proa>118</proa>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>BE90</designador>
+    <ssr>4101</ssr>
+    <indicativo>PTDRL</indicativo>
+    <origem>SBVT</origem>
+    <destino>SBMO</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.48643</cpoA>
+      <cpoB>-38.7125</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>220</velocidade>
+    <proa>43</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>BA46</designador>
+    <ssr>5102</ssr>
+    <indicativo>PTBGI</indicativo>
+    <origem>SBMS</origem>
+    <destino>SBIL</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.23907</cpoA>
+      <cpoB>-38.31433</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>300</velocidade>
+    <proa>204</proa>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>A319</designador>
+    <ssr>5103</ssr>
+    <indicativo>TAM3006</indicativo>
+    <origem>SBTE</origem>
+    <destino>SBSV</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.2218</cpoA>
+      <cpoB>-38.01648</cpoB>
+    </coord>
+    <altitude>140</altitude>
+    <velocidade>420</velocidade>
+    <proa>171</proa>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>C130</designador>
+    <ssr>4102</ssr>
+    <indicativo>FAB2455</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBSV</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.23491</cpoA>
+      <cpoB>-38.93898</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>240</velocidade>
+    <proa>62</proa>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>B737</designador>
+    <ssr>4103</ssr>
+    <indicativo>PUA0236</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBSV</destino>
+    <temptrafego>5</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.23491</cpoA>
+      <cpoB>-38.93898</cpoB>
+    </coord>
+    <altitude>280</altitude>
+    <velocidade>480</velocidade>
+    <proa>62</proa>
+  </trafego>
+</trafegos>
+

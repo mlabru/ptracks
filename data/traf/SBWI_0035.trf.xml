@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>A320</designador>
+    <ssr>3336</ssr>
+    <indicativo>TAM3169</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBFI</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.1425</cpoA>
+      <cpoB>-54.09833</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>B738</designador>
+    <ssr>3224</ssr>
+    <indicativo>GOL1114</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBFI</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.16265</cpoA>
+      <cpoB>-54.01753</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>250</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>A320</designador>
+    <ssr>3433</ssr>
+    <indicativo>LAP707</indicativo>
+    <origem>SBGR</origem>
+    <destino>SGES</destino>
+    <temptrafego>18</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.43067</cpoA>
+      <cpoB>-53.8155</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>B737</designador>
+    <ssr>2111</ssr>
+    <indicativo>ARG1294</indicativo>
+    <origem>SABE</origem>
+    <destino>SARI</destino>
+    <temptrafego>28</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.19371</cpoA>
+      <cpoB>-54.9839</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|810101</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>E190</designador>
+    <ssr>1727</ssr>
+    <indicativo>AUT2730</indicativo>
+    <origem>SABE</origem>
+    <destino>SARI</destino>
+    <temptrafego>28</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.19371</cpoA>
+      <cpoB>-54.9839</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810101</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>C550</designador>
+    <ssr>3625</ssr>
+    <indicativo>ZPTEL</indicativo>
+    <origem>SBGL</origem>
+    <destino>SGES</destino>
+    <temptrafego>18</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.58733</cpoA>
+      <cpoB>-53.76617</cpoB>
+    </coord>
+    <altitude>230</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>E190</designador>
+    <ssr>3777</ssr>
+    <indicativo>TIB5429</indicativo>
+    <origem>SBCY</origem>
+    <destino>SBFI</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.96562</cpoA>
+      <cpoB>-54.25393</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>E190</designador>
+    <ssr>3212</ssr>
+    <indicativo>AZU4460</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBFI</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.30892</cpoA>
+      <cpoB>-54.66019</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=9>
+    <designador>A320</designador>
+    <ssr>2123</ssr>
+    <indicativo>DSM4022</indicativo>
+    <origem>SABE</origem>
+    <destino>SARI</destino>
+    <temptrafego>29</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.19371</cpoA>
+      <cpoB>-54.9839</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|810101</procedimento>
+  </trafego>
+
+  <trafego nTrf=10>
+    <designador>C550</designador>
+    <ssr>1501</ssr>
+    <indicativo>N416MU</indicativo>
+    <origem>SARP</origem>
+    <destino>SARI</destino>
+    <temptrafego>29</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.26275</cpoA>
+      <cpoB>-55.03047</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>400</velocidade>
+    <procedimento>TRJ|810101</procedimento>
+  </trafego>
+</trafegos>
+

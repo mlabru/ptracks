@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>A319</designador>
+    <ssr>3301</ssr>
+    <indicativo>TAM3293</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBPA</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.21724</cpoA>
+      <cpoB>-50.41313</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>360</velocidade>
+    <proa>224</proa>
+    <niveltrj>200</niveltrj>
+    <veltrj>360</veltrj>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>BE90</designador>
+    <ssr>3303</ssr>
+    <indicativo>PTWHM</indicativo>
+    <origem>SBPK</origem>
+    <destino>SBPA</destino>
+    <temptrafego>35</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.53514</cpoA>
+      <cpoB>-51.68581</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>260</velocidade>
+    <proa>44</proa>
+    <niveltrj>150</niveltrj>
+    <veltrj>260</veltrj>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>A320</designador>
+    <ssr>3304</ssr>
+    <indicativo>TAM3061</indicativo>
+    <origem>SBSP</origem>
+    <destino>SBPA</destino>
+    <temptrafego>7</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.21724</cpoA>
+      <cpoB>-50.41313</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>360</velocidade>
+    <proa>224</proa>
+    <niveltrj>200</niveltrj>
+    <veltrj>360</veltrj>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>A320</designador>
+    <ssr>3306</ssr>
+    <indicativo>TAM8020</indicativo>
+    <origem>SBPA</origem>
+    <destino>SAEZ</destino>
+    <temptrafego>21</temptrafego>
+    <procedimento>SUB|29035</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>AT42</designador>
+    <ssr>3307</ssr>
+    <indicativo>NHG4505</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBPA</destino>
+    <temptrafego>13</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.53316</cpoA>
+      <cpoB>-52.53512</cpoB>
+    </coord>
+    <altitude>70</altitude>
+    <velocidade>140</velocidade>
+    <procedimento>TRJ|294000</procedimento>
+    <niveltrj>70</niveltrj>
+    <veltrj>140</veltrj>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>BE90</designador>
+    <ssr>3312</ssr>
+    <indicativo>PTWZC</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBCT</destino>
+    <temptrafego>1</temptrafego>
+    <procedimento>SUB|29016</procedimento>
+  </trafego>
+</trafegos>
+

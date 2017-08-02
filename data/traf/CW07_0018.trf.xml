@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>B737</designador>
+    <ssr>3301</ssr>
+    <indicativo>GLO1742</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBPA</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.21724</cpoA>
+      <cpoB>-50.41313</cpoB>
+    </coord>
+    <altitude>190</altitude>
+    <velocidade>380</velocidade>
+    <niveltrj>190</niveltrj>
+    <veltrj>380</veltrj>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>LJ35</designador>
+    <ssr>3302</ssr>
+    <indicativo>PPKRM</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBPA</destino>
+    <temptrafego>8</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.38696</cpoA>
+      <cpoB>-51.90046</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>340</velocidade>
+    <niveltrj>180</niveltrj>
+    <veltrj>340</veltrj>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>A320</designador>
+    <ssr>3305</ssr>
+    <indicativo>TAM3380</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBPA</destino>
+    <temptrafego>18</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.15734</cpoA>
+      <cpoB>-50.35528</cpoB>
+    </coord>
+    <altitude>210</altitude>
+    <velocidade>380</velocidade>
+    <niveltrj>210</niveltrj>
+    <veltrj>380</veltrj>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>C550</designador>
+    <ssr>3306</ssr>
+    <indicativo>PTWIB</indicativo>
+    <origem>SBPA</origem>
+    <destino>SAEZ</destino>
+    <temptrafego>23</temptrafego>
+    <procedimento>SUB|29035</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>B737</designador>
+    <ssr>3307</ssr>
+    <indicativo>GLO1695</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBPA</destino>
+    <temptrafego>25</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.15734</cpoA>
+      <cpoB>-50.35528</cpoB>
+    </coord>
+    <altitude>210</altitude>
+    <velocidade>360</velocidade>
+    <niveltrj>210</niveltrj>
+    <veltrj>360</veltrj>
+  </trafego>
+</trafegos>
+

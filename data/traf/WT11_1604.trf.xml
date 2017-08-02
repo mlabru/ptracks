@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>B738</designador>
+    <ssr>3030</ssr>
+    <indicativo>GLO1693</indicativo>
+    <origem>SBSP</origem>
+    <destino>SBCT</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.91519</cpoA>
+      <cpoB>-48.56342</cpoB>
+    </coord>
+    <altitude>230</altitude>
+    <velocidade>390</velocidade>
+    <procedimento>TRJ|980050</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>A320</designador>
+    <ssr>3002</ssr>
+    <indicativo>TAM3535</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBCT</destino>
+    <temptrafego>3</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.0135</cpoA>
+      <cpoB>-49.80322</cpoB>
+    </coord>
+    <altitude>230</altitude>
+    <velocidade>390</velocidade>
+    <procedimento>TRJ|980052</procedimento>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>E50P</designador>
+    <ssr>3003</ssr>
+    <indicativo>PTGXQ</indicativo>
+    <origem>SBLO</origem>
+    <destino>SBCT</destino>
+    <temptrafego>6</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.86019</cpoA>
+      <cpoB>-49.70175</cpoB>
+    </coord>
+    <altitude>230</altitude>
+    <velocidade>390</velocidade>
+    <procedimento>TRJ|980052</procedimento>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>B738</designador>
+    <ssr>3004</ssr>
+    <indicativo>GLO1423</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBCT</destino>
+    <temptrafego>12</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.27142</cpoA>
+      <cpoB>-49.57323</cpoB>
+    </coord>
+    <altitude>210</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|980051</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>AT72</designador>
+    <ssr>3101</ssr>
+    <indicativo>AZU5340</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBGR</destino>
+    <temptrafego>1</temptrafego>
+    <procedimento>SUB|98005</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>PA34</designador>
+    <ssr>3102</ssr>
+    <indicativo>PPEIK</indicativo>
+    <origem>SBBI</origem>
+    <destino>SBLO</destino>
+    <temptrafego>2</temptrafego>
+    <procedimento>SUB|98026</procedimento>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>LJ45</designador>
+    <ssr>3103</ssr>
+    <indicativo>PTWSB</indicativo>
+    <origem>SBBI</origem>
+    <destino>SBRJ</destino>
+    <temptrafego>11</temptrafego>
+    <procedimento>SUB|98030</procedimento>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>AT72</designador>
+    <ssr>3104</ssr>
+    <indicativo>AZU5756</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBMG</destino>
+    <temptrafego>13</temptrafego>
+    <procedimento>SUB|98038</procedimento>
+  </trafego>
+</trafegos>
+

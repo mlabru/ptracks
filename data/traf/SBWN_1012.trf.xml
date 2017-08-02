@@ -1,0 +1,397 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>B738</designador>
+    <ssr>6301</ssr>
+    <indicativo>GLO1362</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.78928</cpoA>
+      <cpoB>-59.992</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <proa>360</proa>
+    <procedimento>TRJ|830100</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>275</veltrj>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>B738</designador>
+    <ssr>6302</ssr>
+    <indicativo>GLO1255</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBPV</destino>
+    <temptrafego>0</temptrafego>
+    <procedimento>SUB|83102</procedimento>
+    <niveltrj>360</niveltrj>
+    <veltrj>460</veltrj>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>A320</designador>
+    <ssr>6303</ssr>
+    <indicativo>TAM9014</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-22.90139</cpoA>
+      <cpoB>-51.79572</cpoB>
+    </coord>
+    <altitude>145</altitude>
+    <velocidade>310</velocidade>
+    <procedimento>TRJ|830103</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>290</veltrj>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>A320</designador>
+    <ssr>6304</ssr>
+    <indicativo>TAM4764</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBBE</destino>
+    <temptrafego>0</temptrafego>
+    <procedimento>SUB|83109</procedimento>
+    <niveltrj>370</niveltrj>
+    <veltrj>410</veltrj>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>C208</designador>
+    <ssr>6305</ssr>
+    <indicativo>COBRA30</indicativo>
+    <origem>SBUA</origem>
+    <destino>SBMN</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.04228</cpoA>
+      <cpoB>-60.10756</cpoB>
+    </coord>
+    <altitude>110</altitude>
+    <velocidade>170</velocidade>
+    <procedimento>TRJ|830106</procedimento>
+    <niveltrj>110</niveltrj>
+    <veltrj>170</veltrj>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>A320</designador>
+    <ssr>6306</ssr>
+    <indicativo>TAM9015</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBGR</destino>
+    <temptrafego>3</temptrafego>
+    <procedimento>SUB|83101</procedimento>
+    <niveltrj>390</niveltrj>
+    <veltrj>440</veltrj>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>E190</designador>
+    <ssr>6307</ssr>
+    <indicativo>CMP140</indicativo>
+    <origem>SBEG</origem>
+    <destino>MPTO</destino>
+    <temptrafego>5</temptrafego>
+    <procedimento>SUB|83108</procedimento>
+    <niveltrj>400</niveltrj>
+    <veltrj>410</veltrj>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>B747</designador>
+    <ssr>6401</ssr>
+    <indicativo>GTI37</indicativo>
+    <origem>KMIA</origem>
+    <destino>SBEG</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.9834</cpoA>
+      <cpoB>-60.16644</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|830106</procedimento>
+    <niveltrj>120</niveltrj>
+    <veltrj>270</veltrj>
+  </trafego>
+
+  <trafego nTrf=9>
+    <designador>B738</designador>
+    <ssr>6402</ssr>
+    <indicativo>GLO1363</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBBR</destino>
+    <temptrafego>12</temptrafego>
+    <procedimento>SUB|83100</procedimento>
+    <niveltrj>370</niveltrj>
+    <veltrj>460</veltrj>
+  </trafego>
+
+  <trafego nTrf=10>
+    <designador>C295</designador>
+    <ssr>6403</ssr>
+    <indicativo>ARARA08</indicativo>
+    <origem>SBMN</origem>
+    <destino>SBUA</destino>
+    <temptrafego>13</temptrafego>
+    <procedimento>SUB|83307</procedimento>
+    <niveltrj>280</niveltrj>
+    <veltrj>250</veltrj>
+  </trafego>
+
+  <trafego nTrf=11>
+    <designador>B737</designador>
+    <ssr>6404</ssr>
+    <indicativo>GLO1786</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBBE</destino>
+    <temptrafego>13</temptrafego>
+    <procedimento>SUB|83109</procedimento>
+    <niveltrj>370</niveltrj>
+    <veltrj>440</veltrj>
+  </trafego>
+
+  <trafego nTrf=12>
+    <designador>E190</designador>
+    <ssr>6405</ssr>
+    <indicativo>AZU2810</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBBV</destino>
+    <temptrafego>13</temptrafego>
+    <procedimento>SUB|83105</procedimento>
+    <niveltrj>360</niveltrj>
+    <veltrj>425</veltrj>
+  </trafego>
+
+  <trafego nTrf=13>
+    <designador>A29</designador>
+    <ssr>6406</ssr>
+    <indicativo>ESC10</indicativo>
+    <origem>SBMN</origem>
+    <destino>SBBV</destino>
+    <temptrafego>14</temptrafego>
+    <procedimento>SUB|83304</procedimento>
+    <niveltrj>110</niveltrj>
+    <veltrj>210</veltrj>
+  </trafego>
+
+  <trafego nTrf=14>
+    <designador>E110</designador>
+    <ssr>6407</ssr>
+    <indicativo>PTOCV</indicativo>
+    <origem>SBBE</origem>
+    <destino>SBEG</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.96129</cpoA>
+      <cpoB>-59.24032</cpoB>
+    </coord>
+    <altitude>120</altitude>
+    <velocidade>200</velocidade>
+    <procedimento>TRJ|830104</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>200</veltrj>
+  </trafego>
+
+  <trafego nTrf=15>
+    <designador>AT72</designador>
+    <ssr>6501</ssr>
+    <indicativo>PAM5916</indicativo>
+    <origem>SBSN</origem>
+    <destino>SBEG</destino>
+    <temptrafego>17</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.97286</cpoA>
+      <cpoB>-59.17471</cpoB>
+    </coord>
+    <altitude>130</altitude>
+    <velocidade>240</velocidade>
+    <procedimento>TRJ|830104</procedimento>
+    <niveltrj>110</niveltrj>
+    <veltrj>240</veltrj>
+  </trafego>
+
+  <trafego nTrf=16>
+    <designador>E190</designador>
+    <ssr>6502</ssr>
+    <indicativo>AZU9206</indicativo>
+    <origem>SBTF</origem>
+    <destino>SBEG</destino>
+    <temptrafego>17</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.063</cpoA>
+      <cpoB>-60.19111</cpoB>
+    </coord>
+    <altitude>140</altitude>
+    <velocidade>290</velocidade>
+    <procedimento>TRJ|830101</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>275</veltrj>
+  </trafego>
+
+  <trafego nTrf=17>
+    <designador>B767</designador>
+    <ssr>6503</ssr>
+    <indicativo>TAM8077</indicativo>
+    <origem>SBEG</origem>
+    <destino>KMIA</destino>
+    <temptrafego>25</temptrafego>
+    <procedimento>SUB|83107</procedimento>
+    <niveltrj>380</niveltrj>
+    <veltrj>480</veltrj>
+  </trafego>
+
+  <trafego nTrf=18>
+    <designador>E99</designador>
+    <ssr>6504</ssr>
+    <indicativo>GUARD40</indicativo>
+    <origem>SBBV</origem>
+    <destino>SBMN</destino>
+    <temptrafego>26</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.02905</cpoA>
+      <cpoB>-60.09031</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>280</velocidade>
+    <procedimento>TRJ|830106</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>240</veltrj>
+  </trafego>
+
+  <trafego nTrf=19>
+    <designador>B738</designador>
+    <ssr>6505</ssr>
+    <indicativo>GLO1651</indicativo>
+    <origem>SBBV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>27</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.98578</cpoA>
+      <cpoB>-60.11529</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>310</velocidade>
+    <procedimento>TRJ|830102</procedimento>
+    <niveltrj>110</niveltrj>
+    <veltrj>270</veltrj>
+  </trafego>
+
+  <trafego nTrf=20>
+    <designador>C208</designador>
+    <ssr>6506</ssr>
+    <indicativo>COBRA28</indicativo>
+    <origem>SBMN</origem>
+    <destino>SWHT</destino>
+    <temptrafego>27</temptrafego>
+    <procedimento>SUB|83302</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>160</veltrj>
+  </trafego>
+
+  <trafego nTrf=21>
+    <designador>E190</designador>
+    <ssr>6507</ssr>
+    <indicativo>AZU2654</indicativo>
+    <origem>SBSN</origem>
+    <destino>SBEG</destino>
+    <temptrafego>29</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.96129</cpoA>
+      <cpoB>-59.24032</cpoB>
+    </coord>
+    <altitude>140</altitude>
+    <velocidade>290</velocidade>
+    <procedimento>TRJ|830104</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>260</veltrj>
+  </trafego>
+
+  <trafego nTrf=22>
+    <designador>BE58</designador>
+    <ssr>6601</ssr>
+    <indicativo>PRTIO</indicativo>
+    <origem>SBEG</origem>
+    <destino>SWOW</destino>
+    <temptrafego>30</temptrafego>
+    <procedimento>SUB|83107</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>190</veltrj>
+  </trafego>
+
+  <trafego nTrf=23>
+    <designador>B763</designador>
+    <ssr>6602</ssr>
+    <indicativo>TUS6566</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.78928</cpoA>
+      <cpoB>-59.992</cpoB>
+    </coord>
+    <altitude>130</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|830100</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>270</veltrj>
+  </trafego>
+
+  <trafego nTrf=24>
+    <designador>B763</designador>
+    <ssr>6603</ssr>
+    <indicativo>TUS6576</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.88921</cpoA>
+      <cpoB>-59.992</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>320</velocidade>
+    <procedimento>TRJ|830100</procedimento>
+    <niveltrj>110</niveltrj>
+    <veltrj>280</veltrj>
+  </trafego>
+
+  <trafego nTrf=25>
+    <designador>F5M</designador>
+    <ssr>6604</ssr>
+    <indicativo>PACCOPA</indicativo>
+    <origem>SBCC</origem>
+    <destino>SBMN</destino>
+    <temptrafego>31</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-4.0058</cpoA>
+      <cpoB>-59.992</cpoB>
+    </coord>
+    <altitude>280</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|830100</procedimento>
+    <niveltrj>100</niveltrj>
+    <veltrj>280</veltrj>
+  </trafego>
+</trafegos>
+

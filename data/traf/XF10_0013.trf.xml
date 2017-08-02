@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>C180</designador>
+    <ssr>3001</ssr>
+    <indicativo>PTMBL</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.607</cpoA>
+      <cpoB>-48.67033</cpoB>
+    </coord>
+    <altitude>10</altitude>
+    <velocidade>120</velocidade>
+    <proa>220</proa>
+    <niveltrj>10</niveltrj>
+    <veltrj>120</veltrj>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>B738</designador>
+    <ssr>3002</ssr>
+    <indicativo>GLO1889</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBGL</destino>
+    <temptrafego>2</temptrafego>
+    <altitude>390</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>SUB|100125</procedimento>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>AS65</designador>
+    <ssr>3003</ssr>
+    <indicativo>AGUIA02</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-18.66867</cpoA>
+      <cpoB>-46.49333</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>270</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>A319</designador>
+    <ssr>3004</ssr>
+    <indicativo>TAM3201</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBPA</destino>
+    <temptrafego>6</temptrafego>
+    <altitude>360</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>SUB|100121</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>E190</designador>
+    <ssr>3005</ssr>
+    <indicativo>AZU1122</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBCH</destino>
+    <temptrafego>7</temptrafego>
+    <altitude>320</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>SUB|100122</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>E190</designador>
+    <ssr>3306</ssr>
+    <indicativo>AZU2211</indicativo>
+    <origem>SBCH</origem>
+    <destino>SBFL</destino>
+    <temptrafego>8</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.59233</cpoA>
+      <cpoB>-49.27417</cpoB>
+    </coord>
+    <altitude>160</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|1000007</procedimento>
+    <niveltrj>160</niveltrj>
+    <veltrj>300</veltrj>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>BH06</designador>
+    <ssr>3007</ssr>
+    <indicativo>ARCAN02</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>9</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.607</cpoA>
+      <cpoB>-48.67033</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>90</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf=8>
+    <designador>AS65</designador>
+    <ssr>3100</ssr>
+    <indicativo>PPNEW</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>11</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.53833</cpoA>
+      <cpoB>-48.62117</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>10</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf=9>
+    <designador>C172</designador>
+    <ssr>3101</ssr>
+    <indicativo>PRFLM</indicativo>
+    <origem>SBFL</origem>
+    <destino>SBFL</destino>
+    <temptrafego>13</temptrafego>
+    <altitude>25</altitude>
+    <velocidade>120</velocidade>
+    <procedimento>SUB|100130</procedimento>
+  </trafego>
+
+  <trafego nTrf=10>
+    <designador>AS65</designador>
+    <ssr>3102</ssr>
+    <indicativo>PATRU01</indicativo>
+    <origem></origem>
+    <destino></destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-27.607</cpoA>
+      <cpoB>-48.67033</cpoB>
+    </coord>
+    <altitude>5</altitude>
+    <velocidade>100</velocidade>
+    <proa>150</proa>
+    <niveltrj>5</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+</trafegos>
+

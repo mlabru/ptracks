@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>C208</designador>
+    <ssr>6111</ssr>
+    <indicativo>PPAMV</indicativo>
+    <origem>SWEO</origem>
+    <destino>SWFN</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.3511</cpoA>
+      <cpoB>-60.17614</cpoB>
+    </coord>
+    <altitude>95</altitude>
+    <velocidade>120</velocidade>
+    <proa>170</proa>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>PA34</designador>
+    <indicativo>PTWEX</indicativo>
+    <origem>SBUA</origem>
+    <destino>SWFN</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.63877</cpoA>
+      <cpoB>-60.62769</cpoB>
+    </coord>
+    <altitude>95</altitude>
+    <velocidade>125</velocidade>
+    <proa>125</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>C208</designador>
+    <ssr>6113</ssr>
+    <indicativo>PPAMX</indicativo>
+    <origem>SWKO</origem>
+    <destino>SWFN</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.10964</cpoA>
+      <cpoB>-60.71724</cpoB>
+    </coord>
+    <altitude>75</altitude>
+    <velocidade>115</velocidade>
+    <proa>84</proa>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>PA34</designador>
+    <indicativo>PRLLC</indicativo>
+    <origem>SWBR</origem>
+    <destino>SWFN</destino>
+    <temptrafego>6</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.76382</cpoA>
+      <cpoB>-59.94003</cpoB>
+    </coord>
+    <altitude>45</altitude>
+    <velocidade>120</velocidade>
+    <proa>351</proa>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>PA34</designador>
+    <ssr>6115</ssr>
+    <indicativo>PTISH</indicativo>
+    <origem>SWPI</origem>
+    <destino>SWFN</destino>
+    <temptrafego>8</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.1166</cpoA>
+      <cpoB>-59.32585</cpoB>
+    </coord>
+    <altitude>105</altitude>
+    <velocidade>125</velocidade>
+    <proa>276</proa>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>PA34</designador>
+    <indicativo>PTEUP</indicativo>
+    <origem>SJCW</origem>
+    <destino>SWFN</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.71159</cpoA>
+      <cpoB>-59.43702</cpoB>
+    </coord>
+    <altitude>65</altitude>
+    <velocidade>110</velocidade>
+    <proa>242</proa>
+  </trafego>
+</trafegos>
+

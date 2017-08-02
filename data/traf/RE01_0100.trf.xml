@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>A320</designador>
+    <ssr>5001</ssr>
+    <indicativo>TAM3344</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBBR</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.15333</cpoA>
+      <cpoB>-39.1085</cpoB>
+    </coord>
+    <altitude>380</altitude>
+    <velocidade>476</velocidade>
+    <proa>275</proa>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>A310</designador>
+    <ssr>5002</ssr>
+    <indicativo>MPD038</indicativo>
+    <origem>SBRF</origem>
+    <destino>SBBR</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.51955</cpoA>
+      <cpoB>-39.95414</cpoB>
+    </coord>
+    <altitude>310</altitude>
+    <velocidade>480</velocidade>
+    <proa>32</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>C750</designador>
+    <ssr>5003</ssr>
+    <indicativo>CHIA024</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBCF</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.81617</cpoA>
+      <cpoB>-39.07583</cpoB>
+    </coord>
+    <altitude>410</altitude>
+    <velocidade>445</velocidade>
+    <proa>242</proa>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>C650</designador>
+    <ssr>5004</ssr>
+    <indicativo>PTLCQ</indicativo>
+    <origem>SBAR</origem>
+    <destino>SBBH</destino>
+    <temptrafego>5</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.53396</cpoA>
+      <cpoB>-37.76901</cpoB>
+    </coord>
+    <altitude>300</altitude>
+    <velocidade>480</velocidade>
+    <proa>239</proa>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>B747</designador>
+    <ssr>5005</ssr>
+    <indicativo>DLH508</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBGR</destino>
+    <temptrafego>7</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.9065</cpoA>
+      <cpoB>-38.32133</cpoB>
+    </coord>
+    <altitude>20</altitude>
+    <velocidade>210</velocidade>
+    <procedimento>TRJ|462051</procedimento>
+  </trafego>
+</trafegos>
+

@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>B777</designador>
+    <ssr>4204</ssr>
+    <indicativo>AFR690</indicativo>
+    <origem>EDDF</origem>
+    <destino>SAEZ</destino>
+    <temptrafego>5</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-14.14551</cpoA>
+      <cpoB>-45.08707</cpoB>
+    </coord>
+    <altitude>310</altitude>
+    <velocidade>480</velocidade>
+    <procedimento>TRJ|150031</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>A320</designador>
+    <ssr>4205</ssr>
+    <indicativo>TAM3451</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBBH</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-14.91122</cpoA>
+      <cpoB>-48.29745</cpoB>
+    </coord>
+    <altitude>330</altitude>
+    <velocidade>510</velocidade>
+    <procedimento>TRJ|150022</procedimento>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>B737</designador>
+    <ssr>4206</ssr>
+    <indicativo>GLO1662</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBBH</destino>
+    <temptrafego>25</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.40217</cpoA>
+      <cpoB>-47.596</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|150023</procedimento>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>B737</designador>
+    <ssr>4207</ssr>
+    <indicativo>GLO1737</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBBR</destino>
+    <temptrafego>40</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.15552</cpoA>
+      <cpoB>-47.14898</cpoB>
+    </coord>
+    <altitude>350</altitude>
+    <velocidade>480</velocidade>
+    <procedimento>TRJ|150001</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>B767</designador>
+    <ssr>4210</ssr>
+    <indicativo>COA030</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBBR</destino>
+    <temptrafego>40</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-19.15552</cpoA>
+      <cpoB>-47.14898</cpoB>
+    </coord>
+    <altitude>310</altitude>
+    <velocidade>480</velocidade>
+    <procedimento>TRJ|150004</procedimento>
+  </trafego>
+</trafegos>
+

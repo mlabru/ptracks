@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>C208</designador>
+    <ssr>3442</ssr>
+    <indicativo>FAB2708</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBCO</destino>
+    <temptrafego>1</temptrafego>
+    <altitude>100</altitude>
+    <velocidade>100</velocidade>
+    <procedimento>SUB|74001</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>A320</designador>
+    <ssr>3662</ssr>
+    <indicativo>TAM3506</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBSM</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.11735</cpoA>
+      <cpoB>-53.00577</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>300</velocidade>
+    <proa>230</proa>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>G2</designador>
+    <ssr>3212</ssr>
+    <indicativo>N367HM</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBSM</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.56697</cpoA>
+      <cpoB>-54.02081</cpoB>
+    </coord>
+    <altitude>190</altitude>
+    <velocidade>280</velocidade>
+    <proa>20</proa>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>B763</designador>
+    <ssr>3666</ssr>
+    <indicativo>PUA5210</indicativo>
+    <origem>SUMU</origem>
+    <destino>SBSM</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.56697</cpoA>
+      <cpoB>-54.02081</cpoB>
+    </coord>
+    <altitude>190</altitude>
+    <velocidade>300</velocidade>
+    <proa>20</proa>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>E110</designador>
+    <ssr>3222</ssr>
+    <indicativo>FENIX06</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBUG</destino>
+    <temptrafego>25</temptrafego>
+    <altitude>90</altitude>
+    <velocidade>120</velocidade>
+    <procedimento>SUB|74009</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>B738</designador>
+    <ssr>3232</ssr>
+    <indicativo>GLO1857</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBSM</destino>
+    <temptrafego>25</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.11735</cpoA>
+      <cpoB>-53.00577</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>280</velocidade>
+    <proa>230</proa>
+  </trafego>
+
+  <trafego nTrf=7>
+    <designador>B733</designador>
+    <ssr>3245</ssr>
+    <indicativo>ARG1221</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBSM</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.56697</cpoA>
+      <cpoB>-54.02081</cpoB>
+    </coord>
+    <altitude>190</altitude>
+    <velocidade>280</velocidade>
+    <proa>20</proa>
+  </trafego>
+</trafegos>
+

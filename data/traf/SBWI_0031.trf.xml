@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf=1>
+    <designador>A320</designador>
+    <ssr>3336</ssr>
+    <indicativo>TAM3169</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBFI</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.1425</cpoA>
+      <cpoB>-54.09833</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=2>
+    <designador>B738</designador>
+    <ssr>3224</ssr>
+    <indicativo>GOL1114</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBFI</destino>
+    <temptrafego>8</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.1425</cpoA>
+      <cpoB>-54.09833</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>250</velocidade>
+    <procedimento>TRJ|810100</procedimento>
+  </trafego>
+
+  <trafego nTrf=3>
+    <designador>A320</designador>
+    <ssr>3433</ssr>
+    <indicativo>LAP707</indicativo>
+    <origem>SBGR</origem>
+    <destino>SGES</destino>
+    <temptrafego>16</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.58733</cpoA>
+      <cpoB>-53.76617</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810102</procedimento>
+  </trafego>
+
+  <trafego nTrf=4>
+    <designador>B737</designador>
+    <ssr>2111</ssr>
+    <indicativo>ARG1294</indicativo>
+    <origem>SABE</origem>
+    <destino>SARI</destino>
+    <temptrafego>32</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.12467</cpoA>
+      <cpoB>-54.93733</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>TRJ|810101</procedimento>
+  </trafego>
+
+  <trafego nTrf=5>
+    <designador>E190</designador>
+    <ssr>1727</ssr>
+    <indicativo>AUT2730</indicativo>
+    <origem>SABE</origem>
+    <destino>SARI</destino>
+    <temptrafego>40</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.12467</cpoA>
+      <cpoB>-54.93733</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810101</procedimento>
+  </trafego>
+
+  <trafego nTrf=6>
+    <designador>C550</designador>
+    <ssr>3625</ssr>
+    <indicativo>ZPTEL</indicativo>
+    <origem>SBGL</origem>
+    <destino>SGES</destino>
+    <temptrafego>24</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.58733</cpoA>
+      <cpoB>-53.76617</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ|810102</procedimento>
+  </trafego>
+</trafegos>
+
