@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>S76</designador>
     <ssr>260</ssr>
     <indicativo>PRMKY</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>55</altitude>
     <velocidade>155</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>SK76</designador>
     <ssr>261</ssr>
     <indicativo>PRGHD</indicativo>
@@ -33,10 +33,10 @@
     </coord>
     <altitude>45</altitude>
     <velocidade>120</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A139</designador>
     <ssr>262</ssr>
     <indicativo>PRCHA</indicativo>
@@ -50,10 +50,10 @@
     </coord>
     <altitude>55</altitude>
     <velocidade>120</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>R44</designador>
     <ssr>264</ssr>
     <indicativo>PPAIY</indicativo>
@@ -70,7 +70,7 @@
     <proa>94</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>C172</designador>
     <ssr>265</ssr>
     <indicativo>PTOOM</indicativo>
@@ -87,7 +87,7 @@
     <proa>240</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>R44</designador>
     <ssr>266</ssr>
     <indicativo>PPFTA</indicativo>
@@ -103,7 +103,7 @@
     <velocidade>100</velocidade>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>BE55</designador>
     <ssr>1001</ssr>
     <indicativo>PPZOM</indicativo>
@@ -120,7 +120,7 @@
     <proa>240</proa>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>AT72</designador>
     <ssr>3203</ssr>
     <indicativo>AZU3704</indicativo>
@@ -134,7 +134,7 @@
     </coord>
     <altitude>80</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 </trafegos>
 

@@ -2,79 +2,79 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E110</designador>
     <ssr>6601</ssr>
     <indicativo>TRACA24</indicativo>
     <origem>SBPV</origem>
     <destino>SBMN</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|45004</procedimento>
+    <procedimento>SUB45004</procedimento>
     <niveltrj>120</niveltrj>
     <veltrj>180</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>6602</ssr>
     <indicativo>TAM3596</indicativo>
     <origem>SBPV</origem>
     <destino>SBRB</destino>
     <temptrafego>3</temptrafego>
-    <procedimento>SUB|45008</procedimento>
+    <procedimento>SUB45008</procedimento>
     <niveltrj>300</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E190</designador>
     <ssr>6603</ssr>
     <indicativo>AZU2415</indicativo>
     <origem>SBPV</origem>
     <destino>SBCY</destino>
     <temptrafego>5</temptrafego>
-    <procedimento>SUB|45012</procedimento>
+    <procedimento>SUB45012</procedimento>
     <niveltrj>350</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>C208</designador>
     <ssr>6604</ssr>
     <indicativo>RIMA070</indicativo>
     <origem>SBPV</origem>
     <destino>SWLB</destino>
     <temptrafego>12</temptrafego>
-    <procedimento>SUB|45036</procedimento>
+    <procedimento>SUB45036</procedimento>
     <niveltrj>80</niveltrj>
     <veltrj>160</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B738</designador>
     <ssr>6605</ssr>
     <indicativo>PRGLG</indicativo>
     <origem>SBPV</origem>
     <destino>SBBR</destino>
     <temptrafego>20</temptrafego>
-    <procedimento>SUB|45011</procedimento>
+    <procedimento>SUB45011</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>E190</designador>
     <ssr>6606</ssr>
     <indicativo>AZU9595</indicativo>
     <origem>SBPV</origem>
     <destino>SBEG</destino>
     <temptrafego>21</temptrafego>
-    <procedimento>SUB|45003</procedimento>
+    <procedimento>SUB45003</procedimento>
     <niveltrj>350</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>C550</designador>
     <ssr>6607</ssr>
     <indicativo>PPDAN</indicativo>
@@ -93,7 +93,7 @@
     <veltrj>270</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>MU2</designador>
     <ssr>6610</ssr>
     <indicativo>PPCOU</indicativo>
@@ -112,7 +112,7 @@
     <veltrj>210</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>H25B</designador>
     <ssr>6611</ssr>
     <indicativo>GEIV24</indicativo>
@@ -131,7 +131,7 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>A319</designador>
     <ssr>6612</ssr>
     <indicativo>FAB01</indicativo>
@@ -150,7 +150,7 @@
     <veltrj>270</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>SR22</designador>
     <ssr>6613</ssr>
     <indicativo>PTSAR</indicativo>
@@ -169,7 +169,7 @@
     <veltrj>120</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>A29</designador>
     <ssr>3002</ssr>
     <indicativo>GRFVERDE</indicativo>
@@ -188,7 +188,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>A29</designador>
     <ssr>6615</ssr>
     <indicativo>GRFAZUL</indicativo>
@@ -207,7 +207,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>E190</designador>
     <ssr>6614</ssr>
     <indicativo>AZU5694</indicativo>
@@ -226,7 +226,7 @@
     <veltrj>270</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>B737</designador>
     <ssr>6616</ssr>
     <indicativo>GLO2424</indicativo>

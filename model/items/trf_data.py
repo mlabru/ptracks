@@ -51,12 +51,7 @@ import model.items.parser_utils as parser
 
 # control
 import control.events.events_basic as events
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+import control.control_debug as cdbg
 
 # < class CTrfData >-------------------------------------------------------------------------------
 
@@ -83,8 +78,8 @@ class CTrfData(dict):
     # ---------------------------------------------------------------------------------------------
     def __init__(self, f_model, f_data=None, f_exe=None):
         """
-        @param f_model: event manager
-        @param f_data: dados das tráfegos
+        @param f_model: model
+        @param f_data: dados dos tráfegos
         @param f_exe: exercício
         """
         # check input
@@ -94,47 +89,34 @@ class CTrfData(dict):
         # inicia a super class
         super(CTrfData, self).__init__()
 
-        # salva o model manager localmente
+        # model
         self.__model = f_model
 
-        # salva o event manager localmente
+        # event manager
         self.__event = f_model.event
         assert self.__event
 
-        # salva o exercício localmente
+        # exercício
         self.__exe = f_exe
 
         # recebeu dados ?
         if f_data is not None:
             # recebeu uma lista ?
             if isinstance(f_data, list):
-                # cria uma tráfego com os dados da lista
+                # cria um tráfego com os dados da lista
                 # self.make_trf(f_data)
                 pass
 
-            # recebeu uma tráfego ?
+            # recebeu um tráfego ?
             elif isinstance(f_data, CTrfData):
-                # copia a tráfego
+                # copia o tráfego
                 # self.copy_trf(f_data)
                 pass
 
-            # otherwise, recebeu o pathname de uma tráfego
+            # otherwise, recebeu o pathname de um tráfego
             else:
-                # carrega a tráfego de um arquivo em disco
-                self.load_file(f_data)
-
-    # ---------------------------------------------------------------------------------------------
-    def load_file(self, fs_trf_pn):
-        """
-        carrega os dados do tráfego de um arquivo em disco
-
-        @param fs_trf_pn: pathname do arquivo em disco
-        """
-        # check input
-        assert fs_trf_pn
-
-        # carrega o arquivo de tráfego
-        self.parse_trf_xml(fs_trf_pn + ".trf.xml")
+                # carrega o tráfego de um arquivo em disco
+                self.parse_trf_xml(f_data + ".trf.xml")
 
     # ---------------------------------------------------------------------------------------------
     def make_trf(self, fdct_root, fdct_data):
@@ -257,15 +239,14 @@ class CTrfData(dict):
             l_log.critical(u"<E01: erro na abertura de {}.".format(fs_trf_pn))
 
             # cria um evento de quit
-            #l_evt = events.CQuit()
-            #assert l_evt
+            l_evt = events.CQuit()
+            assert l_evt
 
             # dissemina o evento
-            #self.__event.post(l_evt)
+            self.__event.post(l_evt)
 
             # termina a aplicação
-            #sys.exit(1)
-            return
+            sys.exit(1)
 
         # cria o documento XML do tráfego
         l_xdoc_trf = QtXml.QDomDocument("trafegos")
@@ -306,6 +287,7 @@ class CTrfData(dict):
 
         # para todos os nós na lista...
         for li_ndx in xrange(l_node_list.length()):
+
             # inicia o dicionário de dados
             ldct_data = {}
 
@@ -349,12 +331,12 @@ class CTrfData(dict):
         @return flag e mensagem
         """
         # logger
-        M_LOG.info("save2disk:>>")
+        cdbg.M_DBG.info("save2disk:>>")
 
-        M_LOG.debug(" Exercicio [%s]" % self.__exe.s_exe_id)
-        M_LOG.debug(" Quantidade de tráfegos [%s]" % len(self.__exe.dct_exe_trf))
+        cdbg.M_DBG.debug(" Exercicio [%s]" % self.__exe.s_exe_id)
+        cdbg.M_DBG.debug(" Quantidade de tráfegos [%s]" % len(self.__exe.dct_exe_trf))
         ls_File = os.path.join(fs_trf_pn, self.__exe.s_exe_id)
-        M_LOG.debug(" Arquivo [%s.trf.xml]" %ls_File)
+        cdbg.M_DBG.debug(" Arquivo [%s.trf.xml]" %ls_File)
 
         l_file = open("%s.trf.xml" % ls_File, 'w')
 
@@ -405,13 +387,12 @@ class CTrfData(dict):
         # mensagem
         ls_msg = "save ok"
 
-        M_LOG.info("save2disk:<<")
+        cdbg.M_DBG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def del_from_disk(self, fs_trf_path=None):
         """
         deleta o arquivo de tráfegos do exercício do disco
@@ -421,8 +402,7 @@ class CTrfData(dict):
         @return flag e mensagem
         """
         # logger
-        M_LOG.info("del_from_disk:>>")
-        M_LOG.info("del_from_disk:>> Deleting file [%s]" % fs_trf_path)
+        cdbg.M_DBG.info("del_from_disk:>> Deleting file [%s]" % fs_trf_path)
 
         if os.path.isfile(fs_trf_path):
             os.remove(fs_trf_path)
@@ -441,7 +421,7 @@ class CTrfData(dict):
             ls_msg = "del failed!"
 
         # logger
-        M_LOG.info("del_from_disk:<< [%s]" % ls_msg)
+        cdbg.M_DBG.info("del_from_disk:<< [%s]" % ls_msg)
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

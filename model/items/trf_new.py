@@ -46,12 +46,7 @@ import model.newton.defs_newton as ldefs
 
 # control
 import control.events.events_basic as events
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+# import control.control_debug as cdbg
 
 # < class CTrfNEW >--------------------------------------------------------------------------------
 
@@ -77,26 +72,22 @@ class CTrfNEW(model.CTrfModel):
     </trafego>
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_data=None, fs_ver="0001"):
         """
-        @param f_model: event manager
+        @param f_model: model
         @param f_data: dados do tráfego
         @param fs_ver: versão do formato dos dados
         """
-        # logger
-        # M_LOG.info("__init__:>>")
-
         # check input
         assert f_model
 
         # init super class
         super(CTrfNEW, self).__init__(f_data)
 
-        # salva o model manager localmente
+        # model
         self.__model = f_model
 
-        # salva o event manager localmente
+        # event manager 
         self.__event = f_model.event
         assert self.__event
 
@@ -170,11 +161,7 @@ class CTrfNEW(model.CTrfModel):
                 # copia o tráfego
                 self.copy_trf(f_data)
 
-        # logger
-        # M_LOG.info("__init__:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def copy_trf(self, f_trf):
         """
         copy constructor
@@ -182,9 +169,6 @@ class CTrfNEW(model.CTrfModel):
 
         @param f_trf: tráfego a ser copiado
         """
-        # logger
-        # M_LOG.info("copy_trf:>>")
-
         # check input
         assert f_trf
 
@@ -192,7 +176,7 @@ class CTrfNEW(model.CTrfModel):
         super(CTrfNEW, self).copy_trf(f_trf)
 
         # código transponder (charX4) (_sAtvCodT -> _i_trf_ssr) (H)
-        # SSR (int) (OFF=0, HIJ=1 ,COM=2 ,EMG=3 )
+        # SSR (int) (OFF=0, HIJ=1 ,COM=2 ,EMG=3)
         self.__i_trf_ssr = f_trf.i_trf_ssr
 
         # aeródromo de origem
@@ -207,14 +191,12 @@ class CTrfNEW(model.CTrfModel):
 
         # procedimento
         self.__ptr_trf_prc = f_trf.ptr_trf_prc
-        # M_LOG.debug("procedimento: " + str(self.ptr_trf_prc))
 
         # nome do procedimento
         self.__s_trf_prc = f_trf.s_trf_prc
 
         # programação
         self.__s_trf_prg = f_trf.s_trf_prg
-        # M_LOG.debug(u"programação: " + str(self.s_trf_prg))
 
         # rota
         self.__s_trf_rota = f_trf.s_trf_rota
@@ -231,11 +213,7 @@ class CTrfNEW(model.CTrfModel):
         # função operacional anterior
         self.__en_trf_fnc_ope_ant = f_trf.en_trf_fnc_ope_ant
 
-        # logger
-        # M_LOG.info("copy_trf:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def load_trf(self, fdct_data, fs_ver="0001"):
         """
         carrega os dados de tráfego a partir de um dicionário (formato 0001)
@@ -243,9 +221,6 @@ class CTrfNEW(model.CTrfModel):
         @param fdct_data: dicionário com os dados do tráfego
         @param fs_ver: versão do formato dos dados
         """
-        # logger
-        # M_LOG.info("load_trf:>>")
-
         # formato versão 0.01 ?
         if "0001" == fs_ver:
             # cria o tráfego
@@ -268,34 +243,27 @@ class CTrfNEW(model.CTrfModel):
             # cai fora...
             sys.exit(1)
 
-        # logger
-        # M_LOG.info("load_trf:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def make_trf(self, fdct_data):
         """
         carrega os dados de tráfego a partir de um dicionário (formato 0001)
 
         @param fdct_data: dicionário com os dados do tráfego
         """
-        # logger
-        M_LOG.info("make_trf:>>")
-
         # identificação do tráfego
         if "nTrf" in fdct_data:
             self.i_trf_id = int(fdct_data["nTrf"])
-            # M_LOG.debug("self.i_trf_id: " + str(self.i_trf_id))
+            # cdbg.M_DBG.debug("self.i_trf_id: " + str(self.i_trf_id))
 
         # indicativo do tráfego
         if "indicativo" in fdct_data:
             self.s_trf_ind = fdct_data["indicativo"]
-            # M_LOG.debug("self.s_trf_ind: " + str(self.s_trf_ind))
+            # cdbg.M_DBG.debug("self.s_trf_ind: " + str(self.s_trf_ind))
 
         # código transponder
         if "ssr" in fdct_data:
             self.__i_trf_ssr = fdct_data["ssr"]
-            # M_LOG.debug("self.i_trf_ssr: " + str(self.__i_trf_ssr))
+            # cdbg.M_DBG.debug("self.i_trf_ssr: " + str(self.__i_trf_ssr))
 
         # performance (designador)
         if "designador" in fdct_data:
@@ -304,7 +272,7 @@ class CTrfNEW(model.CTrfModel):
 
             # obtém o designador da performance
             ls_prf_id = fdct_data["designador"].strip().upper()
-            # M_LOG.debug("ls_prf_id: " + str(ls_prf_id))
+            # cdbg.M_DBG.debug("ls_prf_id: " + str(ls_prf_id))
 
             # existe a performance no dicionário ?
             if ls_prf_id in ldct_prf:
@@ -320,36 +288,36 @@ class CTrfNEW(model.CTrfModel):
 
                 # logger
                 l_log = logging.getLogger("CTrfNEW::make_trf")
-                l_log.setLevel(logging.NOTSET)
+                l_log.setLevel(logging.WARNING)
                 l_log.error("<E01: performance [{}] não existe no dicionário.".format(ls_prf_id))
 
         # proa (gr)
         if "proa" in fdct_data:
             self.f_trf_pro_atu = float(fdct_data["proa"]) % 360.
-            # M_LOG.debug("self.f_trf_pro_atu: " + str(self.f_trf_pro_atu))
+            # cdbg.M_DBG.debug("self.f_trf_pro_atu: " + str(self.f_trf_pro_atu))
 
         # velocidade (kt)
         if "velocidade" in fdct_data:
             self.f_trf_vel_atu = float(fdct_data["velocidade"]) * cdefs.D_CNV_KT2MS
-            # M_LOG.debug("self.f_trf_vel_atu: " + str(self.f_trf_vel_atu))
+            # cdbg.M_DBG.debug("self.f_trf_vel_atu: " + str(self.f_trf_vel_atu))
 
         # altitude (ft)
         if "altitude" in fdct_data:
             self.f_trf_alt_atu = float(fdct_data["altitude"]) * cdefs.D_CNV_FT2M
-            # M_LOG.debug("self.f_trf_alt_atu: " + str(self.f_trf_alt_atu))
+            # cdbg.M_DBG.debug("self.f_trf_alt_atu: " + str(self.f_trf_alt_atu))
 
         # posição (lat, lng)
         if "coord" in fdct_data:
             if len(fdct_data["coord"]) > 0:
                 self.__f_trf_lat, self.__f_trf_lng = self.__model.coords.from_dict(fdct_data["coord"])
-                # M_LOG.debug("self.__f_trf_lat: " + str(self.__f_trf_lat))
-                # M_LOG.debug("self.__f_trf_lng: " + str(self.__f_trf_lng))
+                # cdbg.M_DBG.debug("self.__f_trf_lat: " + str(self.__f_trf_lat))
+                # cdbg.M_DBG.debug("self.__f_trf_lng: " + str(self.__f_trf_lng))
 
                 # converte para xyz
                 self.f_trf_x, self.f_trf_y, self.f_trf_z = self.__model.coords.geo2xyz(self.__f_trf_lat, self.__f_trf_lng, 0.)
-                # M_LOG.debug("self.f_trf_x: " + str(self.f_trf_x))
-                # M_LOG.debug("self.f_trf_y: " + str(self.f_trf_y))
-                # M_LOG.debug("self.f_trf_z: " + str(self.f_trf_z))
+                # cdbg.M_DBG.debug("self.f_trf_x: " + str(self.f_trf_x))
+                # cdbg.M_DBG.debug("self.f_trf_y: " + str(self.f_trf_y))
+                # cdbg.M_DBG.debug("self.f_trf_z: " + str(self.f_trf_z))
 
             # senão,...
             else:
@@ -365,9 +333,9 @@ class CTrfNEW(model.CTrfModel):
 
             # obtém o indicativo do aeródromo
             ls_aer_id = fdct_data["origem"]
-            # M_LOG.debug("ls_aer_id: " + str(ls_aer_id))
+            # cdbg.M_DBG.debug("ls_aer_id: " + str(ls_aer_id))
 
-            # existe o aeródromo no dicionário ?
+            # aeródromo no dicionário ?
             if ls_aer_id in ldct_aer:
                 # obtém o aeródromo de origem
                 self.__ptr_trf_aer_ori = ldct_aer[ls_aer_id]
@@ -375,17 +343,14 @@ class CTrfNEW(model.CTrfModel):
 
             # senão,...
             else:
-                # aeródromo de origem
-                self.__ptr_trf_aer_ori = None
-                l_dctAer= {}
-                l_dctAer["nAer"] = ls_aer_id
-
                 # logger
                 l_log = logging.getLogger("CTrfNEW::make_trf")
                 l_log.setLevel(logging.WARNING)
-                l_log.warning("<E03: aeródromo de origem [{}] não existe no dicionário.".format(ls_aer_id))
-                l_log.warning("Aérodromo fake[{}] sendo criado.".format(ls_aer_id))
-                self.__ptr_trf_aer_ori = aer.CAerNEW(self.__model, l_dctAer)
+                l_log.warning("<E03: aeródromo de origem [{}] não existe no dicionário...criando aeródromo 'fake'.".format(ls_aer_id))
+
+                # cria aeródromo de origem fake
+                self.__ptr_trf_aer_ori = aer.CAerNEW(self.__model, { "nAer": ls_aer_id })
+                assert self.__ptr_trf_aer_ori
 
         # destino
         if "destino" in fdct_data:
@@ -394,7 +359,7 @@ class CTrfNEW(model.CTrfModel):
 
             # obtém o indicativo do aeródromo
             ls_aer_id = fdct_data["destino"]
-            # M_LOG.debug("ls_aer_id: " + str(ls_aer_id))
+            # cdbg.M_DBG.debug("ls_aer_id: " + str(ls_aer_id))
 
             # existe o aeródromo no dicionário ?
             if ls_aer_id in ldct_aer:
@@ -404,58 +369,55 @@ class CTrfNEW(model.CTrfModel):
 
             # senão,...
             else:
-                # aeródromo de destino
-                self.__ptr_trf_aer_dst = None
-                l_dctAer= {}
-                l_dctAer["nAer"] = ls_aer_id
-
                 # logger
                 l_log = logging.getLogger("CTrfNEW::make_trf")
                 l_log.setLevel(logging.WARNING)
-                l_log.warning("<E04: aeródromo de destino [{}] não existe no dicionário.".format(ls_aer_id))
-                l_log.warning("Aérodromo fake[{}] sendo criado.".format(ls_aer_id))
-                self.__ptr_trf_aer_dst = aer.CAerNEW(self.__model, l_dctAer)
+                l_log.warning("<E04: aeródromo de destino [{}] não existe no dicionário...criando aeródromo 'fake'.".format(ls_aer_id))
+
+                # cria aeródromo de destino fake
+                self.__ptr_trf_aer_dst = aer.CAerNEW(self.__model, { "nAer": ls_aer_id })
+                assert self.__ptr_trf_aer_dst
 
         # procedimento
         if "procedimento" in fdct_data:
             self.__ptr_trf_prc, self.__en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(fdct_data["procedimento"].strip().upper())
+            # cdbg.M_DBG.debug("self.__ptr_trf_prc: " + str(self.__ptr_trf_prc))
+
             self.__s_trf_prc = fdct_data["procedimento"].strip().upper()
-            # M_LOG.debug("self.__ptr_trf_prc...: " + str(fdct_data["procedimento"].strip().upper()))
-            # M_LOG.debug("self.__en_trf_fnc_ope: " + str(self.__en_trf_fnc_ope))
+            # cdbg.M_DBG.debug("self.__s_trf_prc..: " + str(self.__s_trf_prc))
 
         # programação
         if "programa" in fdct_data:
             self.__s_trf_prg = fdct_data["programa"].strip()
-            # M_LOG.debug("self.__s_trf_prg: " + str(fdct_data["programa"].strip()))
+            # cdbg.M_DBG.debug("self.__s_trf_prg: " + str(fdct_data["programa"].strip()))
 
         # veltrj (kt)
         if "veltrj" in fdct_data:
             self.__f_trf_vel_trj = float(fdct_data["veltrj"]) * cdefs.D_CNV_KT2MS
-            # M_LOG.debug("self.__f_trf_vel_trj: " + str(self.__f_trf_vel_trj))
+            # cdbg.M_DBG.debug("self.__f_trf_vel_trj: " + str(self.__f_trf_vel_trj))
 
         # nível da trajetória (ft/100)
         if "niveltrj" in fdct_data:
             self.__i_trf_niv_trj = int(fdct_data["niveltrj"])
-            # M_LOG.debug("self.__i_trf_niv_trj: " + str(self.__i_trf_niv_trj))
+            # cdbg.M_DBG.debug("self.__i_trf_niv_trj: " + str(self.__i_trf_niv_trj))
             self.__f_trf_alt_trj = self.__i_trf_niv_trj * 100 * cdefs.D_CNV_FT2M
-            # M_LOG.debug("self.__f_trf_alt_trj: " + str(self.__f_trf_alt_trj))
+            # cdbg.M_DBG.debug("self.__f_trf_alt_trj: " + str(self.__f_trf_alt_trj))
 
         # rota
         if "rota" in fdct_data:
             self.__s_trf_rota = fdct_data["rota"].strip().upper()
-            # M_LOG.debug("self.__s_trf_rota: " + str(self.__s_trf_rota))
+            # cdbg.M_DBG.debug("self.__s_trf_rota: " + str(self.__s_trf_rota))
 
         # nível autorizado (ft/100)
         if "nivel" in fdct_data:
             self.i_trf_niv_aut = int(fdct_data["nivel"])
-            # M_LOG.debug("self.i_trf_niv_aut: " + str(self.i_trf_niv_aut))
+            # cdbg.M_DBG.debug("self.i_trf_niv_aut: " + str(self.i_trf_niv_aut))
 
         # hora de ativação (h,m,s)
         if "temptrafego" in fdct_data:
-
             # obtém a hora inicial do exercício
             lt_hora_ini = self.__model.exe.t_exe_hor_ini
-            M_LOG.debug("lt_hora_ini: " + str(lt_hora_ini))
+            # cdbg.M_DBG.debug("lt_hora_ini: " + str(lt_hora_ini))
 
             # obtém o tempo do tráfego (transformar em segundos)
             li_hor = int(float(fdct_data["temptrafego"]) * 60.)
@@ -473,13 +435,10 @@ class CTrfNEW(model.CTrfModel):
             self.t_trf_hor_atv = (lt_hora_ini[0] + li_hor,
                                   lt_hora_ini[1] + li_min,
                                   lt_hora_ini[2] + li_seg)
-            M_LOG.debug("self.t_trf_hor_atv: " + str(self.t_trf_hor_atv))
+            # cdbg.M_DBG.debug("self.t_trf_hor_atv: " + str(self.t_trf_hor_atv))
 
         # (bool)
         self.v_trf_ok = True
-
-        # logger
-        M_LOG.info("make_trf:<<")
 
     # =============================================================================================
     # data
@@ -488,61 +447,37 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def ptr_trf_aer_dst(self):
-        """
-        get aeródromo de destino
-        """
         return self.__ptr_trf_aer_dst
 
     @ptr_trf_aer_dst.setter
     def ptr_trf_aer_dst(self, f_val):
-        """
-        set aeródromo de destino
-        """
         self.__ptr_trf_aer_dst = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_trf_alt_trj(self):
-        """
-        get velocidade na trajetóra
-        """
         return self.__f_trf_alt_trj
 
     @f_trf_alt_trj.setter
     def f_trf_alt_trj(self, f_val):
-        """
-        set velocidade na trajetóra
-        """
         self.__f_trf_alt_trj = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def ptr_trf_aer_ori(self):
-        """
-        get aeródromo de origem
-        """
         return self.__ptr_trf_aer_ori
 
     @ptr_trf_aer_ori.setter
     def ptr_trf_aer_ori(self, f_val):
-        """
-        set aeródromo de origem
-        """
         self.__ptr_trf_aer_ori = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def en_trf_est_atv(self):
-        """
-        get estado de ativação
-        """
         return self.__en_trf_est_atv
 
     @en_trf_est_atv.setter
     def en_trf_est_atv(self, f_val):
-        """
-        set estado de ativação
-        """
         # check input
         assert f_val in ldefs.SET_EST_ATV
 
@@ -552,16 +487,10 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def en_trf_est_ope(self):
-        """
-        get estado operacional
-        """
         return self.__en_trf_est_ope
 
     @en_trf_est_ope.setter
     def en_trf_est_ope(self, f_val):
-        """
-        set estado operacional
-        """
         # check input
         assert f_val in ldefs.SET_EST_OPE
 
@@ -571,16 +500,10 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def en_trf_fnc_ope(self):
-        """
-        get função operacional
-        """
         return self.__en_trf_fnc_ope
 
     @en_trf_fnc_ope.setter
     def en_trf_fnc_ope(self, f_val):
-        """
-        set função operacional
-        """
         # check input
         assert f_val in ldefs.SET_FNC_OPE
 
@@ -590,16 +513,10 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def en_trf_fnc_ope_ant(self):
-        """
-        get função operacional anterior
-        """
         return self.__en_trf_fnc_ope_ant
 
     @en_trf_fnc_ope_ant.setter
     def en_trf_fnc_ope_ant(self, f_val):
-        """
-        set função operacional anterior
-        """
         # check input
         assert f_val in ldefs.SET_FNC_OPE
 
@@ -609,16 +526,10 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def f_trf_lat(self):
-        """
-        get latitude
-        """
         return self.__f_trf_lat
 
     @f_trf_lat.setter
     def f_trf_lat(self, f_val):
-        """
-        set latitude
-        """
         # check input
         assert -90. <= f_val <= 90.
 
@@ -628,16 +539,10 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def f_trf_lng(self):
-        """
-        get longitude
-        """
         return self.__f_trf_lng
 
     @f_trf_lng.setter
     def f_trf_lng(self, f_val):
-        """
-        set longitude
-        """
         # check input
         assert -180. <= f_val <= 180.
 
@@ -647,122 +552,73 @@ class CTrfNEW(model.CTrfModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def i_trf_niv_trj(self):
-        """
-        get nível na trajetóra
-        """
         return self.__i_trf_niv_trj
 
     @i_trf_niv_trj.setter
     def i_trf_niv_trj(self, f_val):
-        """
-        set nível na trajetóra
-        """
         self.__i_trf_niv_trj = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def ptr_trf_prc(self):
-        """
-        get procedimento
-        """
         return self.__ptr_trf_prc
 
     @ptr_trf_prc.setter
     def ptr_trf_prc(self, f_val):
-        """
-        set procedimento
-        """
         self.__ptr_trf_prc = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_trf_prc(self):
-        """
-        get nome do procedimento
-        """
         return self.__s_trf_prc
 
     @s_trf_prc.setter
     def s_trf_prc(self, f_val):
-        """
-        set nome do procedimento
-        """
         self.__s_trf_prc = f_val
-
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_trf_prg(self):
-        """
-        get programa
-        """
         return self.__s_trf_prg
 
     @s_trf_prg.setter
     def s_trf_prg(self, f_val):
-        """
-        set programa
-        """
         self.__s_trf_prg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_trf_rota(self):
-        """
-        get rota
-        """
         return self.__s_trf_rota
 
     @s_trf_rota.setter
     def s_trf_rota(self, f_val):
-        """
-        set rota
-        """
         self.__s_trf_rota = f_val.strip().upper() if f_val is not None else ""
 
     # ---------------------------------------------------------------------------------------------
     '''@property
     def v_trf_rvsm(self):
-        """
-        get flag RVSM
-        """
         return self.__v_trf_rvsm
 
     @v_trf_rvsm.setter
     def v_trf_rvsm(self, f_val):
-        """
-        set flag RVSM
-        """
         self.__v_trf_rvsm = f_val
     '''
     # ---------------------------------------------------------------------------------------------
     @property
     def i_trf_ssr(self):
-        """
-        get código transponder
-        """
         return self.__i_trf_ssr
 
     @i_trf_ssr.setter
     def i_trf_ssr(self, f_val):
-        """
-        set código transponder
-        """
         self.__i_trf_ssr = int(f_val)
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_trf_vel_trj(self):
-        """
-        get velocidade na trajetóra
-        """
         return self.__f_trf_vel_trj
 
     @f_trf_vel_trj.setter
     def f_trf_vel_trj(self, f_val):
-        """
-        set velocidade na trajetóra
-        """
         self.__f_trf_vel_trj = f_val
 
 # < the end >--------------------------------------------------------------------------------------

@@ -2,16 +2,16 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E110</designador>
     <indicativo>FENIX04</indicativo>
     <origem>SBFI</origem>
     <destino>SBGL</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|81028</procedimento>
+    <procedimento>SUB81028</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B738</designador>
     <indicativo>PRGOL</indicativo>
     <origem>SBPA</origem>
@@ -24,10 +24,10 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>256</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>G2</designador>
     <indicativo>N347KW</indicativo>
     <origem>SGAS</origem>
@@ -40,10 +40,10 @@
     </coord>
     <altitude>179</altitude>
     <velocidade>250</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <indicativo>TAM3813</indicativo>
     <origem>SBCT</origem>
@@ -56,28 +56,28 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>265</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B738</designador>
     <indicativo>GLO1827</indicativo>
     <origem>SBFI</origem>
     <destino>SBPÁ</destino>
     <temptrafego>20</temptrafego>
-    <procedimento>SUB|81030</procedimento>
+    <procedimento>SUB81030</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>E110</designador>
     <indicativo>PEGASO06</indicativo>
     <origem>SBFI</origem>
     <destino>SBCT</destino>
     <temptrafego>23</temptrafego>
-    <procedimento>SUB|81028</procedimento>
+    <procedimento>SUB81028</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>A1</designador>
     <indicativo>CENTAURO05</indicativo>
     <origem>SBSM</origem>
@@ -90,16 +90,16 @@
     </coord>
     <altitude>173</altitude>
     <velocidade>256</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>LR35</designador>
     <indicativo>LVWGL</indicativo>
     <origem>SBFI</origem>
     <destino>SBPA</destino>
     <temptrafego>27</temptrafego>
-    <procedimento>SUB|81030</procedimento>
+    <procedimento>SUB81030</procedimento>
   </trafego>
 </trafegos>
 

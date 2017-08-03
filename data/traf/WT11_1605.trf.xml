@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>L410</designador>
     <ssr>3001</ssr>
     <indicativo>NHG4513</indicativo>
@@ -11,10 +11,10 @@
     <temptrafego>20</temptrafego>
     <altitude>90</altitude>
     <velocidade>185</velocidade>
-    <procedimento>SUB|98100</procedimento>
+    <procedimento>SUB98100</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>L410</designador>
     <ssr>3002</ssr>
     <indicativo>NHG4629</indicativo>
@@ -23,10 +23,10 @@
     <temptrafego>58</temptrafego>
     <altitude>80</altitude>
     <velocidade>185</velocidade>
-    <procedimento>SUB|98008</procedimento>
+    <procedimento>SUB98008</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E190</designador>
     <ssr>3003</ssr>
     <indicativo>TIB5765</indicativo>
@@ -40,10 +40,10 @@
     </coord>
     <altitude>260</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|980052</procedimento>
+    <procedimento>TRJ980052</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>T27</designador>
     <ssr>3004</ssr>
     <indicativo>FAB1342</indicativo>
@@ -52,10 +52,10 @@
     <temptrafego>30</temptrafego>
     <altitude>120</altitude>
     <velocidade>230</velocidade>
-    <procedimento>SUB|98025</procedimento>
+    <procedimento>SUB98025</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B738</designador>
     <ssr>3101</ssr>
     <indicativo>GLO1693</indicativo>
@@ -64,10 +64,10 @@
     <temptrafego>21</temptrafego>
     <altitude>230</altitude>
     <velocidade>440</velocidade>
-    <procedimento>SUB|98003</procedimento>
+    <procedimento>SUB98003</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>AT72</designador>
     <ssr>3102</ssr>
     <indicativo>TIB5302</indicativo>
@@ -81,10 +81,10 @@
     </coord>
     <altitude>200</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|980052</procedimento>
+    <procedimento>TRJ980052</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>E190</designador>
     <ssr>3103</ssr>
     <indicativo>AZU4157</indicativo>
@@ -98,10 +98,10 @@
     </coord>
     <altitude>310</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|980052</procedimento>
+    <procedimento>TRJ980052</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>BE58</designador>
     <ssr>3104</ssr>
     <indicativo>PTMGV</indicativo>

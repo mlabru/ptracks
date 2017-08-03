@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>LR55</designador>
     <ssr>4401</ssr>
     <indicativo>PRAME</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>260</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|190061</procedimento>
+    <procedimento>TRJ190061</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>4402</ssr>
     <indicativo>TAM3516</indicativo>
@@ -33,20 +33,20 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|190060</procedimento>
+    <procedimento>TRJ190060</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E120</designador>
     <ssr>4404</ssr>
     <indicativo>ONE6381</indicativo>
     <origem>SBBR</origem>
     <destino>SNBR</destino>
     <temptrafego>10</temptrafego>
-    <procedimento>SUB|19001</procedimento>
+    <procedimento>SUB19001</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B737</designador>
     <ssr>4405</ssr>
     <indicativo>VRG2329</indicativo>
@@ -60,10 +60,10 @@
     </coord>
     <altitude>260</altitude>
     <velocidade>320</velocidade>
-    <procedimento>TRJ|190059</procedimento>
+    <procedimento>TRJ190059</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B737</designador>
     <ssr>4406</ssr>
     <indicativo>VRG2600</indicativo>
@@ -77,7 +77,7 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|190060</procedimento>
+    <procedimento>TRJ190060</procedimento>
   </trafego>
 </trafegos>
 

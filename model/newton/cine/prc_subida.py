@@ -61,7 +61,7 @@ def prc_subida(f_atv, f_cine_data, f_stk_context):
         # logger
         l_log = logging.getLogger("prc_subida")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E01: aeronave não ativa.")
+        l_log.error("<E01: aeronave [{}/{}] não ativa.".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)

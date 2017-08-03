@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E190</designador>
     <ssr>3201</ssr>
     <indicativo>AZU3223</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>130</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|1000008</procedimento>
+    <procedimento>TRJ1000008</procedimento>
     <niveltrj>130</niveltrj>
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B738</designador>
     <ssr>3202</ssr>
     <indicativo>GOL1250</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>120</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|1000006</procedimento>
+    <procedimento>TRJ1000006</procedimento>
     <niveltrj>120</niveltrj>
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B727</designador>
     <ssr>3203</ssr>
     <indicativo>TTL8545</indicativo>
@@ -54,12 +54,12 @@
     </coord>
     <altitude>120</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|1000006</procedimento>
+    <procedimento>TRJ1000006</procedimento>
     <niveltrj>120</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>3204</ssr>
     <indicativo>SKU3335</indicativo>
@@ -73,12 +73,12 @@
     </coord>
     <altitude>130</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|1000008</procedimento>
+    <procedimento>TRJ1000008</procedimento>
     <niveltrj>130</niveltrj>
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>A320</designador>
     <ssr>3205</ssr>
     <indicativo>ANS771</indicativo>
@@ -92,12 +92,12 @@
     </coord>
     <altitude>130</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|1000004</procedimento>
+    <procedimento>TRJ1000004</procedimento>
     <niveltrj>130</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>C500</designador>
     <ssr>3206</ssr>
     <indicativo>PPESC</indicativo>
@@ -106,10 +106,10 @@
     <temptrafego>10</temptrafego>
     <altitude>320</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|100119</procedimento>
+    <procedimento>SUB100119</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>E190</designador>
     <ssr>3301</ssr>
     <indicativo>BQB676</indicativo>
@@ -118,10 +118,10 @@
     <temptrafego>8</temptrafego>
     <altitude>320</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|100118</procedimento>
+    <procedimento>SUB100118</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>C130</designador>
     <ssr>3040</ssr>
     <indicativo>GORDO05</indicativo>
@@ -135,12 +135,12 @@
     </coord>
     <altitude>130</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|1000027</procedimento>
+    <procedimento>TRJ1000027</procedimento>
     <niveltrj>130</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>PAYE</designador>
     <ssr>3041</ssr>
     <indicativo>PTECL</indicativo>
@@ -149,10 +149,10 @@
     <temptrafego>5</temptrafego>
     <altitude>70</altitude>
     <velocidade>160</velocidade>
-    <procedimento>SUB|100111</procedimento>
+    <procedimento>SUB100111</procedimento>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>PA34</designador>
     <ssr>3521</ssr>
     <indicativo>PTLEN</indicativo>
@@ -161,10 +161,10 @@
     <temptrafego>3</temptrafego>
     <altitude>85</altitude>
     <velocidade>185</velocidade>
-    <procedimento>SUB|100157</procedimento>
+    <procedimento>SUB100157</procedimento>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>E121</designador>
     <ssr>3562</ssr>
     <indicativo>PPSOA</indicativo>
@@ -173,7 +173,7 @@
     <temptrafego>9</temptrafego>
     <altitude>65</altitude>
     <velocidade>250</velocidade>
-    <procedimento>SUB|100156</procedimento>
+    <procedimento>SUB100156</procedimento>
   </trafego>
 </trafegos>
 

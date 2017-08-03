@@ -42,10 +42,7 @@ import model.items.brk_new as brktrj
 
 # control
 import control.events.events_basic as events
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+import control.control_debug as cdbg
 
 # < class CTrjNEW >--------------------------------------------------------------------------------
 
@@ -133,9 +130,6 @@ class CTrjNEW(model.CPrcModel):
         @param fdct_data: dicionário com os dados do procedimento de trajetória
         @param fs_ver: versão do formato dos dados
         """
-        # logger
-        M_LOG.info("load_trj:>>")
-
         # formato versão 0.01 ?
         if "0001" == fs_ver:
             # cria a procedimento de trajetória
@@ -144,8 +138,9 @@ class CTrjNEW(model.CPrcModel):
         # senão, formato desconhecido
         else:
             # logger
-            M_LOG.setLevel(logging.CRITICAL)
-            M_LOG.critical(u"<E01: formato desconhecido.")
+            l_log = logging.getLogger("CTrjNEW::load_trj")
+            l_log.setLevel(logging.CRITICAL)
+            l_log.critical(u"<E01: formato desconhecido.")
 
             # cria um evento de quit
             l_evt = events.CQuit()
@@ -154,14 +149,8 @@ class CTrjNEW(model.CPrcModel):
             # dissemina o evento
             self.__event.post(l_evt)
 
-            # logger
-            M_LOG.info("load_trj:<<")
-
             # cai fora...
             sys.exit(1)
-
-        # logger
-        M_LOG.info("load_trj:<<")
 
     # ---------------------------------------------------------------------------------------------
     def make_trj(self, fdct_data):
@@ -170,14 +159,10 @@ class CTrjNEW(model.CPrcModel):
 
         @param fdct_data: dicionário com os dados do procedimento de trajetória
         """
-        # logger
-        M_LOG.info("make_trj:>>")
-        M_LOG.info("Dicionario de dados [%s]" % fdct_data)
-
-        # identificação do procedimento de trajetória
+        # identificação da trajetória
         if "nTrj" in fdct_data:
             self.i_prc_id = int(fdct_data["nTrj"])
-            self.s_prc_desc = u"Trajetória {:03d}".format(fdct_data["nTrj"])            
+            self.s_prc_desc = u"Trajetória {:04d}".format(fdct_data["nTrj"])            
 
         # descrição
         if "descricao" in fdct_data:
@@ -191,22 +176,19 @@ class CTrjNEW(model.CPrcModel):
         if "proa" in fdct_data:
             self.__f_trj_proa = float(fdct_data["proa"].strip().upper())
 
-        # break-points da trajetória
+        # breakpoints da trajetória
         if "breakpoints" in fdct_data:
-            # para todos break-points da trajetória...
+            # para todos breakpoints da trajetória...
             for l_brk in sorted(fdct_data["breakpoints"], key=lambda l_k: l_k["nBrk"]):
-                # cria o break-point
+                # cria o breakpoint
                 lo_brk = brktrj.CBrkNEW(self.__model, self, l_brk)
                 assert lo_brk
 
-                # coloca o break-point na lista
+                # coloca o breakpoint na lista
                 self.__lst_trj_brk.append(lo_brk)
 
         # (bool)
         self.v_prc_ok = True
-
-        # logger
-        M_LOG.info("make_trj:<<")
 
     # =============================================================================================
     # data
@@ -215,31 +197,19 @@ class CTrjNEW(model.CPrcModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def lst_trj_brk(self):
-        """
-        get lista de break-points da trajetória
-        """
         return self.__lst_trj_brk
 
     @lst_trj_brk.setter
     def lst_trj_brk(self, f_val):
-        """
-        set lista de break-points da trajetória
-        """
         self.__lst_trj_brk = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_trj_proa(self):
-        """
-        get proa a seguir após a trajetória
-        """
         return self.__f_trj_proa
 
     @f_trj_proa.setter
     def f_trj_proa(self, f_val):
-        """
-        set proa a seguir após a trajetória
-        """
         # check input
         assert 0. <= f_val <= 360.
 
@@ -249,16 +219,10 @@ class CTrjNEW(model.CPrcModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def v_trj_star(self):
-        """
-        get flag star
-        """
         return False  # self.__v_trj_star
 
     @v_trj_star.setter
     def v_trj_star(self, f_val):
-        """
-        set flag star
-        """
         self.__v_trj_star = f_val
 
 # < the end >--------------------------------------------------------------------------------------

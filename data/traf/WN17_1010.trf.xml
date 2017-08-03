@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>F5E</designador>
     <ssr>6301</ssr>
     <indicativo>PAC01</indicativo>
@@ -21,43 +21,43 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>P28R</designador>
     <ssr>6302</ssr>
     <indicativo>PTNZM</indicativo>
     <origem>SWFN</origem>
     <destino>SWFN</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|96032</procedimento>
+    <procedimento>SUB96032</procedimento>
     <niveltrj>15</niveltrj>
     <veltrj>120</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>C208</designador>
     <ssr>6303</ssr>
     <indicativo>PPPQD</indicativo>
     <origem>SWFN</origem>
     <destino>SWFN</destino>
     <temptrafego>8</temptrafego>
-    <procedimento>SUB|96032</procedimento>
+    <procedimento>SUB96032</procedimento>
     <niveltrj>55</niveltrj>
     <veltrj>120</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>AS50</designador>
     <ssr>6304</ssr>
     <indicativo>HARP03</indicativo>
     <origem>SBMN</origem>
     <destino>SBMN</destino>
     <temptrafego>8</temptrafego>
-    <procedimento>SUB|96025</procedimento>
+    <procedimento>SUB96025</procedimento>
     <niveltrj>50</niveltrj>
     <veltrj>120</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>P28T</designador>
     <ssr>6305</ssr>
     <indicativo>PTNOB</indicativo>
@@ -76,19 +76,19 @@
     <veltrj>180</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>E120</designador>
     <ssr>6306</ssr>
     <indicativo>COBR40</indicativo>
     <origem>SBMN</origem>
     <destino>SBMN</destino>
     <temptrafego>8</temptrafego>
-    <procedimento>SUB|96025</procedimento>
+    <procedimento>SUB96025</procedimento>
     <niveltrj>40</niveltrj>
     <veltrj>180</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>AS50</designador>
     <ssr>6307</ssr>
     <indicativo>MAB7089</indicativo>
@@ -102,22 +102,22 @@
     </coord>
     <altitude>30</altitude>
     <velocidade>110</velocidade>
-    <procedimento>ESP|96020</procedimento>
+    <procedimento>ESP96020</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>E190</designador>
     <ssr>6401</ssr>
     <indicativo>AZU2841</indicativo>
     <origem>SBEG</origem>
     <destino>SBKP</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|96001</procedimento>
+    <procedimento>SUB96001</procedimento>
     <niveltrj>360</niveltrj>
     <veltrj>310</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>B747</designador>
     <ssr>6402</ssr>
     <indicativo>GTI37</indicativo>
@@ -136,7 +136,7 @@
     <veltrj>255</veltrj>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>F900</designador>
     <ssr>6403</ssr>
     <indicativo>PTWRI</indicativo>
@@ -155,7 +155,7 @@
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>E190</designador>
     <ssr>6404</ssr>
     <indicativo>AZU2410</indicativo>
@@ -174,7 +174,7 @@
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>E190</designador>
     <ssr>6405</ssr>
     <indicativo>AZU2840</indicativo>
@@ -193,7 +193,7 @@
     <veltrj>230</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>C208</designador>
     <ssr>6406</ssr>
     <indicativo>PTRTE</indicativo>
@@ -212,7 +212,7 @@
     <veltrj>170</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>AT45</designador>
     <ssr>6407</ssr>
     <indicativo>TTL9922</indicativo>
@@ -231,7 +231,7 @@
     <veltrj>240</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>E120</designador>
     <ssr>6501</ssr>
     <indicativo>GUARA19</indicativo>
@@ -250,19 +250,19 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=16>
+  <trafego nTrf="16">
     <designador>C295</designador>
     <ssr>6502</ssr>
     <indicativo>ARARA00</indicativo>
     <origem>SBMN</origem>
     <destino>SBMN</destino>
     <temptrafego>20</temptrafego>
-    <procedimento>SUB|96025</procedimento>
+    <procedimento>SUB96025</procedimento>
     <niveltrj>40</niveltrj>
     <veltrj>200</veltrj>
   </trafego>
 
-  <trafego nTrf=17>
+  <trafego nTrf="17">
     <designador>E110</designador>
     <ssr>6777</ssr>
     <indicativo>APUI104</indicativo>
@@ -281,19 +281,19 @@
     <veltrj>200</veltrj>
   </trafego>
 
-  <trafego nTrf=18>
+  <trafego nTrf="18">
     <designador>AT72</designador>
     <ssr>6776</ssr>
     <indicativo>TTL9927</indicativo>
     <origem>SBEG</origem>
     <destino>SBUY</destino>
     <temptrafego>12</temptrafego>
-    <procedimento>SUB|96008</procedimento>
+    <procedimento>SUB96008</procedimento>
     <niveltrj>200</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=19>
+  <trafego nTrf="19">
     <designador>E190</designador>
     <ssr>6775</ssr>
     <indicativo>AZU2819</indicativo>
@@ -312,7 +312,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=20>
+  <trafego nTrf="20">
     <designador>E190</designador>
     <ssr>6774</ssr>
     <indicativo>AZU2831</indicativo>
@@ -331,7 +331,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=21>
+  <trafego nTrf="21">
     <designador>E190</designador>
     <ssr>6773</ssr>
     <indicativo>AZU2839</indicativo>
@@ -350,7 +350,7 @@
     <veltrj>270</veltrj>
   </trafego>
 
-  <trafego nTrf=22>
+  <trafego nTrf="22">
     <designador>AS50</designador>
     <ssr>6772</ssr>
     <indicativo>FAB8906</indicativo>
@@ -364,22 +364,22 @@
     </coord>
     <altitude>15</altitude>
     <velocidade>125</velocidade>
-    <procedimento>ESP|96011</procedimento>
+    <procedimento>ESP96011</procedimento>
   </trafego>
 
-  <trafego nTrf=23>
+  <trafego nTrf="23">
     <designador>C208</designador>
     <ssr>6771</ssr>
     <indicativo>PRVDB</indicativo>
     <origem>SWFN</origem>
     <destino>SWKO</destino>
     <temptrafego>10</temptrafego>
-    <procedimento>SUB|96032</procedimento>
+    <procedimento>SUB96032</procedimento>
     <niveltrj>85</niveltrj>
     <veltrj>170</veltrj>
   </trafego>
 
-  <trafego nTrf=24>
+  <trafego nTrf="24">
     <designador>B738</designador>
     <ssr>6767</ssr>
     <indicativo>GLO1990</indicativo>
@@ -398,7 +398,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=25>
+  <trafego nTrf="25">
     <designador>A320</designador>
     <ssr>6766</ssr>
     <indicativo>TAM3540</indicativo>
@@ -417,31 +417,31 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=26>
+  <trafego nTrf="26">
     <designador>HS25</designador>
     <ssr>6765</ssr>
     <indicativo>GEIV50</indicativo>
     <origem>SBEG</origem>
     <destino>SBEG</destino>
     <temptrafego>20</temptrafego>
-    <procedimento>SUB|96007</procedimento>
+    <procedimento>SUB96007</procedimento>
     <niveltrj>40</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=27>
+  <trafego nTrf="27">
     <designador>C340</designador>
     <ssr>6764</ssr>
     <indicativo>N5224J</indicativo>
     <origem>SBEG</origem>
     <destino>TTPP</destino>
     <temptrafego>32</temptrafego>
-    <procedimento>SUB|96007</procedimento>
+    <procedimento>SUB96007</procedimento>
     <niveltrj>190</niveltrj>
     <veltrj>185</veltrj>
   </trafego>
 
-  <trafego nTrf=28>
+  <trafego nTrf="28">
     <designador>LJ35</designador>
     <ssr>6763</ssr>
     <indicativo>PTOPJ</indicativo>
@@ -460,14 +460,14 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=29>
+  <trafego nTrf="29">
     <designador>AT72</designador>
     <ssr>6761</ssr>
     <indicativo>PAM9084</indicativo>
     <origem>SBEG</origem>
     <destino>SBPV</destino>
     <temptrafego>32</temptrafego>
-    <procedimento>SUB|96017</procedimento>
+    <procedimento>SUB96017</procedimento>
     <niveltrj>200</niveltrj>
     <veltrj>250</veltrj>
   </trafego>

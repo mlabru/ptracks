@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A320</designador>
     <ssr>4212</ssr>
     <indicativo>TAM3554</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>250</velocidade>
-    <procedimento>APX|88001</procedimento>
+    <procedimento>APX88001</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B733</designador>
     <ssr>6367</ssr>
     <indicativo>GLO2136</indicativo>
@@ -33,10 +33,10 @@
     </coord>
     <altitude>350</altitude>
     <velocidade>300</velocidade>
-    <procedimento>APX|88001</procedimento>
+    <procedimento>APX88001</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B738</designador>
     <ssr>7426</ssr>
     <indicativo>GLO1998</indicativo>
@@ -50,7 +50,7 @@
     </coord>
     <altitude>370</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|880007</procedimento>
+    <procedimento>TRJ880007</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>300</veltrj>
   </trafego>

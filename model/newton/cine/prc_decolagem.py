@@ -64,7 +64,7 @@ def __check_ok(f_atv, f_cine_data):
         # logger
         l_log = logging.getLogger("__check_ok")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E01: aeródromo de decolagem inexistente.")
+        l_log.error("<E01: aeródromo de decolagem inexistente. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)
@@ -83,7 +83,7 @@ def __check_ok(f_atv, f_cine_data):
         # logger
         l_log = logging.getLogger("__check_ok")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E02: pista de decolagem inexistente.")
+        l_log.error("<E02: pista de decolagem inexistente. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)
@@ -149,7 +149,7 @@ def __do_dep(f_atv, f_cine_data, fstk_context):
         # logger
         l_log = logging.getLogger("__do_dep")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E01: aeródromo de decolagem inexistente.")
+        l_log.error("<E01: aeródromo de decolagem inexistente. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)
@@ -170,7 +170,7 @@ def __do_dep(f_atv, f_cine_data, fstk_context):
             # logger
             l_log = logging.getLogger("__do_dep")
             l_log.setLevel(logging.ERROR)
-            l_log.error("<E02: decolagem/subida inexistente.")
+            l_log.error("<E02: decolagem/subida inexistente. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
             # abort procedure
             abnd.abort_prc(f_atv)
@@ -189,7 +189,7 @@ def __do_dep(f_atv, f_cine_data, fstk_context):
             # logger
             l_log = logging.getLogger("__do_dep")
             l_log.setLevel(logging.ERROR)
-            l_log.error("<E03: decolagem/subida breakpoint inexistente.")
+            l_log.error("<E03: decolagem/subida breakpoint inexistente. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
             # abort procedure
             abnd.abort_prc(f_atv)
@@ -208,7 +208,7 @@ def __do_dep(f_atv, f_cine_data, fstk_context):
             # logger
             l_log = logging.getLogger("__do_dep")
             l_log.setLevel(logging.ERROR)
-            l_log.error("<E04: pista de decolagem inexistente.")
+            l_log.error("<E04: pista de decolagem inexistente. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
             # abort procedure
             abnd.abort_prc(f_atv)
@@ -312,7 +312,7 @@ def prc_decolagem(f_atv, f_cine_data, fstk_context):
         # logger
         l_log = logging.getLogger("prc_decolagem")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E01: aeronave não ativa.")
+        l_log.error("<E01: aeronave [{}/{}] não ativa.".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)
@@ -325,7 +325,7 @@ def prc_decolagem(f_atv, f_cine_data, fstk_context):
         # logger
         l_log = logging.getLogger("prc_decolagem")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E02: performance não existe.")
+        l_log.error("<E02: performance não existe. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)
@@ -368,7 +368,7 @@ def prc_decolagem(f_atv, f_cine_data, fstk_context):
         # logger
         l_log = logging.getLogger("prc_decolagem")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E04: fase da decolagem não identificada.")
+        l_log.error("<E04: fase da decolagem não identificada. aeronave:[{}/{}].".format(f_atv.i_trf_id, f_atv.s_trf_ind))
 
         # abort procedure
         abnd.abort_prc(f_atv)

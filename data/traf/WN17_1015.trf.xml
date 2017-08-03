@@ -2,55 +2,55 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>C208</designador>
     <ssr>6301</ssr>
     <indicativo>PTOQT</indicativo>
     <origem>SBEG</origem>
     <destino>SWKO</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|96104</procedimento>
+    <procedimento>SUB96104</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>160</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>AT45</designador>
     <ssr>6302</ssr>
     <indicativo>TTL9920</indicativo>
     <origem>SBEG</origem>
     <destino>SWUY</destino>
     <temptrafego>2</temptrafego>
-    <procedimento>SUB|96104</procedimento>
+    <procedimento>SUB96104</procedimento>
     <niveltrj>220</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E190</designador>
     <ssr>6303</ssr>
     <indicativo>AZU2802</indicativo>
     <origem>SBEG</origem>
     <destino>SBBV</destino>
     <temptrafego>3</temptrafego>
-    <procedimento>SUB|96105</procedimento>
+    <procedimento>SUB96105</procedimento>
     <niveltrj>360</niveltrj>
     <veltrj>425</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>PA34</designador>
     <ssr>6304</ssr>
     <indicativo>PTOLI</indicativo>
     <origem>SBEG</origem>
     <destino>SWHT</destino>
     <temptrafego>3</temptrafego>
-    <procedimento>SUB|96102</procedimento>
+    <procedimento>SUB96102</procedimento>
     <niveltrj>80</niveltrj>
     <veltrj>160</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>P46T</designador>
     <ssr>6305</ssr>
     <indicativo>PRVDA</indicativo>
@@ -69,19 +69,19 @@
     <veltrj>160</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A319</designador>
     <ssr>6306</ssr>
     <indicativo>AAL964</indicativo>
     <origem>SBEG</origem>
     <destino>KMIA</destino>
     <temptrafego>5</temptrafego>
-    <procedimento>SUB|96107</procedimento>
+    <procedimento>SUB96107</procedimento>
     <niveltrj>420</niveltrj>
     <veltrj>490</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>E110</designador>
     <ssr>6307</ssr>
     <indicativo>PTGKX</indicativo>
@@ -95,12 +95,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>200</velocidade>
-    <procedimento>TRJ|960101</procedimento>
+    <procedimento>TRJ960101</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>200</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>B738</designador>
     <ssr>6401</ssr>
     <indicativo>GLO1256</indicativo>
@@ -114,12 +114,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>290</velocidade>
-    <procedimento>TRJ|960100</procedimento>
+    <procedimento>TRJ960100</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>240</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>A320</designador>
     <ssr>6402</ssr>
     <indicativo>TAM3746</indicativo>
@@ -133,12 +133,12 @@
     </coord>
     <altitude>170</altitude>
     <velocidade>310</velocidade>
-    <procedimento>TRJ|960100</procedimento>
+    <procedimento>TRJ960100</procedimento>
     <niveltrj>110</niveltrj>
     <veltrj>230</veltrj>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>AT72</designador>
     <ssr>6403</ssr>
     <indicativo>PAM9120</indicativo>
@@ -152,12 +152,12 @@
     </coord>
     <altitude>170</altitude>
     <velocidade>240</velocidade>
-    <procedimento>TRJ|960101</procedimento>
+    <procedimento>TRJ960101</procedimento>
     <niveltrj>120</niveltrj>
     <veltrj>210</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>E190</designador>
     <ssr>6404</ssr>
     <indicativo>AZU4206</indicativo>
@@ -171,12 +171,12 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>305</velocidade>
-    <procedimento>TRJ|960103</procedimento>
+    <procedimento>TRJ960103</procedimento>
     <niveltrj>130</niveltrj>
     <veltrj>247</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>E135</designador>
     <ssr>6405</ssr>
     <indicativo>PRTLC</indicativo>
@@ -190,12 +190,12 @@
     </coord>
     <altitude>170</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|960106</procedimento>
+    <procedimento>TRJ960106</procedimento>
     <niveltrj>140</niveltrj>
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>AT43</designador>
     <ssr>6406</ssr>
     <indicativo>PAM9121</indicativo>
@@ -209,12 +209,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>260</velocidade>
-    <procedimento>TRJ|960101</procedimento>
+    <procedimento>TRJ960101</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>B763</designador>
     <ssr>6407</ssr>
     <indicativo>TAM8077</indicativo>
@@ -228,12 +228,12 @@
     </coord>
     <altitude>190</altitude>
     <velocidade>330</velocidade>
-    <procedimento>TRJ|960106</procedimento>
+    <procedimento>TRJ960106</procedimento>
     <niveltrj>140</niveltrj>
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>B738</designador>
     <ssr>6501</ssr>
     <indicativo>GLO1887</indicativo>
@@ -247,12 +247,12 @@
     </coord>
     <altitude>290</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|960104</procedimento>
+    <procedimento>TRJ960104</procedimento>
     <niveltrj>130</niveltrj>
     <veltrj>255</veltrj>
   </trafego>
 
-  <trafego nTrf=16>
+  <trafego nTrf="16">
     <designador>AT72</designador>
     <ssr>6502</ssr>
     <indicativo>TTL9924</indicativo>
@@ -266,12 +266,12 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>260</velocidade>
-    <procedimento>TRJ|960101</procedimento>
+    <procedimento>TRJ960101</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>230</veltrj>
   </trafego>
 
-  <trafego nTrf=17>
+  <trafego nTrf="17">
     <designador>C208</designador>
     <ssr>6503</ssr>
     <indicativo>PTMNS</indicativo>
@@ -290,31 +290,31 @@
     <veltrj>170</veltrj>
   </trafego>
 
-  <trafego nTrf=18>
+  <trafego nTrf="18">
     <designador>P46T</designador>
     <ssr>6504</ssr>
     <indicativo>PRVDR</indicativo>
     <origem>SWFN</origem>
     <destino>SWHT</destino>
     <temptrafego>16</temptrafego>
-    <procedimento>SUB|96032</procedimento>
+    <procedimento>SUB96032</procedimento>
     <niveltrj>120</niveltrj>
     <veltrj>170</veltrj>
   </trafego>
 
-  <trafego nTrf=19>
+  <trafego nTrf="19">
     <designador>E190</designador>
     <ssr>6505</ssr>
     <indicativo>AZU4171</indicativo>
     <origem>SBEG</origem>
     <destino>SBPV</destino>
     <temptrafego>16</temptrafego>
-    <procedimento>SUB|96102</procedimento>
+    <procedimento>SUB96102</procedimento>
     <niveltrj>320</niveltrj>
     <veltrj>415</veltrj>
   </trafego>
 
-  <trafego nTrf=20>
+  <trafego nTrf="20">
     <designador>B737</designador>
     <ssr>6506</ssr>
     <indicativo>GLO1785</indicativo>
@@ -328,24 +328,24 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>295</velocidade>
-    <procedimento>TRJ|960106</procedimento>
+    <procedimento>TRJ960106</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>230</veltrj>
   </trafego>
 
-  <trafego nTrf=21>
+  <trafego nTrf="21">
     <designador>AS65</designador>
     <ssr>6507</ssr>
     <indicativo>MAB7086</indicativo>
     <origem>SBMN</origem>
     <destino>SBIC</destino>
     <temptrafego>18</temptrafego>
-    <procedimento>SUB|96308</procedimento>
+    <procedimento>SUB96308</procedimento>
     <niveltrj>60</niveltrj>
     <veltrj>110</veltrj>
   </trafego>
 
-  <trafego nTrf=22>
+  <trafego nTrf="22">
     <designador>B738</designador>
     <ssr>6601</ssr>
     <indicativo>GLO1068</indicativo>
@@ -359,24 +359,24 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|960104</procedimento>
+    <procedimento>TRJ960104</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>230</veltrj>
   </trafego>
 
-  <trafego nTrf=23>
+  <trafego nTrf="23">
     <designador>C295</designador>
     <ssr>6602</ssr>
     <indicativo>ARARA01</indicativo>
     <origem>SBMN</origem>
     <destino>SBSN</destino>
     <temptrafego>21</temptrafego>
-    <procedimento>SUB|96308</procedimento>
+    <procedimento>SUB96308</procedimento>
     <niveltrj>180</niveltrj>
     <veltrj>255</veltrj>
   </trafego>
 
-  <trafego nTrf=24>
+  <trafego nTrf="24">
     <designador>E190</designador>
     <ssr>6603</ssr>
     <indicativo>AZU2808</indicativo>
@@ -390,48 +390,48 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>290</velocidade>
-    <procedimento>TRJ|960103</procedimento>
+    <procedimento>TRJ960103</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=25>
+  <trafego nTrf="25">
     <designador>F5EM</designador>
     <ssr>6604</ssr>
     <indicativo>COPAS01</indicativo>
     <origem>SBMN</origem>
     <destino>SBSN</destino>
     <temptrafego>23</temptrafego>
-    <procedimento>SUB|96308</procedimento>
+    <procedimento>SUB96308</procedimento>
     <niveltrj>290</niveltrj>
     <veltrj>410</veltrj>
   </trafego>
 
-  <trafego nTrf=26>
+  <trafego nTrf="26">
     <designador>PA34</designador>
     <ssr>6605</ssr>
     <indicativo>PTWEX</indicativo>
     <origem>SWFN</origem>
     <destino>SWBR</destino>
     <temptrafego>31</temptrafego>
-    <procedimento>SUB|96032</procedimento>
+    <procedimento>SUB96032</procedimento>
     <niveltrj>80</niveltrj>
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=27>
+  <trafego nTrf="27">
     <designador>MU2B</designador>
     <ssr>6606</ssr>
     <indicativo>PTWIX</indicativo>
     <origem>SWFN</origem>
     <destino>SWBR</destino>
     <temptrafego>31</temptrafego>
-    <procedimento>SUB|96032</procedimento>
+    <procedimento>SUB96032</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>170</veltrj>
   </trafego>
 
-  <trafego nTrf=28>
+  <trafego nTrf="28">
     <designador>E110</designador>
     <ssr>6607</ssr>
     <indicativo>PTSHU</indicativo>
@@ -445,12 +445,12 @@
     </coord>
     <altitude>140</altitude>
     <velocidade>200</velocidade>
-    <procedimento>TRJ|960104</procedimento>
+    <procedimento>TRJ960104</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>120</veltrj>
   </trafego>
 
-  <trafego nTrf=29>
+  <trafego nTrf="29">
     <designador>B735</designador>
     <ssr>6701</ssr>
     <indicativo>SID9974</indicativo>
@@ -464,12 +464,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>290</velocidade>
-    <procedimento>TRJ|960100</procedimento>
+    <procedimento>TRJ960100</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>220</veltrj>
   </trafego>
 
-  <trafego nTrf=30>
+  <trafego nTrf="30">
     <designador>AS50</designador>
     <ssr>6702</ssr>
     <indicativo>AGUIA01</indicativo>

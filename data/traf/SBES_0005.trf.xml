@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>H60</designador>
     <ssr>260</ssr>
     <indicativo>MAR3009</indicativo>
@@ -11,10 +11,10 @@
     <temptrafego>1</temptrafego>
     <altitude>1</altitude>
     <velocidade>5</velocidade>
-    <procedimento>SUB|63015</procedimento>
+    <procedimento>SUB63015</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>BE9L</designador>
     <ssr>3547</ssr>
     <indicativo>PRBAK</indicativo>
@@ -32,26 +32,26 @@
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>AS50</designador>
     <ssr>261</ssr>
     <indicativo>MAR7055</indicativo>
     <origem>SBES</origem>
     <destino>SBRJ</destino>
     <temptrafego>5</temptrafego>
-    <procedimento>SUB|63016</procedimento>
+    <procedimento>SUB63016</procedimento>
     <niveltrj>30</niveltrj>
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>H60</designador>
     <ssr>246</ssr>
     <indicativo>MAR3024</indicativo>
     <origem>SBES</origem>
     <destino>SBES</destino>
     <temptrafego>3</temptrafego>
-    <procedimento>SUB|63012</procedimento>
+    <procedimento>SUB63012</procedimento>
   </trafego>
 </trafegos>
 

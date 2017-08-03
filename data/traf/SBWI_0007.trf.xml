@@ -2,17 +2,17 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>LJ35</designador>
     <ssr>4401</ssr>
     <indicativo>PTLTD</indicativo>
     <origem>SBFI</origem>
     <destino>SBCA</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|81037</procedimento>
+    <procedimento>SUB81037</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B73C</designador>
     <ssr>4605</ssr>
     <indicativo>GLO1955</indicativo>
@@ -26,20 +26,20 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>380</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>C130</designador>
     <ssr>4522</ssr>
     <indicativo>GORDO12</indicativo>
     <origem>SBFI</origem>
     <destino>SBCO</destino>
     <temptrafego>35</temptrafego>
-    <procedimento>SUB|81029</procedimento>
+    <procedimento>SUB81029</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>C208</designador>
     <ssr>4573</ssr>
     <indicativo>FAB2708</indicativo>
@@ -53,20 +53,20 @@
     </coord>
     <altitude>80</altitude>
     <velocidade>120</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>A320</designador>
     <ssr>4404</ssr>
     <indicativo>TAM3072</indicativo>
     <origem>SBFI</origem>
     <destino>SBGR</destino>
     <temptrafego>16</temptrafego>
-    <procedimento>SUB|81027</procedimento>
+    <procedimento>SUB81027</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>C650</designador>
     <ssr>4631</ssr>
     <indicativo>N737F</indicativo>
@@ -80,10 +80,10 @@
     </coord>
     <altitude>190</altitude>
     <velocidade>350</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>PA34</designador>
     <ssr>4434</ssr>
     <indicativo>PTVEO</indicativo>
@@ -97,10 +97,10 @@
     </coord>
     <altitude>100</altitude>
     <velocidade>125</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>A320</designador>
     <ssr>4607</ssr>
     <indicativo>TAM3875</indicativo>
@@ -114,7 +114,7 @@
     </coord>
     <altitude>190</altitude>
     <velocidade>360</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 </trafegos>
 

@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B738</designador>
     <ssr>6430</ssr>
     <indicativo>GLO1938</indicativo>
@@ -19,7 +19,7 @@
     <proa>50</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>E110</designador>
     <ssr>6431</ssr>
     <indicativo>PTSEA</indicativo>
@@ -36,7 +36,7 @@
     <proa>40</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>AT42</designador>
     <ssr>6432</ssr>
     <indicativo>TTL9920</indicativo>
@@ -45,10 +45,10 @@
     <temptrafego>4</temptrafego>
     <altitude>180</altitude>
     <velocidade>265</velocidade>
-    <procedimento>SUB|96008</procedimento>
+    <procedimento>SUB96008</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B738</designador>
     <ssr>6433</ssr>
     <indicativo>GLO1640</indicativo>
@@ -65,7 +65,7 @@
     <proa>325</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B733</designador>
     <ssr>6434</ssr>
     <indicativo>FAB2116</indicativo>
@@ -82,7 +82,7 @@
     <proa>360</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A320</designador>
     <ssr>6435</ssr>
     <indicativo>TAM3840</indicativo>
@@ -99,7 +99,7 @@
     <proa>275</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>C115</designador>
     <ssr>6436</ssr>
     <indicativo>ARARA05</indicativo>
@@ -107,10 +107,10 @@
     <destino>SBUA</destino>
     <temptrafego>14</temptrafego>
     <altitude>200</altitude>
-    <procedimento>SUB|96027</procedimento>
+    <procedimento>SUB96027</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>E121</designador>
     <ssr>6437</ssr>
     <indicativo>PTMAR</indicativo>
@@ -127,7 +127,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>B738</designador>
     <ssr>6440</ssr>
     <indicativo>GLO1643</indicativo>
@@ -144,7 +144,7 @@
     <proa>275</proa>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>C208</designador>
     <ssr>6441</ssr>
     <indicativo>COBRA29</indicativo>
@@ -161,7 +161,7 @@
     <proa>90</proa>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>A320</designador>
     <ssr>6442</ssr>
     <indicativo>TAM3752</indicativo>
@@ -170,7 +170,7 @@
     <temptrafego>25</temptrafego>
     <altitude>360</altitude>
     <velocidade>415</velocidade>
-    <procedimento>SUB|96004</procedimento>
+    <procedimento>SUB96004</procedimento>
   </trafego>
 </trafegos>
 

@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B738</designador>
     <ssr>3030</ssr>
     <indicativo>GLO1693</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>230</altitude>
     <velocidade>390</velocidade>
-    <procedimento>TRJ|980050</procedimento>
+    <procedimento>TRJ980050</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>3002</ssr>
     <indicativo>TAM3535</indicativo>
@@ -33,10 +33,10 @@
     </coord>
     <altitude>230</altitude>
     <velocidade>390</velocidade>
-    <procedimento>TRJ|980052</procedimento>
+    <procedimento>TRJ980052</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E50P</designador>
     <ssr>3003</ssr>
     <indicativo>PTGXQ</indicativo>
@@ -50,10 +50,10 @@
     </coord>
     <altitude>230</altitude>
     <velocidade>390</velocidade>
-    <procedimento>TRJ|980052</procedimento>
+    <procedimento>TRJ980052</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B738</designador>
     <ssr>3004</ssr>
     <indicativo>GLO1423</indicativo>
@@ -67,47 +67,47 @@
     </coord>
     <altitude>210</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|980051</procedimento>
+    <procedimento>TRJ980051</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>AT72</designador>
     <ssr>3101</ssr>
     <indicativo>AZU5340</indicativo>
     <origem>SBCT</origem>
     <destino>SBGR</destino>
     <temptrafego>1</temptrafego>
-    <procedimento>SUB|98005</procedimento>
+    <procedimento>SUB98005</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>PA34</designador>
     <ssr>3102</ssr>
     <indicativo>PPEIK</indicativo>
     <origem>SBBI</origem>
     <destino>SBLO</destino>
     <temptrafego>2</temptrafego>
-    <procedimento>SUB|98026</procedimento>
+    <procedimento>SUB98026</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>LJ45</designador>
     <ssr>3103</ssr>
     <indicativo>PTWSB</indicativo>
     <origem>SBBI</origem>
     <destino>SBRJ</destino>
     <temptrafego>11</temptrafego>
-    <procedimento>SUB|98030</procedimento>
+    <procedimento>SUB98030</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>AT72</designador>
     <ssr>3104</ssr>
     <indicativo>AZU5756</indicativo>
     <origem>SBCT</origem>
     <destino>SBMG</destino>
     <temptrafego>13</temptrafego>
-    <procedimento>SUB|98038</procedimento>
+    <procedimento>SUB98038</procedimento>
   </trafego>
 </trafegos>
 

@@ -2,253 +2,253 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>BE58</designador>
     <ssr>3201</ssr>
     <indicativo>PPMIV</indicativo>
     <origem>SBNF</origem>
     <destino>SSKU</destino>
-    <procedimento>SUB|101221</procedimento>
+    <procedimento>SUB101221</procedimento>
     <niveltrj>100</niveltrj>
     <veltrj>275</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>E190</designador>
     <ssr>3203</ssr>
     <indicativo>AZU4012</indicativo>
     <origem>SBNF</origem>
     <destino>SBKP</destino>
     <temptrafego>1</temptrafego>
-    <procedimento>SUB|101227</procedimento>
+    <procedimento>SUB101227</procedimento>
     <niveltrj>310</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E190</designador>
     <ssr>3207</ssr>
     <indicativo>AZU4227</indicativo>
     <origem>SBFL</origem>
     <destino>SBKP</destino>
     <temptrafego>7</temptrafego>
-    <procedimento>SUB|101202</procedimento>
+    <procedimento>SUB101202</procedimento>
     <niveltrj>330</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>3221</ssr>
     <indicativo>ONE6160</indicativo>
     <origem>SBFL</origem>
     <destino>SBBR</destino>
     <temptrafego>22</temptrafego>
-    <procedimento>SUB|101202</procedimento>
+    <procedimento>SUB101202</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>E190</designador>
     <ssr>3225</ssr>
     <indicativo>AZU4341</indicativo>
     <origem>SBFL</origem>
     <destino>SBPA</destino>
     <temptrafego>36</temptrafego>
-    <procedimento>SUB|101205</procedimento>
+    <procedimento>SUB101205</procedimento>
     <niveltrj>260</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>AT72</designador>
     <ssr>3234</ssr>
     <indicativo>AZU9007</indicativo>
     <origem>SBNF</origem>
     <destino>SBPA</destino>
     <temptrafego>65</temptrafego>
-    <procedimento>SUB|101221</procedimento>
+    <procedimento>SUB101221</procedimento>
     <niveltrj>200</niveltrj>
     <veltrj>200</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>AT72</designador>
     <ssr>3235</ssr>
     <indicativo>AZU9159</indicativo>
     <origem>SBFL</origem>
     <destino>SBLO</destino>
     <temptrafego>75</temptrafego>
-    <procedimento>SUB|101201</procedimento>
+    <procedimento>SUB101201</procedimento>
     <niveltrj>210</niveltrj>
     <veltrj>200</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>A319</designador>
     <ssr>3243</ssr>
     <indicativo>SKU4001</indicativo>
     <origem>SBFL</origem>
     <destino>SCEL</destino>
     <temptrafego>111</temptrafego>
-    <procedimento>SUB|101205</procedimento>
+    <procedimento>SUB101205</procedimento>
     <niveltrj>380</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>E190</designador>
     <ssr>3247</ssr>
     <indicativo>AZU4042</indicativo>
     <origem>SBNF</origem>
     <destino>SBKP</destino>
     <temptrafego>119</temptrafego>
-    <procedimento>SUB|101227</procedimento>
+    <procedimento>SUB101227</procedimento>
     <niveltrj>310</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>B737</designador>
     <ssr>3250</ssr>
     <indicativo>GLO2161</indicativo>
     <origem>SBFL</origem>
     <destino>SBGR</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|101203</procedimento>
+    <procedimento>SUB101203</procedimento>
     <niveltrj>310</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>B737</designador>
     <ssr>3251</ssr>
     <indicativo>GLO1731</indicativo>
     <origem>SBNF</origem>
     <destino>SBGR</destino>
     <temptrafego>1</temptrafego>
-    <procedimento>SUB|101224</procedimento>
+    <procedimento>SUB101224</procedimento>
     <niveltrj>330</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>A319</designador>
     <ssr>3261</ssr>
     <indicativo>TAM3118</indicativo>
     <origem>SBNF</origem>
     <destino>SBSP</destino>
     <temptrafego>18</temptrafego>
-    <procedimento>SUB|101223</procedimento>
+    <procedimento>SUB101223</procedimento>
     <niveltrj>290</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>B737</designador>
     <ssr>3307</ssr>
     <indicativo>GLO1523</indicativo>
     <origem>SBNF</origem>
     <destino>SBSP</destino>
     <temptrafego>90</temptrafego>
-    <procedimento>SUB|101223</procedimento>
+    <procedimento>SUB101223</procedimento>
     <niveltrj>350</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>B737</designador>
     <ssr>3310</ssr>
     <indicativo>GLO2083</indicativo>
     <origem>SBFL</origem>
     <destino>SBGR</destino>
     <temptrafego>92</temptrafego>
-    <procedimento>SUB|101203</procedimento>
+    <procedimento>SUB101203</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>B738</designador>
     <ssr>3315</ssr>
     <indicativo>GLO1679</indicativo>
     <origem>SBFL</origem>
     <destino>SBSP</destino>
     <temptrafego>116</temptrafego>
-    <procedimento>SUB|101203</procedimento>
+    <procedimento>SUB101203</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=16>
+  <trafego nTrf="16">
     <designador>B738</designador>
     <ssr>3440</ssr>
     <indicativo>GLO1680</indicativo>
     <origem>SBFL</origem>
     <destino>SBSP</destino>
     <temptrafego>45</temptrafego>
-    <procedimento>SUB|101203</procedimento>
+    <procedimento>SUB101203</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=17>
+  <trafego nTrf="17">
     <designador>A320</designador>
     <ssr>3441</ssr>
     <indicativo>ONE6161</indicativo>
     <origem>SBFL</origem>
     <destino>SBBR</destino>
     <temptrafego>55</temptrafego>
-    <procedimento>SUB|101202</procedimento>
+    <procedimento>SUB101202</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=18>
+  <trafego nTrf="18">
     <designador>E190</designador>
     <ssr>3446</ssr>
     <indicativo>AZU4342</indicativo>
     <origem>SBFL</origem>
     <destino>SBPA</destino>
     <temptrafego>67</temptrafego>
-    <procedimento>SUB|101205</procedimento>
+    <procedimento>SUB101205</procedimento>
     <niveltrj>260</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=19>
+  <trafego nTrf="19">
     <designador>PA34</designador>
     <ssr>403</ssr>
     <indicativo>PRFLM</indicativo>
     <origem>SBFL</origem>
     <destino>SBNF</destino>
     <temptrafego>13</temptrafego>
-    <procedimento>SUB|101201</procedimento>
+    <procedimento>SUB101201</procedimento>
     <niveltrj>110</niveltrj>
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=20>
+  <trafego nTrf="20">
     <designador>C152</designador>
     <ssr>405</ssr>
     <indicativo>PRFLD</indicativo>
     <origem>SBFL</origem>
     <destino>SBCM</destino>
     <temptrafego>30</temptrafego>
-    <procedimento>SUB|101207</procedimento>
+    <procedimento>SUB101207</procedimento>
     <niveltrj>110</niveltrj>
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=21>
+  <trafego nTrf="21">
     <designador>C550</designador>
     <ssr>406</ssr>
     <indicativo>PPESC</indicativo>
     <origem>SBFL</origem>
     <destino>SBCT</destino>
     <temptrafego>83</temptrafego>
-    <procedimento>SUB|101201</procedimento>
+    <procedimento>SUB101201</procedimento>
     <niveltrj>110</niveltrj>
     <veltrj>100</veltrj>
   </trafego>

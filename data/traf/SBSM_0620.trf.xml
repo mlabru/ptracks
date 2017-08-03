@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>C208</designador>
     <ssr>3652</ssr>
     <indicativo>FAB2706</indicativo>
@@ -11,10 +11,10 @@
     <temptrafego>1</temptrafego>
     <altitude>90</altitude>
     <velocidade>120</velocidade>
-    <procedimento>SUB|74005</procedimento>
+    <procedimento>SUB74005</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>3662</ssr>
     <indicativo>TAM3506</indicativo>
@@ -31,7 +31,7 @@
     <proa>230</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>G2</designador>
     <ssr>3112</ssr>
     <indicativo>N367H</indicativo>
@@ -48,7 +48,7 @@
     <proa>10</proa>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A330</designador>
     <ssr>3452</ssr>
     <indicativo>TAM3557</indicativo>
@@ -65,7 +65,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>E110</designador>
     <ssr>3224</ssr>
     <indicativo>PHOENIX06</indicativo>
@@ -74,10 +74,10 @@
     <temptrafego>15</temptrafego>
     <altitude>90</altitude>
     <velocidade>120</velocidade>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>B738</designador>
     <ssr>3115</ssr>
     <indicativo>GLO1857</indicativo>
@@ -94,7 +94,7 @@
     <proa>240</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>B733</designador>
     <ssr>3552</ssr>
     <indicativo>GLO1804</indicativo>
@@ -111,7 +111,7 @@
     <proa>230</proa>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>AT43</designador>
     <ssr>3333</ssr>
     <indicativo>AZU4424</indicativo>
@@ -120,7 +120,7 @@
     <temptrafego>27</temptrafego>
     <altitude>120</altitude>
     <velocidade>180</velocidade>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 </trafegos>
 

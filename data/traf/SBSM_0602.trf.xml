@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>LJ31</designador>
     <ssr>3215</ssr>
     <indicativo>N346XT</indicativo>
@@ -10,10 +10,10 @@
     <destino>SBCH</destino>
     <temptrafego>0</temptrafego>
     <altitude>280</altitude>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B738</designador>
     <ssr>3245</ssr>
     <indicativo>GLO1834</indicativo>
@@ -30,7 +30,7 @@
     <proa>240</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>BE90</designador>
     <ssr>3145</ssr>
     <indicativo>LVWRH</indicativo>
@@ -39,10 +39,10 @@
     <temptrafego>8</temptrafego>
     <altitude>260</altitude>
     <velocidade>250</velocidade>
-    <procedimento>SUB|74007</procedimento>
+    <procedimento>SUB74007</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>E121</designador>
     <ssr>3354</ssr>
     <indicativo>PTMCG</indicativo>
@@ -59,7 +59,7 @@
     <proa>240</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B738</designador>
     <ssr>3314</ssr>
     <indicativo>GLO1647</indicativo>
@@ -76,7 +76,7 @@
     <proa>250</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A1</designador>
     <ssr>1243</ssr>
     <indicativo>POK12</indicativo>
@@ -85,10 +85,10 @@
     <temptrafego>27</temptrafego>
     <altitude>260</altitude>
     <velocidade>250</velocidade>
-    <procedimento>SUB|74003</procedimento>
+    <procedimento>SUB74003</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>LJ35</designador>
     <ssr>3331</ssr>
     <indicativo>PTLDM</indicativo>
@@ -105,7 +105,7 @@
     <proa>170</proa>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>E110</designador>
     <ssr>3322</ssr>
     <indicativo>PHOENIX12</indicativo>
@@ -114,7 +114,7 @@
     <temptrafego>35</temptrafego>
     <altitude>90</altitude>
     <velocidade>140</velocidade>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 </trafegos>
 

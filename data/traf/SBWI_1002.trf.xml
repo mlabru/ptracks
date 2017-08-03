@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A321</designador>
     <ssr>2001</ssr>
     <indicativo>TAM3557</indicativo>
@@ -19,7 +19,7 @@
     <proa>259</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>E190</designador>
     <ssr>2002</ssr>
     <indicativo>AZU4406</indicativo>
@@ -36,7 +36,7 @@
     <proa>272</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B738</designador>
     <ssr>2003</ssr>
     <indicativo>GLO1174</indicativo>
@@ -55,7 +55,7 @@
     <veltrj>350</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>2004</ssr>
     <indicativo>LPE2442</indicativo>
@@ -74,19 +74,19 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>BE58</designador>
     <ssr>2005</ssr>
     <indicativo>PTFRE</indicativo>
     <origem>SBFI</origem>
     <destino>SBLO</destino>
     <temptrafego>5</temptrafego>
-    <procedimento>SUB|81037</procedimento>
+    <procedimento>SUB81037</procedimento>
     <niveltrj>230</niveltrj>
     <veltrj>180</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>B738</designador>
     <ssr>2006</ssr>
     <indicativo>GLO2077</indicativo>
@@ -105,7 +105,7 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>E190</designador>
     <ssr>2007</ssr>
     <indicativo>AZU5242</indicativo>
@@ -124,7 +124,7 @@
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>B738</designador>
     <ssr>2010</ssr>
     <indicativo>GLO1784</indicativo>
@@ -143,7 +143,7 @@
     <veltrj>320</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>E190</designador>
     <ssr>2011</ssr>
     <indicativo>AZU2404</indicativo>
@@ -162,19 +162,19 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>LR35</designador>
     <ssr>2012</ssr>
     <indicativo>PPPRV</indicativo>
     <origem>SBFI</origem>
     <destino>SBCT</destino>
     <temptrafego>17</temptrafego>
-    <procedimento>SUB|81027</procedimento>
+    <procedimento>SUB81027</procedimento>
     <niveltrj>330</niveltrj>
     <veltrj>380</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>A321</designador>
     <ssr>2013</ssr>
     <indicativo>TAM3251</indicativo>
@@ -193,7 +193,7 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>E190</designador>
     <ssr>214</ssr>
     <indicativo>AZU5235</indicativo>
@@ -212,7 +212,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>B738</designador>
     <ssr>215</ssr>
     <indicativo>GLO1100</indicativo>
@@ -231,7 +231,7 @@
     <veltrj>350</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>C550</designador>
     <ssr>216</ssr>
     <indicativo>ZPYAN</indicativo>
@@ -250,19 +250,19 @@
     <veltrj>290</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>BE58</designador>
     <ssr>217</ssr>
     <indicativo>PTBOR</indicativo>
     <origem>SBFI</origem>
     <destino>SBLO</destino>
     <temptrafego>30</temptrafego>
-    <procedimento>SUB|81038</procedimento>
+    <procedimento>SUB81038</procedimento>
     <niveltrj>230</niveltrj>
     <veltrj>180</veltrj>
   </trafego>
 
-  <trafego nTrf=16>
+  <trafego nTrf="16">
     <designador>B738</designador>
     <ssr>220</ssr>
     <indicativo>GLO1170</indicativo>
@@ -281,7 +281,7 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=17>
+  <trafego nTrf="17">
     <designador>E190</designador>
     <ssr>221</ssr>
     <indicativo>AZU5170</indicativo>
@@ -300,7 +300,7 @@
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=18>
+  <trafego nTrf="18">
     <designador>B738</designador>
     <ssr>222</ssr>
     <indicativo>GLO9748</indicativo>
@@ -319,7 +319,7 @@
     <veltrj>320</veltrj>
   </trafego>
 
-  <trafego nTrf=19>
+  <trafego nTrf="19">
     <designador>AT72</designador>
     <ssr>223</ssr>
     <indicativo>AZU5168</indicativo>
@@ -338,19 +338,19 @@
     <veltrj>200</veltrj>
   </trafego>
 
-  <trafego nTrf=20>
+  <trafego nTrf="20">
     <designador>LJ35</designador>
     <ssr>224</ssr>
     <indicativo>PTEIN</indicativo>
     <origem>SBFI</origem>
     <destino>SBCT</destino>
     <temptrafego>33</temptrafego>
-    <procedimento>SUB|81041</procedimento>
+    <procedimento>SUB81041</procedimento>
     <niveltrj>330</niveltrj>
     <veltrj>380</veltrj>
   </trafego>
 
-  <trafego nTrf=21>
+  <trafego nTrf="21">
     <designador>A320</designador>
     <ssr>226</ssr>
     <indicativo>DSM4022</indicativo>
@@ -369,7 +369,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=22>
+  <trafego nTrf="22">
     <designador>B738</designador>
     <ssr>227</ssr>
     <indicativo>ARG1725</indicativo>
@@ -388,7 +388,7 @@
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=23>
+  <trafego nTrf="23">
     <designador>E190</designador>
     <ssr>230</ssr>
     <indicativo>AUT2742</indicativo>
@@ -407,7 +407,7 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=24>
+  <trafego nTrf="24">
     <designador>B737</designador>
     <ssr>232</ssr>
     <indicativo>ARG1656</indicativo>
@@ -426,7 +426,7 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=25>
+  <trafego nTrf="25">
     <designador>E190</designador>
     <ssr>234</ssr>
     <indicativo>AUT2505</indicativo>
@@ -445,7 +445,7 @@
     <veltrj>320</veltrj>
   </trafego>
 
-  <trafego nTrf=26>
+  <trafego nTrf="26">
     <designador>A320</designador>
     <ssr>236</ssr>
     <indicativo>TAM3169</indicativo>
@@ -464,19 +464,19 @@
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=27>
+  <trafego nTrf="27">
     <designador>E190</designador>
     <ssr>240</ssr>
     <indicativo>AZU5179</indicativo>
     <origem>SBFI</origem>
     <destino>SBPA</destino>
     <temptrafego>41</temptrafego>
-    <procedimento>SUB|81049</procedimento>
+    <procedimento>SUB81049</procedimento>
     <niveltrj>250</niveltrj>
     <veltrj>330</veltrj>
   </trafego>
 
-  <trafego nTrf=28>
+  <trafego nTrf="28">
     <designador>A320</designador>
     <ssr>242</ssr>
     <indicativo>TAM3250</indicativo>
@@ -495,7 +495,7 @@
     <veltrj>350</veltrj>
   </trafego>
 
-  <trafego nTrf=29>
+  <trafego nTrf="29">
     <designador>A320</designador>
     <ssr>243</ssr>
     <indicativo>TAM3558</indicativo>

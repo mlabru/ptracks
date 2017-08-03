@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>BE40</designador>
     <ssr>4011</ssr>
     <indicativo>PTWHD</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>130</altitude>
     <velocidade>290</velocidade>
-    <procedimento>TRJ|200238</procedimento>
+    <procedimento>TRJ200238</procedimento>
     <niveltrj>320</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>4017</ssr>
     <indicativo>TAM3707</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>310</velocidade>
-    <procedimento>TRJ|200243</procedimento>
+    <procedimento>TRJ200243</procedimento>
     <niveltrj>360</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B738</designador>
     <ssr>4003</ssr>
     <indicativo>GLO1836</indicativo>
@@ -59,7 +59,7 @@
     <veltrj>480</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>C650</designador>
     <ssr>4016</ssr>
     <indicativo>PRVMA</indicativo>
@@ -73,10 +73,10 @@
     </coord>
     <altitude>350</altitude>
     <velocidade>480</velocidade>
-    <procedimento>TRJ|200252</procedimento>
+    <procedimento>TRJ200252</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>A319</designador>
     <ssr>4010</ssr>
     <indicativo>TAM3586</indicativo>
@@ -90,12 +90,12 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>320</velocidade>
-    <procedimento>TRJ|200380</procedimento>
+    <procedimento>TRJ200380</procedimento>
     <niveltrj>340</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>B737</designador>
     <ssr>4025</ssr>
     <indicativo>GLO1775</indicativo>
@@ -112,7 +112,7 @@
     <proa>117</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>B727</designador>
     <ssr>4013</ssr>
     <indicativo>VLO9591</indicativo>
@@ -131,7 +131,7 @@
     <veltrj>480</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>A319</designador>
     <ssr>4005</ssr>
     <indicativo>TAM3743</indicativo>
@@ -145,10 +145,10 @@
     </coord>
     <altitude>350</altitude>
     <velocidade>480</velocidade>
-    <procedimento>TRJ|200252</procedimento>
+    <procedimento>TRJ200252</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>B767</designador>
     <ssr>4023</ssr>
     <indicativo>DAL107</indicativo>
@@ -165,7 +165,7 @@
     <proa>150</proa>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>LR31</designador>
     <ssr>4014</ssr>
     <indicativo>PTLFT</indicativo>
@@ -179,12 +179,12 @@
     </coord>
     <altitude>310</altitude>
     <velocidade>440</velocidade>
-    <procedimento>TRJ|200200</procedimento>
+    <procedimento>TRJ200200</procedimento>
     <niveltrj>310</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>MK28</designador>
     <ssr>4004</ssr>
     <indicativo>ONE6380</indicativo>
@@ -198,12 +198,12 @@
     </coord>
     <altitude>140</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|200200</procedimento>
+    <procedimento>TRJ200200</procedimento>
     <niveltrj>330</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>B737</designador>
     <ssr>4007</ssr>
     <indicativo>GLO1831</indicativo>
@@ -217,12 +217,12 @@
     </coord>
     <altitude>350</altitude>
     <velocidade>480</velocidade>
-    <procedimento>TRJ|200379</procedimento>
+    <procedimento>TRJ200379</procedimento>
     <niveltrj>350</niveltrj>
     <veltrj>480</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>MK28</designador>
     <ssr>4001</ssr>
     <indicativo>ONE6417</indicativo>
@@ -236,12 +236,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>270</velocidade>
-    <procedimento>TRJ|200243</procedimento>
+    <procedimento>TRJ200243</procedimento>
     <niveltrj>340</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>LR35</designador>
     <ssr>4006</ssr>
     <indicativo>FAB2712</indicativo>
@@ -255,12 +255,12 @@
     </coord>
     <altitude>170</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|200238</procedimento>
+    <procedimento>TRJ200238</procedimento>
     <niveltrj>320</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>DA90</designador>
     <ssr>4021</ssr>
     <indicativo>PTLOT</indicativo>
@@ -274,10 +274,10 @@
     </coord>
     <altitude>370</altitude>
     <velocidade>490</velocidade>
-    <procedimento>TRJ|200200</procedimento>
+    <procedimento>TRJ200200</procedimento>
   </trafego>
 
-  <trafego nTrf=16>
+  <trafego nTrf="16">
     <designador>C750</designador>
     <ssr>4012</ssr>
     <indicativo>PTMAO</indicativo>
@@ -296,7 +296,7 @@
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=17>
+  <trafego nTrf="17">
     <designador>A320</designador>
     <ssr>4002</ssr>
     <indicativo>TAM3477</indicativo>
@@ -310,12 +310,12 @@
     </coord>
     <altitude>170</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|200248</procedimento>
+    <procedimento>TRJ200248</procedimento>
     <niveltrj>400</niveltrj>
     <veltrj>460</veltrj>
   </trafego>
 
-  <trafego nTrf=18>
+  <trafego nTrf="18">
     <designador>B737</designador>
     <ssr>4015</ssr>
     <indicativo>VRN2622</indicativo>
@@ -334,7 +334,7 @@
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=19>
+  <trafego nTrf="19">
     <designador>A320</designador>
     <ssr>4022</ssr>
     <indicativo>TAM3590</indicativo>

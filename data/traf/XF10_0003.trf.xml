@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E190</designador>
     <ssr>3223</ssr>
     <indicativo>AZU3223</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|1000004</procedimento>
+    <procedimento>TRJ1000004</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B738</designador>
     <ssr>3150</ssr>
     <indicativo>GOL1250</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|1000002</procedimento>
+    <procedimento>TRJ1000002</procedimento>
     <niveltrj>150</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B738</designador>
     <ssr>3155</ssr>
     <indicativo>GOL1255</indicativo>
@@ -54,12 +54,12 @@
     </coord>
     <altitude>150</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|1000003</procedimento>
+    <procedimento>TRJ1000003</procedimento>
     <niveltrj>150</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>AS65</designador>
     <ssr>111</ssr>
     <indicativo>PPNEW</indicativo>
@@ -78,7 +78,7 @@
     <veltrj>110</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>C152</designador>
     <ssr>1123</ssr>
     <indicativo>PRFLN</indicativo>
@@ -87,10 +87,10 @@
     <temptrafego>6</temptrafego>
     <altitude>25</altitude>
     <velocidade>120</velocidade>
-    <procedimento>SUB|100128</procedimento>
+    <procedimento>SUB100128</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>C152</designador>
     <ssr>1234</ssr>
     <indicativo>PRFLE</indicativo>
@@ -99,10 +99,10 @@
     <temptrafego>9</temptrafego>
     <altitude>25</altitude>
     <velocidade>25</velocidade>
-    <procedimento>SUB|100129</procedimento>
+    <procedimento>SUB100129</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>BH06</designador>
     <ssr>1243</ssr>
     <indicativo>ARCAN01</indicativo>
@@ -121,7 +121,7 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>AS65</designador>
     <ssr>1564</ssr>
     <indicativo>PATRUO2</indicativo>

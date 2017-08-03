@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>C130</designador>
     <ssr>4123</ssr>
     <indicativo>FAB2460</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>200</altitude>
     <velocidade>240</velocidade>
-    <procedimento>TRJ|200230</procedimento>
+    <procedimento>TRJ200230</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>C550</designador>
     <ssr>4402</ssr>
     <indicativo>PTCCJ</indicativo>
@@ -36,7 +36,7 @@
     <proa>51</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A320</designador>
     <ssr>4403</ssr>
     <indicativo>TAM3471</indicativo>
@@ -53,7 +53,7 @@
     <proa>239</proa>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>C210</designador>
     <ssr>4404</ssr>
     <indicativo>PTVME</indicativo>
@@ -67,10 +67,10 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>185</velocidade>
-    <procedimento>TRJ|200378</procedimento>
+    <procedimento>TRJ200378</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B707</designador>
     <ssr>4452</ssr>
     <indicativo>FAB2402</indicativo>
@@ -87,7 +87,7 @@
     <proa>353</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>C560</designador>
     <ssr>4406</ssr>
     <indicativo>PTAAT</indicativo>
@@ -106,7 +106,7 @@
     <veltrj>400</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>LJ35</designador>
     <ssr>4407</ssr>
     <indicativo>PTATM</indicativo>
@@ -120,12 +120,12 @@
     </coord>
     <altitude>200</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|200371</procedimento>
+    <procedimento>TRJ200371</procedimento>
     <niveltrj>280</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>C501</designador>
     <ssr>4234</ssr>
     <indicativo>PTMMT</indicativo>
@@ -139,7 +139,7 @@
     </coord>
     <altitude>260</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|200378</procedimento>
+    <procedimento>TRJ200378</procedimento>
     <niveltrj>260</niveltrj>
     <veltrj>300</veltrj>
   </trafego>

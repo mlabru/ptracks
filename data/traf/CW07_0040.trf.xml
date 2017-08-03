@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>PAYE</designador>
     <ssr>3301</ssr>
     <indicativo>PTNUR</indicativo>
@@ -21,17 +21,17 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>3302</ssr>
     <indicativo>TAM3294</indicativo>
     <origem>SBPA</origem>
     <destino>SBGR</destino>
     <temptrafego>2</temptrafego>
-    <procedimento>SUB|29019</procedimento>
+    <procedimento>SUB29019</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A1</designador>
     <ssr>3303</ssr>
     <indicativo>POKER18</indicativo>
@@ -50,17 +50,17 @@
     <veltrj>320</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>PA34</designador>
     <ssr>3304</ssr>
     <indicativo>PTLVA</indicativo>
     <origem>SBPA</origem>
     <destino>SBFL</destino>
     <temptrafego>9</temptrafego>
-    <procedimento>SUB|29017</procedimento>
+    <procedimento>SUB29017</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>BE90</designador>
     <ssr>3305</ssr>
     <indicativo>CXDER</indicativo>
@@ -79,7 +79,7 @@
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A320</designador>
     <ssr>3306</ssr>
     <indicativo>TAM3340</indicativo>
@@ -98,17 +98,17 @@
     <veltrj>390</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>B737</designador>
     <ssr>3307</ssr>
     <indicativo>GLO7465</indicativo>
     <origem>SBPA</origem>
     <destino>SUMU</destino>
     <temptrafego>33</temptrafego>
-    <procedimento>SUB|29037</procedimento>
+    <procedimento>SUB29037</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>T27</designador>
     <ssr>3310</ssr>
     <indicativo>FAB1316</indicativo>

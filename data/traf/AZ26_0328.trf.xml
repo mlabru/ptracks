@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>F5</designador>
     <ssr>361</ssr>
     <indicativo>PACAU3</indicativo>
@@ -11,10 +11,10 @@
     <temptrafego>0</temptrafego>
     <altitude>300</altitude>
     <velocidade>450</velocidade>
-    <procedimento>SUB|4096</procedimento>
+    <procedimento>SUB4096</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>F5</designador>
     <ssr>362</ssr>
     <indicativo>PESPADA</indicativo>
@@ -23,10 +23,10 @@
     <temptrafego>2</temptrafego>
     <altitude>280</altitude>
     <velocidade>480</velocidade>
-    <procedimento>SUB|4098</procedimento>
+    <procedimento>SUB4098</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A320</designador>
     <ssr>6504</ssr>
     <indicativo>TAM3305</indicativo>
@@ -35,10 +35,10 @@
     <temptrafego>5</temptrafego>
     <altitude>370</altitude>
     <velocidade>450</velocidade>
-    <procedimento>SUB|4016</procedimento>
+    <procedimento>SUB4016</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B738</designador>
     <ssr>636</ssr>
     <indicativo>GLO1866</indicativo>
@@ -55,7 +55,7 @@
     <proa>315</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>BE55</designador>
     <ssr>6505</ssr>
     <indicativo>PTWIX</indicativo>
@@ -72,7 +72,7 @@
     <proa>180</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>AT42</designador>
     <ssr>645</ssr>
     <indicativo>TTL9920</indicativo>
@@ -89,7 +89,7 @@
     <proa>50</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>LJ55</designador>
     <ssr>6066</ssr>
     <indicativo>FAB6000</indicativo>
@@ -106,7 +106,7 @@
     <proa>360</proa>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>F5E</designador>
     <ssr>371</ssr>
     <indicativo>PACAU13</indicativo>

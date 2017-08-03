@@ -45,6 +45,7 @@ import model.items.pst_new as pstnew
 
 # control
 import control.events.events_basic as events
+import control.control_debug as cdbg
 
 # < class CAerNEW >--------------------------------------------------------------------------------
 
@@ -65,7 +66,7 @@ class CAerNEW(model.CAerModel):
         """
         constructor
         
-        @param f_model: model manager
+        @param f_model: model
         @param f_data: dados do aeródromo
         @param fs_ver: versão do formato
         """
@@ -291,6 +292,7 @@ class CAerNEW(model.CAerModel):
                     # normaliza o rumo
                     if self.__dct_aer_pistas[li_pst].f_pst_true < 0.:   
                         self.__dct_aer_pistas[li_pst].f_pst_true += 360. 
+
                     elif self.__dct_aer_pistas[li_pst].f_pst_true > 360.:
                         self.__dct_aer_pistas[li_pst].f_pst_true -= 360.
 

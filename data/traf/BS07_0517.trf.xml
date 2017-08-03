@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B737</designador>
     <ssr>4401</ssr>
     <indicativo>VRG8634</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|150059</procedimento>
+    <procedimento>TRJ150059</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>F100</designador>
     <ssr>4402</ssr>
     <indicativo>TAM3883</indicativo>
@@ -33,10 +33,10 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|150059</procedimento>
+    <procedimento>TRJ150059</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>AT42</designador>
     <ssr>4403</ssr>
     <indicativo>TTL5588</indicativo>
@@ -50,10 +50,10 @@
     </coord>
     <altitude>200</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|150087</procedimento>
+    <procedimento>TRJ150087</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A319</designador>
     <indicativo>TAM3350</indicativo>
     <origem>SBGL</origem>
@@ -66,40 +66,40 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|150060</procedimento>
+    <procedimento>TRJ150060</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B737</designador>
     <ssr>4405</ssr>
     <indicativo>GLO1805</indicativo>
     <origem>SBBR</origem>
     <destino>SBBH</destino>
     <temptrafego>15</temptrafego>
-    <procedimento>SUB|15003</procedimento>
+    <procedimento>SUB15003</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>B737</designador>
     <ssr>4406</ssr>
     <indicativo>GLO1717</indicativo>
     <origem>SBBR</origem>
     <destino>SBKP</destino>
     <temptrafego>21</temptrafego>
-    <procedimento>SUB|15005</procedimento>
+    <procedimento>SUB15005</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>B737</designador>
     <ssr>4407</ssr>
     <indicativo>VRG2600</indicativo>
     <origem>SBBR</origem>
     <destino>SBRE</destino>
     <temptrafego>25</temptrafego>
-    <procedimento>SUB|15001</procedimento>
+    <procedimento>SUB15001</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>B737</designador>
     <indicativo>VRN2635</indicativo>
     <origem>SBGL</origem>
@@ -112,10 +112,10 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|150060</procedimento>
+    <procedimento>TRJ150060</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>A320</designador>
     <ssr>4411</ssr>
     <indicativo>TAM3565</indicativo>
@@ -129,10 +129,10 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>350</velocidade>
-    <procedimento>TRJ|150059</procedimento>
+    <procedimento>TRJ150059</procedimento>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>DC10</designador>
     <indicativo>VLO9276</indicativo>
     <origem>SBGR</origem>
@@ -145,26 +145,26 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>370</velocidade>
-    <procedimento>TRJ|150061</procedimento>
+    <procedimento>TRJ150061</procedimento>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>B737</designador>
     <indicativo>FAB2115</indicativo>
     <origem>SBBR</origem>
     <destino>SBGO</destino>
     <temptrafego>20</temptrafego>
-    <procedimento>SUB|15007</procedimento>
+    <procedimento>SUB15007</procedimento>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>LR55</designador>
     <ssr>4414</ssr>
     <indicativo>FAB6000</indicativo>
     <origem>SBBR</origem>
     <destino>SBMO</destino>
     <temptrafego>28</temptrafego>
-    <procedimento>SUB|15001</procedimento>
+    <procedimento>SUB15001</procedimento>
   </trafego>
 </trafegos>
 

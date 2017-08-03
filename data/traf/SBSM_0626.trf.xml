@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B738</designador>
     <ssr>3333</ssr>
     <indicativo>GLO1818</indicativo>
@@ -19,7 +19,7 @@
     <proa>290</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>E190</designador>
     <ssr>3335</ssr>
     <indicativo>AZU4218</indicativo>
@@ -36,7 +36,7 @@
     <proa>230</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>PA34</designador>
     <ssr>3365</ssr>
     <indicativo>PTVNE</indicativo>
@@ -53,7 +53,7 @@
     <proa>290</proa>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>3114</ssr>
     <indicativo>TAM3813</indicativo>
@@ -70,7 +70,7 @@
     <proa>230</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>F5</designador>
     <ssr>1224</ssr>
     <indicativo>PAMPA04</indicativo>
@@ -87,7 +87,7 @@
     <proa>290</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>PA34</designador>
     <ssr>3666</ssr>
     <indicativo>PTWRE</indicativo>
@@ -96,10 +96,10 @@
     <temptrafego>25</temptrafego>
     <altitude>80</altitude>
     <velocidade>100</velocidade>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>G2</designador>
     <ssr>3665</ssr>
     <indicativo>N346GE</indicativo>
@@ -116,7 +116,7 @@
     <proa>230</proa>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>B738</designador>
     <ssr>3222</ssr>
     <indicativo>GLO1835</indicativo>
@@ -125,10 +125,10 @@
     <temptrafego>30</temptrafego>
     <altitude>330</altitude>
     <velocidade>300</velocidade>
-    <procedimento>SUB|74005</procedimento>
+    <procedimento>SUB74005</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>E121</designador>
     <ssr>3113</ssr>
     <indicativo>PTMCH</indicativo>

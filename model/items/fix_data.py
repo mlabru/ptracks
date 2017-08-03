@@ -45,8 +45,8 @@ import model.items.fix_new as model
 import model.items.parser_utils as parser
 
 # control
-import control.control_debug as dbg
 import control.events.events_basic as events
+# import control.control_debug as cdbg
 
 # < class CFixData >-------------------------------------------------------------------------------
 
@@ -98,20 +98,7 @@ class CFixData(dict):
             # senão, recebeu o pathname de um arquivo de fixos
             else:
                 # carrega o dicionário de fixos de um arquivo em disco
-                self.load_file(f_data)
-
-    # ---------------------------------------------------------------------------------------------
-    def load_file(self, fs_fix_pn):
-        """
-        carrega os dados do fixo de um arquivo em disco
-
-        @param fs_fix_pn: pathname do arquivo em disco
-        """
-        # check input
-        assert fs_fix_pn
-
-        # carrega o arquivo de fixo
-        self.parse_fix_xml(fs_fix_pn + ".xml")
+                self.parse_fix_xml(f_data + ".xml")
 
     # ---------------------------------------------------------------------------------------------
     def make_fix(self, fdct_root, fdct_data):

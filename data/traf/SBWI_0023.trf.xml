@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B738</designador>
     <indicativo>GLO1827</indicativo>
     <origem>SBSP</origem>
@@ -15,10 +15,10 @@
     </coord>
     <altitude>180</altitude>
     <velocidade>265</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <indicativo>TAM3504</indicativo>
     <origem>SBBR</origem>
@@ -31,10 +31,10 @@
     </coord>
     <altitude>179</altitude>
     <velocidade>255</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E190</designador>
     <indicativo>AZU2804</indicativo>
     <origem>SBPA</origem>
@@ -47,10 +47,10 @@
     </coord>
     <altitude>170</altitude>
     <velocidade>265</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A1</designador>
     <indicativo>POKER10</indicativo>
     <origem>SBSM</origem>
@@ -63,19 +63,19 @@
     </coord>
     <altitude>183</altitude>
     <velocidade>256</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>E110</designador>
     <indicativo>FENIX12</indicativo>
     <origem>SBFI</origem>
     <destino>SBBI</destino>
     <temptrafego>26</temptrafego>
-    <procedimento>SUB|81027</procedimento>
+    <procedimento>SUB81027</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>LR35</designador>
     <indicativo>N600XL</indicativo>
     <origem>SGAS</origem>
@@ -88,16 +88,16 @@
     </coord>
     <altitude>179</altitude>
     <velocidade>254</velocidade>
-    <procedimento>ESP|81001</procedimento>
+    <procedimento>ESP81001</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>LR35</designador>
     <indicativo>PTLSF</indicativo>
     <origem>SBFI</origem>
     <destino>SBSP</destino>
     <temptrafego>34</temptrafego>
-    <procedimento>SUB|81027</procedimento>
+    <procedimento>SUB81027</procedimento>
   </trafego>
 </trafegos>
 

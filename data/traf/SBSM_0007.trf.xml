@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>C208</designador>
     <ssr>3423</ssr>
     <indicativo>PEG07</indicativo>
@@ -19,7 +19,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>C208</designador>
     <ssr>3452</ssr>
     <indicativo>FAB2739</indicativo>
@@ -36,7 +36,7 @@
     <proa>0</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A1</designador>
     <ssr>1301</ssr>
     <indicativo>CENT226</indicativo>
@@ -45,10 +45,10 @@
     <temptrafego>15</temptrafego>
     <altitude>200</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|74001</procedimento>
+    <procedimento>SUB74001</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>L410</designador>
     <ssr>3422</ssr>
     <indicativo>NHG4511</indicativo>
@@ -65,7 +65,7 @@
     <proa>100</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>A1</designador>
     <ssr>1313</ssr>
     <indicativo>POK08</indicativo>
@@ -74,7 +74,7 @@
     <temptrafego>1</temptrafego>
     <altitude>80</altitude>
     <velocidade>400</velocidade>
-    <procedimento>SUB|74001</procedimento>
+    <procedimento>SUB74001</procedimento>
   </trafego>
 </trafegos>
 

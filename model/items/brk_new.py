@@ -44,12 +44,7 @@ import model.items.brk_model as model
 
 # control
 import control.events.events_basic as events
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+# import control.control_debug as cdbg
 
 # < class CBrkNEW >--------------------------------------------------------------------------------
 
@@ -65,30 +60,24 @@ class CBrkNEW(model.CBrkModel):
     </breakpoint>
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_prc, f_data=None, fs_ver="0001"):
         """
-        @param f_model: event manager
+        @param f_model: model
         @param f_prc: pointer to procedimento
         @param f_data: dados do breakpoint
         @param fs_ver: versão do formato
         """
-        # logger
-        # M_LOG.info("__init__:>>")
-
         # check input
         assert f_model
         assert f_prc
 
-        # M_LOG.debug("f_data: " + str(f_data))
-
         # init super class
         super(CBrkNEW, self).__init__()
 
-        # salva o model manager
+        # model
         self.__model = f_model
 
-        # salva o event manager
+        # event manager
         self.__event = f_model.event
 
         # herdado de CBrkModel
@@ -160,11 +149,7 @@ class CBrkNEW(model.CBrkModel):
                 # copia a breakpoint
                 self.copy_brk(f_data)
 
-        # logger
-        # M_LOG.info("__init__:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (obj)
     def copy_brk(self, f_brk):
         """
         copy constructor
@@ -172,9 +157,6 @@ class CBrkNEW(model.CBrkModel):
 
         @param f_brk: breakpoint a ser copiado
         """
-        # logger
-        # M_LOG.info("copy_brk:>>")
-
         # check input
         assert f_brk
 
@@ -218,11 +200,7 @@ class CBrkNEW(model.CBrkModel):
         # coordenada T
         self.__i_brk_t = f_brk.i_brk_t
 
-        # logger
-        # M_LOG.info("copy_brk:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (dct, str)
     def load_brk(self, fdct_data, fs_ver="0001"):
         """
         carrega os dados de breakpoint a partir de um dicionário
@@ -230,9 +208,6 @@ class CBrkNEW(model.CBrkModel):
         @param fdct_data: dicionário com os dados do breakpoint
         @param fs_ver: versão do formato dos dados
         """
-        # logger
-        # M_LOG.info("load_brk:>>")
-
         # formato versão 0.01 ?
         if "0001" == fs_ver:
             # cria a breakpoint
@@ -255,33 +230,27 @@ class CBrkNEW(model.CBrkModel):
             # cai fora...
             sys.exit(1)
 
-        # logger
-        # M_LOG.info("load_brk:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (dct)
     def make_brk(self, fdct_data):
         """
         carrega os dados de breakpoint a partir de um dicionário (formato 0001)
 
         @param fdct_data: dicionário com os dados do breakpoint
         """
-        # logger
-        M_LOG.info("make_brk:>>")
-
         # identificação do breakpoint
         if "nBrk" in fdct_data:
             self.i_brk_id = int(fdct_data["nBrk"])
-            # M_LOG.debug("make_brk::self.i_brk_id: " + str(self.i_brk_id))
+            # cdbg.M_DBG.debug("make_brk::self.i_brk_id: " + str(self.i_brk_id))
 
         # posição (lat, lng)
         if "coord" in fdct_data:
             self.__f_brk_lat, self.__f_brk_lng = self.__model.coords.from_dict(fdct_data["coord"])
-            # M_LOG.debug("make_brk::brk_lat:[{}] brk_lng:[{}]".format(self.__f_brk_lat, self.__f_brk_lng))
+            # cdbg.M_DBG.debug("make_brk::brk_lat:[{}] brk_lng:[{}]".format(self.__f_brk_lat, self.__f_brk_lng))
 
             # converte para xyz
             self.f_brk_x, self.f_brk_y, self.f_brk_z = self.__model.coords.geo2xyz(self.__f_brk_lat, self.__f_brk_lng, 0.)
-            # M_LOG.debug("make_brk::brk_x:[{}] brk_y:[{}] brk_z:[{}]"format(self.f_brk_x, self.f_brk_y, self.f_brk_z))
+            # cdbg.M_DBG.debug("make_brk::brk_x:[{}] brk_y:[{}] brk_z:[{}]"format(self.f_brk_x, self.f_brk_y, self.f_brk_z))
+
             ldct_coord = fdct_data["coord"]
             self.__s_brk_tipo = ldct_coord.get("tipo", "")
             self.__s_brk_cpoA = ldct_coord.get("cpoA", "")
@@ -292,36 +261,33 @@ class CBrkNEW(model.CBrkModel):
         # altitude
         if "altitude" in fdct_data:
             self.__f_brk_alt = float(fdct_data["altitude"]) * cdefs.D_CNV_FT2M
-            M_LOG.debug("make_brk::self.__f_brk_alt: " + str(self.__f_brk_alt))
+            # cdbg.M_DBG.debug("make_brk::self.__f_brk_alt: " + str(self.__f_brk_alt))
 
         # velocidade
         if "velocidade" in fdct_data:
             self.__f_brk_vel = float(fdct_data["velocidade"]) * cdefs.D_CNV_KT2MS
-            # M_LOG.debug("make_brk::self.__f_brk_vel: " + str(self.__f_brk_vel))
+            # cdbg.M_DBG.debug("make_brk::self.__f_brk_vel: " + str(self.__f_brk_vel))
 
         # razão de descida
         if "razdes" in fdct_data:
             self.__f_brk_raz_vel = float(fdct_data["razdes"]) * cdefs.D_CNV_FTMIN2MS
-            # M_LOG.debug("make_brk::self.__f_brk_raz_vel: " + str(self.__f_brk_raz_vel))
+            # cdbg.M_DBG.debug("make_brk::self.__f_brk_raz_vel: " + str(self.__f_brk_raz_vel))
 
         # razão de subida
         if "razsub" in fdct_data:
             self.__f_brk_raz_vel = float(fdct_data["razsub"]) * cdefs.D_CNV_FTMIN2MS
-            # M_LOG.debug("make_brk::self.__f_brk_raz_vel: " + str(self.__f_brk_raz_vel))
+            # cdbg.M_DBG.debug("make_brk::self.__f_brk_raz_vel: " + str(self.__f_brk_raz_vel))
 
         # procedimento
         if "procedimento" in fdct_data:
-            M_LOG.debug("make_brk::procedimento: " )
             self.__ptr_brk_prc = str(fdct_data["procedimento"]).strip().upper()
+            # cdbg.M_DBG.debug("make_brk::self.__ptr_brk_prc: " + str(self.__ptr_brk_prc))
+
             self.__s_brk_prc = str(fdct_data["procedimento"]).strip().upper()
-            M_LOG.debug("make_brk::self.__s_brk_prc: " + self.__s_brk_prc)
-            M_LOG.debug("make_brk::self.__ptr_brk_prc: " + str(self.__ptr_brk_prc))
+            # cdbg.M_DBG.debug("make_brk::self.__s_brk_prc: " + self.__s_brk_prc)
 
         # (bool)
         self.v_brk_ok = True
-
-        # logger
-        M_LOG.info("make_brk:<<")
 
     # =============================================================================================
     # data
@@ -330,249 +296,136 @@ class CBrkNEW(model.CBrkModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_alt(self):
-        """
-        get altitude
-        """
         return self.__f_brk_alt
 
     @f_brk_alt.setter
     def f_brk_alt(self, f_val):
-        """
-        set altitude
-        """
         self.__f_brk_alt = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def en_brk_fnc_ope(self):
-        """
-        get função operacional do procedimento associado
-        """
         return self.__en_brk_fnc_ope
 
     @en_brk_fnc_ope.setter
     def en_brk_fnc_ope(self, f_val):
-        """
-        set função operacional do procedimento associado
-        """
         self.__en_brk_fnc_ope = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_lat(self):
-        """
-        get latitude
-        """
         return self.__f_brk_lat
 
     @f_brk_lat.setter
     def f_brk_lat(self, f_val):
-        """
-        set latitude
-        """
         self.__f_brk_lat = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_lng(self):
-        """
-        get longitude
-        """
         return self.__f_brk_lng
 
     @f_brk_lng.setter
     def f_brk_lng(self, f_val):
-        """
-        set longitude
-        """
         self.__f_brk_lng = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def ptr_brk_atu(self):
-        """
-        get procedimento atual
-        """
         return self.__ptr_brk_atu
 
     @ptr_brk_atu.setter
     def ptr_brk_atu(self, f_val):
-        """
-        set procedimento atual
-        """
         self.__ptr_brk_atu = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def ptr_brk_prc(self):
-        """
-        get procedimento associado
-        """
         return self.__ptr_brk_prc
 
     @ptr_brk_prc.setter
     def ptr_brk_prc(self, f_val):
-        """
-        set procedimento associado
-        """
         self.__ptr_brk_prc = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_raz_vel(self):
-        """
-        get razão de subida
-        """
         return self.__f_brk_raz_vel
 
     @f_brk_raz_vel.setter
     def f_brk_raz_vel(self, f_val):
-        """
-        set razão de subida
-        """
         self.__f_brk_raz_vel = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def i_brk_t(self):
-        """
-        get coordenada T
-        """
         return 0  # self.__i_brk_t
 
     @i_brk_t.setter
     def i_brk_t(self, f_val):
-        """
-        set coordenada T
-        """
         self.__i_brk_t = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_vel(self):
-        """
-        get velocidade
-        """
         return self.__f_brk_vel
 
     @f_brk_vel.setter
     def f_brk_vel(self, f_val):
-        """
-        set velocidade
-        """
         self.__f_brk_vel = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_brk_cpoA(self):
-        """
-        get campo A
-        :return:
-        """
         return self.__s_brk_cpoA
 
-    # ---------------------------------------------------------------------------------------------
     @s_brk_cpoA.setter
     def s_brk_cpoA(self, f_val):
-        """
-        set campo A
-        :param f_val:
-        :return:
-        """
         self.__s_brk_cpoA = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_brk_cpoB(self):
-        """
-        get campo B
-        :return:
-        """
         return self.__s_brk_cpoB
 
-    # ---------------------------------------------------------------------------------------------
     @s_brk_cpoB.setter
     def s_brk_cpoB(self, f_val):
-        """
-        set campo A
-        :param f_val:
-        :return:
-        """
         self.__s_brk_cpoB = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_brk_cpoC(self):
-        """
-        get campo C
-        :return:
-        """
         return self.__s_brk_cpoC
 
-    # ---------------------------------------------------------------------------------------------
     @s_brk_cpoC.setter
     def s_brk_cpoC(self, f_val):
-        """
-        set campo C
-        :param f_val:
-        :return:
-        """
         self.__s_brk_cpoC = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_brk_cpoD(self):
-        """
-        get campo D
-        :return:
-        """
         return self.__s_brk_cpoD
 
-    # ---------------------------------------------------------------------------------------------
     @s_brk_cpoD.setter
     def s_brk_cpoD(self, f_val):
-        """
-        set campo D
-        :param f_val:
-        :return:
-        """
         self.__s_brk_cpoD = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_brk_prc(self):
-        """
-        get nome do procedimento
-        :return:
-        """
         return self.__s_brk_prc
 
-    # ---------------------------------------------------------------------------------------------
     @s_brk_prc.setter
     def s_brk_prc(self, f_val):
-        """
-        set nome do procedimento
-        :return:
-        """
         self.__s_brk_prc = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_brk_tipo(self):
-        """
-        get tipo de coordenada
-        :return:
-        """
         return self.__s_brk_tipo
 
-
-    # ---------------------------------------------------------------------------------------------
     @s_brk_tipo.setter
     def s_brk_tipo(self, f_val):
-        """
-        set tipo de coordenada
-        :return:
-        """
         self.__s_brk_tipo = f_val
 
 # < the end >--------------------------------------------------------------------------------------

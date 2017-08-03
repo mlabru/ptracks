@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A319</designador>
     <ssr>3301</ssr>
     <indicativo>TAM3293</indicativo>
@@ -21,7 +21,7 @@
     <veltrj>360</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>LJ35</designador>
     <ssr>3302</ssr>
     <indicativo>PRRRM</indicativo>
@@ -40,7 +40,7 @@
     <veltrj>350</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>BE90</designador>
     <ssr>3303</ssr>
     <indicativo>PTWHM</indicativo>
@@ -59,7 +59,7 @@
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>3304</ssr>
     <indicativo>TAM3061</indicativo>
@@ -78,7 +78,7 @@
     <veltrj>360</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B73C</designador>
     <ssr>3305</ssr>
     <indicativo>ARG1220</indicativo>
@@ -97,7 +97,7 @@
     <veltrj>360</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>AT42</designador>
     <ssr>3307</ssr>
     <indicativo>NHG4505</indicativo>
@@ -111,7 +111,7 @@
     </coord>
     <altitude>70</altitude>
     <velocidade>140</velocidade>
-    <procedimento>TRJ|294000</procedimento>
+    <procedimento>TRJ294000</procedimento>
     <niveltrj>70</niveltrj>
     <veltrj>140</veltrj>
   </trafego>

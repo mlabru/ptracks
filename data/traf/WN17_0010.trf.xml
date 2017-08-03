@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E120</designador>
     <ssr>6111</ssr>
     <indicativo>PTORM</indicativo>
@@ -19,7 +19,7 @@
     <proa>170</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>C95</designador>
     <ssr>6120</ssr>
     <indicativo>FAB2315</indicativo>
@@ -36,7 +36,7 @@
     <proa>125</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>C208</designador>
     <ssr>6113</ssr>
     <indicativo>PPDJH</indicativo>
@@ -53,7 +53,7 @@
     <proa>84</proa>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>BE20</designador>
     <ssr>6121</ssr>
     <indicativo>PRLLC</indicativo>
@@ -70,7 +70,7 @@
     <proa>40</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>PA34</designador>
     <ssr>6115</ssr>
     <indicativo>PTLSM</indicativo>
@@ -87,7 +87,7 @@
     <proa>276</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A320</designador>
     <ssr>6621</ssr>
     <indicativo>TAM3446</indicativo>
@@ -96,10 +96,10 @@
     <temptrafego>5</temptrafego>
     <altitude>370</altitude>
     <velocidade>380</velocidade>
-    <procedimento>SUB|96028</procedimento>
+    <procedimento>SUB96028</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>B738</designador>
     <ssr>6214</ssr>
     <indicativo>GLO1997</indicativo>
@@ -108,10 +108,10 @@
     <temptrafego>9</temptrafego>
     <altitude>350</altitude>
     <velocidade>380</velocidade>
-    <procedimento>SUB|96025</procedimento>
+    <procedimento>SUB96025</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>BE95</designador>
     <ssr>6215</ssr>
     <indicativo>PPMND</indicativo>
@@ -120,7 +120,7 @@
     <temptrafego>6</temptrafego>
     <altitude>180</altitude>
     <velocidade>180</velocidade>
-    <procedimento>SUB|96028</procedimento>
+    <procedimento>SUB96028</procedimento>
   </trafego>
 </trafegos>
 

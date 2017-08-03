@@ -46,12 +46,7 @@ import model.items.parser_utils as parser
 
 # control
 import control.events.events_basic as events
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+import control.control_debug as cdbg
 
 # < class CExeData >-------------------------------------------------------------------------------
 
@@ -65,15 +60,11 @@ class CExeData(dict):
     </exercicio>
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_data=None):
         """
         @param f_model: model manager
         @param f_data: dados do exercício
         """
-        # logger
-        # M_LOG.info("__init__:>>")
-
         # check input
         assert f_model
 
@@ -105,52 +96,23 @@ class CExeData(dict):
             # senão, recebeu o pathname de um arquivo de exercício
             else:
                 # carrega o dicionário de exercício de um arquivo em disco
-                self.load_file(f_data)
-
-        # logger
-        # M_LOG.info("__init__:<<")
+                self.parse_exe_xml(f_data + ".exe.xml")
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
-    def load_file(self, fs_exe_path):
-        """
-        carrega os dados do exercício de um arquivo em disco
-
-        @param fs_exe_path: pathname do arquivo em disco
-        """
-        # logger
-        M_LOG.info("load_file:>>")
-
-        # check input parameters
-        assert fs_exe_path
-
-        M_LOG.info("load_file:>> File [%s]" % fs_exe_path)
-
-        # carrega o arquivo de exercício
-        self.parse_exe_xml(fs_exe_path)
-
-        # logger
-        M_LOG.info("load_file:<<")
-
-    # ---------------------------------------------------------------------------------------------
-    # void (?)
-    def make_exe(self, f_dct_root, f_dct_data):
+    def make_exe(self, fdct_root, fdct_data):
         """
         carrega os dados de exercício a partir de um dicionário
 
-        @param f_dct_data: lista de dados de exercício
+        @param fdct_data: lista de dados de exercício
 
         @return flag e mensagem
         """
-        # logger
-        M_LOG.info("make_exe:>>")
-
-        # check input parameters
-        assert f_dct_root is not None
-        assert f_dct_data is not None
+        # check input 
+        assert fdct_root is not None
+        assert fdct_data is not None
 
         # é uma exercício do newton ?
-        if "exercicios" != f_dct_root["tagName"]:
+        if "exercicios" != fdct_root["tagName"]:
             # logger
             l_log = logging.getLogger("CExeData::make_exe")
             l_log.setLevel(logging.CRITICAL)
@@ -167,7 +129,7 @@ class CExeData(dict):
             sys.exit(1)
 
         # é um arquivo do newton ?
-        if "NEWTON" != f_dct_root["FORMAT"]:
+        if "NEWTON" != fdct_root["FORMAT"]:
             # logger
             l_log = logging.getLogger("CExeData::make_exe")
             l_log.setLevel(logging.CRITICAL)
@@ -184,7 +146,7 @@ class CExeData(dict):
             sys.exit(1)
 
         # é a assinatura do newton ?
-        if "1961" != f_dct_root["CODE"]:
+        if "1961" != fdct_root["CODE"]:
             # logger
             l_log = logging.getLogger("CExeData::make_exe")
             l_log.setLevel(logging.CRITICAL)
@@ -200,15 +162,14 @@ class CExeData(dict):
             # se não for, cai fora...
             sys.exit(1)
 
-        # verifica se existe indicativo
-        if "nExe" in f_dct_data:
+        # existe indicativo ?
+        if "nExe" in fdct_data:
             # cria exercício
-            l_exe = model.CExeNEW(self.__model, f_dct_data, f_dct_root["VERSION"])
+            l_exe = model.CExeNEW(self.__model, fdct_data, fdct_root["VERSION"])
             assert l_exe
 
-            M_LOG.debug("Chave do exercício [%s]" % f_dct_data["nExe"])
             # coloca a exercício no dicionário
-            self[f_dct_data["nExe"]] = l_exe
+            self[fdct_data["nExe"]] = l_exe
 
         # senão, não existe indicativo
         else:
@@ -223,24 +184,17 @@ class CExeData(dict):
             # se não for, cai fora...
             return False, ls_msg
 
-        # logger
-        M_LOG.info("make_exe:<<")
-
         # retorna Ok
         return True, None
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def parse_exe_xml(self, fs_exe_path):
         """
         carrega o arquivo de exercício
 
         @param fs_exe_path: pathname do arquivo em disco
         """
-        # logger
-        M_LOG.info("parse_exe_xml:>>")
-
-        # check input parameters
+        # check input 
         assert fs_exe_path
 
         # cria o QFile para o arquivo XML do exercício
@@ -252,8 +206,10 @@ class CExeData(dict):
 
         # erro na abertura do arquivo ?
         if not l_data_file.isOpen():
-            # logger
-            M_LOG.debug(u"<E01: erro na abertura de {}.".format(fs_exe_path))
+           # logger
+            l_log = logging.getLogger("CExeData::parse_exe_xml")
+            l_log.setLevel(logging.CRITICAL)
+            l_log.critical(u"<E01: erro na abertura de {}.".format(fs_exe_path))
 
             # cria um evento de quit
             l_evt = events.CQuit()
@@ -275,7 +231,9 @@ class CExeData(dict):
             l_data_file.close()
 
             # logger
-            M_LOG.debug(u"<E02: falha no parse de {}.".format(fs_exe_path))
+            l_log = logging.getLogger("CExeData::parse_exe_xml")
+            l_log.setLevel(logging.CRITICAL)
+            l_log.critical(u"<E02: falha no parse de {}.".format(fs_exe_path))
 
             # cria um evento de quit
             l_evt = events.CQuit()
@@ -327,7 +285,6 @@ class CExeData(dict):
                 if not l_element.isNull():
                     # faz o parse do elemento
                     ldct_tmp = parser.parse_exercicio(l_element)
-                    # M_LOG.debug("ldct_tmp: {}".format(ldct_tmp))
 
                     # atualiza o dicionário de dados
                     ldct_data.update(ldct_tmp)
@@ -339,11 +296,7 @@ class CExeData(dict):
             # carrega os dados de exercício a partir de um dicionário
             self.make_exe(ldct_root, ldct_data)
 
-        # logger
-        M_LOG.info("parse_exe_xml:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def save2disk(self, fs_exe_path=None):
         """
         salva os dados da exercício em um arquivo em disco
@@ -353,7 +306,7 @@ class CExeData(dict):
         @return flag e mensagem
         """
         # logger
-        M_LOG.info("save2disk:>>")
+        cdbg.M_DBG.info("save2disk:>>")
 
         # return code
         lv_ok = True
@@ -362,7 +315,7 @@ class CExeData(dict):
         ls_msg = "save Ok"
 
         # logger
-        M_LOG.info("save2disk:<<")
+        cdbg.M_DBG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

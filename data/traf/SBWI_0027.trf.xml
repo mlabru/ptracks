@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A320</designador>
     <ssr>3733</ssr>
     <indicativo>TAM3558</indicativo>
@@ -19,7 +19,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B738</designador>
     <ssr>3751</ssr>
     <indicativo>GLO1756</indicativo>
@@ -28,10 +28,10 @@
     <temptrafego>0</temptrafego>
     <altitude>330</altitude>
     <velocidade>480</velocidade>
-    <procedimento>SUB|81031</procedimento>
+    <procedimento>SUB81031</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A319</designador>
     <ssr>3730</ssr>
     <indicativo>TAM3156</indicativo>
@@ -48,7 +48,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B733</designador>
     <ssr>3335</ssr>
     <indicativo>AZUL1234</indicativo>
@@ -65,7 +65,7 @@
     <proa>290</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>C172</designador>
     <ssr>1234</ssr>
     <indicativo>JUNIOR</indicativo>

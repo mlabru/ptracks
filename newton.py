@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 ---------------------------------------------------------------------------------------------------
-newton.
+newton
 
 DOCUMENT ME!
 
@@ -44,7 +44,6 @@ sip.setapi('QString', 2)
 import control.newton.control_newton as CControlNewton
 
 # -------------------------------------------------------------------------------------------------
-
 def main():
 
     # instancia o controller

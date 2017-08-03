@@ -42,16 +42,16 @@ import libs.coords.coord_sys as coords
 # model
 import model.model_manager as model
 
-import model.newton.emula_newton as emula
-
-#import model.items.aer_data as aerdata
 import model.items.exe_data as exedata
-#import model.items.fix_data as fixdata
 import model.items.prf_data as prfdata
 import model.items.trf_data as trfdata
 
-import model.newton.airspace_newton as airs
 import model.newton.defs_newton as ldefs
+import model.newton.airspace_newton as airs
+import model.newton.emula_newton as emula
+
+# control
+# import control.control_debug as cdbg
 
 # < class CModelNewton >----------------------------------------------------------------------------
 
@@ -112,9 +112,9 @@ class CModelNewton(model.CModelManager):
         self.__emula.daemon = True
 
     # ---------------------------------------------------------------------------------------------
-    def __load_air(self):
+    def __load_cenario(self):
         """
-        faz a carga do airspace
+        abre/cria as tabelas do sistema
 
         @return flag e mensagem
         """
@@ -138,20 +138,7 @@ class CModelNewton(model.CModelManager):
 
         # carrega as tabelas do sistema
         self.__airspace.load_dicts()
-
-        # retorna ok
-        return True, None
-
-    # ---------------------------------------------------------------------------------------------
-    def __load_cenario(self):
-        """
-        abre/cria as tabelas do sistema
-
-        @return flag e mensagem
-        """
-        # carrega o airspace
-        lv_ok, ls_msg = self.__load_air()
-
+        '''
         # houve erro em alguma fase ?
         if not lv_ok:
             # logger
@@ -168,7 +155,7 @@ class CModelNewton(model.CModelManager):
 
             # termina a aplicação
             sys.exit(1)
-
+        '''
     # ---------------------------------------------------------------------------------------------
     def __load_dicts(self):
         """
@@ -182,10 +169,10 @@ class CModelNewton(model.CModelManager):
         assert self.__dct_prf is not None
 
         # monta o nome do arquivo de exercício
-        ls_path = os.path.join(self.dct_config["dir.exe"], self.dct_config["glb.exe"])
+        ls_fname = os.path.join(self.dct_config["dir.exe"], self.dct_config["glb.exe"])
 
         # carrega o exercício em um dicionário
-        ldct_exe = exedata.CExeData(self, ls_path + ".exe.xml")
+        ldct_exe = exedata.CExeData(self, ls_fname)
         assert ldct_exe is not None
 
         # obtém o exercício
@@ -193,10 +180,10 @@ class CModelNewton(model.CModelManager):
         assert self.__exe
 
         # monta o nome do arquivo de tráfegos
-        ls_path = os.path.join(self.dct_config["dir.trf"], self.dct_config["glb.exe"])
+        ls_fname = os.path.join(self.dct_config["dir.trf"], self.dct_config["glb.exe"])
 
         # carrega a tabela de tráfegos do exercício
-        self.__dct_trf = trfdata.CTrfData(self, ls_path, self.__exe)
+        self.__dct_trf = trfdata.CTrfData(self, ls_fname, self.__exe)
         assert self.__dct_trf is not None
 
         # coloca a tabela de tráfegos no exercício

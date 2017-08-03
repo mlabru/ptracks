@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B738</designador>
     <ssr>5263</ssr>
     <indicativo>GLO1815</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>20</altitude>
     <velocidade>210</velocidade>
-    <procedimento>TRJ|480080</procedimento>
+    <procedimento>TRJ480080</procedimento>
     <niveltrj>360</niveltrj>
     <veltrj>440</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>C550</designador>
     <ssr>5504</ssr>
     <indicativo>PTOSM</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>20</altitude>
     <velocidade>210</velocidade>
-    <procedimento>TRJ|480234</procedimento>
+    <procedimento>TRJ480234</procedimento>
     <niveltrj>110</niveltrj>
     <veltrj>360</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B737</designador>
     <ssr>5033</ssr>
     <indicativo>VRG2322</indicativo>
@@ -54,7 +54,7 @@
     </coord>
     <altitude>20</altitude>
     <velocidade>210</velocidade>
-    <procedimento>TRJ|480118</procedimento>
+    <procedimento>TRJ480118</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>480</veltrj>
   </trafego>

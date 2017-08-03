@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B767</designador>
     <ssr>6701</ssr>
     <indicativo>MAA6821</indicativo>
@@ -19,7 +19,7 @@
     <proa>130</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B738</designador>
     <ssr>6702</ssr>
     <indicativo>GLO1131</indicativo>
@@ -36,7 +36,7 @@
     <proa>195</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>DC10</designador>
     <ssr>6703</ssr>
     <indicativo>RCH283</indicativo>
@@ -45,10 +45,10 @@
     <temptrafego>3</temptrafego>
     <altitude>400</altitude>
     <velocidade>460</velocidade>
-    <procedimento>SUB|96007</procedimento>
+    <procedimento>SUB96007</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B767</designador>
     <ssr>6704</ssr>
     <indicativo>APW163</indicativo>
@@ -65,7 +65,7 @@
     <proa>145</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>E145</designador>
     <ssr>6705</ssr>
     <indicativo>BRS2523</indicativo>
@@ -74,10 +74,10 @@
     <temptrafego>8</temptrafego>
     <altitude>350</altitude>
     <velocidade>420</velocidade>
-    <procedimento>SUB|96027</procedimento>
+    <procedimento>SUB96027</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A320</designador>
     <ssr>6706</ssr>
     <indicativo>TAM3541</indicativo>
@@ -86,10 +86,10 @@
     <temptrafego>10</temptrafego>
     <altitude>350</altitude>
     <velocidade>410</velocidade>
-    <procedimento>SUB|96001</procedimento>
+    <procedimento>SUB96001</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>B738</designador>
     <ssr>6707</ssr>
     <indicativo>GLO1633</indicativo>
@@ -98,10 +98,10 @@
     <temptrafego>11</temptrafego>
     <altitude>370</altitude>
     <velocidade>460</velocidade>
-    <procedimento>SUB|96001</procedimento>
+    <procedimento>SUB96001</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>A320</designador>
     <ssr>6710</ssr>
     <indicativo>TAM3891</indicativo>
@@ -110,10 +110,10 @@
     <temptrafego>12</temptrafego>
     <altitude>350</altitude>
     <velocidade>420</velocidade>
-    <procedimento>SUB|96003</procedimento>
+    <procedimento>SUB96003</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>E190</designador>
     <ssr>6711</ssr>
     <indicativo>TIB5302</indicativo>
@@ -130,7 +130,7 @@
     <proa>330</proa>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>B733</designador>
     <ssr>6712</ssr>
     <indicativo>VLO9090</indicativo>

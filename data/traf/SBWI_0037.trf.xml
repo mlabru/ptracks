@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>BH06</designador>
     <ssr>101</ssr>
     <indicativo>PTHUR</indicativo>
@@ -19,7 +19,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>C182</designador>
     <ssr>122</ssr>
     <indicativo>PTDFZ</indicativo>
@@ -36,7 +36,7 @@
     <proa>253</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B738</designador>
     <ssr>3203</ssr>
     <indicativo>GLO1956</indicativo>
@@ -53,7 +53,7 @@
     <proa>295</proa>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>3204</ssr>
     <indicativo>TAM3587</indicativo>
@@ -70,7 +70,7 @@
     <proa>295</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B738</designador>
     <ssr>3205</ssr>
     <indicativo>WEB6677</indicativo>
@@ -78,10 +78,10 @@
     <destino>SBPA</destino>
     <temptrafego>8</temptrafego>
     <altitude>300</altitude>
-    <procedimento>SUB|81027</procedimento>
+    <procedimento>SUB81027</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>B737</designador>
     <ssr>3206</ssr>
     <indicativo>GLO1815</indicativo>
@@ -98,7 +98,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>LR24</designador>
     <ssr>3207</ssr>
     <indicativo>PTLXT</indicativo>
@@ -112,10 +112,10 @@
     </coord>
     <altitude>240</altitude>
     <velocidade>390</velocidade>
-    <procedimento>TRJ|810901</procedimento>
+    <procedimento>TRJ810901</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>LR55</designador>
     <ssr>3210</ssr>
     <indicativo>PTLQS</indicativo>
@@ -129,10 +129,10 @@
     </coord>
     <altitude>200</altitude>
     <velocidade>360</velocidade>
-    <procedimento>TRJ|810901</procedimento>
+    <procedimento>TRJ810901</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>A319</designador>
     <ssr>3211</ssr>
     <indicativo>TAM3557</indicativo>
@@ -146,10 +146,10 @@
     </coord>
     <altitude>240</altitude>
     <velocidade>320</velocidade>
-    <procedimento>TRJ|810904</procedimento>
+    <procedimento>TRJ810904</procedimento>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>F100</designador>
     <ssr>3212</ssr>
     <indicativo>LAP0713</indicativo>
@@ -157,10 +157,10 @@
     <destino>SBGL</destino>
     <temptrafego>18</temptrafego>
     <altitude>370</altitude>
-    <procedimento>SUB|81031</procedimento>
+    <procedimento>SUB81031</procedimento>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>BE58</designador>
     <ssr>123</ssr>
     <indicativo>PTAAJ</indicativo>
@@ -171,7 +171,7 @@
     <velocidade>135</velocidade>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>LJ55</designador>
     <ssr>3535</ssr>
     <indicativo>LVMER</indicativo>

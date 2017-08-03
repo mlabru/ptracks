@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B737</designador>
     <ssr>3301</ssr>
     <indicativo>GLO1742</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>300</altitude>
     <velocidade>380</velocidade>
-    <procedimento>TRJ|320001</procedimento>
+    <procedimento>TRJ320001</procedimento>
     <niveltrj>300</niveltrj>
     <veltrj>380</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>LJ35</designador>
     <ssr>3302</ssr>
     <indicativo>PPKRM</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>300</altitude>
     <velocidade>340</velocidade>
-    <procedimento>TRJ|320065</procedimento>
+    <procedimento>TRJ320065</procedimento>
     <niveltrj>300</niveltrj>
     <veltrj>340</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A320</designador>
     <ssr>3305</ssr>
     <indicativo>TAM3380</indicativo>
@@ -54,24 +54,24 @@
     </coord>
     <altitude>300</altitude>
     <velocidade>380</velocidade>
-    <procedimento>TRJ|320001</procedimento>
+    <procedimento>TRJ320001</procedimento>
     <niveltrj>300</niveltrj>
     <veltrj>380</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>C550</designador>
     <ssr>3306</ssr>
     <indicativo>PTWIB</indicativo>
     <origem>SBPA</origem>
     <destino>SAEZ</destino>
     <temptrafego>23</temptrafego>
-    <procedimento>SUB|32093</procedimento>
+    <procedimento>SUB32093</procedimento>
     <niveltrj>340</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B737</designador>
     <ssr>3307</ssr>
     <indicativo>GLO1695</indicativo>
@@ -85,7 +85,7 @@
     </coord>
     <altitude>300</altitude>
     <velocidade>360</velocidade>
-    <procedimento>TRJ|320001</procedimento>
+    <procedimento>TRJ320001</procedimento>
     <niveltrj>300</niveltrj>
     <veltrj>360</veltrj>
   </trafego>

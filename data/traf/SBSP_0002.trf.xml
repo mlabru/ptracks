@@ -2,27 +2,27 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A320</designador>
     <ssr>3201</ssr>
     <indicativo>TAM3000</indicativo>
     <origem>SBSP</origem>
     <destino>SBBR</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|75127</procedimento>
+    <procedimento>SUB75127</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>3202</ssr>
     <indicativo>TAM3001</indicativo>
     <origem>SBSP</origem>
     <destino>SBBR</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|75139</procedimento>
+    <procedimento>SUB75139</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B737</designador>
     <ssr>3203</ssr>
     <indicativo>GLO1000</indicativo>
@@ -36,10 +36,10 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|752048</procedimento>
+    <procedimento>TRJ752048</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B737</designador>
     <ssr>3204</ssr>
     <indicativo>GLO1001</indicativo>
@@ -53,10 +53,10 @@
     </coord>
     <altitude>250</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|752050</procedimento>
+    <procedimento>TRJ752050</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>A321</designador>
     <ssr>3205</ssr>
     <indicativo>TAM3400</indicativo>
@@ -70,10 +70,10 @@
     </coord>
     <altitude>300</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|752036</procedimento>
+    <procedimento>TRJ752036</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>A321</designador>
     <ssr>3206</ssr>
     <indicativo>TAM3401</indicativo>
@@ -87,7 +87,7 @@
     </coord>
     <altitude>300</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|752045</procedimento>
+    <procedimento>TRJ752045</procedimento>
   </trafego>
 </trafegos>
 

@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A320</designador>
     <ssr>3105</ssr>
     <indicativo>ARG1253</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>340</altitude>
     <velocidade>460</velocidade>
-    <procedimento>TRJ|291077</procedimento>
+    <procedimento>TRJ291077</procedimento>
     <niveltrj>340</niveltrj>
     <veltrj>460</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B737</designador>
     <ssr>3106</ssr>
     <indicativo>GLO1713</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>120</altitude>
     <velocidade>230</velocidade>
-    <procedimento>TRJ|291000</procedimento>
+    <procedimento>TRJ291000</procedimento>
     <niveltrj>310</niveltrj>
     <veltrj>400</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A319</designador>
     <ssr>3110</ssr>
     <indicativo>TAM3086</indicativo>
@@ -54,12 +54,12 @@
     </coord>
     <altitude>120</altitude>
     <velocidade>230</velocidade>
-    <procedimento>TRJ|291004</procedimento>
+    <procedimento>TRJ291004</procedimento>
     <niveltrj>290</niveltrj>
     <veltrj>420</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B737</designador>
     <ssr>3114</ssr>
     <indicativo>VRN2102</indicativo>
@@ -77,7 +77,7 @@
     <veltrj>460</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>F100</designador>
     <ssr>3120</ssr>
     <indicativo>ONE4081</indicativo>
@@ -91,7 +91,7 @@
     </coord>
     <altitude>130</altitude>
     <velocidade>240</velocidade>
-    <procedimento>TRJ|291078</procedimento>
+    <procedimento>TRJ291078</procedimento>
     <niveltrj>350</niveltrj>
     <veltrj>420</veltrj>
   </trafego>

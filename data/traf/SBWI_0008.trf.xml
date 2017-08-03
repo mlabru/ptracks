@@ -2,17 +2,17 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E190</designador>
     <ssr>4665</ssr>
     <indicativo>AZU2701</indicativo>
     <origem>SBFI</origem>
     <destino>SBCT</destino>
     <temptrafego>0</temptrafego>
-    <procedimento>SUB|81028</procedimento>
+    <procedimento>SUB81028</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B73C</designador>
     <ssr>4656</ssr>
     <indicativo>GLO1647</indicativo>
@@ -26,10 +26,10 @@
     </coord>
     <altitude>190</altitude>
     <velocidade>400</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A1</designador>
     <ssr>4551</ssr>
     <indicativo>CENTAURO04</indicativo>
@@ -43,20 +43,20 @@
     </coord>
     <altitude>190</altitude>
     <velocidade>420</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>B73A</designador>
     <ssr>4437</ssr>
     <indicativo>PPGOL</indicativo>
     <origem>SBFI</origem>
     <destino>SBPA</destino>
     <temptrafego>16</temptrafego>
-    <procedimento>SUB|81030</procedimento>
+    <procedimento>SUB81030</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>A320</designador>
     <ssr>4424</ssr>
     <indicativo>ARG1220</indicativo>
@@ -70,20 +70,20 @@
     </coord>
     <altitude>190</altitude>
     <velocidade>360</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>PA34</designador>
     <ssr>4622</ssr>
     <indicativo>PTVRZ</indicativo>
     <origem>SBFI</origem>
     <destino>SBPA</destino>
     <temptrafego>21</temptrafego>
-    <procedimento>SUB|81030</procedimento>
+    <procedimento>SUB81030</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>E121</designador>
     <ssr>4613</ssr>
     <indicativo>PTMCG</indicativo>
@@ -97,10 +97,10 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>220</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>B707</designador>
     <ssr>4550</ssr>
     <indicativo>FAB2401</indicativo>
@@ -114,7 +114,7 @@
     </coord>
     <altitude>200</altitude>
     <velocidade>400</velocidade>
-    <procedimento>ESP|81003</procedimento>
+    <procedimento>ESP81003</procedimento>
   </trafego>
 </trafegos>
 

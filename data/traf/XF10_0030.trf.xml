@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E121</designador>
     <ssr>3001</ssr>
     <indicativo>PTMCG</indicativo>
@@ -11,10 +11,10 @@
     <temptrafego>0</temptrafego>
     <altitude>130</altitude>
     <velocidade>250</velocidade>
-    <procedimento>SUB|100111</procedimento>
+    <procedimento>SUB100111</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>E121</designador>
     <ssr>3002</ssr>
     <indicativo>PPMMC</indicativo>
@@ -28,12 +28,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>250</velocidade>
-    <procedimento>TRJ|1000021</procedimento>
+    <procedimento>TRJ1000021</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>250</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A320</designador>
     <ssr>3003</ssr>
     <indicativo>ONE6220</indicativo>
@@ -42,10 +42,10 @@
     <temptrafego>6</temptrafego>
     <altitude>340</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|100119</procedimento>
+    <procedimento>SUB100119</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>SR22</designador>
     <ssr>3004</ssr>
     <indicativo>PTNTT</indicativo>
@@ -59,12 +59,12 @@
     </coord>
     <altitude>110</altitude>
     <velocidade>185</velocidade>
-    <procedimento>TRJ|1000024</procedimento>
+    <procedimento>TRJ1000024</procedimento>
     <niveltrj>110</niveltrj>
     <veltrj>185</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>E190</designador>
     <ssr>3005</ssr>
     <indicativo>AZU5930</indicativo>
@@ -78,12 +78,12 @@
     </coord>
     <altitude>120</altitude>
     <velocidade>290</velocidade>
-    <procedimento>TRJ|1000002</procedimento>
+    <procedimento>TRJ1000002</procedimento>
     <niveltrj>120</niveltrj>
     <veltrj>290</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>C172</designador>
     <ssr>3006</ssr>
     <indicativo>PRFLM</indicativo>
@@ -102,7 +102,7 @@
     <veltrj>120</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>C152</designador>
     <ssr>3007</ssr>
     <indicativo>PRFLE</indicativo>
@@ -121,7 +121,7 @@
     <veltrj>110</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>A320</designador>
     <ssr>3101</ssr>
     <indicativo>TAM3101</indicativo>
@@ -130,7 +130,7 @@
     <temptrafego>21</temptrafego>
     <altitude>370</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|100113</procedimento>
+    <procedimento>SUB100113</procedimento>
   </trafego>
 </trafegos>
 

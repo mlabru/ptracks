@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>R44</designador>
     <ssr>244</ssr>
     <indicativo>PRFLA</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>6</altitude>
     <velocidade>100</velocidade>
-    <procedimento>TRJ|630062</procedimento>
+    <procedimento>TRJ630062</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>R99</designador>
     <ssr>245</ssr>
     <indicativo>PRFLU</indicativo>
@@ -33,10 +33,10 @@
     </coord>
     <altitude>6</altitude>
     <velocidade>100</velocidade>
-    <procedimento>TRJ|630062</procedimento>
+    <procedimento>TRJ630062</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A124</designador>
     <ssr>246</ssr>
     <indicativo>PPEBX</indicativo>
@@ -50,10 +50,10 @@
     </coord>
     <altitude>25</altitude>
     <velocidade>130</velocidade>
-    <procedimento>TRJ|630061</procedimento>
+    <procedimento>TRJ630061</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A139</designador>
     <ssr>233</ssr>
     <indicativo>PREBX</indicativo>
@@ -67,11 +67,11 @@
     </coord>
     <altitude>50</altitude>
     <velocidade>130</velocidade>
-    <procedimento>TRJ|630009</procedimento>
+    <procedimento>TRJ630009</procedimento>
     <niveltrj>25</niveltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>H60</designador>
     <ssr>240</ssr>
     <indicativo>MAR3029</indicativo>
@@ -80,10 +80,10 @@
     <temptrafego>1</temptrafego>
     <altitude>30</altitude>
     <velocidade>120</velocidade>
-    <procedimento>SUB|63011</procedimento>
+    <procedimento>SUB63011</procedimento>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>H60</designador>
     <ssr>242</ssr>
     <indicativo>MAR3031</indicativo>
@@ -92,10 +92,10 @@
     <temptrafego>3</temptrafego>
     <altitude>20</altitude>
     <velocidade>130</velocidade>
-    <procedimento>SUB|63009</procedimento>
+    <procedimento>SUB63009</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>BE40</designador>
     <ssr>3445</ssr>
     <indicativo>PRBAK</indicativo>
@@ -109,10 +109,10 @@
     </coord>
     <altitude>60</altitude>
     <velocidade>160</velocidade>
-    <procedimento>APX|63003</procedimento>
+    <procedimento>APX63003</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>S76</designador>
     <ssr>2425</ssr>
     <indicativo>PRCHX</indicativo>
@@ -126,10 +126,10 @@
     </coord>
     <altitude>55</altitude>
     <velocidade>130</velocidade>
-    <procedimento>TRJ|630045</procedimento>
+    <procedimento>TRJ630045</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>EC35</designador>
     <ssr>2251</ssr>
     <indicativo>PRCLL</indicativo>
@@ -146,7 +146,7 @@
     <proa>260</proa>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>EC35</designador>
     <ssr>272</ssr>
     <indicativo>PRTVG</indicativo>
@@ -163,7 +163,7 @@
     <proa>270</proa>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>C130</designador>
     <ssr>3542</ssr>
     <indicativo>GORDO74</indicativo>
@@ -177,10 +177,10 @@
     </coord>
     <altitude>35</altitude>
     <velocidade>170</velocidade>
-    <procedimento>APX|63001</procedimento>
+    <procedimento>APX63001</procedimento>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>P3</designador>
     <ssr>3541</ssr>
     <indicativo>OLIMP13</indicativo>
@@ -194,10 +194,10 @@
     </coord>
     <altitude>15</altitude>
     <velocidade>130</velocidade>
-    <procedimento>ESP|63030</procedimento>
+    <procedimento>ESP63030</procedimento>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>RV10</designador>
     <ssr>2253</ssr>
     <indicativo>PUFSG</indicativo>
@@ -215,7 +215,7 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>E50P</designador>
     <ssr>3543</ssr>
     <indicativo>GEIV53</indicativo>
@@ -229,7 +229,7 @@
     </coord>
     <altitude>50</altitude>
     <velocidade>180</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
     <niveltrj>50</niveltrj>
   </trafego>
 </trafegos>

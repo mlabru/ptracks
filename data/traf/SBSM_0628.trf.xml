@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>LJ35</designador>
     <ssr>3112</ssr>
     <indicativo>PRWDS</indicativo>
@@ -19,7 +19,7 @@
     <proa>180</proa>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B763</designador>
     <ssr>3332</ssr>
     <indicativo>PUA5012</indicativo>
@@ -36,7 +36,7 @@
     <proa>20</proa>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>A320</designador>
     <ssr>3321</ssr>
     <indicativo>TAM3812</indicativo>
@@ -45,10 +45,10 @@
     <temptrafego>2</temptrafego>
     <altitude>370</altitude>
     <velocidade>300</velocidade>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>C550</designador>
     <ssr>3354</ssr>
     <indicativo>PPESC</indicativo>
@@ -57,10 +57,10 @@
     <temptrafego>8</temptrafego>
     <altitude>370</altitude>
     <velocidade>300</velocidade>
-    <procedimento>SUB|74006</procedimento>
+    <procedimento>SUB74006</procedimento>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>E190</designador>
     <ssr>3333</ssr>
     <indicativo>AZU4212</indicativo>
@@ -77,7 +77,7 @@
     <proa>230</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>AT42</designador>
     <ssr>3111</ssr>
     <indicativo>AZU4244</indicativo>
@@ -94,7 +94,7 @@
     <proa>290</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>G2</designador>
     <ssr>3142</ssr>
     <indicativo>N738F</indicativo>

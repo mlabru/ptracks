@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>E190</designador>
     <ssr>3102</ssr>
     <indicativo>AZU6782</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>320</velocidade>
-    <procedimento>TRJ|1010003</procedimento>
+    <procedimento>TRJ1010003</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A320</designador>
     <ssr>3103</ssr>
     <indicativo>TAM3311</indicativo>
@@ -35,12 +35,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>280</velocidade>
-    <procedimento>TRJ|1010001</procedimento>
+    <procedimento>TRJ1010001</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>280</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>B738</designador>
     <ssr>3104</ssr>
     <indicativo>GOL1551</indicativo>
@@ -54,12 +54,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|1010004</procedimento>
+    <procedimento>TRJ1010004</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>A320</designador>
     <ssr>3105</ssr>
     <indicativo>ONE3227</indicativo>
@@ -73,12 +73,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|1010002</procedimento>
+    <procedimento>TRJ1010002</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>B738</designador>
     <ssr>3107</ssr>
     <indicativo>GLO1250</indicativo>
@@ -92,12 +92,12 @@
     </coord>
     <altitude>160</altitude>
     <velocidade>300</velocidade>
-    <procedimento>TRJ|1010006</procedimento>
+    <procedimento>TRJ1010006</procedimento>
     <niveltrj>160</niveltrj>
     <veltrj>300</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>B737</designador>
     <ssr>3120</ssr>
     <indicativo>SKU235</indicativo>
@@ -106,10 +106,10 @@
     <temptrafego>14</temptrafego>
     <altitude>360</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|101126</procedimento>
+    <procedimento>SUB101126</procedimento>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>A320</designador>
     <ssr>3202</ssr>
     <indicativo>ANS771</indicativo>
@@ -118,10 +118,10 @@
     <temptrafego>15</temptrafego>
     <altitude>340</altitude>
     <velocidade>350</velocidade>
-    <procedimento>SUB|101126</procedimento>
+    <procedimento>SUB101126</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>E110</designador>
     <ssr>3026</ssr>
     <indicativo>FAB2610</indicativo>
@@ -135,7 +135,7 @@
     </coord>
     <altitude>90</altitude>
     <velocidade>180</velocidade>
-    <procedimento>TRJ|1010031</procedimento>
+    <procedimento>TRJ1010031</procedimento>
     <niveltrj>90</niveltrj>
     <veltrj>180</veltrj>
   </trafego>

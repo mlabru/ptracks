@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>SK92</designador>
     <ssr>260</ssr>
     <indicativo>PRCHU</indicativo>
@@ -16,10 +16,10 @@
     </coord>
     <altitude>55</altitude>
     <velocidade>155</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>S76</designador>
     <ssr>261</ssr>
     <indicativo>PRCHA</indicativo>
@@ -33,10 +33,10 @@
     </coord>
     <altitude>35</altitude>
     <velocidade>120</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>S76</designador>
     <ssr>262</ssr>
     <indicativo>PRCHD</indicativo>
@@ -50,10 +50,10 @@
     </coord>
     <altitude>55</altitude>
     <velocidade>120</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>R44</designador>
     <ssr>264</ssr>
     <indicativo>PPLLD</indicativo>
@@ -70,7 +70,7 @@
     <proa>90</proa>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>EC35</designador>
     <ssr>265</ssr>
     <indicativo>PTOCO</indicativo>
@@ -87,7 +87,7 @@
     <proa>215</proa>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>BE65</designador>
     <ssr>266</ssr>
     <indicativo>PPZZF</indicativo>
@@ -104,7 +104,7 @@
     <proa>94</proa>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>SR22</designador>
     <ssr>1001</ssr>
     <indicativo>PPZOM</indicativo>
@@ -118,10 +118,10 @@
     </coord>
     <altitude>20</altitude>
     <velocidade>100</velocidade>
-    <procedimento>TRJ|630063</procedimento>
+    <procedimento>TRJ630063</procedimento>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>AT72</designador>
     <ssr>3203</ssr>
     <indicativo>AZU7644</indicativo>
@@ -135,10 +135,10 @@
     </coord>
     <altitude>60</altitude>
     <velocidade>180</velocidade>
-    <procedimento>TRJ|630046</procedimento>
+    <procedimento>TRJ630046</procedimento>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>AS32</designador>
     <ssr>2574</ssr>
     <indicativo>MAR7076</indicativo>
@@ -147,10 +147,10 @@
     <temptrafego>0</temptrafego>
     <altitude>60</altitude>
     <velocidade>100</velocidade>
-    <procedimento>SUB|63015</procedimento>
+    <procedimento>SUB63015</procedimento>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>A139</designador>
     <ssr>2564</ssr>
     <indicativo>PPOMM</indicativo>
@@ -159,7 +159,7 @@
     <temptrafego>1</temptrafego>
     <altitude>60</altitude>
     <velocidade>100</velocidade>
-    <procedimento>SUB|63024</procedimento>
+    <procedimento>SUB63024</procedimento>
   </trafego>
 </trafegos>
 

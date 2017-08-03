@@ -30,17 +30,6 @@ __version__ = "$revision: 0.2$"
 __author__ = "Milton Abrunhosa"
 __date__ = "2015/11"
 
-# < imports >--------------------------------------------------------------------------------------
-
-# python library
-# import logging
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
-
 # < class CBrkModel >------------------------------------------------------------------------------
 
 class CBrkModel(object):
@@ -48,11 +37,7 @@ class CBrkModel(object):
     mantém as informações específicas sobre um breakpoint
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self):
-
-        # logger
-        # M_LOG.info("__init__:>>")
 
         # init super class
         super(CBrkModel, self).__init__()
@@ -70,11 +55,7 @@ class CBrkModel(object):
         # Z (m)
         self.__f_brk_z = 0.
 
-        # logger
-        # M_LOG.info("__init__:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def copy_brk(self, f_brk):
         """
         copy constructor
@@ -82,9 +63,6 @@ class CBrkModel(object):
 
         @param f_brk: breakpoint a ser copiado
         """
-        # logger
-        # M_LOG.info("copy_brk:>>")
-
         # check input
         assert f_brk
 
@@ -101,9 +79,6 @@ class CBrkModel(object):
         # flag ok (bool)
         self.__v_brk_ok = f_brk.v_brk_ok
 
-        # logger
-        # M_LOG.info("copy_brk:<<")
-
     # =============================================================================================
     # data
     # =============================================================================================
@@ -111,76 +86,46 @@ class CBrkModel(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def v_brk_ok(self):
-        """
-        get flag ok
-        """
         return self.__v_brk_ok
 
     @v_brk_ok.setter
     def v_brk_ok(self, f_val):
-        """
-        set flag ok
-        """
         self.__v_brk_ok = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def i_brk_id(self):
-        """
-        get número do breakpoint
-        """
         return self.__i_brk_id
 
     @i_brk_id.setter
     def i_brk_id(self, f_val):
-        """
-        set número do breakpoint
-        """
         self.__i_brk_id = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_x(self):
-        """
-        get X/longitude
-        """
         return self.__f_brk_x
 
     @f_brk_x.setter
     def f_brk_x(self, f_val):
-        """
-        set X/longitude
-        """
         self.__f_brk_x = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_y(self):
-        """
-        get Y/latitude
-        """
         return self.__f_brk_y
 
     @f_brk_y.setter
     def f_brk_y(self, f_val):
-        """
-        set Y/latitude
-        """
         self.__f_brk_y = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_brk_z(self):
-        """
-        get Z
-        """
         return self.__f_brk_z
 
     @f_brk_z.setter
     def f_brk_z(self, f_val):
-        """
-        set Z
-        """
         self.__f_brk_z = f_val
 
 # < the end >--------------------------------------------------------------------------------------

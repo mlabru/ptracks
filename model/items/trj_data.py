@@ -54,12 +54,7 @@ import model.items.parser_utils as parser
 
 # control
 import control.events.events_basic as events
-
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+import control.control_debug as cdbg
 
 # < class CTrjData >-------------------------------------------------------------------------------
 
@@ -76,15 +71,11 @@ class CTrjData(dict):
     </trajetoria>
     """
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def __init__(self, f_model, f_data=None):
         """
         @param f_model: model manager
         @param f_data: dados dos procedimento de trajetórias
         """
-        # logger
-        # M_LOG.info("__init__:>>")
-
         # check input
         assert f_model
 
@@ -116,33 +107,9 @@ class CTrjData(dict):
             # senão, recebeu o pathname de um arquivo de procedimento de trajetória
             else:
                 # carrega o dicionário de procedimento de trajetória de um arquivo em disco
-                self.load_file(f_data)
-
-        # logger
-        # M_LOG.info("__init__:<<")
+                self.parse_trj_xml(f_data + ".xml")
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
-    def load_file(self, fs_trj_pn):
-        """
-        carrega os dados do procedimento de trajetória de um arquivo em disco
-
-        @param fs_trj_pn: pathname do arquivo em disco
-        """
-        # logger
-        # M_LOG.info("load_file:>>")
-
-        # check input
-        assert fs_trj_pn
-
-        # carrega o arquivo de procedimento de trajetória
-        self.parse_trj_xml(fs_trj_pn + ".xml")
-
-        # logger
-        # M_LOG.info("load_file:<<")
-
-    # ---------------------------------------------------------------------------------------------
-    # void (?)
     def make_trj(self, fdct_root, fdct_data):
         """
         carrega os dados de procedimento de trajetória a partir de um dicionário
@@ -151,9 +118,6 @@ class CTrjData(dict):
 
         @return flag e mensagem
         """
-        # logger
-        M_LOG.info("make_trj:>>")
-
         # check input
         assert fdct_root is not None
         assert fdct_data is not None
@@ -231,23 +195,16 @@ class CTrjData(dict):
             # se não for, cai fora...
             return False, ls_msg
 
-        # logger
-        M_LOG.info("make_trj:<<")
-
         # retorna Ok
         return True, None
 
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def parse_trj_xml(self, fs_trj_pn):
         """
         carrega o arquivo de procedimentos de trajetória
 
         @param fs_trj_pn: pathname do arquivo em disco
         """
-        # logger
-        # M_LOG.info("parse_trj_xml:>>")
-
         # check input
         assert fs_trj_pn
 
@@ -358,16 +315,12 @@ class CTrjData(dict):
                 l_node = l_node.nextSibling()
                 assert l_node is not None
 
-            # M_LOG.debug("trajetória: " + str(ldct_data))
+            # cdbg.M_DBG.debug("trajetória: " + str(ldct_data))
 
             # carrega os dados de procedimento de trajetória a partir de um dicionário
             self.make_trj(ldct_root, ldct_data)
 
-        # logger
-        # M_LOG.info("parse_trj_xml:<<")
-
     # ---------------------------------------------------------------------------------------------
-    # void (?)
     def save2disk(self, fs_trj_pn=None):
         """
         salva os dados da procedimento de trajetória em um arquivo em disco
@@ -376,11 +329,8 @@ class CTrjData(dict):
 
         @return flag e mensagem
         """
-        # logger
-        M_LOG.info("save2disk:>>")
-
         # tem colocar o .xml do final do parâmetro fs_trj_pn para montar o nome do arquivo.
-        M_LOG.debug("Saving file [%s.xml]" % fs_trj_pn)
+        cdbg.M_DBG.debug("Saving file [%s.xml]" % fs_trj_pn)
 
         l_file = open("%s.xml" % fs_trj_pn, 'w')
 
@@ -430,7 +380,7 @@ class CTrjData(dict):
         ls_msg = "save Ok"
 
         # logger
-        M_LOG.info("save2disk:<<")
+        cdbg.M_DBG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

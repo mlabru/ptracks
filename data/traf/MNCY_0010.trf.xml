@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>B738</designador>
     <ssr>6360</ssr>
     <indicativo>GLO5307</indicativo>
@@ -16,12 +16,12 @@
     </coord>
     <altitude>314</altitude>
     <velocidade>456</velocidade>
-    <procedimento>TRJ|410001</procedimento>
+    <procedimento>TRJ410001</procedimento>
     <niveltrj>370</niveltrj>
     <veltrj>464</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>B737</designador>
     <ssr>6302</ssr>
     <indicativo>GLO6713</indicativo>
@@ -40,7 +40,7 @@
     <veltrj>455</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>E190</designador>
     <ssr>6303</ssr>
     <indicativo>AZU2908</indicativo>
@@ -59,7 +59,7 @@
     <veltrj>430</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>E190</designador>
     <ssr>6304</ssr>
     <indicativo>AZU2544</indicativo>

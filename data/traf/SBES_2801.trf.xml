@@ -2,7 +2,7 @@
 <!DOCTYPE trafegos>
 <trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trafego nTrf=1>
+  <trafego nTrf="1">
     <designador>A1</designador>
     <ssr>210</ssr>
     <indicativo>MAR1021</indicativo>
@@ -20,7 +20,7 @@
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=2>
+  <trafego nTrf="2">
     <designador>A1</designador>
     <ssr>211</ssr>
     <indicativo>MAR1014</indicativo>
@@ -38,7 +38,7 @@
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=3>
+  <trafego nTrf="3">
     <designador>AS50</designador>
     <ssr>2275</ssr>
     <indicativo>EXB1007</indicativo>
@@ -56,7 +56,7 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=4>
+  <trafego nTrf="4">
     <designador>AS50</designador>
     <ssr>2273</ssr>
     <indicativo>EXB1015</indicativo>
@@ -74,7 +74,7 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=5>
+  <trafego nTrf="5">
     <designador>SK92</designador>
     <ssr>2160</ssr>
     <indicativo>PRBGT</indicativo>
@@ -92,7 +92,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=6>
+  <trafego nTrf="6">
     <designador>C152</designador>
     <ssr>2161</ssr>
     <indicativo>PRFTE</indicativo>
@@ -110,7 +110,7 @@
     <veltrj>85</veltrj>
   </trafego>
 
-  <trafego nTrf=7>
+  <trafego nTrf="7">
     <designador>A139</designador>
     <ssr>267</ssr>
     <indicativo>PRNSP</indicativo>
@@ -128,7 +128,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=8>
+  <trafego nTrf="8">
     <designador>S76</designador>
     <ssr>252</ssr>
     <indicativo>PRCHS</indicativo>
@@ -146,7 +146,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=9>
+  <trafego nTrf="9">
     <designador>AS50</designador>
     <ssr>221</ssr>
     <indicativo>MAR5050</indicativo>
@@ -164,7 +164,7 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=10>
+  <trafego nTrf="10">
     <designador>AS50</designador>
     <ssr>213</ssr>
     <indicativo>MAR5045</indicativo>
@@ -182,7 +182,7 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=11>
+  <trafego nTrf="11">
     <designador>AS50</designador>
     <ssr>222</ssr>
     <indicativo>MAR5055</indicativo>
@@ -200,31 +200,31 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=12>
+  <trafego nTrf="12">
     <designador>H60</designador>
     <ssr>223</ssr>
     <indicativo>MAR3013</indicativo>
     <origem>SBES</origem>
     <destino>SBES</destino>
     <temptrafego>9</temptrafego>
-    <procedimento>SUB|63011</procedimento>
+    <procedimento>SUB63011</procedimento>
     <niveltrj>20</niveltrj>
     <veltrj>130</veltrj>
   </trafego>
 
-  <trafego nTrf=13>
+  <trafego nTrf="13">
     <designador>H60</designador>
     <ssr>224</ssr>
     <indicativo>MAR3029</indicativo>
     <origem>SBES</origem>
     <destino>SBES</destino>
     <temptrafego>10</temptrafego>
-    <procedimento>SUB|63009</procedimento>
+    <procedimento>SUB63009</procedimento>
     <niveltrj>20</niveltrj>
     <veltrj>130</veltrj>
   </trafego>
 
-  <trafego nTrf=14>
+  <trafego nTrf="14">
     <designador>BH06</designador>
     <ssr>150</ssr>
     <indicativo>PTYJV</indicativo>
@@ -242,7 +242,7 @@
     <veltrj>110</veltrj>
   </trafego>
 
-  <trafego nTrf=15>
+  <trafego nTrf="15">
     <designador>EC25</designador>
     <ssr>264</ssr>
     <indicativo>PRVLL</indicativo>
@@ -260,7 +260,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=16>
+  <trafego nTrf="16">
     <designador>S76</designador>
     <ssr>265</ssr>
     <indicativo>PRCHA</indicativo>
@@ -278,7 +278,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=17>
+  <trafego nTrf="17">
     <designador>EC25</designador>
     <ssr>266</ssr>
     <indicativo>PRBLL</indicativo>
@@ -296,7 +296,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=18>
+  <trafego nTrf="18">
     <designador>S76</designador>
     <ssr>263</ssr>
     <indicativo>PRCHE</indicativo>
@@ -314,7 +314,7 @@
     <veltrj>140</veltrj>
   </trafego>
 
-  <trafego nTrf=19>
+  <trafego nTrf="19">
     <designador>AS65</designador>
     <ssr>242</ssr>
     <indicativo>MAR7069</indicativo>
@@ -332,19 +332,19 @@
     <veltrj>100</veltrj>
   </trafego>
 
-  <trafego nTrf=20>
+  <trafego nTrf="20">
     <designador>AT72</designador>
     <ssr>3265</ssr>
     <indicativo>AZU2569</indicativo>
     <origem>SBCB</origem>
     <destino>SBKP</destino>
     <temptrafego>20</temptrafego>
-    <procedimento>SUB|63026</procedimento>
+    <procedimento>SUB63026</procedimento>
     <niveltrj>180</niveltrj>
     <veltrj>260</veltrj>
   </trafego>
 
-  <trafego nTrf=21>
+  <trafego nTrf="21">
     <designador>C525</designador>
     <ssr>256</ssr>
     <indicativo>PRWAK</indicativo>
