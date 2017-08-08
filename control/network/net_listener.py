@@ -62,7 +62,7 @@ class CNetListener(multiprocessing.Process):
         """
         initializes network listener
 
-        @param ft_ifce: tupla in/out de interfaces. ('eth0', 'eth0')
+        @param ft_ifce: tupla in/out de interfaces. (('eth0', ''), ('eth0', ''))
         @param fs_addr: endereço multicast. ('225.12.2')
         @param fi_port: porta. (1970)
         @param f_queue: queue de dados
@@ -84,8 +84,13 @@ class CNetListener(multiprocessing.Process):
 
         # especificou uma interface ?
         if ft_ifce[0] is not None:
-            # seleciona a interface (from socket.h, SO_BINDTODEVICE 25)
-            self.__fd_recv.setsockopt(socket.SOL_SOCKET, 25, ft_ifce[0])
+            # tupla (iface, addr)
+            lt_addr = ft_ifce[0]
+
+            # especificou uma interface ?
+            if lt_addr[0] is not None:
+                # seleciona a interface (from socket.h, SO_BINDTODEVICE 25)
+                self.__fd_recv.setsockopt(socket.SOL_SOCKET, 25, lt_addr[0] + '\0')
 
         # set some options to make it multicast-friendly
         self.__fd_recv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)

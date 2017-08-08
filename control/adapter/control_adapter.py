@@ -57,7 +57,9 @@ import control.config.config_adapter as config
 import control.events.events_config as events
 
 import control.network.get_address as gaddr
+import control.network.get_ctrl_net as gctln
 import control.network.net_listener as listener
+import control.network.net_sender as sender
 
 # < class CControlAdapter >------------------------------------------------------------------------
 
@@ -88,6 +90,7 @@ class CControlAdapter(control.CControlManager):
         self.__dct_config = self.config.dct_config
         assert self.__dct_config
 
+
         # cria a queue de recebimento de comando/controle/configuração
         self.__q_rcv_cnfg = multiprocessing.Queue()
         assert self.__q_rcv_cnfg
@@ -99,6 +102,7 @@ class CControlAdapter(control.CControlManager):
         self.__sck_rcv_cnfg = listener.CNetListener(lt_ifce, ls_addr, li_port, self.__q_rcv_cnfg)
         assert self.__sck_rcv_cnfg
 
+
         # cria a queue de recebimento de pistas
         self.__q_rcv_trks = multiprocessing.Queue()
         assert self.__q_rcv_trks
@@ -109,6 +113,18 @@ class CControlAdapter(control.CControlManager):
         # cria o socket de recebimento de pistas
         self.__sck_rcv_trks = listener.CNetListener(lt_ifce, ls_addr, li_port, self.__q_rcv_trks)
         assert self.__sck_rcv_trks
+
+
+        # cria a queue de envio de pistas
+        self.__q_snd_trks = multiprocessing.Queue()
+        assert self.__q_snd_trks
+
+        # endereço de envio
+        lt_ifce, ls_addr, li_port = gctln.get_ctrl_net(self.config, "net.trks")
+
+        # cria o socket de envio de pistas
+        self.__sck_snd_trks = sender.CNetSender(lt_ifce, ls_addr, li_port, self.__q_snd_trks)
+
 
         # mensagem do newton
         self.__s_msg = None
@@ -132,10 +148,10 @@ class CControlAdapter(control.CControlManager):
         l_tlv_data += coreapi.CoreNodeTlv.packstring(1, int(flst_data[1]))
 
         # x / CORE_TLV_NODE_XPOS
-        l_tlv_data += coreapi.CoreNodeTlv.packstring(32, l_x)
+        l_tlv_data += coreapi.CoreNodeTlv.packstring(32, l_x % 65536)
 
         # y / CORE_TLV_NODE_YPOS
-        l_tlv_data += coreapi.CoreNodeTlv.packstring(33, l_y)
+        l_tlv_data += coreapi.CoreNodeTlv.packstring(33, l_y % 65536)
 
         # latitude / CORE_TLV_NODE_LAT
         l_tlv_data += coreapi.CoreNodeTlv.packstring(48, flst_data[5])
@@ -144,7 +160,7 @@ class CControlAdapter(control.CControlManager):
         l_tlv_data += coreapi.CoreNodeTlv.packstring(49, flst_data[6])
 
         # altitude / CORE_TLV_NODE_ALT
-        l_tlv_data += coreapi.CoreNodeTlv.packstring(50, l_z)
+        l_tlv_data += coreapi.CoreNodeTlv.packstring(50, l_z % 65536)
 
         # mensagem / CORE_TLV_NODE_OPAQUE
         l_tlv_data += coreapi.CoreNodeTlv.packstring(80, self.__s_msg)
@@ -241,6 +257,9 @@ class CControlAdapter(control.CControlManager):
                         
                         # trata mensagem de status de aeronave
                         self.__msg_trk(llst_data)
+
+                        # envia a mensgaem de pista para a cntl0net
+                        self.__sck_snd_trks.send_data(str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + self.__s_msg)
 
                     # senão, mensagem não reconhecida ou não tratavél
                     else:

@@ -45,15 +45,14 @@ import libs.coords.pos_lat_lng as pll
 # model
 import model.common.airspace_basic as airs
 
+# import model.items.ape_data as apedata
 import model.items.apx_data as apxdata
 import model.items.esp_data as espdata
+# import model.items.ils_data as ilsdata
 import model.items.sub_data as subdata
 import model.items.trj_data as trjdata
 
 import model.newton.defs_newton as ldefs
-
-#M_LOG = logging.getLogger(__name__)
-#M_LOG.setLevel(logging.DEBUG)
 
 # < class CAirspaceNewton >-------------------------------------------------------------------------
 
@@ -77,11 +76,17 @@ class CAirspaceNewton(airs.CAirspaceBasic):
         # self.lst_arr_dep     # lista de pousos/decolagens
         # self.dct_fix         # dicionário de fixos
 
+        # procedimentos de aproximação perdida
+        self.__dct_ape = {}
+
         # procedimentos de aproximação
         self.__dct_apx = {}
 
         # procedimentos de espera
         self.__dct_esp = {}
+
+        # procedimentos de ILS
+        self.__dct_ils = {}
 
         # procedimentos de subida
         self.__dct_sub = {}
@@ -135,9 +140,6 @@ class CAirspaceNewton(airs.CAirspaceBasic):
 
         @return pointer e função operacional
         """
-        # logger
-        #M_LOG.info("get_ptr_prc:>>")
-
         # não existe procedimento ?
         if fs_prc is None or 4 > len(fs_prc):
             # logger
@@ -148,7 +150,7 @@ class CAirspaceNewton(airs.CAirspaceBasic):
             # retorna pointer & função
             return None, ldefs.E_NOPROC
 
-        #M_LOG.debug("procedimento : [%s]" % fs_prc)
+        #cdbg.M_DBG.debug("procedimento : [%s]" % fs_prc)
         # obtém o procedimento
         ls_prc = fs_prc[:3]
 
@@ -156,7 +158,18 @@ class CAirspaceNewton(airs.CAirspaceBasic):
         li_num_prc = int(fs_prc[3:])
 
         # é uma aproximação ?
-        if "APX" == ls_prc:
+        if "APE" == ls_prc:
+            # check dicionário de aproximação perdida
+            assert self.__dct_ape is not None
+
+            # obtém o procedimento de aproximação pelo número
+            lptr_prc = self.__dct_ape.get(li_num_prc, None)
+
+            # função operacional da aproximação perdida
+            le_fnc_ope = ldefs.E_APXPERDIDA if lptr_prc is not None else ldefs.E_NOPROC
+
+        # é uma aproximação ?
+        elif "APX" == ls_prc:
             # check dicionário de aproximação
             assert self.__dct_apx is not None
 
@@ -176,6 +189,17 @@ class CAirspaceNewton(airs.CAirspaceBasic):
 
             # função operacional da espera
             le_fnc_ope = ldefs.E_ESPERA if lptr_prc is not None else ldefs.E_NOPROC
+
+        # é um ILS ?
+        elif "ILS" == ls_prc:
+            # check dicionário de ILS
+            assert self.__dct_ils is not None
+
+            # obtém o procedimento de ILS pelo número
+            lptr_prc = self.__dct_ils.get(li_num_prc, None)
+
+            # função operacional da espera
+            le_fnc_ope = ldefs.E_ILS if lptr_prc is not None else ldefs.E_NOPROC
 
         # é uma subida ?
         elif "SUB" == ls_prc:
@@ -217,9 +241,6 @@ class CAirspaceNewton(airs.CAirspaceBasic):
             l_log.setLevel(logging.ERROR)
             l_log.error(u"<E03: função operacional:[{}] sem procedimento:[{}].".format(ls_prc, li_num_prc))
 
-        # logger
-        #M_LOG.info("get_ptr_prc:<<")
-
         # retorna pointer & função
         return lptr_prc, le_fnc_ope
 
@@ -228,6 +249,13 @@ class CAirspaceNewton(airs.CAirspaceBasic):
         """
         DOCUMENT ME!
         """
+        # monta o nome da tabela de procedimentos de aproximação perdida
+        #ls_path = os.path.join(self.dct_config["dir.prc"], self.dct_config["tab.ape"])
+
+        # carrega a tabela de procedimentos de aproximação perdidas em um dicionário
+        #self.__dct_ape = apedata.CApeData(self.model, ls_path)
+        #assert self.__dct_ape is not None
+
         # monta o nome da tabela de procedimentos de aproximação
         ls_path = os.path.join(self.dct_config["dir.prc"], self.dct_config["tab.apx"])
 
@@ -241,6 +269,13 @@ class CAirspaceNewton(airs.CAirspaceBasic):
         # carrega a tabela de procedimentos de espera em um dicionário
         self.__dct_esp = espdata.CEspData(self.model, ls_path)
         assert self.__dct_esp is not None
+
+        # monta o nome da tabela de procedimentos de ILS
+        #ls_path = os.path.join(self.dct_config["dir.prc"], self.dct_config["tab.ils"])
+
+        # carrega a tabela de procedimentos de ILS em um dicionário
+        #self.__dct_ils = ilsdata.CILSData(self.model, ls_path)
+        #assert self.__dct_ils is not None
 
         # monta o nome da tabela de procedimentos de subida
         ls_path = os.path.join(self.dct_config["dir.prc"], self.dct_config["tab.sub"])
@@ -307,19 +342,31 @@ class CAirspaceNewton(airs.CAirspaceBasic):
                 # para todos breakpoints da aproximação...
                 for l_brk in l_apx.lst_apx_brk:
                     self.get_brk_prc(l_brk)
-        '''
+
         # para todos os procedimentos de aproximação perdida...
-        for l_prc_ape in self.__dct_ape:
-            # obtém os dados da aproximação perdida
-            l_ape = self.__dct_ape[l_prc_ape]
-
+        for l_ape in self.__dct_ape.values():
+            # aproximação ok ?
             if l_ape is not None:
-                # para todos breakpoints da aproximação perdida...
-                for l_brk in l_ape.aApeLstBrk:
-                    self.get_brk_prc(l_brk)
+                # obtém o dicionário de esperas
+                ldct_esp = self.__dct_esp
+                assert ldct_esp
 
+                # obtém o procedimento de espera pelo número
+                l_ape.ptr_ape_prc_esp = lptr_prc = self.__dct_esp.get(l_ape.ptr_ape_prc_esp, None)
+
+                # espera ok ?
+                if l_ape.ptr_ape_prc_esp is None:
+                    # logger
+                    l_log = logging.getLogger("CAirspaceNewton::resolv_procs")
+                    l_log.setLevel(logging.WARNING)
+                    l_log.warning(u"<E02: aproximação [{}] sem espera.".format(l_ape.i_prc_id))
+
+                # para todos breakpoints da aproximação perdida...
+                for l_brk in l_ape.lst_ape_brk:
+                    self.get_brk_prc(l_brk)
+        '''
         # para todos os procedimentos de ILS...
-        for l_prc_ils in self.__dct_ils:
+        for l_prc_ils in self.__dct_ils.values():
             # obtém os dados da ILS
             l_ils = self.__dct_ils[l_prc_ils]
 
@@ -358,62 +405,56 @@ class CAirspaceNewton(airs.CAirspaceBasic):
 
     # ---------------------------------------------------------------------------------------------
     @property
+    def dct_ape(self):
+        return self.__dct_ape
+
+    @dct_ape.setter
+    def dct_ape(self, f_val):
+        self.__dct_ape = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
     def dct_apx(self):
-        """
-        get aproximações
-        """
         return self.__dct_apx
 
     @dct_apx.setter
     def dct_apx(self, f_val):
-        """
-        set aproximações
-        """
         self.__dct_apx = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_esp(self):
-        """
-        get esperas
-        """
         return self.__dct_esp
 
     @dct_esp.setter
     def dct_esp(self, f_val):
-        """
-        set esperas
-        """
         self.__dct_esp = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
+    def dct_ils(self):
+        return self.__dct_ils
+
+    @dct_ils.setter
+    def dct_ils(self, f_val):
+        self.__dct_ils = f_val
+
+    # ---------------------------------------------------------------------------------------------
+    @property
     def dct_sub(self):
-        """
-        get subidas
-        """
         return self.__dct_sub
 
     @dct_sub.setter
     def dct_sub(self, f_val):
-        """
-        set subidas
-        """
         self.__dct_sub = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_trj(self):
-        """
-        get trajetórias
-        """
         return self.__dct_trj
 
     @dct_trj.setter
     def dct_trj(self, f_val):
-        """
-        set trajetórias
-        """
         self.__dct_trj = f_val
 
 # < the end >--------------------------------------------------------------------------------------

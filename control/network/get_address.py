@@ -78,6 +78,6 @@ def get_address(f_config, fs_addr_key):
         ls_ifce_out = None
 
     # return
-    return (ls_ifce_in, ls_ifce_out), ls_addr, li_port
+    return ((ls_ifce_in, ''), (ls_ifce_out, '')), ls_addr, li_port
 
 # < the end >--------------------------------------------------------------------------------------

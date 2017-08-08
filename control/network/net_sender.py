@@ -41,7 +41,7 @@ import multiprocessing
 import socket
 
 # control
-# import control.control_debug as cdbg
+import control.control_debug as cdbg
 
 # < class CNetSender >-----------------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ class CNetSender(multiprocessing.Process):
         """
         initializes network sender
 
-        @param ft_ifce: tupla in/out de interfaces. ('eth0', 'eth0')
+        @param ft_ifce: tupla in/out de interfaces. (('eth0', '192.168.0.1'), ('eth0', '192.168.1.1'))
         @param fs_addr: endereço ('224.1.2.3')
         @param fi_port: porta (1970)
         @param f_queue: queue de mensagens
@@ -79,14 +79,22 @@ class CNetSender(multiprocessing.Process):
 
         # especificou uma interface ?
         if ft_ifce[1] is not None:
-            # seleciona a interface (from socket.h, SO_BINDTODEVICE 25)
-            self.__fd_send.setsockopt(socket.SOL_SOCKET, 25, ft_ifce[1])
+            # tupla (iface, addr)
+            lt_addr = ft_ifce[1]
+            
+            # especificou uma interface ?
+            if lt_addr[0] is not None:
+                # seleciona a interface (from socket.h, SO_BINDTODEVICE 25)
+                # self.__fd_send.setsockopt(socket.SOL_SOCKET, 25, lt_addr[0] + '\0')
+
+                # seleciona a interface
+                self.__fd_send.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_IF, socket.inet_aton(lt_addr[1]))
 
         # config sender socket
         self.__fd_send.setsockopt(socket.IPPROTO_IP, socket.IP_MULTICAST_TTL, 2)
 
         # non-blocking socket
-        self.__fd_send.settimeout(0.0)
+        self.__fd_send.settimeout(0.)
         self.__fd_send.setblocking(0)
 
     # ---------------------------------------------------------------------------------------------
@@ -94,7 +102,7 @@ class CNetSender(multiprocessing.Process):
         """
         send message
 
-        @param fs_msg: DOCUMENT ME!
+        @param fs_msg: message to send
         """
         # clear to go
         assert self.__fd_send
