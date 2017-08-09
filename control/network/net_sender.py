@@ -37,11 +37,12 @@ __date__ = "2015/11"
 # < imports >--------------------------------------------------------------------------------------
 
 # python library
+import logging
 import multiprocessing
 import socket
 
 # control
-import control.control_debug as cdbg
+# import control.control_debug as cdbg
 
 # < class CNetSender >-----------------------------------------------------------------------------
 

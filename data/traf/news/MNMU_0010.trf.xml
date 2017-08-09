@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>B738</designador>
+    <ssr>6360</ssr>
+    <indicativo>GLO5307</indicativo>
+    <origem>SBCJ</origem>
+    <destino>SBBE</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.37378</cpoA>
+      <cpoB>-60.05467</cpoB>
+    </coord>
+    <altitude>314</altitude>
+    <velocidade>456</velocidade>
+    <procedimento>TRJ420001</procedimento>
+    <niveltrj>370</niveltrj>
+    <veltrj>464</veltrj>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>B737</designador>
+    <ssr>6302</ssr>
+    <indicativo>GLO6713</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBBE</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.04</cpoA>
+      <cpoB>-59.55501</cpoB>
+    </coord>
+    <altitude>380</altitude>
+    <velocidade>455</velocidade>
+    <proa>90</proa>
+    <niveltrj>380</niveltrj>
+    <veltrj>455</veltrj>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>E190</designador>
+    <ssr>6303</ssr>
+    <indicativo>AZU2908</indicativo>
+    <origem>SBBE</origem>
+    <destino>SBMA</destino>
+    <temptrafego>3</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.04</cpoA>
+      <cpoB>-60.72089</cpoB>
+    </coord>
+    <altitude>110</altitude>
+    <velocidade>250</velocidade>
+    <proa>270</proa>
+    <niveltrj>300</niveltrj>
+    <veltrj>430</veltrj>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>E190</designador>
+    <ssr>6304</ssr>
+    <indicativo>AZU2544</indicativo>
+    <origem>SBCF</origem>
+    <destino>SBSL</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.53966</cpoA>
+      <cpoB>-60.05467</cpoB>
+    </coord>
+    <altitude>310</altitude>
+    <velocidade>474</velocidade>
+    <proa>180</proa>
+    <niveltrj>310</niveltrj>
+    <veltrj>474</veltrj>
+  </trafego>
+</trafegos>
+

@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>C208</designador>
+    <ssr>3221</ssr>
+    <indicativo>FAB2706</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBCO</destino>
+    <temptrafego>1</temptrafego>
+    <altitude>90</altitude>
+    <velocidade>100</velocidade>
+    <procedimento>SUB74001</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>A320</designador>
+    <ssr>3112</ssr>
+    <indicativo>TAM3504</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBSM</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.11735</cpoA>
+      <cpoB>-53.00577</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>300</velocidade>
+    <proa>230</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>B733</designador>
+    <ssr>3665</ssr>
+    <indicativo>FAB2115</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBSM</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.24815</cpoA>
+      <cpoB>-52.91418</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>300</velocidade>
+    <proa>240</proa>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>A1</designador>
+    <ssr>1352</ssr>
+    <indicativo>POK10</indicativo>
+    <origem>SBCO</origem>
+    <destino>SBSM</destino>
+    <temptrafego>8</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.70617</cpoA>
+      <cpoB>-52.79145</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>250</velocidade>
+    <proa>270</proa>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>A1</designador>
+    <ssr>3655</ssr>
+    <indicativo>PHOENIX12</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBUG</destino>
+    <temptrafego>24</temptrafego>
+    <altitude>90</altitude>
+    <velocidade>120</velocidade>
+    <procedimento>SUB74005</procedimento>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>LR35</designador>
+    <ssr>3662</ssr>
+    <indicativo>N600XL</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBSM</destino>
+    <temptrafego>26</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.6083</cpoA>
+      <cpoB>-53.86657</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>280</velocidade>
+    <proa>10</proa>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>LR35</designador>
+    <ssr>3442</ssr>
+    <indicativo>PTLSF</indicativo>
+    <origem>SBSM</origem>
+    <destino>SAEZ</destino>
+    <temptrafego>30</temptrafego>
+    <altitude>340</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>SUB74008</procedimento>
+  </trafego>
+
+  <trafego nTrf="8">
+    <designador>AT43</designador>
+    <ssr>3335</ssr>
+    <indicativo>AZU4412</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBUG</destino>
+    <temptrafego>25</temptrafego>
+    <altitude>120</altitude>
+    <velocidade>180</velocidade>
+    <procedimento>SUB74006</procedimento>
+  </trafego>
+</trafegos>
+

@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>B707</designador>
+    <ssr>7244</ssr>
+    <indicativo>BSI5475</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.06695</cpoA>
+      <cpoB>-66.95835</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>360</velocidade>
+    <proa>334</proa>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>C130</designador>
+    <ssr>7307</ssr>
+    <indicativo>FAB2466</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>3</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.18116</cpoA>
+      <cpoB>-67.67949</cpoB>
+    </coord>
+    <altitude>160</altitude>
+    <velocidade>250</velocidade>
+    <proa>35</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>C206</designador>
+    <ssr>7133</ssr>
+    <indicativo>PTKOJ</indicativo>
+    <origem>SBMY</origem>
+    <destino>SBEG</destino>
+    <temptrafego>5</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.27447</cpoA>
+      <cpoB>-67.79069</cpoB>
+    </coord>
+    <altitude>55</altitude>
+    <velocidade>145</velocidade>
+    <proa>45</proa>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>E110</designador>
+    <ssr>7067</ssr>
+    <indicativo>PPEAM</indicativo>
+    <origem>SBMY</origem>
+    <destino>SBEG</destino>
+    <temptrafego>7</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>0.81167</cpoA>
+      <cpoB>-65.7</cpoB>
+    </coord>
+    <altitude>110</altitude>
+    <velocidade>185</velocidade>
+    <proa>25</proa>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>E110</designador>
+    <ssr>7127</ssr>
+    <indicativo>RLE109</indicativo>
+    <origem>SWEI</origem>
+    <destino>SBEG</destino>
+    <temptrafego>9</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.97923</cpoA>
+      <cpoB>-68.0265</cpoB>
+    </coord>
+    <altitude>75</altitude>
+    <velocidade>185</velocidade>
+    <proa>98</proa>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>E820</designador>
+    <ssr>7200</ssr>
+    <indicativo>PTEBN</indicativo>
+    <origem>SWYN</origem>
+    <destino>SBEG</destino>
+    <temptrafego>11</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.11484</cpoA>
+      <cpoB>-67.56689</cpoB>
+    </coord>
+    <altitude>95</altitude>
+    <velocidade>175</velocidade>
+    <proa>26</proa>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>DHC8</designador>
+    <ssr>7071</ssr>
+    <indicativo>TVJ152B</indicativo>
+    <origem>SBBV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>13</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>2.69293</cpoA>
+      <cpoB>-67.12925</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>250</velocidade>
+    <proa>183</proa>
+  </trafego>
+
+  <trafego nTrf="8">
+    <designador>E120</designador>
+    <ssr>7304</ssr>
+    <indicativo>PEP131</indicativo>
+    <origem>SWPI</origem>
+    <destino>SBEG</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.77628</cpoA>
+      <cpoB>-66.37362</cpoB>
+    </coord>
+    <altitude>160</altitude>
+    <velocidade>150</velocidade>
+    <proa>276</proa>
+  </trafego>
+
+  <trafego nTrf="9">
+    <designador>B747</designador>
+    <ssr>7265</ssr>
+    <indicativo>VRG967</indicativo>
+    <origem>MPHO</origem>
+    <destino>SBEG</destino>
+    <temptrafego>17</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>2.39862</cpoA>
+      <cpoB>-67.83977</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <proa>130</proa>
+  </trafego>
+
+  <trafego nTrf="10">
+    <designador>E810</designador>
+    <ssr>2243</ssr>
+    <indicativo>PTRCT</indicativo>
+    <origem>SWNA</origem>
+    <destino>SBEG</destino>
+    <temptrafego>19</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>1.08078</cpoA>
+      <cpoB>-67.48665</cpoB>
+    </coord>
+    <altitude>75</altitude>
+    <velocidade>165</velocidade>
+    <proa>20</proa>
+  </trafego>
+</trafegos>
+

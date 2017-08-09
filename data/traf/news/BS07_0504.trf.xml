@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>LR55</designador>
+    <ssr>4401</ssr>
+    <indicativo>PRAME</indicativo>
+    <origem>SBSP</origem>
+    <destino>SBBR</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.92567</cpoA>
+      <cpoB>-48.42367</cpoB>
+    </coord>
+    <altitude>260</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ150061</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>A320</designador>
+    <ssr>4402</ssr>
+    <indicativo>TAM3516</indicativo>
+    <origem>SBVT</origem>
+    <destino>SBBR</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.22817</cpoA>
+      <cpoB>-47.39133</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ150060</procedimento>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>E120</designador>
+    <ssr>4404</ssr>
+    <indicativo>ONE6381</indicativo>
+    <origem>SBBR</origem>
+    <destino>SNBR</destino>
+    <temptrafego>10</temptrafego>
+    <procedimento>SUB15001</procedimento>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>B737</designador>
+    <ssr>4405</ssr>
+    <indicativo>VRG2329</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBBR</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-15.5867</cpoA>
+      <cpoB>-47.01516</cpoB>
+    </coord>
+    <altitude>260</altitude>
+    <velocidade>320</velocidade>
+    <procedimento>TRJ150059</procedimento>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>B737</designador>
+    <ssr>4406</ssr>
+    <indicativo>VRG2600</indicativo>
+    <origem>SBRJ</origem>
+    <destino>SBBR</destino>
+    <temptrafego>18</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-16.22817</cpoA>
+      <cpoB>-47.39133</cpoB>
+    </coord>
+    <altitude>250</altitude>
+    <velocidade>350</velocidade>
+    <procedimento>TRJ150060</procedimento>
+  </trafego>
+</trafegos>
+

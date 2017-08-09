@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>BE50</designador>
+    <ssr>200</ssr>
+    <indicativo>PT-BSF</indicativo>
+    <origem>SBLO</origem>
+    <destino>SBSP</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.70577</cpoA>
+      <cpoB>-60.72225</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>150</velocidade>
+    <proa>105</proa>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>BE50</designador>
+    <ssr>201</ssr>
+    <indicativo>PT-DRL</indicativo>
+    <origem>SBPG</origem>
+    <destino>SBSP</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.14283</cpoA>
+      <cpoB>-59.99383</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>220</velocidade>
+    <proa>43</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>LR35</designador>
+    <ssr>203</ssr>
+    <indicativo>PT-FAF</indicativo>
+    <origem>SBCG</origem>
+    <destino>SBSP</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.225</cpoA>
+      <cpoB>-59.48533</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>350</velocidade>
+    <proa>126</proa>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>B737</designador>
+    <ssr>207</ssr>
+    <indicativo>VSP636</indicativo>
+    <origem>SBRJ</origem>
+    <destino>SBSP</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.04</cpoA>
+      <cpoB>-60.05467</cpoB>
+    </coord>
+    <altitude>310</altitude>
+    <velocidade>480</velocidade>
+    <proa>273</proa>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>F5</designador>
+    <ssr>206</ssr>
+    <indicativo>FAB4482</indicativo>
+    <origem>SBSJ</origem>
+    <destino>SBLO</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.90656</cpoA>
+      <cpoB>-59.30248</cpoB>
+    </coord>
+    <altitude>280</altitude>
+    <velocidade>420</velocidade>
+    <proa>270</proa>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>C500</designador>
+    <ssr>205</ssr>
+    <indicativo>PT-ILJ</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBGR</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.41794</cpoA>
+      <cpoB>-59.83641</cpoB>
+    </coord>
+    <altitude>130</altitude>
+    <velocidade>360</velocidade>
+    <proa>217</proa>
+  </trafego>
+</trafegos>
+

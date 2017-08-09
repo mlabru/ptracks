@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>AT42</designador>
+    <ssr>3601</ssr>
+    <indicativo>AZU4157</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBFI</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.1425</cpoA>
+      <cpoB>-54.09833</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>250</velocidade>
+    <procedimento>APX81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>E190</designador>
+    <ssr>5721</ssr>
+    <indicativo>LPE2443</indicativo>
+    <origem>SPIM</origem>
+    <destino>SBFI</destino>
+    <temptrafego>5</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.29833</cpoA>
+      <cpoB>-53.18517</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>250</velocidade>
+    <proa>110</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>A320</designador>
+    <ssr>3561</ssr>
+    <indicativo>LAP706</indicativo>
+    <origem>SGES</origem>
+    <destino>SBGR</destino>
+    <temptrafego>8</temptrafego>
+    <altitude>370</altitude>
+    <velocidade>390</velocidade>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>C152</designador>
+    <ssr>215</ssr>
+    <indicativo>PRAAJ</indicativo>
+    <origem>SSFE</origem>
+    <destino>SSFE</destino>
+    <temptrafego>0</temptrafego>
+    <altitude>105</altitude>
+    <velocidade>125</velocidade>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>LJ35</designador>
+    <ssr>3313</ssr>
+    <indicativo>PTMAC</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBGR</destino>
+    <temptrafego>5</temptrafego>
+    <altitude>350</altitude>
+    <velocidade>500</velocidade>
+    <procedimento>SUB81037</procedimento>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>A320</designador>
+    <ssr>3314</ssr>
+    <indicativo>TAM3559</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBFI</destino>
+    <temptrafego>6</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.1425</cpoA>
+      <cpoB>-54.09833</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>450</velocidade>
+    <proa>285</proa>
+  </trafego>
+</trafegos>
+

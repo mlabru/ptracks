@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>B738</designador>
+    <indicativo>GLO1827</indicativo>
+    <origem>SBSP</origem>
+    <destino>SBFI</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.62168</cpoA>
+      <cpoB>-53.77167</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>265</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>A320</designador>
+    <indicativo>TAM3504</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBFI</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.08069</cpoA>
+      <cpoB>-53.92528</cpoB>
+    </coord>
+    <altitude>179</altitude>
+    <velocidade>255</velocidade>
+    <procedimento>ESP81003</procedimento>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>E190</designador>
+    <indicativo>AZU2804</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBFI</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.29199</cpoA>
+      <cpoB>-54.25949</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>265</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>A1</designador>
+    <indicativo>POKER10</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBFI</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.31893</cpoA>
+      <cpoB>-54.23577</cpoB>
+    </coord>
+    <altitude>183</altitude>
+    <velocidade>256</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>E110</designador>
+    <indicativo>FENIX12</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBBI</destino>
+    <temptrafego>26</temptrafego>
+    <procedimento>SUB81027</procedimento>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>LR35</designador>
+    <indicativo>N600XL</indicativo>
+    <origem>SGAS</origem>
+    <destino>SBFI</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.30877</cpoA>
+      <cpoB>-55.21876</cpoB>
+    </coord>
+    <altitude>179</altitude>
+    <velocidade>254</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>LR35</designador>
+    <indicativo>PTLSF</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBSP</destino>
+    <temptrafego>34</temptrafego>
+    <procedimento>SUB81027</procedimento>
+  </trafego>
+</trafegos>
+

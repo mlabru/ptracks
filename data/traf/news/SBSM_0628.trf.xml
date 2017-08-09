@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>LJ35</designador>
+    <ssr>3112</ssr>
+    <indicativo>PRWDS</indicativo>
+    <origem>SBCG</origem>
+    <destino>SBSM</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.79012</cpoA>
+      <cpoB>-53.7075</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>280</velocidade>
+    <proa>180</proa>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>B763</designador>
+    <ssr>3332</ssr>
+    <indicativo>PUA5012</indicativo>
+    <origem>SUMU</origem>
+    <destino>SBSM</destino>
+    <temptrafego>1</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.56697</cpoA>
+      <cpoB>-54.02081</cpoB>
+    </coord>
+    <altitude>190</altitude>
+    <velocidade>320</velocidade>
+    <proa>20</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>A320</designador>
+    <ssr>3321</ssr>
+    <indicativo>TAM3812</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBCT</destino>
+    <temptrafego>2</temptrafego>
+    <altitude>370</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>SUB74006</procedimento>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>C550</designador>
+    <ssr>3354</ssr>
+    <indicativo>PPESC</indicativo>
+    <origem>SBSM</origem>
+    <destino>SBBR</destino>
+    <temptrafego>8</temptrafego>
+    <altitude>370</altitude>
+    <velocidade>300</velocidade>
+    <procedimento>SUB74006</procedimento>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>E190</designador>
+    <ssr>3333</ssr>
+    <indicativo>AZU4212</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBSM</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-29.11735</cpoA>
+      <cpoB>-53.00577</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>300</velocidade>
+    <proa>230</proa>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>AT42</designador>
+    <ssr>3111</ssr>
+    <indicativo>AZU4244</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBSM</destino>
+    <temptrafego>27</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-30.01948</cpoA>
+      <cpoB>-52.8467</cpoB>
+    </coord>
+    <altitude>140</altitude>
+    <velocidade>200</velocidade>
+    <proa>290</proa>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>G2</designador>
+    <ssr>3142</ssr>
+    <indicativo>N738F</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBSM</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-28.79012</cpoA>
+      <cpoB>-53.7075</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>280</velocidade>
+    <proa>180</proa>
+  </trafego>
+</trafegos>
+

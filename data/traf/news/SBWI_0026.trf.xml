@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>LR35</designador>
+    <indicativo>PRWDS</indicativo>
+    <origem>SBCG</origem>
+    <destino>SBFI</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.83392</cpoA>
+      <cpoB>-54.34421</cpoB>
+    </coord>
+    <altitude>179</altitude>
+    <velocidade>260</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>B738</designador>
+    <indicativo>GLO1822</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBFI</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.29199</cpoA>
+      <cpoB>-54.25949</cpoB>
+    </coord>
+    <altitude>177</altitude>
+    <velocidade>250</velocidade>
+    <procedimento>ESP81003</procedimento>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>A320</designador>
+    <indicativo>TAM3812</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBCT</destino>
+    <temptrafego>3</temptrafego>
+    <procedimento>SUB81028</procedimento>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>C550</designador>
+    <indicativo>PPESC</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBBR</destino>
+    <temptrafego>6</temptrafego>
+    <procedimento>SUB81041</procedimento>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>E190</designador>
+    <indicativo>AZU5735</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBFI</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.8122</cpoA>
+      <cpoB>-53.7549</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>255</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>E190</designador>
+    <indicativo>AZU5108</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBFI</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.32349</cpoA>
+      <cpoB>-54.24864</cpoB>
+    </coord>
+    <altitude>179</altitude>
+    <velocidade>258</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>G2</designador>
+    <indicativo>N738F</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBFI</destino>
+    <temptrafego>29</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.06976</cpoA>
+      <cpoB>-53.91271</cpoB>
+    </coord>
+    <altitude>179</altitude>
+    <velocidade>250</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+</trafegos>
+

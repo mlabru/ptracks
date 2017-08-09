@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>B738</designador>
+    <indicativo>GLO1813</indicativo>
+    <origem>SBPA</origem>
+    <destino>SBFI</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.27624</cpoA>
+      <cpoB>-54.26491</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>256</velocidade>
+    <procedimento>ESP81003</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>B733</designador>
+    <indicativo>GLO1824</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBFI</destino>
+    <temptrafego>4</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.62256</cpoA>
+      <cpoB>-53.75503</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>257</velocidade>
+    <procedimento>ESP81003</procedimento>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>PA34</designador>
+    <indicativo>PTVNE</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBBI</destino>
+    <temptrafego>8</temptrafego>
+    <procedimento>SUB81028</procedimento>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>A319</designador>
+    <indicativo>TAM3813</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBFI</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.76837</cpoA>
+      <cpoB>-53.89825</cpoB>
+    </coord>
+    <altitude>177</altitude>
+    <velocidade>280</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>F5</designador>
+    <indicativo>PAMPA14</indicativo>
+    <origem>SBCO</origem>
+    <destino>SBFI</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-26.28762</cpoA>
+      <cpoB>-54.24716</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>280</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>PA34</designador>
+    <indicativo>PTWRE</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBCA</destino>
+    <temptrafego>25</temptrafego>
+    <procedimento>SUB81037</procedimento>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>G2</designador>
+    <indicativo>N346GE</indicativo>
+    <origem>SBGL</origem>
+    <destino>SBFI</destino>
+    <temptrafego>28</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-25.80246</cpoA>
+      <cpoB>-53.78676</cpoB>
+    </coord>
+    <altitude>170</altitude>
+    <velocidade>255</velocidade>
+    <procedimento>ESP81001</procedimento>
+  </trafego>
+
+  <trafego nTrf="8">
+    <designador>B738</designador>
+    <indicativo>GLO1835</indicativo>
+    <origem>SBFI</origem>
+    <destino>SBSP</destino>
+    <temptrafego>30</temptrafego>
+    <procedimento>SUB81027</procedimento>
+  </trafego>
+</trafegos>
+

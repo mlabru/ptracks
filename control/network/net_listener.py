@@ -49,7 +49,7 @@ import model.common.glb_data as gdata
 
 # control
 import control.common.glb_defs as gdefs
-import control.control_debug as cdbg
+# import control.control_debug as cdbg
 
 # < class CNetListener >---------------------------------------------------------------------------
 
@@ -104,7 +104,7 @@ class CNetListener(multiprocessing.Process):
             # logger
             l_log = logging.getLogger("CNetListener::__init__")
             l_log.setLevel(logging.WARNING)
-            l_log.warning("<E01: some systems don't support SO_REUSEPORT:[{}]".format(ls_err))
+            l_log.warning("<E01: some systems don't support SO_REUSEPORT: {}".format(ls_err))
 
         # set some options to make it multicast-friendly
         # self.__fd_recv.setsockopt(socket.SOL_IP, socket.IP_MULTICAST_TTL, 20)
@@ -154,8 +154,10 @@ class CNetListener(multiprocessing.Process):
 
                 # versão da mensagem não reconhecida ?
                 if gdefs.D_MSG_VRS != int(llst_data[0]):
-                    # próxima mensagem
-                    continue
+                    # logger
+                    l_log = logging.getLogger("CNetListener::run")
+                    l_log.setLevel(logging.WARNING)
+                    l_log.warning("<E01: versão da mensagem não reconhecida:[{}].".format(llst_data[0]))
 
                 # mensagem válida ?
                 if int(llst_data[1]) in gdefs.SET_MSG_VALIDAS:
@@ -167,7 +169,7 @@ class CNetListener(multiprocessing.Process):
                     # logger
                     l_log = logging.getLogger("CNetListener::run")
                     l_log.setLevel(logging.WARNING)
-                    l_log.warning("<E01: unknow:[{}].".format(llst_data[2:]))
+                    l_log.warning("<E02: mensagem não reconhecida:[{}].".format(llst_data[1]))
 
             # em caso de erro...
             except socket.timeout, l_err:
@@ -187,7 +189,7 @@ class CNetListener(multiprocessing.Process):
                     # logger
                     l_log = logging.getLogger("CNetListener::run")
                     l_log.setLevel(logging.WARNING)
-                    l_log.warning("<E02: socket receive error: {}.".format(l_err))
+                    l_log.warning("<E03: socket receive error: {}.".format(l_err))
 
     # =============================================================================================
     # data

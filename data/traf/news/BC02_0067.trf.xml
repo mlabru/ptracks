@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>E110</designador>
+    <ssr>3402</ssr>
+    <indicativo>FAB2343</indicativo>
+    <origem>SBSJ</origem>
+    <destino>SBLO</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.40633</cpoA>
+      <cpoB>-46.3855</cpoB>
+    </coord>
+    <altitude>90</altitude>
+    <velocidade>220</velocidade>
+    <proa>280</proa>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>E110</designador>
+    <ssr>3405</ssr>
+    <indicativo>FAB2336</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBSJ</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.891</cpoA>
+      <cpoB>-46.52817</cpoB>
+    </coord>
+    <altitude>80</altitude>
+    <velocidade>220</velocidade>
+    <proa>35</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>B763</designador>
+    <ssr>3406</ssr>
+    <indicativo>DAL060</indicativo>
+    <origem>SBGL</origem>
+    <destino>SBCT</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.24633</cpoA>
+      <cpoB>-45.85417</cpoB>
+    </coord>
+    <altitude>80</altitude>
+    <velocidade>300</velocidade>
+    <proa>245</proa>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>B722</designador>
+    <ssr>3407</ssr>
+    <indicativo>VLO9055</indicativo>
+    <origem>SBKP</origem>
+    <destino>SBCT</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-23.48767</cpoA>
+      <cpoB>-46.92333</cpoB>
+    </coord>
+    <altitude>80</altitude>
+    <velocidade>300</velocidade>
+    <proa>240</proa>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>C500</designador>
+    <ssr>3410</ssr>
+    <indicativo>N902CC</indicativo>
+    <origem>SBCT</origem>
+    <destino>SBKP</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-24.152</cpoA>
+      <cpoB>-47.16267</cpoB>
+    </coord>
+    <altitude>80</altitude>
+    <velocidade>360</velocidade>
+    <proa>37</proa>
+  </trafego>
+</trafegos>
+

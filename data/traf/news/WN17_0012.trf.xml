@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>E110</designador>
+    <ssr>6501</ssr>
+    <indicativo>PTSEA</indicativo>
+    <origem>SBEG</origem>
+    <destino>SWBC</destino>
+    <temptrafego>0</temptrafego>
+    <altitude>100</altitude>
+    <velocidade>200</velocidade>
+    <procedimento>SUB96011</procedimento>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>A320</designador>
+    <ssr>6502</ssr>
+    <indicativo>TAM3890</indicativo>
+    <origem>SBBE</origem>
+    <destino>SBEG</destino>
+    <temptrafego>3</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-2.96742</cpoA>
+      <cpoB>-59.22507</cpoB>
+    </coord>
+    <altitude>130</altitude>
+    <velocidade>320</velocidade>
+    <proa>265</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>B738</designador>
+    <ssr>6504</ssr>
+    <indicativo>GLO1705</indicativo>
+    <origem>SBGR</origem>
+    <destino>SBEG</destino>
+    <temptrafego>5</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.95605</cpoA>
+      <cpoB>-60.05467</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>360</velocidade>
+    <proa>360</proa>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>E110</designador>
+    <ssr>6506</ssr>
+    <indicativo>PTSHU</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBTF</destino>
+    <temptrafego>15</temptrafego>
+    <altitude>180</altitude>
+    <velocidade>260</velocidade>
+    <procedimento>SUB96008</procedimento>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>MD11</designador>
+    <ssr>6507</ssr>
+    <indicativo>VLO9090</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBGR</destino>
+    <temptrafego>18</temptrafego>
+    <altitude>350</altitude>
+    <velocidade>450</velocidade>
+    <procedimento>SUB96001</procedimento>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>B738</designador>
+    <ssr>6510</ssr>
+    <indicativo>GLO1938</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.62882</cpoA>
+      <cpoB>-60.7564</cpoB>
+    </coord>
+    <altitude>140</altitude>
+    <velocidade>340</velocidade>
+    <proa>50</proa>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>LR35</designador>
+    <ssr>6511</ssr>
+    <indicativo>FAB2414</indicativo>
+    <origem>SBBR</origem>
+    <destino>SBMN</destino>
+    <temptrafego>23</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-3.72217</cpoA>
+      <cpoB>-59.57701</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>380</velocidade>
+    <proa>325</proa>
+  </trafego>
+</trafegos>
+

@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>BE90</designador>
+    <ssr>5501</ssr>
+    <indicativo>PTBPA</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBRF</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.9065</cpoA>
+      <cpoB>-38.32133</cpoB>
+    </coord>
+    <altitude>70</altitude>
+    <velocidade>180</velocidade>
+    <proa>67</proa>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>C130</designador>
+    <ssr>5502</ssr>
+    <indicativo>FAB2460</indicativo>
+    <origem>SBSV</origem>
+    <destino>SBPL</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.78873</cpoA>
+      <cpoB>-38.20356</cpoB>
+    </coord>
+    <altitude>100</altitude>
+    <velocidade>240</velocidade>
+    <proa>338</proa>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>B737</designador>
+    <ssr>5503</ssr>
+    <indicativo>GLO1735</indicativo>
+    <origem>SBFZ</origem>
+    <destino>SBSV</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.25791</cpoA>
+      <cpoB>-38.05928</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>300</velocidade>
+    <proa>228</proa>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>A320</designador>
+    <ssr>4501</ssr>
+    <indicativo>ARG1252</indicativo>
+    <origem>SUMU</origem>
+    <destino>SBSV</destino>
+    <temptrafego>10</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.84967</cpoA>
+      <cpoB>-38.67383</cpoB>
+    </coord>
+    <altitude>180</altitude>
+    <velocidade>360</velocidade>
+    <proa>46</proa>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>C550</designador>
+    <ssr>5504</ssr>
+    <indicativo>PTBBG</indicativo>
+    <origem>SBUF</origem>
+    <destino>SBSV</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.23907</cpoA>
+      <cpoB>-38.31433</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>210</velocidade>
+    <proa>204</proa>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>A320</designador>
+    <ssr>6501</ssr>
+    <indicativo>TPU028</indicativo>
+    <origem>KMIA</origem>
+    <destino>SBSV</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.35617</cpoA>
+      <cpoB>-38.67367</cpoB>
+    </coord>
+    <altitude>200</altitude>
+    <velocidade>280</velocidade>
+    <proa>171</proa>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>F5</designador>
+    <ssr>4502</ssr>
+    <indicativo>FAB4482</indicativo>
+    <origem>SBAN</origem>
+    <destino>SBSV</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-12.84698</cpoA>
+      <cpoB>-39.0016</cpoB>
+    </coord>
+    <altitude>280</altitude>
+    <velocidade>440</velocidade>
+    <proa>95</proa>
+  </trafego>
+
+  <trafego nTrf="8">
+    <designador>B737</designador>
+    <ssr>4503</ssr>
+    <indicativo>PUA0236</indicativo>
+    <origem>SAEZ</origem>
+    <destino>SBSV</destino>
+    <temptrafego>30</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-13.25837</cpoA>
+      <cpoB>-38.98309</cpoB>
+    </coord>
+    <altitude>240</altitude>
+    <velocidade>340</velocidade>
+    <proa>62</proa>
+  </trafego>
+</trafegos>
+

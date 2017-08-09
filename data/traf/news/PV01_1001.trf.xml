@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE trafegos>
+<trafegos VERSION="0001" CODE="1961" FORMAT="NEWTON">
+
+  <trafego nTrf="1">
+    <designador>C208</designador>
+    <ssr>6601</ssr>
+    <indicativo>PRRMB</indicativo>
+    <origem>SBPV</origem>
+    <destino>SWLB</destino>
+    <temptrafego>0</temptrafego>
+    <procedimento>SUB45036</procedimento>
+    <niveltrj>60</niveltrj>
+    <veltrj>160</veltrj>
+  </trafego>
+
+  <trafego nTrf="2">
+    <designador>MU2</designador>
+    <ssr>6602</ssr>
+    <indicativo>PRRME</indicativo>
+    <origem>SJOG</origem>
+    <destino>SBPV</destino>
+    <temptrafego>0</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.36291</cpoA>
+      <cpoB>-63.52859</cpoB>
+    </coord>
+    <altitude>125</altitude>
+    <velocidade>230</velocidade>
+    <proa>330</proa>
+    <niveltrj>125</niveltrj>
+    <veltrj>230</veltrj>
+  </trafego>
+
+  <trafego nTrf="3">
+    <designador>PA34</designador>
+    <ssr>6603</ssr>
+    <indicativo>PRRDP</indicativo>
+    <origem>SBEG</origem>
+    <destino>SBPV</destino>
+    <temptrafego>2</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.18386</cpoA>
+      <cpoB>-63.37336</cpoB>
+    </coord>
+    <altitude>80</altitude>
+    <velocidade>145</velocidade>
+    <proa>225</proa>
+    <niveltrj>80</niveltrj>
+    <veltrj>145</veltrj>
+  </trafego>
+
+  <trafego nTrf="4">
+    <designador>C208</designador>
+    <ssr>6604</ssr>
+    <indicativo>PTMEC</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>3</temptrafego>
+    <procedimento>SUB45004</procedimento>
+    <niveltrj>90</niveltrj>
+    <veltrj>150</veltrj>
+  </trafego>
+
+  <trafego nTrf="5">
+    <designador>E50P</designador>
+    <ssr>6605</ssr>
+    <indicativo>PTMAJ</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBEG</destino>
+    <temptrafego>11</temptrafego>
+    <procedimento>SUB45003</procedimento>
+    <niveltrj>330</niveltrj>
+    <veltrj>380</veltrj>
+  </trafego>
+
+  <trafego nTrf="6">
+    <designador>C182</designador>
+    <ssr>6606</ssr>
+    <indicativo>PRBIE</indicativo>
+    <origem>SJOG</origem>
+    <destino>SWRO</destino>
+    <temptrafego>15</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-9.36291</cpoA>
+      <cpoB>-63.52859</cpoB>
+    </coord>
+    <altitude>65</altitude>
+    <velocidade>125</velocidade>
+    <proa>330</proa>
+    <niveltrj>65</niveltrj>
+    <veltrj>125</veltrj>
+  </trafego>
+
+  <trafego nTrf="7">
+    <designador>A320</designador>
+    <ssr>6607</ssr>
+    <indicativo>TAM3526</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBBR</destino>
+    <temptrafego>16</temptrafego>
+    <procedimento>SUB45011</procedimento>
+    <niveltrj>350</niveltrj>
+    <veltrj>450</veltrj>
+  </trafego>
+
+  <trafego nTrf="8">
+    <designador>A29</designador>
+    <ssr>3301</ssr>
+    <indicativo>GRIFO182</indicativo>
+    <origem>SBPV</origem>
+    <destino>SBPV</destino>
+    <temptrafego>20</temptrafego>
+    <procedimento>SUB45007</procedimento>
+    <niveltrj>130</niveltrj>
+    <veltrj>250</veltrj>
+  </trafego>
+
+  <trafego nTrf="9">
+    <designador>AB11</designador>
+    <ssr>6610</ssr>
+    <indicativo>PPGRA</indicativo>
+    <origem>SSZD</origem>
+    <destino>SWRO</destino>
+    <temptrafego>20</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.81377</cpoA>
+      <cpoB>-63.73025</cpoB>
+    </coord>
+    <altitude>10</altitude>
+    <velocidade>100</velocidade>
+    <proa>273</proa>
+    <niveltrj>25</niveltrj>
+    <veltrj>100</veltrj>
+  </trafego>
+
+  <trafego nTrf="10">
+    <designador>C295</designador>
+    <ssr>6611</ssr>
+    <indicativo>ARARA27</indicativo>
+    <origem>SBRB</origem>
+    <destino>SBPV</destino>
+    <temptrafego>25</temptrafego>
+    <coord>
+      <tipo>L</tipo>
+      <cpoA>-8.80517</cpoA>
+      <cpoB>-64.64724</cpoB>
+    </coord>
+    <altitude>150</altitude>
+    <velocidade>240</velocidade>
+    <proa>83</proa>
+    <niveltrj>100</niveltrj>
+    <veltrj>240</veltrj>
+  </trafego>
+</trafegos>
+
