@@ -159,6 +159,9 @@ class CNetListener(multiprocessing.Process):
                     l_log.setLevel(logging.WARNING)
                     l_log.warning("<E01: versão da mensagem não reconhecida:[{}].".format(llst_data[0]))
 
+                    # próxima mensagem
+                    continue
+
                 # mensagem válida ?
                 if int(llst_data[1]) in gdefs.SET_MSG_VALIDAS:
                     # coloca a mensagem na queue
@@ -173,6 +176,7 @@ class CNetListener(multiprocessing.Process):
 
             # em caso de erro...
             except socket.timeout, l_err:
+                # ignora
                 pass
 
             # em caso de erro...    
@@ -182,6 +186,7 @@ class CNetListener(multiprocessing.Process):
 
                 # data unavailable ?
                 if (errno.EAGAIN == li_err) or (errno.EWOULDBLOCK == li_err):
+                    # próxima mensagem
                     continue
 
                 # senão, a "real" error occurred
