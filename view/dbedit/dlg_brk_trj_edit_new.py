@@ -19,13 +19,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+revision 0.2  2017/aug  mlabru
+pep8 style conventions
+
 revision 0.1  2017/jul  matias
 initial release (Linux/Python)
 ---------------------------------------------------------------------------------------------------
 """
-__version__ = "$revision: 0.1$"
+__version__ = "$revision: 0.2$"
 __author__ = "Ivan Matias"
-__date__ = "2017/07"
+__date__ = "2017/08"
 
 # < imports >--------------------------------------------------------------------------------------
 
@@ -41,320 +44,317 @@ from PyQt4 import QtGui
 import libs.coords.coord_defs as cdefs
 
 # model
-import model.items.brk_new as brkTrj
+import model.items.brk_new as bptrj
 
 # view
 import view.dbedit.dlg_brk_trj_edit_new_ui as dlg
 
-# logger
-M_LOG = logging.getLogger(__name__)
-M_LOG.setLevel(logging.DEBUG)
+# control
+import control.control_debug as cdbg
 
-# < class CDlgBrkTrjEditNEW >-------------------------------------------------------------------------
+# < class CDlgBrkTrjEditNEW >----------------------------------------------------------------------
 
 class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
     """
     mantém as informações sobre a dialog de edição de pontos de uma trajetória
     """
-    # -------------------------------------------------------------------------------------------
-    def __init__(self, f_control, f_oBrkTrj=None, f_parent=None):
+    # ---------------------------------------------------------------------------------------------
+    def __init__(self, f_control, flst_brk_trj=None, f_parent=None):
         """
         constructor
         cria uma dialog de edição de pontos de uma trajetória
 
-        @param f_control : control manager do editor da base de dados
-        @param f_lstBrkTrj : lista como os pontos da trajetória a editar
-        @param f_parent : janela vinculada
+        @param f_control: control manager do editor da base de dados
+        @param flst_brk_trj: lista como os pontos da trajetória a editar
+        @param f_parent: janela vinculada
         """
-        # verifica parâmetros de entrada
-        assert (f_control)
+        # check input
+        assert f_control
 
         # init super class
         super(CDlgBrkTrjEditNEW, self).__init__(f_parent)
 
-        # salva o control manager localmente
-        self._control = f_control
+        # model
+        self.__model = f_control.model
+        assert self.__model
 
-        # salve o model manager localmente
-        self._model = f_control.model
-        assert (self._model)
-
-        # obtém o gerente de configuração
-        self._config = f_control.config
-        assert (self._config)
-
-        # obtém o dicionário de configuração
-        self._dctConfig = self._config.dct_config
-        assert (self._dctConfig)
-
-        # salva a parent window localmente
-        self._wndParent = f_parent
-
-        # salva os parâmetros localmente
-        self._oBrkTrj = f_oBrkTrj
-
-        # pathnames
-        self._sPN = None
+        # parâmetros
+        self.__brk_trj = flst_brk_trj
 
         # monta a dialog
         self.setupUi(self)
 
         # configura título da dialog
-        if self._oBrkTrj:
+        if self.__brk_trj:
             self.setWindowTitle(self.tr(u"Edição dos pontos da trajetória"))
+
+        # senão,...
         else:
             self.setWindowTitle(self.tr(u"Novos pontos da trajetória"))
 
         # carrega o combobox de fixos e o combobox de procedimentos
-        self.fillComboBoxes()
+        self.__fill_comboboxes()
 
         # configura botões
         self.btnCancel.setText("&Cancela")
         self.btnOk.setFocus()
 
         # configurações de conexões slot/signal
-        self.configConnects()
+        self.__config_connects()
 
         # configurações de títulos e mensagens da janela de edição
-        self.configTexts()
+        self.__config_texts()
 
         # restaura as configurações da janela de edição
-        self.restoreSettings()
+        self.__restore_settings()
 
         # atualiza na tela os dados de pontos da trajetória
-        self.updateBrkTrjData()
+        self.__update_brk_trj_data()
 
-
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------
     def accept(self):
         """
         DOCUMENT ME!
         """
-        # logger
-        M_LOG.info("accept:>>")
-        M_LOG.debug(" Accept editing data ...")
-
         # ponto da trajetória existe ?
-        if (self._oBrkTrj is not None):
+        if self.__brk_trj is not None:
             # salva edição do ponto da trajetória
-            l_dctBrkTrj = self.guiDataToDict()
-            l_dctBrkTrj["nBrk"] = self._oBrkTrj.i_brk_id
-            self._oBrkTrj.load_brk(l_dctBrkTrj)
+            ldct_brk_trj = self.__gui_data2dict()
+
+            # coloca no dicionário
+            ldct_brk_trj["nBrk"] = self.__brk_trj.i_brk_id
+
+            # carrega o dicionário
+            self.__brk_trj.load_brk(ldct_brk_trj)
 
         # senão, o ponto da trajetória não existe
         else:
             # salva novo ponto da trajetória
-            self.acceptNew()
-
-        # logger
-        M_LOG.info("accept:<<")
+            self.__accept_new()
 
         # faz o "accept"
         QtGui.QDialog.accept(self)
 
-    # -------------------------------------------------------------------------------------------
-    def acceptNew(self):
+    # ---------------------------------------------------------------------------------------------
+    def __accept_new(self):
         """
         DOCUMENT ME!
         """
         # cria um novo ponto da trajetória
-        self._oBrkTrj = brkTrj.CBrkNEW(self._model, self, self.guiDataToDict())
-        assert (self._oBrkTrj)
+        self.__brk_trj = bptrj.CBrkNEW(self.__model, self, self.__gui_data2dict())
+        assert self.__brk_trj
 
     # ---------------------------------------------------------------------------------------------
-    def configConnects(self):
+    def __config_connects(self):
         """
         configura as conexões slot/signal
         """
-        # exercício
-
         # conecta botão Ok
-        self.connect(self.btnOk,
-                     QtCore.SIGNAL("clicked()"),
-                     self.accept)
+        self.btnOk.clicked.connect(self.accept)
 
         # conecta botão Cancela
-        self.connect(self.btnCancel,
-                     QtCore.SIGNAL("clicked()"),
-                     self.reject)
+        self.btnCancel.clicked.connect(self.reject)
 
         # conecta o signal de mudança de tipo de coordenada
-        self.cbxTCrd.currentIndexChanged.connect(self.selectionTCrdChange)
+        self.cbxTCrd.currentIndexChanged.connect(self.__selection_tcrd_change)
 
         # conecta o signal de mudança de fixo
-        self.cbxFixo.currentIndexChanged.connect(self.selectionFixoChange)
+        self.cbxFixo.currentIndexChanged.connect(self.__selection_fixo_change)
 
-    # -------------------------------------------------------------------------------------------
-    def configTexts(self):
+    # ---------------------------------------------------------------------------------------------
+    def __config_texts(self):
         """
         DOCUMENT ME!
         """
         # configura títulos e mensagens
-        self._txtSettings = "CDlgBrkTrjEditNEW"
+        self.__txt_settings = "CDlgBrkTrjEditNEW"
 
-    # -------------------------------------------------------------------------------------------
-    def fillComboBoxes(self):
+    # ---------------------------------------------------------------------------------------------
+    def __fill_comboboxes(self):
         """
         carrega os comboboxes de prcoedimento e de performance de aeronaves
         :return:
         """
-        # carrega os fixos definidos no sistema
+        # config combobox de fixos
+        self.cbxFixo.setEditable(True)
+        self.cbxFixo.setCompleter(QtGui.QCompleter(self.cbxFixo))
+        self.cbxFixo.completer().setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.cbxFixo.setInsertPolicy(QtGui.QComboBox.NoInsert)
+        # self.cbxFixo.activated.connect(__check_activated)
 
+        self.cbxFixo.completer().setCompletionMode(QtGui.QCompleter.PopupCompletion)
+        self.cbxFixo.completer().setModel(self.cbxFixo.model())
+
+        # lista de fixos
         llst_fix = []
-        for ls_fix in self._model.dct_fix.keys():
+
+        # para todos os fixos...
+        for ls_fix in self.__model.dct_fix.keys():
+            # carrega os fixos definidos no sistema
             llst_fix.append(ls_fix)
 
+        # ordena
         llst_fix.sort()
+
+        # coloca na combobox
         self.cbxFixo.addItems(llst_fix)
 
         # carrega os procedimentos definidos no sistema
-        llst_proc=[]
+        llst_proc = []
 
-        # aproximacoes
-        for li_id in self._model.dct_apx.keys():
+        # aproximações
+        for li_id in self.__model.dct_apx.keys():
             ls_apx = "APX" + str(li_id).zfill(3)
+
+            # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_apx)
 
         # subidas
-        for li_id in self._model.dct_sub.keys():
+        for li_id in self.__model.dct_sub.keys():
             ls_sub = "SUB" + str(li_id).zfill(3)
+
+            # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_sub)
 
         # esperas
-        for li_id in self._model.dct_esp.keys():
+        for li_id in self.__model.dct_esp.keys():
             ls_esp = "ESP" + str(li_id).zfill(3)
+
+            # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_esp)
 
         # esperas
-        for li_id in self._model.dct_trj.keys():
+        for li_id in self.__model.dct_trj.keys():
             ls_trj = "TRJ" + str(li_id).zfill(3)
+
+            # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_trj)
 
+        # ordena a lista de procedimentos
         llst_proc.sort()
+
+        # insere primeiro procedimento
         llst_proc.insert(0, "None")
+
+        # coloca na combobox
         self.cbxTrjPrc.addItems(llst_proc)
 
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------
     def getData(self):
         """
         DOCUMENT ME!
         """
         # return
-        return (self._oBrkTrj)
+        return self.__brk_trj
 
-    # -------------------------------------------------------------------------------------------
-    def guiDataToDict(self):
+    # ---------------------------------------------------------------------------------------------
+    def __gui_data2dict(self):
         """
-
         :return:
         """
         # logger
-        M_LOG.info("guiDataToDict:>>")
-        l_dctBrk = {}
+        ldct_brk = {}
 
         # número do breakpoint da trajetória
-        l_dctBrk["nBrk"] = 0
+        ldct_brk["nBrk"] = 0
 
         # tipo de coordenada
-        l_dctTCoord = {}
+        ldct_tcrd = {}
+
         if 0 == self.cbxTCrd.currentIndex():
-            l_dctTCoord["tipo"] = 'L'
+            ldct_tcrd["tipo"] = 'L'
             ls_cpoA = str(self.dsbGeoLat.text()).strip()
             ls_cpoA = ls_cpoA.replace(",", ".")
-            l_dctTCoord["cpoA"] = ls_cpoA
+            ldct_tcrd["cpoA"] = ls_cpoA
+
             ls_cpoB = str(self.dsbGeoLng.text()).strip()
             ls_cpoB = ls_cpoB.replace(",", ".")
-            l_dctTCoord["cpoB"] = ls_cpoB
+            ldct_tcrd["cpoB"] = ls_cpoB
+
             ls_cpoC = str(self.dsbGeoAlt.text()).strip()
             ls_cpoC = ls_cpoC.replace(",", ".")
-            lf_AltM = float(ls_cpoC) * cdefs.D_CNV_FT2M
-            l_dctTCoord["cpoC"] = str(lf_AltM)
+            ldct_tcrd["cpoC"] = str(float(ls_cpoC) * cdefs.D_CNV_FT2M)
+
+        # senão,...
         else:
-            l_dctTCoord["tipo"] = 'F'
-            l_dctTCoord["cpoA"] = str(self.cbxFixo.currentText()).strip()
+            ldct_tcrd["tipo"] = 'F'
+            ldct_tcrd["cpoA"] = str(self.cbxFixo.currentText()).strip()
 
         # coordenada
-        l_dctBrk["coord"] = l_dctTCoord
+        ldct_brk["coord"] = ldct_tcrd
 
         # altitude
         ls_alt = str(self.dsbTrjAlt.text()).strip()
         ls_alt = ls_alt.replace(",", ".", 1)
-        l_dctBrk["altitude"] = ls_alt
+        ldct_brk["altitude"] = ls_alt
 
         # velocidade
         ls_vel = str(self.dsbTrjVel.text()).strip()
         ls_vel = ls_vel.replace(",", ".")
-        l_dctBrk["velocidade"] = ls_vel
+        ldct_brk["velocidade"] = ls_vel
 
         # procedimento
-        ls_trjPrc = ""
+        ls_prc = ""
+
         if "None" != str(self.cbxTrjPrc.currentText()):
-            ls_trjPrc = str(self.cbxTrjPrc.currentText()).strip()
+            ls_prc = str(self.cbxTrjPrc.currentText()).strip()
 
-        l_dctBrk["procedimento"] = ls_trjPrc
+        ldct_brk["procedimento"] = ls_prc
 
-        # logger
-        M_LOG.info("guiDataToDict:<<")
+        # return
+        return ldct_brk
 
-        return l_dctBrk
-
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------
     def reject(self):
         """
         DOCUMENT ME!
         """
-        # logger
-        M_LOG.info("reject:>>")
-        M_LOG.debug(" Set object brk to None ...")
-        self._oBrkTrj = None
-
-        # logger
-        M_LOG.info("reject:<<")
+        # 
+        self.__brk_trj = None
 
         # faz o "reject"
         QtGui.QDialog.reject(self)
 
-    # -------------------------------------------------------------------------------------------
-    def restoreSettings(self):
+    # ---------------------------------------------------------------------------------------------
+    def __restore_settings(self):
         """
         restaura as configurações salvas para esta janela
         """
         # obtém os settings
         l_set = QtCore.QSettings()
-        assert (l_set)
+        assert l_set
 
         # restaura geometria da janela
-        self.restoreGeometry(l_set.value("%s/Geometry" % (self._txtSettings)).toByteArray())
+        self.restoreGeometry(l_set.value("%s/Geometry" % (self.__txt_settings)).toByteArray())
 
         # return
         return True
 
-    # -------------------------------------------------------------------------------------------
-    def selectionFixoChange(self, f_iIndex):
+    # ---------------------------------------------------------------------------------------------
+    def __selection_fixo_change(self, f_iIndex):
         """
         DOCUMENT ME!
         :param f_iIndex:
         :return:
         """
-        # logger
-        M_LOG.info("selectionFixoChange:>>")
+        ls_ind_fixo = str(self.cbxFixo.currentText()).strip()
+        cdbg.M_DBG.debug ("Indicativo do fixo selecionado: {}".format(ls_ind_fixo))
 
-        ls_IndFixo = str(self.cbxFixo.currentText()).strip()
-        M_LOG.debug ("Indicativo do fixo selecionado [%s]" % ls_IndFixo)
-
-        if ls_IndFixo in self._model.dct_fix:
-            l_oFixo = self._model.dct_fix[ls_IndFixo]
-            M_LOG.debug("Lat [%s] - Lng [%s]" % (str(l_oFixo.f_fix_lat), str(l_oFixo.f_fix_lng)))
+        if ls_ind_fixo in self.__model.dct_fix:
+            l_oFixo = self.__model.dct_fix[ls_ind_fixo]
+            cdbg.M_DBG.debug("Lat [%s] - Lng [%s]" % (str(l_oFixo.f_fix_lat), str(l_oFixo.f_fix_lng)))
             self.qleFixoLat.setText(str(l_oFixo.f_fix_lat))
             self.qleFixoLng.setText(str(l_oFixo.f_fix_lng))
+
+        # senão,...
         else:
-            M_LOG.warning("Fixo inexistente [%s]" % ls_IndFixo)
+            # logger
+            l_log = logging.getLogger("CDlgBrkTrjEditNEW::__selection_fixo_change")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning("Fixo {} inexistente.".format(ls_ind_fixo))
 
-        # logger
-        M_LOG.info("selectionFixoChange:<<")
-
-    # -------------------------------------------------------------------------------------------
-    def selectionTCrdChange(self, f_iIndex):
+    # ---------------------------------------------------------------------------------------------
+    def __selection_tcrd_change(self, f_iIndex):
         """
         DOCUMENT ME!
         :param f_iIndex:
@@ -362,55 +362,60 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         """
         self.stkTCrd.setCurrentIndex(f_iIndex)
 
-    # -------------------------------------------------------------------------------------------
-    def updateBrkTrjData(self):
+    # ---------------------------------------------------------------------------------------------
+    def __update_brk_trj_data(self):
         """
-        atualiza na tela os a área de dados do ponto da trajetória selecionado
+        atualiza na tela a área de dados do ponto da trajetória selecionado
         """
-        # logger
-        M_LOG.info("updateBrkTrjData:>>")
-        M_LOG.debug("Mostrar as informações de um ponto da trajetória")
-
         # ponto da trajetória existe ?
-        if (self._oBrkTrj is not None):
+        if self.__brk_trj is not None:
+            # set default index (lat/lng)
             li_index = 0
-            M_LOG.debug("Tipo de coordenada: [%s]" % self._oBrkTrj.s_brk_tipo)
-            if "F" == self._oBrkTrj.s_brk_tipo:
+
+            cdbg.M_DBG.debug("Tipo de coordenada: {}".format(self.__brk_trj.s_brk_tipo))
+
+            # tipo fixo ?
+            if "F" == self.__brk_trj.s_brk_tipo:
+                # set index 
                 li_index = 1
-            M_LOG.debug("Índice: [%d]" % li_index)
 
+            cdbg.M_DBG.debug("Índice: {}".format(li_index))
+
+            # coordinate type
             self.cbxTCrd.setCurrentIndex(li_index)
-            #self.stkTCrd.setCurrentIndex(li_index)
 
+            # lat/lng ?
             if 0 == li_index:
-                self.dsbGeoLat.setValue(self._oBrkTrj.f_brk_lat)
-                self.dsbGeoLng.setValue(self._oBrkTrj.f_brk_lng)
-                self.dsbGeoAlt.setValue(self._oBrkTrj.f_brk_alt * cdefs.D_CNV_M2FT)
+                self.dsbGeoLat.setValue(self.__brk_trj.f_brk_lat)
+                self.dsbGeoLng.setValue(self.__brk_trj.f_brk_lng)
+                self.dsbGeoAlt.setValue(self.__brk_trj.f_brk_alt * cdefs.D_CNV_M2FT)
+
+            # senão, fixo
             else:
-                self.cbxFixo.setCurrentIndex(self.cbxFixo.findText(self._oBrkTrj.s_brk_cpoA))
-                self.qleFixoLat.setText(str(self._oBrkTrj.f_brk_lat))
-                self.qleFixoLng.setText(str(self._oBrkTrj.f_brk_lng))
+                self.cbxFixo.setCurrentIndex(self.cbxFixo.findText(self.__brk_trj.s_brk_cpoA))
+                self.qleFixoLat.setText(str(self.__brk_trj.f_brk_lat))
+                self.qleFixoLng.setText(str(self.__brk_trj.f_brk_lng))
 
             # altitude (QDoubleSpinBox)
-            lf_AltFt = self._oBrkTrj.f_brk_alt * cdefs.D_CNV_M2FT
-            self.dsbTrjAlt.setValue(lf_AltFt)
+            self.dsbTrjAlt.setValue(self.__brk_trj.f_brk_alt * cdefs.D_CNV_M2FT)
 
             # velocidade (QDoubleSpinBox)
-            lf_VelKt = self._oBrkTrj.f_brk_vel * cdefs.D_CNV_MS2KT
-            self.dsbTrjVel.setValue(lf_VelKt)
+            self.dsbTrjVel.setValue(self.__brk_trj.f_brk_vel * cdefs.D_CNV_MS2KT)
 
             # procedimento (QComboBox)
-            li_cbxIndex = self.cbxTrjPrc.findText(self._oBrkTrj.s_brk_prc)
-            if -1 == li_cbxIndex:
-                li_cbxIndex = 0
-            self.cbxTrjPrc.setCurrentIndex(li_cbxIndex)
+            li_index_prc = self.cbxTrjPrc.findText(self.__brk_trj.s_brk_prc)
+
+            # none selected ?
+            if -1 == li_index_prc:
+                # set index
+                li_index_prc = 0
+
+            # procedure 
+            self.cbxTrjPrc.setCurrentIndex(li_index_prc)
 
         # senão, é um novo tráfego do exercício
         else:
             # posiciona cursor no tipo de coordenada do breakpoint da trajetória
             self.cbxTCrd.setFocus()
-
-        # logger
-        M_LOG.info("updateBrkTrjData:<<")
 
 # < the end >--------------------------------------------------------------------------------------

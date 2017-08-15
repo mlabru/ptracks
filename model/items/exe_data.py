@@ -46,7 +46,7 @@ import model.items.parser_utils as parser
 
 # control
 import control.events.events_basic as events
-import control.control_debug as cdbg
+# import control.control_debug as cdbg
 
 # < class CExeData >-------------------------------------------------------------------------------
 
@@ -305,17 +305,11 @@ class CExeData(dict):
 
         @return flag e mensagem
         """
-        # logger
-        cdbg.M_DBG.info("save2disk:>>")
-
         # return code
         lv_ok = True
 
         # mensagem
         ls_msg = "save Ok"
-
-        # logger
-        cdbg.M_DBG.info("save2disk:<<")
 
         # retorna flag e mensagem
         return lv_ok, ls_msg

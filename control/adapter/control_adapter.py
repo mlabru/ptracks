@@ -49,7 +49,7 @@ import model.common.glb_data as gdata
 import model.adapter.model_adapter as model
 
 # control 
-import control.control_debug as cdbg
+# import control.control_debug as cdbg
 import control.control_manager as control
 
 import control.common.glb_defs as gdefs
@@ -369,16 +369,10 @@ class CControlAdapter(control.CControlManager):
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_cnfg(self):
-        """
-        get configuration listener
-        """
         return self.__sck_rcv_cnfg
 
     @sck_rcv_cnfg.setter
     def sck_rcv_cnfg(self, f_val):
-        """
-        set configuration listener
-        """
         # check input
         assert f_val
 
@@ -388,31 +382,19 @@ class CControlAdapter(control.CControlManager):
     # ---------------------------------------------------------------------------------------------
     @property
     def q_rcv_trks(self):
-        """
-        get tracks queue
-        """
         return self.__q_rcv_trks
 
     @q_rcv_trks.setter
     def q_rcv_trks(self, f_val):
-        """
-        set tracks queue
-        """
         self.__q_rcv_trks = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_trks(self):
-        """
-        get data listener
-        """
         return self.__sck_rcv_trks
 
     @sck_rcv_trks.setter
     def sck_rcv_trks(self, f_val):
-        """
-        set data listener
-        """
         # check input
         assert f_val
 
