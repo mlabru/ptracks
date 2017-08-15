@@ -38,9 +38,6 @@ import multiprocessing
 import Queue
 import time
 
-import sip
-sip.setapi('QString', 2)
-
 # model
 import model.common.glb_data as gdata
 import model.super.model_super as model

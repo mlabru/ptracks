@@ -40,9 +40,6 @@ import Queue
 import sys
 import time
 
-import sip
-sip.setapi('QString', 2)
-
 # PyQt library
 from PyQt4 import QtCore
 from PyQt4 import QtGui

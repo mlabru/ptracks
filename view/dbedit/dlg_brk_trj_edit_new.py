@@ -45,12 +45,13 @@ import libs.coords.coord_defs as cdefs
 
 # model
 import model.items.brk_new as bptrj
+import model.validators.fix_validator as fixval
 
 # view
 import view.dbedit.dlg_brk_trj_edit_new_ui as dlg
 
 # control
-import control.control_debug as cdbg
+# import control.control_debug as cdbg
 
 # < class CDlgBrkTrjEditNEW >----------------------------------------------------------------------
 
@@ -145,6 +146,58 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         assert self.__brk_trj
 
     # ---------------------------------------------------------------------------------------------
+    def __check_state(self, *args, **kwargs):
+        """
+        identifies the sender of the signal that called it, and validates it's content using the
+        assigned validator. The background colour of the widget is then set using the
+        setStyleSheet method
+        """
+        # get sender
+        l_sender = self.sender()
+
+        if l_sender is None:  
+            # return
+            return
+
+        # get validator
+        l_validator = l_sender.validator()
+        assert l_validator
+
+        if l_validator is None:  
+            # return
+            return
+
+        # sender is a combobox ?
+        if isinstance(l_sender, QtGui.QComboBox):
+           # get QLineEdit of that combobox
+           l_sender = l_sender.lineEdit()
+           assert l_sender
+
+        # validate
+        l_tuple = l_validator.validate(str(l_sender.text()), l_sender.cursorPosition())
+
+        # get state
+        l_state = l_tuple[0] 
+
+        # acceptable ?
+        if QtGui.QValidator.Acceptable == l_state:
+            # green
+            l_color = "#c4df9b"
+
+        # intermediate ?
+        elif QtGui.QValidator.Intermediate == l_state:
+            # yellow
+            l_color = "#fff79a"
+
+        # senão, invalid...
+        else:
+            # red
+            l_color = "#f6989d"
+
+        # set background color
+        l_sender.setStyleSheet("QLineEdit { background-color: %s }" % l_color)
+
+    # ---------------------------------------------------------------------------------------------
     def __config_connects(self):
         """
         configura as conexões slot/signal
@@ -158,9 +211,6 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         # conecta o signal de mudança de tipo de coordenada
         self.cbxTCrd.currentIndexChanged.connect(self.__selection_tcrd_change)
 
-        # conecta o signal de mudança de fixo
-        self.cbxFixo.currentIndexChanged.connect(self.__selection_fixo_change)
-
     # ---------------------------------------------------------------------------------------------
     def __config_texts(self):
         """
@@ -173,18 +223,7 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
     def __fill_comboboxes(self):
         """
         carrega os comboboxes de prcoedimento e de performance de aeronaves
-        :return:
         """
-        # config combobox de fixos
-        self.cbxFixo.setEditable(True)
-        self.cbxFixo.setCompleter(QtGui.QCompleter(self.cbxFixo))
-        self.cbxFixo.completer().setCaseSensitivity(QtCore.Qt.CaseInsensitive)
-        self.cbxFixo.setInsertPolicy(QtGui.QComboBox.NoInsert)
-        # self.cbxFixo.activated.connect(__check_activated)
-
-        self.cbxFixo.completer().setCompletionMode(QtGui.QCompleter.PopupCompletion)
-        self.cbxFixo.completer().setModel(self.cbxFixo.model())
-
         # lista de fixos
         llst_fix = []
 
@@ -198,6 +237,24 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
 
         # coloca na combobox
         self.cbxFixo.addItems(llst_fix)
+
+        # config combobox de fixos
+        self.cbxFixo.setEditable(True)
+        self.cbxFixo.setInsertPolicy(QtGui.QComboBox.NoInsert)
+
+        # completer 
+        self.cbxFixo.setCompleter(QtGui.QCompleter(self.cbxFixo))
+        self.cbxFixo.completer().setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.cbxFixo.completer().setCompletionMode(QtGui.QCompleter.PopupCompletion)
+        self.cbxFixo.completer().setModel(self.cbxFixo.model())
+
+        # validator
+        self.cbxFixo.setValidator(fixval.CFixValidator(self))
+
+        # connections
+        self.cbxFixo.editTextChanged.connect(self.__check_state)
+        self.cbxFixo.editTextChanged.emit(self.cbxFixo.currentText())
+        self.cbxFixo.currentIndexChanged.connect(self.__selection_fixo_change)
 
         # carrega os procedimentos definidos no sistema
         llst_proc = []
@@ -331,20 +388,22 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         return True
 
     # ---------------------------------------------------------------------------------------------
-    def __selection_fixo_change(self, f_iIndex):
+    def __selection_fixo_change(self, fi_ndx):
         """
         DOCUMENT ME!
-        :param f_iIndex:
-        :return:
-        """
-        ls_ind_fixo = str(self.cbxFixo.currentText()).strip()
-        cdbg.M_DBG.debug ("Indicativo do fixo selecionado: {}".format(ls_ind_fixo))
 
-        if ls_ind_fixo in self.__model.dct_fix:
-            l_oFixo = self.__model.dct_fix[ls_ind_fixo]
-            cdbg.M_DBG.debug("Lat [%s] - Lng [%s]" % (str(l_oFixo.f_fix_lat), str(l_oFixo.f_fix_lng)))
-            self.qleFixoLat.setText(str(l_oFixo.f_fix_lat))
-            self.qleFixoLng.setText(str(l_oFixo.f_fix_lng))
+        @param fi_ndx:
+        """
+        # indicativo do fixo selecionado 
+        ls_ind_fixo = str(self.cbxFixo.currentText()).strip().upper()
+
+        # fixo selecionado 
+        l_fixo = self.__model.dct_fix.get(ls_ind_fixo, None)
+        
+        if l_fixo is not None:
+            # get fix data
+            self.qleFixoLat.setText(str(l_fixo.f_fix_lat))
+            self.qleFixoLng.setText(str(l_fixo.f_fix_lng))
 
         # senão,...
         else:
@@ -354,13 +413,14 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
             l_log.warning("Fixo {} inexistente.".format(ls_ind_fixo))
 
     # ---------------------------------------------------------------------------------------------
-    def __selection_tcrd_change(self, f_iIndex):
+    def __selection_tcrd_change(self, fi_ndx):
         """
         DOCUMENT ME!
-        :param f_iIndex:
-        :return:
+
+        @param fi_ndx:
         """
-        self.stkTCrd.setCurrentIndex(f_iIndex)
+        # set new stack
+        self.stkTCrd.setCurrentIndex(fi_ndx)
 
     # ---------------------------------------------------------------------------------------------
     def __update_brk_trj_data(self):
@@ -372,14 +432,10 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
             # set default index (lat/lng)
             li_index = 0
 
-            cdbg.M_DBG.debug("Tipo de coordenada: {}".format(self.__brk_trj.s_brk_tipo))
-
             # tipo fixo ?
             if "F" == self.__brk_trj.s_brk_tipo:
                 # set index 
                 li_index = 1
-
-            cdbg.M_DBG.debug("Índice: {}".format(li_index))
 
             # coordinate type
             self.cbxTCrd.setCurrentIndex(li_index)
@@ -417,5 +473,14 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         else:
             # posiciona cursor no tipo de coordenada do breakpoint da trajetória
             self.cbxTCrd.setFocus()
+
+    # =============================================================================================
+    # data
+    # =============================================================================================
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def model(self):
+        return self.__model
 
 # < the end >--------------------------------------------------------------------------------------

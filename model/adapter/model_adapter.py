@@ -104,32 +104,20 @@ class CModelAdapter(model.CModelManager):
     # ---------------------------------------------------------------------------------------------
     @property
     def coords(self):
-        """
-        get coordinate system
-        """
         return self.__coords
 
     @coords.setter
     def coords(self, f_val):
-        """
-        set coordinate system
-        """
         self.__coords = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def core_location(self):
-        """
-        get core_location
-        """
         return self.__core_location
 
     # ---------------------------------------------------------------------------------------------
     @property
     def geomag(self):
-        """
-        get geomag
-        """
         return self.__geomag
 
 # < the end >--------------------------------------------------------------------------------------
