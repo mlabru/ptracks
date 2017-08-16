@@ -130,20 +130,12 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
 
         # senão, o ponto da trajetória não existe
         else:
-            # salva novo ponto da trajetória
-            self.__accept_new()
+            # cria um novo ponto da trajetória
+            self.__brk_trj = bptrj.CBrkNEW(self.__model, self, self.__gui_data2dict())
+            assert self.__brk_trj
 
         # faz o "accept"
         QtGui.QDialog.accept(self)
-
-    # ---------------------------------------------------------------------------------------------
-    def __accept_new(self):
-        """
-        DOCUMENT ME!
-        """
-        # cria um novo ponto da trajetória
-        self.__brk_trj = bptrj.CBrkNEW(self.__model, self, self.__gui_data2dict())
-        assert self.__brk_trj
 
     # ---------------------------------------------------------------------------------------------
     def __check_state(self, *args, **kwargs):
@@ -307,7 +299,7 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
     # ---------------------------------------------------------------------------------------------
     def __gui_data2dict(self):
         """
-        :return:
+        DOCUMENT ME!
         """
         # logger
         ldct_brk = {}
@@ -383,9 +375,6 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
 
         # restaura geometria da janela
         self.restoreGeometry(l_set.value("%s/Geometry" % (self.__txt_settings)).toByteArray())
-
-        # return
-        return True
 
     # ---------------------------------------------------------------------------------------------
     def __selection_fixo_change(self, fi_ndx):
