@@ -79,22 +79,22 @@ class CFixValidator(QtGui.QValidator):
 
         # string vazia ?
         if len(fs_fixo) < 0:
-            # return
+            # return tuple
             return (QtGui.QValidator.Invalid, ls_fixo, fi_pos)
 
         # fixo válido ?
         if ls_fixo in self.__model.dct_fix:
-            # return
+            # return tuple
             return (QtGui.QValidator.Acceptable, ls_fixo, fi_pos)
 
         # para todos os fixos...
         for l_key in self.__model.dct_fix.keys():
             # match início da string ?
             if l_key.startswith(ls_fixo):
-                # return
+                # return tuple
                 return (QtGui.QValidator.Intermediate, ls_fixo, fi_pos)
 
-        # return
+        # return tuple
         return (QtGui.QValidator.Invalid, ls_fixo, fi_pos)
 
 # < the end >--------------------------------------------------------------------------------------

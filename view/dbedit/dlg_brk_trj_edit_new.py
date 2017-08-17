@@ -46,6 +46,7 @@ import libs.coords.coord_defs as cdefs
 # model
 import model.items.brk_new as bptrj
 import model.validators.fix_validator as fixval
+import model.validators.prc_validator as prcval
 
 # view
 import view.dbedit.dlg_brk_trj_edit_new_ui as dlg
@@ -242,28 +243,28 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
 
         # aproximações
         for li_id in self.__model.dct_apx.keys():
-            ls_apx = "APX" + str(li_id).zfill(3)
+            ls_apx = "APX{}".format(li_id)
 
             # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_apx)
 
-        # subidas
-        for li_id in self.__model.dct_sub.keys():
-            ls_sub = "SUB" + str(li_id).zfill(3)
-
-            # carrega os procedimentos definidos no sistema
-            llst_proc.append(ls_sub)
-
         # esperas
         for li_id in self.__model.dct_esp.keys():
-            ls_esp = "ESP" + str(li_id).zfill(3)
+            ls_esp = "ESP{}".format(li_id)
 
             # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_esp)
 
+        # subidas
+        for li_id in self.__model.dct_sub.keys():
+            ls_sub = "SUB{}".format(li_id)
+
+            # carrega os procedimentos definidos no sistema
+            llst_proc.append(ls_sub)
+
         # trajetórias
         for li_id in self.__model.dct_trj.keys():
-            ls_trj = "TRJ" + str(li_id).zfill(5)
+            ls_trj = "TRJ{}".format(li_id)
 
             # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_trj)
@@ -272,10 +273,28 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         llst_proc.sort()
 
         # insere primeiro procedimento
-        llst_proc.insert(0, "None")
+        llst_proc.insert(0, "NONE")
 
         # coloca na combobox
         self.cbxTrjPrc.addItems(llst_proc)
+
+        # config combobox de procedimentos
+        self.cbxTrjPrc.setEditable(True)
+        self.cbxTrjPrc.setInsertPolicy(QtGui.QComboBox.NoInsert)
+
+        # completer 
+        self.cbxTrjPrc.setCompleter(QtGui.QCompleter(self.cbxTrjPrc))
+        self.cbxTrjPrc.completer().setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.cbxTrjPrc.completer().setCompletionMode(QtGui.QCompleter.PopupCompletion)
+        self.cbxTrjPrc.completer().setModel(self.cbxTrjPrc.model())
+
+        # validator
+        self.cbxTrjPrc.setValidator(prcval.CPrcValidator(self))
+
+        # connections
+        self.cbxTrjPrc.editTextChanged.connect(self.__check_state)
+        self.cbxTrjPrc.editTextChanged.emit(self.cbxTrjPrc.currentText())
+        self.cbxTrjPrc.currentIndexChanged.connect(self.__selection_proc_changed)
 
     # ---------------------------------------------------------------------------------------------
     def getData(self):
@@ -389,6 +408,16 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
             l_log = logging.getLogger("CDlgBrkTrjEditNEW::__selection_fixo_changed")
             l_log.setLevel(logging.WARNING)
             l_log.warning("<E01: fixo {} inexistente.".format(ls_ind_fixo))
+
+    # ---------------------------------------------------------------------------------------------
+    def __selection_proc_changed(self, fi_ndx):
+        """
+        DOCUMENT ME!
+
+        @param fi_ndx:
+        """
+        # procedimento selecionado 
+        ls_ind_proc = str(self.cbxTrjPrc.currentText()).strip().upper()
 
     # ---------------------------------------------------------------------------------------------
     def __selection_tcrd_changed(self, fi_ndx):

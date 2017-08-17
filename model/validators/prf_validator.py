@@ -4,7 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 prf_validator
 
-validador de fixos
+validador de performances
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -79,22 +79,22 @@ class CPrfValidator(QtGui.QValidator):
 
         # string vazia ?
         if len(fs_prf) < 0:
-            # return
+            # return tuple
             return (QtGui.QValidator.Invalid, ls_prf, fi_pos)
 
-        # fixo válido ?
+        # performance válida ?
         if ls_prf in self.__model.dct_prf:
-            # return
+            # return tuple
             return (QtGui.QValidator.Acceptable, ls_prf, fi_pos)
 
-        # para todos os fixos...
+        # para todos as performances...
         for l_key in self.__model.dct_prf.keys():
             # match início da string ?
             if l_key.startswith(ls_prf):
-                # return
+                # return tuple
                 return (QtGui.QValidator.Intermediate, ls_prf, fi_pos)
 
-        # return
+        # return tuple
         return (QtGui.QValidator.Invalid, ls_prf, fi_pos)
 
 # < the end >--------------------------------------------------------------------------------------

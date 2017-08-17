@@ -46,6 +46,7 @@ import libs.coords.coord_defs as cdefs
 # model
 import model.items.trf_new as clsTrf
 import model.validators.prf_validator as prfval
+import model.validators.prc_validator as prcval
 
 # view
 import view.dbedit.dlg_anv_edit_new_ui as dlg
@@ -254,32 +255,50 @@ class CDlgAnvEditNEW(QtGui.QDialog, dlg.Ui_CDlgAnvEditNEW):
 
         # aproximações
         for li_id in self.__model.dct_apx.keys():
-            ls_apx = "APX" + str(li_id).zfill(3)
+            ls_apx = "APX{}".format(li_id)
             llst_proc.append(ls_apx)
 
         # subidas
         for li_id in self.__model.dct_sub.keys():
-            ls_sub = "SUB" + str(li_id).zfill(3)
+            ls_sub = "SUB{}".format(li_id)
             llst_proc.append(ls_sub)
 
         # esperas
         for li_id in self.__model.dct_esp.keys():
-            ls_esp = "ESP" + str(li_id).zfill(3)
+            ls_esp = "ESP{}".format(li_id)
             llst_proc.append(ls_esp)
 
         # trajetórias
         for li_id in self.__model.dct_trj.keys():
-            ls_trj = "TRJ" + str(li_id).zfill(5)
+            ls_trj = "TRJ{}".format(li_id)
             llst_proc.append(ls_trj)
 
         # ordena
         llst_proc.sort()
 
         # insere primeiro procedimento
-        llst_proc.insert(0, "None")
+        llst_proc.insert(0, "NONE")
 
         # coloca na combobox
         self.cbxProc.addItems(llst_proc)
+
+        # config combobox de procedimentos
+        self.cbxProc.setEditable(True)
+        self.cbxProc.setInsertPolicy(QtGui.QComboBox.NoInsert)
+
+        # completer 
+        self.cbxProc.setCompleter(QtGui.QCompleter(self.cbxProc))
+        self.cbxProc.completer().setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.cbxProc.completer().setCompletionMode(QtGui.QCompleter.PopupCompletion)
+        self.cbxProc.completer().setModel(self.cbxProc.model())
+
+        # validator
+        self.cbxProc.setValidator(prcval.CPrcValidator(self))
+
+        # connections
+        self.cbxProc.editTextChanged.connect(self.__check_state)
+        self.cbxProc.editTextChanged.emit(self.cbxProc.currentText())
+        self.cbxProc.currentIndexChanged.connect(self.__selection_proc_changed)
 
     # ---------------------------------------------------------------------------------------------
     def getData(self):
@@ -407,6 +426,16 @@ class CDlgAnvEditNEW(QtGui.QDialog, dlg.Ui_CDlgAnvEditNEW):
             l_log = logging.getLogger("CDlgAnvEditNEW::__selection_prf_changed")
             l_log.setLevel(logging.WARNING)
             l_log.warning("<E01: performance {} inexistente.".format(ls_ind_prf))
+
+    # ---------------------------------------------------------------------------------------------
+    def __selection_proc_changed(self, fi_ndx):
+        """
+        DOCUMENT ME!
+
+        @param fi_ndx:
+        """
+        # procedimento selecionado 
+        ls_ind_proc = str(self.cbxPorc.currentText()).strip().upper()
 
     # ---------------------------------------------------------------------------------------------
     def __update_trf_data(self):
