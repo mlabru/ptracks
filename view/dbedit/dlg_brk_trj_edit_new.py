@@ -201,7 +201,7 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         self.btnCancel.clicked.connect(self.reject)
 
         # conecta o signal de mudança de tipo de coordenada
-        self.cbxTCrd.currentIndexChanged.connect(self.__selection_tcrd_change)
+        self.cbxTCrd.currentIndexChanged.connect(self.__selection_tcrd_changed)
 
     # ---------------------------------------------------------------------------------------------
     def __config_texts(self):
@@ -216,19 +216,8 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         """
         carrega os comboboxes de prcoedimento e de performance de aeronaves
         """
-        # lista de fixos
-        llst_fix = []
-
-        # para todos os fixos...
-        for ls_fix in self.__model.dct_fix.keys():
-            # carrega os fixos definidos no sistema
-            llst_fix.append(ls_fix)
-
-        # ordena
-        llst_fix.sort()
-
-        # coloca na combobox
-        self.cbxFixo.addItems(llst_fix)
+        # carrega os fixos na combobox
+        self.cbxFixo.addItems(sorted(self.__model.dct_fix))
 
         # config combobox de fixos
         self.cbxFixo.setEditable(True)
@@ -246,7 +235,7 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         # connections
         self.cbxFixo.editTextChanged.connect(self.__check_state)
         self.cbxFixo.editTextChanged.emit(self.cbxFixo.currentText())
-        self.cbxFixo.currentIndexChanged.connect(self.__selection_fixo_change)
+        self.cbxFixo.currentIndexChanged.connect(self.__selection_fixo_changed)
 
         # carrega os procedimentos definidos no sistema
         llst_proc = []
@@ -272,9 +261,9 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
             # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_esp)
 
-        # esperas
+        # trajetórias
         for li_id in self.__model.dct_trj.keys():
-            ls_trj = "TRJ" + str(li_id).zfill(3)
+            ls_trj = "TRJ" + str(li_id).zfill(5)
 
             # carrega os procedimentos definidos no sistema
             llst_proc.append(ls_trj)
@@ -377,7 +366,7 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         self.restoreGeometry(l_set.value("%s/Geometry" % (self.__txt_settings)).toByteArray())
 
     # ---------------------------------------------------------------------------------------------
-    def __selection_fixo_change(self, fi_ndx):
+    def __selection_fixo_changed(self, fi_ndx):
         """
         DOCUMENT ME!
 
@@ -397,12 +386,12 @@ class CDlgBrkTrjEditNEW(QtGui.QDialog, dlg.Ui_CDlgBrkTrjEditNEW):
         # senão,...
         else:
             # logger
-            l_log = logging.getLogger("CDlgBrkTrjEditNEW::__selection_fixo_change")
+            l_log = logging.getLogger("CDlgBrkTrjEditNEW::__selection_fixo_changed")
             l_log.setLevel(logging.WARNING)
-            l_log.warning("Fixo {} inexistente.".format(ls_ind_fixo))
+            l_log.warning("<E01: fixo {} inexistente.".format(ls_ind_fixo))
 
     # ---------------------------------------------------------------------------------------------
-    def __selection_tcrd_change(self, fi_ndx):
+    def __selection_tcrd_changed(self, fi_ndx):
         """
         DOCUMENT ME!
 

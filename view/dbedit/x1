@@ -1,0 +1,25 @@
+    # ---------------------------------------------------------------------------------------------
+    def __selection_fixo_change(self, fi_ndx):
+        """
+        DOCUMENT ME!
+
+        @param fi_ndx:
+        """
+        # indicativo do fixo selecionado 
+        ls_ind_fixo = str(self.cbxFixo.currentText()).strip().upper()
+
+        # fixo selecionado 
+        l_fixo = self.__model.dct_fix.get(ls_ind_fixo, None)
+        
+        if l_fixo is not None:
+            # get fix data
+            self.qleFixoLat.setText(str(l_fixo.f_fix_lat))
+            self.qleFixoLng.setText(str(l_fixo.f_fix_lng))
+
+        # senão,...
+        else:
+            # logger
+            l_log = logging.getLogger("CDlgBrkTrjEditNEW::__selection_fixo_change")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning("Fixo {} inexistente.".format(ls_ind_fixo))
+

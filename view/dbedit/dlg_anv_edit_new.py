@@ -19,13 +19,16 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+revision 0.2  2017/aug  mlabru
+pep8 style conventions
+
 revision 0.1  2017/jun  matias
 initial release (Linux/Python)
 ---------------------------------------------------------------------------------------------------
 """
-__version__ = "$revision: 0.1$"
+__version__ = "$revision: 0.2$"
 __author__ = "Ivan Matias"
-__date__ = "2017/06"
+__date__ = "2017/08"
 
 # < imports >--------------------------------------------------------------------------------------
 
@@ -42,9 +45,13 @@ import libs.coords.coord_defs as cdefs
 
 # model
 import model.items.trf_new as clsTrf
+import model.validators.prf_validator as prfval
 
 # view
 import view.dbedit.dlg_anv_edit_new_ui as dlg
+
+# control
+# import control.control_debug as cdbg
 
 # < class CDlgAnvEditNEW >-------------------------------------------------------------------------
 
@@ -52,252 +59,302 @@ class CDlgAnvEditNEW(QtGui.QDialog, dlg.Ui_CDlgAnvEditNEW):
     """
     mantém as informações sobre a dialog de edição de tráfego de um exercício
     """
-    # -------------------------------------------------------------------------------------------
-    def __init__(self, f_control, f_oTrf=None, f_parent=None):
+    # ---------------------------------------------------------------------------------------------
+    def __init__(self, f_control, f_trf=None, f_parent=None):
         """
         constructor
         cria uma dialog de edição de tráfego de um exercícios
 
         @param f_control : control manager do editor da base de dados
-        @param f_oExe : tráfego do exercício a editar
+        @param f_trf : tráfego do exercício a editar
         @param f_parent : janela vinculada
         """
-        # verifica parâmetros de entrada
-        assert (f_control)
+        # check input
+        assert f_control
 
         # init super class
         super(CDlgAnvEditNEW, self).__init__(f_parent)
 
-        # salva o control manager localmente
-        self._control = f_control
+        # model
+        self.__model = f_control.model
+        assert self.__model
 
-        # salve o model manager localmente
-        self._model = f_control.model
-        assert (self._model)
-
-        # obtém o gerente de configuração
-        self._config = f_control.config
-        assert (self._config)
-
-        # obtém o dicionário de configuração
-        self._dctConfig = self._config.dct_config
-        assert (self._dctConfig)
-
-        # salva a parent window localmente
-        self._wndParent = f_parent
-
-        # salva os parâmetros localmente
-        self._oTrf = f_oTrf
-
-        # pathnames
-        self._sPN = None
+        # parâmetros
+        self.__trf = f_trf
 
         # monta a dialog
         self.setupUi(self)
 
         # SSR only allowed octal digits
-        l_oRegExp = QtCore.QRegExp("[0-7]*$")
-        l_oRegExpVal = QtGui.QRegExpValidator(l_oRegExp)
-        self.qleSSR.setValidator(l_oRegExpVal)
+        l_reg_exp = QtCore.QRegExp("[0-7]*$")
+        l_reg_expVal = QtGui.QRegExpValidator(l_reg_exp)
+
+        self.qleSSR.setValidator(l_reg_expVal)
 
         # configura título da dialog
-        if self._oTrf:
+        if self.__trf:
             self.setWindowTitle(self.tr(u"Edição do Tráfego do Exercício"))
+
         else:
             self.setWindowTitle(self.tr(u"Novo Tráfego do Exercício"))
 
         # carrega o combobox de performance e o combobox de procedimentos
-        self.fillComboBoxes()
+        self.__fill_comboboxes()
 
         # atualiza na tela os dados do exercício
-        self.updateTrfData()
+        self.__update_trf_data()
 
         # configura botões
         self.btnCancel.setText("&Cancela")
         self.btnOk.setFocus()
 
         # configurações de conexões slot/signal
-        self.configConnects()
+        self.__config_connects()
 
         # configurações de títulos e mensagens da janela de edição
-        self.configTexts()
+        self.__config_texts()
 
         # restaura as configurações da janela de edição
-        self.restoreSettings()
+        self.__restore_settings()
 
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------
     def accept(self):
         """
         DOCUMENT ME!
         """
-        l_log = logging.getLogger("CDlgAnvEditNEW::accept")
-        l_log.setLevel(logging.DEBUG)
-        l_log.debug(" Accept editing data ...")
-
         # tráfego do exercício existe ?
-        if (self._oTrf is not None):
+        if self.__trf is not None:
             # salva edição do tráfego do exercício
-            l_dctTrf = self.guiDataToDict()
-            l_dctTrf["nTrf"] = self._oTrf.i_trf_id
-            self._oTrf.load_trf(l_dctTrf)
+            l_dctTrf = self.__gui_data2dict()
+            l_dctTrf["nTrf"] = self.__trf.i_trf_id
+
+            self.__trf.load_trf(l_dctTrf)
 
         # senão, exercício não existe
         else:
             # salva novo tráfego do exercício
-            self.acceptNew()
+            self.__accept_new()
 
         # faz o "accept"
         QtGui.QDialog.accept(self)
 
-    # -------------------------------------------------------------------------------------------
-    def acceptNew(self):
+    # ---------------------------------------------------------------------------------------------
+    def __accept_new(self):
         """
         DOCUMENT ME!
         """
         # cria um novo tráfego do exercício
-        self._oTrf = clsTrf.CTrfNEW(self._model)
-        assert (self._oTrf)
+        self.__trf = clsTrf.CTrfNEW(self.__model)
+        assert self.__trf
 
-        # cria o novo tráfego do exercício
-        self._oTrf.make_trf(self.guiDataToDict())
+        # inicia tráfego do exercício
+        self.__trf.make_trf(self.__gui_data2dict())
 
     # ---------------------------------------------------------------------------------------------
-    def configConnects(self):
+    def __check_state(self, *args, **kwargs):
+        """
+        identifies the sender of the signal that called it, and validates it's content using the
+        assigned validator. The background colour of the widget is then set using the
+        setStyleSheet method
+        """
+        # get sender
+        l_sender = self.sender()
+
+        if l_sender is None:
+            # return
+            return
+
+        # get validator
+        l_validator = l_sender.validator()
+        assert l_validator
+
+        if l_validator is None:
+            # return
+            return
+
+        # sender is a combobox ?
+        if isinstance(l_sender, QtGui.QComboBox):
+           # get QLineEdit of that combobox
+           l_sender = l_sender.lineEdit()
+           assert l_sender
+
+        # validate
+        l_tuple = l_validator.validate(str(l_sender.text()), l_sender.cursorPosition())
+
+        # get state
+        l_state = l_tuple[0]
+
+        # acceptable ?
+        if QtGui.QValidator.Acceptable == l_state:
+            # green
+            l_color = "#c4df9b"
+
+        # intermediate ?
+        elif QtGui.QValidator.Intermediate == l_state:
+            # yellow
+            l_color = "#fff79a"
+
+        # senão, invalid...
+        else:
+            # red
+            l_color = "#f6989d"
+
+        # set background color
+        l_sender.setStyleSheet("QLineEdit { background-color: %s }" % l_color)
+
+    # ---------------------------------------------------------------------------------------------
+    def __config_connects(self):
         """
         configura as conexões slot/signal
         """
         # exercício
 
         # conecta botão Ok
-        self.connect(self.btnOk,
-                     QtCore.SIGNAL("clicked()"),
-                     self.accept)
+        self.btnOk.clicked.connect(self.accept)
 
         # conecta botão Cancela
-        self.connect(self.btnCancel,
-                     QtCore.SIGNAL("clicked()"),
-                     self.reject)
+        self.btnCancel.clicked.connect(self.reject)
 
-    # -------------------------------------------------------------------------------------------
-    def configTexts(self):
+    # ---------------------------------------------------------------------------------------------
+    def __config_texts(self):
         """
         DOCUMENT ME!
         """
         # configura títulos e mensagens
-        self._txtSettings = "CDlgAnvEditNEW"
+        self.__txt_settings = "CDlgAnvEditNEW"
 
-    # -------------------------------------------------------------------------------------------
-    def fillComboBoxes(self):
+    # ---------------------------------------------------------------------------------------------
+    def __fill_comboboxes(self):
         """
         carrega os comboboxes de prcoedimento e de performance de aeronaves
-        :return:
         """
-        # carrega as aeronaves definidas na tabela de performances
-        llst_prf = []
-        for ls_prf in self._model.dct_prf.keys():
-            llst_prf.append(ls_prf)
+        # carrega as performances
+        self.cbxPrf.addItems(sorted(self.__model.dct_prf))
 
-        llst_prf.sort()
-        self.cbxPrf.addItems(llst_prf)
+        # config combobox de fixos
+        self.cbxPrf.setEditable(True)
+        self.cbxPrf.setInsertPolicy(QtGui.QComboBox.NoInsert)
+
+        # completer
+        self.cbxPrf.setCompleter(QtGui.QCompleter(self.cbxPrf))
+        self.cbxPrf.completer().setCaseSensitivity(QtCore.Qt.CaseInsensitive)
+        self.cbxPrf.completer().setCompletionMode(QtGui.QCompleter.PopupCompletion)
+        self.cbxPrf.completer().setModel(self.cbxPrf.model())
+
+        # validator
+        self.cbxPrf.setValidator(prfval.CPrfValidator(self))
+
+        # connections
+        self.cbxPrf.editTextChanged.connect(self.__check_state)
+        self.cbxPrf.editTextChanged.emit(self.cbxPrf.currentText())
+        self.cbxPrf.currentIndexChanged.connect(self.__selection_prf_changed)
 
         # carrega os procedimentos definidos no sistema
-        llst_proc=[]
+        llst_proc = []
 
-        # aproximacoes
-        for li_id in self._model.dct_apx.keys():
+        # aproximações
+        for li_id in self.__model.dct_apx.keys():
             ls_apx = "APX" + str(li_id).zfill(3)
             llst_proc.append(ls_apx)
 
         # subidas
-        for li_id in self._model.dct_sub.keys():
+        for li_id in self.__model.dct_sub.keys():
             ls_sub = "SUB" + str(li_id).zfill(3)
             llst_proc.append(ls_sub)
 
         # esperas
-        for li_id in self._model.dct_esp.keys():
+        for li_id in self.__model.dct_esp.keys():
             ls_esp = "ESP" + str(li_id).zfill(3)
             llst_proc.append(ls_esp)
 
-        # esperas
-        for li_id in self._model.dct_trj.keys():
-            ls_trj = "TRJ" + str(li_id).zfill(3)
+        # trajetórias
+        for li_id in self.__model.dct_trj.keys():
+            ls_trj = "TRJ" + str(li_id).zfill(5)
             llst_proc.append(ls_trj)
 
+        # ordena
         llst_proc.sort()
+
+        # insere primeiro procedimento
+        llst_proc.insert(0, "None")
+
+        # coloca na combobox
         self.cbxProc.addItems(llst_proc)
 
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------
     def getData(self):
         """
         DOCUMENT ME!
         """
         # return
-        return (self._oTrf)
+        return self.__trf
 
-    # -------------------------------------------------------------------------------------------
-    def guiDataToDict(self):
+    # ---------------------------------------------------------------------------------------------
+    def __gui_data2dict(self):
         """
-
-        :return:
+        DOCUMENT ME!
         """
-        l_log = logging.getLogger("CDlgAnvEditNEW::guiDataToDict")
-        l_log.setLevel(logging.DEBUG)
-        l_dctTrf = {}
+        # init dictionary
+        ldct_trf = {}
 
         # identificação do tráfego
-        l_dctTrf["nTrf"] = 0
+        ldct_trf["nTrf"] = 0
 
         # indicativo do tráfego
-        l_dctTrf["indicativo"] = str(self.qleInd.text()).strip()
+        ldct_trf["indicativo"] = str(self.qleInd.text()).strip()
 
         # performance
-        l_dctTrf["designador"] = str(self.cbxPrf.currentText()).strip()
+        ldct_trf["designador"] = str(self.cbxPrf.currentText()).strip()
 
         # código transponder
-        l_dctTrf["ssr"] = int(str(self.qleSSR.text()).strip())
+        ldct_trf["ssr"] = int(str(self.qleSSR.text()).strip())
 
         # aeródromo de origem
-        l_dctTrf["origem"] = str(self.qleAdOri.text()).strip()
+        ldct_trf["origem"] = str(self.qleAdOri.text()).strip()
 
         # aeródromo de origem
-        l_dctTrf["destino"] = str(self.qleAdDst.text()).strip()
+        ldct_trf["destino"] = str(self.qleAdDst.text()).strip()
 
         # procedimento
-        l_dctTrf["procedimento"] = str(self.cbxProc.currentText()).strip()
+        ldct_trf["procedimento"] = str(self.cbxProc.currentText()).strip()
 
         # tempo de ativação do tráfego
-        l_dctTrf["temptrafego"] = int(str(self.qsbAtvPndMin.text()).strip())
+        ldct_trf["temptrafego"] = int(str(self.qsbAtvPndMin.text()).strip())
 
         # posição da aeronave latitude e longitude da aeronave
-        l_dctPos = {}
-        l_dctPos["tipo"] = 'L'
+        ldct_pos = {}
+        ldct_pos["tipo"] = 'L'
+
         ls_cpoA = str(self.qsbPosX.text()).strip()
         ls_cpoA = ls_cpoA.replace(",", ".")
-        l_dctPos["cpoA"] = ls_cpoA
+        ldct_pos["cpoA"] = ls_cpoA
+
         ls_cpoB = str(self.qsbPosY.text()).strip()
         ls_cpoB = ls_cpoB.replace(",", ".")
-        l_dctPos["cpoB"] = ls_cpoB
-        l_dctTrf["coord"] = l_dctPos
+        ldct_pos["cpoB"] = ls_cpoB
+
+        ldct_trf["coord"] = ldct_pos
 
         # proa
         ls_proa = str(self.qsbNavPro.text()).strip()
         ls_proa = ls_proa.replace(",", ".")
-        l_dctTrf["proa"] = ls_proa
+        ldct_trf["proa"] = ls_proa
         l_log.debug(" Proa [%s]" % ls_proa)
 
         # velocidade
         ls_vel = str(self.qsbNavVel.text()).strip()
         ls_vel = ls_vel.replace(",", ".")
-        l_dctTrf["velocidade"] = ls_vel
+        ldct_trf["velocidade"] = ls_vel
 
         # altitude
         ls_alt = str(self.qsbNavAlt.text()).strip()
         ls_alt = ls_alt.replace(",", ".", 1)
-        l_dctTrf["altitude"] = ls_alt
+        ldct_trf["altitude"] = ls_alt
 
-        return l_dctTrf
+        # return
+        return ldct_trf
 
-    # -------------------------------------------------------------------------------------------
+    # ---------------------------------------------------------------------------------------------
     def reject(self):
         """
         DOCUMENT ME!
@@ -305,83 +362,113 @@ class CDlgAnvEditNEW(QtGui.QDialog, dlg.Ui_CDlgAnvEditNEW):
         l_log = logging.getLogger("CDlgAnvEditNEW::reject")
         l_log.setLevel(logging.DEBUG)
         l_log.debug(" Set object trf to None ...")
-        self._oTrf = None
+        self.__trf = None
 
         # faz o "reject"
         QtGui.QDialog.reject(self)
 
-    # -------------------------------------------------------------------------------------------
-    def restoreSettings(self):
+    # ---------------------------------------------------------------------------------------------
+    def __restore_settings(self):
         """
         restaura as configurações salvas para esta janela
         """
         # obtém os settings
         l_set = QtCore.QSettings()
-        assert (l_set)
+        assert l_set
 
         # restaura geometria da janela
-        self.restoreGeometry(l_set.value("%s/Geometry" % (self._txtSettings)).toByteArray())
+        self.restoreGeometry(l_set.value("%s/Geometry" % (self.__txt_settings)).toByteArray())
 
         # return
         return True
 
-    # -------------------------------------------------------------------------------------------
-    def updateTrfData(self):
+    # ---------------------------------------------------------------------------------------------
+    def __selection_prf_changed(self, fi_ndx):
+        """
+        DOCUMENT ME!
+
+        @param fi_ndx:
+        """
+        # indicativo da performance selecionada
+        ls_ind_prf = str(self.cbxPrf.currentText()).strip().upper()
+
+        # performance selecionada
+        l_prf = self.__model.dct_prf.get(ls_ind_prf, None)
+
+        if l_prf is not None:
+            # get fix data
+            #self.qleFixoLat.setText(str(l_prf.f_fix_lat))
+            #self.qleFixoLng.setText(str(l_prf.f_fix_lng))
+            pass
+
+        # senão,...
+        else:
+            # logger
+            l_log = logging.getLogger("CDlgAnvEditNEW::__selection_prf_changed")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning("<E01: performance {} inexistente.".format(ls_ind_prf))
+
+    # ---------------------------------------------------------------------------------------------
+    def __update_trf_data(self):
         """
         atualiza na tela os a área de dados do tráfego do exercício selecionado
         """
-        l_log = logging.getLogger("CDlgExeDataNEW::trfEdit")
-        l_log.setLevel(logging.DEBUG)
-        l_log.debug("Mostrar as informações de um tráfego do exercício")
-
         # tráfego exercício existe ?
-        if (self._oTrf is not None):
+        if self.__trf is not None:
             # identificação
-            self.qleInd.setText(self._oTrf.s_trf_ind)
+            self.qleInd.setText(self.__trf.s_trf_ind)
 
             # tipo da aeronave (QComboBox)
-            self.cbxPrf.setCurrentIndex(self.cbxPrf.findText(self._oTrf.ptr_trf_prf.s_prf_id))
+            self.cbxPrf.setCurrentIndex(self.cbxPrf.findText(self.__trf.ptr_trf_prf.s_prf_id))
 
             # SSR
-            self.qleSSR.setText(str(self._oTrf.i_trf_ssr))
+            self.qleSSR.setText(str(self.__trf.i_trf_ssr))
 
             # aeródromo de origem
-            self.qleAdOri.setText(self._oTrf.ptr_trf_aer_ori.s_aer_indc)
+            self.qleAdOri.setText(self.__trf.ptr_trf_aer_ori.s_aer_indc)
 
             # aeródromo de destino
-            self.qleAdDst.setText(self._oTrf.ptr_trf_aer_dst.s_aer_indc)
+            self.qleAdDst.setText(self.__trf.ptr_trf_aer_dst.s_aer_indc)
 
             # procedimento (QComboBox)
-            self.cbxProc.setCurrentIndex(self.cbxProc.findText(self._oTrf.s_trf_prc))
+            self.cbxProc.setCurrentIndex(self.cbxProc.findText(self.__trf.s_trf_prc))
 
             # tempo de ativação (QSpinBox)
-            li_HorIni, li_MinIni, li_SegIni = self._model.exe.t_exe_hor_ini
-            li_MinIni = li_MinIni + (li_HorIni * 60) + (li_SegIni / 60)
+            li_hor_ini, li_min_ini, li_seg_ini = self.__model.exe.t_exe_hor_ini
+            li_min_ini = li_min_ini + (li_hor_ini * 60) + (li_seg_ini / 60)
 
-            li_Hor, li_Min, li_Seg = self._oTrf.t_trf_hor_atv
-            li_Min = li_Min + (li_Hor * 60) + (li_Seg / 60)
-            self.qsbAtvPndMin.setValue(li_Min - li_MinIni)
+            li_hor, li_min, li_seg = self.__trf.t_trf_hor_atv
+            li_min += (li_hor * 60) + (li_seg / 60)
+
+            self.qsbAtvPndMin.setValue(li_min - li_min_ini)
 
             # latitude (QDoubleSpinBox)
-            self.qsbPosX.setValue(self._oTrf.f_trf_lat)
+            self.qsbPosX.setValue(self.__trf.f_trf_lat)
 
             # longitude (QDoubleSpinBox)
-            self.qsbPosY.setValue(self._oTrf.f_trf_lng)
+            self.qsbPosY.setValue(self.__trf.f_trf_lng)
 
             # proa (QDoubleSpinBox)
-            self.qsbNavPro.setValue(self._oTrf.f_trf_pro_atu)
+            self.qsbNavPro.setValue(self.__trf.f_trf_pro_atu)
 
             # altitude (QDoubleSpinBox)
-            lf_AltFt = self._oTrf.f_trf_alt_atu * cdefs.D_CNV_M2FT
-            self.qsbNavAlt.setValue(lf_AltFt)
+            self.qsbNavAlt.setValue(self.__trf.f_trf_alt_atu * cdefs.D_CNV_M2FT)
 
             # velocidade (QDoubleSpinBox)
-            lf_VelKt = self._oTrf.f_trf_vel_atu * cdefs.D_CNV_MS2KT
-            self.qsbNavVel.setValue(lf_VelKt)
+            self.qsbNavVel.setValue(self.__trf.f_trf_vel_atu * cdefs.D_CNV_MS2KT)
 
         # senão, é um novo tráfego do exercício
         else:
             # posiciona cursor no início do formulário
             self.qleInd.setFocus()
+
+    # =============================================================================================
+    # data
+    # =============================================================================================
+
+    # ---------------------------------------------------------------------------------------------
+    @property
+    def model(self):
+        return self.__model
 
 # < the end >--------------------------------------------------------------------------------------
