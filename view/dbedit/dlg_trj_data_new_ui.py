@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'dlg_trj_data_new.ui'
+# Form implementation generated from reading ui file './dlg_trj_data_new.ui'
 #
-# Created: Fri Jun 30 11:46:43 2017
-#      by: PyQt4 UI code generator 4.10.4
+# Created by: PyQt4 UI code generator 4.11.4
 #
 # WARNING! All changes made in this file will be lost!
 
@@ -39,7 +38,6 @@ class Ui_CDlgTrjDataNEW(object):
         self.widPrcTab = QtGui.QWidget(self.splitter_2)
         self.widPrcTab.setObjectName(_fromUtf8("widPrcTab"))
         self.verticalLayout_4 = QtGui.QVBoxLayout(self.widPrcTab)
-        self.verticalLayout_4.setMargin(0)
         self.verticalLayout_4.setObjectName(_fromUtf8("verticalLayout_4"))
         self.qtwTrjTab = QtGui.QTableWidget(self.widPrcTab)
         self.qtwTrjTab.setObjectName(_fromUtf8("qtwTrjTab"))
@@ -74,7 +72,6 @@ class Ui_CDlgTrjDataNEW(object):
         self.widPrcDat = QtGui.QWidget(self.splitter_2)
         self.widPrcDat.setObjectName(_fromUtf8("widPrcDat"))
         self.verticalLayout_8 = QtGui.QVBoxLayout(self.widPrcDat)
-        self.verticalLayout_8.setMargin(0)
         self.verticalLayout_8.setObjectName(_fromUtf8("verticalLayout_8"))
         self.frmPrcID = QtGui.QFrame(self.widPrcDat)
         self.frmPrcID.setFrameShape(QtGui.QFrame.StyledPanel)
@@ -118,7 +115,6 @@ class Ui_CDlgTrjDataNEW(object):
         self.widBtnPtoTrj = QtGui.QWidget(self.gbxTrjPts)
         self.widBtnPtoTrj.setObjectName(_fromUtf8("widBtnPtoTrj"))
         self.horizontalLayout_6 = QtGui.QHBoxLayout(self.widBtnPtoTrj)
-        self.horizontalLayout_6.setMargin(0)
         self.horizontalLayout_6.setObjectName(_fromUtf8("horizontalLayout_6"))
         spacerItem = QtGui.QSpacerItem(40, 20, QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Minimum)
         self.horizontalLayout_6.addItem(spacerItem)

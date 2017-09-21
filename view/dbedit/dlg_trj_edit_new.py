@@ -100,6 +100,7 @@ class CDlgTrjEditNEW (QtGui.QDialog, CDlgTrjEditNEW_ui.Ui_CDlgTrjEditNEW):
         if self._oTrj:
             self.setWindowTitle(self.tr(u"Edição de Trajetória"))
             self.qlePrcID.setReadOnly(True)
+
         else:
             self.setWindowTitle(self.tr(u"Nova Trajetória"))
             self.qlePrcID.setReadOnly(False)
