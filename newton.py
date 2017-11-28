@@ -70,7 +70,7 @@ if "__main__" == __name__:
     logging.basicConfig()
 
     # disable logging
-    # logging.disable(sys.maxint)
+    logging.disable(sys.maxint)
 
     # multiprocessing logger
     multiprocessing.log_to_stderr()
