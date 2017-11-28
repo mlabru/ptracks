@@ -4,8 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 wnd_main_piloto
 
-DOCUMENT ME!
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -81,7 +79,7 @@ import control.events.events_config as evtcfg
 # resources
 import view.resources.resources_rc
 
-# < class CWndMainPiloto >---------------------------------------------------------------------------
+# < class CWndMainPiloto >-------------------------------------------------------------------------
 
 class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     """
@@ -90,7 +88,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     # signals
     # C_SIG_STRIP_CHG = QtCore.pyqtSignal(anv.CAircraftVisil)
-    # C_SIG_STRIP_DEL = QtCore.pyqtSignal(anv.CAircraftVisil)
+    C_SIG_STRIP_DEL = QtCore.pyqtSignal(anv.CAircraftVisil)
     C_SIG_STRIP_INS = QtCore.pyqtSignal(anv.CAircraftVisil)
     C_SIG_STRIP_SEL = QtCore.pyqtSignal(anv.CAircraftVisil)
 
@@ -237,7 +235,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     @QtCore.pyqtSlot()
     def about(self):
         """
-        DOCUMENT ME!
+        about
         """
         # show about box
         QtGui.QMessageBox.about(self, self.tr("About Piloto", None),
@@ -252,7 +250,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # @QtCore.pyqtSlot()
     def closeEvent(self, f_evt):
         """
-        DOCUMENT ME!
+        closeEvent
         """
         # really quit ?
         if self.__really_quit():
@@ -277,7 +275,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __config_buttons(self):
         """
-        DOCUMENT ME!
+        config buttons
         """
         ###
         # buttons
@@ -305,6 +303,8 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             self.btn_cod_spi.setEnabled(False)
             self.btn_cod_ssr.setEnabled(False)
 
+            self.btn_cancela.setEnabled(False)
+
         # senão, tem aeronave selecionada
         else:
             # enable buttons
@@ -327,6 +327,8 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             self.btn_cod_emg.setEnabled(False)
             self.btn_cod_spi.setEnabled(False)
             self.btn_cod_ssr.setEnabled(False)
+
+            self.btn_cancela.setEnabled(True)
 
     # ---------------------------------------------------------------------------------------------
     def __config_strips(self):
@@ -358,10 +360,6 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
 
         # initial change
         self.__on_strip_row_changed(self.qtv_stp.currentIndex(), self.qtv_stp.currentIndex())
-
-        # config ins/del buttons
-        # self.btn_stp_ins.clicked.connect(self.__on_strip_add)
-        # self.btn_stp_del.clicked.connect(self.__on_strip_remove)
 
     # ---------------------------------------------------------------------------------------------
     def __config_toolboxes(self):
@@ -535,7 +533,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             # obtém os dados de status da aneronave
             l_status = self.__sck_http.get_data(l_srv, ls_req)
 
-            if (l_status is not None) and (l_status != ""):
+            try:
                 # obtém os dados de status
                 ldct_status = json.loads(l_status)
 
@@ -543,7 +541,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
                 self.__set_status(f_strip.s_callsign, ldct_status)
 
             # senão, não achou no servidor...
-            else:
+            except:
                 # logger
                 l_log = logging.getLogger("CWndMainPiloto::__get_status")
                 l_log.setLevel(logging.ERROR)
@@ -601,6 +599,8 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         # self.btn_prc_sub.clicked.connect(self.__on_btn_prc_sub)
         self.btn_prc_trj.clicked.connect(self.__on_btn_prc_trj)
 
+        self.btn_cancela.clicked.connect(self.__on_btn_cancela)
+
         # clear to go
         assert self.btn_send
 
@@ -636,6 +636,20 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         elif isinstance(f_evt, evtcfg.CConfigHora):
             # atualiza horário
             self.status_bar.update_hora(f_evt.t_hora)
+
+    # ---------------------------------------------------------------------------------------------
+    @QtCore.pyqtSlot()
+    def __on_btn_cancela(self):
+        """
+        callback do botão cancela da botoeira
+        """
+        # existe strip selecionada ?
+        if self.__get_current_strip() is not None:
+            # coloca o comando no label
+            self.lbl_comando.setText("{}: CNL".format(self.__strip_cur.s_callsign))
+
+            # habilita o envio
+            self.btn_send.setEnabled(True)
 
     # ---------------------------------------------------------------------------------------------
     @QtCore.pyqtSlot()
@@ -906,6 +920,24 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             # limpa o comando
             self.lbl_comando.setText("")
 
+        # cancela aeronave ?
+        if ls_cmd.endswith(": CNL"):
+            # get flight
+            l_flight = self.__dct_flight[self.__strip_cur.s_callsign] 
+            #cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send::l_flight: {}".format(l_flight))
+
+            # emit signal
+            self.C_SIG_STRIP_DEL.emit(l_flight)
+
+            # remove flight from dicionário de voos
+            del self.__dct_flight[self.__strip_cur.s_callsign]
+
+            # remove flight from model
+            del self.__stp_model.lst_strips[self.__stp_model.lst_strips.index(l_flight)]
+            #cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send::self.__stp_model.lst_strips(D): {}".format(self.__stp_model.lst_strips))
+
+            #cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send: aeronave {} removida.".format(self.__strip_cur.s_callsign))
+
     # ---------------------------------------------------------------------------------------------
     '''
     # @QtCore.pyqtSlot()
@@ -963,10 +995,10 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         DOCUMENT ME!
         """
         # is index valid ?
-        if f_index_old.isValid():
+        #if f_index_old.isValid():
             # get old strip
-            l_strip_old = self.__stp_model.lst_strips[f_index_old.row()]
-            assert l_strip_old
+            #l_strip_old = self.__stp_model.lst_strips[f_index_old.row()]
+            #assert l_strip_old
 
         # is index valid ?
         if f_index_new.isValid():
@@ -1017,60 +1049,46 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             # self.__scene.strip_changed(l_strip)
     '''
     # ---------------------------------------------------------------------------------------------
-    '''
     # @QtCore.pyqtSlot()
     def __on_strip_remove(self):
         """
         DOCUMENT ME!
         """
-        # check exec conditions
-        assert self.__scene
+        # clear to go
         assert self.__stp_model
-
         assert self.qtv_stp
-        assert self.btn_stp_ins
-        assert self.btn_stp_del
 
         # get current index
         l_index = self.qtv_stp.currentIndex()
 
         if not l_index.isValid():
-            return
+            #cdbg.M_DBG.debug("CWndMainPiloto::__on_strip_remove: l_index NOT valid")
+            # return
+            return None
 
         # get current row
         l_row = l_index.row()
+        #cdbg.M_DBG.debug("CWndMainPiloto::__on_strip_remove::l_row: {}.".format(l_row))
 
         # get strip
-        l_strip = self.__stp_model.lst_strips[l_row]
-        assert l_strip
-
-        # get strip info
-        l_info = self.__stp_model.data(self.__stp_model.index(l_row, ldefs.D_FIX_INFO)).toString()
-
-        # ask user if it's ok
-        if QtGui.QMessageBox.No == QtGui.QMessageBox.question(self, "Remove Strip",
-                                       "Remove strip {} ?".format(l_info),
-                                       QtGui.QMessageBox.Yes|QtGui.QMessageBox.No):
-            # return
-            return
+        self.__strip_cur = self.__stp_model.lst_strips[l_row]
+        assert self.__strip_cur
 
         # remove a linha do modelo
-        self.__stp_model.removeRows(l_row)
+        self.__stp_model.removeRow(l_row)
+
+        # reset flag de modificações
+        self.__stp_model.v_dirty = False
+
+        # update view
+        self.__stp_model.layoutChanged.emit()
 
         # ajusta as colunas da view
         self.qtv_stp.resizeColumnsToContents()
-        self.qtv_stp.setColumnHidden(ldefs.D_STP_0, True)
-
-        # config ins/del buttons
-        self.btn_stp_ins.setEnabled(True)
-        self.btn_stp_del.setEnabled(self.__stp_model.rowCount() > 0)
 
         # select strip
-        # self.__on_strip_row_changed(self.qtv_stp.currentIndex(), self.qtv_stp.currentIndex())
+        self.__on_strip_row_changed(self.qtv_stp.currentIndex(), self.qtv_stp.currentIndex())
 
-        # remove strip from scene
-        self.__scene.remove_item(l_strip)
-    '''
     # ---------------------------------------------------------------------------------------------
     def __read_settings(self):
         """

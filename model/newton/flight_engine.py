@@ -267,6 +267,17 @@ class CFlightEngine(threading.Thread):
             l_log.critical(u"<E01: comando operacional ({}) não existe.".format(fen_cmd_ope))
 
     # ---------------------------------------------------------------------------------------------
+    def __cmd_pil_cancela(self, f_atv):
+        """
+        comando de pilotagem de cancelamento
+        """
+        # check input
+        assert f_atv
+
+        # estado de ativação
+        f_atv.en_trf_est_atv = ldefs.E_CANCELADA
+
+    # ---------------------------------------------------------------------------------------------
     def __cmd_pil_decolagem(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de decolagem
@@ -442,6 +453,11 @@ class CFlightEngine(threading.Thread):
         elif len_cmd_ope in [ldefs.E_ALT, ldefs.E_DES, ldefs.E_NIV, ldefs.E_SUB]:
             # trata comando de altitude
             self.__cmd_pil_altitude(f_atv, lo_cmd_pil, len_cmd_ope)
+
+        # decolagem ?
+        elif ldefs.E_CANCELA == len_cmd_ope:
+            # trata comando de cancelamento
+            self.__cmd_pil_cancela(f_atv)
 
         # decolagem ?
         elif ldefs.E_DECOLAGEM == len_cmd_ope:

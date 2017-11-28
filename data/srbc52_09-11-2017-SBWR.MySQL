@@ -1,0 +1,1352 @@
+-- MySQL dump 10.13  Distrib 5.5.40, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: siscta
+-- ------------------------------------------------------
+-- Server version	5.5.40-0ubuntu0.12.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `a_aerod`
+--
+
+DROP TABLE IF EXISTS `a_aerod`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_aerod` (
+  `area` varchar(4) NOT NULL,
+  `indicativo` varchar(4) NOT NULL,
+  `nome` varchar(15) DEFAULT NULL,
+  `elevacao` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`area`,`indicativo`),
+  CONSTRAINT `fk_aerod_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_aerod`
+--
+
+LOCK TABLES `a_aerod` WRITE;
+/*!40000 ALTER TABLE `a_aerod` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_aerod` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_aeron`
+--
+
+DROP TABLE IF EXISTS `a_aeron`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_aeron` (
+  `designador` varchar(4) NOT NULL,
+  `nome` varchar(20) DEFAULT NULL,
+  `numfami` varchar(2) DEFAULT NULL,
+  `esteira` char(1) DEFAULT NULL,
+  PRIMARY KEY (`designador`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_aeron`
+--
+
+LOCK TABLES `a_aeron` WRITE;
+/*!40000 ALTER TABLE `a_aeron` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_aeron` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_apper`
+--
+
+DROP TABLE IF EXISTS `a_apper`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_apper` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(3) NOT NULL,
+  `aerodromo` varchar(4) DEFAULT NULL,
+  `pista` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numero`),
+  KEY `fk_apper_aerod` (`area`,`aerodromo`),
+  CONSTRAINT `fk_apper_aerod` FOREIGN KEY (`area`, `aerodromo`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_apper_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_apper`
+--
+
+LOCK TABLES `a_apper` WRITE;
+/*!40000 ALTER TABLE `a_apper` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_apper` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoAPEProcedimen_TRIGGER BEFORE DELETE ON a_apper
+FOR EACH ROW BEGIN
+  UPDATE a_bpapx SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APE',OLD.numero);
+  UPDATE a_bpsub SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APE',OLD.numero);
+  UPDATE a_bptraj SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APE',OLD.numero);
+  UPDATE a_ils SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APE',OLD.numero);
+  UPDATE a_planodevoo SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APE',OLD.numero);
+  UPDATE a_trafe SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APE',OLD.numero);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_aprox`
+--
+
+DROP TABLE IF EXISTS `a_aprox`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_aprox` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(3) NOT NULL,
+  `nome` varchar(10) DEFAULT NULL,
+  `aerodromo` varchar(4) DEFAULT NULL,
+  `pista` varchar(3) DEFAULT NULL,
+  `ils` char(1) DEFAULT NULL,
+  `aproxperd` char(1) DEFAULT NULL,
+  `espera` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numero`),
+  KEY `fk_aprox_aerod` (`area`,`aerodromo`),
+  KEY `fk_aprox_espera` (`area`,`espera`),
+  CONSTRAINT `fk_aprox_aerod` FOREIGN KEY (`area`, `aerodromo`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_aprox_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE,
+  CONSTRAINT `fk_aprox_espera` FOREIGN KEY (`area`, `espera`) REFERENCES `a_espera` (`area_esp`, `numero`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_aprox`
+--
+
+LOCK TABLES `a_aprox` WRITE;
+/*!40000 ALTER TABLE `a_aprox` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_aprox` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoAPXProcedimen_TRIGGER BEFORE DELETE ON a_aprox
+FOR EACH ROW BEGIN
+  UPDATE a_bpaper SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APX',OLD.numero);
+  UPDATE a_bpsub SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APX',OLD.numero);
+  UPDATE a_bptraj SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APX',OLD.numero);
+  UPDATE a_ils SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APX',OLD.numero);
+  UPDATE a_planodevoo SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APX',OLD.numero);
+  UPDATE a_trafe SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('APX',OLD.numero);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_area`
+--
+
+DROP TABLE IF EXISTS `a_area`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_area` (
+  `area` varchar(4) NOT NULL,
+  `declmag` varchar(2) DEFAULT NULL,
+  `hemisferio` char(1) DEFAULT NULL,
+  `observacoe` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`area`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_area`
+--
+
+LOCK TABLES `a_area` WRITE;
+/*!40000 ALTER TABLE `a_area` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_area` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_bpaper`
+--
+
+DROP TABLE IF EXISTS `a_bpaper`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_bpaper` (
+  `area` varchar(4) NOT NULL,
+  `numapper` varchar(3) NOT NULL,
+  `numbpapper` varchar(3) NOT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `altitude` varchar(5) DEFAULT NULL,
+  `procedimen` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numapper`,`numbpapper`),
+  CONSTRAINT `fk_bpaper_apxperd` FOREIGN KEY (`area`, `numapper`) REFERENCES `a_apper` (`area`, `numero`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bpaper_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_bpaper`
+--
+
+LOCK TABLES `a_bpaper` WRITE;
+/*!40000 ALTER TABLE `a_bpaper` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_bpaper` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_bpapx`
+--
+
+DROP TABLE IF EXISTS `a_bpapx`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_bpapx` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(3) NOT NULL,
+  `numbkp` varchar(3) NOT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `altitude` varchar(5) DEFAULT NULL,
+  `razdes` varchar(4) DEFAULT NULL,
+  `procedimen` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numero`,`numbkp`),
+  CONSTRAINT `fk_bpapx_aprox` FOREIGN KEY (`area`, `numero`) REFERENCES `a_aprox` (`area`, `numero`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bpapx_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_bpapx`
+--
+
+LOCK TABLES `a_bpapx` WRITE;
+/*!40000 ALTER TABLE `a_bpapx` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_bpapx` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_bpsub`
+--
+
+DROP TABLE IF EXISTS `a_bpsub`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_bpsub` (
+  `area` varchar(4) NOT NULL,
+  `numsub` varchar(3) NOT NULL,
+  `numbkp` varchar(3) NOT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `altitude` varchar(5) DEFAULT NULL,
+  `razsub` varchar(3) DEFAULT NULL,
+  `procedimen` varchar(7) DEFAULT NULL,
+  `velocidade` varchar(3) DEFAULT '',
+  PRIMARY KEY (`area`,`numsub`,`numbkp`),
+  CONSTRAINT `fk_bpsub_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bpsub_subida` FOREIGN KEY (`area`, `numsub`) REFERENCES `a_subida` (`area`, `numero`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_bpsub`
+--
+
+LOCK TABLES `a_bpsub` WRITE;
+/*!40000 ALTER TABLE `a_bpsub` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_bpsub` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_bptraj`
+--
+
+DROP TABLE IF EXISTS `a_bptraj`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_bptraj` (
+  `area` varchar(4) NOT NULL,
+  `trajetor` varchar(4) NOT NULL,
+  `numbkp` varchar(3) NOT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `altitude` varchar(5) DEFAULT NULL,
+  `velocidade` varchar(3) DEFAULT NULL,
+  `procedimen` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`trajetor`,`numbkp`),
+  CONSTRAINT `fk_bptraj_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE,
+  CONSTRAINT `fk_bptraj_traje` FOREIGN KEY (`area`, `trajetor`) REFERENCES `a_traje` (`area`, `numero`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_bptraj`
+--
+
+LOCK TABLES `a_bptraj` WRITE;
+/*!40000 ALTER TABLE `a_bptraj` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_bptraj` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_comp`
+--
+
+DROP TABLE IF EXISTS `a_comp`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_comp` (
+  `prefixo` varchar(4) NOT NULL,
+  `nacionalid` varchar(15) DEFAULT NULL,
+  `identifica` varchar(46) DEFAULT NULL,
+  PRIMARY KEY (`prefixo`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_comp`
+--
+
+LOCK TABLES `a_comp` WRITE;
+/*!40000 ALTER TABLE `a_comp` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_comp` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_conmet`
+--
+
+DROP TABLE IF EXISTS `a_conmet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_conmet` (
+  `area` varchar(4) NOT NULL,
+  `indicativo` varchar(4) NOT NULL,
+  `numero` varchar(2) NOT NULL,
+  `dirvento` varchar(3) DEFAULT NULL,
+  `pendirven` varchar(3) DEFAULT NULL,
+  `velvento` varchar(2) DEFAULT NULL,
+  `pendvelven` varchar(4) DEFAULT NULL,
+  `limite` varchar(3) DEFAULT NULL,
+  `rajada` varchar(3) DEFAULT NULL,
+  `rvr` varchar(5) DEFAULT NULL,
+  `pendrvr` varchar(4) DEFAULT NULL,
+  `tetominimo` varchar(4) DEFAULT NULL,
+  `pendteto` varchar(4) DEFAULT NULL,
+  `temperatur` varchar(3) DEFAULT NULL,
+  `pendtemp` varchar(4) DEFAULT NULL,
+  `intchuva` varchar(4) DEFAULT NULL,
+  `pendchuva` varchar(5) DEFAULT NULL,
+  `visibilida` varchar(5) DEFAULT NULL,
+  `obsmet` char(1) DEFAULT NULL,
+  PRIMARY KEY (`area`,`indicativo`,`numero`),
+  CONSTRAINT `fk_conmet_aerod` FOREIGN KEY (`area`, `indicativo`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_conmet_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_conmet`
+--
+
+LOCK TABLES `a_conmet` WRITE;
+/*!40000 ALTER TABLE `a_conmet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_conmet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_espera`
+--
+
+DROP TABLE IF EXISTS `a_espera`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_espera` (
+  `area_esp` varchar(4) NOT NULL,
+  `numero` varchar(3) NOT NULL,
+  `num` varchar(4) DEFAULT NULL,
+  `sentido` char(1) DEFAULT NULL,
+  `rumo` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`area_esp`,`numero`),
+  KEY `fk_espera_fixo` (`area_esp`,`num`),
+  CONSTRAINT `fk_espera_area` FOREIGN KEY (`area_esp`) REFERENCES `a_area` (`area`) ON DELETE CASCADE,
+  CONSTRAINT `fk_espera_fixo` FOREIGN KEY (`area_esp`, `num`) REFERENCES `a_fixos` (`area`, `numero`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_espera`
+--
+
+LOCK TABLES `a_espera` WRITE;
+/*!40000 ALTER TABLE `a_espera` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_espera` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoESPProcedimen_TRIGGER BEFORE DELETE ON a_espera
+FOR EACH ROW BEGIN
+  UPDATE a_bpaper SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+  UPDATE a_bpapx SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+  UPDATE a_bpsub SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+  UPDATE a_bptraj SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+  UPDATE a_ils SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+  UPDATE a_planodevoo SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+  UPDATE a_trafe SET procedimen=' ' WHERE area=OLD.area_esp AND procedimen=CONCAT('ESP',OLD.numero);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_exerc`
+--
+
+DROP TABLE IF EXISTS `a_exerc`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_exerc` (
+  `area` varchar(4) NOT NULL,
+  `numexerc` varchar(4) NOT NULL,
+  `desexerc` varchar(60) DEFAULT NULL,
+  `horainicio` varchar(5) DEFAULT NULL,
+  `altitrans` varchar(5) DEFAULT NULL,
+  `numsubmap1` varchar(3) DEFAULT NULL,
+  `numsubmap2` varchar(3) DEFAULT NULL,
+  `numsubmap3` varchar(3) DEFAULT NULL,
+  `numsubmap4` varchar(3) DEFAULT NULL,
+  `qnh` varchar(6) DEFAULT NULL,
+  `liminfqnh` varchar(4) DEFAULT NULL,
+  `limsupqnh` varchar(4) DEFAULT NULL,
+  `pendqnh` varchar(4) DEFAULT NULL,
+  `indcondmet` char(1) DEFAULT NULL,
+  `numformmet` varchar(2) DEFAULT NULL,
+  `consoles` varchar(64) DEFAULT '',
+  PRIMARY KEY (`area`,`numexerc`),
+  CONSTRAINT `fk_exerc_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_exerc`
+--
+
+LOCK TABLES `a_exerc` WRITE;
+/*!40000 ALTER TABLE `a_exerc` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_exerc` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_fixos`
+--
+
+DROP TABLE IF EXISTS `a_fixos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_fixos` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(4) NOT NULL,
+  `indicativo` varchar(3) DEFAULT NULL,
+  `nome` varchar(15) DEFAULT NULL,
+  `tipo` char(1) DEFAULT NULL,
+  `frequencia` varchar(5) DEFAULT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numero`),
+  CONSTRAINT `fk_fixos_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_fixos`
+--
+
+LOCK TABLES `a_fixos` WRITE;
+/*!40000 ALTER TABLE `a_fixos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_fixos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER ApagaFixo_TRIGGER BEFORE DELETE ON a_fixos
+
+FOR EACH ROW BEGIN
+
+
+
+
+  DELETE FROM a_bpapx WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+
+  DELETE FROM a_aprox WHERE NOT EXISTS
+    (SELECT * FROM a_bpapx WHERE a_bpapx.area=a_aprox.area AND a_bpapx.numero=a_aprox.numero);
+
+
+
+  
+  DELETE FROM a_bpsub WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+  
+  DELETE FROM a_subida WHERE NOT EXISTS
+    (SELECT * FROM a_bpsub WHERE a_bpsub.area=a_subida.area AND a_bpsub.numsub=a_subida.numero);
+
+
+
+  
+  DELETE FROM a_trafe WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+
+  DELETE FROM a_exerc WHERE NOT EXISTS
+    (SELECT * FROM a_trafe WHERE a_trafe.area=a_exerc.area AND a_trafe.numexerc=a_exerc.numexerc);
+
+
+
+  
+  DELETE FROM a_bpaper WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+
+  DELETE FROM a_apper WHERE NOT EXISTS
+    (SELECT * FROM a_bpaper WHERE a_bpaper.area=a_apper.area AND a_bpaper.numapper=a_apper.numero);
+
+
+
+
+  DELETE FROM a_bptraj WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+
+  DELETE FROM a_traje WHERE NOT EXISTS
+    (SELECT * FROM a_bptraj WHERE a_bptraj.area=a_traje.area AND a_bptraj.trajetor=a_traje.numero);
+
+
+
+  
+  DELETE FROM a_pistas WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+
+  DELETE FROM a_aerod WHERE NOT EXISTS
+    (SELECT * FROM a_pistas WHERE a_pistas.area=a_aerod.area AND a_pistas.aerod=a_aerod.indicativo);
+
+
+
+  
+  DELETE FROM a_ptsmapa WHERE (area=OLD.area AND tipocoord IN ('F','D','T','I') AND TRIM(campoa)=OLD.numero) OR (area=OLD.area AND tipocoord = 'I' AND TRIM(campoc)=OLD.numero);
+
+  DELETE FROM a_smapa WHERE NOT EXISTS
+    (SELECT * FROM a_ptsmapa WHERE a_ptsmapa.area=a_smapa.area AND a_ptsmapa.numsubmap=a_smapa.numsubmap);
+
+
+
+
+
+
+  DELETE FROM a_espera WHERE (area_esp=OLD.area AND num=OLD.numero);
+
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_fpv`
+--
+
+DROP TABLE IF EXISTS `a_fpv`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_fpv` (
+  `indicativo` varchar(10) DEFAULT NULL,
+  `procedimento` varchar(8) DEFAULT NULL,
+  `aeroddep` varchar(4) DEFAULT NULL,
+  `aerodarr` varchar(4) DEFAULT NULL,
+  `designador` varchar(5) DEFAULT NULL,
+  `baliza` varchar(15) DEFAULT NULL,
+  `horaentrada` varchar(5) DEFAULT NULL,
+  `velocidade` varchar(4) DEFAULT NULL,
+  `nivel` varchar(3) DEFAULT NULL,
+  `exercicio` varchar(9) DEFAULT NULL,
+  `ssr` varchar(4) DEFAULT NULL,
+  `numtrafego` varchar(4) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_fpv`
+--
+
+LOCK TABLES `a_fpv` WRITE;
+/*!40000 ALTER TABLE `a_fpv` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_fpv` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_ils`
+--
+
+DROP TABLE IF EXISTS `a_ils`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_ils` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(3) NOT NULL,
+  `aerodromo` varchar(4) DEFAULT NULL,
+  `pista` varchar(3) DEFAULT NULL,
+  `altitudegp` varchar(5) DEFAULT NULL,
+  `angrampa` varchar(4) DEFAULT NULL,
+  `altitmapt` varchar(5) DEFAULT NULL,
+  `procedimen` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numero`),
+  KEY `fk_ils_aerod` (`area`,`aerodromo`),
+  CONSTRAINT `fk_ils_aerod` FOREIGN KEY (`area`, `aerodromo`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_ils_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_ils`
+--
+
+LOCK TABLES `a_ils` WRITE;
+/*!40000 ALTER TABLE `a_ils` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_ils` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoILSProcedimen_TRIGGER BEFORE DELETE ON a_ils
+FOR EACH ROW BEGIN
+  UPDATE a_bpaper SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('ILS',OLD.numero);
+  UPDATE a_bpapx SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('ILS',OLD.numero);
+  UPDATE a_bpsub SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('ILS',OLD.numero);
+  UPDATE a_bptraj SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('ILS',OLD.numero);
+  UPDATE a_planodevoo SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('ILS',OLD.numero);
+  UPDATE a_trafe SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('ILS',OLD.numero);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_limmet`
+--
+
+DROP TABLE IF EXISTS `a_limmet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_limmet` (
+  `area` varchar(4) NOT NULL,
+  `liminfqnh` varchar(4) DEFAULT NULL,
+  `limsupqnh` varchar(4) DEFAULT NULL,
+  `liminfvent` varchar(2) DEFAULT NULL,
+  `limsupvent` varchar(2) DEFAULT NULL,
+  `liminfrvr` varchar(4) DEFAULT NULL,
+  `limsuprvr` varchar(4) DEFAULT NULL,
+  `liminfteto` varchar(4) DEFAULT NULL,
+  `limsupteto` varchar(4) DEFAULT NULL,
+  `liminftemp` varchar(3) DEFAULT NULL,
+  `limsuptemp` varchar(3) DEFAULT NULL,
+  `liminfchuv` varchar(5) DEFAULT NULL,
+  `limsupchuv` varchar(5) DEFAULT NULL,
+  PRIMARY KEY (`area`),
+  CONSTRAINT `fk_limmet_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_limmet`
+--
+
+LOCK TABLES `a_limmet` WRITE;
+/*!40000 ALTER TABLE `a_limmet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_limmet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_logo`
+--
+
+DROP TABLE IF EXISTS `a_logo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_logo` (
+  `area` varchar(4) NOT NULL,
+  `numsubmap` varchar(3) NOT NULL DEFAULT '',
+  `numponto` varchar(4) NOT NULL DEFAULT '',
+  `descponto` varchar(17) DEFAULT NULL,
+  `codsimbolo` varchar(2) DEFAULT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `raiocurva` varchar(7) DEFAULT NULL,
+  `inicurva` varchar(7) DEFAULT NULL,
+  `fimcurva` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numsubmap`,`numponto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_logo`
+--
+
+LOCK TABLES `a_logo` WRITE;
+/*!40000 ALTER TABLE `a_logo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_logo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_mensa`
+--
+
+DROP TABLE IF EXISTS `a_mensa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_mensa` (
+  `area` varchar(4) NOT NULL,
+  `nummsg` varchar(2) NOT NULL,
+  `mensagem` varchar(70) DEFAULT NULL,
+  PRIMARY KEY (`area`,`nummsg`),
+  CONSTRAINT `fk_mensa_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_mensa`
+--
+
+LOCK TABLES `a_mensa` WRITE;
+/*!40000 ALTER TABLE `a_mensa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_mensa` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoNumMSG_TRIGGER BEFORE DELETE ON a_mensa
+FOR EACH ROW BEGIN
+  UPDATE a_trafe SET numsg=' ' WHERE area=OLD.area AND numsg=OLD.nummsg;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_obsmet`
+--
+
+DROP TABLE IF EXISTS `a_obsmet`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_obsmet` (
+  `area` varchar(4) NOT NULL,
+  `indicativo` varchar(4) NOT NULL,
+  `numero` varchar(2) NOT NULL,
+  `obsmeteo` varchar(228) DEFAULT NULL,
+  PRIMARY KEY (`area`,`indicativo`,`numero`),
+  CONSTRAINT `fk_obsmet_aerod` FOREIGN KEY (`area`, `indicativo`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_obsmet_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_obsmet`
+--
+
+LOCK TABLES `a_obsmet` WRITE;
+/*!40000 ALTER TABLE `a_obsmet` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_obsmet` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_perfor`
+--
+
+DROP TABLE IF EXISTS `a_perfor`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_perfor` (
+  `numfami` varchar(2) NOT NULL,
+  `tetosv` varchar(3) NOT NULL,
+  `faixa` varchar(3) NOT NULL,
+  `veldec` varchar(3) DEFAULT NULL,
+  `velsbdec` varchar(3) DEFAULT NULL,
+  `velapx` varchar(3) DEFAULT NULL,
+  `velcruz` varchar(4) DEFAULT NULL,
+  `velmxcrz` varchar(4) DEFAULT NULL,
+  `rzsubdec` varchar(4) DEFAULT NULL,
+  `rzmxsbdec` varchar(4) DEFAULT NULL,
+  `rzsbcrz` varchar(4) DEFAULT NULL,
+  `rzmxsbcrz` varchar(4) DEFAULT NULL,
+  `rzdescapx` varchar(4) DEFAULT NULL,
+  `rzmxdesapx` varchar(4) DEFAULT NULL,
+  `rzdescrz` varchar(4) DEFAULT NULL,
+  `rzmxdescrz` varchar(4) DEFAULT NULL,
+  `razvarvel` varchar(3) DEFAULT NULL,
+  `rzmxvarvel` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`numfami`,`tetosv`,`faixa`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_perfor`
+--
+
+LOCK TABLES `a_perfor` WRITE;
+/*!40000 ALTER TABLE `a_perfor` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_perfor` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_pistas`
+--
+
+DROP TABLE IF EXISTS `a_pistas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_pistas` (
+  `area` varchar(4) NOT NULL,
+  `aerod` varchar(4) NOT NULL,
+  `pista` varchar(3) NOT NULL,
+  `rumo` varchar(3) DEFAULT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  PRIMARY KEY (`area`,`aerod`,`pista`),
+  CONSTRAINT `fk_pistas_aerod` FOREIGN KEY (`area`, `aerod`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_pistas_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_pistas`
+--
+
+LOCK TABLES `a_pistas` WRITE;
+/*!40000 ALTER TABLE `a_pistas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_pistas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_planodevoo`
+--
+
+DROP TABLE IF EXISTS `a_planodevoo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_planodevoo` (
+  `area` varchar(4) NOT NULL,
+  `numexerc` varchar(4) NOT NULL,
+  `numtrafego` varchar(4) NOT NULL,
+  `horainicio` varchar(4) DEFAULT NULL,
+  `datainicio` varchar(8) DEFAULT NULL,
+  `frequencia` varchar(7) DEFAULT NULL,
+  `designador` varchar(4) DEFAULT NULL,
+  `indicativo` varchar(10) DEFAULT NULL,
+  `ssr` varchar(4) DEFAULT NULL,
+  `origem` varchar(4) DEFAULT NULL,
+  `destino` varchar(4) DEFAULT NULL,
+  `procedimen` varchar(8) DEFAULT NULL,
+  `nivel` varchar(3) DEFAULT NULL,
+  `velocidade` varchar(4) DEFAULT NULL,
+  `rota` varchar(100) DEFAULT NULL,
+  `eet` varchar(25) DEFAULT NULL,
+  `rmk` varchar(350) DEFAULT NULL,
+  `rvsm` char(1) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numexerc`,`numtrafego`),
+  CONSTRAINT `fk_planodevoo_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_planodevoo`
+--
+
+LOCK TABLES `a_planodevoo` WRITE;
+/*!40000 ALTER TABLE `a_planodevoo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_planodevoo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_ptlogo`
+--
+
+DROP TABLE IF EXISTS `a_ptlogo`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_ptlogo` (
+  `area` varchar(4) NOT NULL,
+  `numsubmap` varchar(2) NOT NULL,
+  `numponto` varchar(3) NOT NULL,
+  `descponto` varchar(17) DEFAULT NULL,
+  `codsimbolo` varchar(2) DEFAULT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `raiocurva` varchar(6) DEFAULT NULL,
+  `inicurva` varchar(7) DEFAULT NULL,
+  `fimcurva` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numsubmap`,`numponto`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_ptlogo`
+--
+
+LOCK TABLES `a_ptlogo` WRITE;
+/*!40000 ALTER TABLE `a_ptlogo` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_ptlogo` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_ptsmapa`
+--
+
+DROP TABLE IF EXISTS `a_ptsmapa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_ptsmapa` (
+  `area` varchar(4) NOT NULL,
+  `numsubmap` varchar(3) NOT NULL,
+  `numponto` varchar(4) NOT NULL,
+  `descponto` varchar(17) DEFAULT NULL,
+  `codsimbolo` varchar(2) DEFAULT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `raiocurva` varchar(7) DEFAULT NULL,
+  `inicurva` varchar(7) DEFAULT NULL,
+  `fimcurva` varchar(7) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numsubmap`,`numponto`),
+  CONSTRAINT `fk_ptsmapa_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE,
+  CONSTRAINT `fk_ptsmapa_smapa` FOREIGN KEY (`area`, `numsubmap`) REFERENCES `a_smapa` (`area`, `numsubmap`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_ptsmapa`
+--
+
+LOCK TABLES `a_ptsmapa` WRITE;
+/*!40000 ALTER TABLE `a_ptsmapa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_ptsmapa` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_radar`
+--
+
+DROP TABLE IF EXISTS `a_radar`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_radar` (
+  `area` varchar(4) NOT NULL,
+  `nome` varchar(15) NOT NULL,
+  `elevacao` varchar(5) DEFAULT NULL,
+  `latitude` varchar(9) DEFAULT NULL,
+  `longitude` varchar(10) DEFAULT NULL,
+  `alcancehor` varchar(3) DEFAULT NULL,
+  `alcancever` varchar(5) DEFAULT NULL,
+  `angmin` varchar(5) DEFAULT NULL,
+  `angmax` varchar(4) DEFAULT NULL,
+  `alcancesec` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`area`,`nome`),
+  CONSTRAINT `fk_radar_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_radar`
+--
+
+LOCK TABLES `a_radar` WRITE;
+/*!40000 ALTER TABLE `a_radar` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_radar` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_rotas`
+--
+
+DROP TABLE IF EXISTS `a_rotas`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_rotas` (
+  `adep` varchar(4) NOT NULL,
+  `rota` varchar(100) NOT NULL,
+  `ades` varchar(4) NOT NULL DEFAULT '',
+  `eet` varchar(25) DEFAULT NULL,
+  PRIMARY KEY (`adep`,`rota`,`ades`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_rotas`
+--
+
+LOCK TABLES `a_rotas` WRITE;
+/*!40000 ALTER TABLE `a_rotas` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_rotas` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_smapa`
+--
+
+DROP TABLE IF EXISTS `a_smapa`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_smapa` (
+  `area` varchar(4) NOT NULL,
+  `numsubmap` varchar(3) NOT NULL,
+  `descsubmap` varchar(60) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numsubmap`),
+  CONSTRAINT `fk_smapa_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_smapa`
+--
+
+LOCK TABLES `a_smapa` WRITE;
+/*!40000 ALTER TABLE `a_smapa` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_smapa` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoSMAPASubMapa_TRIGGER BEFORE DELETE ON a_smapa
+FOR EACH ROW BEGIN
+  UPDATE a_exerc SET numsubmap1=' ' WHERE area=OLD.area AND numsubmap1=OLD.numsubmap;
+  UPDATE a_exerc SET numsubmap2=' ' WHERE area=OLD.area AND numsubmap2=OLD.numsubmap;
+  UPDATE a_exerc SET numsubmap3=' ' WHERE area=OLD.area AND numsubmap3=OLD.numsubmap;
+  UPDATE a_exerc SET numsubmap4=' ' WHERE area=OLD.area AND numsubmap4=OLD.numsubmap;
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_subida`
+--
+
+DROP TABLE IF EXISTS `a_subida`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_subida` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(3) NOT NULL,
+  `nome` varchar(15) DEFAULT NULL,
+  `aerodromo` varchar(4) DEFAULT NULL,
+  `pista` varchar(3) DEFAULT NULL,
+  PRIMARY KEY (`area`,`numero`),
+  KEY `fk_subida_aerod` (`area`,`aerodromo`),
+  CONSTRAINT `fk_subida_aerod` FOREIGN KEY (`area`, `aerodromo`) REFERENCES `a_aerod` (`area`, `indicativo`) ON DELETE CASCADE,
+  CONSTRAINT `fk_subida_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_subida`
+--
+
+LOCK TABLES `a_subida` WRITE;
+/*!40000 ALTER TABLE `a_subida` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_subida` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoSUBProcedimen_TRIGGER BEFORE DELETE ON a_subida
+FOR EACH ROW BEGIN
+  UPDATE a_bpaper SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('SUB',OLD.numero);
+  UPDATE a_bpapx SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('SUB',OLD.numero);
+  UPDATE a_bptraj SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('SUB',OLD.numero);
+  UPDATE a_ils SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('SUB',OLD.numero);
+  UPDATE a_planodevoo SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('SUB',OLD.numero);
+  UPDATE a_trafe SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('SUB',OLD.numero);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_trafe`
+--
+
+DROP TABLE IF EXISTS `a_trafe`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_trafe` (
+  `area` varchar(4) NOT NULL,
+  `numexerc` varchar(4) NOT NULL,
+  `numtrafego` varchar(4) NOT NULL,
+  `designador` varchar(4) DEFAULT NULL,
+  `ssr` varchar(4) DEFAULT NULL,
+  `indicativo` varchar(10) DEFAULT NULL,
+  `origem` varchar(4) DEFAULT NULL,
+  `destino` varchar(4) DEFAULT NULL,
+  `procedimen` varchar(9) DEFAULT NULL,
+  `nivel` varchar(3) DEFAULT NULL,
+  `velocidade` varchar(4) DEFAULT NULL,
+  `proa` varchar(3) DEFAULT NULL,
+  `tipocoord` char(1) DEFAULT NULL,
+  `campoa` varchar(9) DEFAULT NULL,
+  `campob` varchar(10) DEFAULT NULL,
+  `campoc` varchar(6) DEFAULT NULL,
+  `campod` varchar(6) DEFAULT NULL,
+  `pilotagem` varchar(2) DEFAULT NULL,
+  `temptrafeg` varchar(3) DEFAULT NULL,
+  `numsg` varchar(2) DEFAULT NULL,
+  `tempmsg` varchar(3) DEFAULT NULL,
+  `rvsm` char(1) DEFAULT NULL,
+  `rota` varchar(100) DEFAULT NULL,
+  `eet` varchar(25) DEFAULT NULL,
+  `rmk` varchar(350) DEFAULT NULL,
+  `niveltrj` varchar(5) DEFAULT '',
+  `veltrj` varchar(3) DEFAULT '',
+  PRIMARY KEY (`area`,`numexerc`,`numtrafego`),
+  KEY `fk_trafe_aeronave` (`designador`),
+  CONSTRAINT `fk_trafe_aeronave` FOREIGN KEY (`designador`) REFERENCES `a_aeron` (`designador`) ON DELETE CASCADE,
+  CONSTRAINT `fk_trafe_exerc` FOREIGN KEY (`area`, `numexerc`) REFERENCES `a_exerc` (`area`, `numexerc`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_trafe`
+--
+
+LOCK TABLES `a_trafe` WRITE;
+/*!40000 ALTER TABLE `a_trafe` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_trafe` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `a_traje`
+--
+
+DROP TABLE IF EXISTS `a_traje`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_traje` (
+  `area` varchar(4) NOT NULL,
+  `numero` varchar(4) NOT NULL,
+  `descricao` varchar(60) DEFAULT NULL,
+  `proa` varchar(3) DEFAULT NULL,
+  `star` varchar(1) DEFAULT 'N',
+  PRIMARY KEY (`area`,`numero`),
+  CONSTRAINT `fk_traje_area` FOREIGN KEY (`area`) REFERENCES `a_area` (`area`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_traje`
+--
+
+LOCK TABLES `a_traje` WRITE;
+/*!40000 ALTER TABLE `a_traje` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_traje` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = latin1 */ ;
+/*!50003 SET character_set_results = latin1 */ ;
+/*!50003 SET collation_connection  = latin1_swedish_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = '' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`srbc`@`localhost`*/ /*!50003 TRIGGER BrancoTRJProcedimen_TRIGGER BEFORE DELETE ON a_traje
+FOR EACH ROW BEGIN
+  UPDATE a_bpaper SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('TRJ',OLD.numero);
+  UPDATE a_bpapx SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('TRJ',OLD.numero);
+  UPDATE a_bpsub SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('TRJ',OLD.numero);
+  UPDATE a_ils SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('TRJ',OLD.numero);
+  UPDATE a_planodevoo SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('TRJ',OLD.numero);
+  UPDATE a_trafe SET procedimen=' ' WHERE area=OLD.area AND procedimen=CONCAT('TRJ',OLD.numero);
+END */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `a_usuari`
+--
+
+DROP TABLE IF EXISTS `a_usuari`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `a_usuari` (
+  `usuario` varchar(10) NOT NULL,
+  `senha` varchar(10) NOT NULL,
+  `grupo` char(1) DEFAULT NULL,
+  `area` varchar(4) DEFAULT NULL,
+  PRIMARY KEY (`usuario`,`senha`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `a_usuari`
+--
+
+LOCK TABLES `a_usuari` WRITE;
+/*!40000 ALTER TABLE `a_usuari` DISABLE KEYS */;
+/*!40000 ALTER TABLE `a_usuari` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `trafegos`
+--
+
+DROP TABLE IF EXISTS `trafegos`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `trafegos` (
+  `area` varchar(4) DEFAULT '',
+  `numexerc` varchar(4) DEFAULT '',
+  `numtrafego` varchar(4) DEFAULT '',
+  `designador` varchar(4) DEFAULT '',
+  `ssr` varchar(4) DEFAULT '',
+  `indicativo` varchar(10) DEFAULT '',
+  `origem` varchar(4) DEFAULT '',
+  `destino` varchar(4) DEFAULT '',
+  `procedimen` varchar(9) DEFAULT '',
+  `nivel` varchar(3) DEFAULT '',
+  `velocidade` varchar(4) DEFAULT '',
+  `proa` varchar(3) DEFAULT '',
+  `tipocoord` char(1) DEFAULT '',
+  `campoa` varchar(9) DEFAULT '',
+  `campob` varchar(10) DEFAULT '',
+  `campoc` varchar(6) DEFAULT '',
+  `campod` varchar(6) DEFAULT '',
+  `pilotagem` varchar(2) DEFAULT '',
+  `temptrafeg` varchar(3) DEFAULT '',
+  `numsg` varchar(2) DEFAULT '',
+  `tempmsg` varchar(3) DEFAULT '',
+  `rvsm` char(1) DEFAULT 'S',
+  `rota` varchar(100) DEFAULT '',
+  `eet` varchar(25) DEFAULT '',
+  `rmk` varchar(350) DEFAULT '',
+  `niveltrj` varchar(5) DEFAULT '',
+  `veltrj` varchar(3) DEFAULT ''
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `trafegos`
+--
+
+LOCK TABLES `trafegos` WRITE;
+/*!40000 ALTER TABLE `trafegos` DISABLE KEYS */;
+/*!40000 ALTER TABLE `trafegos` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2017-11-09  2:24:55

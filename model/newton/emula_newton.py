@@ -213,7 +213,7 @@ class CEmulaNewton(model.CEmulaModel):
 
         if l_atv is None:
             # logger
-            l_log = logging.getLogger("CEmulaNewton::parse_msg_pil")
+            l_log = logging.getLogger("CEmulaNewton::parse_cmd_pil")
             l_log.setLevel(logging.ERROR)
             l_log.error(u"<E01: tráfego {} não existe.".format(ls_callsign))
 
@@ -225,7 +225,7 @@ class CEmulaNewton(model.CEmulaModel):
 
         if l_fe is None:
             # logger
-            l_log = logging.getLogger("CEmulaNewton::parse_msg_pil")
+            l_log = logging.getLogger("CEmulaNewton::parse_cmd_pil")
             l_log.setLevel(logging.ERROR)
             l_log.error(u"<E02: flight engine de {} não existe.".format(ls_callsign))
 
@@ -234,6 +234,21 @@ class CEmulaNewton(model.CEmulaModel):
 
         # envia o comando a aeronave
         l_fe.instruction(llst_tok[1].strip().upper())
+
+        # cancela ?
+        if "CNL" == llst_tok[1].strip().upper():
+            # aguarda término da thread
+            l_fe.join()
+            
+            # retira a aeronave do dicionário
+            del self.dct_flight[ls_callsign]
+
+            # logger
+            l_log = logging.getLogger("CEmulaNewton::parse_cmd_pil")
+            l_log.setLevel(logging.WARNING)
+            l_log.warning(u"<E02: aeronave {} cancelada.".format(ls_callsign))
+
+            cdbg.M_DBG.debug("CEmulaNewton:parse_cmd_pil::self.dct_flight: {}".format(self.dct_flight))
 
     # ---------------------------------------------------------------------------------------------
     def parse_msg_pil(self, fs_msg):
@@ -273,36 +288,36 @@ class CEmulaNewton(model.CEmulaModel):
         lf_tim_rrbn = float(self.dct_config["tim.rrbn"])
 
         # init check if any new flights should be generated this iteration
-        l_timer_thread_ativ = threading.Thread(target=self.__run_check_ativ)
-        assert l_timer_thread_ativ
+        lthr_timer_ativ = threading.Thread(target=self.__run_check_ativ)
+        assert lthr_timer_ativ
 
-        l_timer_thread_ativ.daemon = True
-        l_timer_thread_ativ.start()
+        lthr_timer_ativ.daemon = True
+        lthr_timer_ativ.start()
 
         # master node ?
         if 0 == self.__mpi_rank:
             # inicia envio dos dados de configuração
-            l_timer_thread_cnfg = threading.Thread(target=self.__run_check_cnfg)
-            assert l_timer_thread_cnfg
+            lthr_timer_cnfg = threading.Thread(target=self.__run_check_cnfg)
+            assert lthr_timer_cnfg
 
-            l_timer_thread_cnfg.daemon = True
-            l_timer_thread_cnfg.start()
+            lthr_timer_cnfg.daemon = True
+            lthr_timer_cnfg.start()
 
         # master node: hora de enviar a hora ?
         if 0 == self.__mpi_rank:
             # inicia envio dos dados do servidor e de hora
-            l_timer_thread_hora = threading.Thread(target=self.__run_check_hora)
-            assert l_timer_thread_hora
+            lthr_timer_hora = threading.Thread(target=self.__run_check_hora)
+            assert lthr_timer_hora
 
-            l_timer_thread_hora.daemon = True
-            l_timer_thread_hora.start()
+            lthr_timer_hora.daemon = True
+            lthr_timer_hora.start()
 
         # inicia check de colisão
-        # l_timer_thread_prox = threading.Thread(target=self.__run_check_prox)
-        # assert l_timer_thread_prox
+        # lthr_timer_prox = threading.Thread(target=self.__run_check_prox)
+        # assert lthr_timer_prox
 
-        # l_timer_thread_prox.daemon = True
-        # l_timer_thread_prox.start()
+        # lthr_timer_prox.daemon = True
+        # lthr_timer_prox.start()
 
         # inicia o recebimento de mensagens de pilotagem
         self.__sck_rcv_cpil.start()

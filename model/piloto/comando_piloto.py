@@ -276,6 +276,11 @@ class CComandoPil(inst.CInstruction):
             # parse command
             self.__cmd_pouso(llst_tok[1:])
 
+        # cancela ?
+        elif "CNL" == llst_tok[0]:
+            # comando
+            self.en_cmd_ope = ldefs.E_CANCELA
+
         # comando de curva ?
         elif "CURVA" == llst_tok[0]:
             # parse command
