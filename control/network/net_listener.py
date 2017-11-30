@@ -4,8 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 net_listener
 
-net listener
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -49,7 +47,7 @@ import model.common.glb_data as gdata
 
 # control
 import control.common.glb_defs as gdefs
-# import control.control_debug as cdbg
+import control.control_debug as cdbg
 
 # < class CNetListener >---------------------------------------------------------------------------
 
@@ -150,7 +148,7 @@ class CNetListener(multiprocessing.Process):
 
                 # divide a mensagem em seus componentes
                 llst_data = l_data.split(gdefs.D_MSG_SEP)
-                # cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
+                cdbg.M_DBG.debug("llst_data: {}".format(llst_data))
 
                 # versão da mensagem não reconhecida ?
                 if gdefs.D_MSG_VRS != int(llst_data[0]):

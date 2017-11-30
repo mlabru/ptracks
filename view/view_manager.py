@@ -4,8 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 view_manager
 
-DOCUMENT ME!
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -67,7 +65,7 @@ class CViewManager(object):
     # ---------------------------------------------------------------------------------------------
     def run(self):
         """
-        DOCUMENT ME!
+        run
         """
         # return
         return
@@ -79,16 +77,11 @@ class CViewManager(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def app(self):
-        """
-        get app
-        """
         return self.__control.app
 
     @app.setter
     def app(self, f_val):
-        """
-        set app
-        """
+
         # check input
         assert f_val
 
@@ -98,16 +91,11 @@ class CViewManager(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def config(self):
-        """
-        get config
-        """
         return self.__control.config
 
     @config.setter
     def config(self, f_val):
-        """
-        set config
-        """
+
         # check input
         assert f_val
 
@@ -117,16 +105,11 @@ class CViewManager(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_config(self):
-        """
-        get configuration dictionary
-        """
         return self.__control.config.dct_config
 
     @dct_config.setter
     def dct_config(self, f_val):
-        """
-        set configuration dictionary
-        """
+
         # check input
         assert f_val
 
@@ -134,19 +117,13 @@ class CViewManager(object):
         self.__control.config.dct_config = f_val
 
     # ---------------------------------------------------------------------------------------------
-
     @property
     def control(self):
-        """
-        get control
-        """
         return self.__control
 
     @control.setter
     def control(self, f_val):
-        """
-        set control
-        """
+
         # check input
         assert f_val
 
@@ -156,16 +133,11 @@ class CViewManager(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def event(self):
-        """
-        get event
-        """
         return self.__control.event
 
     @event.setter
     def event(self, f_val):
-        """
-        set event
-        """
+
         # check input
         assert f_val
 
@@ -175,16 +147,11 @@ class CViewManager(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def model(self):
-        """
-        get model
-        """
         return self.__control.model
 
     @model.setter
     def model(self, f_val):
-        """
-        set model
-        """
+
         # check input
         assert f_val
 

@@ -73,9 +73,10 @@ D_MSG_VRS = 101
 
 D_MSG_ADS = 111    # mensagens de dados ADS-B
 D_MSG_CAD = 112    # mensagens de dados SiCAD
-D_MSG_GAL = 113    # mensagens de dados galileu
-D_MSG_NEW = 114    # mensagens de dados newton
-D_MSG_PAR = 115    # mensagens de dados PAR
+D_MSG_COR = 113    # mensagens de dados CORE
+D_MSG_GAL = 114    # mensagens de dados galileu
+D_MSG_NEW = 115    # mensagens de dados newton
+D_MSG_PAR = 116    # mensagens de dados PAR
 
 # mensagens de controle de exibição
 
@@ -111,6 +112,9 @@ D_MSG_SEP = '#'
 SET_MSG_VALIDAS = [D_MSG_ACC, D_MSG_ADS, D_MSG_CAD, D_MSG_PIL, D_MSG_CSG, D_MSG_EXE, \
                    D_MSG_FIM, D_MSG_FRZ, D_MSG_GAL, D_MSG_KLL, D_MSG_NEW, D_MSG_PAR, \
                    D_MSG_RMK, D_MSG_SRV, D_MSG_TIM, D_MSG_UFZ,]
+
+# códigos das mensagens válidas
+SET_MSG_SUPER = [D_MSG_ACC, D_MSG_FIM, D_MSG_FRZ, D_MSG_UFZ]
 
 # < rede >-----------------------------------------------------------------------------------------
 

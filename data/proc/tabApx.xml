@@ -2,169 +2,763 @@
 <!DOCTYPE aproximacoes>
 <aproximacoes VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <aproximacao nApx="1">
-    <aerodromo>SBSP</aerodromo>
-    <nome>FINAL H3</nome>
-    <pista>17R</pista>
+  <aproximacao nApx="1001">
+    <descricao>RNAV 11R</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
     <ils>N</ils>
-    <aproxperd>N</aproxperd>
-    <espera>2</espera>
+    <apxperdida>N</apxperdida>
+    <espera>1017</espera>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>IS</cpoA>
-        <cpoB>2</cpoB>
-        <cpoC>347</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.89312</cpoA>
+        <cpoB>-48.12909</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.886</cpoA>
+        <cpoB>-48.026</cpoB>
       </coord>
       <altitude>5200</altitude>
-      <razdes>800</razdes>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>IS</cpoA>
-      </coord>
-      <altitude>4300</altitude>
-      <razdes>800</razdes>
+      <razdes>700.0</razdes>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>IS</cpoA>
-        <cpoB>4</cpoB>
-        <cpoC>167</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
       </coord>
-      <altitude>2895</altitude>
-      <razdes>800</razdes>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
     </breakpoint>
 
     <breakpoint nBrk="4">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>IS</cpoA>
-        <cpoB>5</cpoB>
-        <cpoC>167</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
       </coord>
-      <altitude>2631</altitude>
-      <razdes>800</razdes>
+      <altitude>3500</altitude>
     </breakpoint>
   </aproximacao>
 
-  <aproximacao nApx="2">
-    <aerodromo>SBSP</aerodromo>
-    <nome>FINAL H5</nome>
-    <pista>35L</pista>
+  <aproximacao nApx="1002">
+    <descricao>RNAV 11L</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
     <ils>N</ils>
-    <aproxperd>N</aproxperd>
-    <espera>7</espera>
+    <apxperdida>N</apxperdida>
+    <espera>1018</espera>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>DAD</cpoA>
-        <cpoB>1</cpoB>
-        <cpoC>167</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.86545</cpoA>
+        <cpoB>-48.12047</cpoB>
       </coord>
-      <altitude>5000</altitude>
-      <razdes>800</razdes>
+      <altitude>6500</altitude>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>DAD</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.86917</cpoA>
+        <cpoB>-48.0125</cpoB>
       </coord>
-      <altitude>4300</altitude>
-      <razdes>800</razdes>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>DAD</cpoA>
-        <cpoB>4</cpoB>
-        <cpoC>347</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
       </coord>
-      <altitude>2895</altitude>
-      <razdes>800</razdes>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
     </breakpoint>
 
     <breakpoint nBrk="4">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>DAD</cpoA>
-        <cpoB>5</cpoB>
-        <cpoC>347</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
       </coord>
-      <altitude>2631</altitude>
-      <razdes>800</razdes>
+      <altitude>3500</altitude>
     </breakpoint>
   </aproximacao>
 
-  <!-- Operacional -->
-  <aproximacao nApx="5">
-    <aerodromo>SBGR</aerodromo>
-    <nome>C1 09R</nome>
-    <pista>09R</pista>
+  <aproximacao nApx="1003">
+    <descricao>RNAV 29L</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
     <ils>N</ils>
-    <aproxperd>N</aproxperd>
-    <espera>70</espera>
+    <apxperdida>N</apxperdida>
+    <espera>1020</espera>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>KOVLA</cpoA>
-        <cpoB>4</cpoB>
-        <cpoC>273</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-15.87672</cpoA>
+        <cpoB>-47.71603</cpoB>
       </coord>
-      <altitude>10000</altitude>
+      <altitude>6500</altitude>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>MARPU</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.873</cpoA>
+        <cpoB>-47.823</cpoB>
       </coord>
-      <altitude>6000</altitude>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>K</tipo>
-        <cpoA>W:23:27:59</cpoA>
-        <cpoB>S:46:44:31</cpoB>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
       </coord>
-      <altitude>4700</altitude>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
     </breakpoint>
 
     <breakpoint nBrk="4">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>UTKET</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
       </coord>
-      <altitude>4700</altitude>
+      <altitude>3500</altitude>
     </breakpoint>
+  </aproximacao>
 
-    <breakpoint nBrk="5">
+  <aproximacao nApx="1004">
+    <descricao>RNAV 29R</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1019</espera>
+
+    <breakpoint nBrk="1">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>TUCA</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.84905</cpoA>
+        <cpoB>-47.70858</cpoB>
       </coord>
-      <altitude>4000</altitude>
+      <altitude>5500</altitude>
     </breakpoint>
 
-    <breakpoint nBrk="6">
+    <breakpoint nBrk="2">
       <coord>
-        <tipo>K</tipo>
-        <cpoA>W:23:26:36</cpoA>
-        <cpoB>S:46:30:11</cpoB>
+        <tipo>L</tipo>
+        <cpoA>-15.856</cpoA>
+        <cpoB>-47.81133</cpoB>
       </coord>
-      <altitude>2550</altitude>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
     </breakpoint>
 
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1005">
+    <descricao>RNAV 11RV</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1017</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89791</cpoA>
+        <cpoB>-48.09706</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.886</cpoA>
+        <cpoB>-48.026</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1006">
+    <descricao>RNAV 11LV</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1018</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87846</cpoA>
+        <cpoB>-48.09054</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86917</cpoA>
+        <cpoB>-48.0125</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1007">
+    <descricao>RNAV 29LV</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1020</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86371</cpoA>
+        <cpoB>-47.74596</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.873</cpoA>
+        <cpoB>-47.823</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1008">
+    <descricao>RNAV 29RV</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1019</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84426</cpoA>
+        <cpoB>-47.74061</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.856</cpoA>
+        <cpoB>-47.81133</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1009">
+    <descricao>IY11L FULL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1018</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86843</cpoA>
+        <cpoB>-48.11544</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87467</cpoA>
+        <cpoB>-48.1</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1010">
+    <descricao>IZ11R FULL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1017</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88254</cpoA>
+        <cpoB>-48.04229</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.886</cpoA>
+        <cpoB>-48.026</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1011">
+    <descricao>IZ29L FULL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1020</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87404</cpoA>
+        <cpoB>-47.7454</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86917</cpoA>
+        <cpoB>-47.76133</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1012">
+    <descricao>IY29R FULL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1019</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86087</cpoA>
+        <cpoB>-47.7954</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.856</cpoA>
+        <cpoB>-47.81133</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1013">
+    <descricao>ILS Z 11R</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1017</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89456</cpoA>
+        <cpoB>-48.1289</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.886</cpoA>
+        <cpoB>-48.026</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1014">
+    <descricao>ILS Y 11L</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1018</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86615</cpoA>
+        <cpoB>-48.16936</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87467</cpoA>
+        <cpoB>-48.1</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1015">
+    <descricao>ILS Z 29L</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1020</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87588</cpoA>
+        <cpoB>-47.66403</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86917</cpoA>
+        <cpoB>-47.76133</cpoB>
+      </coord>
+      <altitude>6200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
+  </aproximacao>
+
+  <aproximacao nApx="1016">
+    <descricao>ILS Y 29R</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+    <ils>N</ils>
+    <apxperdida>N</apxperdida>
+    <espera>1019</espera>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84704</cpoA>
+        <cpoB>-47.70888</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.856</cpoA>
+        <cpoB>-47.81133</cpoB>
+      </coord>
+      <altitude>5200</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86167</cpoA>
+        <cpoB>-47.89783</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+      <razdes>700.0</razdes>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8635</cpoA>
+        <cpoB>-47.9275</cpoB>
+      </coord>
+      <altitude>3500</altitude>
+    </breakpoint>
   </aproximacao>
 
 </aproximacoes>

@@ -129,7 +129,7 @@ class CCineModel(object):
     # ---------------------------------------------------------------------------------------------
     def send_trks(self):
         """
-        DOCUMENT ME!
+        send trks
         """
         # clear to go
         assert self.__atv
@@ -173,21 +173,21 @@ class CCineModel(object):
         #           str(round(self.__atv.f_trf_vel_atu * cdefs.D_CNV_MS2KT, 1))
 
         # monta o buffer de envio
-        ls_buff = str(gdefs.D_MSG_VRS) + \
-                  gdefs.D_MSG_SEP + str(gdefs.D_MSG_NEW) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.i_trf_id) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.i_trf_ssr) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.i_atv_spi) + \
-                  gdefs.D_MSG_SEP + str(round(lf_alt, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(lf_lat, 6)) + \
-                  gdefs.D_MSG_SEP + str(round(lf_lng, 6)) + \
-                  gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_vel_atu * cdefs.D_CNV_MS2KT, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(lf_raz_sub, 1)) + \
-                  gdefs.D_MSG_SEP + str(round(self.__atv.f_trf_pro_atu, 1)) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.s_trf_ind) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.ptr_trf_prf.s_prf_id) + \
-                  gdefs.D_MSG_SEP + str(self.__sim_time.obtem_hora_sim()) + \
-                  gdefs.D_MSG_SEP + str(self.__atv.s_atv_icao24)
+        ls_buff = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
+                  str(gdefs.D_MSG_NEW) + gdefs.D_MSG_SEP + \
+                  str(self.__atv.i_trf_id) + gdefs.D_MSG_SEP + \
+                  str(self.__atv.i_trf_ssr) + gdefs.D_MSG_SEP + \
+                  str(self.__atv.i_atv_spi) + gdefs.D_MSG_SEP + \
+                  str(round(lf_alt, 1)) + gdefs.D_MSG_SEP + \
+                  str(round(lf_lat, 6)) + gdefs.D_MSG_SEP + \
+                  str(round(lf_lng, 6)) + gdefs.D_MSG_SEP + \
+                  str(round(self.__atv.f_trf_vel_atu * cdefs.D_CNV_MS2KT, 1)) + gdefs.D_MSG_SEP + \
+                  str(round(lf_raz_sub, 1)) + gdefs.D_MSG_SEP + \
+                  str(round(self.__atv.f_trf_pro_atu, 1)) + gdefs.D_MSG_SEP + \
+                  str(self.__atv.s_trf_ind) + gdefs.D_MSG_SEP + \
+                  str(self.__atv.ptr_trf_prf.s_prf_id) + gdefs.D_MSG_SEP + \
+                  str(self.__sim_time.obtem_hora_sim()) + gdefs.D_MSG_SEP + \
+                  str(self.__atv.s_atv_icao24)
 
         # envia os dados de pista
         self.__sck_snd_trks.send_data(ls_buff)
@@ -199,113 +199,71 @@ class CCineModel(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def atv(self):
-        """
-        get aeronave ativa
-        """
         return self.__atv
 
     # ---------------------------------------------------------------------------------------------
     @property
     def cine_data(self):
-        """
-        get dados da cinemática
-        """
         return self.__cine_data
 
     # ---------------------------------------------------------------------------------------------
     @property
     def coords(self):
-        """
-        get coordinate system
-        """
         return self.__coords
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_aer(self):
-        """
-        get dicionário de aeródromos
-        """
         return self.__dct_aer
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_fix(self):
-        """
-        get dicionário de fixos
-        """
         return self.__dct_fix
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_prc(self):
-        """
-        get dicionário de procedimentos
-        """
         return self.__dct_prc
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_prf(self):
-        """
-        get dicionário de performances
-        """
         return self.__dct_prf
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_trf(self):
-        """
-        get dicionário de tráfegos
-        """
         return self.__dct_trf
 
     # ---------------------------------------------------------------------------------------------
     @property
     def engine(self):
-        """
-        get flight engine
-        """
         return self.__engine
 
     # ---------------------------------------------------------------------------------------------
     @property
     def exe(self):
-        """
-        get exercício
-        """
         return self.__exe
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sim_time(self):
-        """
-        get simulation time
-        """
         return self.__sim_time
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_snd_cnfg(self):
-        """
-        get socket de envio de ccc
-        """
         return self.__sck_snd_cnfg
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_snd_trks(self):
-        """
-        get socket de envio de pistas
-        """
         return self.__sck_snd_trks
 
     # ---------------------------------------------------------------------------------------------
     @property
     def stk_context(self):
-        """
-        get stack context
-        """
         return self.__stk_context
 
 # < the end >--------------------------------------------------------------------------------------

@@ -405,11 +405,14 @@ class CPaintEngine(object):
 
         # para todas as posições do rastro...
         for li_ndx in xrange(8):
-            # converte a posição do rastro
-            l_pos = fo_widget.viewport.translate_pos(f_anv.trail(li_ndx))
+            # get trail position
+            l_pos = f_anv.trail(li_ndx)
 
             if l_pos is None:
                 break
+
+            # converte a posição do rastro
+            l_pos = fo_widget.viewport.translate_pos(l_pos)
 
             # desenha o rastro
             lo_painter.drawPoint(l_pos.f_x, l_pos.f_y)

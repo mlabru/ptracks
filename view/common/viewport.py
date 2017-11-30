@@ -4,8 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 viewport
 
-DOCUMENT ME!
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -44,12 +42,12 @@ import libs.coords.pos_xy as pxy
 
 class CViewport(object):
     """
-    DOCUMENT ME!
+    viewport
     """
     # ---------------------------------------------------------------------------------------------
     def __init__(self, fi_w, fi_h):
         """
-        DOCUMENT ME!
+        constructor
         """
         # inicia a super classe
         super(CViewport, self).__init__()
@@ -68,12 +66,10 @@ class CViewport(object):
     # ---------------------------------------------------------------------------------------------
     def translate_pos(self, f_pos):
         """
-        DOCUMENT ME!
+        translate pos
         """
         # check input
-        if f_pos is None:
-            # return
-            return None
+        assert f_pos
 
         # create answer
         l_xy = pxy.CPosXY()
@@ -96,12 +92,10 @@ class CViewport(object):
     # ---------------------------------------------------------------------------------------------
     def translate_xy(self, f_xy):
         """
-        DOCUMENT ME!
+        translate xy
         """
         # check input
-        if f_xy is None:
-            # return
-            return None
+        assert f_xy
 
         # create answer
         l_pos = pll.CPosLatLng()
@@ -124,7 +118,7 @@ class CViewport(object):
     # ---------------------------------------------------------------------------------------------
     def update_size(self, fi_w, fi_h):
         """
-        DOCUMENT ME!
+        update size
         """
         # set size
         self.__f_width = float(fi_w)
@@ -140,54 +134,34 @@ class CViewport(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def f_blip_size(self):
-        """
-        get blip size
-        """
         return self.__f_blip_size
 
     @f_blip_size.setter
     def f_blip_size(self, f_val):
-        """
-        set blip size
-        """
         self.__f_blip_size = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def center(self):
-        """
-        get center
-        """
         return self.__center
 
     @center.setter
     def center(self, f_val):
-        """
-        set center
-        """
         self.__center = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def ppnm(self):
-        """
-        DOCUMENT ME!
-        """
         return float(self.__f_width) / float(self.__f_zoom)
 
     # ---------------------------------------------------------------------------------------------
     @property
     def f_zoom(self):
-        """
-        get zoom (nm)
-        """
         return self.__f_zoom
 
     @f_zoom.setter
     def f_zoom(self, f_val):
-        """
-        set zoom (nm)
-        """
+
         # check input
         if f_val < 20:
             f_val = 20

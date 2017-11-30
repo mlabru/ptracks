@@ -2,868 +2,3310 @@
 <!DOCTYPE trajetorias>
 <trajetorias VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <trajetoria nTrj="200">
-    <descricao>Circuito I-1</descricao>
+  <trajetoria nTrj="13013">
+    <descricao>LINK STAR IAC ILSZ 11R FLYBY</descricao>
     <star>N</star>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>SBRJ</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.9749</cpoA>
+        <cpoB>-48.17813</cpoB>
       </coord>
-      <altitude>25000</altitude>
-      <velocidade>400</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>SCR</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.95026</cpoA>
+        <cpoB>-48.19154</cpoB>
       </coord>
-      <altitude>24000</altitude>
-      <velocidade>380</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>GGT</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.93144</cpoA>
+        <cpoB>-48.17027</cpoB>
       </coord>
-      <altitude>23000</altitude>
-      <velocidade>360</velocidade>
-      <procedimento>TRJ202</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="202">
-    <descricao>Circuito I-2</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>VUMEV</cpoA>
-      </coord>
-      <velocidade>360</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>CPN</cpoA>
-      </coord>
-      <altitude>22000</altitude>
-      <velocidade>340</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>ANDOR</cpoA>
-      </coord>
-      <altitude>21000</altitude>
-      <velocidade>320</velocidade>
-      <procedimento>TRJ204</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="204">
-    <descricao>Circuito I-3</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>ANISE</cpoA>
-      </coord>
-      <velocidade>320</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>PORNA</cpoA>
-      </coord>
-      <altitude>20000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MULOD</cpoA>
-      </coord>
-      <altitude>19000</altitude>
-      <velocidade>280</velocidade>
-      <procedimento>TRJ206</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="206">
-    <descricao>Circuito I-4</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SUNBU</cpoA>
-      </coord>
-      <velocidade>280</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>LOPES</cpoA>
-      </coord>
-      <altitude>20000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>TESIX</cpoA>
-      </coord>
-      <altitude>22000</altitude>
-      <velocidade>320</velocidade>
-      <procedimento>TRJ208</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="208">
-    <descricao>Circuito I-5</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>UBT</cpoA>
-      </coord>
-      <velocidade>320</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>KEVUN</cpoA>
-      </coord>
-      <altitude>23000</altitude>
-      <velocidade>340</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>PORNA</cpoA>
-      </coord>
-      <altitude>24000</altitude>
-      <velocidade>360</velocidade>
-      <procedimento>TRJ200</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="300">
-    <descricao>Circuito II-1</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>PIR</cpoA>
-      </coord>
-      <altitude>25000</altitude>
-      <velocidade>400</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>CPN</cpoA>
-      </coord>
-      <altitude>24000</altitude>
-      <velocidade>380</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SP022</cpoA>
-      </coord>
-      <altitude>23000</altitude>
-      <velocidade>360</velocidade>
-      <procedimento>TRJ302</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="302">
-    <descricao>Circuito II-2</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>RDE</cpoA>
-      </coord>
-      <velocidade>360</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SEKTI</cpoA>
-      </coord>
-      <altitude>22000</altitude>
-      <velocidade>340</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>ILTAB</cpoA>
-      </coord>
-      <altitude>21000</altitude>
-      <velocidade>320</velocidade>
-      <procedimento>TRJ304</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="304">
-    <descricao>Circuito II-3</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>OPREV</cpoA>
-      </coord>
-      <velocidade>320</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MULOD</cpoA>
-      </coord>
-      <altitude>20000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>GGT</cpoA>
-      </coord>
-      <altitude>19000</altitude>
-      <velocidade>280</velocidade>
-      <procedimento>TRJ306</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="306">
-    <descricao>Circuito II-4</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MOXEP</cpoA>
-      </coord>
-      <velocidade>280</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>KOTRU</cpoA>
-      </coord>
-      <altitude>22000</altitude>
-      <velocidade>320</velocidade>
-      <procedimento>TRJ300</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="400">
-    <descricao>Circuito III-1</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MUMOP</cpoA>
-      </coord>
-      <altitude>15000</altitude>
-      <velocidade>200</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>IMBID</cpoA>
-      </coord>
-      <altitude>16000</altitude>
-      <velocidade>220</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MAE</cpoA>
-      </coord>
-      <altitude>17000</altitude>
-      <velocidade>240</velocidade>
-      <procedimento>TRJ402</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="402">
-    <descricao>Circuito III-2</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>CPN</cpoA>
-      </coord>
-      <velocidade>240</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MOXEP</cpoA>
-      </coord>
-      <altitude>18000</altitude>
-      <velocidade>260</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>GGT</cpoA>
-      </coord>
-      <altitude>20000</altitude>
-      <velocidade>280</velocidade>
-      <procedimento>TRJ404</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="404">
-    <descricao>Circuito III-3</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SCR</cpoA>
-      </coord>
-      <velocidade>280</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>PORNA</cpoA>
-      </coord>
-      <altitude>22000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>OPREV</cpoA>
-      </coord>
-      <altitude>24000</altitude>
-      <velocidade>320</velocidade>
-      <procedimento>TRJ406</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="406">
-    <descricao>Circuito III-4</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>UGTEV</cpoA>
-      </coord>
-      <velocidade>320</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SOTPI</cpoA>
-      </coord>
-      <altitude>26000</altitude>
-      <velocidade>340</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SCP</cpoA>
-      </coord>
-      <altitude>28000</altitude>
-      <velocidade>360</velocidade>
-      <procedimento>TRJ408</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="408">
-    <descricao>Circuito III-5</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SUNBU</cpoA>
-      </coord>
-      <velocidade>360</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>KOTRU</cpoA>
-      </coord>
-      <altitude>30000</altitude>
-      <velocidade>380</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MILIL</cpoA>
-      </coord>
-      <altitude>32000</altitude>
-      <velocidade>400</velocidade>
-      <procedimento>TRJ410</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="418">
-    <descricao>Circuito III-6</descricao>
-    <star>N</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SCR</cpoA>
-      </coord>
-      <altitude>28000</altitude>
-      <velocidade>360</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SBRJ</cpoA>
-      </coord>
-      <altitude>24000</altitude>
-      <velocidade>340</velocidade>
-      <procedimento>TRJ400</procedimento>
-    </breakpoint>
-  </trajetoria>
-
-  <trajetoria nTrj="1004">
-    <descricao>STAR MUMOP2 RWY35L A PARTIR DE MUMOP</descricao>
-    <star>S</star>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MUMOP</cpoA>
-      </coord>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SEKTI</cpoA>
-      </coord>
-      <altitude>17000</altitude>
-      <velocidade>280</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SAT</cpoA>
-      </coord>
-      <altitude>15000</altitude>
-      <velocidade>260</velocidade>
+      <altitude>5500</altitude>
     </breakpoint>
 
     <breakpoint nBrk="4">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>RDE</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.89745</cpoA>
+        <cpoB>-48.1453</cpoB>
       </coord>
-      <altitude>7000</altitude>
-      <velocidade>240</velocidade>
+      <altitude>5500</altitude>
+      <velocidade>180</velocidade>
+      <procedimento>APX1013</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13014">
+    <descricao>LINK STAR IAC ILSY 11L FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80482</cpoA>
+        <cpoB>-48.23065</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83351</cpoA>
+        <cpoB>-48.21768</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86218</cpoA>
+        <cpoB>-48.20864</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85397</cpoA>
+        <cpoB>-48.18072</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+      <procedimento>APX1014</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13015">
+    <descricao>LINK STAR IAC ILSZ 29L FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93799</cpoA>
+        <cpoB>-47.60002</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.91051</cpoA>
+        <cpoB>-47.61432</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88229</cpoA>
+        <cpoB>-47.62031</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88825</cpoA>
+        <cpoB>-47.65288</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+      <procedimento>APX1015</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13016">
+    <descricao>LINK STAR IAC ILSY 29R FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.76734</cpoA>
+        <cpoB>-47.65959</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.78674</cpoA>
+        <cpoB>-47.6468</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80556</cpoA>
+        <cpoB>-47.66807</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84357</cpoA>
+        <cpoB>-47.69259</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+      <procedimento>APX1016</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13017">
+    <descricao>LINK STAR PROVE1A IAC ILS Z 11R FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.95026</cpoA>
+        <cpoB>-48.19154</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93144</cpoA>
+        <cpoB>-48.17027</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89745</cpoA>
+        <cpoB>-48.1453</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+      <procedimento>APX1013</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13018">
+    <descricao>LINK STAR PEDAL1A IAC ILS Y 11L FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83351</cpoA>
+        <cpoB>-48.21768</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86218</cpoA>
+        <cpoB>-48.20864</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85397</cpoA>
+        <cpoB>-48.18072</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+      <procedimento>APX1014</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13019">
+    <descricao>LINK STAR OBDOG1A IAC ILS Y 29R FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.78674</cpoA>
+        <cpoB>-47.6468</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80556</cpoA>
+        <cpoB>-47.66807</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84357</cpoA>
+        <cpoB>-47.69259</cpoB>
+      </coord>
+      <altitude>5500</altitude>
+      <procedimento>APX1016</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13020">
+    <descricao>LINK STAR WELIN1A IAC ILS Z 29L FLYBY</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.91051</cpoA>
+        <cpoB>-47.61432</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88229</cpoA>
+        <cpoB>-47.62031</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88825</cpoA>
+        <cpoB>-47.65288</cpoB>
+      </coord>
+      <altitude>6500</altitude>
+      <procedimento>APX1015</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13021">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR WELIN IAC 11R</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.15333</cpoA>
+        <cpoB>-48.22467</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00447</cpoA>
+        <cpoB>-48.19255</cpoB>
+      </coord>
+      <procedimento>TRJ13013</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13022">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR PROVE IAC 11R</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.9957</cpoA>
+        <cpoB>-48.16707</cpoB>
+      </coord>
+      <procedimento>TRJ13017</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13023">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR OBDOG IAC 11L</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77362</cpoA>
+        <cpoB>-48.23615</cpoB>
+      </coord>
+      <procedimento>TRJ13014</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12000">
+    <descricao>WLN1A RWY11</descricao>
+    <star>S</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.91203</cpoA>
+        <cpoB>-48.41412</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.38433</cpoA>
+        <cpoB>-48.28383</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.15333</cpoA>
+        <cpoB>-48.22467</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00447</cpoA>
+        <cpoB>-48.19255</cpoB>
+      </coord>
     </breakpoint>
 
     <breakpoint nBrk="5">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>KELY</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.97467</cpoA>
+        <cpoB>-48.17897</cpoB>
       </coord>
-      <altitude>5000</altitude>
-      <velocidade>220</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="6">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>NADI</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.95026</cpoA>
+        <cpoB>-48.19154</cpoB>
       </coord>
-      <altitude>3000</altitude>
-      <velocidade>200</velocidade>
-      <procedimento>ESP001</procedimento>
     </breakpoint>
 
     <breakpoint nBrk="7">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>CGO</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.93144</cpoA>
+        <cpoB>-48.17027</cpoB>
       </coord>
-      <altitude>2631</altitude>
-      <velocidade>140</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89745</cpoA>
+        <cpoB>-48.1453</cpoB>
+      </coord>
+      <procedimento>APX1013</procedimento>
     </breakpoint>
   </trajetoria>
 
-  <!-- Exercicio Operacional -->
+  <trajetoria nTrj="12001">
+    <descricao>PRV1A RWY11</descricao>
+    <star>S</star>
 
-<trajetoria nTrj="1101">
-  <descricao>SBBR-SBGR</descricao>
-  <star>N</star>
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.37207</cpoA>
+        <cpoB>-47.24754</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>25000</altitude>
-    <velocidade>400</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.04917</cpoA>
+        <cpoB>-47.52583</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MAVNI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.96976</cpoA>
+        <cpoB>-47.6003</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>NITBU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.94354</cpoA>
+        <cpoB>-47.63685</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ARX</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.97717</cpoA>
+        <cpoB>-47.97167</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MUKEL</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.9957</cpoA>
+        <cpoB>-48.16707</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PADAD</cpoA>
-    </coord>
-    <altitude>28000</altitude>
-    <velocidade>400</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.95026</cpoA>
+        <cpoB>-48.19154</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="7">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>BGC</cpoA>
-    </coord>
-    <altitude>20000</altitude>
-    <velocidade>300</velocidade>
-    <procedimento>APX005</procedimento>
-  </breakpoint>
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93144</cpoA>
+        <cpoB>-48.17027</cpoB>
+      </coord>
+    </breakpoint>
 
-</trajetoria>
+    <breakpoint nBrk="9">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89745</cpoA>
+        <cpoB>-48.1453</cpoB>
+      </coord>
+      <procedimento>APX1013</procedimento>
+    </breakpoint>
+  </trajetoria>
 
-<trajetoria nTrj="1102">
-  <descricao>SBGR-SBBR</descricao>
-  <star>N</star>
+  <trajetoria nTrj="12002">
+    <descricao>PDL1A RWY11</descricao>
+    <star>S</star>
 
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>BGC</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.28281</cpoA>
+        <cpoB>-47.31948</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PADAD</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.61217</cpoA>
+        <cpoB>-47.54383</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MUKEL</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.74202</cpoA>
+        <cpoB>-47.64119</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ARX</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.74159</cpoA>
+        <cpoB>-47.68686</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>NITBU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77267</cpoA>
+        <cpoB>-47.98583</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MAVNI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.7932</cpoA>
+        <cpoB>-48.2124</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="7">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83351</cpoA>
+        <cpoB>-48.21768</cpoB>
+      </coord>
+    </breakpoint>
 
-</trajetoria>
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86114</cpoA>
+        <cpoB>-48.20762</cpoB>
+      </coord>
+    </breakpoint>
 
-<trajetoria nTrj="1103">
-  <descricao>SBBR-SBGR</descricao>
-  <star>N</star>
+    <breakpoint nBrk="9">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85397</cpoA>
+        <cpoB>-48.18072</cpoB>
+      </coord>
+      <procedimento>APX1014</procedimento>
+    </breakpoint>
+  </trajetoria>
 
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>BGC</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+  <trajetoria nTrj="12003">
+    <descricao>OBG1A RWY11</descricao>
+    <star>S</star>
 
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PADAD</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.34804</cpoA>
+        <cpoB>-48.76968</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MUKEL</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77362</cpoA>
+        <cpoB>-48.23615</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ARX</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-    <procedimento>ESP077</procedimento>
-  </breakpoint>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80482</cpoA>
+        <cpoB>-48.23065</cpoB>
+      </coord>
+    </breakpoint>
 
-<breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>NITBU</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83351</cpoA>
+        <cpoB>-48.21768</cpoB>
+      </coord>
+    </breakpoint>
 
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86114</cpoA>
+        <cpoB>-48.20762</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>MAVNI</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85397</cpoA>
+        <cpoB>-48.18072</cpoB>
+      </coord>
+      <procedimento>APX1014</procedimento>
+    </breakpoint>
+  </trajetoria>
 
-  <breakpoint nBrk="7">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>37000</altitude>
-    <velocidade>430</velocidade>
-  </breakpoint>
+  <trajetoria nTrj="12004">
+    <descricao>PJM1A RWY11</descricao>
+    <star>S</star>
 
-</trajetoria>
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.24386</cpoA>
+        <cpoB>-48.5823</cpoB>
+      </coord>
+    </breakpoint>
 
-<trajetoria nTrj="1104">
-  <descricao>SBBR-SBBH</descricao>
-  <star>N</star>
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.13303</cpoA>
+        <cpoB>-48.38998</cpoB>
+      </coord>
+      <velocidade>270</velocidade>
+    </breakpoint>
 
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>COCHO</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.1513</cpoA>
+        <cpoB>-48.2412</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUZIANIA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.12604</cpoA>
+        <cpoB>-48.20556</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00447</cpoA>
+        <cpoB>-48.19255</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUVSU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.97508</cpoA>
+        <cpoB>-48.17758</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>REINA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.95026</cpoA>
+        <cpoB>-48.19154</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PORDU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>330</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93144</cpoA>
+        <cpoB>-48.17027</cpoB>
+      </coord>
+    </breakpoint>
 
-</trajetoria>
+    <breakpoint nBrk="9">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89745</cpoA>
+        <cpoB>-48.1453</cpoB>
+      </coord>
+      <procedimento>APX1013</procedimento>
+    </breakpoint>
+  </trajetoria>
 
-<trajetoria nTrj="1105">
-  <descricao>SBBR-SBBH</descricao>
-  <star>N</star>
+  <trajetoria nTrj="12005">
+    <descricao>WLN1A RWY29</descricao>
+    <star>S</star>
 
-  <breakpoint nBrk="1">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>COCHO</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.91203</cpoA>
+        <cpoB>-48.41412</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="2">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUZIANIA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.38433</cpoA>
+        <cpoB>-48.28383</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="3">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>ISOPI</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.15333</cpoA>
+        <cpoB>-48.22467</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="4">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>LUVSU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00447</cpoA>
+        <cpoB>-48.19255</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="5">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>REINA</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00544</cpoA>
+        <cpoB>-48.13522</cpoB>
+      </coord>
+    </breakpoint>
 
-  <breakpoint nBrk="6">
-    <coord>
-      <tipo>F</tipo>
-      <cpoA>PORDU</cpoA>
-    </coord>
-    <altitude>39000</altitude>
-    <velocidade>540</velocidade>
-  </breakpoint>
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.96933</cpoA>
+        <cpoB>-47.851</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.94896</cpoA>
+        <cpoB>-47.6211</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.91051</cpoA>
+        <cpoB>-47.61432</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="9">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88229</cpoA>
+        <cpoB>-47.62031</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="10">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88825</cpoA>
+        <cpoB>-47.65288</cpoB>
+      </coord>
+      <procedimento>APX1015</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12006">
+    <descricao>PRV1A RWY29</descricao>
+    <star>S</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.37207</cpoA>
+        <cpoB>-47.24754</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.04917</cpoA>
+        <cpoB>-47.52583</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.96976</cpoA>
+        <cpoB>-47.6003</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93799</cpoA>
+        <cpoB>-47.60002</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.91051</cpoA>
+        <cpoB>-47.61432</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88229</cpoA>
+        <cpoB>-47.62031</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88825</cpoA>
+        <cpoB>-47.65288</cpoB>
+      </coord>
+      <procedimento>APX1015</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12007">
+    <descricao>PDL1A RWY29</descricao>
+    <star>S</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.28233</cpoA>
+        <cpoB>-47.31979</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.51903</cpoA>
+        <cpoB>-47.40575</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.61217</cpoA>
+        <cpoB>-47.54383</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.74202</cpoA>
+        <cpoB>-47.64119</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.76734</cpoA>
+        <cpoB>-47.65959</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.78674</cpoA>
+        <cpoB>-47.6468</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80556</cpoA>
+        <cpoB>-47.66807</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84357</cpoA>
+        <cpoB>-47.69259</cpoB>
+      </coord>
+      <procedimento>APX1016</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12008">
+    <descricao>OBG1A RWY29</descricao>
+    <star>S</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.34804</cpoA>
+        <cpoB>-48.76968</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77362</cpoA>
+        <cpoB>-48.23615</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80294</cpoA>
+        <cpoB>-48.18055</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.765</cpoA>
+        <cpoB>-47.865</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.74646</cpoA>
+        <cpoB>-47.67093</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.78674</cpoA>
+        <cpoB>-47.6468</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80556</cpoA>
+        <cpoB>-47.66807</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84357</cpoA>
+        <cpoB>-47.69259</cpoB>
+      </coord>
+      <procedimento>APX1016</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12009">
+    <descricao>PJM1A RWY29</descricao>
+    <star>S</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.24386</cpoA>
+        <cpoB>-48.5823</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.14846</cpoA>
+        <cpoB>-48.2406</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.1124</cpoA>
+        <cpoB>-48.19601</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00447</cpoA>
+        <cpoB>-48.19255</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00544</cpoA>
+        <cpoB>-48.13522</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.96933</cpoA>
+        <cpoB>-47.851</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.94896</cpoA>
+        <cpoB>-47.6211</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="8">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.91051</cpoA>
+        <cpoB>-47.61432</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="9">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88229</cpoA>
+        <cpoB>-47.62031</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="10">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88825</cpoA>
+        <cpoB>-47.65288</cpoB>
+      </coord>
+      <procedimento>APX1015</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12010">
+    <descricao>RWY 29 - MILIX/BSI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.33333</cpoA>
+        <cpoB>-48.7775</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8725</cpoA>
+        <cpoB>-48.02167</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12011">
+    <descricao>RWY 29 - FRM/CH</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.55767</cpoA>
+        <cpoB>-47.347</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86083</cpoA>
+        <cpoB>-47.88533</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13036">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR PAJEM IAC 29L</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.1513</cpoA>
+        <cpoB>-48.2412</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.11191</cpoA>
+        <cpoB>-48.19673</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00464</cpoA>
+        <cpoB>-48.19231</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00544</cpoA>
+        <cpoB>-48.13522</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.94896</cpoA>
+        <cpoB>-47.6211</cpoB>
+      </coord>
+      <procedimento>TRJ13020</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12013">
+    <descricao>RWY 29 - PAJEM/CH</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.24183</cpoA>
+        <cpoB>-48.59883</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86083</cpoA>
+        <cpoB>-47.88533</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12014">
+    <descricao>RWY 11 - KOGLI/BSI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.965</cpoA>
+        <cpoB>-48.07267</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8725</cpoA>
+        <cpoB>-48.02167</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12015">
+    <descricao>RWY 11 - KOGLI/CH</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.965</cpoA>
+        <cpoB>-48.07267</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86083</cpoA>
+        <cpoB>-47.88533</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12016">
+    <descricao>RWY 11L/R - ILPAV/TRJ2000</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+      <procedimento>TRJ12000</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12017">
+    <descricao>RWY29L/R - ILPAV/TRJ2005</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+      <procedimento>TRJ12005</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12018">
+    <descricao>RWY11L/R - SIRUL/TRJ2000</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.96617</cpoA>
+        <cpoB>-48.556</cpoB>
+      </coord>
+      <procedimento>TRJ12000</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12019">
+    <descricao>RWY29L/R - SIRUL/TRJ2005</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.96617</cpoA>
+        <cpoB>-48.556</cpoB>
+      </coord>
+      <procedimento>TRJ12005</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12020">
+    <descricao>RWY11L/R - PABIN/TRJ2000</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.77667</cpoA>
+        <cpoB>-48.19567</cpoB>
+      </coord>
+      <procedimento>TRJ12000</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12021">
+    <descricao>RWY29L/R - PABIN/TRJ2005</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.77667</cpoA>
+        <cpoB>-48.19567</cpoB>
+      </coord>
+      <procedimento>TRJ12005</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12022">
+    <descricao>RWY11L/R - VUKEP/TRJ2000</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.30417</cpoA>
+        <cpoB>-47.71583</cpoB>
+      </coord>
+      <procedimento>TRJ12000</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12023">
+    <descricao>RWY29L/R - VUKEP/TRJ2005</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.30417</cpoA>
+        <cpoB>-47.71583</cpoB>
+      </coord>
+      <procedimento>TRJ12005</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12024">
+    <descricao>RWY11L/R - EGONI/GOI/TRJ2004</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.00083</cpoA>
+        <cpoB>-50.02967</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12004</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12025">
+    <descricao>RWY29L/R - EGONI/GOI/TRJ2009</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.00083</cpoA>
+        <cpoB>-50.02967</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12009</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12026">
+    <descricao>RWY11L/R - UBSUS/GOI/TRJ2004</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.03833</cpoA>
+        <cpoB>-49.769</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12004</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12027">
+    <descricao>RWY29L/R - UBSUS/GOI/TRJ2009</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.03833</cpoA>
+        <cpoB>-49.769</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12009</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12028">
+    <descricao>RWY1L/R - NAXIV/GOI/TRJ2004</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.42683</cpoA>
+        <cpoB>-50.86617</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12004</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12029">
+    <descricao>RWY29L/R - NAXIV/GOI/TRJ2009</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.42683</cpoA>
+        <cpoB>-50.86617</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12009</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12030">
+    <descricao>RWY11L/R - PROVE/TRJ2001</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.82783</cpoA>
+        <cpoB>-46.56833</cpoB>
+      </coord>
+      <procedimento>TRJ12001</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12031">
+    <descricao>RWY29L/R - PROVE/TRJ2006</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.82783</cpoA>
+        <cpoB>-46.56833</cpoB>
+      </coord>
+      <procedimento>TRJ12006</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12032">
+    <descricao>RWY11L/R - OCELO/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.21817</cpoA>
+        <cpoB>-46.118</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12033">
+    <descricao>RWY29L/R - OCELO/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.21817</cpoA>
+        <cpoB>-46.118</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12034">
+    <descricao>RWY11L/R - CARVA/PEDAL/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.38117</cpoA>
+        <cpoB>-45.35033</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12035">
+    <descricao>RWY29L/R - CARVA/PEDAL/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.38117</cpoA>
+        <cpoB>-45.35033</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12036">
+    <descricao>RWY11L/R - PALMO/PEDAL/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.28917</cpoA>
+        <cpoB>-45.91333</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12037">
+    <descricao>RWY29L/R - PALMO/PEDAL/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.28917</cpoA>
+        <cpoB>-45.91333</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12038">
+    <descricao>RWY11L/R - KORAN/PEDAL/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.92383</cpoA>
+        <cpoB>-46.07217</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12039">
+    <descricao>RWY29L/R - KORAN/PEDAL/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.92383</cpoA>
+        <cpoB>-46.07217</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12040">
+    <descricao>RWY11L/R - FLINT/MOLMO/BR034/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.67033</cpoA>
+        <cpoB>-47.4165</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.75383</cpoA>
+        <cpoB>-47.45833</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.02767</cpoA>
+        <cpoB>-47.35083</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12041">
+    <descricao>RWY29L/R - FLINT/MOLMO/BR034/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.67033</cpoA>
+        <cpoB>-47.4165</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.75383</cpoA>
+        <cpoB>-47.45833</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.02767</cpoA>
+        <cpoB>-47.35083</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12042">
+    <descricao>RWY11L/R - ISONU/NIMTI/MOLMO/BR034/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.95183</cpoA>
+        <cpoB>-47.16033</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.22283</cpoA>
+        <cpoB>-47.53167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.75383</cpoA>
+        <cpoB>-47.45833</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.02767</cpoA>
+        <cpoB>-47.35083</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12043">
+    <descricao>RWY29L/R - ISONU/NIMTI/MOLMO/BR034/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.95183</cpoA>
+        <cpoB>-47.16033</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.22283</cpoA>
+        <cpoB>-47.53167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.75383</cpoA>
+        <cpoB>-47.45833</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.02767</cpoA>
+        <cpoB>-47.35083</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12044">
+    <descricao>RWY11L/R - RUSTE/MUDPA/TRJ2003</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.25767</cpoA>
+        <cpoB>-48.24133</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.87667</cpoA>
+        <cpoB>-48.71483</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12045">
+    <descricao>RWY29L/R - RUSTE/MUDPA/TRJ2008</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.25767</cpoA>
+        <cpoB>-48.24133</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.87667</cpoA>
+        <cpoB>-48.71483</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12046">
+    <descricao>RWY11L/R - CHORD/NIDRU/MUDPA/TRJ2003</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.86367</cpoA>
+        <cpoB>-49.3995</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.52683</cpoA>
+        <cpoB>-49.27533</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.87667</cpoA>
+        <cpoB>-48.71483</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12047">
+    <descricao>RWY29L/R - CHORD/NIDRU/MUDPA/TRJ2008</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.25767</cpoA>
+        <cpoB>-48.24133</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.52683</cpoA>
+        <cpoB>-49.27533</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.87667</cpoA>
+        <cpoB>-48.71483</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12048">
+    <descricao>RWY11L/R - EGBAV/MUDPA/TRJ2003</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.36033</cpoA>
+        <cpoB>-49.344</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.87667</cpoA>
+        <cpoB>-48.71483</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12049">
+    <descricao>RW29L/R - EGBAV/MUDPA/TRJ2008</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.36033</cpoA>
+        <cpoB>-49.344</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.87667</cpoA>
+        <cpoB>-48.71483</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12050">
+    <descricao>RWY11L/R - IRULI/TRJ2003</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.65333</cpoA>
+        <cpoB>-49.24017</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12051">
+    <descricao>RWY29L/R - IRULI/TRJ2008</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.65333</cpoA>
+        <cpoB>-49.24017</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12052">
+    <descricao>RWY11L/R - PAPES/TRJ2003</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.49133</cpoA>
+        <cpoB>-49.94883</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12053">
+    <descricao>RWY29L/R - PAPES/TRJ2008</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.49133</cpoA>
+        <cpoB>-49.94883</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12054">
+    <descricao>RWY11L/R - MOSNA/TRJ2003</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.07767</cpoA>
+        <cpoB>-51.5735</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12003</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12055">
+    <descricao>RWY29L/R - MOSNA/TRJ2008</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.07767</cpoA>
+        <cpoB>-51.5735</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.215</cpoA>
+        <cpoB>-48.94467</cpoB>
+      </coord>
+      <procedimento>TRJ12008</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12056">
+    <descricao>RWY11L/R - NATIO/NIBMO/MOLMO/BR034/TRJ2002</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.9535</cpoA>
+        <cpoB>-47.85583</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.357</cpoA>
+        <cpoB>-47.63167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.75383</cpoA>
+        <cpoB>-47.45833</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.02767</cpoA>
+        <cpoB>-47.35083</cpoB>
+      </coord>
+      <procedimento>TRJ12002</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12057">
+    <descricao>RWY29L/R - NATIO/NIBMO/MOLMO/BR034/TRJ2007</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.9535</cpoA>
+        <cpoB>-47.85583</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.357</cpoA>
+        <cpoB>-47.63167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.75383</cpoA>
+        <cpoB>-47.45833</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.02767</cpoA>
+        <cpoB>-47.35083</cpoB>
+      </coord>
+      <procedimento>TRJ12007</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12058">
+    <descricao>SIDAPP/ACCBS/UW10 - GNV/NAXIV</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.42683</cpoA>
+        <cpoB>-50.86617</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12059">
+    <descricao>SIDAPP/ACCBS/UM532 - ROMIK/SEDSU</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.367</cpoA>
+        <cpoB>-49.33333</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12060">
+    <descricao>SIDAPP/ACCBS/UZ40 - OPRUX</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.0405</cpoA>
+        <cpoB>-50.56817</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12061">
+    <descricao>SIDAPP/ACCBS/UM530 - MOSNA</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.07767</cpoA>
+        <cpoB>-51.5735</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12062">
+    <descricao>SIDAPP/ACCBS/UZ5 - EDMIN</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.96617</cpoA>
+        <cpoB>-48.556</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.675</cpoA>
+        <cpoB>-48.62067</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12063">
+    <descricao>SIDAPP/ACCBS/UZ26 - RUSTE</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.25767</cpoA>
+        <cpoB>-48.24133</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12064">
+    <descricao>SIDAPP/ACCBS/UZ2 - BETAR</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.02183</cpoA>
+        <cpoB>-46.891</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12065">
+    <descricao>SIDAPP/ACCBS/UL776 - SEBMU</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.08167</cpoA>
+        <cpoB>-49.74783</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12066">
+    <descricao>SIDAPP/ACCBS/UZ5 - OSABI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-12.54633</cpoA>
+        <cpoB>-46.37533</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12068">
+    <descricao>SIDAPP/ACCBS/UW10 - ORATE/IMBES</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.11083</cpoA>
+        <cpoB>-46.64383</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.19917</cpoA>
+        <cpoB>-45.02083</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12069">
+    <descricao>SIDAPP/ACCBS/UZ27 - FLASH/MUNUX</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.996</cpoA>
+        <cpoB>-46.709</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.748</cpoA>
+        <cpoB>-45.3095</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12070">
+    <descricao>SIDAPP/ACCBS/UZ18 - PEDAL/KORAN</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.85</cpoA>
+        <cpoB>-46.79183</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.92383</cpoA>
+        <cpoB>-46.07217</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12071">
+    <descricao>SIDAPP/ACCBS/UZ19 - SIGER/OBGEM</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.12967</cpoA>
+        <cpoB>-45.485</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12072">
+    <descricao>SIDAPP/ACCBS/UZ2 - MAVNI/NITBU</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.48967</cpoA>
+        <cpoB>-47.41483</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.85933</cpoA>
+        <cpoB>-47.19783</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12073">
+    <descricao>SIDAPP/ACCBS/UZ38 - NIMKI/MOMKO</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.38817</cpoA>
+        <cpoB>-47.094</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.7725</cpoA>
+        <cpoB>-46.90967</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12074">
+    <descricao>SIDAPP/ACCBS/UZ26 - CROWD</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.21483</cpoA>
+        <cpoB>-46.57783</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12075">
+    <descricao>SIDAPP/ACCBS/UZ35 - DEPTI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.774</cpoA>
+        <cpoB>-46.316</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12076">
+    <descricao>SIDAPP/ACCBS/UZ35 - MUGIS/DEPTI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.02017</cpoA>
+        <cpoB>-47.148</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.774</cpoA>
+        <cpoB>-46.316</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12077">
+    <descricao>SIDAPP/ACCBS/UZ24 - KODNA/MUGIS/LUVSU/PANAP</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.02017</cpoA>
+        <cpoB>-47.148</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.5575</cpoA>
+        <cpoB>-46.5585</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.85983</cpoA>
+        <cpoB>-45.77367</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12078">
+    <descricao>SIDAPP/ACCBS/UM409 - ISOMU</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.05617</cpoA>
+        <cpoB>-50.156</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12079">
+    <descricao>RWY11L/R - GNV/TRJ2004</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12004</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12080">
+    <descricao>RWY29L/R - GNV/TRJ2009</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+      <procedimento>TRJ12009</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12081">
+    <descricao>SID 11/29 GIGTI - LIVAB</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-11.22183</cpoA>
+        <cpoB>-51.901</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12082">
+    <descricao>SID 11/29 GIGTI - MEVOS</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-10.40167</cpoA>
+        <cpoB>-50.49967</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12083">
+    <descricao>SID 11/29 SIGER - NITGI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.40233</cpoA>
+        <cpoB>-45.02417</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12084">
+    <descricao>DEP GNV - BSI/PMS</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8725</cpoA>
+        <cpoB>-48.02167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-10.288</cpoA>
+        <cpoB>-48.3585</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12085">
+    <descricao>SID 11/29 SIREM - ILPAV/PANAM</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-20.697</cpoA>
+        <cpoB>-50.60033</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12086">
+    <descricao>ILPAV/WELIN - RWY 11/29</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.92567</cpoA>
+        <cpoB>-48.42367</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12087">
+    <descricao>PMS - BSI/GOI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8725</cpoA>
+        <cpoB>-48.02167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12088">
+    <descricao>GNV - GRU</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.7725</cpoA>
+        <cpoB>-46.90967</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-19.24167</cpoA>
+        <cpoB>-46.82883</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12089">
+    <descricao>GNV - CGO</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-10.32017</cpoA>
+        <cpoB>-48.66567</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12090">
+    <descricao>GNV - SBGL</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.19033</cpoA>
+        <cpoB>-46.17767</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.85983</cpoA>
+        <cpoB>-45.77367</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12091">
+    <descricao>GNV - SBRJ</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.51333</cpoA>
+        <cpoB>-46.39067</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-19.21117</cpoA>
+        <cpoB>-45.95033</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12092">
+    <descricao>GNV - SBCF/SBBH</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.73167</cpoA>
+        <cpoB>-48.9785</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.438</cpoA>
+        <cpoB>-45.57133</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-19.33183</cpoA>
+        <cpoB>-44.59567</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12093">
+    <descricao>SBGR - KMIA</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.78083</cpoA>
+        <cpoB>-47.93133</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8725</cpoA>
+        <cpoB>-48.02167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-10.40167</cpoA>
+        <cpoB>-50.49967</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12094">
+    <descricao>BSI - SBEG</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-11.22183</cpoA>
+        <cpoB>-51.901</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12095">
+    <descricao>BSI - NIMKI - MOPNI</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8725</cpoA>
+        <cpoB>-48.02167</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.38817</cpoA>
+        <cpoB>-47.094</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-19.24167</cpoA>
+        <cpoB>-46.82883</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="12096">
+    <descricao>SBCF/SBBH - GNV</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-18.90583</cpoA>
+        <cpoB>-48.08067</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-17.22033</cpoA>
+        <cpoB>-48.71883</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6325</cpoA>
+        <cpoB>-49.2155</cpoB>
+      </coord>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13024">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR PEDAL IAC 11L</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.7932</cpoA>
+        <cpoB>-48.2124</cpoB>
+      </coord>
+      <procedimento>TRJ13018</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13025">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR PROVE IAC 29L</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.96976</cpoA>
+        <cpoB>-47.6003</cpoB>
+      </coord>
+      <procedimento>TRJ13015</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13026">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR WELIN IAC 29L</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.15333</cpoA>
+        <cpoB>-48.22467</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00464</cpoA>
+        <cpoB>-48.19231</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00544</cpoA>
+        <cpoB>-48.13522</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.94896</cpoA>
+        <cpoB>-47.6211</cpoB>
+      </coord>
+      <procedimento>TRJ13020</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13027">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR PEDAL IAC 29R</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.74202</cpoA>
+        <cpoB>-47.64119</cpoB>
+      </coord>
+      <procedimento>TRJ13019</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13028">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR OBDOG IAC 29R</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77391</cpoA>
+        <cpoB>-48.23666</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80294</cpoA>
+        <cpoB>-48.18055</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.765</cpoA>
+        <cpoB>-47.865</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.74646</cpoA>
+        <cpoB>-47.67093</cpoB>
+      </coord>
+      <procedimento>TRJ13019</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13029">
+    <descricao>VFR TGT/GAMA</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86833</cpoA>
+        <cpoB>-48.03117</cpoB>
+      </coord>
+      <altitude>4700</altitude>
+      <velocidade>109</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.02333</cpoA>
+        <cpoB>-48.06067</cpoB>
+      </coord>
+      <altitude>4500</altitude>
+      <velocidade>106</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13030">
+    <descricao>VFR SDZF/SBBR</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.99133</cpoA>
+        <cpoB>-47.47517</cpoB>
+      </coord>
+      <altitude>4700</altitude>
+      <velocidade>109</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86917</cpoA>
+        <cpoB>-47.90683</cpoB>
+      </coord>
+      <altitude>4500</altitude>
+      <velocidade>102</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13031">
+    <descricao>VFR SWFA/SBBR</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.21717</cpoA>
+        <cpoB>-47.62833</cpoB>
+      </coord>
+      <altitude>4700</altitude>
+      <velocidade>103</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87417</cpoA>
+        <cpoB>-47.92</cpoB>
+      </coord>
+      <altitude>4500</altitude>
+      <velocidade>101</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13032">
+    <descricao>VFR SWNS/SIQE</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.32167</cpoA>
+        <cpoB>-48.80383</cpoB>
+      </coord>
+      <velocidade>105</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93717</cpoA>
+        <cpoB>-47.7285</cpoB>
+      </coord>
+      <velocidade>101</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13033">
+    <descricao>HEL 2 29L/R</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.91117</cpoA>
+        <cpoB>-47.75717</cpoB>
+      </coord>
+      <altitude>47</altitude>
+      <velocidade>103</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.9385</cpoA>
+        <cpoB>-48.25333</cpoB>
+      </coord>
+      <altitude>4500</altitude>
+      <velocidade>101</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13034">
+    <descricao>VFR SIQE/APUB</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.93717</cpoA>
+        <cpoB>-47.7285</cpoB>
+      </coord>
+      <altitude>47</altitude>
+      <velocidade>112</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.767</cpoA>
+        <cpoB>-47.81717</cpoB>
+      </coord>
+      <altitude>4500</altitude>
+      <velocidade>112</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.7705</cpoA>
+        <cpoB>-47.904</cpoB>
+      </coord>
+      <altitude>4400</altitude>
+      <velocidade>108</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13035">
+    <descricao>VFR APUB/SIQE</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77</cpoA>
+        <cpoB>-47.90517</cpoB>
+      </coord>
+      <altitude>47</altitude>
+      <velocidade>112</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77717</cpoA>
+        <cpoB>-47.79583</cpoB>
+      </coord>
+      <altitude>4600</altitude>
+      <velocidade>112</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.77</cpoA>
+        <cpoB>-47.90517</cpoB>
+      </coord>
+      <altitude>4500</altitude>
+      <velocidade>106</velocidade>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13037">
+    <descricao>TRÁFEGO MOMENTO ZERO STAR PAJEM IAC 11R</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.1513</cpoA>
+        <cpoB>-48.2412</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.11191</cpoA>
+        <cpoB>-48.19673</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.00464</cpoA>
+        <cpoB>-48.19231</cpoB>
+      </coord>
+      <procedimento>TRJ13013</procedimento>
+    </breakpoint>
+  </trajetoria>
+
+  <trajetoria nTrj="13038">
+    <descricao>PEDAL MOMENTO ZERO RWY 11L</descricao>
+    <star>N</star>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.7932</cpoA>
+        <cpoB>-48.2124</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83351</cpoA>
+        <cpoB>-48.21768</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86114</cpoA>
+        <cpoB>-48.20762</cpoB>
+      </coord>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85397</cpoA>
+        <cpoB>-48.18072</cpoB>
+      </coord>
+      <procedimento>APX1014</procedimento>
+    </breakpoint>
+  </trajetoria>
 
 </trajetorias>

@@ -4,8 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 slate_radar
 
-DOCUMENT ME!
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -120,7 +118,7 @@ class CSlateRadar(QtGui.QWidget):
         assert self.__viewport
 
         # get reference center
-        self.__viewport.center = self.__airspace.get_position("SBSJ") #16
+        self.__viewport.center = self.__airspace.get_position("SBBR") #16
 
         # create paint engine
         self.__paint_engine = peng.CPaintEngine()
@@ -1121,46 +1119,28 @@ class CSlateRadar(QtGui.QWidget):
     # ---------------------------------------------------------------------------------------------
     @property
     def fRadarInterval(self):
-        """
-        get radar interval
-        """
         return self.__f_radar_interval
 
     @fRadarInterval.setter
     def fRadarInterval(self, f_val):
-        """
-        set radar interval
-        """
         self.__f_radar_interval = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def fUpdateInterval(self):
-        """
-        get update interval
-        """
         return self.__f_update_interval
 
     @fUpdateInterval.setter
     def fUpdateInterval(self, f_val):
-        """
-        set update interval
-        """
         self.__f_update_interval = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def viewport(self):
-        """
-        get viewport
-        """
         return self.__viewport
 
     @viewport.setter
     def viewport(self, f_val):
-        """
-        set viewport
-        """
         self.__viewport = f_val
 
 # < the end >--------------------------------------------------------------------------------------

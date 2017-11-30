@@ -139,69 +139,42 @@ class CControlManager(threading.Thread):
     # ---------------------------------------------------------------------------------------------
     @property
     def config(self):
-        """
-        get config manager
-        """
         return self.__config
 
     @config.setter
     def config(self, f_val):
-        """
-        set config manager
-        """
         self.__config = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def event(self):
-        """
-        get event manager
-        """
         return self.__event
 
     @event.setter
     def event(self, f_val):
-        """
-        set event manager
-        """
         self.__event = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def model(self):
-        """
-        get model
-        """
         return self.__model
 
     @model.setter
     def model(self, f_val):
-        """
-        set model
-        """
         self.__model = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def view(self):
-        """
-        get view
-        """
         return self.__view
 
     @view.setter
     def view(self, f_val):
-        """
-        set view
-        """
         self.__view = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def voip(self):
-        """
-        get voip library
-        """
         return self.__voip
 
 # < the end >--------------------------------------------------------------------------------------

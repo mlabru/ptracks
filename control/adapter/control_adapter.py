@@ -49,7 +49,7 @@ import model.common.glb_data as gdata
 import model.adapter.model_adapter as model
 
 # control 
-# import control.control_debug as cdbg
+import control.control_debug as cdbg
 import control.control_manager as control
 
 import control.common.glb_defs as gdefs
@@ -258,8 +258,14 @@ class CControlAdapter(control.CControlManager):
                         # trata mensagem de status de aeronave
                         self.__msg_trk(llst_data)
 
-                        # envia a mensgaem de pista para a cntl0net
-                        self.__sck_snd_trks.send_data(str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + self.__s_msg)
+                        # mensagem a enviar
+                        #ls_msg = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
+                        #         str(gdefs.D_MSG_COR) + gdefs.D_MSG_SEP + \
+                        #         self.__s_msg
+                        #cdbg.M_DBG.debug("self.__s_msg: {}".format(ls_msg))
+
+                        # envia a mensagem de pista para a cntl0net
+                        #self.__sck_snd_trks.send_data(ls_msg)
 
                     # senão, mensagem não reconhecida ou não tratavél
                     else:

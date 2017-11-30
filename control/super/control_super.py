@@ -153,17 +153,22 @@ class CControlSuper(control.CControlManager):
         assert self.__q_snd_cnfg
         assert self.__sck_snd_cnfg
 
-        # build message
-        ls_buff  = str(gdefs.D_MSG_VRS)
-        ls_buff += gdefs.D_MSG_SEP + str(self.__dct_config["spr.type"])
+        # código da mensagem
+        li_type = self.__dct_config["spr.type"]
+
+        # código válido ?
+        if li_type in gdefs.SET_MSG_SUPER:
+            # build message
+            ls_buff  = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP
+            ls_buff += str(li_type) + gdefs.D_MSG_SEP
         
-        # fast-track simulation ? 
-        if gdefs.D_MSG_ACC == self.__dct_config["spr.type"]:
-            # acrescenta velocidade de execução 
-            ls_buff += gdefs.D_MSG_SEP + str(self.__dct_config["spr.acc"])         
-        
-        # envia a mensagem
-        self.__sck_snd_cnfg.send_data(ls_buff)
+            # fast-track simulation ? 
+            if gdefs.D_MSG_ACC == li_type:
+                # acrescenta velocidade de execução 
+                ls_buff += str(self.__dct_config["spr.acc"]) + gdefs.D_MSG_SEP
+            
+            # envia a mensagem
+            self.__sck_snd_cnfg.send_data(ls_buff[:-1])
         
     # =============================================================================================
     # data
@@ -172,24 +177,15 @@ class CControlSuper(control.CControlManager):
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_config(self):
-        """
-        get dicionário de configuração
-        """
         return self.__dct_config
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_snd_cnfg(self):
-        """
-        get configuration queue
-        """
         return self.__q_snd_cnfg
 
     @q_snd_cnfg.setter
     def q_snd_cnfg(self, f_val):
-        """
-        set configuration queue
-        """
         self.__q_snd_cnfg = f_val
 
 # < the end >--------------------------------------------------------------------------------------

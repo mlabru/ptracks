@@ -1214,9 +1214,6 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_visual(self):
-        """
-        get visual dictionary
-        """
         return self.dck_procedures.dct_visual
 
 # < the end >--------------------------------------------------------------------------------------

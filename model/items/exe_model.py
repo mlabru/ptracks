@@ -90,46 +90,28 @@ class CExeModel(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def s_exe_desc(self):
-        """
-        get descrição do exercício
-        """
         return self.__s_exe_desc
 
     @s_exe_desc.setter
     def s_exe_desc(self, f_val):
-        """
-        set descrição do exercício
-        """
         self.__s_exe_desc = f_val.strip()
 
     # ---------------------------------------------------------------------------------------------
     @property
     def s_exe_id(self):
-        """
-        get ID do exercício
-        """
         return self.__s_exe_id
 
     @s_exe_id.setter
     def s_exe_id(self, f_val):
-        """
-        set ID do exercício
-        """
         self.__s_exe_id = f_val.strip()
 
     # ---------------------------------------------------------------------------------------------
     @property
     def v_exe_ok(self):
-        """
-        get flag ok
-        """
         return self.__v_exe_ok
 
     @v_exe_ok.setter
     def v_exe_ok(self, f_val):
-        """
-        set flag ok
-        """
         self.__v_exe_ok = f_val
 
 # < the end >--------------------------------------------------------------------------------------

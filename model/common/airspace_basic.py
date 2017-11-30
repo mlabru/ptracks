@@ -175,85 +175,52 @@ class CAirspaceBasic(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_aer(self):
-        """
-        get aeródromos
-        """
         return self.__dct_aer
 
     @dct_aer.setter
     def dct_aer(self, f_val):
-        """
-        set aeródromos
-        """
         self.__dct_aer = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def lst_arr_dep(self):
-        """
-        get pousos/decolagens
-        """
         return self.__lst_arr_dep
 
     @lst_arr_dep.setter
     def lst_arr_dep(self, f_val):
-        """
-        set pousos/decolagens
-        """
         self.__lst_arr_dep = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def config(self):
-        """
-        get config manager
-        """
         return self.__config
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_config(self):
-        """
-        get configuration dictionary
-        """
         return self.__config.dct_config if self.__config is not None else {}
 
     # ---------------------------------------------------------------------------------------------
     @property
     def event(self):
-        """
-        get event manager
-        """
         return self.__event
 
     @event.setter
     def event(self, f_val):
-        """
-        get event manager
-        """
         self.__event = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_fix(self):
-        """
-        get fixos
-        """
         return self.__dct_fix
 
     @dct_fix.setter
     def dct_fix(self, f_val):
-        """
-        set fixos
-        """
         self.__dct_fix = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def model(self):
-        """
-        get model manager
-        """
         return self.__model
 
 # < the end >--------------------------------------------------------------------------------------

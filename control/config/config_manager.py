@@ -184,16 +184,11 @@ class CConfigManager(object):
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_config(self):
-        """
-        config manager data dictionary
-        """
         return self.__dct_config
 
     @dct_config.setter
     def dct_config(self, f_val):
-        """
-        config manager data dictionary
-        """
+
         # check input
         assert f_val is not None
 

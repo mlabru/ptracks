@@ -731,41 +731,26 @@ class CFlightEngine(threading.Thread):
     # ---------------------------------------------------------------------------------------------
     @property
     def atv(self):
-        """
-        pointer para a aeronave ativa
-        """
         return self.__atv
 
     # ---------------------------------------------------------------------------------------------
     @property
     def cine_data(self):
-        """
-        pointer para área de dados da cinemática
-        """
         return self.__cine_data
 
     # ---------------------------------------------------------------------------------------------
     @property
     def cine_solo(self):
-        """
-        cinemática de solo
-        """
         return self.__cine_solo
 
     # ---------------------------------------------------------------------------------------------
     @property
     def cine_voo(self):
-        """
-        cinemática de vôo
-        """
         return self.__cine_voo
 
     # ---------------------------------------------------------------------------------------------
     @property
     def stk_context(self):
-        """
-        context stack
-        """
         return self.__stk_context
 
 # < the end >--------------------------------------------------------------------------------------

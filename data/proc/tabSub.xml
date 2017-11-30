@@ -1,250 +1,2367 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE subidas>
 <subidas VERSION="0001" CODE="1961" FORMAT="NEWTON">
 
-  <subida nSub="53">
-    <descricao>MOXEP 1B</descricao>
-    <aerodromo>SBSJ</aerodromo>
-    <pista>33</pista>
+  <subida nSub="1408">
+    <descricao>DNV1B/TPT CY</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>SCP</cpoA>
-        <cpoB>8</cpoB>
-        <cpoC>333</cpoC>
-      </coord>
-      <altitude>8000</altitude>
-      <velocidade>250</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SUNBU</cpoA>
-      </coord>
-      <altitude>10000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MOXEP</cpoA>
-      </coord>
-      <altitude>32000</altitude>
-      <velocidade>300</velocidade>
-      <procedimento>ESP002</procedimento>
-    </breakpoint>
-  </subida>
-
-  <subida nSub="55">
-    <descricao>MOXEP 1B</descricao>
-    <aerodromo>SBSJ</aerodromo>
-    <pista>15</pista>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SOTPI</cpoA>
-      </coord>
-      <altitude>8000</altitude>
-      <velocidade>250</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>SUNBU</cpoA>
-      </coord>
-      <altitude>10000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>MOXEP</cpoA>
-      </coord>
-      <altitude>18000</altitude>
-      <velocidade>300</velocidade>
-      <procedimento>ESP002</procedimento>
-    </breakpoint>
-  </subida>
-
-  <subida nSub="57">
-    <descricao>KOTRU 1B</descricao>
-    <aerodromo>SBSJ</aerodromo>
-    <pista>33</pista>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>D</tipo>
-        <cpoA>SCP</cpoA>
-        <cpoB>8</cpoB>
-        <cpoC>333</cpoC>
-      </coord>
-      <altitude>8000</altitude>
-      <velocidade>250</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="2">
-      <coord>
-        <tipo>D</tipo>
-        <cpoA>SCP</cpoA>
-        <cpoB>18</cpoB>
-        <cpoC>333</cpoC>
-      </coord>
-      <altitude>10000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-
-    <breakpoint nBrk="3">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>KOTRU</cpoA>
-      </coord>
-      <altitude>32000</altitude>
-      <velocidade>300</velocidade>
-    </breakpoint>
-  </subida>
-
-  <subida nSub="79">
-    <descricao>NISTO 1A LITUK</descricao>
-    <aerodromo>SBSP</aerodromo>
-    <pista>17R</pista>
-
-    <breakpoint nBrk="1">
-      <coord>
-        <tipo>F</tipo>
-        <cpoA>OPSIT</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.85863</cpoA>
+        <cpoB>-47.94343</cpoB>
       </coord>
       <altitude>4000</altitude>
-      <velocidade>150</velocidade>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>MOSRA</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.8987</cpoA>
+        <cpoB>-48.13107</cpoB>
       </coord>
-      <altitude>6000</altitude>
-      <velocidade>230</velocidade>
+      <altitude>8500</altitude>
+      <velocidade>235</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>D</tipo>
-        <cpoA>MOSRA</cpoA>
-        <cpoB>8</cpoB>
-        <cpoC>94</cpoC>
+        <tipo>L</tipo>
+        <cpoA>-16.12999</cpoA>
+        <cpoB>-48.67711</cpoB>
       </coord>
-      <altitude>14000</altitude>
+      <altitude>8500</altitude>
+      <velocidade>235</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.12883</cpoA>
+        <cpoB>-48.6605</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12058</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1409">
+    <descricao>ESB1A/KGL BE</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
       <velocidade>230</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="4">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>IMBID</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.69294</cpoA>
+        <cpoB>-47.80851</cpoB>
       </coord>
-      <altitude>19000</altitude>
-      <velocidade>230</velocidade>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="5">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>VUMEV</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.65968</cpoA>
+        <cpoB>-47.80938</cpoB>
       </coord>
-      <altitude>37000</altitude>
-      <velocidade>300</velocidade>
-      <procedimento>TRJ1005</procedimento>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.965</cpoA>
+        <cpoB>-48.07267</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12063</procedimento>
+      <velocidade>360</velocidade>
     </breakpoint>
   </subida>
 
-  <subida nSub="381">
-    <descricao>PBN ANDOR</descricao>
-    <aerodromo>SBSP</aerodromo>
-    <pista>17L</pista>
+  <subida nSub="1410">
+    <descricao>UTP1B/KGL BE</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>SP021</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
       </coord>
-      <altitude>5500</altitude>
-      <razsub>5.2</razsub>
-      <velocidade>180</velocidade>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>SP022</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
       </coord>
-      <altitude>7000</altitude>
+      <altitude>9000</altitude>
       <velocidade>230</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="3">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>ANDOR</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.65658</cpoA>
+        <cpoB>-47.98836</cpoB>
       </coord>
-      <altitude>28000</altitude>
-      <velocidade>400</velocidade>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.965</cpoA>
+        <cpoB>-48.07267</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12063</procedimento>
+      <velocidade>360</velocidade>
     </breakpoint>
   </subida>
 
-  <subida nSub="1100">
-    <descricao>SBBR</descricao>
-    <aerodromo>SBBR</aerodromo>
+  <subida nSub="1411">
+    <descricao>MATNI1A RF</descricao>
+    <aerodomo>SBBR</aerodomo>
     <pista>11L</pista>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>COCHO</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
       </coord>
       <altitude>4000</altitude>
-      <razsub>5.2</razsub>
-      <velocidade>230</velocidade>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>LUZIANIA</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.85217</cpoA>
+        <cpoB>-47.5545</cpoB>
       </coord>
-      <altitude>12000</altitude>
-      <velocidade>300</velocidade>
-      <procedimento>TRJ1100</procedimento>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
     </breakpoint>
 
-  <subida nSub="1101">
-    <descricao>SBGR</descricao>
-    <aerodromo>SBGR</aerodromo>
-    <pista>09L</pista>
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80265</cpoA>
+        <cpoB>-47.12169</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12068</procedimento>
+      <velocidade>380</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1412">
+    <descricao>PNK1B/ORT RF</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
 
     <breakpoint nBrk="1">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>TUCA</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
       </coord>
-      <altitude>4000</altitude>
-      <razsub>5.2</razsub>
-      <velocidade>230</velocidade>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
     </breakpoint>
 
     <breakpoint nBrk="2">
       <coord>
-        <tipo>F</tipo>
-        <cpoA>MAE</cpoA>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
       </coord>
-      <altitude>12000</altitude>
-      <velocidade>300</velocidade>
-      <procedimento>TRJ1004</procedimento>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
     </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66643</cpoA>
+        <cpoB>-47.97723</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.16267</cpoA>
+        <cpoB>-47.446</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12068</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1413">
+    <descricao>GXN1A/MGS CF</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09283</cpoA>
+        <cpoB>-47.95816</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12076</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1414">
+    <descricao>GXN1A/NMK GR</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09366</cpoA>
+        <cpoB>-47.96064</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6595</cpoA>
+        <cpoB>-47.54217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12073</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1415">
+    <descricao>GAX1A/SRM CY</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09105</cpoA>
+        <cpoB>-47.9951</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.38433</cpoA>
+        <cpoB>-48.28383</cpoB>
+      </coord>
+      <altitude>16000</altitude>
+      <velocidade>320</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.38433</cpoA>
+        <cpoB>-48.28383</cpoB>
+      </coord>
+      <altitude>16000</altitude>
+      <velocidade>320</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.43467</cpoA>
+        <cpoB>-48.3935</cpoB>
+      </coord>
+      <altitude>18000</altitude>
+      <velocidade>360</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.55017</cpoA>
+        <cpoB>-48.64633</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12058</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1416">
+    <descricao>MOX1B/SRM CY</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06967</cpoA>
+        <cpoB>-47.84417</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05506</cpoA>
+        <cpoB>-47.89195</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.0855</cpoA>
+        <cpoB>-48.086</cpoB>
+      </coord>
+      <altitude>12500</altitude>
+      <velocidade>270</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09587</cpoA>
+        <cpoB>-48.1619</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>300</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09777</cpoA>
+        <cpoB>-48.19305</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>310</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.55017</cpoA>
+        <cpoB>-48.64633</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12058</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1417">
+    <descricao>MXB1B/TPT CY</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06967</cpoA>
+        <cpoB>-47.84417</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05506</cpoA>
+        <cpoB>-47.89195</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.0855</cpoA>
+        <cpoB>-48.086</cpoB>
+      </coord>
+      <altitude>12500</altitude>
+      <velocidade>290</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.091</cpoA>
+        <cpoB>-48.17783</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>310</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.12883</cpoA>
+        <cpoB>-48.6605</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12058</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1418">
+    <descricao>ESB1A/DLV TL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.67633</cpoA>
+        <cpoB>-47.80967</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.664</cpoA>
+        <cpoB>-49.03533</cpoB>
+      </coord>
+      <altitude>26000</altitude>
+      <procedimento>TRJ12065</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1419">
+    <descricao>UTP1B/DLV TL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
+      </coord>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.65611</cpoA>
+        <cpoB>-47.99441</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-13.664</cpoA>
+        <cpoB>-49.03533</cpoB>
+      </coord>
+      <altitude>26000</altitude>
+      <razao>3.3</razao>
+      <procedimento>TRJ12065</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1420">
+    <descricao>VTM1A/SLD VT</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8473</cpoA>
+        <cpoB>-47.57043</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>240</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88435</cpoA>
+        <cpoB>-47.54588</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>240</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.99941</cpoA>
+        <cpoB>-47.43231</cpoB>
+      </coord>
+      <altitude>13000</altitude>
+      <velocidade>300</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.02707</cpoA>
+        <cpoB>-47.41602</cpoB>
+      </coord>
+      <altitude>13000</altitude>
+      <velocidade>420</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.20983</cpoA>
+        <cpoB>-46.94933</cpoB>
+      </coord>
+      <altitude>26000</altitude>
+      <procedimento>TRJ12071</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1421">
+    <descricao>OPK1A/SGR VT</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09294</cpoA>
+        <cpoB>-47.91715</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.058</cpoA>
+        <cpoB>-47.66383</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>300</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.04402</cpoA>
+        <cpoB>-47.54167</cpoB>
+      </coord>
+      <altitude>16000</altitude>
+      <velocidade>420</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05942</cpoA>
+        <cpoB>-47.51271</cpoB>
+      </coord>
+      <altitude>16000</altitude>
+      <velocidade>420</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.20983</cpoA>
+        <cpoB>-46.94933</cpoB>
+      </coord>
+      <altitude>26000</altitude>
+      <procedimento>TRJ12071</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1422">
+    <descricao>LIV1B/MGS RJ</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05327</cpoA>
+        <cpoB>-47.84128</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.08576</cpoA>
+        <cpoB>-47.83986</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <razao>3.3</razao>
+      <procedimento>TRJ12074</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1423">
+    <descricao>GXN1A/MGS GL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09283</cpoA>
+        <cpoB>-47.95816</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+      <altitude>22000</altitude>
+      <procedimento>TRJ12077</procedimento>
+      <velocidade>396</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1424">
+    <descricao>LIV1B/MGS GL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05327</cpoA>
+        <cpoB>-47.84128</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.08576</cpoA>
+        <cpoB>-47.83986</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12077</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1425">
+    <descricao>GXN1A/MGS RJ</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09283</cpoA>
+        <cpoB>-47.95816</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12074</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1426">
+    <descricao>PNK1B/ORT JP</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
+      </coord>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66643</cpoA>
+        <cpoB>-47.97723</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.16267</cpoA>
+        <cpoB>-47.446</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12068</procedimento>
+      <velocidade>396</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1427">
+    <descricao>PNK1B/PDL FZ</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
+      </coord>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66643</cpoA>
+        <cpoB>-47.97723</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.16267</cpoA>
+        <cpoB>-47.446</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12070</procedimento>
+      <velocidade>396</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1428">
+    <descricao>PNK1C/ORT JP</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.69294</cpoA>
+        <cpoB>-47.80851</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66702</cpoA>
+        <cpoB>-47.79586</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.16267</cpoA>
+        <cpoB>-47.446</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12068</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1429">
+    <descricao>PNK1C/PDL FZ</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.69294</cpoA>
+        <cpoB>-47.80851</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66702</cpoA>
+        <cpoB>-47.79586</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.16267</cpoA>
+        <cpoB>-47.446</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12070</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1430">
+    <descricao>DAN1B/KGD RB</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85863</cpoA>
+        <cpoB>-47.94343</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.89842</cpoA>
+        <cpoB>-48.13099</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>220</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88381</cpoA>
+        <cpoB>-48.1603</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>220</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.67133</cpoA>
+        <cpoB>-48.94667</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12061</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1431">
+    <descricao>MOX1B/KGD RB</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06967</cpoA>
+        <cpoB>-47.84417</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05506</cpoA>
+        <cpoB>-47.89195</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.0855</cpoA>
+        <cpoB>-48.086</cpoB>
+      </coord>
+      <altitude>12500</altitude>
+      <velocidade>270</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09587</cpoA>
+        <cpoB>-48.1619</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>270</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.07824</cpoA>
+        <cpoB>-48.18854</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>270</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.67133</cpoA>
+        <cpoB>-48.94667</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12061</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1432">
+    <descricao>ESB1A/GIG IA</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.69294</cpoA>
+        <cpoB>-47.80851</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66032</cpoA>
+        <cpoB>-47.81426</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.69833</cpoA>
+        <cpoB>-48.56167</cpoB>
+      </coord>
+      <altitude>30000</altitude>
+      <procedimento>TRJ12078</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1433">
+    <descricao>UTP1B/GIG IA</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
+      </coord>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.65618</cpoA>
+        <cpoB>-47.99499</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-14.69833</cpoA>
+        <cpoB>-48.56167</cpoB>
+      </coord>
+      <altitude>30000</altitude>
+      <procedimento>TRJ12078</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1434">
+    <descricao>ESB1A/ISL TE</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.69294</cpoA>
+        <cpoB>-47.80851</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66303</cpoA>
+        <cpoB>-47.79965</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.15317</cpoA>
+        <cpoB>-47.65883</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12066</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1435">
+    <descricao>UTP1B/ISL TE</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
+      </coord>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66265</cpoA>
+        <cpoB>-47.97937</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.15317</cpoA>
+        <cpoB>-47.65883</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12066</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1436">
+    <descricao>GAX1A/EDM PA</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09178</cpoA>
+        <cpoB>-47.97325</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.7755</cpoA>
+        <cpoB>-48.08417</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12062</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1437">
+    <descricao>LIV1B/EDM PA</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05327</cpoA>
+        <cpoB>-47.84128</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.08261</cpoA>
+        <cpoB>-47.85465</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.7755</cpoA>
+        <cpoB>-48.08417</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12062</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1438">
+    <descricao>GAX1A/SRM EZ</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09105</cpoA>
+        <cpoB>-47.9951</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.38433</cpoA>
+        <cpoB>-48.28383</cpoB>
+      </coord>
+      <altitude>16000</altitude>
+      <velocidade>320</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.38433</cpoA>
+        <cpoB>-48.28383</cpoB>
+      </coord>
+      <altitude>16000</altitude>
+      <velocidade>320</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.43467</cpoA>
+        <cpoB>-48.3935</cpoB>
+      </coord>
+      <altitude>18000</altitude>
+      <velocidade>360</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.55017</cpoA>
+        <cpoB>-48.64633</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12059</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1439">
+    <descricao>MOX1B/SRM EZ</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06967</cpoA>
+        <cpoB>-47.84417</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05506</cpoA>
+        <cpoB>-47.89195</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.0855</cpoA>
+        <cpoB>-48.086</cpoB>
+      </coord>
+      <altitude>12500</altitude>
+      <velocidade>270</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09587</cpoA>
+        <cpoB>-48.1619</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>300</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09777</cpoA>
+        <cpoB>-48.19305</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>310</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.55017</cpoA>
+        <cpoB>-48.64633</cpoB>
+      </coord>
+      <altitude>24000</altitude>
+      <procedimento>TRJ12059</procedimento>
+      <velocidade>420</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1440">
+    <descricao>MXB1B/TPT(ERRO)</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06967</cpoA>
+        <cpoB>-47.84417</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05506</cpoA>
+        <cpoB>-47.89195</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.0855</cpoA>
+        <cpoB>-48.086</cpoB>
+      </coord>
+      <altitude>12500</altitude>
+      <velocidade>290</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.091</cpoA>
+        <cpoB>-48.17783</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>310</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.12883</cpoA>
+        <cpoB>-48.6605</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12058</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1400">
+    <descricao>LIV1B/MVN SP</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05327</cpoA>
+        <cpoB>-47.84128</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.08511</cpoA>
+        <cpoB>-47.85041</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.7605</cpoA>
+        <cpoB>-47.85117</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12072</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1401">
+    <descricao>GXN1A/MVN SP</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88067</cpoA>
+        <cpoB>-47.93967</cpoB>
+      </coord>
+      <altitude>4200</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06185</cpoA>
+        <cpoB>-47.95897</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09379</cpoA>
+        <cpoB>-47.96813</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.7605</cpoA>
+        <cpoB>-47.85117</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12072</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1402">
+    <descricao>ESB1A/DML SL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11L</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.86654</cpoA>
+        <cpoB>-47.8819</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.84076</cpoA>
+        <cpoB>-47.75703</cpoB>
+      </coord>
+      <altitude>8000</altitude>
+      <velocidade>210</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.80066</cpoA>
+        <cpoB>-47.72866</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.69294</cpoA>
+        <cpoB>-47.80851</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.66124</cpoA>
+        <cpoB>-47.80263</cpoB>
+      </coord>
+      <altitude>10000</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.01517</cpoA>
+        <cpoB>-47.76483</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12064</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1403">
+    <descricao>UTP1B/DML SL</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.83915</cpoA>
+        <cpoB>-48.00714</cpoB>
+      </coord>
+      <altitude>7000</altitude>
+      <razao>3.3</razao>
+      <velocidade>195</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.68764</cpoA>
+        <cpoB>-47.99997</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.65991</cpoA>
+        <cpoB>-47.98196</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.01517</cpoA>
+        <cpoB>-47.76483</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12064</procedimento>
+      <velocidade>380</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1404">
+    <descricao>LIV1B/MGS CF</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05327</cpoA>
+        <cpoB>-47.84128</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.08596</cpoA>
+        <cpoB>-47.84071</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.59367</cpoA>
+        <cpoB>-47.44217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12076</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1405">
+    <descricao>LIV1B/NMK GR</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05327</cpoA>
+        <cpoB>-47.84128</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.08626</cpoA>
+        <cpoB>-47.84272</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.6595</cpoA>
+        <cpoB>-47.54217</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <razao>3.3</razao>
+      <procedimento>TRJ12073</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1406">
+    <descricao>DNV1B/PPS PV</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>29R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.85863</cpoA>
+        <cpoB>-47.94343</cpoB>
+      </coord>
+      <altitude>4000</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.8987</cpoA>
+        <cpoB>-48.13107</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>235</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.88381</cpoA>
+        <cpoB>-48.1603</cpoB>
+      </coord>
+      <altitude>8500</altitude>
+      <velocidade>235</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.67133</cpoA>
+        <cpoB>-48.94667</cpoB>
+      </coord>
+      <altitude>18000</altitude>
+      <razao>3.3</razao>
+      <procedimento>TRJ12060</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
+
+  <subida nSub="1407">
+    <descricao>MXB1B/PPS PV</descricao>
+    <aerodomo>SBBR</aerodomo>
+    <pista>11R</pista>
+
+    <breakpoint nBrk="1">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.87867</cpoA>
+        <cpoB>-47.9095</cpoB>
+      </coord>
+      <altitude>4100</altitude>
+      <razao>3.3</razao>
+      <velocidade>175</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="2">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.06967</cpoA>
+        <cpoB>-47.84417</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="3">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.05506</cpoA>
+        <cpoB>-47.89195</cpoB>
+      </coord>
+      <altitude>9000</altitude>
+      <velocidade>230</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="4">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.0855</cpoA>
+        <cpoB>-48.086</cpoB>
+      </coord>
+      <altitude>12500</altitude>
+      <velocidade>250</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="5">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.09587</cpoA>
+        <cpoB>-48.1619</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>270</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="6">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-16.07824</cpoA>
+        <cpoB>-48.18854</cpoB>
+      </coord>
+      <altitude>14000</altitude>
+      <velocidade>300</velocidade>
+    </breakpoint>
+
+    <breakpoint nBrk="7">
+      <coord>
+        <tipo>L</tipo>
+        <cpoA>-15.67133</cpoA>
+        <cpoB>-48.94667</cpoB>
+      </coord>
+      <altitude>20000</altitude>
+      <procedimento>TRJ12060</procedimento>
+      <velocidade>360</velocidade>
+    </breakpoint>
+  </subida>
 
 </subidas>

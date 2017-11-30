@@ -92,6 +92,9 @@ if "__main__" == __name__:
     # logger
     logging.basicConfig()
 
+    # disable logging
+    #logging.disable(sys.maxint)
+
     # multiprocessing logger
     multiprocessing.log_to_stderr()
         

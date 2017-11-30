@@ -276,16 +276,11 @@ class CSimTime(threading.Thread):
     # ---------------------------------------------------------------------------------------------
     @property
     def v_congela(self):
-        """
-        get flag congela
-        """
         return self.__v_congela
 
     @v_congela.setter
     def v_congela(self, fv_val):
-        """
-        set flag congela
-        """
+
         # check input
         assert isinstance(True, type(fv_val))
 
