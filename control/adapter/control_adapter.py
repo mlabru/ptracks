@@ -259,13 +259,18 @@ class CControlAdapter(control.CControlManager):
                         self.__msg_trk(llst_data)
 
                         # mensagem a enviar
-                        #ls_msg = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
-                        #         str(gdefs.D_MSG_COR) + gdefs.D_MSG_SEP + \
-                        #         self.__s_msg
+                        ls_msg = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
+                                 str(gdefs.D_MSG_COR) + gdefs.D_MSG_SEP + \
+                                 self.__s_msg
                         #cdbg.M_DBG.debug("self.__s_msg: {}".format(ls_msg))
 
                         # envia a mensagem de pista para a cntl0net
-                        #self.__sck_snd_trks.send_data(ls_msg)
+                        self.__sck_snd_trks.send_data(ls_msg)
+
+                    # mensagem do CORE ?
+                    if gdefs.D_MSG_COR == int(llst_data[0]):
+                        # ignore
+                        pass
 
                     # senão, mensagem não reconhecida ou não tratavél
                     else:

@@ -203,12 +203,13 @@ class CEmulaPiloto(model.CEmulaModel):
             # queue tem dados ?
             if llst_data:
                 # mensagem de status de aeronave ?
-                if gdefs.D_MSG_NEW == int(llst_data[0]):
+                if ((gdefs.D_MSG_NEW == int(llst_data[0])) or
+                    (gdefs.D_MSG_COR == int(llst_data[0]))):
                     # trata mensagem de status de aeronave
                     self.__msg_trk(llst_data)
                     
                 # mensagem de eliminação de aeronave ?
-                elif gdefs.D_MSG_Kll == int(llst_data[0]):
+                elif gdefs.D_MSG_KLL == int(llst_data[0]):
                     # coloca a mensagem na queue
 
                     # trava a lista de vôos

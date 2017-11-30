@@ -4,8 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 control_piloto
 
-DOCUMENT ME!
-
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
 the Free Software Foundation, either version 3 of the License, or
@@ -290,121 +288,73 @@ class CControlPiloto(control.CControlBasic):
     # ---------------------------------------------------------------------------------------------
     @property
     def emula(self):
-        """
-        get flight model
-        """
         return self.__emula
 
     @emula.setter
     def emula(self, f_val):
-        """
-        set flight model
-        """
         self.__emula = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_rcv_cnfg(self):
-        """
-        get configuration queue
-        """
         return self.__q_rcv_cnfg
 
     @q_rcv_cnfg.setter
     def q_rcv_cnfg(self, f_val):
-        """
-        set configuration queue
-        """
         self.__q_rcv_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_cnfg(self):
-        """
-        get configuration listener
-        """
         return self.__sck_rcv_cnfg
 
     @sck_rcv_cnfg.setter
     def sck_rcv_cnfg(self, f_val):
-        """
-        set configuration listener
-        """
         self.__sck_rcv_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_snd_cpil(self):
-        """
-        get configuration queue
-        """
         return self.__q_snd_cpil
 
     @q_snd_cpil.setter
     def q_snd_cpil(self, f_val):
-        """
-        set configuration queue
-        """
         self.__q_snd_cpil = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_snd_cpil(self):
-        """
-        get configuration listener
-        """
         return self.__sck_snd_cpil
 
     @sck_snd_cpil.setter
     def sck_snd_cpil(self, f_val):
-        """
-        set configuration listener
-        """
         self.__sck_snd_cpil = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_http(self):
-        """
-        get http server listener
-        """
         return self.__sck_http
 
     @sck_http.setter
     def sck_http(self, f_val):
-        """
-        set http server listener
-        """
         self.__sck_http = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_rcv_trks(self):
-        """
-        get data queue
-        """
         return self.__q_rcv_trks
 
     @q_rcv_trks.setter
     def q_rcv_trks(self, f_val):
-        """
-        set data queue
-        """
         self.__q_rcv_trks = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_trks(self):
-        """
-        get data listener
-        """
         return self.__sck_rcv_trks
 
     @sck_rcv_trks.setter
     def sck_rcv_trks(self, f_val):
-        """
-        set data listener
-        """
         self.__sck_rcv_trks = f_val
 
 # < the end >--------------------------------------------------------------------------------------
