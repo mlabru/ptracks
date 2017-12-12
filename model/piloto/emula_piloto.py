@@ -6,19 +6,6 @@ emula_piloto
 
 the actual flight control
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -45,7 +32,7 @@ import model.visil.aircraft_visil as canv
 
 # control
 import control.common.glb_defs as gdefs
-import control.events.events_flight as events
+import control.events.events_flight as evtfly
 
 # < class CEmulaPiloto >---------------------------------------------------------------------------
 
@@ -100,7 +87,7 @@ class CEmulaPiloto(model.CEmulaModel):
         # cria a trava da lista de vôos
         gdata.G_LCK_FLIGHT = threading.Lock()
         assert gdata.G_LCK_FLIGHT
-                        
+
     # ---------------------------------------------------------------------------------------------
     def __msg_trk(self, flst_data):
         """
@@ -113,10 +100,10 @@ class CEmulaPiloto(model.CEmulaModel):
         assert self.dct_config is not None
         assert self.dct_flight is not None
         assert self.__dct_prf is not None
-                
+
         # callsign da aeronave
         ls_callsign = flst_data[10]
-                            
+
         # trava a lista de vôos
         gdata.G_LCK_FLIGHT.acquire()
 
@@ -131,14 +118,14 @@ class CEmulaPiloto(model.CEmulaModel):
                 # create new aircraft
                 self.dct_flight[ls_callsign] = canv.CAircraftVisil(self, flst_data[1:])
                 assert self.dct_flight[ls_callsign]
-                                                                                                                                                                                                                                                            
+
         finally:
             # libera a lista de vôos
             gdata.G_LCK_FLIGHT.release()
 
         # indicativo da performance
         ls_prf_ind = flst_data[11]
-                            
+
         # performance não está no dicionário ?
         if self.__dct_prf.get(ls_prf_ind, None) is None:
             # monta o request da performance
@@ -146,7 +133,7 @@ class CEmulaPiloto(model.CEmulaModel):
 
             # get server address
             l_srv = self.dct_config.get("srv.addr", None)
-            
+
             if l_srv is not None:
                 # dados de performance do servidor
                 l_prf = self.__sck_http.get_data(l_srv, ls_req)
@@ -170,7 +157,7 @@ class CEmulaPiloto(model.CEmulaModel):
                 l_log.warning(u"<E02: srv.addr não existe na configuração.")
 
         # cria um evento de atualização de aeronave
-        l_evt = events.CFlightUpdate(ls_callsign)
+        l_evt = evtfly.CFlightUpdate(ls_callsign)
         assert l_evt
 
         # dissemina o evento
@@ -207,30 +194,15 @@ class CEmulaPiloto(model.CEmulaModel):
                     (gdefs.D_MSG_COR == int(llst_data[0]))):
                     # trata mensagem de status de aeronave
                     self.__msg_trk(llst_data)
-                    
+
                 # mensagem de eliminação de aeronave ?
                 elif gdefs.D_MSG_KLL == int(llst_data[0]):
-                    # coloca a mensagem na queue
-
-                    # trava a lista de vôos
-                    gdata.G_LCK_FLIGHT.acquire()
-
-                    try:
-                        # aeronave está no dicionário ?
-                        if ls_callsign in self.dct_flight:
-                            # retira a aeronave do dicionário
-                            del self.dct_flight[ls_callsign]
-
-                    finally:
-                        # libera a lista de vôos
-                        gdata.G_LCK_FLIGHT.release()
-
                     # cria um evento de eliminação de aeronave
-                    l_evt = events.FlightKill(ls_callsign)
+                    l_evt = evtfly.CFlightKill(llst_data[1])
                     assert l_evt
 
                     # dissemina o evento
-                    self._event.post(l_evt)
+                    self.event.post(l_evt)
 
                 # senão, mensagem não reconhecida ou não tratada
                 else:
@@ -244,10 +216,10 @@ class CEmulaPiloto(model.CEmulaModel):
 
             # tempo atual em segundos
             lf_now = time.time()
-                                    
+
             # tempo final em segundos e calcula o tempo decorrido
             lf_dif = lf_now - lf_ant
-                                                                            
+
             # está adiantado ?
             if lf_tim_rrbn > lf_dif:
                 # permite o scheduler
@@ -256,13 +228,10 @@ class CEmulaPiloto(model.CEmulaModel):
     # =============================================================================================
     # data
     # =============================================================================================
-            
+
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_trks(self):
-        """
-        data listener
-        """
         return self.__sck_rcv_trks
 
 # < the end >--------------------------------------------------------------------------------------

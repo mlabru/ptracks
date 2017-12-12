@@ -6,19 +6,6 @@ model_piloto
 
 model manager da pilotagem
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -191,96 +178,60 @@ class CModelPiloto(model.CModelManager):
     # ---------------------------------------------------------------------------------------------
     @property
     def airspace(self):
-        """
-        airspace
-        """
         return self.__airspace
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_apx(self):
-        """
-        get dicionário de aproximações
-        """
         return self.__airspace.dct_apx
 
     # ---------------------------------------------------------------------------------------------
     @property
     def lst_arr_dep(self):
-        """
-        get lista de pousos/decolagens
-        """
         return self.__airspace.lst_arr_dep
 
     # ---------------------------------------------------------------------------------------------
     @property
     def coords(self):
-        """
-        get coordinate system
-        """
         return self.__coords
-
-    '''@coords.setter
+    '''
+    @coords.setter
     def coords(self, f_val):
-        """
-        set coordinate system
-        """
-        self.__coords = f_val'''
-
+        self.__coords = f_val
+    '''
     # ---------------------------------------------------------------------------------------------
     @property
     def emula(self):
-        """
-        flight model
-        """
         return self.__emula
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_esp(self):
-        """
-        get dicionário de esperas
-        """
         return self.__airspace.dct_esp
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_fix(self):
-        """
-        get dicionário de fixos
-        """
         return self.__airspace.dct_fix
 
     # ---------------------------------------------------------------------------------------------
     @property
     def geomag(self):
-        """
-        get geomag
-        """
         return self.__geomag
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_prf(self):
-        """
-        get dicionário de performances
-        """
         return self.__dct_prf
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_sub(self):
-        """
-        get dicionário de subidas
-        """
         return self.__airspace.dct_sub
 
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_trj(self):
-        """
-        get dicionário de trajetórias
-        """
         return self.__airspace.dct_trj
 
 # < the end >--------------------------------------------------------------------------------------

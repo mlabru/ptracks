@@ -6,19 +6,6 @@ flight_engine
 
 the flight engine class holds information about a flight and the commands the flight has been given
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -96,6 +83,14 @@ class CFlightEngine(threading.Thread):
         # exercício
         self.__exe = self.__model.exe
         assert self.__exe
+
+        # sender de pista
+        self.__sck_snd_trks = f_control.sck_snd_trks
+        assert self.__sck_snd_trks
+
+        # a queue de pista
+        self.__q_snd_trks = f_control.q_snd_trks
+        assert self.__q_snd_trks
 
         # dados da aeronave
         self.__atv = f_atv
@@ -274,8 +269,19 @@ class CFlightEngine(threading.Thread):
         # check input
         assert f_atv
 
+        # clear to go
+        assert self.__sck_snd_trks
+
         # estado de ativação
         f_atv.en_trf_est_atv = ldefs.E_CANCELADA
+
+        # monta buffer
+        ls_buff = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
+                  str(gdefs.D_MSG_KLL) + gdefs.D_MSG_SEP + \
+                  str(f_atv.s_trf_ind)
+
+        # envia mensagem de cancelamento de pista
+        self.__sck_snd_trks.send_data(ls_buff)
 
     # ---------------------------------------------------------------------------------------------
     def __cmd_pil_decolagem(self, f_atv, fo_cmd_pil):
@@ -454,7 +460,7 @@ class CFlightEngine(threading.Thread):
             # trata comando de altitude
             self.__cmd_pil_altitude(f_atv, lo_cmd_pil, len_cmd_ope)
 
-        # decolagem ?
+        # cancela aeronave ?
         elif ldefs.E_CANCELA == len_cmd_ope:
             # trata comando de cancelamento
             self.__cmd_pil_cancela(f_atv)

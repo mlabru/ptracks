@@ -1,0 +1,1316 @@
+Report
+======
+29954 statements analysed.
+
+Statistics by type
+------------------
+
++---------+-------+-----------+-----------+------------+---------+
+|type     |number |old number |difference |%documented |%badname |
++=========+=======+===========+===========+============+=========+
+|module   |422    |NC         |NC         |55.21       |4.27     |
++---------+-------+-----------+-----------+------------+---------+
+|class    |291    |NC         |NC         |54.98       |19.24    |
++---------+-------+-----------+-----------+------------+---------+
+|method   |1991   |NC         |NC         |75.24       |14.62    |
++---------+-------+-----------+-----------+------------+---------+
+|function |385    |NC         |NC         |41.56       |21.04    |
++---------+-------+-----------+-----------+------------+---------+
+
+
+
+External dependencies
+---------------------
+::
+
+    PIL 
+      \-Image (nwqt4.duplicates)
+      \-ImageChops (nwqt4.duplicates)
+      \-ImageStat (nwqt4.duplicates)
+    PyQt4 
+      \-Qt (t_ac_4,view.common.statusbar_basic,val_2)
+      \-QtCore (view.dbedit.dlg_prf_data_new_ui,nwqt4.widgets.choice_duplicate_ui,model.items.exe_data,view.dbedit.dlg_exe_data_new_ui,view.wizard.wpg_termina_ui,nwqt4.request_config.last_wallpaper_ui,view.piloto.dlg_pouso,nwqt4.config_dialog.config_icon,view.visil.wnd_main_visil,nwqt4.dialogs.wallpaper_info,nwqt4.dialogs.request.last_wallpaper,control.control_basic,nwqt4.config_dialog.config_account,nwqt4.config_dialog.config_scripts,view.visil.wnd_main_visil_ui,view.wizard.wpg_termina,view.dbedit.dlg_prf_data_new,nwqt4.widgets.wallpaper_info_ui,view.common.strip_basic_ui,nwqt4.dialogs.results_ui,view.piloto.dlg_direcao_ui,view.dbedit.dlg_trj_data_new,view.piloto.dlg_subida,model.items.aer_data,view.dbedit.dlg_ils_data_new_ui,nwqt4.config_dialog.config_requests_ui,view.resources.resources_rc,model.items.trj_data,view.dbedit.dlg_fix_edit_new,view.wizard.wpg_config_canal_ui,view.dbedit.dlg_trj_edit_new,nwqt4.request_config.random_wallpaper,model.visil.airspace_visil,nwqt4.common,view.dbedit.dlg_trj_edit_new_ui,nwqt4.dialogs.send_bad_urls,view.piloto.dlg_dir_fixo,nwqt4.dialogs.choice_duplicates,view.wizard.wpg_config_canal,nwqt4.nwapp,view.common.paint_engine,view.piloto.dlg_direcao,nwqt4.config_dialog.config_results,model.common.defs_strips,view.piloto.wnd_main_piloto,view.piloto.dlg_dir_fixo_ui,nwqt4.request_config.last_wallpaper,nwqt4.dialogs.send_bad_urls_ui,model.validators.prc_validator,nwqt4.dialogs.add_url,nwqt4.widgets.choice_duplicate,view.dbedit.dlg_aer_edit_new,view.piloto.wnd_main_piloto_ui,model.validators.fix_validator,view.dbedit.dlg_exe_edit_new,view.piloto.dlg_velocidade,view.common.slate_radar,nwqt4.widgets.wallpaper_info,view.dbedit.dlg_ape_data_new_ui,nwqt4.request_config.new_wallpaper_ui,nwqt4.widgets.color_button,view.common.dock_procedures,nwqt4.settings,view.wizard.wpg_config_exe,nwqt4.dialogs.results,view.super.pag_config,view.piloto.dlg_subida_ui,nwqt4.dialogs.dialog_ui,view.common.strip_basic,nwqt4.config_dialog.config_results_ui,t_ac_6,t_ac_7,view.dbedit.view_dbedit,t_ac_1,t_ac_2,nwqt4.config_dialog.config_icon_ui,model.items.prf_data,val_1,control.piloto.control_piloto,val_2,view.piloto.dlg_espera_ui,nwqt4.config,nwqt4.config_dialog.config_dialog,view.dbedit.dlg_anv_edit_new,nwqt4.config_dialog.config_dialog_ui,nwqt4.config_dialog.config_scripts_ui,view.wizard.resources_rc,nwqt4.config_dialog.config_duplicates,view.dbedit.dlg_brk_trj_edit_new_ui,model.items.fix_data,view.piloto.resources_rc,view.piloto.dlg_decolagem,nwqt4.dialogs.add_tags,view.piloto.dlg_trajetoria,model.piloto.model_piloto,view.dbedit.dlg_apx_data_new_ui,nwqt4.config_dialog.config_requests,view.piloto.dlg_pouso_ui,nwqt4.dialogs.add_tags_ui,nwqt4.trayicon,view.super.pag_update,view.piloto.dlg_altitude_ui,view.resources.resources_super_rc3,view.resources.resources_super_rc2,view.dbedit.dlg_fix_data_new_ui,view.piloto.dlg_trajetoria_ui,nwqt4.dialogs.request.random_wallpaper,nwqt4.dialogs.request.new_wallpaper,view.wizard.wizard_model,view.dbedit.wnd_main_dbedit,view.dbedit.dlg_anv_edit_new_ui,model.items.sub_data,view.dbedit.dlg_exe_data_new,view.piloto.view_piloto,model.items.trf_data,nwqt4.api_v1,nwqt4.api_v2,view.resources.super_resources_rc3,view.resources.super_resources_rc2,view.dbedit.wnd_main_dbedit_ui,view.visil.resources_rc,view.dbedit.dlg_fix_edit_new_ui,nwqt4.config_dialog.config_account_ui,control.visil.control_visil,nwqt4.config_dialog.config_schedule_ui,view.visil.view_visil,view.dbedit.resources_rc,view.piloto.dlg_aproximacao,view.wizard.wpg_config_exe_ui,view.dbedit.dlg_exe_edit_new_ui,view.super.view_super,model.visil.model_visil,view.dbedit.dlg_aer_data_new,view.dbedit.dlg_fix_data_new,model.items.parser_utils,nwqt4.request_config.random_wallpaper_ui,nwqt4.widgets.result,view.resources.resources_prisma_rc,view.super.pag_query,view.common.resources_rc,model.items.apx_data,view.dbedit.dlg_prf_edit_new,nwqt4.request_config.new_wallpaper,view.dbedit.dlg_aer_edit_new_ui,model.validators.prf_validator,nwqt4.config_dialog.config_schedule,view.dbedit.dlg_sub_data_new_ui,view.piloto.dlg_decolagem_ui,view.piloto.dlg_espera,view.common.statusbar_basic,view.dbedit.dlg_trj_data_new_ui,view.wizard.view_wizard,nwqt4.config_dialog.config_duplicates_ui,control.dbedit.control_dbedit,view.dbedit.dlg_esp_data_new_ui,view.piloto.dlg_velocidade_ui,view.super.dlg_config,nwqt4.dialogs.wallpaper_info_ui,view.dbedit.dlg_brk_trj_edit_new,model.dbedit.model_dbedit,nwqt4.main,nwqt4.dialogs.add_url_ui,view.common.dock_procedures_ui,view.piloto.dlg_aproximacao_ui,model.items.esp_data,view.dbedit.dlg_prf_edit_new_ui,view.piloto.dlg_altitude,view.dbedit.dlg_aer_data_new_ui,model.common.strip_table_model)
+      \-QtGui (view.dbedit.dlg_prf_data_new_ui,nwqt4.widgets.choice_duplicate_ui,view.dbedit.dlg_exe_data_new_ui,view.wizard.wpg_termina_ui,nwqt4.request_config.last_wallpaper_ui,view.piloto.dlg_pouso,nwqt4.config_dialog.config_icon,view.visil.wnd_main_visil,nwqt4.dialogs.wallpaper_info,nwqt4.dialogs.request.last_wallpaper,control.control_basic,nwqt4.config_dialog.config_account,nwqt4.config_dialog.config_scripts,view.visil.wnd_main_visil_ui,view.wizard.wpg_termina,view.dbedit.dlg_prf_data_new,nwqt4.widgets.wallpaper_info_ui,view.common.strip_basic_ui,nwqt4.dialogs.results_ui,view.piloto.dlg_direcao_ui,view.dbedit.dlg_trj_data_new,view.piloto.dlg_subida,view.dbedit.dlg_ils_data_new_ui,nwqt4.config_dialog.config_requests_ui,view.dbedit.dlg_fix_edit_new,view.wizard.wpg_config_canal_ui,view.dbedit.dlg_trj_edit_new,nwqt4.request_config.random_wallpaper,nwqt4.common,view.dbedit.dlg_trj_edit_new_ui,nwqt4.dialogs.send_bad_urls,view.piloto.dlg_dir_fixo,nwqt4.dialogs.choice_duplicates,view.wizard.wpg_config_canal,view.wizard.view_wizard,nwqt4.nwapp,view.common.paint_engine,view.piloto.dlg_direcao,nwqt4.config_dialog.config_results,view.piloto.wnd_main_piloto,view.piloto.dlg_dir_fixo_ui,nwqt4.request_config.last_wallpaper,nwqt4.dialogs.send_bad_urls_ui,model.validators.prc_validator,nwqt4.dialogs.add_url,nwqt4.widgets.choice_duplicate,view.dbedit.dlg_aer_edit_new,view.piloto.wnd_main_piloto_ui,view.dbedit.dlg_exe_edit_new,view.piloto.dlg_velocidade,view.common.slate_radar,nwqt4.widgets.wallpaper_info,view.dbedit.dlg_ape_data_new_ui,nwqt4.request_config.new_wallpaper_ui,nwqt4.widgets.color_button,view.common.dock_procedures,view.wizard.wpg_config_exe,nwqt4.dialogs.results,view.super.pag_config,view.piloto.dlg_subida_ui,nwqt4.dialogs.dialog_ui,view.common.strip_basic,nwqt4.config_dialog.config_results_ui,t_ac_6,t_ac_7,t_ac_1,t_ac_2,nwqt4.config_dialog.config_icon_ui,val_1,control.piloto.control_piloto,val_2,view.piloto.dlg_espera_ui,nwqt4.config_dialog.config_dialog,view.dbedit.dlg_anv_edit_new,nwqt4.config_dialog.config_dialog_ui,nwqt4.config_dialog.config_scripts_ui,nwqt4.config_dialog.config_duplicates,view.dbedit.dlg_brk_trj_edit_new_ui,nwqt4.widgets.result_menu,view.piloto.dlg_decolagem,nwqt4.dialogs.add_tags,view.piloto.dlg_trajetoria,view.dbedit.dlg_apx_data_new_ui,nwqt4.config_dialog.config_requests,view.piloto.dlg_pouso_ui,nwqt4.dialogs.add_tags_ui,nwqt4.trayicon,view.super.pag_update,view.piloto.dlg_altitude_ui,view.dbedit.dlg_fix_data_new_ui,view.piloto.dlg_trajetoria_ui,nwqt4.dialogs.request.random_wallpaper,nwqt4.dialogs.request.new_wallpaper,view.wizard.wizard_model,view.dbedit.wnd_main_dbedit,view.dbedit.dlg_anv_edit_new_ui,view.wizard.wizard_page_model,view.dbedit.dlg_exe_data_new,view.dbedit.wnd_main_dbedit_ui,view.dbedit.dlg_fix_edit_new_ui,nwqt4.config_dialog.config_account_ui,control.visil.control_visil,nwqt4.config_dialog.config_schedule_ui,view.piloto.dlg_aproximacao,view.wizard.wpg_config_exe_ui,view.dbedit.dlg_exe_edit_new_ui,model.validators.fix_validator,view.dbedit.dlg_aer_data_new,view.dbedit.dlg_fix_data_new,nwqt4.validators,nwqt4.request_config.random_wallpaper_ui,nwqt4.widgets.result,view.super.pag_query,view.dbedit.dlg_prf_edit_new,nwqt4.request_config.new_wallpaper,view.dbedit.dlg_aer_edit_new_ui,model.validators.prf_validator,nwqt4.config_dialog.config_schedule,view.dbedit.dlg_sub_data_new_ui,view.piloto.dlg_decolagem_ui,view.piloto.dlg_espera,view.common.statusbar_basic,view.dbedit.dlg_trj_data_new_ui,nwqt4.widgets.results_layout,nwqt4.config_dialog.config_duplicates_ui,view.dbedit.dlg_esp_data_new_ui,view.piloto.dlg_velocidade_ui,view.super.dlg_config,nwqt4.dialogs.wallpaper_info_ui,view.dbedit.dlg_brk_trj_edit_new,nwqt4.main,nwqt4.dialogs.add_url_ui,view.common.dock_procedures_ui,view.piloto.dlg_aproximacao_ui,view.dbedit.dlg_prf_edit_new_ui,view.piloto.dlg_altitude,view.dbedit.dlg_aer_data_new_ui)
+      \-QtNetwork (nwqt4.api_v1,nwqt4.common,nwqt4.api_v2)
+      \-QtXml (model.items.fix_data,model.items.prf_data,model.visil.airspace_visil,model.items.exe_data,model.items.sub_data,model.items.trj_data,model.items.trf_data,model.items.esp_data,model.items.apx_data,model.items.aer_data)
+      \-uic (t_ac_6)
+    control 
+      \-adapter 
+      | \-control_adapter (adapter)
+      \-common 
+      | \-glb_defs (model.newton.cine.cine_model,control.visil.control_visil,model.items.exe_model,control.simula.sim_time,control.piloto.control_piloto,model.piloto.model_piloto,model.visil.emula_visil,control.config.config_super,control.adapter.control_adapter,control.network.net_listener,model.newton.cine.prc_pouso,control.config.config_manager,control.config.config_newton,model.newton.emula_newton,model.piloto.emula_piloto,control.newton.control_newton,model.newton.flight_engine,view.piloto.wnd_main_piloto,control.super.control_super,model.visil.model_visil)
+      \-config 
+      | \-config_adapter (control.adapter.control_adapter)
+      | \-config_dbedit (control.dbedit.control_dbedit)
+      | \-config_manager (control.config.config_super,control.config.config_visil,control.config.config_piloto,control.config.config_adapter,control.config.config_newton,model.model_manager,control.config.config_wizard,control.config.config_dbedit)
+      | \-config_newton (control.newton.control_newton)
+      | \-config_piloto (control.piloto.control_piloto)
+      | \-config_super (control.super.control_super)
+      | \-config_visil (control.visil.control_visil)
+      | \-config_wizard (control.wizard.control_wizard)
+      \-control_basic (control.dbedit.control_dbedit,control.newton.control_newton,control.visil.control_visil,control.piloto.control_piloto)
+      \-control_debug (model.items.exe_new,view.visil.wnd_main_visil,model.items.trj_new,view.piloto.dlg_velocidade,model.newton.cine.dados_dinamicos,control.adapter.control_adapter,model.newton.emula_newton,model.piloto.comando_piloto,model.items.trj_data,view.visweb.view_handler,model.items.trf_data,control.network.net_listener,model.newton.cine.prc_pouso,model.dbedit.model_dbedit,view.piloto.dlg_dir_fixo,view.piloto.wnd_main_piloto,model.visil.aircraft_visil,view.piloto.dlg_direcao,view.piloto.dlg_altitude,model.items.aer_new,model.common.aircraft_basic,model.newton.flight_engine)
+      \-control_manager (control.control_basic,control.super.control_super,control.adapter.control_adapter,control.wizard.control_wizard)
+      \-dbedit 
+      | \-control_dbedit (dbEdit)
+      \-events 
+      | \-events_basic (model.items.fix_data,model.items.exe_new,view.visil.wnd_main_visil,model.items.exe_data,model.items.prf_new,view.common.color_manager,model.items.esp_new,view.dbedit.wnd_main_dbedit,model.items.apx_data,model.items.pst_new,model.items.trj_new,control.control_manager,control.simula.sim_time,model.items.sub_new,view.dbedit.dlg_prf_data_new,model.super.model_super,view.dbedit.dlg_trj_data_new,control.newton.control_newton,view.wizard.view_wizard,model.visil.model_visil,view.wizard.wpg_config_exe,model.items.sub_data,model.items.brk_new,model.items.trj_data,view.dbedit.dlg_exe_data_new,view.piloto.view_piloto,model.items.prf_data,model.items.trf_data,view.dbedit.view_dbedit,model.dbedit.model_dbedit,model.wizard.model_wizard,model.items.apx_new,model.adapter.model_adapter,view.visil.view_visil,model.items.trf_new,model.items.fix_new,view.super.view_super,model.items.aer_data,model.items.esp_data,view.dbedit.dlg_aer_data_new,view.dbedit.dlg_fix_data_new,model.items.aer_new,view.piloto.wnd_main_piloto)
+      | \-events_config (model.dbedit.model_dbedit,control.visil.control_visil,view.visil.wnd_main_visil,control.piloto.control_piloto,view.dbedit.dlg_exe_data_new,control.adapter.control_adapter,control.super.control_super,view.piloto.wnd_main_piloto)
+      | \-events_flight (model.visil.emula_visil,model.piloto.emula_piloto)
+      | \-events_manager (control.control_manager,model.model_manager)
+      | \-events_model (control.events.events_basic,control.events.events_config,control.events.events_flight)
+      \-network 
+      | \-get_address (control.visil.control_visil,control.piloto.control_piloto,control.adapter.control_adapter,control.newton.control_newton,control.network.get_ctrl_net,control.super.control_super)
+      | \-get_ctrl_net (control.adapter.control_adapter)
+      | \-net_http_get (control.visil.control_visil,control.piloto.control_piloto)
+      | \-net_listener (control.visil.control_visil,control.newton.control_newton,control.adapter.control_adapter,control.piloto.control_piloto)
+      | \-net_sender (control.newton.control_newton,control.adapter.control_adapter,control.super.control_super,control.piloto.control_piloto)
+      \-newton 
+      | \-control_newton (newton)
+      \-piloto 
+      | \-control_piloto (piloto)
+      \-simula 
+      | \-sim_time (control.newton.control_newton,control.visil.control_visil,control.piloto.control_piloto)
+      \-super 
+      | \-control_super (super)
+      \-visil 
+      | \-control_visil (visil)
+      \-wizard 
+        \-control_wizard (merlin)
+    coord 
+      \-gms2deg (coord.parseICA)
+    coords 
+      \-azimAng (coord.tipoD,coord.geografica,coord.polar,coord.tipoD_2)
+      \-cartesiana (coord.findXY)
+      \-cgRef (coord.tipoF,coord.findXY,coord.cartesiana,coord.polar,coord.tipoF_2)
+      \-chk_coords (mk_fix_dict,mk_brk_dict,mk_pst_dict,mk_trf_dict)
+      \-declXY (coord.findXY)
+      \-gAzim (coord.geografica)
+      \-gDist (coord.geografica)
+      \-geografica (coord.tipoF,coord.findXY,coord.tipoF_2)
+      \-parseICA (mk_wpt_dct_2,mk_wpt_dct_1,mk_rad_dict,mk_fix_lst,mk_fix_dct,coord.chk_coords)
+      \-polar (mk_wpt_dct_2,mk_wpt_dct_1,coord.findXY,mk_fix_lst,mk_fix_dct,coord.chk_coords)
+      \-tipoD (coord.findXY)
+      \-tipoD_2 (coord.chk_coords)
+      \-tipoF (coord.tipoD,coord.findXY)
+      \-tipoF_2 (coord.tipoD_2)
+    dbus (nwqt4.notify)
+      \-mainloop 
+        \-qt (nwqt4.notify)
+    libs 
+      \-coords 
+      | \-coord_conv (libs.coords.coord_model,libs.coords.coord_geog,model.common.strip_table_model,libs.coords.coord_sys)
+      | \-coord_defs (libs.coords.coord_sys,libs.coords.coord_geog,view.visweb.generate_prf_json,model.newton.flight_engine,view.common.viewport,model.newton.cine.dados_dinamicos,libs.coords.coord_model,model.newton.cine.prc_decolagem,control.adapter.control_adapter,model.newton.cine.prc_espera,view.dbedit.dlg_trj_data_new,model.newton.cine.cine_model,model.items.trj_data,view.dbedit.dlg_exe_data_new,model.items.brk_new,view.dbedit.dlg_brk_trj_edit_new,model.items.trf_data,control.config.config_manager,model.newton.cine.cine_voo,model.items.trf_new,view.dbedit.dlg_anv_edit_new,model.items.fix_new,libs.coords.coord_geod,model.newton.cine.obtem_brk,view.visweb.generate_anv_json,model.items.prf_new,view.piloto.dlg_altitude,model.items.aer_new,model.common.strip_table_model)
+      | \-coord_geod (libs.coords.coord_model,libs.coords.coord_sys)
+      | \-coord_geog (libs.coords.coord_sys)
+      | \-coord_model (libs.coords.coord_sys)
+      | \-coord_sys (model.dbedit.model_dbedit,model.piloto.model_piloto,model.visil.model_visil,model.adapter.model_adapter,model.newton.model_newton)
+      | \-pos_lat_lng (view.common.viewport,model.common.aircraft,view.common.slate_radar,model.visil.aircraft_visil,model.common.fix,view.common.paint_engine,model.visil.airspace_visil,model.newton.airspace_newton,model.common.aircraft_basic)
+      | \-pos_xy (view.common.viewport,view.common.slate_radar)
+      \-geomag 
+        \-geomag 
+          \-geomag 
+            \-geomag (model.piloto.model_piloto,model.visil.model_visil,model.adapter.model_adapter)
+    model 
+      \-adapter 
+      | \-model_adapter (control.adapter.control_adapter)
+      \-common 
+      | \-adiru (model.common.aircraft)
+      | \-aircraft (model.common.aircraft_basic)
+      | \-aircraft_basic (model.visil.aircraft_visil)
+      | \-airspace_basic (model.newton.airspace_newton)
+      | \-data (control.config.config_super,control.config.config_visil,control.config.config_adapter,control.config.config_piloto,control.config.config_manager,control.config.config_newton,control.config.config_wizard,control.config.config_dbedit)
+      | \-defs_strips (view.visil.wnd_main_visil,view.piloto.wnd_main_piloto,model.common.strip_table_model)
+      | \-fix (view.common.paint_engine,model.common.runway,model.visil.airspace_visil)
+      | \-flight_plan_item (model.visil.airspace_visil)
+      | \-glb_data (control.visil.control_visil,view.visil.wnd_main_visil,control.control_manager,control.piloto.control_piloto,view.common.slate_radar,view.wizard.dlg_wizard,model.visil.emula_visil,control.config.config_manager,control.network.net_listener,view.newton.view_newton,control.adapter.control_adapter,view.common.paint_engine,model.newton.emula_newton,control.simula.sim_time,control.newton.control_newton,model.newton.flight_engine,view.piloto.wnd_main_piloto,control.super.control_super,model.piloto.emula_piloto,model.newton.cine.dados_dinamicos)
+      | \-holding (model.visil.airspace_visil)
+      | \-instruction (model.piloto.comando_piloto)
+      | \-runway (model.visil.airspace_visil)
+      | \-standard_route (model.visil.airspace_visil)
+      | \-strip_model (view.visil.wnd_main_visil,model.visil.aircraft_visil)
+      | \-strip_table_model (view.visil.wnd_main_visil,view.piloto.wnd_main_piloto)
+      | \-tMath (view.common.paint_engine,model.common.aircraft_basic,model.visil.aircraft_visil,view.common.slate_radar)
+      \-core 
+      | \-location (model.adapter.model_adapter)
+      | \-utm (model.core.location)
+      \-dbedit 
+      | \-model_dbedit (control.dbedit.control_dbedit)
+      \-items 
+      | \-aer_data (model.dbedit.model_dbedit,model.common.airspace_basic)
+      | \-aer_model (model.items.aer_new)
+      | \-aer_new (view.dbedit.dlg_aer_edit_new,model.items.aer_data,model.items.trf_new)
+      | \-apx_data (model.newton.airspace_newton,model.visil.airspace_visil)
+      | \-apx_new (model.items.apx_data)
+      | \-atv_new (model.newton.emula_newton)
+      | \-brk_model (model.items.brk_new)
+      | \-brk_new (model.items.trj_new,view.dbedit.dlg_brk_trj_edit_new,model.items.apx_new,model.items.sub_new)
+      | \-esp_data (model.newton.airspace_newton,model.visil.airspace_visil)
+      | \-esp_new (model.items.esp_data)
+      | \-exe_data (model.dbedit.model_dbedit,model.wizard.model_wizard,view.dbedit.dlg_exe_data_new,model.super.model_super,model.newton.model_newton)
+      | \-exe_model (model.items.exe_new)
+      | \-exe_new (model.items.exe_data,view.dbedit.dlg_exe_edit_new)
+      | \-fix_data (view.dbedit.dlg_fix_data_new,model.dbedit.model_dbedit,model.common.airspace_basic)
+      | \-fix_model (model.items.fix_new)
+      | \-fix_new (model.items.fix_data,view.dbedit.dlg_fix_edit_new)
+      | \-parser_utils (model.items.fix_data,model.items.prf_data,model.items.exe_data,model.items.sub_data,model.items.trj_data,model.items.trf_data,model.items.esp_data,model.items.apx_data,model.items.aer_data)
+      | \-prc_model (model.items.esp_new,model.items.sub_new,model.items.apx_new,model.items.trj_new)
+      | \-prf_data (model.dbedit.model_dbedit,model.newton.model_newton)
+      | \-prf_model (model.items.prf_new)
+      | \-prf_new (model.items.prf_data,view.dbedit.dlg_prf_edit_new)
+      | \-pst_model (model.items.pst_new)
+      | \-pst_new (model.items.aer_new)
+      | \-sub_data (model.newton.airspace_newton,model.visil.airspace_visil)
+      | \-sub_new (model.items.sub_data)
+      | \-trf_data (model.dbedit.model_dbedit,model.newton.model_newton)
+      | \-trf_model (model.items.trf_new)
+      | \-trf_new (model.items.atv_new,view.dbedit.dlg_anv_edit_new,model.newton.emula_newton,model.items.trf_data)
+      | \-trj_data (model.newton.airspace_newton,model.dbedit.model_dbedit,model.visil.airspace_visil)
+      | \-trj_new (model.items.trj_data,view.dbedit.dlg_trj_edit_new,model.newton.cine.cine_model)
+      \-model_manager (model.dbedit.model_dbedit,model.wizard.model_wizard,model.adapter.model_adapter,model.piloto.model_piloto,model.newton.model_newton,model.super.model_super,model.visil.model_visil)
+      \-newton 
+      | \-airspace_newton (model.dbedit.model_dbedit,model.piloto.model_piloto,model.visil.airspace_visil,model.newton.model_newton)
+      | \-cine 
+      | | \-abort_prc (model.newton.flight_engine,model.newton.cine.prc_decolagem,model.newton.cine.prc_aproximacao,model.newton.cine.prc_dir_fixo,model.newton.cine.prc_trajetoria,model.newton.cine.obtem_brk,model.newton.cine.trata_associado,model.newton.cine.prc_subida,model.newton.cine.prc_dir_ponto,model.newton.cine.prc_espera)
+      | | \-calc_proa_demanda (model.newton.cine.dados_dinamicos,model.newton.cine.prc_pouso,model.newton.cine.prc_decolagem,model.newton.cine.prc_dir_fixo,model.newton.cine.prc_dir_ponto,model.newton.cine.prc_espera)
+      | | \-calc_razao_curva (model.newton.cine.prc_dir_fixo,model.newton.cine.prc_dir_ponto)
+      | | \-cine_calc (model.newton.cine.prc_pouso,model.newton.cine.cine_voo,model.newton.emula_newton)
+      | | \-cine_data (model.newton.flight_engine)
+      | | \-cine_model (model.newton.cine.prc_pouso,model.newton.cine.cine_voo)
+      | | \-cine_voo (model.newton.flight_engine)
+      | | \-dados_dinamicos (model.newton.cine.cine_voo)
+      | | \-obtem_brk (model.newton.cine.cine_voo,model.newton.cine.prc_aproximacao,model.newton.cine.prc_subida,model.newton.cine.prc_trajetoria)
+      | | \-prc_aproximacao (model.newton.cine.cine_voo)
+      | | \-prc_decolagem (model.newton.cine.cine_voo)
+      | | \-prc_dir_fixo (model.newton.cine.cine_voo)
+      | | \-prc_dir_ponto (model.newton.cine.prc_aproximacao,model.newton.cine.prc_espera,model.newton.cine.prc_trajetoria,model.newton.cine.prc_subida)
+      | | \-prc_espera (model.newton.cine.cine_voo)
+      | | \-prc_pouso (model.newton.cine.cine_voo)
+      | | \-prc_subida (model.newton.cine.cine_voo)
+      | | \-prc_trajetoria (model.newton.cine.cine_voo)
+      | | \-sentido_curva (model.newton.cine.prc_pouso,model.newton.cine.prc_aproximacao,model.newton.cine.prc_dir_fixo,model.newton.cine.prc_trajetoria,model.newton.cine.obtem_brk,model.newton.flight_engine,model.newton.cine.prc_dir_ponto,model.newton.cine.prc_espera)
+      | | \-trata_associado (model.newton.cine.prc_decolagem,model.newton.cine.cine_voo,model.newton.cine.prc_aproximacao,model.newton.cine.prc_subida,model.newton.cine.prc_trajetoria)
+      | \-defs_newton (view.visil.wnd_main_visil,model.newton.model_newton,model.newton.cine.abort_prc,view.common.paint_engine,model.newton.cine.prc_aproximacao,model.newton.cine.cine_data,model.newton.cine.prc_subida,model.newton.cine.dados_dinamicos,view.common.slate_radar,model.newton.cine.calc_razao_curva,model.newton.cine.prc_decolagem,model.items.atv_new,model.newton.cine.prc_espera,model.newton.cine.obtem_brk,view.visweb.generate_status_json,model.newton.cine.trata_associado,model.newton.cine.sentido_curva,model.newton.cine.cine_model,model.newton.emula_newton,model.newton.cine.prc_pouso,model.newton.airspace_newton,model.newton.cine.cine_voo,model.newton.cine.prc_dir_ponto,view.common.dock_procedures,model.items.fix_model,model.items.trf_new,model.newton.cine.calc_proa_demanda,model.items.fix_new,model.items.esp_new,model.newton.cine.prc_dir_fixo,model.newton.cine.prc_trajetoria,view.dbedit.dlg_fix_data_new,model.piloto.comando_piloto,model.newton.flight_engine)
+      | \-emula_model (model.visil.emula_visil,model.newton.emula_newton,model.piloto.emula_piloto)
+      | \-emula_newton (model.newton.model_newton)
+      | \-flight_engine (model.newton.emula_newton)
+      | \-model_newton (control.newton.control_newton)
+      \-piloto 
+      | \-comando_piloto (model.newton.flight_engine)
+      | \-emula_piloto (model.piloto.model_piloto)
+      | \-model_piloto (control.piloto.control_piloto)
+      \-super 
+      | \-model_super (control.super.control_super)
+      \-validators 
+      | \-fix_validator (view.dbedit.dlg_brk_trj_edit_new)
+      | \-prc_validator (view.dbedit.dlg_anv_edit_new,view.dbedit.dlg_brk_trj_edit_new)
+      | \-prf_validator (view.dbedit.dlg_anv_edit_new)
+      \-visil 
+      | \-aircraft_visil (view.visil.wnd_main_visil,model.visil.emula_visil,view.piloto.wnd_main_piloto,model.common.strip_table_model,model.piloto.emula_piloto)
+      | \-airspace_visil (model.visil.model_visil)
+      | \-emula_visil (model.visil.model_visil)
+      | \-model_visil (control.visil.control_visil)
+      \-wizard 
+        \-model_wizard (control.wizard.control_wizard)
+    nwqt4 (nwqt4.widgets.result,nwqt4.widgets.result_menu)
+      \-api_v2 (nwqt4.nwapp)
+      \-common (nwqt4.widgets.result,nwqt4.main,nwqt4.api_v1,nwqt4.nwapp,nwqt4.api_v2,nwqt4.trayicon)
+      \-config (nwqt4.nwapp)
+      \-config_dialog (nwqt4.nwapp)
+      | \-config_account (nwqt4.config_dialog.config_dialog)
+      | \-config_account_ui (nwqt4.config_dialog.config_account)
+      | \-config_dialog (nwqt4.config_dialog)
+      | \-config_dialog_ui (nwqt4.config_dialog.config_dialog)
+      | \-config_duplicates (nwqt4.config_dialog.config_dialog)
+      | \-config_duplicates_ui (nwqt4.config_dialog.config_duplicates)
+      | \-config_icon (nwqt4.config_dialog.config_dialog)
+      | \-config_icon_ui (nwqt4.config_dialog.config_icon)
+      | \-config_requests (nwqt4.config_dialog.config_dialog)
+      | \-config_requests_ui (nwqt4.config_dialog.config_requests)
+      | \-config_results (nwqt4.config_dialog.config_dialog)
+      | \-config_results_ui (nwqt4.config_dialog.config_results)
+      | \-config_schedule (nwqt4.config_dialog.config_dialog)
+      | \-config_schedule_ui (nwqt4.config_dialog.config_schedule)
+      | \-config_scripts (nwqt4.config_dialog.config_dialog)
+      | \-config_scripts_ui (nwqt4.config_dialog.config_scripts)
+      \-dialogs (nwqt4.nwapp)
+      | \-add_tags (nwqt4.dialogs)
+      | \-add_tags_ui (nwqt4.dialogs.add_tags)
+      | \-add_url (nwqt4.dialogs)
+      | \-add_url_ui (nwqt4.dialogs.add_url)
+      | \-choice_duplicates (nwqt4.dialogs)
+      | \-dialog_ui (nwqt4.dialogs.choice_duplicates,nwqt4.dialogs.request.new_wallpaper,nwqt4.dialogs.request.random_wallpaper,nwqt4.dialogs.request.last_wallpaper)
+      | \-request (nwqt4.dialogs)
+      | | \-last_wallpaper (nwqt4.dialogs.request)
+      | | \-new_wallpaper (nwqt4.dialogs.request)
+      | | \-random_wallpaper (nwqt4.dialogs.request)
+      | \-results (nwqt4.dialogs)
+      | \-results_ui (nwqt4.dialogs.results)
+      | \-send_bad_urls (nwqt4.dialogs)
+      | \-send_bad_urls_ui (nwqt4.dialogs.send_bad_urls)
+      | \-wallpaper_info (nwqt4.dialogs,nwqt4.dialogs.results)
+      | \-wallpaper_info_ui (nwqt4.dialogs.wallpaper_info)
+      \-duplicates (nwqt4.nwapp)
+      \-logger (nwqt4.validators,nwqt4.request_config.last_wallpaper,nwqt4.widgets.result_menu,nwqt4.dialogs.add_tags,nwqt4.dialogs.add_url,nwqt4.widgets.result,nwqt4.config_dialog.config_requests,nwqt4.config_dialog.config_icon,nwqt4.trayicon,nwqt4.request_config.new_wallpaper,nwqt4.dialogs.wallpaper_info,nwqt4.dialogs.request.last_wallpaper,nwqt4.config_dialog.config_account,nwqt4.widgets.wallpaper_info,nwqt4.config_dialog.config_scripts,nwqt4.dialogs.request.random_wallpaper,nwqt4.widgets.color_button,nwqt4.dialogs.request.new_wallpaper,nwqt4.api_v1,nwqt4.api_v2,nwqt4.request_config.random_wallpaper,nwqt4.common,nwqt4.config_dialog.config_dialog,nwqt4.nwapp,nwqt4.dialogs.results,nwqt4.config_dialog.config_schedule)
+      \-notify (nwqt4.trayicon)
+      \-nwapp (nwqt4.main)
+      \-request_config (nwqt4.dialogs.request.new_wallpaper,nwqt4.config_dialog.config_requests,nwqt4.dialogs.request.random_wallpaper,nwqt4.config_dialog.config_schedule,nwqt4.dialogs.request.last_wallpaper)
+      | \-last_wallpaper (nwqt4.request_config)
+      | \-last_wallpaper_ui (nwqt4.request_config.last_wallpaper)
+      | \-new_wallpaper (nwqt4.request_config)
+      | \-new_wallpaper_ui (nwqt4.request_config.new_wallpaper)
+      | \-random_wallpaper (nwqt4.request_config)
+      | \-random_wallpaper_ui (nwqt4.request_config.random_wallpaper)
+      \-settings (nwqt4.nwapp)
+      \-trayicon (nwqt4.nwapp)
+      \-validators (nwqt4.widgets.wallpaper_info,nwqt4.request_config.random_wallpaper,nwqt4.dialogs.add_tags,nwqt4.dialogs.add_url)
+      \-widgets (nwqt4.config_dialog.config_results_ui,nwqt4.dialogs.choice_duplicates,nwqt4.dialogs.results,nwqt4.dialogs.wallpaper_info)
+        \-choice_duplicate (nwqt4.widgets)
+        \-choice_duplicate_ui (nwqt4.widgets.choice_duplicate)
+        \-color_button (nwqt4.widgets)
+        \-result (nwqt4.widgets)
+        \-result_menu (nwqt4.widgets)
+        \-results_layout (nwqt4.widgets)
+        \-wallpaper_info (nwqt4.widgets)
+        \-wallpaper_info_ui (nwqt4.widgets.wallpaper_info)
+    sip (newton,merlin,dbEdit,val_2,piloto,visil,super)
+    utils (mk_sub_dict,mk_esp_dict,mk_apx_dict,mk_ape_dict,mk_fix_dict,mk_exe_dict,mk_trj_dict,mk_pst_dict,mk_ils_dict,mk_trf_dict,mk_brk_dict,coord.chk_coords)
+    view 
+      \-common 
+      | \-color_manager (view.piloto.view_piloto,view.dbedit.view_dbedit,view.super.view_super,view.visil.view_visil)
+      | \-dock_procedures (view.visil.wnd_main_visil,view.piloto.wnd_main_piloto)
+      | \-dock_procedures_ui (view.common.dock_procedures)
+      | \-paint_engine (view.common.slate_radar)
+      | \-resources_rc (view.common.dock_procedures_ui)
+      | \-slate_radar (view.visil.wnd_main_visil,view.piloto.wnd_main_piloto)
+      | \-statusbar_basic (view.piloto.statusbar_piloto,view.visil.statusbar_visil)
+      | \-viewport (view.common.slate_radar)
+      \-dbedit 
+      | \-dlg_aer_data_new (view.dbedit.wnd_main_dbedit)
+      | \-dlg_aer_data_new_ui (view.dbedit.dlg_aer_data_new)
+      | \-dlg_aer_edit_new (view.dbedit.dlg_aer_data_new)
+      | \-dlg_aer_edit_new_ui (view.dbedit.dlg_aer_edit_new)
+      | \-dlg_anv_edit_new (view.dbedit.dlg_exe_data_new)
+      | \-dlg_anv_edit_new_ui (view.dbedit.dlg_anv_edit_new)
+      | \-dlg_brk_trj_edit_new (view.dbedit.dlg_trj_data_new)
+      | \-dlg_brk_trj_edit_new_ui (view.dbedit.dlg_brk_trj_edit_new)
+      | \-dlg_exe_data_new (view.dbedit.wnd_main_dbedit)
+      | \-dlg_exe_data_new_ui (view.dbedit.dlg_exe_data_new)
+      | \-dlg_exe_edit_new (view.dbedit.dlg_exe_data_new)
+      | \-dlg_exe_edit_new_ui (view.dbedit.dlg_exe_edit_new)
+      | \-dlg_fix_data_new (view.dbedit.wnd_main_dbedit)
+      | \-dlg_fix_data_new_ui (view.dbedit.dlg_fix_data_new)
+      | \-dlg_fix_edit_new (view.dbedit.dlg_fix_data_new)
+      | \-dlg_fix_edit_new_ui (view.dbedit.dlg_fix_edit_new)
+      | \-dlg_prf_data_new (view.dbedit.wnd_main_dbedit)
+      | \-dlg_prf_data_new_ui (view.dbedit.dlg_prf_data_new)
+      | \-dlg_prf_edit_new (view.dbedit.dlg_prf_data_new)
+      | \-dlg_prf_edit_new_ui (view.dbedit.dlg_prf_edit_new)
+      | \-dlg_trj_data_new (view.dbedit.wnd_main_dbedit)
+      | \-dlg_trj_data_new_ui (view.dbedit.dlg_trj_data_new)
+      | \-dlg_trj_edit_new (view.dbedit.dlg_trj_data_new)
+      | \-dlg_trj_edit_new_ui (view.dbedit.dlg_trj_edit_new)
+      | \-resources_rc (view.dbedit.dlg_prf_data_new_ui,view.dbedit.dlg_ape_data_new_ui,view.dbedit.dlg_exe_data_new_ui,view.dbedit.dlg_esp_data_new_ui,view.dbedit.dlg_fix_data_new_ui,view.dbedit.dlg_apx_data_new_ui,view.dbedit.dlg_aer_data_new_ui,view.dbedit.dlg_sub_data_new_ui,view.dbedit.dlg_fix_edit_new_ui,view.dbedit.dlg_exe_edit_new_ui,view.dbedit.dlg_ils_data_new_ui,view.dbedit.wnd_main_dbedit_ui,view.dbedit.dlg_prf_edit_new_ui,view.dbedit.dlg_trj_data_new_ui,view.dbedit.dlg_brk_trj_edit_new_ui,view.dbedit.dlg_anv_edit_new_ui,view.dbedit.dlg_aer_edit_new_ui)
+      | \-view_dbedit (control.dbedit.control_dbedit)
+      | \-wnd_main_dbedit (view.dbedit.view_dbedit)
+      | \-wnd_main_dbedit_ui (view.dbedit.wnd_main_dbedit)
+      \-newton 
+      | \-view_newton (control.newton.control_newton)
+      \-piloto 
+      | \-dlg_altitude (view.piloto.wnd_main_piloto)
+      | \-dlg_altitude_ui (view.piloto.dlg_altitude)
+      | \-dlg_aproximacao (view.piloto.wnd_main_piloto)
+      | \-dlg_aproximacao_ui (view.piloto.dlg_aproximacao)
+      | \-dlg_decolagem (view.piloto.wnd_main_piloto)
+      | \-dlg_decolagem_ui (view.piloto.dlg_decolagem)
+      | \-dlg_dir_fixo (view.piloto.wnd_main_piloto)
+      | \-dlg_dir_fixo_ui (view.piloto.dlg_dir_fixo)
+      | \-dlg_direcao (view.piloto.wnd_main_piloto)
+      | \-dlg_direcao_ui (view.piloto.dlg_direcao)
+      | \-dlg_espera (view.piloto.wnd_main_piloto)
+      | \-dlg_espera_ui (view.piloto.dlg_espera)
+      | \-dlg_pouso (view.piloto.wnd_main_piloto)
+      | \-dlg_pouso_ui (view.piloto.dlg_pouso)
+      | \-dlg_subida (view.piloto.wnd_main_piloto)
+      | \-dlg_subida_ui (view.piloto.dlg_subida)
+      | \-dlg_trajetoria (view.piloto.wnd_main_piloto)
+      | \-dlg_trajetoria_ui (view.piloto.dlg_trajetoria)
+      | \-dlg_velocidade (view.piloto.wnd_main_piloto)
+      | \-dlg_velocidade_ui (view.piloto.dlg_velocidade)
+      | \-resources_rc (view.piloto.wnd_main_piloto_ui)
+      | \-statusbar_piloto (view.piloto.wnd_main_piloto)
+      | \-view_piloto (control.piloto.control_piloto)
+      | \-wnd_main_piloto (view.piloto.view_piloto)
+      | \-wnd_main_piloto_ui (view.piloto.wnd_main_piloto)
+      \-resources 
+      | \-resources_rc (view.visil.wnd_main_visil,view.common.dock_procedures,view.piloto.wnd_main_piloto)
+      | \-resources_super_rc2 (view.super.dlg_config)
+      | \-resources_super_rc3 (view.super.dlg_config)
+      \-super 
+      | \-dlg_config (view.super.view_super)
+      | \-pag_config (view.super.dlg_config)
+      | \-pag_query (view.super.dlg_config)
+      | \-pag_update (view.super.dlg_config)
+      | \-view_super (control.super.control_super)
+      \-view_manager (view.piloto.view_piloto,view.dbedit.view_dbedit,view.wizard.view_wizard,view.super.view_super,view.visil.view_visil)
+      \-visil 
+      | \-resources_rc (view.visil.wnd_main_visil_ui)
+      | \-statusbar_visil (view.visil.wnd_main_visil)
+      | \-view_visil (control.visil.control_visil)
+      | \-wnd_main_visil (view.visil.view_visil)
+      | \-wnd_main_visil_ui (view.visil.wnd_main_visil)
+      \-visweb 
+      | \-generate_anv_json (view.visweb.view_handler)
+      | \-generate_prf_json (view.visweb.view_handler)
+      | \-generate_status_json (view.visweb.view_handler)
+      | \-view_handler (view.newton.view_newton)
+      \-wizard 
+        \-dlg_wizard (view.wizard.view_wizard)
+        \-resources_rc (view.wizard.wpg_termina_ui,view.wizard.wpg_config_exe_ui,view.wizard.wpg_config_canal_ui)
+        \-view_wizard (control.wizard.control_wizard)
+        \-wizard_model (view.wizard.dlg_wizard)
+        \-wizard_page_model (view.wizard.wpg_termina,view.wizard.wpg_config_canal,view.wizard.wpg_config_exe)
+        \-wpg_config_canal (view.wizard.dlg_wizard)
+        \-wpg_config_canal_ui (view.wizard.wpg_config_canal)
+        \-wpg_config_exe (view.wizard.dlg_wizard)
+        \-wpg_config_exe_ui (view.wizard.wpg_config_exe)
+        \-wpg_termina (view.wizard.dlg_wizard)
+        \-wpg_termina_ui (view.wizard.wpg_termina)
+
+
+
+Raw metrics
+-----------
+
++----------+-------+------+---------+-----------+
+|type      |number |%     |previous |difference |
++==========+=======+======+=========+===========+
+|code      |107355 |71.44 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|docstring |13662  |9.09  |NC       |NC         |
++----------+-------+------+---------+-----------+
+|comment   |16179  |10.77 |NC       |NC         |
++----------+-------+------+---------+-----------+
+|empty     |13078  |8.70  |NC       |NC         |
++----------+-------+------+---------+-----------+
+
+
+
+Duplication
+-----------
+
++-------------------------+-------+---------+-----------+
+|                         |now    |previous |difference |
++=========================+=======+=========+===========+
+|nb duplicated lines      |68309  |NC       |NC         |
++-------------------------+-------+---------+-----------+
+|percent duplicated lines |45.579 |NC       |NC         |
++-------------------------+-------+---------+-----------+
+
+
+
+Messages by category
+--------------------
+
++-----------+-------+---------+-----------+
+|type       |number |previous |difference |
++===========+=======+=========+===========+
+|convention |8064   |NC       |NC         |
++-----------+-------+---------+-----------+
+|refactor   |389    |NC       |NC         |
++-----------+-------+---------+-----------+
+|warning    |3197   |NC       |NC         |
++-----------+-------+---------+-----------+
+|error      |530    |NC       |NC         |
++-----------+-------+---------+-----------+
+
+
+
+% errors / warnings by module
+-----------------------------
+
++-----------------------------------------+------+--------+---------+-----------+
+|module                                   |error |warning |refactor |convention |
++=========================================+======+========+=========+===========+
+|view.dbedit.dlg_prf_edit_new             |6.98  |0.56    |0.26     |0.72       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_fix_edit_new             |6.98  |0.53    |0.26     |0.74       |
++-----------------------------------------+------+--------+---------+-----------+
+|trj_erro                                 |6.42  |0.00    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.api_v2                             |3.58  |0.13    |2.31     |0.50       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.trayicon                           |3.40  |0.25    |0.51     |0.40       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.api_v1                             |3.40  |0.13    |2.31     |0.50       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.visil.airspace_visil               |3.02  |0.63    |1.03     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_results_ui    |2.83  |1.03    |0.51     |0.67       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.nwapp                              |2.64  |1.06    |1.80     |1.39       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.wallpaper_info_ui          |2.45  |0.84    |0.51     |0.62       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.coord_geod                   |2.45  |0.06    |0.51     |0.41       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.paint_engine                 |2.08  |1.25    |4.37     |0.46       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.random_wallpaper_ui |1.89  |0.56    |0.51     |0.46       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.coord_conv                   |1.89  |0.00    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|coordConv                                |1.70  |0.81    |0.77     |11.01      |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_dialog        |1.51  |0.28    |0.77     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.add_url_ui                 |1.51  |0.22    |0.00     |0.26       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.wallpaper_info             |1.51  |0.03    |0.51     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_icon_ui       |1.32  |0.31    |0.26     |0.27       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.pos_lat_lng                  |1.32  |0.00    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.dbedit.model_dbedit                |1.13  |0.66    |0.77     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_requests_ui   |1.13  |0.38    |0.26     |0.32       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.dados_dinamicos        |1.13  |0.28    |0.26     |0.32       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.add_tags_ui                |1.13  |0.13    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_schedule      |1.13  |0.06    |0.00     |0.21       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_duplicates_ui |0.94  |0.47    |0.51     |0.33       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.choice_duplicate_ui        |0.94  |0.38    |0.51     |0.31       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.new_wallpaper_ui    |0.94  |0.31    |0.51     |0.27       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_account_ui    |0.94  |0.28    |0.26     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.sub_data                     |0.94  |0.16    |0.26     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_dialog_ui     |0.94  |0.09    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.wallpaper_info_ui          |0.94  |0.06    |0.00     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_schedule_ui   |0.75  |0.47    |0.51     |0.38       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.last_wallpaper_ui   |0.75  |0.22    |0.00     |0.24       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.send_bad_urls_ui           |0.75  |0.19    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.result_menu                |0.75  |0.19    |0.00     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_dir_fixo                 |0.75  |0.16    |0.26     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_aproximacao              |0.75  |0.13    |0.26     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_trajetoria               |0.75  |0.13    |0.26     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_subida                   |0.75  |0.13    |0.26     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_pouso                    |0.75  |0.09    |0.26     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.dialog_ui                  |0.75  |0.09    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.piloto.emula_piloto                |0.75  |0.03    |0.00     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_scripts_ui    |0.57  |0.31    |0.26     |0.26       |
++-----------------------------------------+------+--------+---------+-----------+
+|val_2                                    |0.57  |0.13    |0.00     |0.17       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.view_dbedit                  |0.57  |0.06    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.super.view_super                    |0.57  |0.06    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.view_piloto                  |0.57  |0.06    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visil.view_visil                    |0.57  |0.06    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.random_wallpaper    |0.57  |0.03    |0.00     |0.27       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_4                                   |0.57  |0.00    |0.00     |0.52       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_direcao_ui               |0.38  |0.56    |0.51     |0.30       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_aer_data_new             |0.38  |0.53    |0.77     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_altitude_ui              |0.38  |0.41    |0.51     |0.29       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_pouso              |0.38  |0.31    |1.03     |0.36       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.airspace_newton             |0.38  |0.28    |0.26     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_trj_edit_new_ui          |0.38  |0.25    |0.26     |0.31       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_velocidade_ui            |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_trajetoria_ui            |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_subida_ui                |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_pouso_ui                 |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_espera_ui                |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_dir_fixo_ui              |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_decolagem_ui             |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_aproximacao_ui           |0.38  |0.19    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.piloto.model_piloto                |0.38  |0.13    |0.00     |0.17       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wpg_config_exe               |0.38  |0.09    |0.26     |0.40       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.model_newton                |0.38  |0.09    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.color_manager                |0.38  |0.06    |0.51     |0.53       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.atv_new                      |0.38  |0.06    |0.51     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_duplicates    |0.38  |0.06    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.choice_duplicate           |0.38  |0.03    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.tMath                       |0.38  |0.03    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.fix_new                      |0.38  |0.00    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.wizard.model_wizard                |0.38  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.super.model_super                  |0.38  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_trajetoria         |0.19  |0.34    |0.77     |0.15       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.adapter.control_adapter          |0.19  |0.28    |0.51     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visil.wnd_main_visil                |0.19  |0.28    |0.26     |0.43       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_anv_edit_new             |0.19  |0.28    |0.00     |0.12       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.notify                             |0.19  |0.22    |0.26     |0.55       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.result                     |0.19  |0.22    |0.26     |0.45       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.findXY                             |0.19  |0.19    |0.26     |0.99       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_subida             |0.19  |0.16    |0.51     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.results_ui                 |0.19  |0.16    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|visil                                    |0.19  |0.13    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.coord_geog                   |0.19  |0.09    |1.03     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.cine_model             |0.19  |0.09    |0.26     |0.21       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_aer_edit_new             |0.19  |0.06    |0.26     |0.15       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_2                                   |0.19  |0.06    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.visil.model_visil                  |0.19  |0.06    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|piloto                                   |0.19  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|newton                                   |0.19  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.choice_duplicates          |0.19  |0.03    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.request.new_wallpaper      |0.19  |0.03    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.request.last_wallpaper     |0.19  |0.03    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wpg_config_canal             |0.19  |0.03    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.tipoD_2                            |0.19  |0.00    |0.00     |0.47       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_trf_dict                              |0.19  |0.00    |0.00     |0.40       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_fix_dict                              |0.19  |0.00    |0.00     |0.37       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_pst_dict                              |0.19  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.request.random_wallpaper   |0.19  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_7                                   |0.19  |0.00    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|merlin                                   |0.19  |0.00    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|dbEdit                                   |0.19  |0.00    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|super                                    |0.19  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_5                                   |0.19  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|latRad                                   |0.19  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|fixoXY                                   |0.19  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|findFixNum                               |0.19  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|chk_stt                                  |0.19  |0.00    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_3                                   |0.00  |18.02   |0.00     |0.58       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_6                                   |0.00  |6.82    |0.51     |0.97       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_sub_data_new_ui          |0.00  |3.32    |0.77     |1.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_ils_data_new_ui          |0.00  |3.32    |0.77     |1.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_esp_data_new_ui          |0.00  |3.32    |0.77     |1.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_apx_data_new_ui          |0.00  |3.32    |0.77     |1.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_ape_data_new_ui          |0.00  |3.32    |0.77     |1.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_prf_data_new_ui          |0.00  |2.60    |0.77     |1.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_prf_edit_new_ui          |0.00  |2.38    |0.51     |1.41       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_anv_edit_new_ui          |0.00  |1.53    |0.51     |0.95       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_brk_trj_edit_new_ui      |0.00  |1.31    |0.51     |0.74       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_fix_data_new_ui          |0.00  |1.19    |0.51     |0.40       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.wnd_main_piloto_ui           |0.00  |1.16    |0.51     |0.43       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_aer_data_new_ui          |0.00  |1.16    |0.51     |0.37       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_exe_data_new_ui          |0.00  |1.13    |0.51     |0.60       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.slate_radar                  |0.00  |1.09    |1.80     |1.23       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_trj_data_new_ui          |0.00  |1.03    |0.51     |0.58       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_aer_edit_new_ui          |0.00  |0.97    |0.51     |0.32       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_fix_edit_new_ui          |0.00  |0.94    |0.51     |0.58       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.strip_basic_ui               |0.00  |0.78    |0.51     |0.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.core.location                      |0.00  |0.75    |0.51     |0.76       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_exe_edit_new_ui          |0.00  |0.69    |0.51     |0.57       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_trj_data_new             |0.00  |0.66    |0.77     |1.30       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.wnd_main_dbedit_ui           |0.00  |0.59    |0.51     |0.46       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.dock_procedures_ui           |0.00  |0.59    |0.51     |0.33       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_exe_data_new             |0.00  |0.47    |1.54     |1.33       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.wnd_main_piloto              |0.00  |0.47    |0.51     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.geomag.geomag.geomag.geomag         |0.00  |0.44    |2.31     |3.51       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.flight_engine               |0.00  |0.44    |2.06     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.visil.aircraft_visil               |0.00  |0.44    |0.77     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.emula_newton                |0.00  |0.44    |0.77     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wpg_termina_ui               |0.00  |0.44    |0.51     |0.37       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visil.wnd_main_visil_ui             |0.00  |0.44    |0.51     |0.31       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.strip_table_model           |0.00  |0.38    |1.54     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wpg_config_exe_ui            |0.00  |0.38    |0.51     |0.37       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.aircraft_basic              |0.00  |0.34    |0.77     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.coord_sys                    |0.00  |0.31    |1.80     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wpg_config_canal_ui          |0.00  |0.31    |0.00     |0.33       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.exe_new                      |0.00  |0.28    |0.26     |0.57       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_decolagem          |0.00  |0.28    |0.26     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_brk_trj_edit_new         |0.00  |0.28    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.validators                         |0.00  |0.25    |0.77     |0.30       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_prf_data_new             |0.00  |0.25    |0.77     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.trf_data                     |0.00  |0.25    |0.51     |1.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.obtem_brk              |0.00  |0.22    |1.03     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_fix_data_new             |0.00  |0.22    |0.77     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.duplicates                         |0.00  |0.22    |0.26     |0.32       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_super              |0.00  |0.22    |0.00     |0.17       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.__init__                   |0.00  |0.22    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_altitude                 |0.00  |0.22    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.parser_utils                 |0.00  |0.19    |0.77     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.__init__                   |0.00  |0.19    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.network.net_listener             |0.00  |0.19    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.visil.control_visil              |0.00  |0.16    |1.03     |0.17       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.trf_new                      |0.00  |0.16    |0.77     |0.30       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.piloto.control_piloto            |0.00  |0.16    |0.51     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visweb.view_handler                 |0.00  |0.16    |0.51     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_trj_edit_new             |0.00  |0.16    |0.26     |0.41       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_scripts       |0.00  |0.16    |0.26     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.trj_data                     |0.00  |0.16    |0.00     |0.86       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_direcao                  |0.00  |0.16    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.cine_voo               |0.00  |0.16    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|val_1                                    |0.00  |0.13    |0.51     |0.20       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_aproximacao        |0.00  |0.13    |0.51     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.exe_data                     |0.00  |0.13    |0.26     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.apx_data                     |0.00  |0.13    |0.26     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_espera                   |0.00  |0.13    |0.26     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.prf_data                     |0.00  |0.13    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.fix_data                     |0.00  |0.13    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.esp_data                     |0.00  |0.13    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.aer_data                     |0.00  |0.13    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.main                               |0.00  |0.13    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.adapter.model_adapter              |0.00  |0.13    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_velocidade               |0.00  |0.13    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.airspace_basic              |0.00  |0.09    |0.51     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.dlg_exe_edit_new             |0.00  |0.09    |0.26     |0.47       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.newton.control_newton            |0.00  |0.09    |0.26     |0.21       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.results                    |0.00  |0.09    |0.26     |0.15       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.dlg_decolagem                |0.00  |0.09    |0.26     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.tipoF                              |0.00  |0.09    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.common                             |0.00  |0.09    |0.00     |0.24       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.tipoF_2                            |0.00  |0.09    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.super.control_super              |0.00  |0.09    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.__init__            |0.00  |0.09    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.request.__init__           |0.00  |0.09    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|all_interfaces_2                         |0.00  |0.09    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_newton             |0.00  |0.09    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.gAzim                              |0.00  |0.06    |0.77     |2.49       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.strip_basic                  |0.00  |0.06    |0.77     |0.46       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.prf_new                      |0.00  |0.06    |0.77     |0.30       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.cine_data              |0.00  |0.06    |0.51     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.dock_procedures              |0.00  |0.06    |0.51     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.network.net_http_get             |0.00  |0.06    |0.51     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.aer_new                      |0.00  |0.06    |0.26     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.esp_new                      |0.00  |0.06    |0.26     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.apx_new                      |0.00  |0.06    |0.26     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.sub_new                      |0.00  |0.06    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_dir_fixo           |0.00  |0.06    |0.00     |0.35       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wizard_model                 |0.00  |0.06    |0.00     |0.26       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_fix_dct                               |0.00  |0.06    |0.00     |0.21       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_wpt_dct_2                             |0.00  |0.06    |0.00     |0.20       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_wpt_dct_1                             |0.00  |0.06    |0.00     |0.20       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.color_button               |0.00  |0.06    |0.00     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_icon          |0.00  |0.06    |0.00     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.piloto.comando_piloto              |0.00  |0.06    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.super.dlg_config                    |0.00  |0.06    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|all_interfaces_1                         |0.00  |0.06    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|t_ac_1                                   |0.00  |0.06    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|recipe-439093-1                          |0.00  |0.06    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visweb.generate_anv_json            |0.00  |0.06    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|all_interfaces_3                         |0.00  |0.06    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|adapter                                  |0.00  |0.06    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visweb.generate_status_json         |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.visil.emula_visil                  |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.network.net_sender               |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_wizard             |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_visil              |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_piloto             |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_dbedit             |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_adapter            |0.00  |0.06    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.cine_calc              |0.00  |0.06    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.coord_model                  |0.00  |0.06    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_espera             |0.00  |0.03    |1.29     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.events.events_basic              |0.00  |0.03    |1.29     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.chk_coords                         |0.00  |0.03    |0.77     |0.30       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.validators.prc_validator           |0.00  |0.03    |0.77     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.view_manager                        |0.00  |0.03    |0.51     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.flight_plan_item            |0.00  |0.03    |0.26     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.trj_new                      |0.00  |0.03    |0.26     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.validators.prf_validator           |0.00  |0.03    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.validators.fix_validator           |0.00  |0.03    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.model_manager                      |0.00  |0.03    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|mkRadXML                                 |0.00  |0.03    |0.00     |1.41       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.cartesiana                         |0.00  |0.03    |0.00     |0.52       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.parseICA                           |0.00  |0.03    |0.00     |0.38       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.cgRef                              |0.00  |0.03    |0.00     |0.26       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.azimAng                            |0.00  |0.03    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.newton.view_newton                  |0.00  |0.03    |0.00     |0.21       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_requests      |0.00  |0.03    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.new_wallpaper       |0.00  |0.03    |0.00     |0.15       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.request_config.last_wallpaper      |0.00  |0.03    |0.00     |0.15       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_account       |0.00  |0.03    |0.00     |0.15       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.send_bad_urls              |0.00  |0.03    |0.00     |0.12       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.widgets.results_layout             |0.00  |0.03    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.add_tags                   |0.00  |0.03    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.config_results       |0.00  |0.03    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.emula_model                 |0.00  |0.03    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.super.pag_config                    |0.00  |0.03    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.control_manager                  |0.00  |0.03    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config_dialog.__init__             |0.00  |0.03    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.dlg_wizard                   |0.00  |0.03    |0.00     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.pos_xy                       |0.00  |0.03    |0.00     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wpg_termina                  |0.00  |0.03    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visweb.generate_prf_json            |0.00  |0.03    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.calc_proa_demanda      |0.00  |0.03    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.statusbar_basic              |0.00  |0.03    |0.00     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.super.pag_update                    |0.00  |0.03    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.wnd_main_dbedit              |0.00  |0.03    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.defs_strips                 |0.00  |0.03    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.control_basic                    |0.00  |0.03    |0.00     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_fix_xml                               |0.00  |0.00    |10.03    |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.wizard_page_model            |0.00  |0.00    |1.03     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.declXY                             |0.00  |0.00    |0.51     |0.95       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.core.utm                           |0.00  |0.00    |0.51     |0.53       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.gDist                              |0.00  |0.00    |0.26     |0.82       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.brk_new                      |0.00  |0.00    |0.26     |0.33       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.settings                           |0.00  |0.00    |0.26     |0.17       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.holding                     |0.00  |0.00    |0.26     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.runway                      |0.00  |0.00    |0.26     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.simula.sim_time                  |0.00  |0.00    |0.26     |0.02       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.fix_model                    |0.00  |0.00    |0.26     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.trf_model                    |0.00  |0.00    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.pst_new                      |0.00  |0.00    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.strip_model                 |0.00  |0.00    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.adiru                       |0.00  |0.00    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.events.events_model              |0.00  |0.00    |0.26     |0.00       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_prf_lst                               |0.00  |0.00    |0.00     |1.46       |
++-----------------------------------------+------+--------+---------+-----------+
+|mkRadList                                |0.00  |0.00    |0.00     |0.98       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.tipoD                              |0.00  |0.00    |0.00     |0.53       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.geografica                         |0.00  |0.00    |0.00     |0.46       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.coords.coord_defs                   |0.00  |0.00    |0.00     |0.33       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_rad_dict                              |0.00  |0.00    |0.00     |0.32       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_apx_dict                              |0.00  |0.00    |0.00     |0.32       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_brk_dict                              |0.00  |0.00    |0.00     |0.27       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_aer_dict                              |0.00  |0.00    |0.00     |0.27       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_ils_dict                              |0.00  |0.00    |0.00     |0.25       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_fam_dct                               |0.00  |0.00    |0.00     |0.24       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_esp_dict                              |0.00  |0.00    |0.00     |0.24       |
++-----------------------------------------+------+--------+---------+-----------+
+|setup                                    |0.00  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_sub_dict                              |0.00  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_prf_xml                               |0.00  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_prf_dict                              |0.00  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_fix_lst                               |0.00  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.gms2deg                            |0.00  |0.00    |0.00     |0.22       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_area_dict                             |0.00  |0.00    |0.00     |0.21       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.instruction                 |0.00  |0.00    |0.00     |0.20       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_ape_dict                              |0.00  |0.00    |0.00     |0.20       |
++-----------------------------------------+------+--------+---------+-----------+
+|libs.geomag.geomag.setup                 |0.00  |0.00    |0.00     |0.20       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.config                             |0.00  |0.00    |0.00     |0.19       |
++-----------------------------------------+------+--------+---------+-----------+
+|coord.polar                              |0.00  |0.00    |0.00     |0.16       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_trj_dict                              |0.00  |0.00    |0.00     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_exe_dict                              |0.00  |0.00    |0.00     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_anv_dct                               |0.00  |0.00    |0.00     |0.14       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.resources_rc                 |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.visil.resources_rc                  |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.resources.super_resources_rc3       |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.resources.super_resources_rc2       |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.resources.resources_super_rc3       |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.resources.resources_super_rc2       |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.resources.resources_rc              |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.resources.resources_prisma_rc       |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.piloto.resources_rc                 |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.dbedit.resources_rc                 |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.resources_rc                 |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.wallpaper_info             |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.dialogs.add_url                    |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.trata_associado        |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.prc_dir_ponto          |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_trj_xml                               |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_sub_xml                               |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_apx_xml                               |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_ape_xml                               |0.00  |0.00    |0.00     |0.11       |
++-----------------------------------------+------+--------+---------+-----------+
+|utils                                    |0.00  |0.00    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_exe_xml                               |0.00  |0.00    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_aer_xml                               |0.00  |0.00    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|all_interfaces_4                         |0.00  |0.00    |0.00     |0.10       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.logger                             |0.00  |0.00    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.defs_newton                 |0.00  |0.00    |0.00     |0.09       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.super.pag_query                     |0.00  |0.00    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.standard_route              |0.00  |0.00    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_wpt_xml                               |0.00  |0.00    |0.00     |0.07       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.brk_model                    |0.00  |0.00    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_ils_xml                               |0.00  |0.00    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|mk_esp_xml                               |0.00  |0.00    |0.00     |0.06       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.common.viewport                     |0.00  |0.00    |0.00     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.dbedit.control_dbedit            |0.00  |0.00    |0.00     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.config.config_manager            |0.00  |0.00    |0.00     |0.05       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.sentido_curva          |0.00  |0.00    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.exe_model                    |0.00  |0.00    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.common.fix                         |0.00  |0.00    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.wizard.control_wizard            |0.00  |0.00    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.network.get_ctrl_net             |0.00  |0.00    |0.00     |0.04       |
++-----------------------------------------+------+--------+---------+-----------+
+|view.wizard.view_wizard                  |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|nwqt4.__init__                           |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.newton.cine.abort_prc              |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|model.items.pst_model                    |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|glbData                                  |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.control_debug                    |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+|control.common.glb_defs                  |0.00  |0.00    |0.00     |0.01       |
++-----------------------------------------+------+--------+---------+-----------+
+
+
+
+Messages
+--------
+
++-------------------------------+------------+
+|message id                     |occurrences |
++===============================+============+
+|invalid-name                   |3400        |
++-------------------------------+------------+
+|bad-whitespace                 |1873        |
++-------------------------------+------------+
+|attribute-defined-outside-init |1445        |
++-------------------------------+------------+
+|trailing-whitespace            |1068        |
++-------------------------------+------------+
+|missing-docstring              |1036        |
++-------------------------------+------------+
+|unused-wildcard-import         |776         |
++-------------------------------+------------+
+|undefined-variable             |387         |
++-------------------------------+------------+
+|bad-continuation               |257         |
++-------------------------------+------------+
+|unused-import                  |208         |
++-------------------------------+------------+
+|superfluous-parens             |184         |
++-------------------------------+------------+
+|logging-format-interpolation   |145         |
++-------------------------------+------------+
+|no-member                      |127         |
++-------------------------------+------------+
+|line-too-long                  |117         |
++-------------------------------+------------+
+|unused-argument                |105         |
++-------------------------------+------------+
+|relative-import                |92          |
++-------------------------------+------------+
+|protected-access               |86          |
++-------------------------------+------------+
+|too-many-instance-attributes   |83          |
++-------------------------------+------------+
+|logging-not-lazy               |79          |
++-------------------------------+------------+
+|pointless-string-statement     |77          |
++-------------------------------+------------+
+|no-self-use                    |73          |
++-------------------------------+------------+
+|unused-variable                |65          |
++-------------------------------+------------+
+|too-many-statements            |64          |
++-------------------------------+------------+
+|duplicate-code                 |39          |
++-------------------------------+------------+
+|too-many-branches              |37          |
++-------------------------------+------------+
+|wrong-import-position          |36          |
++-------------------------------+------------+
+|too-many-arguments             |35          |
++-------------------------------+------------+
+|trailing-newlines              |26          |
++-------------------------------+------------+
+|multiple-statements            |25          |
++-------------------------------+------------+
+|redefined-builtin              |24          |
++-------------------------------+------------+
+|too-many-locals                |18          |
++-------------------------------+------------+
+|too-many-lines                 |16          |
++-------------------------------+------------+
+|bad-indentation                |13          |
++-------------------------------+------------+
+|too-few-public-methods         |12          |
++-------------------------------+------------+
+|unnecessary-pass               |11          |
++-------------------------------+------------+
+|too-many-return-statements     |10          |
++-------------------------------+------------+
+|redefined-outer-name           |10          |
++-------------------------------+------------+
+|bare-except                    |9           |
++-------------------------------+------------+
+|using-constant-test            |7           |
++-------------------------------+------------+
+|undefined-loop-variable        |7           |
++-------------------------------+------------+
+|too-many-public-methods        |7           |
++-------------------------------+------------+
+|global-statement               |7           |
++-------------------------------+------------+
+|consider-iterating-dictionary  |7           |
++-------------------------------+------------+
+|redefined-variable-type        |6           |
++-------------------------------+------------+
+|mixed-line-endings             |6           |
++-------------------------------+------------+
+|too-many-nested-blocks         |5           |
++-------------------------------+------------+
+|syntax-error                   |5           |
++-------------------------------+------------+
+|wrong-import-order             |4           |
++-------------------------------+------------+
+|broad-except                   |4           |
++-------------------------------+------------+
+|wildcard-import                |3           |
++-------------------------------+------------+
+|used-before-assignment         |3           |
++-------------------------------+------------+
+|redefine-in-handler            |3           |
++-------------------------------+------------+
+|no-value-for-parameter         |3           |
++-------------------------------+------------+
+|import-error                   |3           |
++-------------------------------+------------+
+|dangerous-default-value        |3           |
++-------------------------------+------------+
+|anomalous-backslash-in-string  |3           |
++-------------------------------+------------+
+|unnecessary-semicolon          |2           |
++-------------------------------+------------+
+|unnecessary-lambda             |2           |
++-------------------------------+------------+
+|ungrouped-imports              |2           |
++-------------------------------+------------+
+|super-init-not-called          |2           |
++-------------------------------+------------+
+|old-style-class                |2           |
++-------------------------------+------------+
+|non-parent-init-called         |2           |
++-------------------------------+------------+
+|global-variable-not-assigned   |2           |
++-------------------------------+------------+
+|empty-docstring                |2           |
++-------------------------------+------------+
+|deprecated-lambda              |2           |
++-------------------------------+------------+
+|unbalanced-tuple-unpacking     |1           |
++-------------------------------+------------+
+|singleton-comparison           |1           |
++-------------------------------+------------+
+|no-name-in-module              |1           |
++-------------------------------+------------+
+|no-init                        |1           |
++-------------------------------+------------+
+|multiple-imports               |1           |
++-------------------------------+------------+
+|missing-final-newline          |1           |
++-------------------------------+------------+
+|global-variable-undefined      |1           |
++-------------------------------+------------+
+|fixme                          |1           |
++-------------------------------+------------+
+|fatal                          |1           |
++-------------------------------+------------+
+
+
+
+Global evaluation
+-----------------
+Your code has been rated at 5.23/10
+

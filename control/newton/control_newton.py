@@ -4,21 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 control_newton
 
-control newton
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -292,7 +277,7 @@ class CControlNewton(control.CControlBasic):
     # ---------------------------------------------------------------------------------------------
     def start_time(self):
         """
-        DOCUMENT ME!
+        start time
         """
         # clear to go
         assert self.model
@@ -315,160 +300,97 @@ class CControlNewton(control.CControlBasic):
     # ---------------------------------------------------------------------------------------------
     @property
     def emula(self):
-        """
-        get flight emulation model
-        """
         return self.__emula
 
     @emula.setter
     def emula(self, f_val):
-        """
-        set flight emulation model
-        """
         self.__emula = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def mpi_comm(self):
-        """
-        get MPI Comm
-        """
         return self.__mpi_comm
 
     # ---------------------------------------------------------------------------------------------
     @property
     def mpi_rank(self):
-        """
-        get MPI rank
-        """
         return 0 if self.__mpi_comm is None else self.__mpi_comm.rank
 
     # ---------------------------------------------------------------------------------------------
     @property
     def mpi_size(self):
-        """
-        get MPI size
-        """
         return 1 if self.__mpi_comm is None else self.__mpi_comm.size
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_rcv_cpil(self):
-        """
-        get pilot commands queue
-        """
         return self.__q_rcv_cpil
 
     @q_rcv_cpil.setter
     def q_rcv_cpil(self, f_val):
-        """
-        set pilot commands queue
-        """
         self.__q_rcv_cpil = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_cpil(self):
-        """
-        get pilot commands listener
-        """
         return self.__sck_rcv_cpil
 
     @sck_rcv_cpil.setter
     def sck_rcv_cpil(self, f_val):
-        """
-        set pilot commands listener
-        """
         self.__sck_rcv_cpil = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_rcv_cnfg(self):
-        """
-        get configuration queue
-        """
         return self.__q_rcv_cnfg
 
     @q_rcv_cnfg.setter
     def q_rcv_cnfg(self, f_val):
-        """
-        set configuration queue
-        """
         self.__q_rcv_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_cnfg(self):
-        """
-        get configuration listener
-        """
         return self.__sck_rcv_cnfg
 
     @sck_rcv_cnfg.setter
     def sck_rcv_cnfg(self, f_val):
-        """
-        set configuration listener
-        """
         self.__sck_rcv_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_snd_cnfg(self):
-        """
-        get configuration queue
-        """
         return self.__q_snd_cnfg
 
     @q_snd_cnfg.setter
     def q_snd_cnfg(self, f_val):
-        """
-        set configuration queue
-        """
         self.__q_snd_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_snd_cnfg(self):
-        """
-        get configuration sender
-        """
         return self.__sck_snd_cnfg
 
     @sck_snd_cnfg.setter
     def sck_snd_cnfg(self, f_val):
-        """
-        set configuration sender
-        """
         self.__sck_snd_cnfg = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def q_snd_trks(self):
-        """
-        get tracks queue
-        """
         return self.__q_snd_trks
 
     @q_snd_trks.setter
     def q_snd_trks(self, f_val):
-        """
-        set tracks queue
-        """
         self.__q_snd_trks = f_val
 
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_snd_trks(self):
-        """
-        get tracks sender
-        """
         return self.__sck_snd_trks
 
     @sck_snd_trks.setter
     def sck_snd_trks(self, f_val):
-        """
-        set tracks sender
-        """
         self.__sck_snd_trks = f_val
 
 # < the end >--------------------------------------------------------------------------------------

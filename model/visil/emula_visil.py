@@ -4,21 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 emula_visil
 
-DOCUMENT ME!
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -40,12 +25,12 @@ import time
 
 # model
 import model.common.glb_data as gdata
-import model.emula.emula_model as model
+import model.newton.emula_model as model
 import model.visil.aircraft_visil as canv
 
 # control
 import control.common.glb_defs as gdefs
-import control.events.events_flight as events
+import control.events.events_flight as evtfly
 
 # < class CEmulaVisil >----------------------------------------------------------------------------
 
@@ -95,22 +80,22 @@ class CEmulaVisil (model.CEmulaModel):
         """
         checks whether it's time to created another flight
         """
-        # check de colisão
-        lf_tim_evnt = self.dct_config["tim.evnt"]
+        # timer de schedule do sistema
+        lf_tim_rrbn = self.dct_config["tim.rrbn"]
 
         # enquanto não inicia...
         while not gdata.G_KEEP_RUN:
             # aguarda 1 seg
             time.sleep(1)
 
-        # inicia o recebimento de mensagens de dados
+        # inicia o recebimento de mensagens de pista
         self.__sck_rcv_trks.start()
+
+        # tempo inicial em segundos
+        lf_now = time.time()
 
         # loop
         while gdata.G_KEEP_RUN:
-            # tempo inicial em segundos
-            ll_now = time.time()
-
             # item da queue de entrada
             llst_data = self.__q_rcv_trks.get()
             # cdbg.M_DBG.debug("llst_data: (%s)" % str(llst_data))
@@ -143,38 +128,20 @@ class CEmulaVisil (model.CEmulaModel):
                         gdata.G_LCK_FLIGHT.release()
 
                     # cria um evento de atualização de aeronave
-                    l_evt = events.CFlightUpdate(ls_callsign)
-                    assert (l_evt)
+                    l_evt = evtfly.CFlightUpdate(ls_callsign)
+                    assert l_evt
 
                     # dissemina o evento
                     self.event.post(l_evt)
 
                 # mensagem de eliminação de aeronave ?
-                # elif gdefs.D_MSG_KLL == int(llst_data[0]):
-                    '''
-                    # coloca a mensagem na queue
-                    # cdbg.M_DBG.debug("Elimina: (%s)" % str(ls_callsign))
-
-                    # trava a lista de vôos
-                    gdata.G_LCK_FLIGHT.acquire()
-
-                    try:
-                        # aeronave está no dicionário ?
-                        if ls_callsign in self.dctFlight:
-                            # retira a aeronave do dicionário
-                            del self.dctFlight[ls_callsign]
-
-                    finally:
-                        # libera a lista de vôos
-                        gdata.G_LCK_FLIGHT.release()
-
+                elif gdefs.D_MSG_KLL == int(llst_data[0]):
                     # cria um evento de eliminação de aeronave
-                    l_evt = events.CFlightKill(ls_callsign)
+                    l_evt = evtfly.CFlightKill(llst_data[1])
                     assert l_evt
-                    # cdbg.M_DBG.debug("l_evt: " + str(l_evt))
 
                     # dissemina o evento
-                    self.event.post(l_evt)'''
+                    self.event.post(l_evt)
 
                 # senão, mensagem não reconhecida ou não tratada
                 else:
@@ -183,13 +150,19 @@ class CEmulaVisil (model.CEmulaModel):
                     l_log.setLevel(logging.WARNING)
                     l_log.warning("<E01: mensagem não reconhecida ou não tratada.")
 
+            # salva o tempo anterior
+            lf_ant = lf_now
+
+            # tempo atual em segundos
+            lf_now = time.time()
+
             # tempo final em segundos e calcula o tempo decorrido
-            ll_dif = time.time() - ll_now
+            lf_dif = lf_now - lf_ant
 
             # esta adiantado ?
-            if lf_tim_evnt > ll_dif:
+            if lf_tim_rrbn > lf_dif:
                 # permite o scheduler (1/10th)
-                time.sleep(lf_tim_evnt - ll_dif)
+                time.sleep(lf_tim_rrbn - lf_dif)
 
     # =============================================================================================
     # data
@@ -198,9 +171,6 @@ class CEmulaVisil (model.CEmulaModel):
     # ---------------------------------------------------------------------------------------------
     @property
     def sck_rcv_trks(self):
-        """
-        get data listener
-        """
         return self.__sck_rcv_trks
 
 # < the end >--------------------------------------------------------------------------------------

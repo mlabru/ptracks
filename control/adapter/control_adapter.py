@@ -4,20 +4,7 @@
 ---------------------------------------------------------------------------------------------------
 control_adapter
 
-interface to CORE
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
+interface newton-CORE
 
 revision 0.1  2017/abr  mlabru
 initial release (Linux/Python)
@@ -266,11 +253,6 @@ class CControlAdapter(control.CControlManager):
 
                         # envia a mensagem de pista para a cntl0net
                         self.__sck_snd_trks.send_data(ls_msg)
-
-                    # mensagem do CORE ?
-                    if gdefs.D_MSG_COR == int(llst_data[0]):
-                        # ignore
-                        pass
 
                     # senão, mensagem não reconhecida ou não tratavél
                     else:

@@ -4,19 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 wnd_main_piloto
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -73,8 +60,9 @@ import view.piloto.dlg_velocidade as dlgvel
 import control.control_debug as cdbg
 import control.common.glb_defs as gdefs
 
-import control.events.events_basic as events
+import control.events.events_basic as evtbas
 import control.events.events_config as evtcfg
+import control.events.events_flight as evtfly
 
 # resources
 import view.resources.resources_rc
@@ -83,7 +71,7 @@ import view.resources.resources_rc
 
 class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     """
-    DOCUMENT ME!
+    class CWndMainPiloto
     """
     # ---------------------------------------------------------------------------------------------
     # signals
@@ -186,7 +174,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         # the slate radar is the main widget
         self.__slate_radar = sltrdr.CSlateRadar(f_control, self)
         assert self.__slate_radar
-                        
+
         # the radar screen goes to central widget
         self.setCentralWidget(self.__slate_radar)
 
@@ -261,7 +249,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             f_evt.accept()
 
             # create CQuit event
-            l_evt = events.CQuit()
+            l_evt = evtbas.CQuit()
             assert l_evt
 
             # dispatch event
@@ -303,12 +291,10 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             self.btn_cod_spi.setEnabled(False)
             self.btn_cod_ssr.setEnabled(False)
 
-            self.btn_cancela.setEnabled(False)
-
         # senão, tem aeronave selecionada
         else:
             # enable buttons
-            self.btn_cancela.setEnabled(False)
+            self.btn_cancela.setEnabled(True)
 
             self.btn_cmd_altitude.setEnabled(True)
             self.btn_cmd_direcao.setEnabled(True)
@@ -328,12 +314,10 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
             self.btn_cod_spi.setEnabled(False)
             self.btn_cod_ssr.setEnabled(False)
 
-            self.btn_cancela.setEnabled(True)
-
     # ---------------------------------------------------------------------------------------------
     def __config_strips(self):
         """
-        DOCUMENT ME!
+        config strips
         """
         ###
         # strips
@@ -364,25 +348,25 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __config_toolboxes(self):
         """
-        DOCUMENT ME!
+        config toolboxes
         """
         ###
         # procedures
 
         self.dck_procedures = dckprc.CDockProcedures(self.__control, self)
         assert self.dck_procedures
-                
+
         # config dock
         self.dck_procedures.setFeatures(QtGui.QDockWidget.DockWidgetFloatable|QtGui.QDockWidget.DockWidgetMovable)
         self.dck_procedures.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea|QtCore.Qt.RightDockWidgetArea)
-                                        
+
         # add dock
         self.addDockWidget(QtCore.Qt.DockWidgetArea(2), self.dck_procedures)
-                                                        
+
     # ---------------------------------------------------------------------------------------------
     def __create_actions(self):
         """
-        DOCUMENT ME!
+        create actions
         """
         # action pause
         self.__act_pause = QtGui.QAction(QtGui.QIcon(":/pixmaps/gamepause.xpm"), self.tr("&Pause"), self)
@@ -462,7 +446,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __create_toolbars(self):
         """
-        DOCUMENT ME!
+        create toolbars
         """
         # create toolBar file
         ltbr_file = self.addToolBar(self.tr("File"))
@@ -489,7 +473,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __get_current_strip(self):
         """
-        DOCUMENT ME!
+        get current strip
         """
         # get current index
         l_index = self.qtv_stp.currentIndex()
@@ -557,7 +541,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __make_connections(self):
         """
-        DOCUMENT ME!
+        make connections
         """
         # clear to go
         # assert self._oWeather is not None
@@ -611,13 +595,13 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # @QtCore.pyqtSlot()
     def notify(self, f_evt):
         """
-        DOCUMENT ME!
+        notify
         """
         # check input
         assert f_evt
 
         # recebeu um aviso de término da aplicação ?
-        if isinstance(f_evt, events.CQuit):
+        if isinstance(f_evt, evtbas.CQuit):
             # para todos os processos
             # gdata.G_KEEP_RUN = False
 
@@ -636,6 +620,37 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         elif isinstance(f_evt, evtcfg.CConfigHora):
             # atualiza horário
             self.status_bar.update_hora(f_evt.t_hora)
+
+        # recebeu um aviso de eliminação de aeronave
+        elif isinstance(f_evt, evtfly.CFlightKill):
+            # get flight
+            l_flight = self.__dct_flight.get(f_evt.s_callsign, None)
+            #cdbg.M_DBG.debug("CWndMainPiloto::notify::l_flight: {}".format(l_flight))
+
+            if l_flight is None:
+                # return
+                return
+
+            # emit signal
+            self.C_SIG_STRIP_DEL.emit(l_flight)
+
+            # trava a lista de vôos
+            gdata.G_LCK_FLIGHT.acquire()
+
+            try:
+                # remove flight from dicionário de voos
+                del self.__dct_flight[f_evt.s_callsign]
+
+            finally:
+                # libera a lista de vôos
+                gdata.G_LCK_FLIGHT.release()
+
+            # remove flight from model
+            del self.__stp_model.lst_strips[self.__stp_model.lst_strips.index(l_flight)]
+
+            # row change
+            self.__strip_cur = None
+            self.qtv_stp.setCurrentIndex(self.__stp_model.index(0, 0))
 
     # ---------------------------------------------------------------------------------------------
     @QtCore.pyqtSlot()
@@ -900,6 +915,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         ls_buff = str(gdefs.D_MSG_VRS) + gdefs.D_MSG_SEP + \
                   str(gdefs.D_MSG_PIL) + gdefs.D_MSG_SEP + \
                   str(ls_cmd)
+        cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send: {}.".format(ls_buff))
 
         # envia o comando
         self.__sck_snd_cpil.send_data(ls_buff)
@@ -914,36 +930,20 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
         if self.__strip_cur is not None:
             # limpa o comando
             self.lbl_comando.setText("{}: ".format(self.__strip_cur.s_callsign))
+            cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send: {}.".format(self.__strip_cur.s_callsign))
 
         # senão,...
         else:
             # limpa o comando
             self.lbl_comando.setText("")
-
-        # cancela aeronave ?
-        if ls_cmd.endswith(": CNL"):
-            # get flight
-            l_flight = self.__dct_flight[self.__strip_cur.s_callsign] 
-            #cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send::l_flight: {}".format(l_flight))
-
-            # emit signal
-            self.C_SIG_STRIP_DEL.emit(l_flight)
-
-            # remove flight from dicionário de voos
-            del self.__dct_flight[self.__strip_cur.s_callsign]
-
-            # remove flight from model
-            del self.__stp_model.lst_strips[self.__stp_model.lst_strips.index(l_flight)]
-            #cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send::self.__stp_model.lst_strips(D): {}".format(self.__stp_model.lst_strips))
-
-            #cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send: aeronave {} removida.".format(self.__strip_cur.s_callsign))
+            cdbg.M_DBG.debug("CWndMainPiloto::__on_btn_send: clear.")
 
     # ---------------------------------------------------------------------------------------------
     '''
     # @QtCore.pyqtSlot()
     def __on_strip_add(self):
         """
-        DOCUMENT ME!
+        strip add
         """
         # check exec conditions
         assert self.__scene
@@ -992,7 +992,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     @QtCore.pyqtSlot(QtCore.QModelIndex, QtCore.QModelIndex)
     def __on_strip_row_changed(self, f_index_new, f_index_old):
         """
-        DOCUMENT ME!
+        strip row changed
         """
         # is index valid ?
         #if f_index_old.isValid():
@@ -1052,7 +1052,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # @QtCore.pyqtSlot()
     def __on_strip_remove(self):
         """
-        DOCUMENT ME!
+        strip remove
         """
         # clear to go
         assert self.__stp_model
@@ -1092,7 +1092,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __read_settings(self):
         """
-        DOCUMENT ME!
+        read settings
         """
         l_settings = QtCore.QSettings("sophosoft", "piloto")
 
@@ -1105,7 +1105,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __really_quit(self):
         """
-        DOCUMENT ME!
+        really quit
         """
         l_ret = QtGui.QMessageBox.warning(self,
                     self.tr("Piloto"),
@@ -1123,7 +1123,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __set_status(self, fs_callsign, fdct_status):
         """
-        DOCUMENT ME!
+        set status
         """
         # função operacional atual
         ls_fnc_ope = fdct_status.get("fnc_ope", None)
@@ -1142,7 +1142,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     @QtCore.pyqtSlot(QtCore.QTimerEvent)
     def timerEvent(self, f_evt):
         """
-        DOCUMENT ME!
+        timer event callback
         """
         # acionado timer de fetch de dados de aeronave ?
         if f_evt.timerId() == self.__i_timer_fetch:
@@ -1185,7 +1185,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def __write_settings(self):
         """
-        DOCUMENT ME!
+        write settings
         """
         l_settings = QtCore.QSettings("sophosoft", "piloto")
 
@@ -1195,7 +1195,7 @@ class CWndMainPiloto(QtGui.QMainWindow, wndmain_ui.Ui_wndMainPiloto):
     # ---------------------------------------------------------------------------------------------
     def e_strips(self):
         """
-        DOCUMENT ME!
+        electronic strips
         """
         ###
         # strips

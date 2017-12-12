@@ -4,21 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 wnd_main_visil
 
-DOCUMENT ME!
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -59,10 +44,11 @@ import view.visil.statusbar_visil as stbar
 import view.visil.wnd_main_visil_ui as wndmain_ui
 
 # control
-import control.control_debug as dbg
+import control.control_debug as cdbg
 
-import control.events.events_basic as events
+import control.events.events_basic as evtbas
 import control.events.events_config as evtcfg
+import control.events.events_flight as evtfly
 
 # resources
 import view.resources.resources_rc
@@ -71,10 +57,11 @@ import view.resources.resources_rc
 
 class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     """
-    DOCUMENT ME!
+    class CWndMainVisil
     """
     # ---------------------------------------------------------------------------------------------
     # signals
+    C_SIG_STRIP_DEL = QtCore.pyqtSignal(anv.CAircraftVisil)
     C_SIG_STRIP_INS = QtCore.pyqtSignal(anv.CAircraftVisil)
     C_SIG_STRIP_SEL = QtCore.pyqtSignal(anv.CAircraftVisil)
                         
@@ -175,7 +162,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot()
     def about(self):
         """
-        DOCUMENT ME!
+        about
         """
         # show about box
         QtGui.QMessageBox.about(self, self.tr("About ViSIL", None),
@@ -190,7 +177,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # @QtCore.pyqtSlot()
     def closeEvent(self, f_evt):
         """
-        DOCUMENT ME!
+        close event callback
         """
         # really quit ?
         if self.__really_quit():
@@ -201,7 +188,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
             f_evt.accept()
 
             # create CQuit event
-            l_evt = events.CQuit()
+            l_evt = evtbas.CQuit()
             assert l_evt
 
             # dispatch event
@@ -215,7 +202,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __config_strips(self):
         """
-        DOCUMENT ME!
+        config strips
         """
         ###
         # strips
@@ -243,7 +230,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __config_toolboxes(self):
         """
-        DOCUMENT ME!
+        config toolboxes
         """
         ###
         # procedures
@@ -261,7 +248,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __create_actions(self):
         """
-        DOCUMENT ME!
+        create actions
         """
         # action pause
         self.__act_pause = QtGui.QAction(QtGui.QIcon(":/pixmaps/gamepause.xpm"), self.tr("&Pause"), self)
@@ -341,7 +328,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __create_toolbars(self):
         """
-        DOCUMENT ME!
+        create toolbars
         """
         # create toolBar file
         ltbr_file = self.addToolBar(self.tr("File"))
@@ -368,7 +355,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __get_current_strip(self):
         """
-        DOCUMENT ME!
+        get current strip
         """
         # get current index
         l_index = self.qtv_stp.currentIndex()
@@ -390,7 +377,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __get_status(self, f_strip):
         """
-        DOCUMENT ME!
+        get status
 
         @param f_strip: strip selecionada
         """
@@ -433,7 +420,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __make_connections(self):
         """
-        DOCUMENT ME!
+        make connections
         """
         # clear to go
         assert self.__slate_radar is not None
@@ -450,13 +437,13 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # @QtCore.pyqtSlot()
     def notify(self, f_evt):
         """
-        DOCUMENT ME!
+        notify
         """
         # check input
         assert f_evt
                 
         # recebeu um aviso de término da aplicação ?
-        if isinstance(f_evt, events.CQuit):
+        if isinstance(f_evt, evtbas.CQuit):
             # para todos os processos
             # gdata.G_KEEP_RUN = False
                                                         
@@ -476,11 +463,42 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
             # atualiza horário
             self.status_bar.update_hora(f_evt.t_hora)
 
+        # recebeu um aviso de eliminação de aeronave
+        elif isinstance(f_evt, evtfly.CFlightKill):
+            # get flight
+            l_flight = self.__dct_flight.get(f_evt.s_callsign, None)
+            #cdbg.M_DBG.debug("CWndMainVisil::notify::l_flight: {}".format(l_flight))
+
+            if l_flight is None:
+                # return
+                return
+
+            # emit signal
+            self.C_SIG_STRIP_DEL.emit(l_flight)
+
+            # trava a lista de vôos
+            gdata.G_LCK_FLIGHT.acquire()
+
+            try:
+                # remove flight from dicionário de voos
+                del self.__dct_flight[f_evt.s_callsign]
+
+            finally:
+                # libera a lista de vôos
+                gdata.G_LCK_FLIGHT.release()
+
+            # remove flight from model
+            del self.__stp_model.lst_strips[self.__stp_model.lst_strips.index(l_flight)]
+
+            # row change
+            self.__strip_cur = None
+            self.qtv_stp.setCurrentIndex(self.__stp_model.index(0, 0))
+
     # ---------------------------------------------------------------------------------------------
     @QtCore.pyqtSlot(QtCore.QModelIndex,QtCore.QModelIndex)
     def __on_strip_row_changed(self, f_index_new, f_index_old):
         """
-        DOCUMENT ME!
+        on strip row changed
         """
         # is index valid ?
         if f_index_old.isValid():
@@ -503,7 +521,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __read_settings(self):
         """
-        DOCUMENT ME!
+        read settings
         """
         l_settings = QtCore.QSettings("sophosoft", "visil")
 
@@ -516,7 +534,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __really_quit(self):
         """
-        DOCUMENT ME!
+        really quit
         """
         l_ret = QtGui.QMessageBox.warning(self,
                     self.tr("ViSIL"),
@@ -534,7 +552,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __recursive_checks(self, fo_parent):
         """
-        DOCUMENT ME!
+        recursive checks
         """
         # obtém o checkState
         l_checkState = fo_parent.checkState(0)
@@ -566,7 +584,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
             if fo_parent.data(0, QtCore.Qt.WhatsThisRole).toPyObject() is not None:
                 # obtém o nome do mapa
                 ls_name = fo_parent.child(l_i).data(0, QtCore.Qt.WhatsThisRole).toPyObject()[0]
-                # dbg.M_DBG.debug("ls_name: " + ls_name)
+                # cdbg.M_DBG.debug("ls_name: " + ls_name)
 
                 # nome válido ?
                 if ls_name is not None:
@@ -585,7 +603,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot(int)
     def showCoords(self, f_coords):
         """
-        DOCUMENT ME!
+        show coords
         """
         self.status_bar.lblCoords.setText(u"99ᵒ 99' 99\" N 999ᵒ 99' 99\" E" % int(f_coords))
 
@@ -593,7 +611,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot(int)
     def showQNH(self, f_qnh):
         """
-        DOCUMENT ME!
+        show QNH
         """
         self.status_bar.lblQNH.setText("Q%d" % int(f_qnh))
 
@@ -601,7 +619,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot(int)
     def showTL(self, f_qnh):
         """
-        DOCUMENT ME!
+        show TL
         """
         # TODO: airport specific
         if f_qnh >= 1013.:
@@ -616,7 +634,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot(int, int)
     def showWind(self, f_dir, f_v):
         """
-        DOCUMENT ME!
+        show Wind
         """
         if f_v == 0.:
             l_windstring = "CALM"
@@ -630,7 +648,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot(QtCore.QTimerEvent)
     def timerEvent(self, f_evt):
         """
-        DOCUMENT ME!
+        timer event callback
         """
         # flight data fetch timer event ?
         if f_evt.timerId() == self.__i_timer_fetch:
@@ -666,7 +684,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     @QtCore.pyqtSlot("QTreeWidgetItem", int)
     def __update_checks(self, f_item, f_iColumn):
         """
-        DOCUMENT ME!
+        update checks
         """
         # checkState is stored on column 0
         if 0 != f_iColumn:
@@ -679,7 +697,7 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def __write_settings(self):
         """
-        DOCUMENT ME!
+        write settings
         """
         l_settings = QtCore.QSettings("sophosoft", "visil")
 
@@ -689,12 +707,12 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     def e_strip(self):
         """
-        DOCUMENT ME!
+        e_strip
         """
         ###
         # strips
 
-        # dbg.M_DBG.debug("e_strips:dct_flight: " + str(self.__dct_flight))
+        # cdbg.M_DBG.debug("e_strips:dct_flight: " + str(self.__dct_flight))
                         
         # build the list widgets
         for i in xrange(8):
@@ -710,9 +728,6 @@ class CWndMainVisil(QtGui.QMainWindow, wndmain_ui.Ui_wndMainVisil):
     # ---------------------------------------------------------------------------------------------
     @property
     def dct_visual(self):
-        """
-        get visual dictionary
-        """
         return self.dck_procedures.dct_visual
 
 # < the end >--------------------------------------------------------------------------------------
