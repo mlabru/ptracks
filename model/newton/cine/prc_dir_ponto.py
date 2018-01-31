@@ -4,21 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 prc_dir_ponto
 
-DOCUMENT ME!
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -44,12 +29,6 @@ import model.newton.cine.calc_proa_demanda as cpd
 import model.newton.cine.calc_razao_curva as razc
 import model.newton.cine.sentido_curva as scrv
 
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
-
 # -------------------------------------------------------------------------------------------------
 def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
     """
@@ -62,9 +41,6 @@ def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
     
     @return True se aeronave atingiu ponto, senão False
     """
-    # logger
-    # M_LOG.info("prc_dir_ponto:>>") 
-                
     # check input
     assert f_atv
     assert f_cine_data
@@ -97,9 +73,6 @@ def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
 
     # (distância ao ponto <= raio de tolerância) ou (distância ao ponto <= passo da aeronave) ? (aeronave vai ultrapassar o ponto)
     if (lf_dst_anv_pto <= lf_pto_rcone) or (lf_dst_anv_pto <= lf_passo_anv):
-        # logger
-        # M_LOG.info(u"prc_dir_ponto:<E02: aeronave atingiu o ponto.") 
-
         # sinaliza que aeronave ATINGIU o ponto
         return True
 
@@ -115,9 +88,6 @@ def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
         # faz o bloqueio do ponto próximo
         razc.calc_razao_curva(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data)
 
-    # logger
-    # M_LOG.info("prc_dir_ponto:<<") 
-                
     # sinaliza que aeronave ainda NÂO atingiu o ponto
     return False
 

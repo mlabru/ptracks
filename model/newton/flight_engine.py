@@ -328,6 +328,30 @@ class CFlightEngine(threading.Thread):
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
     # ---------------------------------------------------------------------------------------------
+    def __cmd_pil_dir_ponto(self, f_atv, fo_cmd_pil):
+        """
+        comando de pilotagem de dir_ponto
+        """
+        # check input
+        assert f_atv
+
+        # clear to go
+        assert self.__cine_data
+        assert self.__model
+
+        # função operacional
+        f_atv.en_trf_fnc_ope = ldefs.E_DIRPNTO
+
+        # monta procedimento. Primeiro parâmetro do comando é o número da trajetória
+        ls_prc = "GTO0000"
+
+        # procedimento e função operacional
+        f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc), ldefs.E_DIRPNTO
+
+        # fase de verificar condições
+        f_atv.en_atv_fase = ldefs.E_FASE_ZERO
+
+    # ---------------------------------------------------------------------------------------------
     def __cmd_pil_espera(self, f_atv, fo_cmd_pil):
         """
         comando de pilotagem de espera
@@ -339,7 +363,7 @@ class CFlightEngine(threading.Thread):
         assert self.__model
 
         # obtém o primeiro parâmetro (número da espera)
-        ls_prc = "ESP{:03d}".format(int(fo_cmd_pil.t_param_1[0]))
+        ls_prc = ldefs.D_FMT_ESP.format(int(fo_cmd_pil.t_param_1[0]))
 
         # procedimento e função operacional
         f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
@@ -379,7 +403,7 @@ class CFlightEngine(threading.Thread):
         assert self.__model
 
         # monta procedimento. Primeiro parâmetro do comando é o número da trajetória
-        ls_prc = "TRJ{:03d}".format(int(fo_cmd_pil.t_param_1[0]))
+        ls_prc = ldefs.D_FMT_TRJ.format(int(fo_cmd_pil.t_param_1[0]))
 
         # procedimento e função operacional
         f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
@@ -474,6 +498,11 @@ class CFlightEngine(threading.Thread):
         elif ldefs.E_DIRFIXO == len_cmd_ope:
             # trata comando de direcionamento a fixo
             self.__cmd_pil_dir_fixo(f_atv, lo_cmd_pil)
+
+        # direcionamento a ponto ?
+        elif ldefs.E_DIRPNTO == len_cmd_ope:
+            # trata comando de direcionamento a ponto
+            self.__cmd_pil_dir_ponto(f_atv, lo_cmd_pil)
 
         # espera ?
         elif ldefs.E_ESPERA == len_cmd_ope:

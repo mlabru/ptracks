@@ -6,19 +6,6 @@ defs_newton
 
 defines e constantes válidas localmente
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -44,19 +31,19 @@ SET_EST_ATV = [E_ATIVA, E_CANCELADA, E_FINALIZADA, E_PENDENTE, E_QUEUED]
 
 # função operacional (newton)
 E_ALT, E_APROXIMACAO, E_APXPERDIDA, E_CANCELA, E_CDIR, E_CESQ, E_CMNR, E_DECOLAGEM, E_DES, E_DIRFIXO, \
-    E_ESPERA, E_IAS, E_ILS, E_INTRADIAL, E_MACH, E_MANUAL, E_MOV, E_NIV, E_NOPROC, E_POUSO, E_PROA, \
-    E_SSR, E_SUB, E_SUBIDA, E_TRAJETORIA, E_VEL, E_VISU = xrange(27)
+    E_DIRPNTO, E_ESPERA, E_IAS, E_ILS, E_INTRADIAL, E_MACH, E_MANUAL, E_MOV, E_NIV, E_NOPROC, E_POUSO, \
+    E_PROA, E_SSR, E_SUB, E_SUBIDA, E_TRAJETORIA, E_VEL, E_VISU = xrange(28)
 
 SET_FNC_OPE = [E_ALT, E_APROXIMACAO, E_APXPERDIDA, E_CANCELA, E_CDIR, E_CESQ, E_CMNR,E_DECOLAGEM, 
-               E_DES, E_DIRFIXO, E_ESPERA, E_IAS, E_ILS, E_INTRADIAL, E_MACH, E_MANUAL, E_MOV, E_NIV,
-               E_NOPROC, E_POUSO, E_PROA, E_SSR, E_SUB, E_SUBIDA, E_TRAJETORIA, E_VEL, E_VISU]
+               E_DES, E_DIRFIXO, E_DIRPNTO, E_ESPERA, E_IAS, E_ILS, E_INTRADIAL, E_MACH, E_MANUAL, 
+               E_MOV, E_NIV, E_NOPROC, E_POUSO, E_PROA, E_SSR, E_SUB, E_SUBIDA, E_TRAJETORIA, E_VEL, E_VISU]
 
 DCT_FNC_OPE = {E_ALT:"ALT", E_APROXIMACAO:"APROXIMACAO", E_APXPERDIDA:"APXPERDIDA",
                E_CANCELA:"CANCELA", E_CDIR:"CDIR", E_CESQ:"CESQ", E_CMNR:"CMNR", E_DECOLAGEM:"DECOLAGEM", 
-               E_DES:"DES", E_DIRFIXO:"DIRFIXO", E_ESPERA:"ESPERA", E_IAS:"IAS", E_ILS:"ILS", 
-               E_INTRADIAL:"INTRADIAL", E_MACH:"MACH", E_MANUAL:"MANUAL", E_MOV:"MOV", E_NIV:"NIV", 
-               E_NOPROC:"NOPROC", E_POUSO:"POUSO", E_PROA:"PROA", E_SSR:"SSR", E_SUBIDA:"SUBIDA", 
-               E_SUB:"SUB", E_TRAJETORIA:"TRAJETORIA", E_VEL:"VEL", E_VISU:"VISU"}
+               E_DES:"DES", E_DIRFIXO:"DIRFIXO", E_DIRPNTO:"DIRPNTO", E_ESPERA:"ESPERA", E_IAS:"IAS", 
+               E_ILS:"ILS", E_INTRADIAL:"INTRADIAL", E_MACH:"MACH", E_MANUAL:"MANUAL", E_MOV:"MOV", 
+               E_NIV:"NIV", E_NOPROC:"NOPROC", E_POUSO:"POUSO", E_PROA:"PROA", E_SSR:"SSR", 
+               E_SUBIDA:"SUBIDA", E_SUB:"SUB", E_TRAJETORIA:"TRAJETORIA", E_VEL:"VEL", E_VISU:"VISU"}
 
 # fases de processamento da cinemática (newton)
 E_FASE_2R, E_FASE_AFASTA, E_FASE_ALINHAR, E_FASE_APXALINHAR, E_FASE_ASSOCIADO, \

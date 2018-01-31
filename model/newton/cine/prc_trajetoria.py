@@ -6,19 +6,6 @@ prc_trajetoria
 
 realiza a passagem da aeronave por todos os breakpoints que determinam uma trajetória
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -45,12 +32,6 @@ import model.newton.cine.prc_dir_ponto as dp
 import model.newton.cine.trata_associado as tass
 import model.newton.cine.sentido_curva as scrv
 
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
-
 # -------------------------------------------------------------------------------------------------
 def prc_trajetoria(f_atv, f_cine_data, f_stk_context):
     """
@@ -58,9 +39,6 @@ def prc_trajetoria(f_atv, f_cine_data, f_stk_context):
     @param f_cine_data: kinematics data
     @param f_stk_context: pointer to stack
     """
-    # logger
-    # M_LOG.info("prc_trajetoria:>>")
-
     # check input
     assert f_atv
     assert f_cine_data
@@ -338,8 +316,5 @@ def prc_trajetoria(f_atv, f_cine_data, f_stk_context):
         l_log.error(u"<E10: fase na trajetória não identificada. fase:[{}].".format(ldefs.DCT_FASE[f_atv.en_atv_fase]))
 
     # M_LOG.debug("prc_trajetoria:fase(2):[{}]".format(ldefs.DCT_FASE[f_atv.en_atv_fase]))
-
-    # logger
-    # M_LOG.info("prc_trajetoria:<<")
 
 # < the end >--------------------------------------------------------------------------------------
