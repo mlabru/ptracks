@@ -289,7 +289,7 @@ class CComandoPil(inst.CInstruction):
             # comando
             self.en_cmd_ope = ldefs.E_DIRFIXO
 
-            # número do fixo
+            # indicativo do fixo
             self.t_param_1 = (str(llst_tok[1]).strip(), True)
 
         # comando de direcionamento a ponto ?
@@ -307,6 +307,28 @@ class CComandoPil(inst.CInstruction):
         elif "NIV" == llst_tok[0]:
             # parse command
             self.__cmd_nivel(llst_tok[1:])
+
+        # comando de orbita ?
+        elif "ORB" == llst_tok[0]:
+            # comando
+            self.en_cmd_ope = ldefs.E_ORBITA
+
+            # latitude
+            self.t_param_1 = (float(llst_tok[1]), True)
+
+            # longitude
+            self.t_param_2 = (float(llst_tok[2]), True)
+
+        # comando de direcionamento a ponto ?
+        elif "PTO" == llst_tok[0]:
+            # comando
+            self.en_cmd_ope = ldefs.E_DIRPNTO
+
+            # latitude
+            self.t_param_1 = (float(llst_tok[1]), True)
+
+            # longitude
+            self.t_param_2 = (float(llst_tok[2]), True)
 
         # comando de subida ?
         elif "SUB" == llst_tok[0]:

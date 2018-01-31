@@ -348,6 +348,9 @@ class CFlightEngine(threading.Thread):
         # procedimento e função operacional
         f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc), ldefs.E_DIRPNTO
 
+        # função operacional
+        f_atv.en_trf_fnc_ope = ldefs.E_DIRPNTO
+
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
@@ -633,10 +636,20 @@ class CFlightEngine(threading.Thread):
             # direcionamento a fixo
             self.__cine_voo.prc_dir_fixo()
 
+        # função operacional é direcionamento a ponto ?
+        elif ldefs.E_DIRPNTO == f_atv.en_trf_fnc_ope:
+            # direcionamento a ponto
+            pass  # self.__cine_voo.prc_dir_ponto()
+
         # função operacional é espera ?
         elif ldefs.E_ESPERA == f_atv.en_trf_fnc_ope:
             # espera
             self.__cine_voo.prc_espera()
+
+        # função operacional é orbita ?
+        elif ldefs.E_ORBITA == f_atv.en_trf_fnc_ope:
+            # orbita
+            pass  # self.__cine_voo.prc_orbit()
 
         # função operacional é ILS ?
         elif ldefs.E_ILS == f_atv.en_trf_fnc_ope:
