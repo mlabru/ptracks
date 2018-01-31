@@ -4,21 +4,6 @@
 ---------------------------------------------------------------------------------------------------
 comando_piloto
 
-DOCUMENT ME!
-
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/dez  mlabru
 pep8 style conventions
 
@@ -304,13 +289,35 @@ class CComandoPil(inst.CInstruction):
             # comando
             self.en_cmd_ope = ldefs.E_DIRFIXO
 
-            # número do fixo
+            # indicativo do fixo
             self.t_param_1 = (str(llst_tok[1]).strip(), True)
 
         # comando de nível ?
         elif "NIV" == llst_tok[0]:
             # parse command
             self.__cmd_nivel(llst_tok[1:])
+
+        # comando de orbita ?
+        elif "ORB" == llst_tok[0]:
+            # comando
+            self.en_cmd_ope = ldefs.E_ORBITA
+
+            # latitude
+            self.t_param_1 = (float(llst_tok[1]), True)
+
+            # longitude
+            self.t_param_2 = (float(llst_tok[2]), True)
+
+        # comando de direcionamento a ponto ?
+        elif "PTO" == llst_tok[0]:
+            # comando
+            self.en_cmd_ope = ldefs.E_DIRPNTO
+
+            # latitude
+            self.t_param_1 = (float(llst_tok[1]), True)
+
+            # longitude
+            self.t_param_2 = (float(llst_tok[2]), True)
 
         # comando de subida ?
         elif "SUB" == llst_tok[0]:
