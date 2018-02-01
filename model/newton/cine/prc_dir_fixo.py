@@ -6,19 +6,6 @@ prc_dir_fixo
 
 calculos para a aeronave se direcionar a um fixo
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -44,12 +31,6 @@ import model.newton.cine.calc_razao_curva as razc
 import model.newton.cine.calc_proa_demanda as cpd
 import model.newton.cine.sentido_curva as scrv
 
-# < module data >----------------------------------------------------------------------------------
-
-# logger
-# M_LOG = logging.getLogger(__name__)
-# M_LOG.setLevel(logging.DEBUG)
-
 # -------------------------------------------------------------------------------------------------
 def __ckeck_ok(f_atv, f_cine_data):
     """
@@ -58,9 +39,6 @@ def __ckeck_ok(f_atv, f_cine_data):
     @param f_atv: ponteiro para aeronave
     @param f_cine_data: ponteiro para pilha
     """
-    # logger
-    # M_LOG.info("__ckeck_ok:>>")
-        
     # check input
     assert f_atv
     assert f_cine_data
@@ -112,10 +90,7 @@ def __ckeck_ok(f_atv, f_cine_data):
         # volta a fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO 
 
-        # logger
-        # M_LOG.info(u"__ckeck_ok:<E03: interceptou o fixo.")
-
-        # return
+        # return interceptou o fixo
         return
 
     # calcula distância da aeronave ao fixo (x, y)
@@ -137,10 +112,7 @@ def __ckeck_ok(f_atv, f_cine_data):
         # volta a fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO 
 
-        # logger
-        # M_LOG.info(u"__ckeck_ok:<E04: interceptou o fixo.")
-
-        # return
+        # return interceptou o fixo
         return
 
     # calcula nova proa de demanda
@@ -155,9 +127,6 @@ def __ckeck_ok(f_atv, f_cine_data):
     # nova fase de processamento
     f_atv.en_atv_fase = ldefs.E_FASE_DIRFIXO 
 
-    # logger
-    # M_LOG.info("__ckeck_ok:<<")
-
 # -------------------------------------------------------------------------------------------------
 def __direciona(f_atv, f_cine_data):
     """
@@ -166,9 +135,6 @@ def __direciona(f_atv, f_cine_data):
     @param f_atv: ponteiro para struct aeronaves
     @param f_cine_data: ponteiro para pilha
     """
-    # logger
-    # M_LOG.info("__direciona:>>")
-        
     # check input
     assert f_atv
     assert f_cine_data
@@ -219,10 +185,7 @@ def __direciona(f_atv, f_cine_data):
         # volta a fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO 
 
-        # logger
-        # M_LOG.info(u"__direciona:<E03: interceptou o fixo.")
-
-        # return
+        # return interceptou o fixo
         return
 
     # calcula distância da aeronave ao fixo (x, y)
@@ -244,10 +207,7 @@ def __direciona(f_atv, f_cine_data):
         # volta a fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO 
 
-        # logger
-        # M_LOG.info(u"__direciona:<E04: interceptou o fixo.")
-
-        # return
+        # return interceptou o fixo
         return
 
     # calcula nova proa de demanda
@@ -258,9 +218,6 @@ def __direciona(f_atv, f_cine_data):
         # bloqueia o fixo
         razc.calc_razao_curva(f_atv, l_fix.f_fix_x, l_fix.f_fix_y, f_cine_data)
 
-    # logger
-    # M_LOG.info("__direciona:<<")
-
 # -------------------------------------------------------------------------------------------------
 def prc_dir_fixo(f_atv, f_cine_data):
     """
@@ -269,9 +226,6 @@ def prc_dir_fixo(f_atv, f_cine_data):
     @param f_atv: ponteiro para struct aeronaves
     @param f_cine_data: ponteiro para pilha
     """
-    # logger
-    # M_LOG.info("prc_dir_fixo:>>")
-        
     # check input
     assert f_atv
     assert f_cine_data is not None
@@ -292,8 +246,5 @@ def prc_dir_fixo(f_atv, f_cine_data):
         l_log = logging.getLogger("prc_dir_fixo::prc_dir_fixo")
         l_log.setLevel(logging.ERROR)
         l_log.error(u"<E01: fase do direcionamento a fixo não identificada.")
-
-    # logger
-    # M_LOG.info("prc_dir_fixo:<<")
 
 # < the end >-------------------------------------------------------------------------------------

@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 """
 ---------------------------------------------------------------------------------------------------
-prc_espera
+prc_orbita
 
-realiza o procedimento de espera
+realiza o procedimento de orbita
 
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
@@ -45,15 +45,20 @@ M_VEL_MAX = 230. * cdefs.D_CNV_KT2MS
 # razão máxima de subida/descida = 1000ft/min
 M_RAZ_SUB = (1000. * cdefs.D_CNV_FT2M) / 60.
 
+# sentido de curva
+M_ESP_SENT_CURVA = ldefs.E_DIREITA
+
+# f_esp.f_esp_true
+M_ESP_RUMO = 61.
+
 # -------------------------------------------------------------------------------------------------
-def __check_cancel_espera(f_atv, f_esp):
+def __check_cancel_orbita(f_atv):
     """
-    checa condições de abandonar a espera. A condição é executada pelo comando de pilotagem
+    checa condições de abandonar a orbita. A condição é executada pelo comando de pilotagem
 
     @param f_atv: pointer para aeronave
-    @param f_esp: pointer para espera
 
-    @return True se condição de abandonar a espera, senão False (condição de permanecer em espera)
+    @return True se condição de abandonar a orbita, senão False (condição de permanecer em orbita)
     """
     # check input
     assert f_atv
@@ -63,14 +68,9 @@ def __check_cancel_espera(f_atv, f_esp):
         # aeronave não ativa. cai fora...
         return True
 
-    # verifica condições para execução
-    if (f_esp is None) or (not f_esp.v_prc_ok):
-        # procedimento de espera não existe. cai fora...
-        return True
-
     # condição de cancelamento ?
     if f_atv.v_atv_cnl_esp:
-        # coloca a aeronave na condição de abandonar a espera
+        # coloca a aeronave na condição de abandonar a orbita
         abnd.abort_prc(f_atv)
                 
         # return
@@ -80,12 +80,11 @@ def __check_cancel_espera(f_atv, f_esp):
     return False
 
 # -------------------------------------------------------------------------------------------------
-def __setor_entrada(f_atv, f_esp):
+def __setor_entrada(f_atv):
     """
-    determina o setor de entrada na espera
+    determina o setor de entrada na orbita
 
     @param f_atv: pointer para aeronave
-    @param f_esp: pointer para espera
 
     @return ldefs.E_FASE_SETOR1, ldefs.E_FASE_SETOR2 ou ldefs.E_FASE_SETOR3
     """
@@ -97,11 +96,6 @@ def __setor_entrada(f_atv, f_esp):
         # aeronave não ativa. cai fora...
         return -1
 
-    # procedimento de espera ok ?
-    if (f_esp is None) or (not f_esp.v_prc_ok):
-        # procedimento de espera não existe. cai fora...
-        return -1
-
     # calcula o ângulo de entrada
     lf_ang_entrada = f_atv.f_trf_pro_atu - 180.
 
@@ -109,13 +103,13 @@ def __setor_entrada(f_atv, f_esp):
     if lf_ang_entrada < 0.:
         lf_ang_entrada += 360.
 
-    # verifica o sentido da espera (direita/esquerda)
+    # verifica o sentido da orbita (direita/esquerda)
 
-    # espera pela direita ?
-    if ldefs.E_DIREITA == f_esp.en_esp_sentido_curva:
+    # orbita pela direita ?
+    if ldefs.E_DIREITA == M_ESP_SENT_CURVA:
         # calcula o limite pelo setor 2
         # f_esp_rumo (mlabru)
-        lf_limite_2 = f_esp.f_esp_true - 70.
+        lf_limite_2 = M_ESP_RUMO - 70.
 
         # normaliza o limite
         if lf_limite_2 < 0.:
@@ -142,11 +136,11 @@ def __setor_entrada(f_atv, f_esp):
             # realiza fase entrada no setor 3
             return ldefs.E_FASE_SETOR3
 
-    # espera pela esquerda
+    # orbita pela esquerda
     else:
         # cálculo da diferença entre os ângulos
         # f_esp_rumo (mlabru)
-        lf_dif_ang = f_esp.f_esp_true - lf_ang_entrada
+        lf_dif_ang = M_ESP_RUMO - lf_ang_entrada
 
         # normaliza a diferença entre os ângulos
         if lf_dif_ang < 0.:
@@ -170,7 +164,7 @@ def __setor_entrada(f_atv, f_esp):
     return -1
 
 # -------------------------------------------------------------------------------------------------
-def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
+def prc_orbita(f_atv, f_cine_data, f_stk_context, ff_delta_t):
     """
     DOCUMENT ME!
     
@@ -187,7 +181,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
     # aeronave ativa ?
     if (not f_atv.v_atv_ok) or (ldefs.E_ATIVA != f_atv.en_trf_est_atv):
         # logger
-        l_log = logging.getLogger("prc_espera")
+        l_log = logging.getLogger("prc_orbita")
         l_log.setLevel(logging.ERROR)
         l_log.error(u"<E01: aeronave não ativa.")
                                 
@@ -197,26 +191,11 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
     # performance existe ?
     if (f_atv.ptr_trf_prf is None) or (not f_atv.ptr_trf_prf.v_prf_ok):
         # logger
-        l_log = logging.getLogger("prc_espera")
+        l_log = logging.getLogger("prc_orbita")
         l_log.setLevel(logging.ERROR)
         l_log.error(u"<E02: performance não existe.")
 
         # performance não existe. cai fora...
-        return
-
-    # aponta para a espera planejada e valida pointer
-    l_esp = f_atv.ptr_trf_prc
-
-    if (l_esp is None) or (not l_esp.v_prc_ok):
-        # logger
-        l_log = logging.getLogger("prc_espera::prc_espera")
-        l_log.setLevel(logging.ERROR)
-        l_log.error("<E03: espera inexistente. aeronave:[%d/%s]", f_atv.i_trf_id, f_atv.s_trf_ind)
-
-        # não encontrou a espera, força a aeronave abandonar o procedimento
-        abnd.abort_prc(f_atv)
-                
-        # espera inexistente. cai fora...
         return
 
     # aeronave abaixo de 14000ft ?
@@ -226,40 +205,25 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
 
     # preparação de dados ?
     if ldefs.E_FASE_ZERO == f_atv.en_atv_fase:
-        # obtém dados do fixo de espera e valida pointer
-        l_fix = l_esp.ptr_esp_fix
-
-        if (l_fix is None) or (not l_fix.v_fix_ok):
-            # logger
-            l_log = logging.getLogger("prc_espera::prc_espera")
-            l_log.setLevel(logging.ERROR)
-            l_log.error("<E04: fixo da espera inexistente. aeronave:[%d/%s]", f_atv.i_trf_id, f_atv.s_trf_ind)
-
-            # não encontrou o fixo, força a aeronave abandonar o procedimento
-            abnd.abort_prc(f_atv)
-
-            # fixo da espera inexistente. cai fora...
-            return
-
         # checa condição de cancelamento, caso tenha sido comandado pelo piloto
-        if __check_cancel_espera(f_atv, l_esp):
+        if __check_cancel_orbita(f_atv):
             # break
             return
 
-        # direciona ao fixo de espera                                                   !!!REVER!!!
-        if dp.prc_dir_ponto(f_atv, l_fix.f_fix_x, l_fix.f_fix_y, f_cine_data):
-            # determina qual o setor de entrada na espera
-            f_atv.en_atv_fase = __setor_entrada(f_atv, l_esp)
+        # direciona ao ponto de orbita                                                   !!!REVER!!!
+        if dp.prc_dir_ponto(f_atv, f_cine_data.f_pto_x, f_cine_data.f_pto_y, f_cine_data):
+            # determina qual o setor de entrada na orbita
+            f_atv.en_atv_fase = __setor_entrada(f_atv)
 
             # valida proa para perna de afastamento
             # f_esp_rumo (mlabru)
-            f_cine_data.f_afasta = l_esp.f_esp_true - 180.
+            f_cine_data.f_afasta = M_ESP_RUMO - 180.
 
             # normaliza proa para perna de afastamento
             if f_cine_data.f_afasta < 0.:
                 f_cine_data.f_afasta += 360.
 
-            # limita a razão de subida/descida na espera em no máximo 1000FT/MIN        !!!REVER!!!
+            # limita a razão de subida/descida na orbita em no máximo 1000FT/MIN        !!!REVER!!!
             if f_atv.f_atv_raz_sub > M_RAZ_SUB:
                 # salva a razão atual
                 f_cine_data.f_raz_sub_des = f_atv.f_atv_raz_sub
@@ -269,8 +233,8 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
 
     # seguir na perna de aproximação em direção oposta (perna de afastamento)
     elif ldefs.E_FASE_SETOR1 == f_atv.en_atv_fase:
-        # ajusta a razão de curva em relação ao sentido da espera
-        if ldefs.E_DIREITA == l_esp.en_esp_sentido_curva:
+        # ajusta a razão de curva em relação ao sentido da orbita
+        if ldefs.E_DIREITA == M_ESP_SENT_CURVA:
             # curva pela direita (positivo)
             f_atv.f_atv_raz_crv = -abs(f_atv.f_atv_raz_crv)
 
@@ -279,7 +243,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
             # curva pela esquerda (negativo)
             f_atv.f_atv_raz_crv = abs(f_atv.f_atv_raz_crv)
 
-        # inicia dados da espera na pilha
+        # inicia dados da orbita na pilha
         f_cine_data.i_setor_ent     = 1
         f_cine_data.i_bloqueio_fixo = 1
 
@@ -295,7 +259,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
     # seguir no rumo perna de afastamento defasado de 30 graus
     elif ldefs.E_FASE_SETOR2 == f_atv.en_atv_fase:
         # curva pela direita ?
-        if ldefs.E_DIREITA == l_esp.en_esp_sentido_curva:
+        if ldefs.E_DIREITA == M_ESP_SENT_CURVA:
             # calcula a nova proa de demanda
             f_atv.f_atv_pro_dem = f_cine_data.f_afasta - 30.
 
@@ -330,7 +294,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
         f_atv.en_atv_fase = ldefs.E_FASE_CRVAFASTA
 
         # curva pela esquerda ?
-        if ldefs.E_ESQUERDA == l_esp.en_esp_sentido_curva:
+        if ldefs.E_ESQUERDA == M_ESP_SENT_CURVA:
             # curva pela esquerda (negativa)
             f_atv.f_atv_raz_crv = -abs(f_atv.f_atv_raz_crv)
 
@@ -365,24 +329,9 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
 
     # fase volta ?
     elif ldefs.E_FASE_VOLTA == f_atv.en_atv_fase:
-        # acessa dados do fixo de espera e valida parâmetro
-        l_fix = l_esp.ptr_esp_fix
-
-        if (l_fix is None) or not l_fix.v_fix_ok:
-            # logger
-            l_log = logging.getLogger("prc_espera::prc_espera")
-            l_log.setLevel(logging.ERROR)
-            l_log.error("<E05: fixo da espera inexistente. aeronave: [%d/%s]", f_atv.i_trf_id, f_atv.s_trf_ind)
-
-            # não encontrou o fixo, força a aeronave abandonar o procedimento
-            abnd.abort_prc(f_atv)
-
-            # fixo da espera inexistente. caifora...
-            return
-
         # calcula distância da aeronave ao ponto (x, y)
-        lf_coord_x = l_fix.f_fix_x - f_atv.f_trf_x
-        lf_coord_y = l_fix.f_fix_y - f_atv.f_trf_y
+        lf_coord_x = f_cine_data.f_pto_x - f_atv.f_trf_x
+        lf_coord_y = f_cine_data.f_pto_y - f_atv.f_trf_y
 
         # calcula distância linear da aeronave ao ponto
         lf_dst_anv_pto = math.sqrt((lf_coord_x ** 2) + (lf_coord_y ** 2))
@@ -393,10 +342,10 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
         # calcula novo sentido de curva
         scrv.sentido_curva(f_atv)
 
-        # aeronave atingiu o fixo de espera ? (distância ao ponto <= passo da aeronave)
+        # aeronave atingiu o fixo de orbita ? (distância ao ponto <= passo da aeronave)
         if lf_dst_anv_pto <= math.sqrt((f_cine_data.f_delta_x ** 2) + (f_cine_data.f_delta_y ** 2)):
             # checa condição de cancelamento e ajusta a razão
-            if __check_cancel_espera(f_atv, l_esp):
+            if __check_cancel_orbita(f_atv):
                 # ajusta a razão de subida/descida
                 f_atv.f_atv_raz_sub = f_atv.f_prf_raz_des_crz
 
@@ -405,7 +354,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
 
             # função operacional anterior era aproximação ?
             if ldefs.E_APROXIMACAO == f_atv.en_trf_fnc_ope_ant:
-                # aeronave chegou na altitude do fixo de espera ?
+                # aeronave chegou na altitude do fixo de orbita ?
                 if f_atv.f_trf_alt_atu == f_atv.f_atv_alt_dem:
                     # existe algo na pilha ?
                     if len(f_stk_context) > 0:
@@ -415,7 +364,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
                         # velocidade e proa
                         f_atv.f_atv_vel_dem = f_atv.ptr_trf_prf.f_prf_vel_apx
                         # f_esp_rumo (mlabru)
-                        f_atv.f_atv_pro_dem = l_esp.f_esp_true
+                        f_atv.f_atv_pro_dem = M_ESP_RUMO
 
                         # calcula novo sentido de curva
                         scrv.sentido_curva(f_atv)
@@ -426,7 +375,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
                         # break
                         return
 
-            # aprumar no rumo da espera (sentido afastamento)
+            # aprumar no rumo da orbita (sentido afastamento)
             f_atv.f_atv_pro_dem = f_cine_data.f_afasta
 
             # entrar na órbita
@@ -435,8 +384,8 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
             f_cine_data.i_setor_ent = 0
             f_cine_data.i_bloqueio_fixo = 0
 
-        # espera a direita ?
-        if ldefs.E_DIREITA == l_esp.en_esp_sentido_curva:
+        # orbita a direita ?
+        if ldefs.E_DIREITA == M_ESP_SENT_CURVA:
             if (1 == f_cine_data.i_setor_ent) and (1 == f_cine_data.i_bloqueio_fixo):
                 # ajusta a razão de curva
                 f_atv.f_atv_raz_crv = -abs(f_atv.f_atv_raz_crv)
@@ -445,7 +394,7 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
                 # ajusta a razão de curva
                 f_atv.f_atv_raz_crv = abs(f_atv.f_atv_raz_crv)
 
-        # senão, espera a esquerda
+        # senão, orbita a esquerda
         else:
             if (1 == f_cine_data.i_setor_ent) and (1 == f_cine_data.i_bloqueio_fixo):
                 # ajusta a razão de curva
@@ -468,8 +417,8 @@ def prc_espera(f_atv, f_cine_data, f_stk_context, ff_delta_t):
     # senão,...
     else:
         # logger
-        l_log = logging.getLogger("prc_espera::prc_espera")
+        l_log = logging.getLogger("prc_orbita::prc_orbita")
         l_log.setLevel(logging.ERROR)
-        l_log.error("<E06: fase [{}/{}] da espera não identificada.".format(f_atv.en_atv_fase, ldefs.DCT_FASE[f_atv.en_atv_fase]))
+        l_log.error("<E06: fase [{}/{}] da orbita não identificada.".format(f_atv.en_atv_fase, ldefs.DCT_FASE[f_atv.en_atv_fase]))
 
 # < the end >--------------------------------------------------------------------------------------

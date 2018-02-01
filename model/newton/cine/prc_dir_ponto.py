@@ -30,13 +30,13 @@ import model.newton.cine.calc_razao_curva as razc
 import model.newton.cine.sentido_curva as scrv
 
 # -------------------------------------------------------------------------------------------------
-def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
+def prc_dir_ponto(f_atv, ff_pto_x, ff_pto_y, f_cine_data):
     """
     procedimento de direcionamento a ponto
     
     @param f_atv: ponteiro para struct aeronaves
-    @param ff_pto_lng: longitude do ponto
-    @param ff_pto_lat: latitude do ponto
+    @param ff_pto_x: coordenada x do ponto (longitude)
+    @param ff_pto_y: coordenada y do ponto (latitude)
     @param f_cine_data: ponteiro para pilha
     
     @return True se aeronave atingiu ponto, senão False
@@ -62,8 +62,8 @@ def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
     lf_pto_rcone = f_atv.f_trf_alt_atu * math.tan(math.radians(10))
 
     # calcula distância da aeronave ao ponto (x, y)
-    f_cine_data.f_dst_anv_pto_x = ff_pto_lng - f_atv.f_trf_x
-    f_cine_data.f_dst_anv_pto_y = ff_pto_lat - f_atv.f_trf_y
+    f_cine_data.f_dst_anv_pto_x = ff_pto_x - f_atv.f_trf_x
+    f_cine_data.f_dst_anv_pto_y = ff_pto_y - f_atv.f_trf_y
 
     # calcula distância euclidiana da aeronave ao ponto (linha reta)
     lf_dst_anv_pto = math.sqrt((f_cine_data.f_dst_anv_pto_x ** 2) + (f_cine_data.f_dst_anv_pto_y ** 2))
@@ -86,7 +86,7 @@ def prc_dir_ponto(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data):
         scrv.sentido_curva(f_atv)
 
         # faz o bloqueio do ponto próximo
-        razc.calc_razao_curva(f_atv, ff_pto_lng, ff_pto_lat, f_cine_data)
+        razc.calc_razao_curva(f_atv, ff_pto_x, ff_pto_y, f_cine_data)
 
     # sinaliza que aeronave ainda NÂO atingiu o ponto
     return False

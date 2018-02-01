@@ -129,7 +129,7 @@ class CCineModel(object):
             # cai fora...
             return
 
-        # converte para lat/long
+        # converte para lat/lng
         lf_lat, lf_lng, lf_alt = self.__coords.xyz2geo(self.__atv.f_trf_x, self.__atv.f_trf_y, self.atv.f_trf_z)
         lf_alt = self.__atv.f_trf_alt_atu * cdefs.D_CNV_M2FT
 

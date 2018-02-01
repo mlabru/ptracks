@@ -334,19 +334,13 @@ class CFlightEngine(threading.Thread):
         """
         # check input
         assert f_atv
+        assert fo_cmd_pil
 
         # clear to go
         assert self.__cine_data
-        assert self.__model
 
-        # função operacional
-        f_atv.en_trf_fnc_ope = ldefs.E_DIRPNTO
-
-        # monta procedimento. Primeiro parâmetro do comando é o número da trajetória
-        ls_prc = "GTO0000"
-
-        # procedimento e função operacional
-        f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc), ldefs.E_DIRPNTO
+        # converte parâmetros (lat/lng) para x/y
+        self.__cine_data.f_pto_x, self.__cine_data.f_pto_y, _ = self.__model.coords.geo2xyz(fo_cmd_pil.t_param_1[0], fo_cmd_pil.t_param_2[0], 0.)
 
         # função operacional
         f_atv.en_trf_fnc_ope = ldefs.E_DIRPNTO
@@ -370,6 +364,27 @@ class CFlightEngine(threading.Thread):
 
         # procedimento e função operacional
         f_atv.ptr_trf_prc, f_atv.en_trf_fnc_ope = self.__model.airspace.get_ptr_prc(ls_prc)
+
+        # fase de verificar condições
+        f_atv.en_atv_fase = ldefs.E_FASE_ZERO
+
+    # ---------------------------------------------------------------------------------------------
+    def __cmd_pil_orbita(self, f_atv, fo_cmd_pil):
+        """
+        comando de pilotagem de orbita
+        """
+        # check input
+        assert f_atv
+        assert fo_cmd_pil
+
+        # clear to go
+        assert self.__cine_data
+
+        # converte parâmetros (lat/lng) para x/y
+        self.__cine_data.f_pto_x, self.__cine_data.f_pto_y, _ = self.__model.coords.geo2xyz(fo_cmd_pil.t_param_1[0], fo_cmd_pil.t_param_2[0], 0.)
+
+        # função operacional
+        f_atv.en_trf_fnc_ope = ldefs.E_ORBITA
 
         # fase de verificar condições
         f_atv.en_atv_fase = ldefs.E_FASE_ZERO
@@ -512,6 +527,11 @@ class CFlightEngine(threading.Thread):
             # trata comando de espera
             self.__cmd_pil_espera(f_atv, lo_cmd_pil)
 
+        # orbita ?
+        elif ldefs.E_ORBITA == len_cmd_ope:
+            # trata comando de orbita
+            self.__cmd_pil_orbita(f_atv, lo_cmd_pil)
+
         # põem em movimento ?
         #elif ldefs.E_MOV == len_cmd_ope:
             # inicia movimentação
@@ -639,7 +659,12 @@ class CFlightEngine(threading.Thread):
         # função operacional é direcionamento a ponto ?
         elif ldefs.E_DIRPNTO == f_atv.en_trf_fnc_ope:
             # direcionamento a ponto
-            pass  # self.__cine_voo.prc_dir_ponto()
+            if self.__cine_voo.prc_dir_ponto():
+                # coloca em manual
+                f_atv.en_trf_fnc_ope = ldefs.E_MANUAL
+
+                # volta a fase de verificar condições
+                f_atv.en_atv_fase = ldefs.E_FASE_ZERO
 
         # função operacional é espera ?
         elif ldefs.E_ESPERA == f_atv.en_trf_fnc_ope:
@@ -649,7 +674,7 @@ class CFlightEngine(threading.Thread):
         # função operacional é orbita ?
         elif ldefs.E_ORBITA == f_atv.en_trf_fnc_ope:
             # orbita
-            pass  # self.__cine_voo.prc_orbit()
+            self.__cine_voo.prc_orbita()
 
         # função operacional é ILS ?
         elif ldefs.E_ILS == f_atv.en_trf_fnc_ope:

@@ -6,19 +6,6 @@ cine_voo
 
 the flight class. It holds information about a flight and the commands the flight has been given
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
 revision 0.2  2015/nov  mlabru
 pep8 style conventions
 
@@ -49,7 +36,9 @@ import model.newton.cine.obtem_brk as obrk
 import model.newton.cine.prc_aproximacao as apx
 import model.newton.cine.prc_decolagem as dep
 import model.newton.cine.prc_dir_fixo as dfix
+import model.newton.cine.prc_dir_ponto as dpto
 import model.newton.cine.prc_espera as esp
+import model.newton.cine.prc_orbita as orb
 import model.newton.cine.prc_pouso as arr
 import model.newton.cine.prc_subida as sub
 import model.newton.cine.prc_trajetoria as trj
@@ -193,6 +182,23 @@ class CCineVoo(cinmodel.CCineModel):
         dfix.prc_dir_fixo(self.atv, self.cine_data)
 
     # ---------------------------------------------------------------------------------------------
+    def prc_dir_ponto(self):
+        """
+        procedimento de direcionamento a ponto
+        """
+        # clear to go
+        assert self.atv
+        assert self.cine_data
+        # assert self.stk_context is not None
+
+        # get point's x/y (latitude and longitude)
+        lf_pto_x = self.cine_data.f_pto_x
+        lf_pto_y = self.cine_data.f_pto_y
+
+        # executa direcionamento a ponto
+        return dpto.prc_dir_ponto(self.atv, lf_pto_x, lf_pto_y, self.cine_data)
+
+    # ---------------------------------------------------------------------------------------------
     def prc_espera(self):
         """
         procedimento de espera
@@ -204,6 +210,19 @@ class CCineVoo(cinmodel.CCineModel):
 
         # executa espera
         esp.prc_espera(self.atv, self.cine_data, self.stk_context, self.__f_delta_t)
+
+    # ---------------------------------------------------------------------------------------------
+    def prc_orbita(self):
+        """
+        procedimento de orbita
+        """
+        # clear to go
+        assert self.atv
+        assert self.cine_data
+        assert self.stk_context is not None
+
+        # executa orbita
+        orb.prc_orbita(self.atv, self.cine_data, self.stk_context, self.__f_delta_t)
 
     # ---------------------------------------------------------------------------------------------
     def prc_pouso(self):
